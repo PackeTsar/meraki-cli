@@ -70,13 +70,13 @@ def showswitchports(args, api):
             '--status' or '-a': Show status instead of config
     '''
     if args.status:
-        TABLECOLUMNS.__iadd__(['portId', 'enabled', 'status', 'speed', 'duplex'
-                               'usageInKb', 'clientCount', 'trafficInKbps'])
+        TABLECOLUMNS.__iadd__(['portId', 'enabled', 'status', 'speed', 'duplex',
+                               'clientCount', 'trafficInKbps'])
         ports = api.switch_ports.getDeviceSwitchPortStatuses(
                 serial=args.switch_serial)
     else:
         TABLECOLUMNS.__iadd__(['number', 'enabled', 'type', 'vlan',
-                               'voiceVlan', 'allowedVlans'])
+                               'voiceVlan', 'allowedVlans', 'name'])
         if not args.port_name:
             ports = api.switch_ports.getDeviceSwitchPorts(
                 serial=args.switch_serial)
