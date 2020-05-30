@@ -17,6 +17,11 @@ The version of Meraki-CLI documented here is: **0.1.2**
 -----------------------------------------
 ##   GETTING STARTED   ##
 
+## Prepare your OS
+
+In order to use Meraki-CLI, you need to have Python 3 installed on your OS. If you do not yet have Python 3 installed, visit [https://github.com/PackeTsar/Install-Python](https://github.com/PackeTsar/Install-Python)
+
+
 ### Getting and Using your API Key
 
 Meraki-CLI is command-line driven and once installed can be run with the command `mcli`
