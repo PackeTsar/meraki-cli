@@ -46,6 +46,7 @@ CLASSIFIERS = [
     'Operating System :: MacOS',
     'Operating System :: POSIX',
     'Operating System :: Microsoft',
+    'Operating System :: OS Independent',
     'Programming Language :: Python',
     'Programming Language :: Python :: 3.6',
     'Programming Language :: Python :: 3.7',
@@ -60,7 +61,8 @@ CLASSIFIERS = [
 
 setup(name='meraki_cli',
       version=version(),
-      description='A Simple CLI Wrapper for the Meraki Dashboard API SDK',
+      description='A Simple CLI tool to automate and control your '
+      'Meraki Dashboard',
       long_description=long_description,
       long_description_content_type='text/markdown',
       author='John W Kerns',
