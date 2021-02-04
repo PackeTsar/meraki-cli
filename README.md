@@ -1,8 +1,8 @@
 # Meraki-CLI
 
-[![Build Status](https://travis-ci.org/PackeTsar/meraki-cli.svg?branch=master)](https://travis-ci.org/PackeTsar/meraki-cli)
-[![PyPI](https://img.shields.io/pypi/v/meraki-cli.svg)](https://pypi.python.org/pypi/meraki-cli)
-[![Python Versions](https://img.shields.io/pypi/pyversions/meraki-cli.svg)](https://pypi.python.org/pypi/meraki-cli)
+[![Build Status](https://travis-ci.com/PackeTsar/meraki-cli.svg?branch=master)](https://travis-ci.com/PackeTsar/meraki-cli)
+[![PyPI](https://img.shields.io/pypi/v/meraki-cli.svg)](https://pypi.python.com/pypi/meraki-cli)
+[![Python Versions](https://img.shields.io/pypi/pyversions/meraki-cli.svg)](https://pypi.python.com/pypi/meraki-cli)
 
 A Simple CLI tool to automate and control your Meraki Dashboard!
 
