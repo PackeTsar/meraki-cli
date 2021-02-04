@@ -472,13 +472,12 @@ This command guide is based on version **v1.4.3** of the [Meraki Dashboard API P
 
 ----------------------------------------
 
------------------------------------------
-# COMMANDS
-
-## Organizations
+----------------------------------------
+# Organizations
 
 
-### Assign Organization Licenses Seats
+----------------------------------------
+## Assign Organization Licenses Seats
 
 
 **Assign SM seats to a network**
@@ -502,7 +501,8 @@ meraki organizations assignOrganizationLicensesSeats --organizationId 'STRING' -
 ````
 
 
-### Claim Into Organization
+----------------------------------------
+## Claim Into Organization
 
 
 **Claim a list of devices, licenses, and/or orders into an organization**
@@ -526,7 +526,8 @@ meraki organizations claimIntoOrganization --organizationId 'STRING'
 ````
 
 
-### Clone Organization
+----------------------------------------
+## Clone Organization
 
 
 **Create a new organization by cloning the addressed organization**
@@ -548,7 +549,8 @@ meraki organizations cloneOrganization --organizationId 'STRING' --name 'STRING'
 ````
 
 
-### Combine Organization Networks
+----------------------------------------
+## Combine Organization Networks
 
 
 **Combine multiple networks into a single network**
@@ -572,7 +574,8 @@ meraki organizations combineOrganizationNetworks --organizationId 'STRING' --nam
 ````
 
 
-### Create Organization
+----------------------------------------
+## Create Organization
 
 
 **Create a new organization**
@@ -593,7 +596,8 @@ meraki organizations createOrganization --name 'STRING'
 ````
 
 
-### Create Organization Action Batch
+----------------------------------------
+## Create Organization Action Batch
 
 
 **Create an action batch**
@@ -617,7 +621,8 @@ meraki organizations createOrganizationActionBatch --organizationId 'STRING' --a
 ````
 
 
-### Create Organization Admin
+----------------------------------------
+## Create Organization Admin
 
 
 **Create a new dashboard administrator**
@@ -644,7 +649,8 @@ meraki organizations createOrganizationAdmin --organizationId 'STRING' --email '
 ````
 
 
-### Create Organization Branding Policy
+----------------------------------------
+## Create Organization Branding Policy
 
 
 **Add a new branding policy to an organization**
@@ -673,7 +679,8 @@ meraki organizations createOrganizationBrandingPolicy --organizationId 'STRING' 
 ````
 
 
-### Create Organization Config Template
+----------------------------------------
+## Create Organization Config Template
 
 
 **Create a new configuration template**
@@ -697,7 +704,8 @@ meraki organizations createOrganizationConfigTemplate --organizationId 'STRING' 
 ````
 
 
-### Create Organization Network
+----------------------------------------
+## Create Organization Network
 
 
 **Create a network**
@@ -723,7 +731,8 @@ meraki organizations createOrganizationNetwork --organizationId 'STRING' --name 
 ````
 
 
-### Create Organization Saml Idp
+----------------------------------------
+## Create Organization Saml Idp
 
 
 **Create a SAML IdP for your organization.**
@@ -746,7 +755,8 @@ meraki organizations createOrganizationSamlIdp --organizationId 'STRING' --x509c
 ````
 
 
-### Create Organization Saml Role
+----------------------------------------
+## Create Organization Saml Role
 
 
 **Create a SAML role**
@@ -771,7 +781,8 @@ meraki organizations createOrganizationSamlRole --organizationId 'STRING' --role
 ````
 
 
-### Delete Organization
+----------------------------------------
+## Delete Organization
 
 
 **Delete an organization**
@@ -792,7 +803,8 @@ meraki organizations deleteOrganization --organizationId 'STRING'
 ````
 
 
-### Delete Organization Action Batch
+----------------------------------------
+## Delete Organization Action Batch
 
 
 **Delete an action batch**
@@ -814,7 +826,8 @@ meraki organizations deleteOrganizationActionBatch --organizationId 'STRING' --a
 ````
 
 
-### Delete Organization Admin
+----------------------------------------
+## Delete Organization Admin
 
 
 **Revoke all access for a dashboard administrator within this organization**
@@ -836,7 +849,8 @@ meraki organizations deleteOrganizationAdmin --organizationId 'STRING' --adminId
 ````
 
 
-### Delete Organization Branding Policy
+----------------------------------------
+## Delete Organization Branding Policy
 
 
 **Delete a branding policy**
@@ -858,7 +872,8 @@ meraki organizations deleteOrganizationBrandingPolicy --organizationId 'STRING' 
 ````
 
 
-### Delete Organization Config Template
+----------------------------------------
+## Delete Organization Config Template
 
 
 **Remove a configuration template**
@@ -880,7 +895,8 @@ meraki organizations deleteOrganizationConfigTemplate --organizationId 'STRING' 
 ````
 
 
-### Delete Organization Saml Idp
+----------------------------------------
+## Delete Organization Saml Idp
 
 
 **Remove a SAML IdP in your organization.**
@@ -902,7 +918,8 @@ meraki organizations deleteOrganizationSamlIdp --organizationId 'STRING' --idpId
 ````
 
 
-### Delete Organization Saml Role
+----------------------------------------
+## Delete Organization Saml Role
 
 
 **Remove a SAML role**
@@ -924,7 +941,8 @@ meraki organizations deleteOrganizationSamlRole --organizationId 'STRING' --saml
 ````
 
 
-### Get Organization
+----------------------------------------
+## Get Organization
 
 
 **Return an organization**
@@ -945,7 +963,8 @@ meraki organizations getOrganization --organizationId 'STRING'
 ````
 
 
-### Get Organization Action Batch
+----------------------------------------
+## Get Organization Action Batch
 
 
 **Return an action batch**
@@ -967,7 +986,8 @@ meraki organizations getOrganizationActionBatch --organizationId 'STRING' --acti
 ````
 
 
-### Get Organization Action Batches
+----------------------------------------
+## Get Organization Action Batches
 
 
 **Return the list of action batches in the organization**
@@ -989,7 +1009,8 @@ meraki organizations getOrganizationActionBatches --organizationId 'STRING'
 ````
 
 
-### Get Organization Admins
+----------------------------------------
+## Get Organization Admins
 
 
 **List the dashboard administrators in this organization**
@@ -1010,7 +1031,8 @@ meraki organizations getOrganizationAdmins --organizationId 'STRING'
 ````
 
 
-### Get Organization Api Requests
+----------------------------------------
+## Get Organization Api Requests
 
 
 **List the API requests made by an organization**
@@ -1044,7 +1066,8 @@ meraki organizations getOrganizationApiRequests --organizationId 'STRING'
 ````
 
 
-### Get Organization Api Requests Overview
+----------------------------------------
+## Get Organization Api Requests Overview
 
 
 **Return an aggregated overview of API requests data**
@@ -1068,7 +1091,8 @@ meraki organizations getOrganizationApiRequestsOverview --organizationId 'STRING
 ````
 
 
-### Get Organization Branding Policies
+----------------------------------------
+## Get Organization Branding Policies
 
 
 **List the branding policies of an organization**
@@ -1089,7 +1113,8 @@ meraki organizations getOrganizationBrandingPolicies --organizationId 'STRING'
 ````
 
 
-### Get Organization Branding Policies Priorities
+----------------------------------------
+## Get Organization Branding Policies Priorities
 
 
 **Return the branding policy IDs of an organization in priority order**
@@ -1110,7 +1135,8 @@ meraki organizations getOrganizationBrandingPoliciesPriorities --organizationId 
 ````
 
 
-### Get Organization Branding Policy
+----------------------------------------
+## Get Organization Branding Policy
 
 
 **Return a branding policy**
@@ -1132,7 +1158,8 @@ meraki organizations getOrganizationBrandingPolicy --organizationId 'STRING' --b
 ````
 
 
-### Get Organization Config Template
+----------------------------------------
+## Get Organization Config Template
 
 
 **Return a single configuration template**
@@ -1154,7 +1181,8 @@ meraki organizations getOrganizationConfigTemplate --organizationId 'STRING' --c
 ````
 
 
-### Get Organization Config Templates
+----------------------------------------
+## Get Organization Config Templates
 
 
 **List the configuration templates for this organization**
@@ -1175,7 +1203,8 @@ meraki organizations getOrganizationConfigTemplates --organizationId 'STRING'
 ````
 
 
-### Get Organization Configuration Changes
+----------------------------------------
+## Get Organization Configuration Changes
 
 
 **View the Change Log for your organization**
@@ -1206,7 +1235,8 @@ meraki organizations getOrganizationConfigurationChanges --organizationId 'STRIN
 ````
 
 
-### Get Organization Devices
+----------------------------------------
+## Get Organization Devices
 
 
 **List the devices in an organization**
@@ -1233,7 +1263,8 @@ meraki organizations getOrganizationDevices --organizationId 'STRING'
 ````
 
 
-### Get Organization Devices Statuses
+----------------------------------------
+## Get Organization Devices Statuses
 
 
 **List the status of every Meraki device in the organization**
@@ -1259,7 +1290,8 @@ meraki organizations getOrganizationDevicesStatuses --organizationId 'STRING'
 ````
 
 
-### Get Organization Devices Uplinks Loss And Latency
+----------------------------------------
+## Get Organization Devices Uplinks Loss And Latency
 
 
 **Return the uplink loss and latency for every MX in the organization from at latest 2 minutes ago**
@@ -1285,7 +1317,8 @@ meraki organizations getOrganizationDevicesUplinksLossAndLatency --organizationI
 ````
 
 
-### Get Organization Inventory Device
+----------------------------------------
+## Get Organization Inventory Device
 
 
 **Return a single device from the inventory of an organization**
@@ -1307,7 +1340,8 @@ meraki organizations getOrganizationInventoryDevice --organizationId 'STRING' --
 ````
 
 
-### Get Organization Inventory Devices
+----------------------------------------
+## Get Organization Inventory Devices
 
 
 **Return the device inventory for an organization**
@@ -1335,7 +1369,8 @@ meraki organizations getOrganizationInventoryDevices --organizationId 'STRING'
 ````
 
 
-### Get Organization License
+----------------------------------------
+## Get Organization License
 
 
 **Display a license**
@@ -1357,7 +1392,8 @@ meraki organizations getOrganizationLicense --organizationId 'STRING' --licenseI
 ````
 
 
-### Get Organization Licenses
+----------------------------------------
+## Get Organization Licenses
 
 
 **List the licenses for an organization**
@@ -1386,7 +1422,8 @@ meraki organizations getOrganizationLicenses --organizationId 'STRING'
 ````
 
 
-### Get Organization Licenses Overview
+----------------------------------------
+## Get Organization Licenses Overview
 
 
 **Return an overview of the license state for an organization**
@@ -1407,7 +1444,8 @@ meraki organizations getOrganizationLicensesOverview --organizationId 'STRING'
 ````
 
 
-### Get Organization Login Security
+----------------------------------------
+## Get Organization Login Security
 
 
 **Returns the login security settings for an organization.**
@@ -1428,7 +1466,8 @@ meraki organizations getOrganizationLoginSecurity --organizationId 'STRING'
 ````
 
 
-### Get Organization Networks
+----------------------------------------
+## Get Organization Networks
 
 
 **List the networks that the user has privileges on in an organization**
@@ -1457,7 +1496,8 @@ meraki organizations getOrganizationNetworks --organizationId 'STRING'
 ````
 
 
-### Get Organization Openapi Spec
+----------------------------------------
+## Get Organization Openapi Spec
 
 
 **Return the OpenAPI 2.0 Specification of the organization's API documentation in JSON**
@@ -1478,7 +1518,8 @@ meraki organizations getOrganizationOpenapiSpec --organizationId 'STRING'
 ````
 
 
-### Get Organization Saml
+----------------------------------------
+## Get Organization Saml
 
 
 **Returns the SAML SSO enabled settings for an organization.**
@@ -1499,7 +1540,8 @@ meraki organizations getOrganizationSaml --organizationId 'STRING'
 ````
 
 
-### Get Organization Saml Idp
+----------------------------------------
+## Get Organization Saml Idp
 
 
 **Get a SAML IdP from your organization.**
@@ -1521,7 +1563,8 @@ meraki organizations getOrganizationSamlIdp --organizationId 'STRING' --idpId 'S
 ````
 
 
-### Get Organization Saml Idps
+----------------------------------------
+## Get Organization Saml Idps
 
 
 **List the SAML IdPs in your organization.**
@@ -1542,7 +1585,8 @@ meraki organizations getOrganizationSamlIdps --organizationId 'STRING'
 ````
 
 
-### Get Organization Saml Role
+----------------------------------------
+## Get Organization Saml Role
 
 
 **Return a SAML role**
@@ -1564,7 +1608,8 @@ meraki organizations getOrganizationSamlRole --organizationId 'STRING' --samlRol
 ````
 
 
-### Get Organization Saml Roles
+----------------------------------------
+## Get Organization Saml Roles
 
 
 **List the SAML roles for this organization**
@@ -1585,7 +1630,8 @@ meraki organizations getOrganizationSamlRoles --organizationId 'STRING'
 ````
 
 
-### Get Organization Snmp
+----------------------------------------
+## Get Organization Snmp
 
 
 **Return the SNMP settings for an organization**
@@ -1606,7 +1652,8 @@ meraki organizations getOrganizationSnmp --organizationId 'STRING'
 ````
 
 
-### Get Organization Uplinks Statuses
+----------------------------------------
+## Get Organization Uplinks Statuses
 
 
 **List the uplink status of every Meraki MX, MG and Z series devices in the organization**
@@ -1635,7 +1682,8 @@ meraki organizations getOrganizationUplinksStatuses --organizationId 'STRING'
 ````
 
 
-### Get Organization Webhooks Alert Types
+----------------------------------------
+## Get Organization Webhooks Alert Types
 
 
 **Return a list of alert types to be used with managing webhook alerts**
@@ -1656,7 +1704,8 @@ meraki organizations getOrganizationWebhooksAlertTypes --organizationId 'STRING'
 ````
 
 
-### Get Organization Webhooks Logs
+----------------------------------------
+## Get Organization Webhooks Logs
 
 
 **Return the log of webhook POSTs sent**
@@ -1686,7 +1735,8 @@ meraki organizations getOrganizationWebhooksLogs --organizationId 'STRING'
 ````
 
 
-### Get Organizations
+----------------------------------------
+## Get Organizations
 
 
 **List the organizations that the user has privileges on**
@@ -1706,7 +1756,8 @@ meraki organizations getOrganizations
 ````
 
 
-### Move Organization Licenses
+----------------------------------------
+## Move Organization Licenses
 
 
 **Move licenses to another organization**
@@ -1729,7 +1780,8 @@ meraki organizations moveOrganizationLicenses --organizationId 'STRING' --destOr
 ````
 
 
-### Move Organization Licenses Seats
+----------------------------------------
+## Move Organization Licenses Seats
 
 
 **Move SM seats to another organization**
@@ -1753,7 +1805,8 @@ meraki organizations moveOrganizationLicensesSeats --organizationId 'STRING' --d
 ````
 
 
-### Renew Organization Licenses Seats
+----------------------------------------
+## Renew Organization Licenses Seats
 
 
 **Renew SM seats of a license**
@@ -1776,7 +1829,8 @@ meraki organizations renewOrganizationLicensesSeats --organizationId 'STRING' --
 ````
 
 
-### Update Organization
+----------------------------------------
+## Update Organization
 
 
 **Update an organization**
@@ -1798,7 +1852,8 @@ meraki organizations updateOrganization --organizationId 'STRING'
 ````
 
 
-### Update Organization Action Batch
+----------------------------------------
+## Update Organization Action Batch
 
 
 **Update an action batch**
@@ -1822,7 +1877,8 @@ meraki organizations updateOrganizationActionBatch --organizationId 'STRING' --a
 ````
 
 
-### Update Organization Admin
+----------------------------------------
+## Update Organization Admin
 
 
 **Update an administrator**
@@ -1848,7 +1904,8 @@ meraki organizations updateOrganizationAdmin --organizationId 'STRING' --adminId
 ````
 
 
-### Update Organization Branding Policies Priorities
+----------------------------------------
+## Update Organization Branding Policies Priorities
 
 
 **Update the priority ordering of an organization's branding policies.**
@@ -1870,7 +1927,8 @@ meraki organizations updateOrganizationBrandingPoliciesPriorities --organization
 ````
 
 
-### Update Organization Branding Policy
+----------------------------------------
+## Update Organization Branding Policy
 
 
 **Update a branding policy**
@@ -1900,7 +1958,8 @@ meraki organizations updateOrganizationBrandingPolicy --organizationId 'STRING' 
 ````
 
 
-### Update Organization Config Template
+----------------------------------------
+## Update Organization Config Template
 
 
 **Update a configuration template**
@@ -1924,7 +1983,8 @@ meraki organizations updateOrganizationConfigTemplate --organizationId 'STRING' 
 ````
 
 
-### Update Organization License
+----------------------------------------
+## Update Organization License
 
 
 **Update a license**
@@ -1947,7 +2007,8 @@ meraki organizations updateOrganizationLicense --organizationId 'STRING' --licen
 ````
 
 
-### Update Organization Login Security
+----------------------------------------
+## Update Organization Login Security
 
 
 **Update the login security settings for an organization**
@@ -1980,7 +2041,8 @@ meraki organizations updateOrganizationLoginSecurity --organizationId 'STRING'
 ````
 
 
-### Update Organization Saml
+----------------------------------------
+## Update Organization Saml
 
 
 **Updates the SAML SSO enabled settings for an organization.**
@@ -2002,7 +2064,8 @@ meraki organizations updateOrganizationSaml --organizationId 'STRING'
 ````
 
 
-### Update Organization Saml Idp
+----------------------------------------
+## Update Organization Saml Idp
 
 
 **Update a SAML IdP in your organization**
@@ -2026,7 +2089,8 @@ meraki organizations updateOrganizationSamlIdp --organizationId 'STRING' --idpId
 ````
 
 
-### Update Organization Saml Role
+----------------------------------------
+## Update Organization Saml Role
 
 
 **Update a SAML role**
@@ -2052,7 +2116,8 @@ meraki organizations updateOrganizationSamlRole --organizationId 'STRING' --saml
 ````
 
 
-### Update Organization Snmp
+----------------------------------------
+## Update Organization Snmp
 
 
 **Update the SNMP settings for an organization**
@@ -2079,10 +2144,15 @@ def (organizationId: str, **kwargs):
 meraki organizations updateOrganizationSnmp --organizationId 'STRING'
 ````
 
-## Networks
+
+----------------------------------------
+
+----------------------------------------
+# Networks
 
 
-### Bind Network
+----------------------------------------
+## Bind Network
 
 
 **Bind a network to a template.**
@@ -2105,7 +2175,8 @@ meraki networks bindNetwork --networkId 'STRING' --configTemplateId 'STRING'
 ````
 
 
-### Claim Network Devices
+----------------------------------------
+## Claim Network Devices
 
 
 **Claim devices into a network**
@@ -2127,7 +2198,8 @@ meraki networks claimNetworkDevices --networkId 'STRING' --serials ITEM
 ````
 
 
-### Create Network Floor Plan
+----------------------------------------
+## Create Network Floor Plan
 
 
 **Upload a floor plan**
@@ -2155,7 +2227,8 @@ meraki networks createNetworkFloorPlan --networkId 'STRING' --name 'STRING' --im
 ````
 
 
-### Create Network Group Policy
+----------------------------------------
+## Create Network Group Policy
 
 
 **Create a group policy**
@@ -2187,7 +2260,8 @@ meraki networks createNetworkGroupPolicy --networkId 'STRING' --name 'STRING'
 ````
 
 
-### Create Network Meraki Auth User
+----------------------------------------
+## Create Network Meraki Auth User
 
 
 **Create a user configured with Meraki Authentication for a network (currently supports 802.1X, splash guest, and client VPN users, and currently, organizations have a 50,000 user cap)**
@@ -2214,7 +2288,8 @@ meraki networks createNetworkMerakiAuthUser --networkId 'STRING' --email 'STRING
 ````
 
 
-### Create Network Mqtt Broker
+----------------------------------------
+## Create Network Mqtt Broker
 
 
 **Add an MQTT broker**
@@ -2238,7 +2313,8 @@ meraki networks createNetworkMqttBroker --networkId 'STRING' --name 'STRING' --h
 ````
 
 
-### Create Network Pii Request
+----------------------------------------
+## Create Network Pii Request
 
 
 **Submit a new delete or restrict processing PII request**
@@ -2266,7 +2342,8 @@ meraki networks createNetworkPiiRequest --networkId 'STRING'
 ````
 
 
-### Create Network Webhooks Http Server
+----------------------------------------
+## Create Network Webhooks Http Server
 
 
 **Add an HTTP server to a network**
@@ -2290,7 +2367,8 @@ meraki networks createNetworkWebhooksHttpServer --networkId 'STRING' --name 'STR
 ````
 
 
-### Create Network Webhooks Webhook Test
+----------------------------------------
+## Create Network Webhooks Webhook Test
 
 
 **Send a test webhook for a network**
@@ -2313,7 +2391,8 @@ meraki networks createNetworkWebhooksWebhookTest --networkId 'STRING' --url 'STR
 ````
 
 
-### Delete Network
+----------------------------------------
+## Delete Network
 
 
 **Delete a network**
@@ -2334,7 +2413,8 @@ meraki networks deleteNetwork --networkId 'STRING'
 ````
 
 
-### Delete Network Floor Plan
+----------------------------------------
+## Delete Network Floor Plan
 
 
 **Destroy a floor plan**
@@ -2356,7 +2436,8 @@ meraki networks deleteNetworkFloorPlan --networkId 'STRING' --floorPlanId 'STRIN
 ````
 
 
-### Delete Network Group Policy
+----------------------------------------
+## Delete Network Group Policy
 
 
 **Delete a group policy**
@@ -2378,7 +2459,8 @@ meraki networks deleteNetworkGroupPolicy --networkId 'STRING' --groupPolicyId 'S
 ````
 
 
-### Delete Network Meraki Auth User
+----------------------------------------
+## Delete Network Meraki Auth User
 
 
 **Delete a user configured with Meraki Authentication (currently, 802.1X RADIUS, splash guest, and client VPN users can be deleted)**
@@ -2400,7 +2482,8 @@ meraki networks deleteNetworkMerakiAuthUser --networkId 'STRING' --merakiAuthUse
 ````
 
 
-### Delete Network Mqtt Broker
+----------------------------------------
+## Delete Network Mqtt Broker
 
 
 **Delete an MQTT broker**
@@ -2422,7 +2505,8 @@ meraki networks deleteNetworkMqttBroker --networkId 'STRING' --mqttBrokerId 'STR
 ````
 
 
-### Delete Network Pii Request
+----------------------------------------
+## Delete Network Pii Request
 
 
 **Delete a restrict processing PII request**
@@ -2444,7 +2528,8 @@ meraki networks deleteNetworkPiiRequest --networkId 'STRING' --requestId 'STRING
 ````
 
 
-### Delete Network Webhooks Http Server
+----------------------------------------
+## Delete Network Webhooks Http Server
 
 
 **Delete an HTTP server from a network**
@@ -2466,7 +2551,8 @@ meraki networks deleteNetworkWebhooksHttpServer --networkId 'STRING' --httpServe
 ````
 
 
-### Get Network
+----------------------------------------
+## Get Network
 
 
 **Return a network**
@@ -2487,7 +2573,8 @@ meraki networks getNetwork --networkId 'STRING'
 ````
 
 
-### Get Network Alerts Settings
+----------------------------------------
+## Get Network Alerts Settings
 
 
 **Return the alert configuration for this network**
@@ -2508,7 +2595,8 @@ meraki networks getNetworkAlertsSettings --networkId 'STRING'
 ````
 
 
-### Get Network Bluetooth Client
+----------------------------------------
+## Get Network Bluetooth Client
 
 
 **Return a Bluetooth client**
@@ -2532,7 +2620,8 @@ meraki networks getNetworkBluetoothClient --networkId 'STRING' --bluetoothClient
 ````
 
 
-### Get Network Bluetooth Clients
+----------------------------------------
+## Get Network Bluetooth Clients
 
 
 **List the Bluetooth clients seen by APs in this network**
@@ -2561,7 +2650,8 @@ meraki networks getNetworkBluetoothClients --networkId 'STRING'
 ````
 
 
-### Get Network Client
+----------------------------------------
+## Get Network Client
 
 
 **Return the client associated with the given identifier**
@@ -2583,7 +2673,8 @@ meraki networks getNetworkClient --networkId 'STRING' --clientId 'STRING'
 ````
 
 
-### Get Network Client Policy
+----------------------------------------
+## Get Network Client Policy
 
 
 **Return the policy assigned to a client on the network**
@@ -2605,7 +2696,8 @@ meraki networks getNetworkClientPolicy --networkId 'STRING' --clientId 'STRING'
 ````
 
 
-### Get Network Client Splash Authorization Status
+----------------------------------------
+## Get Network Client Splash Authorization Status
 
 
 **Return the splash authorization for a client, for each SSID they've associated with through splash**
@@ -2627,7 +2719,8 @@ meraki networks getNetworkClientSplashAuthorizationStatus --networkId 'STRING' -
 ````
 
 
-### Get Network Client Traffic History
+----------------------------------------
+## Get Network Client Traffic History
 
 
 **Return the client's network traffic data over time**
@@ -2654,7 +2747,8 @@ meraki networks getNetworkClientTrafficHistory --networkId 'STRING' --clientId '
 ````
 
 
-### Get Network Client Usage History
+----------------------------------------
+## Get Network Client Usage History
 
 
 **Return the client's daily usage history**
@@ -2676,7 +2770,8 @@ meraki networks getNetworkClientUsageHistory --networkId 'STRING' --clientId 'ST
 ````
 
 
-### Get Network Clients
+----------------------------------------
+## Get Network Clients
 
 
 **List the clients that have used this network in the timespan**
@@ -2704,7 +2799,8 @@ meraki networks getNetworkClients --networkId 'STRING'
 ````
 
 
-### Get Network Clients Application Usage
+----------------------------------------
+## Get Network Clients Application Usage
 
 
 **Return the application usage data for clients**
@@ -2735,7 +2831,8 @@ meraki networks getNetworkClientsApplicationUsage --networkID 'STRING' --clients
 ````
 
 
-### Get Network Clients Usage Histories
+----------------------------------------
+## Get Network Clients Usage Histories
 
 
 **Return the usage histories for clients**
@@ -2766,7 +2863,8 @@ meraki networks getNetworkClientsUsageHistories --networkID 'STRING' --clients '
 ````
 
 
-### Get Network Devices
+----------------------------------------
+## Get Network Devices
 
 
 **List the devices in a network**
@@ -2787,7 +2885,8 @@ meraki networks getNetworkDevices --networkId 'STRING'
 ````
 
 
-### Get Network Events
+----------------------------------------
+## Get Network Events
 
 
 **List the events for the network**
@@ -2825,7 +2924,8 @@ meraki networks getNetworkEvents --networkId 'STRING'
 ````
 
 
-### Get Network Events Event Types
+----------------------------------------
+## Get Network Events Event Types
 
 
 **List the event type to human-readable description**
@@ -2846,7 +2946,8 @@ meraki networks getNetworkEventsEventTypes --networkId 'STRING'
 ````
 
 
-### Get Network Firmware Upgrades
+----------------------------------------
+## Get Network Firmware Upgrades
 
 
 **Get current maintenance window for a network**
@@ -2867,7 +2968,8 @@ meraki networks getNetworkFirmwareUpgrades --networkId 'STRING'
 ````
 
 
-### Get Network Floor Plan
+----------------------------------------
+## Get Network Floor Plan
 
 
 **Find a floor plan by ID**
@@ -2889,7 +2991,8 @@ meraki networks getNetworkFloorPlan --networkId 'STRING' --floorPlanId 'STRING'
 ````
 
 
-### Get Network Floor Plans
+----------------------------------------
+## Get Network Floor Plans
 
 
 **List the floor plans that belong to your network**
@@ -2910,7 +3013,8 @@ meraki networks getNetworkFloorPlans --networkId 'STRING'
 ````
 
 
-### Get Network Group Policies
+----------------------------------------
+## Get Network Group Policies
 
 
 **List the group policies in a network**
@@ -2931,7 +3035,8 @@ meraki networks getNetworkGroupPolicies --networkId 'STRING'
 ````
 
 
-### Get Network Group Policy
+----------------------------------------
+## Get Network Group Policy
 
 
 **Display a group policy**
@@ -2953,7 +3058,8 @@ meraki networks getNetworkGroupPolicy --networkId 'STRING' --groupPolicyId 'STRI
 ````
 
 
-### Get Network Meraki Auth User
+----------------------------------------
+## Get Network Meraki Auth User
 
 
 **Return the Meraki Auth splash guest, RADIUS, or client VPN user**
@@ -2975,7 +3081,8 @@ meraki networks getNetworkMerakiAuthUser --networkId 'STRING' --merakiAuthUserId
 ````
 
 
-### Get Network Meraki Auth Users
+----------------------------------------
+## Get Network Meraki Auth Users
 
 
 **List the users configured under Meraki Authentication for a network (splash guest or RADIUS users for a wireless network, or client VPN users for a wired network)**
@@ -2996,7 +3103,8 @@ meraki networks getNetworkMerakiAuthUsers --networkId 'STRING'
 ````
 
 
-### Get Network Mqtt Broker
+----------------------------------------
+## Get Network Mqtt Broker
 
 
 **Return an MQTT broker**
@@ -3018,7 +3126,8 @@ meraki networks getNetworkMqttBroker --networkId 'STRING' --mqttBrokerId 'STRING
 ````
 
 
-### Get Network Mqtt Brokers
+----------------------------------------
+## Get Network Mqtt Brokers
 
 
 **List the MQTT brokers for this network**
@@ -3039,7 +3148,8 @@ meraki networks getNetworkMqttBrokers --networkId 'STRING'
 ````
 
 
-### Get Network Netflow
+----------------------------------------
+## Get Network Netflow
 
 
 **Return the NetFlow traffic reporting settings for a network**
@@ -3060,7 +3170,8 @@ meraki networks getNetworkNetflow --networkId 'STRING'
 ````
 
 
-### Get Network Network Health Channel Utilization
+----------------------------------------
+## Get Network Network Health Channel Utilization
 
 
 **Get the channel utilization over each radio for all APs in a network.**
@@ -3090,7 +3201,8 @@ meraki networks getNetworkNetworkHealthChannelUtilization --networkId 'STRING'
 ````
 
 
-### Get Network Pii Pii Keys
+----------------------------------------
+## Get Network Pii Pii Keys
 
 
 **List the keys required to access Personally Identifiable Information (PII) for a given identifier**
@@ -3117,7 +3229,8 @@ meraki networks getNetworkPiiPiiKeys --networkId 'STRING'
 ````
 
 
-### Get Network Pii Request
+----------------------------------------
+## Get Network Pii Request
 
 
 **Return a PII request**
@@ -3139,7 +3252,8 @@ meraki networks getNetworkPiiRequest --networkId 'STRING' --requestId 'STRING'
 ````
 
 
-### Get Network Pii Requests
+----------------------------------------
+## Get Network Pii Requests
 
 
 **List the PII requests for this network or organization**
@@ -3160,7 +3274,8 @@ meraki networks getNetworkPiiRequests --networkId 'STRING'
 ````
 
 
-### Get Network Pii Sm Devices For Key
+----------------------------------------
+## Get Network Pii Sm Devices For Key
 
 
 **Given a piece of Personally Identifiable Information (PII), return the Systems Manager device ID(s) associated with that identifier**
@@ -3187,7 +3302,8 @@ meraki networks getNetworkPiiSmDevicesForKey --networkId 'STRING'
 ````
 
 
-### Get Network Pii Sm Owners For Key
+----------------------------------------
+## Get Network Pii Sm Owners For Key
 
 
 **Given a piece of Personally Identifiable Information (PII), return the Systems Manager owner ID(s) associated with that identifier**
@@ -3214,7 +3330,8 @@ meraki networks getNetworkPiiSmOwnersForKey --networkId 'STRING'
 ````
 
 
-### Get Network Settings
+----------------------------------------
+## Get Network Settings
 
 
 **Return the settings for a network**
@@ -3235,7 +3352,8 @@ meraki networks getNetworkSettings --networkId 'STRING'
 ````
 
 
-### Get Network Snmp
+----------------------------------------
+## Get Network Snmp
 
 
 **Return the SNMP settings for a network**
@@ -3256,7 +3374,8 @@ meraki networks getNetworkSnmp --networkId 'STRING'
 ````
 
 
-### Get Network Splash Login Attempts
+----------------------------------------
+## Get Network Splash Login Attempts
 
 
 **List the splash login attempts for a network**
@@ -3280,7 +3399,8 @@ meraki networks getNetworkSplashLoginAttempts --networkId 'STRING'
 ````
 
 
-### Get Network Syslog Servers
+----------------------------------------
+## Get Network Syslog Servers
 
 
 **List the syslog servers for a network**
@@ -3301,7 +3421,8 @@ meraki networks getNetworkSyslogServers --networkId 'STRING'
 ````
 
 
-### Get Network Traffic
+----------------------------------------
+## Get Network Traffic
 
 
 **Return the traffic analysis data for this network**
@@ -3325,7 +3446,8 @@ meraki networks getNetworkTraffic --networkId 'STRING'
 ````
 
 
-### Get Network Traffic Analysis
+----------------------------------------
+## Get Network Traffic Analysis
 
 
 **Return the traffic analysis settings for a network**
@@ -3346,7 +3468,8 @@ meraki networks getNetworkTrafficAnalysis --networkId 'STRING'
 ````
 
 
-### Get Network Traffic Shaping Application Categories
+----------------------------------------
+## Get Network Traffic Shaping Application Categories
 
 
 **Returns the application categories for traffic shaping rules.**
@@ -3367,7 +3490,8 @@ meraki networks getNetworkTrafficShapingApplicationCategories --networkId 'STRIN
 ````
 
 
-### Get Network Traffic Shaping Dscp Tagging Options
+----------------------------------------
+## Get Network Traffic Shaping Dscp Tagging Options
 
 
 **Returns the available DSCP tagging options for your traffic shaping rules.**
@@ -3388,7 +3512,8 @@ meraki networks getNetworkTrafficShapingDscpTaggingOptions --networkId 'STRING'
 ````
 
 
-### Get Network Webhooks Http Server
+----------------------------------------
+## Get Network Webhooks Http Server
 
 
 **Return an HTTP server for a network**
@@ -3410,7 +3535,8 @@ meraki networks getNetworkWebhooksHttpServer --networkId 'STRING' --httpServerId
 ````
 
 
-### Get Network Webhooks Http Servers
+----------------------------------------
+## Get Network Webhooks Http Servers
 
 
 **List the HTTP servers for a network**
@@ -3431,7 +3557,8 @@ meraki networks getNetworkWebhooksHttpServers --networkId 'STRING'
 ````
 
 
-### Get Network Webhooks Webhook Test
+----------------------------------------
+## Get Network Webhooks Webhook Test
 
 
 **Return the status of a webhook test for a network**
@@ -3453,7 +3580,8 @@ meraki networks getNetworkWebhooksWebhookTest --networkId 'STRING' --webhookTest
 ````
 
 
-### Provision Network Clients
+----------------------------------------
+## Provision Network Clients
 
 
 **Provisions a client with a name and policy**
@@ -3479,7 +3607,8 @@ meraki networks provisionNetworkClients --networkId 'STRING' --clients ITEM --de
 ````
 
 
-### Remove Network Devices
+----------------------------------------
+## Remove Network Devices
 
 
 **Remove a single device**
@@ -3501,7 +3630,8 @@ meraki networks removeNetworkDevices --networkId 'STRING' --serial 'STRING'
 ````
 
 
-### Split Network
+----------------------------------------
+## Split Network
 
 
 **Split a combined network into individual networks for each type of device**
@@ -3522,7 +3652,8 @@ meraki networks splitNetwork --networkId 'STRING'
 ````
 
 
-### Unbind Network
+----------------------------------------
+## Unbind Network
 
 
 **Unbind a network from a template.**
@@ -3543,7 +3674,8 @@ meraki networks unbindNetwork --networkId 'STRING'
 ````
 
 
-### Update Network
+----------------------------------------
+## Update Network
 
 
 **Update a network**
@@ -3568,7 +3700,8 @@ meraki networks updateNetwork --networkId 'STRING'
 ````
 
 
-### Update Network Alerts Settings
+----------------------------------------
+## Update Network Alerts Settings
 
 
 **Update the alert configuration for this network**
@@ -3591,7 +3724,8 @@ meraki networks updateNetworkAlertsSettings --networkId 'STRING'
 ````
 
 
-### Update Network Client Policy
+----------------------------------------
+## Update Network Client Policy
 
 
 **Update the policy assigned to a client on the network**
@@ -3615,7 +3749,8 @@ meraki networks updateNetworkClientPolicy --networkId 'STRING' --clientId 'STRIN
 ````
 
 
-### Update Network Client Splash Authorization Status
+----------------------------------------
+## Update Network Client Splash Authorization Status
 
 
 **Update a client's splash authorization**
@@ -3638,7 +3773,8 @@ meraki networks updateNetworkClientSplashAuthorizationStatus --networkId 'STRING
 ````
 
 
-### Update Network Firmware Upgrades
+----------------------------------------
+## Update Network Firmware Upgrades
 
 
 **Update current maintenance window for a network**
@@ -3660,7 +3796,8 @@ meraki networks updateNetworkFirmwareUpgrades --networkId 'STRING'
 ````
 
 
-### Update Network Floor Plan
+----------------------------------------
+## Update Network Floor Plan
 
 
 **Update a floor plan's geolocation and other meta data**
@@ -3689,7 +3826,8 @@ meraki networks updateNetworkFloorPlan --networkId 'STRING' --floorPlanId 'STRIN
 ````
 
 
-### Update Network Group Policy
+----------------------------------------
+## Update Network Group Policy
 
 
 **Update a group policy**
@@ -3722,7 +3860,8 @@ meraki networks updateNetworkGroupPolicy --networkId 'STRING' --groupPolicyId 'S
 ````
 
 
-### Update Network Meraki Auth User
+----------------------------------------
+## Update Network Meraki Auth User
 
 
 **Update a user configured with Meraki Authentication (currently, 802.1X RADIUS, splash guest, and client VPN users can be deleted)**
@@ -3748,7 +3887,8 @@ meraki networks updateNetworkMerakiAuthUser --networkId 'STRING' --merakiAuthUse
 ````
 
 
-### Update Network Mqtt Broker
+----------------------------------------
+## Update Network Mqtt Broker
 
 
 **Update an MQTT broker**
@@ -3773,7 +3913,8 @@ meraki networks updateNetworkMqttBroker --networkId 'STRING' --mqttBrokerId 'STR
 ````
 
 
-### Update Network Netflow
+----------------------------------------
+## Update Network Netflow
 
 
 **Update the NetFlow traffic reporting settings for a network**
@@ -3797,7 +3938,8 @@ meraki networks updateNetworkNetflow --networkId 'STRING'
 ````
 
 
-### Update Network Settings
+----------------------------------------
+## Update Network Settings
 
 
 **Update the settings for a network**
@@ -3820,7 +3962,8 @@ meraki networks updateNetworkSettings --networkId 'STRING'
 ````
 
 
-### Update Network Snmp
+----------------------------------------
+## Update Network Snmp
 
 
 **Update the SNMP settings for a network**
@@ -3844,7 +3987,8 @@ meraki networks updateNetworkSnmp --networkId 'STRING'
 ````
 
 
-### Update Network Syslog Servers
+----------------------------------------
+## Update Network Syslog Servers
 
 
 **Update the syslog servers for a network**
@@ -3866,7 +4010,8 @@ meraki networks updateNetworkSyslogServers --networkId 'STRING' --servers ITEM
 ````
 
 
-### Update Network Traffic Analysis
+----------------------------------------
+## Update Network Traffic Analysis
 
 
 **Update the traffic analysis settings for a network**
@@ -3891,7 +4036,8 @@ meraki networks updateNetworkTrafficAnalysis --networkId 'STRING'
 ````
 
 
-### Update Network Webhooks Http Server
+----------------------------------------
+## Update Network Webhooks Http Server
 
 
 **Update an HTTP server**
@@ -3915,10 +4061,15 @@ def (networkId: str, httpServerId: str, **kwargs):
 meraki networks updateNetworkWebhooksHttpServer --networkId 'STRING' --httpServerId 'STRING'
 ````
 
-## Devices
+
+----------------------------------------
+
+----------------------------------------
+# Devices
 
 
-### Blink Device Leds
+----------------------------------------
+## Blink Device Leds
 
 
 **Blink the LEDs on a device**
@@ -3942,7 +4093,8 @@ meraki devices blinkDeviceLeds --serial 'STRING'
 ````
 
 
-### Get Device
+----------------------------------------
+## Get Device
 
 
 **Return a single device**
@@ -3963,7 +4115,8 @@ meraki devices getDevice --serial 'STRING'
 ````
 
 
-### Get Device Clients
+----------------------------------------
+## Get Device Clients
 
 
 **List the clients of a device, up to a maximum of a month ago**
@@ -3986,7 +4139,8 @@ meraki devices getDeviceClients --serial 'STRING'
 ````
 
 
-### Get Device Lldp Cdp
+----------------------------------------
+## Get Device Lldp Cdp
 
 
 **List LLDP and CDP information for a device**
@@ -4007,7 +4161,8 @@ meraki devices getDeviceLldpCdp --serial 'STRING'
 ````
 
 
-### Get Device Loss And Latency History
+----------------------------------------
+## Get Device Loss And Latency History
 
 
 **Get the uplink loss percentage and latency in milliseconds for a wired network device.**
@@ -4034,7 +4189,8 @@ meraki devices getDeviceLossAndLatencyHistory --serial 'STRING' --ip 'STRING'
 ````
 
 
-### Get Device Management Interface
+----------------------------------------
+## Get Device Management Interface
 
 
 **Return the management interface settings for a device**
@@ -4055,7 +4211,8 @@ meraki devices getDeviceManagementInterface --serial 'STRING'
 ````
 
 
-### Reboot Device
+----------------------------------------
+## Reboot Device
 
 
 **Reboot a device**
@@ -4076,7 +4233,8 @@ meraki devices rebootDevice --serial 'STRING'
 ````
 
 
-### Update Device
+----------------------------------------
+## Update Device
 
 
 **Update the attributes of a device**
@@ -4106,7 +4264,8 @@ meraki devices updateDevice --serial 'STRING'
 ````
 
 
-### Update Device Management Interface
+----------------------------------------
+## Update Device Management Interface
 
 
 **Update the management interface settings for a device**
@@ -4128,10 +4287,15 @@ def (serial: str, **kwargs):
 meraki devices updateDeviceManagementInterface --serial 'STRING'
 ````
 
-## Appliance
+
+----------------------------------------
+
+----------------------------------------
+# Appliance
 
 
-### Create Network Appliance Static Route
+----------------------------------------
+## Create Network Appliance Static Route
 
 
 **Add a static route for an MX or teleworker network**
@@ -4155,7 +4319,8 @@ meraki appliance createNetworkApplianceStaticRoute --networkId 'STRING' --name '
 ````
 
 
-### Create Network Appliance Traffic Shaping Custom Performance Class
+----------------------------------------
+## Create Network Appliance Traffic Shaping Custom Performance Class
 
 
 **Add a custom performance class for an MX network**
@@ -4180,7 +4345,8 @@ meraki appliance createNetworkApplianceTrafficShapingCustomPerformanceClass --ne
 ````
 
 
-### Create Network Appliance Vlan
+----------------------------------------
+## Create Network Appliance Vlan
 
 
 **Add a VLAN**
@@ -4206,7 +4372,8 @@ meraki appliance createNetworkApplianceVlan --networkId 'STRING' --id 'STRING' -
 ````
 
 
-### Delete Network Appliance Static Route
+----------------------------------------
+## Delete Network Appliance Static Route
 
 
 **Delete a static route from an MX or teleworker network**
@@ -4228,7 +4395,8 @@ meraki appliance deleteNetworkApplianceStaticRoute --networkId 'STRING' --static
 ````
 
 
-### Delete Network Appliance Traffic Shaping Custom Performance Class
+----------------------------------------
+## Delete Network Appliance Traffic Shaping Custom Performance Class
 
 
 **Delete a custom performance class from an MX network**
@@ -4250,7 +4418,8 @@ meraki appliance deleteNetworkApplianceTrafficShapingCustomPerformanceClass --ne
 ````
 
 
-### Delete Network Appliance Vlan
+----------------------------------------
+## Delete Network Appliance Vlan
 
 
 **Delete a VLAN from a network**
@@ -4272,7 +4441,8 @@ meraki appliance deleteNetworkApplianceVlan --networkId 'STRING' --vlanId 'STRIN
 ````
 
 
-### Get Device Appliance Dhcp Subnets
+----------------------------------------
+## Get Device Appliance Dhcp Subnets
 
 
 **Return the DHCP subnet information for an appliance**
@@ -4293,7 +4463,8 @@ meraki appliance getDeviceApplianceDhcpSubnets --serial 'STRING'
 ````
 
 
-### Get Device Appliance Performance
+----------------------------------------
+## Get Device Appliance Performance
 
 
 **Return the performance score for a single MX**
@@ -4314,7 +4485,8 @@ meraki appliance getDeviceAppliancePerformance --serial 'STRING'
 ````
 
 
-### Get Network Appliance Client Security Events
+----------------------------------------
+## Get Network Appliance Client Security Events
 
 
 **List the security events for a client**
@@ -4345,7 +4517,8 @@ meraki appliance getNetworkApplianceClientSecurityEvents --networkId 'STRING' --
 ````
 
 
-### Get Network Appliance Connectivity Monitoring Destinations
+----------------------------------------
+## Get Network Appliance Connectivity Monitoring Destinations
 
 
 **Return the connectivity testing destinations for an MX network**
@@ -4366,7 +4539,8 @@ meraki appliance getNetworkApplianceConnectivityMonitoringDestinations --network
 ````
 
 
-### Get Network Appliance Content Filtering
+----------------------------------------
+## Get Network Appliance Content Filtering
 
 
 **Return the content filtering settings for an MX network**
@@ -4387,7 +4561,8 @@ meraki appliance getNetworkApplianceContentFiltering --networkId 'STRING'
 ````
 
 
-### Get Network Appliance Content Filtering Categories
+----------------------------------------
+## Get Network Appliance Content Filtering Categories
 
 
 **List all available content filtering categories for an MX network**
@@ -4408,7 +4583,8 @@ meraki appliance getNetworkApplianceContentFilteringCategories --networkId 'STRI
 ````
 
 
-### Get Network Appliance Firewall Cellular Firewall Rules
+----------------------------------------
+## Get Network Appliance Firewall Cellular Firewall Rules
 
 
 **Return the cellular firewall rules for an MX network**
@@ -4429,7 +4605,8 @@ meraki appliance getNetworkApplianceFirewallCellularFirewallRules --networkId 'S
 ````
 
 
-### Get Network Appliance Firewall Firewalled Service
+----------------------------------------
+## Get Network Appliance Firewall Firewalled Service
 
 
 **Return the accessibility settings of the given service ('ICMP', 'web', or 'SNMP')**
@@ -4451,7 +4628,8 @@ meraki appliance getNetworkApplianceFirewallFirewalledService --networkId 'STRIN
 ````
 
 
-### Get Network Appliance Firewall Firewalled Services
+----------------------------------------
+## Get Network Appliance Firewall Firewalled Services
 
 
 **List the appliance services and their accessibility rules**
@@ -4472,7 +4650,8 @@ meraki appliance getNetworkApplianceFirewallFirewalledServices --networkId 'STRI
 ````
 
 
-### Get Network Appliance Firewall Inbound Firewall Rules
+----------------------------------------
+## Get Network Appliance Firewall Inbound Firewall Rules
 
 
 **Return the inbound firewall rules for an MX network**
@@ -4493,7 +4672,8 @@ meraki appliance getNetworkApplianceFirewallInboundFirewallRules --networkId 'ST
 ````
 
 
-### Get Network Appliance Firewall L3 Firewall Rules
+----------------------------------------
+## Get Network Appliance Firewall L3 Firewall Rules
 
 
 **Return the L3 firewall rules for an MX network**
@@ -4514,7 +4694,8 @@ meraki appliance getNetworkApplianceFirewallL3FirewallRules --networkId 'STRING'
 ````
 
 
-### Get Network Appliance Firewall L7 Firewall Rules
+----------------------------------------
+## Get Network Appliance Firewall L7 Firewall Rules
 
 
 **List the MX L7 firewall rules for an MX network**
@@ -4535,7 +4716,8 @@ meraki appliance getNetworkApplianceFirewallL7FirewallRules --networkId 'STRING'
 ````
 
 
-### Get Network Appliance Firewall L7 Firewall Rules Application Categories
+----------------------------------------
+## Get Network Appliance Firewall L7 Firewall Rules Application Categories
 
 
 **Return the L7 firewall application categories and their associated applications for an MX network**
@@ -4556,7 +4738,8 @@ meraki appliance getNetworkApplianceFirewallL7FirewallRulesApplicationCategories
 ````
 
 
-### Get Network Appliance Firewall One To Many Nat Rules
+----------------------------------------
+## Get Network Appliance Firewall One To Many Nat Rules
 
 
 **Return the 1:Many NAT mapping rules for an MX network**
@@ -4577,7 +4760,8 @@ meraki appliance getNetworkApplianceFirewallOneToManyNatRules --networkId 'STRIN
 ````
 
 
-### Get Network Appliance Firewall One To One Nat Rules
+----------------------------------------
+## Get Network Appliance Firewall One To One Nat Rules
 
 
 **Return the 1:1 NAT mapping rules for an MX network**
@@ -4598,7 +4782,8 @@ meraki appliance getNetworkApplianceFirewallOneToOneNatRules --networkId 'STRING
 ````
 
 
-### Get Network Appliance Firewall Port Forwarding Rules
+----------------------------------------
+## Get Network Appliance Firewall Port Forwarding Rules
 
 
 **Return the port forwarding rules for an MX network**
@@ -4619,7 +4804,8 @@ meraki appliance getNetworkApplianceFirewallPortForwardingRules --networkId 'STR
 ````
 
 
-### Get Network Appliance Port
+----------------------------------------
+## Get Network Appliance Port
 
 
 **Return per-port VLAN settings for a single MX port.**
@@ -4641,7 +4827,8 @@ meraki appliance getNetworkAppliancePort --networkId 'STRING' --portId 'STRING'
 ````
 
 
-### Get Network Appliance Ports
+----------------------------------------
+## Get Network Appliance Ports
 
 
 **List per-port VLAN settings for all ports of a MX.**
@@ -4662,7 +4849,8 @@ meraki appliance getNetworkAppliancePorts --networkId 'STRING'
 ````
 
 
-### Get Network Appliance Security Events
+----------------------------------------
+## Get Network Appliance Security Events
 
 
 **List the security events for a network**
@@ -4692,7 +4880,8 @@ meraki appliance getNetworkApplianceSecurityEvents --networkId 'STRING'
 ````
 
 
-### Get Network Appliance Security Intrusion
+----------------------------------------
+## Get Network Appliance Security Intrusion
 
 
 **Returns all supported intrusion settings for an MX network**
@@ -4713,7 +4902,8 @@ meraki appliance getNetworkApplianceSecurityIntrusion --networkId 'STRING'
 ````
 
 
-### Get Network Appliance Security Malware
+----------------------------------------
+## Get Network Appliance Security Malware
 
 
 **Returns all supported malware settings for an MX network**
@@ -4734,7 +4924,8 @@ meraki appliance getNetworkApplianceSecurityMalware --networkId 'STRING'
 ````
 
 
-### Get Network Appliance Settings
+----------------------------------------
+## Get Network Appliance Settings
 
 
 **Return the appliance settings for a network**
@@ -4755,7 +4946,8 @@ meraki appliance getNetworkApplianceSettings --networkId 'STRING'
 ````
 
 
-### Get Network Appliance Single Lan
+----------------------------------------
+## Get Network Appliance Single Lan
 
 
 **Return single LAN configuration**
@@ -4776,7 +4968,8 @@ meraki appliance getNetworkApplianceSingleLan --networkId 'STRING'
 ````
 
 
-### Get Network Appliance Static Route
+----------------------------------------
+## Get Network Appliance Static Route
 
 
 **Return a static route for an MX or teleworker network**
@@ -4798,7 +4991,8 @@ meraki appliance getNetworkApplianceStaticRoute --networkId 'STRING' --staticRou
 ````
 
 
-### Get Network Appliance Static Routes
+----------------------------------------
+## Get Network Appliance Static Routes
 
 
 **List the static routes for an MX or teleworker network**
@@ -4819,7 +5013,8 @@ meraki appliance getNetworkApplianceStaticRoutes --networkId 'STRING'
 ````
 
 
-### Get Network Appliance Traffic Shaping
+----------------------------------------
+## Get Network Appliance Traffic Shaping
 
 
 **Display the traffic shaping settings for an MX network**
@@ -4840,7 +5035,8 @@ meraki appliance getNetworkApplianceTrafficShaping --networkId 'STRING'
 ````
 
 
-### Get Network Appliance Traffic Shaping Custom Performance Class
+----------------------------------------
+## Get Network Appliance Traffic Shaping Custom Performance Class
 
 
 **Return a custom performance class for an MX network**
@@ -4862,7 +5058,8 @@ meraki appliance getNetworkApplianceTrafficShapingCustomPerformanceClass --netwo
 ````
 
 
-### Get Network Appliance Traffic Shaping Custom Performance Classes
+----------------------------------------
+## Get Network Appliance Traffic Shaping Custom Performance Classes
 
 
 **List all custom performance classes for an MX network**
@@ -4883,7 +5080,8 @@ meraki appliance getNetworkApplianceTrafficShapingCustomPerformanceClasses --net
 ````
 
 
-### Get Network Appliance Traffic Shaping Rules
+----------------------------------------
+## Get Network Appliance Traffic Shaping Rules
 
 
 **Display the traffic shaping settings rules for an MX network**
@@ -4904,7 +5102,8 @@ meraki appliance getNetworkApplianceTrafficShapingRules --networkId 'STRING'
 ````
 
 
-### Get Network Appliance Traffic Shaping Uplink Bandwidth
+----------------------------------------
+## Get Network Appliance Traffic Shaping Uplink Bandwidth
 
 
 **Returns the uplink bandwidth settings for your MX network.**
@@ -4925,7 +5124,8 @@ meraki appliance getNetworkApplianceTrafficShapingUplinkBandwidth --networkId 'S
 ````
 
 
-### Get Network Appliance Traffic Shaping Uplink Selection
+----------------------------------------
+## Get Network Appliance Traffic Shaping Uplink Selection
 
 
 **Show uplink selection settings for an MX network**
@@ -4946,7 +5146,8 @@ meraki appliance getNetworkApplianceTrafficShapingUplinkSelection --networkId 'S
 ````
 
 
-### Get Network Appliance Vlan
+----------------------------------------
+## Get Network Appliance Vlan
 
 
 **Return a VLAN**
@@ -4968,7 +5169,8 @@ meraki appliance getNetworkApplianceVlan --networkId 'STRING' --vlanId 'STRING'
 ````
 
 
-### Get Network Appliance Vlans
+----------------------------------------
+## Get Network Appliance Vlans
 
 
 **List the VLANs for an MX network**
@@ -4989,7 +5191,8 @@ meraki appliance getNetworkApplianceVlans --networkId 'STRING'
 ````
 
 
-### Get Network Appliance Vlans Settings
+----------------------------------------
+## Get Network Appliance Vlans Settings
 
 
 **Returns the enabled status of VLANs for the network**
@@ -5010,7 +5213,8 @@ meraki appliance getNetworkApplianceVlansSettings --networkId 'STRING'
 ````
 
 
-### Get Network Appliance Vpn Bgp
+----------------------------------------
+## Get Network Appliance Vpn Bgp
 
 
 **Return a Hub BGP Configuration**
@@ -5031,7 +5235,8 @@ meraki appliance getNetworkApplianceVpnBgp --networkId 'STRING'
 ````
 
 
-### Get Network Appliance Vpn Site To Site Vpn
+----------------------------------------
+## Get Network Appliance Vpn Site To Site Vpn
 
 
 **Return the site-to-site VPN settings of a network**
@@ -5052,7 +5257,8 @@ meraki appliance getNetworkApplianceVpnSiteToSiteVpn --networkId 'STRING'
 ````
 
 
-### Get Network Appliance Warm Spare
+----------------------------------------
+## Get Network Appliance Warm Spare
 
 
 **Return MX warm spare settings**
@@ -5073,7 +5279,8 @@ meraki appliance getNetworkApplianceWarmSpare --networkId 'STRING'
 ````
 
 
-### Get Organization Appliance Security Events
+----------------------------------------
+## Get Organization Appliance Security Events
 
 
 **List the security events for an organization**
@@ -5103,7 +5310,8 @@ meraki appliance getOrganizationApplianceSecurityEvents --organizationId 'STRING
 ````
 
 
-### Get Organization Appliance Security Intrusion
+----------------------------------------
+## Get Organization Appliance Security Intrusion
 
 
 **Returns all supported intrusion settings for an organization**
@@ -5124,7 +5332,8 @@ meraki appliance getOrganizationApplianceSecurityIntrusion --organizationId 'STR
 ````
 
 
-### Get Organization Appliance Uplink Statuses
+----------------------------------------
+## Get Organization Appliance Uplink Statuses
 
 
 **List the uplink status of every Meraki MX and Z series appliances in the organization**
@@ -5153,7 +5362,8 @@ meraki appliance getOrganizationApplianceUplinkStatuses --organizationId 'STRING
 ````
 
 
-### Get Organization Appliance Vpn Stats
+----------------------------------------
+## Get Organization Appliance Vpn Stats
 
 
 **Show VPN history stat for networks in an organization**
@@ -5183,7 +5393,8 @@ meraki appliance getOrganizationApplianceVpnStats --organizationId 'STRING'
 ````
 
 
-### Get Organization Appliance Vpn Statuses
+----------------------------------------
+## Get Organization Appliance Vpn Statuses
 
 
 **Show VPN status for networks in an organization**
@@ -5210,7 +5421,8 @@ meraki appliance getOrganizationApplianceVpnStatuses --organizationId 'STRING'
 ````
 
 
-### Get Organization Appliance Vpn Third Party V P N Peers
+----------------------------------------
+## Get Organization Appliance Vpn Third Party V P N Peers
 
 
 **Return the third party VPN peers for an organization**
@@ -5231,7 +5443,8 @@ meraki appliance getOrganizationApplianceVpnThirdPartyVPNPeers --organizationId 
 ````
 
 
-### Get Organization Appliance Vpn Vpn Firewall Rules
+----------------------------------------
+## Get Organization Appliance Vpn Vpn Firewall Rules
 
 
 **Return the firewall rules for an organization's site-to-site VPN**
@@ -5252,7 +5465,8 @@ meraki appliance getOrganizationApplianceVpnVpnFirewallRules --organizationId 'S
 ````
 
 
-### Swap Network Appliance Warm Spare
+----------------------------------------
+## Swap Network Appliance Warm Spare
 
 
 **Swap MX primary and warm spare appliances**
@@ -5273,7 +5487,8 @@ meraki appliance swapNetworkApplianceWarmSpare --networkId 'STRING'
 ````
 
 
-### Update Network Appliance Connectivity Monitoring Destinations
+----------------------------------------
+## Update Network Appliance Connectivity Monitoring Destinations
 
 
 **Update the connectivity testing destinations for an MX network**
@@ -5295,7 +5510,8 @@ meraki appliance updateNetworkApplianceConnectivityMonitoringDestinations --netw
 ````
 
 
-### Update Network Appliance Content Filtering
+----------------------------------------
+## Update Network Appliance Content Filtering
 
 
 **Update the content filtering settings for an MX network**
@@ -5320,7 +5536,8 @@ meraki appliance updateNetworkApplianceContentFiltering --networkId 'STRING'
 ````
 
 
-### Update Network Appliance Firewall Cellular Firewall Rules
+----------------------------------------
+## Update Network Appliance Firewall Cellular Firewall Rules
 
 
 **Update the cellular firewall rules of an MX network**
@@ -5342,7 +5559,8 @@ meraki appliance updateNetworkApplianceFirewallCellularFirewallRules --networkId
 ````
 
 
-### Update Network Appliance Firewall Firewalled Service
+----------------------------------------
+## Update Network Appliance Firewall Firewalled Service
 
 
 **Updates the accessibility settings for the given service ('ICMP', 'web', or 'SNMP')**
@@ -5366,7 +5584,8 @@ meraki appliance updateNetworkApplianceFirewallFirewalledService --networkId 'ST
 ````
 
 
-### Update Network Appliance Firewall Inbound Firewall Rules
+----------------------------------------
+## Update Network Appliance Firewall Inbound Firewall Rules
 
 
 **Update the inbound firewall rules of an MX network**
@@ -5389,7 +5608,8 @@ meraki appliance updateNetworkApplianceFirewallInboundFirewallRules --networkId 
 ````
 
 
-### Update Network Appliance Firewall L3 Firewall Rules
+----------------------------------------
+## Update Network Appliance Firewall L3 Firewall Rules
 
 
 **Update the L3 firewall rules of an MX network**
@@ -5412,7 +5632,8 @@ meraki appliance updateNetworkApplianceFirewallL3FirewallRules --networkId 'STRI
 ````
 
 
-### Update Network Appliance Firewall L7 Firewall Rules
+----------------------------------------
+## Update Network Appliance Firewall L7 Firewall Rules
 
 
 **Update the MX L7 firewall rules for an MX network**
@@ -5434,7 +5655,8 @@ meraki appliance updateNetworkApplianceFirewallL7FirewallRules --networkId 'STRI
 ````
 
 
-### Update Network Appliance Firewall One To Many Nat Rules
+----------------------------------------
+## Update Network Appliance Firewall One To Many Nat Rules
 
 
 **Set the 1:Many NAT mapping rules for an MX network**
@@ -5456,7 +5678,8 @@ meraki appliance updateNetworkApplianceFirewallOneToManyNatRules --networkId 'ST
 ````
 
 
-### Update Network Appliance Firewall One To One Nat Rules
+----------------------------------------
+## Update Network Appliance Firewall One To One Nat Rules
 
 
 **Set the 1:1 NAT mapping rules for an MX network**
@@ -5478,7 +5701,8 @@ meraki appliance updateNetworkApplianceFirewallOneToOneNatRules --networkId 'STR
 ````
 
 
-### Update Network Appliance Firewall Port Forwarding Rules
+----------------------------------------
+## Update Network Appliance Firewall Port Forwarding Rules
 
 
 **Update the port forwarding rules for an MX network**
@@ -5500,7 +5724,8 @@ meraki appliance updateNetworkApplianceFirewallPortForwardingRules --networkId '
 ````
 
 
-### Update Network Appliance Port
+----------------------------------------
+## Update Network Appliance Port
 
 
 **Update the per-port VLAN settings for a single MX port.**
@@ -5528,7 +5753,8 @@ meraki appliance updateNetworkAppliancePort --networkId 'STRING' --portId 'STRIN
 ````
 
 
-### Update Network Appliance Security Intrusion
+----------------------------------------
+## Update Network Appliance Security Intrusion
 
 
 **Set the supported intrusion settings for an MX network**
@@ -5552,7 +5778,8 @@ meraki appliance updateNetworkApplianceSecurityIntrusion --networkId 'STRING'
 ````
 
 
-### Update Network Appliance Security Malware
+----------------------------------------
+## Update Network Appliance Security Malware
 
 
 **Set the supported malware settings for an MX network**
@@ -5576,7 +5803,8 @@ meraki appliance updateNetworkApplianceSecurityMalware --networkId 'STRING' --mo
 ````
 
 
-### Update Network Appliance Single Lan
+----------------------------------------
+## Update Network Appliance Single Lan
 
 
 **Update single LAN configuration**
@@ -5599,7 +5827,8 @@ meraki appliance updateNetworkApplianceSingleLan --networkId 'STRING'
 ````
 
 
-### Update Network Appliance Static Route
+----------------------------------------
+## Update Network Appliance Static Route
 
 
 **Update a static route for an MX or teleworker network**
@@ -5627,7 +5856,8 @@ meraki appliance updateNetworkApplianceStaticRoute --networkId 'STRING' --static
 ````
 
 
-### Update Network Appliance Traffic Shaping
+----------------------------------------
+## Update Network Appliance Traffic Shaping
 
 
 **Update the traffic shaping settings for an MX network**
@@ -5649,7 +5879,8 @@ meraki appliance updateNetworkApplianceTrafficShaping --networkId 'STRING'
 ````
 
 
-### Update Network Appliance Traffic Shaping Custom Performance Class
+----------------------------------------
+## Update Network Appliance Traffic Shaping Custom Performance Class
 
 
 **Update a custom performance class for an MX network**
@@ -5675,7 +5906,8 @@ meraki appliance updateNetworkApplianceTrafficShapingCustomPerformanceClass --ne
 ````
 
 
-### Update Network Appliance Traffic Shaping Rules
+----------------------------------------
+## Update Network Appliance Traffic Shaping Rules
 
 
 **Update the traffic shaping settings rules for an MX network**
@@ -5701,7 +5933,8 @@ meraki appliance updateNetworkApplianceTrafficShapingRules --networkId 'STRING'
 ````
 
 
-### Update Network Appliance Traffic Shaping Uplink Bandwidth
+----------------------------------------
+## Update Network Appliance Traffic Shaping Uplink Bandwidth
 
 
 **Updates the uplink bandwidth settings for your MX network.**
@@ -5723,7 +5956,8 @@ meraki appliance updateNetworkApplianceTrafficShapingUplinkBandwidth --networkId
 ````
 
 
-### Update Network Appliance Traffic Shaping Uplink Selection
+----------------------------------------
+## Update Network Appliance Traffic Shaping Uplink Selection
 
 
 **Update uplink selection settings for an MX network**
@@ -5749,7 +5983,8 @@ meraki appliance updateNetworkApplianceTrafficShapingUplinkSelection --networkId
 ````
 
 
-### Update Network Appliance Vlan
+----------------------------------------
+## Update Network Appliance Vlan
 
 
 **Update a VLAN**
@@ -5786,7 +6021,8 @@ meraki appliance updateNetworkApplianceVlan --networkId 'STRING' --vlanId 'STRIN
 ````
 
 
-### Update Network Appliance Vlans Settings
+----------------------------------------
+## Update Network Appliance Vlans Settings
 
 
 **Enable/Disable VLANs for the given network**
@@ -5808,7 +6044,8 @@ meraki appliance updateNetworkApplianceVlansSettings --networkId 'STRING'
 ````
 
 
-### Update Network Appliance Vpn Bgp
+----------------------------------------
+## Update Network Appliance Vpn Bgp
 
 
 **Update a Hub BGP Configuration**
@@ -5833,7 +6070,8 @@ meraki appliance updateNetworkApplianceVpnBgp --networkId 'STRING' --enabled
 ````
 
 
-### Update Network Appliance Vpn Site To Site Vpn
+----------------------------------------
+## Update Network Appliance Vpn Site To Site Vpn
 
 
 **Update the site-to-site VPN settings of a network**
@@ -5857,7 +6095,8 @@ meraki appliance updateNetworkApplianceVpnSiteToSiteVpn --networkId 'STRING' --m
 ````
 
 
-### Update Network Appliance Warm Spare
+----------------------------------------
+## Update Network Appliance Warm Spare
 
 
 **Update MX warm spare settings**
@@ -5883,7 +6122,8 @@ meraki appliance updateNetworkApplianceWarmSpare --networkId 'STRING' --enabled
 ````
 
 
-### Update Organization Appliance Security Intrusion
+----------------------------------------
+## Update Organization Appliance Security Intrusion
 
 
 **Sets supported intrusion settings for an organization**
@@ -5905,7 +6145,8 @@ meraki appliance updateOrganizationApplianceSecurityIntrusion --organizationId '
 ````
 
 
-### Update Organization Appliance Vpn Third Party V P N Peers
+----------------------------------------
+## Update Organization Appliance Vpn Third Party V P N Peers
 
 
 **Update the third party VPN peers for an organization**
@@ -5927,7 +6168,8 @@ meraki appliance updateOrganizationApplianceVpnThirdPartyVPNPeers --organization
 ````
 
 
-### Update Organization Appliance Vpn Vpn Firewall Rules
+----------------------------------------
+## Update Organization Appliance Vpn Vpn Firewall Rules
 
 
 **Update the firewall rules of an organization's site-to-site VPN**
@@ -5949,10 +6191,15 @@ def (organizationId: str, **kwargs):
 meraki appliance updateOrganizationApplianceVpnVpnFirewallRules --organizationId 'STRING'
 ````
 
-## Camera
+
+----------------------------------------
+
+----------------------------------------
+# Camera
 
 
-### Create Network Camera Quality Retention Profile
+----------------------------------------
+## Create Network Camera Quality Retention Profile
 
 
 **Creates new quality retention profile for this network.**
@@ -5982,7 +6229,8 @@ meraki camera createNetworkCameraQualityRetentionProfile --networkId 'STRING' --
 ````
 
 
-### Delete Network Camera Quality Retention Profile
+----------------------------------------
+## Delete Network Camera Quality Retention Profile
 
 
 **Delete an existing quality retention profile for this network.**
@@ -6004,7 +6252,8 @@ meraki camera deleteNetworkCameraQualityRetentionProfile --networkId 'STRING' --
 ````
 
 
-### Generate Device Camera Snapshot
+----------------------------------------
+## Generate Device Camera Snapshot
 
 
 **Generate a snapshot of what the camera sees at the specified time and return a link to that image.**
@@ -6027,7 +6276,8 @@ meraki camera generateDeviceCameraSnapshot --serial 'STRING'
 ````
 
 
-### Get Device Camera Analytics Live
+----------------------------------------
+## Get Device Camera Analytics Live
 
 
 **Returns live state from camera of analytics zones**
@@ -6048,7 +6298,8 @@ meraki camera getDeviceCameraAnalyticsLive --serial 'STRING'
 ````
 
 
-### Get Device Camera Analytics Overview
+----------------------------------------
+## Get Device Camera Analytics Overview
 
 
 **Returns an overview of aggregate analytics data for a timespan**
@@ -6073,7 +6324,8 @@ meraki camera getDeviceCameraAnalyticsOverview --serial 'STRING'
 ````
 
 
-### Get Device Camera Analytics Recent
+----------------------------------------
+## Get Device Camera Analytics Recent
 
 
 **Returns most recent record for analytics zones**
@@ -6095,7 +6347,8 @@ meraki camera getDeviceCameraAnalyticsRecent --serial 'STRING'
 ````
 
 
-### Get Device Camera Analytics Zone History
+----------------------------------------
+## Get Device Camera Analytics Zone History
 
 
 **Return historical records for analytic zones**
@@ -6122,7 +6375,8 @@ meraki camera getDeviceCameraAnalyticsZoneHistory --serial 'STRING' --zoneId 'ST
 ````
 
 
-### Get Device Camera Analytics Zones
+----------------------------------------
+## Get Device Camera Analytics Zones
 
 
 **Returns all configured analytic zones for this camera**
@@ -6143,7 +6397,8 @@ meraki camera getDeviceCameraAnalyticsZones --serial 'STRING'
 ````
 
 
-### Get Device Camera Quality And Retention
+----------------------------------------
+## Get Device Camera Quality And Retention
 
 
 **Returns quality and retention settings for the given camera**
@@ -6164,7 +6419,8 @@ meraki camera getDeviceCameraQualityAndRetention --serial 'STRING'
 ````
 
 
-### Get Device Camera Sense
+----------------------------------------
+## Get Device Camera Sense
 
 
 **Returns sense settings for a given camera**
@@ -6185,7 +6441,8 @@ meraki camera getDeviceCameraSense --serial 'STRING'
 ````
 
 
-### Get Device Camera Sense Object Detection Models
+----------------------------------------
+## Get Device Camera Sense Object Detection Models
 
 
 **Returns the MV Sense object detection model list for the given camera**
@@ -6206,7 +6463,8 @@ meraki camera getDeviceCameraSenseObjectDetectionModels --serial 'STRING'
 ````
 
 
-### Get Device Camera Video Link
+----------------------------------------
+## Get Device Camera Video Link
 
 
 **Returns video link to the specified camera**
@@ -6228,7 +6486,8 @@ meraki camera getDeviceCameraVideoLink --serial 'STRING'
 ````
 
 
-### Get Device Camera Video Settings
+----------------------------------------
+## Get Device Camera Video Settings
 
 
 **Returns video settings for the given camera**
@@ -6249,7 +6508,8 @@ meraki camera getDeviceCameraVideoSettings --serial 'STRING'
 ````
 
 
-### Get Network Camera Quality Retention Profile
+----------------------------------------
+## Get Network Camera Quality Retention Profile
 
 
 **Retrieve a single quality retention profile**
@@ -6271,7 +6531,8 @@ meraki camera getNetworkCameraQualityRetentionProfile --networkId 'STRING' --qua
 ````
 
 
-### Get Network Camera Quality Retention Profiles
+----------------------------------------
+## Get Network Camera Quality Retention Profiles
 
 
 **List the quality retention profiles for this network**
@@ -6292,7 +6553,8 @@ meraki camera getNetworkCameraQualityRetentionProfiles --networkId 'STRING'
 ````
 
 
-### Get Network Camera Schedules
+----------------------------------------
+## Get Network Camera Schedules
 
 
 **Returns a list of all camera recording schedules.**
@@ -6313,7 +6575,8 @@ meraki camera getNetworkCameraSchedules --networkId 'STRING'
 ````
 
 
-### Update Device Camera Quality And Retention
+----------------------------------------
+## Update Device Camera Quality And Retention
 
 
 **Update quality and retention settings for the given camera**
@@ -6341,7 +6604,8 @@ meraki camera updateDeviceCameraQualityAndRetention --serial 'STRING'
 ````
 
 
-### Update Device Camera Sense
+----------------------------------------
+## Update Device Camera Sense
 
 
 **Update sense settings for the given camera**
@@ -6365,7 +6629,8 @@ meraki camera updateDeviceCameraSense --serial 'STRING'
 ````
 
 
-### Update Device Camera Video Settings
+----------------------------------------
+## Update Device Camera Video Settings
 
 
 **Update video settings for the given camera**
@@ -6387,7 +6652,8 @@ meraki camera updateDeviceCameraVideoSettings --serial 'STRING'
 ````
 
 
-### Update Network Camera Quality Retention Profile
+----------------------------------------
+## Update Network Camera Quality Retention Profile
 
 
 **Update an existing quality retention profile for this network.**
@@ -6417,10 +6683,15 @@ def (networkId: str, qualityRetentionProfileId: str, **kwargs):
 meraki camera updateNetworkCameraQualityRetentionProfile --networkId 'STRING' --qualityRetentionProfileId 'STRING'
 ````
 
-## Cellular Gateway
+
+----------------------------------------
+
+----------------------------------------
+# Cellular Gateway
 
 
-### Get Device Cellular Gateway Lan
+----------------------------------------
+## Get Device Cellular Gateway Lan
 
 
 **Show the LAN Settings of a MG**
@@ -6441,7 +6712,8 @@ meraki cellularGateway getDeviceCellularGatewayLan --serial 'STRING'
 ````
 
 
-### Get Device Cellular Gateway Port Forwarding Rules
+----------------------------------------
+## Get Device Cellular Gateway Port Forwarding Rules
 
 
 **Returns the port forwarding rules for a single MG.**
@@ -6462,7 +6734,8 @@ meraki cellularGateway getDeviceCellularGatewayPortForwardingRules --serial 'STR
 ````
 
 
-### Get Network Cellular Gateway Connectivity Monitoring Destinations
+----------------------------------------
+## Get Network Cellular Gateway Connectivity Monitoring Destinations
 
 
 **Return the connectivity testing destinations for an MG network**
@@ -6483,7 +6756,8 @@ meraki cellularGateway getNetworkCellularGatewayConnectivityMonitoringDestinatio
 ````
 
 
-### Get Network Cellular Gateway Dhcp
+----------------------------------------
+## Get Network Cellular Gateway Dhcp
 
 
 **List common DHCP settings of MGs**
@@ -6504,7 +6778,8 @@ meraki cellularGateway getNetworkCellularGatewayDhcp --networkId 'STRING'
 ````
 
 
-### Get Network Cellular Gateway Subnet Pool
+----------------------------------------
+## Get Network Cellular Gateway Subnet Pool
 
 
 **Return the subnet pool and mask configured for MGs in the network.**
@@ -6525,7 +6800,8 @@ meraki cellularGateway getNetworkCellularGatewaySubnetPool --networkId 'STRING'
 ````
 
 
-### Get Network Cellular Gateway Uplink
+----------------------------------------
+## Get Network Cellular Gateway Uplink
 
 
 **Returns the uplink settings for your MG network.**
@@ -6546,7 +6822,8 @@ meraki cellularGateway getNetworkCellularGatewayUplink --networkId 'STRING'
 ````
 
 
-### Get Organization Cellular Gateway Uplink Statuses
+----------------------------------------
+## Get Organization Cellular Gateway Uplink Statuses
 
 
 **List the uplink status of every Meraki MG cellular gateway in the organization**
@@ -6575,7 +6852,8 @@ meraki cellularGateway getOrganizationCellularGatewayUplinkStatuses --organizati
 ````
 
 
-### Update Device Cellular Gateway Lan
+----------------------------------------
+## Update Device Cellular Gateway Lan
 
 
 **Update the LAN Settings for a single MG.**
@@ -6598,7 +6876,8 @@ meraki cellularGateway updateDeviceCellularGatewayLan --serial 'STRING'
 ````
 
 
-### Update Device Cellular Gateway Port Forwarding Rules
+----------------------------------------
+## Update Device Cellular Gateway Port Forwarding Rules
 
 
 **Updates the port forwarding rules for a single MG.**
@@ -6620,7 +6899,8 @@ meraki cellularGateway updateDeviceCellularGatewayPortForwardingRules --serial '
 ````
 
 
-### Update Network Cellular Gateway Connectivity Monitoring Destinations
+----------------------------------------
+## Update Network Cellular Gateway Connectivity Monitoring Destinations
 
 
 **Update the connectivity testing destinations for an MG network**
@@ -6642,7 +6922,8 @@ meraki cellularGateway updateNetworkCellularGatewayConnectivityMonitoringDestina
 ````
 
 
-### Update Network Cellular Gateway Dhcp
+----------------------------------------
+## Update Network Cellular Gateway Dhcp
 
 
 **Update common DHCP settings of MGs**
@@ -6666,7 +6947,8 @@ meraki cellularGateway updateNetworkCellularGatewayDhcp --networkId 'STRING'
 ````
 
 
-### Update Network Cellular Gateway Subnet Pool
+----------------------------------------
+## Update Network Cellular Gateway Subnet Pool
 
 
 **Update the subnet pool and mask configuration for MGs in the network.**
@@ -6689,7 +6971,8 @@ meraki cellularGateway updateNetworkCellularGatewaySubnetPool --networkId 'STRIN
 ````
 
 
-### Update Network Cellular Gateway Uplink
+----------------------------------------
+## Update Network Cellular Gateway Uplink
 
 
 **Updates the uplink settings for your MG network.**
@@ -6710,10 +6993,15 @@ def (networkId: str, **kwargs):
 meraki cellularGateway updateNetworkCellularGatewayUplink --networkId 'STRING'
 ````
 
-## Insight
+
+----------------------------------------
+
+----------------------------------------
+# Insight
 
 
-### Create Organization Insight Monitored Media Server
+----------------------------------------
+## Create Organization Insight Monitored Media Server
 
 
 **Add a media server to be monitored for this organization**
@@ -6737,7 +7025,8 @@ meraki insight createOrganizationInsightMonitoredMediaServer --organizationId 'S
 ````
 
 
-### Delete Organization Insight Monitored Media Server
+----------------------------------------
+## Delete Organization Insight Monitored Media Server
 
 
 **Delete a monitored media server from this organization**
@@ -6759,7 +7048,8 @@ meraki insight deleteOrganizationInsightMonitoredMediaServer --organizationId 'S
 ````
 
 
-### Get Organization Insight Monitored Media Server
+----------------------------------------
+## Get Organization Insight Monitored Media Server
 
 
 **Return a monitored media server for this organization**
@@ -6781,7 +7071,8 @@ meraki insight getOrganizationInsightMonitoredMediaServer --organizationId 'STRI
 ````
 
 
-### Get Organization Insight Monitored Media Servers
+----------------------------------------
+## Get Organization Insight Monitored Media Servers
 
 
 **List the monitored media servers for this organization**
@@ -6802,7 +7093,8 @@ meraki insight getOrganizationInsightMonitoredMediaServers --organizationId 'STR
 ````
 
 
-### Update Organization Insight Monitored Media Server
+----------------------------------------
+## Update Organization Insight Monitored Media Server
 
 
 **Update a monitored media server for this organization**
@@ -6826,10 +7118,15 @@ def (organizationId: str, monitoredMediaServerId: str, **kwargs):
 meraki insight updateOrganizationInsightMonitoredMediaServer --organizationId 'STRING' --monitoredMediaServerId 'STRING'
 ````
 
-## Sm
+
+----------------------------------------
+
+----------------------------------------
+# Sm
 
 
-### Checkin Network Sm Devices
+----------------------------------------
+## Checkin Network Sm Devices
 
 
 **Force check-in a set of devices**
@@ -6854,7 +7151,8 @@ meraki sm checkinNetworkSmDevices --networkId 'STRING'
 ````
 
 
-### Create Network Sm Bypass Activation Lock Attempt
+----------------------------------------
+## Create Network Sm Bypass Activation Lock Attempt
 
 
 **Bypass activation lock attempt**
@@ -6876,7 +7174,8 @@ meraki sm createNetworkSmBypassActivationLockAttempt --networkId 'STRING' --ids 
 ````
 
 
-### Create Network Sm Target Group
+----------------------------------------
+## Create Network Sm Target Group
 
 
 **Add a target group**
@@ -6899,7 +7198,8 @@ meraki sm createNetworkSmTargetGroup --networkId 'STRING'
 ````
 
 
-### Delete Network Sm Target Group
+----------------------------------------
+## Delete Network Sm Target Group
 
 
 **Delete a target group from a network**
@@ -6921,7 +7221,8 @@ meraki sm deleteNetworkSmTargetGroup --networkId 'STRING' --targetGroupId 'STRIN
 ````
 
 
-### Delete Network Sm User Access Device
+----------------------------------------
+## Delete Network Sm User Access Device
 
 
 **Delete a User Access Device**
@@ -6943,7 +7244,8 @@ meraki sm deleteNetworkSmUserAccessDevice --networkId 'STRING' --userAccessDevic
 ````
 
 
-### Get Network Sm Bypass Activation Lock Attempt
+----------------------------------------
+## Get Network Sm Bypass Activation Lock Attempt
 
 
 **Bypass activation lock attempt status**
@@ -6965,7 +7267,8 @@ meraki sm getNetworkSmBypassActivationLockAttempt --networkId 'STRING' --attempt
 ````
 
 
-### Get Network Sm Device Cellular Usage History
+----------------------------------------
+## Get Network Sm Device Cellular Usage History
 
 
 **Return the client's daily cellular data usage history**
@@ -6987,7 +7290,8 @@ meraki sm getNetworkSmDeviceCellularUsageHistory --networkId 'STRING' --deviceId
 ````
 
 
-### Get Network Sm Device Certs
+----------------------------------------
+## Get Network Sm Device Certs
 
 
 **List the certs on a device**
@@ -7009,7 +7313,8 @@ meraki sm getNetworkSmDeviceCerts --networkId 'STRING' --deviceId 'STRING'
 ````
 
 
-### Get Network Sm Device Connectivity
+----------------------------------------
+## Get Network Sm Device Connectivity
 
 
 **Returns historical connectivity data (whether a device is regularly checking in to Dashboard).**
@@ -7036,7 +7341,8 @@ meraki sm getNetworkSmDeviceConnectivity --networkId 'STRING' --deviceId 'STRING
 ````
 
 
-### Get Network Sm Device Desktop Logs
+----------------------------------------
+## Get Network Sm Device Desktop Logs
 
 
 **Return historical records of various Systems Manager network connection details for desktop devices.**
@@ -7063,7 +7369,8 @@ meraki sm getNetworkSmDeviceDesktopLogs --networkId 'STRING' --deviceId 'STRING'
 ````
 
 
-### Get Network Sm Device Device Command Logs
+----------------------------------------
+## Get Network Sm Device Device Command Logs
 
 
 **Return historical records of commands sent to Systems Manager devices**
@@ -7090,7 +7397,8 @@ meraki sm getNetworkSmDeviceDeviceCommandLogs --networkId 'STRING' --deviceId 'S
 ````
 
 
-### Get Network Sm Device Device Profiles
+----------------------------------------
+## Get Network Sm Device Device Profiles
 
 
 **Get the profiles associated with a device**
@@ -7112,7 +7420,8 @@ meraki sm getNetworkSmDeviceDeviceProfiles --networkId 'STRING' --deviceId 'STRI
 ````
 
 
-### Get Network Sm Device Network Adapters
+----------------------------------------
+## Get Network Sm Device Network Adapters
 
 
 **List the network adapters of a device**
@@ -7134,7 +7443,8 @@ meraki sm getNetworkSmDeviceNetworkAdapters --networkId 'STRING' --deviceId 'STR
 ````
 
 
-### Get Network Sm Device Performance History
+----------------------------------------
+## Get Network Sm Device Performance History
 
 
 **Return historical records of various Systems Manager client metrics for desktop devices.**
@@ -7161,7 +7471,8 @@ meraki sm getNetworkSmDevicePerformanceHistory --networkId 'STRING' --deviceId '
 ````
 
 
-### Get Network Sm Device Restrictions
+----------------------------------------
+## Get Network Sm Device Restrictions
 
 
 **List the restrictions on a device**
@@ -7183,7 +7494,8 @@ meraki sm getNetworkSmDeviceRestrictions --networkId 'STRING' --deviceId 'STRING
 ````
 
 
-### Get Network Sm Device Security Centers
+----------------------------------------
+## Get Network Sm Device Security Centers
 
 
 **List the security centers on a device**
@@ -7205,7 +7517,8 @@ meraki sm getNetworkSmDeviceSecurityCenters --networkId 'STRING' --deviceId 'STR
 ````
 
 
-### Get Network Sm Device Softwares
+----------------------------------------
+## Get Network Sm Device Softwares
 
 
 **Get a list of softwares associated with a device**
@@ -7227,7 +7540,8 @@ meraki sm getNetworkSmDeviceSoftwares --networkId 'STRING' --deviceId 'STRING'
 ````
 
 
-### Get Network Sm Device Wlan Lists
+----------------------------------------
+## Get Network Sm Device Wlan Lists
 
 
 **List the saved SSID names on a device**
@@ -7249,7 +7563,8 @@ meraki sm getNetworkSmDeviceWlanLists --networkId 'STRING' --deviceId 'STRING'
 ````
 
 
-### Get Network Sm Devices
+----------------------------------------
+## Get Network Sm Devices
 
 
 **List the devices enrolled in an SM network with various specified fields and filters**
@@ -7286,7 +7601,8 @@ meraki sm getNetworkSmDevices --networkId 'STRING'
 ````
 
 
-### Get Network Sm Profiles
+----------------------------------------
+## Get Network Sm Profiles
 
 
 **List all profiles in a network**
@@ -7307,7 +7623,8 @@ meraki sm getNetworkSmProfiles --networkId 'STRING'
 ````
 
 
-### Get Network Sm Target Group
+----------------------------------------
+## Get Network Sm Target Group
 
 
 **Return a target group**
@@ -7330,7 +7647,8 @@ meraki sm getNetworkSmTargetGroup --networkId 'STRING' --targetGroupId 'STRING'
 ````
 
 
-### Get Network Sm Target Groups
+----------------------------------------
+## Get Network Sm Target Groups
 
 
 **List the target groups in this network**
@@ -7352,7 +7670,8 @@ meraki sm getNetworkSmTargetGroups --networkId 'STRING'
 ````
 
 
-### Get Network Sm User Access Devices
+----------------------------------------
+## Get Network Sm User Access Devices
 
 
 **List User Access Devices and its Trusted Access Connections**
@@ -7378,7 +7697,8 @@ meraki sm getNetworkSmUserAccessDevices --networkId 'STRING'
 ````
 
 
-### Get Network Sm User Device Profiles
+----------------------------------------
+## Get Network Sm User Device Profiles
 
 
 **Get the profiles associated with a user**
@@ -7400,7 +7720,8 @@ meraki sm getNetworkSmUserDeviceProfiles --networkId 'STRING' --userId 'STRING'
 ````
 
 
-### Get Network Sm User Softwares
+----------------------------------------
+## Get Network Sm User Softwares
 
 
 **Get a list of softwares associated with a user**
@@ -7422,7 +7743,8 @@ meraki sm getNetworkSmUserSoftwares --networkId 'STRING' --userId 'STRING'
 ````
 
 
-### Get Network Sm Users
+----------------------------------------
+## Get Network Sm Users
 
 
 **List the owners in an SM network with various specified fields and filters**
@@ -7447,7 +7769,8 @@ meraki sm getNetworkSmUsers --networkId 'STRING'
 ````
 
 
-### Get Organization Sm Apns Cert
+----------------------------------------
+## Get Organization Sm Apns Cert
 
 
 **Get the organization's APNS certificate**
@@ -7468,7 +7791,8 @@ meraki sm getOrganizationSmApnsCert --organizationId 'STRING'
 ````
 
 
-### Get Organization Sm Vpp Account
+----------------------------------------
+## Get Organization Sm Vpp Account
 
 
 **Get a hash containing the unparsed token of the VPP account with the given ID**
@@ -7490,7 +7814,8 @@ meraki sm getOrganizationSmVppAccount --organizationId 'STRING' --vppAccountId '
 ````
 
 
-### Get Organization Sm Vpp Accounts
+----------------------------------------
+## Get Organization Sm Vpp Accounts
 
 
 **List the VPP accounts in the organization**
@@ -7511,7 +7836,8 @@ meraki sm getOrganizationSmVppAccounts --organizationId 'STRING'
 ````
 
 
-### Lock Network Sm Devices
+----------------------------------------
+## Lock Network Sm Devices
 
 
 **Lock a set of devices**
@@ -7537,7 +7863,8 @@ meraki sm lockNetworkSmDevices --networkId 'STRING'
 ````
 
 
-### Modify Network Sm Devices Tags
+----------------------------------------
+## Modify Network Sm Devices Tags
 
 
 **Add, delete, or update the tags of a set of devices**
@@ -7564,7 +7891,8 @@ meraki sm modifyNetworkSmDevicesTags --networkId 'STRING' --tags ITEM --updateAc
 ````
 
 
-### Move Network Sm Devices
+----------------------------------------
+## Move Network Sm Devices
 
 
 **Move a set of devices to a new network**
@@ -7590,7 +7918,8 @@ meraki sm moveNetworkSmDevices --networkId 'STRING' --newNetwork 'STRING'
 ````
 
 
-### Refresh Network Sm Device Details
+----------------------------------------
+## Refresh Network Sm Device Details
 
 
 **Refresh the details of a device**
@@ -7612,7 +7941,8 @@ meraki sm refreshNetworkSmDeviceDetails --networkId 'STRING' --deviceId 'STRING'
 ````
 
 
-### Unenroll Network Sm Device
+----------------------------------------
+## Unenroll Network Sm Device
 
 
 **Unenroll a device**
@@ -7634,7 +7964,8 @@ meraki sm unenrollNetworkSmDevice --networkId 'STRING' --deviceId 'STRING'
 ````
 
 
-### Update Network Sm Devices Fields
+----------------------------------------
+## Update Network Sm Devices Fields
 
 
 **Modify the fields of a device**
@@ -7659,7 +7990,8 @@ meraki sm updateNetworkSmDevicesFields --networkId 'STRING' --deviceFields JSON_
 ````
 
 
-### Update Network Sm Target Group
+----------------------------------------
+## Update Network Sm Target Group
 
 
 **Update a target group**
@@ -7683,7 +8015,8 @@ meraki sm updateNetworkSmTargetGroup --networkId 'STRING' --targetGroupId 'STRIN
 ````
 
 
-### Wipe Network Sm Devices
+----------------------------------------
+## Wipe Network Sm Devices
 
 
 **Wipe a device**
@@ -7707,10 +8040,15 @@ def (networkId: str, **kwargs):
 meraki sm wipeNetworkSmDevices --networkId 'STRING'
 ````
 
-## Switch
+
+----------------------------------------
+
+----------------------------------------
+# Switch
 
 
-### Add Network Switch Stack
+----------------------------------------
+## Add Network Switch Stack
 
 
 **Add a switch to a stack**
@@ -7733,7 +8071,8 @@ meraki switch addNetworkSwitchStack --networkId 'STRING' --switchStackId 'STRING
 ````
 
 
-### Clone Organization Switch Devices
+----------------------------------------
+## Clone Organization Switch Devices
 
 
 **Clone port-level and some switch-level configuration settings from a source switch to one or more target switches**
@@ -7756,7 +8095,8 @@ meraki switch cloneOrganizationSwitchDevices --organizationId 'STRING' --sourceS
 ````
 
 
-### Create Device Switch Routing Interface
+----------------------------------------
+## Create Device Switch Routing Interface
 
 
 **Create a layer 3 interface for a switch**
@@ -7784,7 +8124,8 @@ meraki switch createDeviceSwitchRoutingInterface --serial 'STRING' --name 'STRIN
 ````
 
 
-### Create Device Switch Routing Static Route
+----------------------------------------
+## Create Device Switch Routing Static Route
 
 
 **Create a layer 3 static route for a switch**
@@ -7810,7 +8151,8 @@ meraki switch createDeviceSwitchRoutingStaticRoute --serial 'STRING' --subnet 'S
 ````
 
 
-### Create Network Switch Access Policy
+----------------------------------------
+## Create Network Switch Access Policy
 
 
 **Create an access policy for a switch network**
@@ -7844,7 +8186,8 @@ meraki switch createNetworkSwitchAccessPolicy --networkId 'STRING' --name 'STRIN
 ````
 
 
-### Create Network Switch Link Aggregation
+----------------------------------------
+## Create Network Switch Link Aggregation
 
 
 **Create a link aggregation group**
@@ -7867,7 +8210,8 @@ meraki switch createNetworkSwitchLinkAggregation --networkId 'STRING'
 ````
 
 
-### Create Network Switch Port Schedule
+----------------------------------------
+## Create Network Switch Port Schedule
 
 
 **Add a switch port schedule**
@@ -7893,7 +8237,8 @@ meraki switch createNetworkSwitchPortSchedule --networkId 'STRING' --name 'STRIN
 ````
 
 
-### Create Network Switch Qos Rule
+----------------------------------------
+## Create Network Switch Qos Rule
 
 
 **Add a quality of service rule**
@@ -7921,7 +8266,8 @@ meraki switch createNetworkSwitchQosRule --networkId 'STRING' --vlan INT
 ````
 
 
-### Create Network Switch Routing Multicast Rendezvous Point
+----------------------------------------
+## Create Network Switch Routing Multicast Rendezvous Point
 
 
 **Create a multicast rendezvous point**
@@ -7944,7 +8290,8 @@ meraki switch createNetworkSwitchRoutingMulticastRendezvousPoint --networkId 'ST
 ````
 
 
-### Create Network Switch Stack
+----------------------------------------
+## Create Network Switch Stack
 
 
 **Create a stack**
@@ -7967,7 +8314,8 @@ meraki switch createNetworkSwitchStack --networkId 'STRING' --name 'STRING' --se
 ````
 
 
-### Create Network Switch Stack Routing Interface
+----------------------------------------
+## Create Network Switch Stack Routing Interface
 
 
 **Create a layer 3 interface for a switch stack**
@@ -7996,7 +8344,8 @@ meraki switch createNetworkSwitchStackRoutingInterface --networkId 'STRING' --sw
 ````
 
 
-### Create Network Switch Stack Routing Static Route
+----------------------------------------
+## Create Network Switch Stack Routing Static Route
 
 
 **Create a layer 3 static route for a switch stack**
@@ -8023,7 +8372,8 @@ meraki switch createNetworkSwitchStackRoutingStaticRoute --networkId 'STRING' --
 ````
 
 
-### Cycle Device Switch Ports
+----------------------------------------
+## Cycle Device Switch Ports
 
 
 **Cycle a set of switch ports**
@@ -8045,7 +8395,8 @@ meraki switch cycleDeviceSwitchPorts --serial 'STRING' --ports ITEM
 ````
 
 
-### Delete Device Switch Routing Interface
+----------------------------------------
+## Delete Device Switch Routing Interface
 
 
 **Delete a layer 3 interface from the switch**
@@ -8067,7 +8418,8 @@ meraki switch deleteDeviceSwitchRoutingInterface --serial 'STRING' --interfaceId
 ````
 
 
-### Delete Device Switch Routing Static Route
+----------------------------------------
+## Delete Device Switch Routing Static Route
 
 
 **Delete a layer 3 static route for a switch**
@@ -8089,7 +8441,8 @@ meraki switch deleteDeviceSwitchRoutingStaticRoute --serial 'STRING' --staticRou
 ````
 
 
-### Delete Network Switch Access Policy
+----------------------------------------
+## Delete Network Switch Access Policy
 
 
 **Delete an access policy for a switch network**
@@ -8111,7 +8464,8 @@ meraki switch deleteNetworkSwitchAccessPolicy --networkId 'STRING' --accessPolic
 ````
 
 
-### Delete Network Switch Link Aggregation
+----------------------------------------
+## Delete Network Switch Link Aggregation
 
 
 **Split a link aggregation group into separate ports**
@@ -8133,7 +8487,8 @@ meraki switch deleteNetworkSwitchLinkAggregation --networkId 'STRING' --linkAggr
 ````
 
 
-### Delete Network Switch Port Schedule
+----------------------------------------
+## Delete Network Switch Port Schedule
 
 
 **Delete a switch port schedule**
@@ -8155,7 +8510,8 @@ meraki switch deleteNetworkSwitchPortSchedule --networkId 'STRING' --portSchedul
 ````
 
 
-### Delete Network Switch Qos Rule
+----------------------------------------
+## Delete Network Switch Qos Rule
 
 
 **Delete a quality of service rule**
@@ -8177,7 +8533,8 @@ meraki switch deleteNetworkSwitchQosRule --networkId 'STRING' --qosRuleId 'STRIN
 ````
 
 
-### Delete Network Switch Routing Multicast Rendezvous Point
+----------------------------------------
+## Delete Network Switch Routing Multicast Rendezvous Point
 
 
 **Delete a multicast rendezvous point**
@@ -8199,7 +8556,8 @@ meraki switch deleteNetworkSwitchRoutingMulticastRendezvousPoint --networkId 'ST
 ````
 
 
-### Delete Network Switch Stack
+----------------------------------------
+## Delete Network Switch Stack
 
 
 **Delete a stack**
@@ -8221,7 +8579,8 @@ meraki switch deleteNetworkSwitchStack --networkId 'STRING' --switchStackId 'STR
 ````
 
 
-### Delete Network Switch Stack Routing Interface
+----------------------------------------
+## Delete Network Switch Stack Routing Interface
 
 
 **Delete a layer 3 interface from a switch stack**
@@ -8244,7 +8603,8 @@ meraki switch deleteNetworkSwitchStackRoutingInterface --networkId 'STRING' --sw
 ````
 
 
-### Delete Network Switch Stack Routing Static Route
+----------------------------------------
+## Delete Network Switch Stack Routing Static Route
 
 
 **Delete a layer 3 static route for a switch stack**
@@ -8267,7 +8627,8 @@ meraki switch deleteNetworkSwitchStackRoutingStaticRoute --networkId 'STRING' --
 ````
 
 
-### Get Device Switch Port
+----------------------------------------
+## Get Device Switch Port
 
 
 **Return a switch port**
@@ -8289,7 +8650,8 @@ meraki switch getDeviceSwitchPort --serial 'STRING' --portId 'STRING'
 ````
 
 
-### Get Device Switch Ports
+----------------------------------------
+## Get Device Switch Ports
 
 
 **List the switch ports for a switch**
@@ -8310,7 +8672,8 @@ meraki switch getDeviceSwitchPorts --serial 'STRING'
 ````
 
 
-### Get Device Switch Ports Statuses
+----------------------------------------
+## Get Device Switch Ports Statuses
 
 
 **Return the status for all the ports of a switch**
@@ -8333,7 +8696,8 @@ meraki switch getDeviceSwitchPortsStatuses --serial 'STRING'
 ````
 
 
-### Get Device Switch Ports Statuses Packets
+----------------------------------------
+## Get Device Switch Ports Statuses Packets
 
 
 **Return the packet counters for all the ports of a switch**
@@ -8356,7 +8720,8 @@ meraki switch getDeviceSwitchPortsStatusesPackets --serial 'STRING'
 ````
 
 
-### Get Device Switch Routing Interface
+----------------------------------------
+## Get Device Switch Routing Interface
 
 
 **Return a layer 3 interface for a switch**
@@ -8378,7 +8743,8 @@ meraki switch getDeviceSwitchRoutingInterface --serial 'STRING' --interfaceId 'S
 ````
 
 
-### Get Device Switch Routing Interface Dhcp
+----------------------------------------
+## Get Device Switch Routing Interface Dhcp
 
 
 **Return a layer 3 interface DHCP configuration for a switch**
@@ -8400,7 +8766,8 @@ meraki switch getDeviceSwitchRoutingInterfaceDhcp --serial 'STRING' --interfaceI
 ````
 
 
-### Get Device Switch Routing Interfaces
+----------------------------------------
+## Get Device Switch Routing Interfaces
 
 
 **List layer 3 interfaces for a switch**
@@ -8421,7 +8788,8 @@ meraki switch getDeviceSwitchRoutingInterfaces --serial 'STRING'
 ````
 
 
-### Get Device Switch Routing Static Route
+----------------------------------------
+## Get Device Switch Routing Static Route
 
 
 **Return a layer 3 static route for a switch**
@@ -8443,7 +8811,8 @@ meraki switch getDeviceSwitchRoutingStaticRoute --serial 'STRING' --staticRouteI
 ````
 
 
-### Get Device Switch Routing Static Routes
+----------------------------------------
+## Get Device Switch Routing Static Routes
 
 
 **List layer 3 static routes for a switch**
@@ -8464,7 +8833,8 @@ meraki switch getDeviceSwitchRoutingStaticRoutes --serial 'STRING'
 ````
 
 
-### Get Device Switch Warm Spare
+----------------------------------------
+## Get Device Switch Warm Spare
 
 
 **Return warm spare configuration for a switch**
@@ -8485,7 +8855,8 @@ meraki switch getDeviceSwitchWarmSpare --serial 'STRING'
 ````
 
 
-### Get Network Switch Access Control Lists
+----------------------------------------
+## Get Network Switch Access Control Lists
 
 
 **Return the access control lists for a MS network**
@@ -8506,7 +8877,8 @@ meraki switch getNetworkSwitchAccessControlLists --networkId 'STRING'
 ````
 
 
-### Get Network Switch Access Policies
+----------------------------------------
+## Get Network Switch Access Policies
 
 
 **List the access policies for a switch network**
@@ -8527,7 +8899,8 @@ meraki switch getNetworkSwitchAccessPolicies --networkId 'STRING'
 ````
 
 
-### Get Network Switch Access Policy
+----------------------------------------
+## Get Network Switch Access Policy
 
 
 **Return a specific access policy for a switch network**
@@ -8549,7 +8922,8 @@ meraki switch getNetworkSwitchAccessPolicy --networkId 'STRING' --accessPolicyNu
 ````
 
 
-### Get Network Switch Dhcp Server Policy
+----------------------------------------
+## Get Network Switch Dhcp Server Policy
 
 
 **Return the DHCP server policy**
@@ -8570,7 +8944,8 @@ meraki switch getNetworkSwitchDhcpServerPolicy --networkId 'STRING'
 ````
 
 
-### Get Network Switch Dscp To Cos Mappings
+----------------------------------------
+## Get Network Switch Dscp To Cos Mappings
 
 
 **Return the DSCP to CoS mappings**
@@ -8591,7 +8966,8 @@ meraki switch getNetworkSwitchDscpToCosMappings --networkId 'STRING'
 ````
 
 
-### Get Network Switch Link Aggregations
+----------------------------------------
+## Get Network Switch Link Aggregations
 
 
 **List link aggregation groups**
@@ -8612,7 +8988,8 @@ meraki switch getNetworkSwitchLinkAggregations --networkId 'STRING'
 ````
 
 
-### Get Network Switch Mtu
+----------------------------------------
+## Get Network Switch Mtu
 
 
 **Return the MTU configuration**
@@ -8633,7 +9010,8 @@ meraki switch getNetworkSwitchMtu --networkId 'STRING'
 ````
 
 
-### Get Network Switch Port Schedules
+----------------------------------------
+## Get Network Switch Port Schedules
 
 
 **List switch port schedules**
@@ -8654,7 +9032,8 @@ meraki switch getNetworkSwitchPortSchedules --networkId 'STRING'
 ````
 
 
-### Get Network Switch Qos Rule
+----------------------------------------
+## Get Network Switch Qos Rule
 
 
 **Return a quality of service rule**
@@ -8676,7 +9055,8 @@ meraki switch getNetworkSwitchQosRule --networkId 'STRING' --qosRuleId 'STRING'
 ````
 
 
-### Get Network Switch Qos Rules
+----------------------------------------
+## Get Network Switch Qos Rules
 
 
 **List quality of service rules**
@@ -8697,7 +9077,8 @@ meraki switch getNetworkSwitchQosRules --networkId 'STRING'
 ````
 
 
-### Get Network Switch Qos Rules Order
+----------------------------------------
+## Get Network Switch Qos Rules Order
 
 
 **Return the quality of service rule IDs by order in which they will be processed by the switch**
@@ -8718,7 +9099,8 @@ meraki switch getNetworkSwitchQosRulesOrder --networkId 'STRING'
 ````
 
 
-### Get Network Switch Routing Multicast
+----------------------------------------
+## Get Network Switch Routing Multicast
 
 
 **Return multicast settings for a network**
@@ -8739,7 +9121,8 @@ meraki switch getNetworkSwitchRoutingMulticast --networkId 'STRING'
 ````
 
 
-### Get Network Switch Routing Multicast Rendezvous Point
+----------------------------------------
+## Get Network Switch Routing Multicast Rendezvous Point
 
 
 **Return a multicast rendezvous point**
@@ -8761,7 +9144,8 @@ meraki switch getNetworkSwitchRoutingMulticastRendezvousPoint --networkId 'STRIN
 ````
 
 
-### Get Network Switch Routing Multicast Rendezvous Points
+----------------------------------------
+## Get Network Switch Routing Multicast Rendezvous Points
 
 
 **List multicast rendezvous points**
@@ -8782,7 +9166,8 @@ meraki switch getNetworkSwitchRoutingMulticastRendezvousPoints --networkId 'STRI
 ````
 
 
-### Get Network Switch Routing Ospf
+----------------------------------------
+## Get Network Switch Routing Ospf
 
 
 **Return layer 3 OSPF routing configuration**
@@ -8803,7 +9188,8 @@ meraki switch getNetworkSwitchRoutingOspf --networkId 'STRING'
 ````
 
 
-### Get Network Switch Settings
+----------------------------------------
+## Get Network Switch Settings
 
 
 **Returns the switch network settings**
@@ -8824,7 +9210,8 @@ meraki switch getNetworkSwitchSettings --networkId 'STRING'
 ````
 
 
-### Get Network Switch Stack
+----------------------------------------
+## Get Network Switch Stack
 
 
 **Show a switch stack**
@@ -8846,7 +9233,8 @@ meraki switch getNetworkSwitchStack --networkId 'STRING' --switchStackId 'STRING
 ````
 
 
-### Get Network Switch Stack Routing Interface
+----------------------------------------
+## Get Network Switch Stack Routing Interface
 
 
 **Return a layer 3 interface from a switch stack**
@@ -8869,7 +9257,8 @@ meraki switch getNetworkSwitchStackRoutingInterface --networkId 'STRING' --switc
 ````
 
 
-### Get Network Switch Stack Routing Interface Dhcp
+----------------------------------------
+## Get Network Switch Stack Routing Interface Dhcp
 
 
 **Return a layer 3 interface DHCP configuration for a switch stack**
@@ -8892,7 +9281,8 @@ meraki switch getNetworkSwitchStackRoutingInterfaceDhcp --networkId 'STRING' --s
 ````
 
 
-### Get Network Switch Stack Routing Interfaces
+----------------------------------------
+## Get Network Switch Stack Routing Interfaces
 
 
 **List layer 3 interfaces for a switch stack**
@@ -8914,7 +9304,8 @@ meraki switch getNetworkSwitchStackRoutingInterfaces --networkId 'STRING' --swit
 ````
 
 
-### Get Network Switch Stack Routing Static Route
+----------------------------------------
+## Get Network Switch Stack Routing Static Route
 
 
 **Return a layer 3 static route for a switch stack**
@@ -8937,7 +9328,8 @@ meraki switch getNetworkSwitchStackRoutingStaticRoute --networkId 'STRING' --swi
 ````
 
 
-### Get Network Switch Stack Routing Static Routes
+----------------------------------------
+## Get Network Switch Stack Routing Static Routes
 
 
 **List layer 3 static routes for a switch stack**
@@ -8959,7 +9351,8 @@ meraki switch getNetworkSwitchStackRoutingStaticRoutes --networkId 'STRING' --sw
 ````
 
 
-### Get Network Switch Stacks
+----------------------------------------
+## Get Network Switch Stacks
 
 
 **List the switch stacks in a network**
@@ -8980,7 +9373,8 @@ meraki switch getNetworkSwitchStacks --networkId 'STRING'
 ````
 
 
-### Get Network Switch Storm Control
+----------------------------------------
+## Get Network Switch Storm Control
 
 
 **Return the storm control configuration for a switch network**
@@ -9001,7 +9395,8 @@ meraki switch getNetworkSwitchStormControl --networkId 'STRING'
 ````
 
 
-### Get Network Switch Stp
+----------------------------------------
+## Get Network Switch Stp
 
 
 **Returns STP settings**
@@ -9022,7 +9417,8 @@ meraki switch getNetworkSwitchStp --networkId 'STRING'
 ````
 
 
-### Get Organization Config Template Switch Profile Port
+----------------------------------------
+## Get Organization Config Template Switch Profile Port
 
 
 **Return a switch profile port**
@@ -9046,7 +9442,8 @@ meraki switch getOrganizationConfigTemplateSwitchProfilePort --organizationId 'S
 ````
 
 
-### Get Organization Config Template Switch Profile Ports
+----------------------------------------
+## Get Organization Config Template Switch Profile Ports
 
 
 **Return all the ports of a switch profile**
@@ -9069,7 +9466,8 @@ meraki switch getOrganizationConfigTemplateSwitchProfilePorts --organizationId '
 ````
 
 
-### Get Organization Config Template Switch Profiles
+----------------------------------------
+## Get Organization Config Template Switch Profiles
 
 
 **List the switch profiles for your switch template configuration**
@@ -9091,7 +9489,8 @@ meraki switch getOrganizationConfigTemplateSwitchProfiles --organizationId 'STRI
 ````
 
 
-### Remove Network Switch Stack
+----------------------------------------
+## Remove Network Switch Stack
 
 
 **Remove a switch from a stack**
@@ -9114,7 +9513,8 @@ meraki switch removeNetworkSwitchStack --networkId 'STRING' --switchStackId 'STR
 ````
 
 
-### Update Device Switch Port
+----------------------------------------
+## Update Device Switch Port
 
 
 **Update a switch port**
@@ -9157,7 +9557,8 @@ meraki switch updateDeviceSwitchPort --serial 'STRING' --portId 'STRING'
 ````
 
 
-### Update Device Switch Routing Interface
+----------------------------------------
+## Update Device Switch Routing Interface
 
 
 **Update a layer 3 interface for a switch**
@@ -9185,7 +9586,8 @@ meraki switch updateDeviceSwitchRoutingInterface --serial 'STRING' --interfaceId
 ````
 
 
-### Update Device Switch Routing Interface Dhcp
+----------------------------------------
+## Update Device Switch Routing Interface Dhcp
 
 
 **Update a layer 3 interface DHCP configuration for a switch**
@@ -9218,7 +9620,8 @@ meraki switch updateDeviceSwitchRoutingInterfaceDhcp --serial 'STRING' --interfa
 ````
 
 
-### Update Device Switch Routing Static Route
+----------------------------------------
+## Update Device Switch Routing Static Route
 
 
 **Update a layer 3 static route for a switch**
@@ -9245,7 +9648,8 @@ meraki switch updateDeviceSwitchRoutingStaticRoute --serial 'STRING' --staticRou
 ````
 
 
-### Update Device Switch Warm Spare
+----------------------------------------
+## Update Device Switch Warm Spare
 
 
 **Update warm spare configuration for a switch**
@@ -9268,7 +9672,8 @@ meraki switch updateDeviceSwitchWarmSpare --serial 'STRING' --enabled
 ````
 
 
-### Update Network Switch Access Control Lists
+----------------------------------------
+## Update Network Switch Access Control Lists
 
 
 **Update the access control lists for a MS network**
@@ -9290,7 +9695,8 @@ meraki switch updateNetworkSwitchAccessControlLists --networkId 'STRING' --rules
 ````
 
 
-### Update Network Switch Access Policy
+----------------------------------------
+## Update Network Switch Access Policy
 
 
 **Update an access policy for a switch network**
@@ -9325,7 +9731,8 @@ meraki switch updateNetworkSwitchAccessPolicy --networkId 'STRING' --accessPolic
 ````
 
 
-### Update Network Switch Dhcp Server Policy
+----------------------------------------
+## Update Network Switch Dhcp Server Policy
 
 
 **Update the DHCP server policy**
@@ -9349,7 +9756,8 @@ meraki switch updateNetworkSwitchDhcpServerPolicy --networkId 'STRING'
 ````
 
 
-### Update Network Switch Dscp To Cos Mappings
+----------------------------------------
+## Update Network Switch Dscp To Cos Mappings
 
 
 **Update the DSCP to CoS mappings**
@@ -9371,7 +9779,8 @@ meraki switch updateNetworkSwitchDscpToCosMappings --networkId 'STRING' --mappin
 ````
 
 
-### Update Network Switch Link Aggregation
+----------------------------------------
+## Update Network Switch Link Aggregation
 
 
 **Update a link aggregation group**
@@ -9395,7 +9804,8 @@ meraki switch updateNetworkSwitchLinkAggregation --networkId 'STRING' --linkAggr
 ````
 
 
-### Update Network Switch Mtu
+----------------------------------------
+## Update Network Switch Mtu
 
 
 **Update the MTU configuration**
@@ -9418,7 +9828,8 @@ meraki switch updateNetworkSwitchMtu --networkId 'STRING'
 ````
 
 
-### Update Network Switch Port Schedule
+----------------------------------------
+## Update Network Switch Port Schedule
 
 
 **Update a switch port schedule**
@@ -9445,7 +9856,8 @@ meraki switch updateNetworkSwitchPortSchedule --networkId 'STRING' --portSchedul
 ````
 
 
-### Update Network Switch Qos Rule
+----------------------------------------
+## Update Network Switch Qos Rule
 
 
 **Update a quality of service rule**
@@ -9474,7 +9886,8 @@ meraki switch updateNetworkSwitchQosRule --networkId 'STRING' --qosRuleId 'STRIN
 ````
 
 
-### Update Network Switch Qos Rules Order
+----------------------------------------
+## Update Network Switch Qos Rules Order
 
 
 **Update the order in which the rules should be processed by the switch**
@@ -9496,7 +9909,8 @@ meraki switch updateNetworkSwitchQosRulesOrder --networkId 'STRING' --ruleIds IT
 ````
 
 
-### Update Network Switch Routing Multicast
+----------------------------------------
+## Update Network Switch Routing Multicast
 
 
 **Update multicast settings for a network**
@@ -9519,7 +9933,8 @@ meraki switch updateNetworkSwitchRoutingMulticast --networkId 'STRING'
 ````
 
 
-### Update Network Switch Routing Multicast Rendezvous Point
+----------------------------------------
+## Update Network Switch Routing Multicast Rendezvous Point
 
 
 **Update a multicast rendezvous point**
@@ -9543,7 +9958,8 @@ meraki switch updateNetworkSwitchRoutingMulticastRendezvousPoint --networkId 'ST
 ````
 
 
-### Update Network Switch Routing Ospf
+----------------------------------------
+## Update Network Switch Routing Ospf
 
 
 **Update layer 3 OSPF routing configuration**
@@ -9570,7 +9986,8 @@ meraki switch updateNetworkSwitchRoutingOspf --networkId 'STRING'
 ````
 
 
-### Update Network Switch Settings
+----------------------------------------
+## Update Network Switch Settings
 
 
 **Update switch network settings**
@@ -9594,7 +10011,8 @@ meraki switch updateNetworkSwitchSettings --networkId 'STRING'
 ````
 
 
-### Update Network Switch Stack Routing Interface
+----------------------------------------
+## Update Network Switch Stack Routing Interface
 
 
 **Update a layer 3 interface for a switch stack**
@@ -9623,7 +10041,8 @@ meraki switch updateNetworkSwitchStackRoutingInterface --networkId 'STRING' --sw
 ````
 
 
-### Update Network Switch Stack Routing Interface Dhcp
+----------------------------------------
+## Update Network Switch Stack Routing Interface Dhcp
 
 
 **Update a layer 3 interface DHCP configuration for a switch stack**
@@ -9657,7 +10076,8 @@ meraki switch updateNetworkSwitchStackRoutingInterfaceDhcp --networkId 'STRING' 
 ````
 
 
-### Update Network Switch Stack Routing Static Route
+----------------------------------------
+## Update Network Switch Stack Routing Static Route
 
 
 **Update a layer 3 static route for a switch stack**
@@ -9685,7 +10105,8 @@ meraki switch updateNetworkSwitchStackRoutingStaticRoute --networkId 'STRING' --
 ````
 
 
-### Update Network Switch Storm Control
+----------------------------------------
+## Update Network Switch Storm Control
 
 
 **Update the storm control configuration for a switch network**
@@ -9709,7 +10130,8 @@ meraki switch updateNetworkSwitchStormControl --networkId 'STRING'
 ````
 
 
-### Update Network Switch Stp
+----------------------------------------
+## Update Network Switch Stp
 
 
 **Updates STP settings**
@@ -9732,7 +10154,8 @@ meraki switch updateNetworkSwitchStp --networkId 'STRING'
 ````
 
 
-### Update Organization Config Template Switch Profile Port
+----------------------------------------
+## Update Organization Config Template Switch Profile Port
 
 
 **Update a switch profile port**
@@ -9776,10 +10199,15 @@ def (organizationId: str, configTemplateId: str, profileId: str, portId: str, **
 meraki switch updateOrganizationConfigTemplateSwitchProfilePort --organizationId 'STRING' --configTemplateId 'STRING' --profileId 'STRING' --portId 'STRING'
 ````
 
-## Wireless
+
+----------------------------------------
+
+----------------------------------------
+# Wireless
 
 
-### Create Network Wireless Rf Profile
+----------------------------------------
+## Create Network Wireless Rf Profile
 
 
 **Creates new RF profile for this network**
@@ -9807,7 +10235,8 @@ meraki wireless createNetworkWirelessRfProfile --networkId 'STRING' --name 'STRI
 ````
 
 
-### Create Network Wireless Ssid Identity Psk
+----------------------------------------
+## Create Network Wireless Ssid Identity Psk
 
 
 **Create an Identity PSK**
@@ -9832,7 +10261,8 @@ meraki wireless createNetworkWirelessSsidIdentityPsk --networkId 'STRING' --numb
 ````
 
 
-### Delete Network Wireless Rf Profile
+----------------------------------------
+## Delete Network Wireless Rf Profile
 
 
 **Delete a RF Profile**
@@ -9854,7 +10284,8 @@ meraki wireless deleteNetworkWirelessRfProfile --networkId 'STRING' --rfProfileI
 ````
 
 
-### Delete Network Wireless Ssid Identity Psk
+----------------------------------------
+## Delete Network Wireless Ssid Identity Psk
 
 
 **Delete an Identity PSK**
@@ -9877,7 +10308,8 @@ meraki wireless deleteNetworkWirelessSsidIdentityPsk --networkId 'STRING' --numb
 ````
 
 
-### Get Device Wireless Bluetooth Settings
+----------------------------------------
+## Get Device Wireless Bluetooth Settings
 
 
 **Return the bluetooth settings for a wireless device**
@@ -9898,7 +10330,8 @@ meraki wireless getDeviceWirelessBluetoothSettings --serial 'STRING'
 ````
 
 
-### Get Device Wireless Connection Stats
+----------------------------------------
+## Get Device Wireless Connection Stats
 
 
 **Aggregated connectivity info for a given AP on this network**
@@ -9926,7 +10359,8 @@ meraki wireless getDeviceWirelessConnectionStats --serial 'STRING'
 ````
 
 
-### Get Device Wireless Latency Stats
+----------------------------------------
+## Get Device Wireless Latency Stats
 
 
 **Aggregated latency info for a given AP on this network**
@@ -9955,7 +10389,8 @@ meraki wireless getDeviceWirelessLatencyStats --serial 'STRING'
 ````
 
 
-### Get Device Wireless Radio Settings
+----------------------------------------
+## Get Device Wireless Radio Settings
 
 
 **Return the radio settings of a device**
@@ -9976,7 +10411,8 @@ meraki wireless getDeviceWirelessRadioSettings --serial 'STRING'
 ````
 
 
-### Get Device Wireless Status
+----------------------------------------
+## Get Device Wireless Status
 
 
 **Return the SSID statuses of an access point**
@@ -9997,7 +10433,8 @@ meraki wireless getDeviceWirelessStatus --serial 'STRING'
 ````
 
 
-### Get Network Wireless Air Marshal
+----------------------------------------
+## Get Network Wireless Air Marshal
 
 
 **List Air Marshal scan results from a network**
@@ -10020,7 +10457,8 @@ meraki wireless getNetworkWirelessAirMarshal --networkId 'STRING'
 ````
 
 
-### Get Network Wireless Alternate Management Interface
+----------------------------------------
+## Get Network Wireless Alternate Management Interface
 
 
 **Return alternate management interface and devices with IP assigned**
@@ -10041,7 +10479,8 @@ meraki wireless getNetworkWirelessAlternateManagementInterface --networkId 'STRI
 ````
 
 
-### Get Network Wireless Bluetooth Settings
+----------------------------------------
+## Get Network Wireless Bluetooth Settings
 
 
 **Return the Bluetooth settings for a network. <a href="https://documentation.meraki.com/MR/Bluetooth/Bluetooth_Low_Energy_(BLE)">Bluetooth settings</a> must be enabled on the network.**
@@ -10062,7 +10501,8 @@ meraki wireless getNetworkWirelessBluetoothSettings --networkId 'STRING'
 ````
 
 
-### Get Network Wireless Channel Utilization History
+----------------------------------------
+## Get Network Wireless Channel Utilization History
 
 
 **Return AP channel utilization over time for a device or network client**
@@ -10092,7 +10532,8 @@ meraki wireless getNetworkWirelessChannelUtilizationHistory --networkId 'STRING'
 ````
 
 
-### Get Network Wireless Client Connection Stats
+----------------------------------------
+## Get Network Wireless Client Connection Stats
 
 
 **Aggregated connectivity info for a given client on this network**
@@ -10121,7 +10562,8 @@ meraki wireless getNetworkWirelessClientConnectionStats --networkId 'STRING' --c
 ````
 
 
-### Get Network Wireless Client Connectivity Events
+----------------------------------------
+## Get Network Wireless Client Connectivity Events
 
 
 **List the wireless connectivity events for a client within a network in the timespan.**
@@ -10156,7 +10598,8 @@ meraki wireless getNetworkWirelessClientConnectivityEvents --networkId 'STRING' 
 ````
 
 
-### Get Network Wireless Client Count History
+----------------------------------------
+## Get Network Wireless Client Count History
 
 
 **Return wireless client counts over time for a network, device, or network client**
@@ -10187,7 +10630,8 @@ meraki wireless getNetworkWirelessClientCountHistory --networkId 'STRING'
 ````
 
 
-### Get Network Wireless Client Latency History
+----------------------------------------
+## Get Network Wireless Client Latency History
 
 
 **Return the latency history for a client**
@@ -10213,7 +10657,8 @@ meraki wireless getNetworkWirelessClientLatencyHistory --networkId 'STRING' --cl
 ````
 
 
-### Get Network Wireless Client Latency Stats
+----------------------------------------
+## Get Network Wireless Client Latency Stats
 
 
 **Aggregated latency info for a given client on this network**
@@ -10243,7 +10688,8 @@ meraki wireless getNetworkWirelessClientLatencyStats --networkId 'STRING' --clie
 ````
 
 
-### Get Network Wireless Clients Connection Stats
+----------------------------------------
+## Get Network Wireless Clients Connection Stats
 
 
 **Aggregated connectivity info for this network, grouped by clients**
@@ -10271,7 +10717,8 @@ meraki wireless getNetworkWirelessClientsConnectionStats --networkId 'STRING'
 ````
 
 
-### Get Network Wireless Clients Latency Stats
+----------------------------------------
+## Get Network Wireless Clients Latency Stats
 
 
 **Aggregated latency info for this network, grouped by clients**
@@ -10300,7 +10747,8 @@ meraki wireless getNetworkWirelessClientsLatencyStats --networkId 'STRING'
 ````
 
 
-### Get Network Wireless Connection Stats
+----------------------------------------
+## Get Network Wireless Connection Stats
 
 
 **Aggregated connectivity info for this network**
@@ -10328,7 +10776,8 @@ meraki wireless getNetworkWirelessConnectionStats --networkId 'STRING'
 ````
 
 
-### Get Network Wireless Data Rate History
+----------------------------------------
+## Get Network Wireless Data Rate History
 
 
 **Return PHY data rates over time for a network, device, or network client**
@@ -10359,7 +10808,8 @@ meraki wireless getNetworkWirelessDataRateHistory --networkId 'STRING'
 ````
 
 
-### Get Network Wireless Devices Connection Stats
+----------------------------------------
+## Get Network Wireless Devices Connection Stats
 
 
 **Aggregated connectivity info for this network, grouped by node**
@@ -10387,7 +10837,8 @@ meraki wireless getNetworkWirelessDevicesConnectionStats --networkId 'STRING'
 ````
 
 
-### Get Network Wireless Devices Latency Stats
+----------------------------------------
+## Get Network Wireless Devices Latency Stats
 
 
 **Aggregated latency info for this network, grouped by node**
@@ -10416,7 +10867,8 @@ meraki wireless getNetworkWirelessDevicesLatencyStats --networkId 'STRING'
 ````
 
 
-### Get Network Wireless Failed Connections
+----------------------------------------
+## Get Network Wireless Failed Connections
 
 
 **List of all failed client connection events on this network in a given time range**
@@ -10446,7 +10898,8 @@ meraki wireless getNetworkWirelessFailedConnections --networkId 'STRING'
 ````
 
 
-### Get Network Wireless Latency History
+----------------------------------------
+## Get Network Wireless Latency History
 
 
 **Return average wireless latency over time for a network, device, or network client**
@@ -10478,7 +10931,8 @@ meraki wireless getNetworkWirelessLatencyHistory --networkId 'STRING'
 ````
 
 
-### Get Network Wireless Latency Stats
+----------------------------------------
+## Get Network Wireless Latency Stats
 
 
 **Aggregated latency info for this network**
@@ -10507,7 +10961,8 @@ meraki wireless getNetworkWirelessLatencyStats --networkId 'STRING'
 ````
 
 
-### Get Network Wireless Mesh Statuses
+----------------------------------------
+## Get Network Wireless Mesh Statuses
 
 
 **List wireless mesh statuses for repeaters**
@@ -10533,7 +10988,8 @@ meraki wireless getNetworkWirelessMeshStatuses --networkId 'STRING'
 ````
 
 
-### Get Network Wireless Rf Profile
+----------------------------------------
+## Get Network Wireless Rf Profile
 
 
 **Return a RF profile**
@@ -10555,7 +11011,8 @@ meraki wireless getNetworkWirelessRfProfile --networkId 'STRING' --rfProfileId '
 ````
 
 
-### Get Network Wireless Rf Profiles
+----------------------------------------
+## Get Network Wireless Rf Profiles
 
 
 **List the non-basic RF profiles for this network**
@@ -10577,7 +11034,8 @@ meraki wireless getNetworkWirelessRfProfiles --networkId 'STRING'
 ````
 
 
-### Get Network Wireless Settings
+----------------------------------------
+## Get Network Wireless Settings
 
 
 **Return the wireless settings for a network**
@@ -10598,7 +11056,8 @@ meraki wireless getNetworkWirelessSettings --networkId 'STRING'
 ````
 
 
-### Get Network Wireless Signal Quality History
+----------------------------------------
+## Get Network Wireless Signal Quality History
 
 
 **Return signal quality (SNR/RSSI) over time for a device or network client**
@@ -10629,7 +11088,8 @@ meraki wireless getNetworkWirelessSignalQualityHistory --networkId 'STRING'
 ````
 
 
-### Get Network Wireless Ssid
+----------------------------------------
+## Get Network Wireless Ssid
 
 
 **Return a single MR SSID**
@@ -10651,7 +11111,8 @@ meraki wireless getNetworkWirelessSsid --networkId 'STRING' --number 'STRING'
 ````
 
 
-### Get Network Wireless Ssid Firewall L3 Firewall Rules
+----------------------------------------
+## Get Network Wireless Ssid Firewall L3 Firewall Rules
 
 
 **Return the L3 firewall rules for an SSID on an MR network**
@@ -10673,7 +11134,8 @@ meraki wireless getNetworkWirelessSsidFirewallL3FirewallRules --networkId 'STRIN
 ````
 
 
-### Get Network Wireless Ssid Firewall L7 Firewall Rules
+----------------------------------------
+## Get Network Wireless Ssid Firewall L7 Firewall Rules
 
 
 **Return the L7 firewall rules for an SSID on an MR network**
@@ -10695,7 +11157,8 @@ meraki wireless getNetworkWirelessSsidFirewallL7FirewallRules --networkId 'STRIN
 ````
 
 
-### Get Network Wireless Ssid Identity Psk
+----------------------------------------
+## Get Network Wireless Ssid Identity Psk
 
 
 **Return an Identity PSK**
@@ -10718,7 +11181,8 @@ meraki wireless getNetworkWirelessSsidIdentityPsk --networkId 'STRING' --number 
 ````
 
 
-### Get Network Wireless Ssid Identity Psks
+----------------------------------------
+## Get Network Wireless Ssid Identity Psks
 
 
 **List all Identity PSKs in a wireless network**
@@ -10740,7 +11204,8 @@ meraki wireless getNetworkWirelessSsidIdentityPsks --networkId 'STRING' --number
 ````
 
 
-### Get Network Wireless Ssid Splash Settings
+----------------------------------------
+## Get Network Wireless Ssid Splash Settings
 
 
 **Display the splash page settings for the given SSID**
@@ -10762,7 +11227,8 @@ meraki wireless getNetworkWirelessSsidSplashSettings --networkId 'STRING' --numb
 ````
 
 
-### Get Network Wireless Ssid Traffic Shaping Rules
+----------------------------------------
+## Get Network Wireless Ssid Traffic Shaping Rules
 
 
 **Display the traffic shaping settings for a SSID on an MR network**
@@ -10784,7 +11250,8 @@ meraki wireless getNetworkWirelessSsidTrafficShapingRules --networkId 'STRING' -
 ````
 
 
-### Get Network Wireless Ssids
+----------------------------------------
+## Get Network Wireless Ssids
 
 
 **List the MR SSIDs in a network**
@@ -10805,7 +11272,8 @@ meraki wireless getNetworkWirelessSsids --networkId 'STRING'
 ````
 
 
-### Get Network Wireless Usage History
+----------------------------------------
+## Get Network Wireless Usage History
 
 
 **Return AP usage over time for a device or network client**
@@ -10836,7 +11304,8 @@ meraki wireless getNetworkWirelessUsageHistory --networkId 'STRING'
 ````
 
 
-### Update Device Wireless Bluetooth Settings
+----------------------------------------
+## Update Device Wireless Bluetooth Settings
 
 
 **Update the bluetooth settings for a wireless device**
@@ -10860,7 +11329,8 @@ meraki wireless updateDeviceWirelessBluetoothSettings --serial 'STRING'
 ````
 
 
-### Update Device Wireless Radio Settings
+----------------------------------------
+## Update Device Wireless Radio Settings
 
 
 **Update the radio settings of a device**
@@ -10884,7 +11354,8 @@ meraki wireless updateDeviceWirelessRadioSettings --serial 'STRING'
 ````
 
 
-### Update Network Wireless Alternate Management Interface
+----------------------------------------
+## Update Network Wireless Alternate Management Interface
 
 
 **Update alternate management interface and device static IP**
@@ -10909,7 +11380,8 @@ meraki wireless updateNetworkWirelessAlternateManagementInterface --networkId 'S
 ````
 
 
-### Update Network Wireless Bluetooth Settings
+----------------------------------------
+## Update Network Wireless Bluetooth Settings
 
 
 **Update the Bluetooth settings for a network**
@@ -10936,7 +11408,8 @@ meraki wireless updateNetworkWirelessBluetoothSettings --networkId 'STRING'
 ````
 
 
-### Update Network Wireless Rf Profile
+----------------------------------------
+## Update Network Wireless Rf Profile
 
 
 **Updates specified RF profile for this network**
@@ -10965,7 +11438,8 @@ meraki wireless updateNetworkWirelessRfProfile --networkId 'STRING' --rfProfileI
 ````
 
 
-### Update Network Wireless Settings
+----------------------------------------
+## Update Network Wireless Settings
 
 
 **Update the wireless settings for a network**
@@ -10991,7 +11465,8 @@ meraki wireless updateNetworkWirelessSettings --networkId 'STRING'
 ````
 
 
-### Update Network Wireless Ssid
+----------------------------------------
+## Update Network Wireless Ssid
 
 
 **Update the attributes of an MR SSID**
@@ -11053,7 +11528,8 @@ meraki wireless updateNetworkWirelessSsid --networkId 'STRING' --number 'STRING'
 ````
 
 
-### Update Network Wireless Ssid Firewall L3 Firewall Rules
+----------------------------------------
+## Update Network Wireless Ssid Firewall L3 Firewall Rules
 
 
 **Update the L3 firewall rules of an SSID on an MR network**
@@ -11077,7 +11553,8 @@ meraki wireless updateNetworkWirelessSsidFirewallL3FirewallRules --networkId 'ST
 ````
 
 
-### Update Network Wireless Ssid Firewall L7 Firewall Rules
+----------------------------------------
+## Update Network Wireless Ssid Firewall L7 Firewall Rules
 
 
 **Update the L7 firewall rules of an SSID on an MR network**
@@ -11100,7 +11577,8 @@ meraki wireless updateNetworkWirelessSsidFirewallL7FirewallRules --networkId 'ST
 ````
 
 
-### Update Network Wireless Ssid Identity Psk
+----------------------------------------
+## Update Network Wireless Ssid Identity Psk
 
 
 **Update an Identity PSK**
@@ -11126,7 +11604,8 @@ meraki wireless updateNetworkWirelessSsidIdentityPsk --networkId 'STRING' --numb
 ````
 
 
-### Update Network Wireless Ssid Splash Settings
+----------------------------------------
+## Update Network Wireless Ssid Splash Settings
 
 
 **Modify the splash page settings for the given SSID**
@@ -11157,7 +11636,8 @@ meraki wireless updateNetworkWirelessSsidSplashSettings --networkId 'STRING' --n
 ````
 
 
-### Update Network Wireless Ssid Traffic Shaping Rules
+----------------------------------------
+## Update Network Wireless Ssid Traffic Shaping Rules
 
 
 **Update the traffic shaping settings for an SSID on an MR network**
