@@ -6,7 +6,7 @@
 
 A Simple CLI tool to automate and control your Meraki Dashboard!
 
-Quick Install: `pip install meraki-cli`
+Quick Install: `pip3 install meraki-cli`
 
 
 -----------------------------------------
