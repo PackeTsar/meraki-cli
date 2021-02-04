@@ -62,9 +62,9 @@ Meraki-CLI is command-line driven and once installed can be run with the command
 In order to operate Meraki-CLI you need to input your Meraki API key using one of two methods:
 
 1. Saving your API key as an environment variable using:
-  - Windows: `set MERAKI_DASHBOARD_API_KEY=12345`
-  - MacOS/Linux: `export MERAKI_DASHBOARD_API_KEY=12345`
-  - Once saved as an environment variable, you don't need to use the `-k` option when running commands
+    - **Windows**: `set MERAKI_DASHBOARD_API_KEY=12345`
+    - **MacOS/Linux**: `export MERAKI_DASHBOARD_API_KEY=12345`
+    - Once saved as an environment variable, you don't need to use the `-k` option when running commands
 2. Use the `-k 12345` or `--apiKey 12345` argument at the top level of the command like `meraki -k 12345`
 
 You can obtain a Meraki API key by logging into the Meraki dashboard and clicking your user name in the top right corner and browsing to **My profile** then view the 'API Access' section near the bottom of the page. Then click on the '**Generate new API key**' button and copy down your new API key before saving. It will be a long hexadecimal string.
