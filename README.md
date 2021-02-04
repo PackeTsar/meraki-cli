@@ -179,6 +179,6 @@ If you want to test out the power of pipelining, but don't necessarily want to h
 -----------------------------------------
 ## CONTRIBUTING
 
-This project is very new and has been created out of need. As you may see it is currently very limited in what it can do, but has been built to be easy to extend and add features. If you have a feature you would like to see built into it, please open up an issue in Github and describe your desired feature. Any accepted feature requests will be listed in the [Enhancement Requests and Known Bugs](https://github.com/PackeTsar/meraki-cli/issues/1) issue page.
+This project is very new and has been created out of need. If you have a feature you would like to see built into it, please open up an issue in Github and describe your desired feature. Any accepted feature requests will be listed in the [Enhancement Requests and Known Bugs](https://github.com/PackeTsar/meraki-cli/issues/2) issue page.
 
 If you find a need for a feature and you add it in yourself, or you fix a bug you found, please feel free to open up a merge request!
