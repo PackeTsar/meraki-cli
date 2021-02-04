@@ -29,16 +29,16 @@ Meraki-CLI is a wrapper around the [Meraki Python Dashboard API SDK](https://git
 -----------------------------------------
 ## TABLE OF CONTENTS
 1. [Getting Started](#getting-started)
-  - [Prepare your OS](#prepare-your-os)
-  - [Getting and Using your API Key](#getting-and-using-your-api-key)
-  - [A Few Starting Commands](#prepare-your-os)
-  - [Making Some Changes](#a-few-starting-commands)
-  - [Debugging and Logging](#debugging-and-logging)
-  - [Filtering](#filtering)
+    - [Prepare your OS](#prepare-your-os)
+    - [Getting and Using your API Key](#getting-and-using-your-api-key)
+    - [A Few Starting Commands](#a-few-starting-commands)
+    - [Making Some Changes](#making-some-changes)
+    - [Debugging and Logging](#debugging-and-logging)
+    - [Filtering](#filtering)
 2. [PIPELINING](#pipelining)
-- [Overriding Values](#overriding-values)
-- [Translations](#translations)
-- [Outputting Commands](#outputting-commands)
+    - [Overriding Values](#overriding-values)
+    - [Translations](#translations)
+    - [Outputting Commands](#outputting-commands)
 3. [CONTRIBUTING](#contributing)
 
 
