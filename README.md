@@ -11,7 +11,7 @@ Quick Install: `pip install meraki-cli`
 
 -----------------------------------------
 ## VERSION
-The version of Meraki-CLI documented here is: **0.3.0**
+The version of Meraki-CLI documented here is: **1.0.1**
 
 
 -----------------------------------------
