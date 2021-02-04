@@ -52,7 +52,11 @@ In order to use Meraki-CLI, you need to have Python 3 installed on your OS. If y
 
 ## Install Meraki-CLI
 
-The easiest (and recommended) way to install Meraki-CLI is to use PIP. You can use PIP to install Meraki-CLI with the command `pip3 install meraki-cli` or `python3 -m pip install meraki-cli`. To see if Meraki-CLI was successfully installed, run the `meraki` command and see if it displays the help menu.
+The easiest (and recommended) way to install Meraki-CLI is to use PIP.
+
+You can use PIP to install Meraki-CLI with the command `pip3 install meraki-cli` or `python3 -m pip install meraki-cli`
+
+To see if Meraki-CLI was successfully installed, run the `meraki` command and see if it displays the help menu.
 
 
 ## Getting and Using your API Key
