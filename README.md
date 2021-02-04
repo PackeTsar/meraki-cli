@@ -38,11 +38,11 @@ Since the Meraki-CLI tool builds its arguments directly off of Meraki's SDK, it'
     - [Making Some Changes](#making-some-changes)
     - [Debugging and Logging](#debugging-and-logging)
     - [Filtering](#filtering)
-2. [PIPELINING](#pipelining)
+2. [Pipelining](#pipelining)
     - [Overriding Values](#overriding-values)
     - [Translations](#translations)
     - [Outputting Commands](#outputting-commands)
-3. [CONTRIBUTING](#contributing)
+3. [Contributing](#contributing)
 
 
 -----------------------------------------
