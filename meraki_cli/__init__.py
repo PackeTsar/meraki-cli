@@ -10,5 +10,5 @@ from . import __main__
 from . import __version__
 
 
-name = "mcli"
+name = "meraki_cli"
 __version__ = __version__.version

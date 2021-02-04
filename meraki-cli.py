@@ -8,8 +8,8 @@ Testing file. Run with 'python mcli.py <args>' to run tests on changes without
 
 
 # mcli library
-import mcli
+import meraki_cli
 
 
 if __name__ == "__main__":
-    mcli.__main__.main()
+    meraki_cli.__main__.main()

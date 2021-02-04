@@ -1,9 +1,9 @@
 #!/usr/bin/env python
 
 
-'''
+"""
 PIP installation configuration file
-'''
+"""
 
 
 import re
@@ -18,7 +18,7 @@ localdir = os.path.split(os.path.abspath(__file__))[0]
 
 # Using a function to make the damn linter happy
 def version():
-    project_dir = os.path.join(localdir, "mcli")
+    project_dir = os.path.join(localdir, "meraki_cli")
     sys.path = [project_dir] + sys.path
     import __version__
     return __version__.version
@@ -58,9 +58,9 @@ CLASSIFIERS = [
     'Topic :: System :: Networking']
 
 
-setup(name='meraki-cli',
+setup(name='meraki_cli',
       version=version(),
-      description='A Simple CLI Helper Tool for Meraki Systems',
+      description='A Simple CLI Wrapper for the Meraki Dashboard API SDK',
       long_description=long_description,
       long_description_content_type='text/markdown',
       author='John W Kerns',
@@ -72,7 +72,7 @@ setup(name='meraki-cli',
       install_requires=install_requires,
       entry_points={
           'console_scripts': [
-              'mcli = mcli.__main__:main'
+              'meraki = meraki_cli.__main__:main'
               ]
           }
       )
