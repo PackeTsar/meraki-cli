@@ -25,6 +25,9 @@ Meraki-CLI is a wrapper around the [Meraki Dashboard API Python SDK](https://git
 - List the MX VLANs on a network: `meraki appliance getNetworkApplianceVlans --networkId N_12345`
 - Add a new MX VLAN to a network: `meraki appliance createNetworkApplianceVlan --networkId 'N_12345' --id '100' --name 'My New VLAN' --kwargs '{"applianceIp": "10.0.0.1", "subnet": "10.0.0.0/24"}'`
 
+### Capabilities
+
+Since the Meraki-CLI tool builds its arguments directly off of Meraki's SDK, it's capabilities exactly match those of the SDK and are updated automatically when Meraki adds new API capabilities. For a list of available commands from the last build of the Meraki-CLI, check out the **[Meraki-CLI Command Guide](COMMAND_GUIDE.md)**.
 
 -----------------------------------------
 ## TABLE OF CONTENTS
