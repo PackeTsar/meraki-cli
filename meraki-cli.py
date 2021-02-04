@@ -1,10 +1,10 @@
-#!/usr/bin/python
+#!/usr/bin/env python3
 
 
-'''
-Testing file. Run with 'python mcli.py <args>' to run tests on changes without
-    need to reinstall
-'''
+"""
+Testing file. Run with 'python meraki-cli.py <args>' to run tests on changes
+    without need to reinstall
+"""
 
 
 # mcli library
