@@ -98,10 +98,15 @@ def _cmd_args(arg_obj: cli.Args) -> '':
 
 
 def main() -> None:
-    struct = _get_structure()
+    """
+    Primary function called from native script.
+    """
+    struct = _get_structure()  # Grab the structure dict of the arguments
+    # Read in the Jinja2 template file
     f = open('.command_guide_template.md', 'r')
-    template = Template(f.read())
+    template = Template(f.read())  # Load the template data
     f.close()
+    # Render the Jinja2 template using needed variables
     guidestr = template.render(
         version=meraki.__version__,
         struct=struct,
@@ -110,6 +115,7 @@ def main() -> None:
         _cmd_args=_cmd_args,
         _uri_name=_uri_name,
         )
+    # Write the template rendering to the final command guide markdown file
     guide = open('COMMAND_GUIDE.md', 'w')
     guide.write(guidestr)
     guide.close()
