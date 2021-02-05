@@ -68,11 +68,11 @@ To see if Meraki-CLI was successfully installed, run the `meraki` command and se
 
 ## Getting and Using your API Key
 
-Meraki-CLI is command-line driven and once installed can be run with the command `meraki`. Once you have installed Meraki-CLI, you can see the command guide by running the command by itself.
+Meraki-CLI is command-line driven and once installed can be run with the command `meraki`. Once you have installed it, you can see the command guide by running the `meraki` command by itself.
 
-In order to operate Meraki-CLI you need to input your Meraki API key using one of two methods:
+In order to operate the CLI you need to input your Meraki API key using one of two methods:
 
-1. Saving your API key as an environment variable using:
+1. Saving your API key as an environment variable (recommended):
     - **Windows**: `set MERAKI_DASHBOARD_API_KEY=12345`
     - **MacOS/Linux**: `export MERAKI_DASHBOARD_API_KEY=12345`
     - Once saved as an environment variable, you don't need to use the `-k` option when running commands
@@ -83,7 +83,7 @@ You can obtain a Meraki API key by logging into the Meraki dashboard and clickin
 
 ## A Few Starting Commands
 
-Once you have your new key, try printing out you list organizations with the command `meraki -k API_KEY_HERE organizations getOrganizations`, substituting in your API key. This will print out a formatted table of your organizations.
+Once you have your new key, try printing out your organizations with the command `meraki -k API_KEY_HERE organizations getOrganizations`, substituting in your API key. This will print out a formatted table of your organizations. If you saved your API key as an environment variable, you can exclude the `-k` argument and simply issue `meraki organizations getOrganizations`.
 
 Take one of your organization ID numbers and look at the networks in it with `meraki organizations getOrganizationNetworks --organizationId 123456`
 
