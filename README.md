@@ -29,6 +29,9 @@ Meraki-CLI is a wrapper around the official [Meraki Dashboard API Python SDK](ht
 
 Since the Meraki-CLI tool builds its arguments directly off of Meraki's SDK, it's capabilities exactly match those of the SDK and are updated automatically when Meraki adds new API capabilities. For a list of available commands from the last build of the Meraki-CLI, check out the **[Meraki-CLI Command Guide](COMMAND_GUIDE.md)**.
 
+### Screenshot
+[![screenshot](screenshot.png)](screenshot.png)
+
 -----------------------------------------
 ## TABLE OF CONTENTS
 1. [Getting Started](#getting-started)
