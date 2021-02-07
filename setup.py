@@ -72,6 +72,7 @@ setup(name='meraki_cli',
       license="GNU",
       packages=find_packages(),
       install_requires=install_requires,
+      extras_require={'dev': ['tox', 'pytest', 'coverage']},
       entry_points={
           'console_scripts': [
               'meraki = meraki_cli.__main__:main'

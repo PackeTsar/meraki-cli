@@ -10,9 +10,13 @@ rm -rf commit_env
 
 rm -rf dist
 
-find . -type d -name __pycache__ -prune -execdir rm -rf {} \;  # Removal all '__pycache__' directories and their contents
+rm -rf ".tox"
 
-find . -type d -name env -prune -execdir rm -rf {} \;  # Removal all '__pycache__' directories and their contents
+rm -rf ".pytest_cache"
+
+rm -rf ".coverage"
+
+find . -type d -name __pycache__ -prune -execdir rm -rf {} \;  # Removal all '__pycache__' directories and their contents
 
 find . -type f -name "*.pyc" -delete  # Removal all '.pyc' files
 
