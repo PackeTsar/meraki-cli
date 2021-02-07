@@ -159,6 +159,11 @@ NO_STDIN = os.isatty(0)
 NO_STDOUT = sys.stdout.isatty()
 
 
+# Instantiate logger facilities for unit testing
+log = logging.getLogger('testing')
+log.setLevel(logging.CRITICAL)
+
+
 def _configure_logging(parsed_args: argparse.Namespace) -> ():
     """
     Prepare and return two logging objects: one for the general program, and
