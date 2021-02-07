@@ -2,6 +2,7 @@
 
 
 [![Build Status](https://travis-ci.com/PackeTsar/meraki-cli.svg?branch=master)](https://travis-ci.com/PackeTsar/meraki-cli)
+[![Coverage](https://codecov.io/gh/PackeTsar/meraki-cli/branch/master/graph/badge.svg)](https://codecov.io/gh/PackeTsar/meraki-cli)
 [![PyPI](https://img.shields.io/pypi/v/meraki-cli.svg)](https://pypi.python.org/pypi/meraki-cli)
 [![Python Versions](https://img.shields.io/pypi/pyversions/meraki-cli.svg)](https://pypi.python.org/pypi/meraki-cli)
 
