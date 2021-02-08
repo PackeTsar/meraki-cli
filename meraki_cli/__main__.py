@@ -581,9 +581,10 @@ def _output(parsed_args: argparse.Namespace, result: list) -> None:
             print(json.dumps(result, indent=4))
 
 
-def main() -> None:
+def main(argstring=None) -> None:
     """
-    Primary function called from native script.
+    Primary function called from native script. Allow an argument string to
+        be passed in for testing purposes.
     """
     # Instantiate a fake instance of the API so we can parse it and build the
     #     argparse structure from it
@@ -713,7 +714,12 @@ def main() -> None:
                                  dest=arg_obj.varkw.name,
                                  help='(JSON formatted extra arguments)',
                                  metavar='JSON_STRING',)
-    args = parser.parse_args()  # Parse the user provided CLI commands/args
+    # If an argstring was passed in, we are probably being tested
+    if argstring:
+        # Split up the args and pass them in as a list to be parsed
+        args = parser.parse_args(argstring.split(' '))
+    else:
+        args = parser.parse_args()  # Parse the user provided CLI commands/args
     global log  # Make the "log" variable global to anybody can use it
     # Pull in the two logging systems
     log, meraki_log = _configure_logging(args)
