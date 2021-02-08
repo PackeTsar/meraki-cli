@@ -13,14 +13,15 @@ import meraki
 from jinja2 import Template
 
 # Local libraries
-import meraki_cli as cli
+from meraki_cli.__main__ import Args
+from meraki_cli import __main__ as climain
 
 
 def _get_structure() -> {}:
     """
     Build a dict structure of the parsable CLI arguments. This will be passed
         into the J2 template and iterated to build the command guide.
-    FIXME: This code also exists in cli.__main__, need to find a way to DRY it
+    FIXME: This code also exists in climain, need to find a way to DRY it
         up.
     """
     # Instantiate a fake instance of the API so we can parse it and build the
@@ -39,7 +40,7 @@ def _get_structure() -> {}:
                 continue
             # Instantiate an Args object to parse the parameters required by
             #     the method and make them easy to access.
-            clsmtds[mtdstr] = cli.Args(getattr(cls, mtdstr))
+            clsmtds[mtdstr] = Args(getattr(cls, mtdstr))
     return result
 
 
@@ -50,12 +51,12 @@ def _uri_name(name: str) -> str:
     """
     # Create the title name of the method by splitting on caps. _cmd_title
     #     will turn 'claimIntoOrganization' into 'Claim Into Organization'.
-    titleName = cli.__main__._cmd_title(name)
+    titleName = climain._cmd_title(name)
     # Replace whitespace with dashes and lowercase everything
     return titleName.replace(' ', '-').lower()
 
 
-def _cmd_section(arg_obj: cli.Args) -> str:
+def _cmd_section(arg_obj: Args) -> str:
     """
     Generate a portion of the help section for the page from the method
         docstring. Unindent the lines a bit so they can be used for markdown.
@@ -74,7 +75,7 @@ def _cmd_section(arg_obj: cli.Args) -> str:
     return result
 
 
-def _cmd_args(arg_obj: cli.Args) -> str:
+def _cmd_args(arg_obj: Args) -> str:
     """
     Build an example of how to use the arguments with a function. Take the
         positional parameters like ['networkId', 'name'] and generate a string
@@ -88,10 +89,11 @@ def _cmd_args(arg_obj: cli.Args) -> str:
         elif arg.annotation is str:  # If it is a regular string
             # Wrap the value example in quotes as is a good practice and look
             #     up the metavar we use to provide a value example
-            metavar = " '"+cli.ANNOTATION_MAP[arg.annotation]['metavar']+"'"
+            metavar = " '"+climain.ANNOTATION_MAP[
+                arg.annotation]['metavar']+"'"
         else:
             # Otherwise just add the regular metavar
-            metavar = ' '+cli.ANNOTATION_MAP[arg.annotation]['metavar']
+            metavar = ' '+climain.ANNOTATION_MAP[arg.annotation]['metavar']
         # Build the argument example and add it to the result
         result += f' --{arg.name}{metavar}'
     return result
@@ -110,7 +112,7 @@ def main() -> None:
     guidestr = template.render(
         version=meraki.__version__,
         struct=struct,
-        _cmd_title=cli.__main__._cmd_title,
+        _cmd_title=climain._cmd_title,
         _cmd_section=_cmd_section,
         _cmd_args=_cmd_args,
         _uri_name=_uri_name,

@@ -8,8 +8,8 @@ Testing file. Run with 'python meraki-cli.py <args>' to run tests on changes
 
 
 # mcli library
-import meraki_cli
+from meraki_cli import __main__
 
 
 if __name__ == "__main__":
-    meraki_cli.__main__.main()
+    __main__.main()

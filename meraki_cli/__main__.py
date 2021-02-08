@@ -600,7 +600,7 @@ def main() -> None:
                              help='Show help at any command level',
                              action='help')
     basic_group.add_argument('-v', '--version',
-                             version=f'Meraki-CLI v{__version__.version} | '
+                             version=f'Meraki-CLI v{__version__} | '
                              f'Meraki API Library v{meraki.__version__}',
                              action="version")
     basic_group.add_argument('-k', '--apiKey',
