@@ -319,25 +319,23 @@ def _translate_input(arg_dicts: list, translation_strs: list) -> []:
     return result
 
 
-def _get_stdin_args(parsed_args: argparse.Namespace, arg_obj: Args) -> []:
+def _json_to_args(json_string: str, parsed_args: argparse.Namespace,
+                  arg_obj: Args) -> []:
     """
-    Get input objects from a pipeline (STDIN), run them through a translator
-        if the user provided key translations, reconcile them with CLI inputs
-        from the user (preferring arguments from the user) and conform the
-        arguments to the parameters required by the target method.
+    Parse a raw JSON string into method-ready arguments. Parse JSON into
+        objects, run them through a translator if the user provided key
+        translations, reconcile them with CLI inputs from the user (preferring
+        arguments from the user) and conform the arguments to the parameters
+        required by the target method.
 
+    - json_string: String of valid JSON objects. Example:
+        '[{"vlanId": "100"}]'
     - parsed_args: Parsed arguments namespace object from argparse.
     - arg_obj: Instance of the Args() class which holds parameter info for the
         target method.
     """
     result = []
-    stdin = sys.stdin.read()  # Get the raw STDIN data
-    log.debug(f'Raw STDIN data:\n{stdin}')
-    if not stdin:  # If the STDIN data is empty
-        log.critical('STDIN is empty. Source instance returned no data. '
-                     'Exiting program.')
-        sys.exit()
-    stdin_arg_dicts = json.loads(stdin)  # Interpret as JSON
+    stdin_arg_dicts = json.loads(json_string)  # Interpret as JSON
     log.debug(f'Loaded STDIN data: {stdin_arg_dicts}')
     if type(stdin_arg_dicts) is not list:  # Make a list if not a list
         stdin_arg_dicts = [stdin_arg_dicts]
@@ -366,6 +364,26 @@ def _get_stdin_args(parsed_args: argparse.Namespace, arg_obj: Args) -> []:
         arg_tup = _get_method_params(parsed_args, arg_dict, arg_obj)
         result.append(arg_tup)
     return result
+
+
+def _get_stdin_args(parsed_args: argparse.Namespace, arg_obj: Args) -> []:
+    """
+    Get input objects from a pipeline (STDIN), run them through a translator
+        if the user provided key translations, reconcile them with CLI inputs
+        from the user (preferring arguments from the user) and conform the
+        arguments to the parameters required by the target method.
+
+    - parsed_args: Parsed arguments namespace object from argparse.
+    - arg_obj: Instance of the Args() class which holds parameter info for the
+        target method.
+    """
+    stdin = sys.stdin.read()  # Get the raw STDIN data
+    log.debug(f'Raw STDIN data:\n{stdin}')
+    if not stdin:  # If the STDIN data is empty
+        log.critical('STDIN is empty. Source instance returned no data. '
+                     'Exiting program.')
+        sys.exit()
+    return _json_to_args(stdin, parsed_args, arg_obj)
 
 
 def _print_commands(parsed_args: argparse.Namespace,
