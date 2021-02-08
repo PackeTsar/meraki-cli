@@ -71,7 +71,8 @@ setup(name='meraki_cli',
       license="GNU",
       packages=find_packages(),
       install_requires=install_requires,
-      extras_require={'dev': ['jinja2', 'pytest', 'coverage', 'codecov']},
+      extras_require={'dev': ['jinja2', 'pytest', 'coverage',
+                              'codecov', 'flake8']},
       entry_points={
           'console_scripts': [
               'meraki = meraki_cli.__main__:main'
