@@ -6,7 +6,6 @@ PIP installation configuration file
 """
 
 
-import re
 import os
 import sys
 from setuptools import setup
@@ -72,7 +71,7 @@ setup(name='meraki_cli',
       license="GNU",
       packages=find_packages(),
       install_requires=install_requires,
-      extras_require={'dev': ['tox', 'pytest', 'coverage', 'codecov']},
+      extras_require={'dev': ['jinja2', 'pytest', 'coverage', 'codecov']},
       entry_points={
           'console_scripts': [
               'meraki = meraki_cli.__main__:main'
