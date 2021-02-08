@@ -6,7 +6,7 @@
 [![PyPI](https://img.shields.io/pypi/v/meraki-cli.svg)](https://pypi.python.org/pypi/meraki-cli)
 [![Python Versions](https://img.shields.io/pypi/pyversions/meraki-cli.svg)](https://pypi.python.org/pypi/meraki-cli)
 
-A Simple CLI tool to automate and control your Meraki Dashboard!
+A simple CLI tool to automate and control your Cisco Meraki Dashboard!
 
 Quick Install: `pip3 install meraki-cli`
 
