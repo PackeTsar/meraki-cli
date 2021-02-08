@@ -205,7 +205,7 @@ def _configure_logging(parsed_args: argparse.Namespace) -> ():
     return log, meraki_log
 
 
-def _cmd_title(mtdstr: str) -> '':
+def _cmd_title(mtdstr: str) -> str:
     """
     Generate command/method title, based on its name, which is
         displayed in the list of commands under a type (class).
@@ -218,7 +218,7 @@ def _cmd_title(mtdstr: str) -> '':
     return ' '.join(wordlist).title()  # Camel case all words and join them
 
 
-def _cmd_help(arg_obj: Args) -> '':
+def _cmd_help(arg_obj: Args) -> str:
     """
     Generate the description/instructions section in a command/method's help
         text. Use the docstring of the method and add the method's signature
@@ -285,7 +285,7 @@ def _get_method_params(parsed_args: argparse.Namespace,
                 log.debug(f'Loaded kwargs:\n{json.dumps(kwargs, indent=4)}')
                 arg_dict.update(kwargs)  # Add the data to the keyword values
             except json.decoder.JSONDecodeError as e:
-                log.critical(f'Error loading JSON kwargs. Check syntax.')
+                log.critical('Error loading JSON kwargs. Check syntax.')
                 log.exception(e)
     return (positionals, arg_dict)
 
@@ -334,7 +334,7 @@ def _get_stdin_args(parsed_args: argparse.Namespace, arg_obj: Args) -> []:
     stdin = sys.stdin.read()  # Get the raw STDIN data
     log.debug(f'Raw STDIN data:\n{stdin}')
     if not stdin:  # If the STDIN data is empty
-        log.critical(f'STDIN is empty. Source instance returned no data. '
+        log.critical('STDIN is empty. Source instance returned no data. '
                      'Exiting program.')
         sys.exit()
     stdin_arg_dicts = json.loads(stdin)  # Interpret as JSON
@@ -527,7 +527,7 @@ def _nice_table(listofdicts: list) -> None:
         [{'id': '1', 'name': 'THING1'}, {'id': '2', 'name': 'THING2'}]
     """
     if not listofdicts:
-        log.warning(f'Empty table data. Exiting.')
+        log.warning('Empty table data. Exiting.')
         sys.exit()
     console = Console()  # Instantiate the Rich console
     # Instantiate the table object with header settings
@@ -689,17 +689,17 @@ def main() -> None:
             parser_map[clsstr][mtdstr] = arg_obj
             # Iterate the positionals and create argument options for each
             for arg in arg_obj.positionals:
-                param = cmd.add_argument(f'--{arg.name}',
-                                         dest=arg.name,
-                                         help='(required)',
-                                         # Don't require the arg if we are
-                                         #     parsing the STDIN data
-                                         required=NO_STDIN,
-                                         # Use the annotation map to pass
-                                         #     additional params to the
-                                         #     argument option to make it
-                                         #     easier to use and read
-                                         **ANNOTATION_MAP[arg.annotation])
+                cmd.add_argument(f'--{arg.name}',
+                                 dest=arg.name,
+                                 help='(required)',
+                                 # Don't require the arg if we are
+                                 #     parsing the STDIN data
+                                 required=NO_STDIN,
+                                 # Use the annotation map to pass
+                                 #     additional params to the
+                                 #     argument option to make it
+                                 #     easier to use and read
+                                 **ANNOTATION_MAP[arg.annotation])
                 # Add the parameter name to the positionals list in the map
             for arg in arg_obj.keywords:
                 cmd.add_argument(f'--{arg.name}',
@@ -711,7 +711,7 @@ def main() -> None:
             if arg_obj.varkw:
                 cmd.add_argument(f'--{arg_obj.varkw.name}',
                                  dest=arg_obj.varkw.name,
-                                 help=f'(JSON formatted extra arguments)',
+                                 help='(JSON formatted extra arguments)',
                                  metavar='JSON_STRING',)
     args = parser.parse_args()  # Parse the user provided CLI commands/args
     global log  # Make the "log" variable global to anybody can use it
@@ -744,7 +744,7 @@ def main() -> None:
     target_method = getattr(getattr(api, args.type), args.command)
     log.info(f'Target method is {target_method}')
     if NO_STDIN:  # If not in front of a pipe (not being fed by STDIN)
-        log.info(f'No STDIN detected. No pipe behind this instance.')
+        log.info('No STDIN detected. No pipe behind this instance.')
         # Remove the static args and get a clean dict back only containing
         #     argument meant to become parameters in the target method call
         arg_dict = _clean_args(args)
@@ -758,7 +758,7 @@ def main() -> None:
         argtups = [_get_method_params(args, arg_dict,
                                       parser_map[args.type][args.command])]
     else:  # If we are being fed by STDIN through a pipeline
-        log.info(f'STDIN detected. Pipe exists behind this instance.')
+        log.info('STDIN detected. Pipe exists behind this instance.')
         # Pull a list of tuples, each containing the parameters tailored for a
         #     call against the target method.
         # Tuple should have a list of positional arguments in [0] and a dict
@@ -769,7 +769,7 @@ def main() -> None:
     # If the user threw the switch to output commands instead of execute
     #     them
     if args.output_commands:
-        log.debug(f'Outputting piped args as commands and cancelling '
+        log.debug('Outputting piped args as commands and cancelling '
                   'execution.')
         # Print the commands to STDOUT and exit the program
         _print_commands(args, argtups, parser_map[args.type][args.command])

@@ -43,7 +43,7 @@ def _get_structure() -> {}:
     return result
 
 
-def _uri_name(name: str) -> '':
+def _uri_name(name: str) -> str:
     """
     Generate a URI name for the method which matches what Markdown will want
         to use for deep linking. IE: 'updateVlan' becomes 'update-vlan'
@@ -55,7 +55,7 @@ def _uri_name(name: str) -> '':
     return titleName.replace(' ', '-').lower()
 
 
-def _cmd_section(arg_obj: cli.Args) -> '':
+def _cmd_section(arg_obj: cli.Args) -> str:
     """
     Generate a portion of the help section for the page from the method
         docstring. Unindent the lines a bit so they can be used for markdown.
@@ -74,7 +74,7 @@ def _cmd_section(arg_obj: cli.Args) -> '':
     return result
 
 
-def _cmd_args(arg_obj: cli.Args) -> '':
+def _cmd_args(arg_obj: cli.Args) -> str:
     """
     Build an example of how to use the arguments with a function. Take the
         positional parameters like ['networkId', 'name'] and generate a string

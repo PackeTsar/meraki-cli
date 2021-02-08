@@ -1,5 +1,4 @@
 import unittest
-from unittest.mock import patch
 from meraki_cli.__main__ import _translate_input
 
 
