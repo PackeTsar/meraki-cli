@@ -1,6 +1,5 @@
 import unittest
-from .Function import Function
-from meraki_cli.__main__ import Args, _cmd_title, _cmd_help
+from meraki_cli.__main__ import _cmd_title
 
 
 class TestHelps(unittest.TestCase):
