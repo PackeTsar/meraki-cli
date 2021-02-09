@@ -5,10 +5,10 @@ From current directory
 ```
 
 # Set up and activate virtual environment
-python3 -m venv env & source env/bin/activate
+python3 -m venv env && source env/bin/activate
 
 # Install libraries and package
-python3 -m pip install -e .[dev]
+python3 -m pip install -e '.[dev]'
 
 
 ### Each development cycle
