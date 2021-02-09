@@ -287,6 +287,7 @@ def _get_method_params(parsed_args: argparse.Namespace,
             except json.decoder.JSONDecodeError as e:
                 log.critical('Error loading JSON kwargs. Check syntax.')
                 log.exception(e)
+                sys.exit()
     return (positionals, arg_dict)
 
 
