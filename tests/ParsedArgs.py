@@ -8,3 +8,4 @@ class ParsedArgs:
         self.debug = 0
         self.logfile = None
         self.networkId = 'N_12345'
+        self.kwargs = '{"address": "192.168.1.1"}'
