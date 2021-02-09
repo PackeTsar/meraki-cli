@@ -13,7 +13,7 @@ LISTOFDICTS = [{
 
 class TestColumnFilter(unittest.TestCase):
 
-    def testColumnFilter(self):
-        output = _column_filter(LISTOFDICTS, 'key3,key2')
+    def test_ColumnFilter(self):
+        output = _column_filter(LISTOFDICTS, 'key3,key2,key100')
         assert list(output[0]) == ['key3', 'key2']
         assert output == [{'key3': 3, 'key2': 2}]
