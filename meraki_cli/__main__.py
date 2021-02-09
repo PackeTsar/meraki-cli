@@ -669,7 +669,7 @@ def main(argstring=None) -> None:
     #     information.
     parser_map = {}
     # This will contain the command types like "networks" or "switch"
-    subparser = parser.add_subparsers(dest='type', title='Commands')
+    subparser = parser.add_subparsers(dest='type', title='Command Types')
     # Iterate class strings and classes in the fake API instance
     for clsstr, cls in api.__dict__.items():
         if clsstr[0] == "_":  # If this is a private attribute
@@ -677,7 +677,7 @@ def main(argstring=None) -> None:
         # Add the type command for this class
         tparser = subparser.add_parser(clsstr, help=f'{clsstr} commands')
         # Add a container for target method commands within this type
-        tsub = tparser.add_subparsers(dest='command')
+        tsub = tparser.add_subparsers(dest='command', title='Commands')
         # Add the type command to the map. Will use this later to print the
         #     help section of the command type
         parser_map[clsstr] = {'_parser': tparser}
