@@ -577,7 +577,7 @@ def _output(parsed_args: argparse.Namespace, result: list) -> None:
     #     negative. It is confusing but unavoidable.
     if parsed_args.jsonOutput or not NO_STDOUT:
         log.debug(f'Outputting to JSON. '
-                  f'Forward pipelining: {NO_STDOUT}')
+                  f'Forward pipelining: {not NO_STDOUT}')
         print(json.dumps(result, indent=4))
     else:  # Otherwise let's try to output a nice table.
         try:  # Catch any exceptions in tabulating the data

@@ -11,3 +11,5 @@ class ParsedArgs:
         self.logfile = None
         self.networkId = 'N_12345'
         self.kwargs = '{"address": "192.168.1.1"}'
+        self.jsonOutput = False
+        self.columns = None
