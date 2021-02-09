@@ -580,24 +580,16 @@ def _output(parsed_args: argparse.Namespace, result: list) -> None:
                   f'Forward pipelining: {not NO_STDOUT}')
         print(json.dumps(result, indent=4))
     else:  # Otherwise let's try to output a nice table.
-        try:  # Catch any exceptions in tabulating the data
-            # Make data a list if it is not already
-            if type(result) is dict:
-                result = [result]
-            # Prepare data to be formatted into a table by removing value
-            #     types unfriendly to tabulation.
-            tabledicts = _table_ready_dicts(result)
-            # If the user has defined column filtering/ordering
-            if parsed_args.columns:
-                tabledicts = _column_filter(tabledicts, parsed_args.columns)
-            _nice_table(tabledicts)  # Output our nice table to the CLI
-        except Exception as e:  # If we could not tabulate the results
-            # Alert the user
-            log.info('Exception thrown in table formatting. Using JSON. '
-                     'Logging exception at debug level.')
-            if log.getEffectiveLevel() <= logging.DEBUG:
-                log.exception(e)
-            print(json.dumps(result, indent=4))
+        # Make data a list if it is not already
+        if type(result) is dict:
+            result = [result]
+        # Prepare data to be formatted into a table by removing value
+        #     types unfriendly to tabulation.
+        tabledicts = _table_ready_dicts(result)
+        # If the user has defined column filtering/ordering
+        if parsed_args.columns:
+            tabledicts = _column_filter(tabledicts, parsed_args.columns)
+        _nice_table(tabledicts)  # Output our nice table to the CLI
 
 
 def main(argstring=None) -> None:

@@ -50,10 +50,3 @@ class TestOutput(unittest.TestCase):
             self.parsed_args.columns = 'key2'
             _output(self.parsed_args, LISTOFDICTS)
             self.assertNotIn('key1', fake_out.getvalue())
-
-    @patch('meraki_cli.__main__.NO_STDOUT', True)
-    def testOutputLastResortJson(self):
-        del self.parsed_args.columns
-        with patch('sys.stdout', new=StringIO()):
-            with self.assertLogs(level='CRITICAL'):
-                _output(self.parsed_args, LISTOFDICTS)
