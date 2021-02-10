@@ -5,6 +5,7 @@
 [![Coverage](https://codecov.io/gh/PackeTsar/meraki-cli/branch/master/graph/badge.svg)](https://codecov.io/gh/PackeTsar/meraki-cli)
 [![PyPI](https://img.shields.io/pypi/v/meraki-cli.svg)](https://pypi.python.org/pypi/meraki-cli)
 [![Python Versions](https://img.shields.io/pypi/pyversions/meraki-cli.svg)](https://pypi.python.org/pypi/meraki-cli)
+[![Cisco DevNet](https://static.production.devnetcloud.com/codeexchange/assets/images/devnet-published.svg)](https://developer.cisco.com/codeexchange/github/repo/PackeTsar/meraki-cli)
 
 A simple CLI tool to automate and control your Cisco Meraki Dashboard!
 
