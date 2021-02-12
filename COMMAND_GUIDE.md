@@ -525,7 +525,7 @@ def claimIntoOrganization(organizationId: str, **kwargs):
 
 ##### Example:
 ```
-meraki organizations claimIntoOrganization --organizationId 'STRING'
+meraki organizations claimIntoOrganization --organizationId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
 
@@ -573,7 +573,7 @@ def combineOrganizationNetworks(organizationId: str, name: str, networkIds: list
 
 ##### Example:
 ```
-meraki organizations combineOrganizationNetworks --organizationId 'STRING' --name 'STRING' --networkIds ITEM
+meraki organizations combineOrganizationNetworks --organizationId 'STRING' --name 'STRING' --networkIds ITEM --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
 
@@ -620,7 +620,7 @@ def createOrganizationActionBatch(organizationId: str, actions: list, **kwargs):
 
 ##### Example:
 ```
-meraki organizations createOrganizationActionBatch --organizationId 'STRING' --actions ITEM
+meraki organizations createOrganizationActionBatch --organizationId 'STRING' --actions ITEM --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
 
@@ -648,7 +648,7 @@ def createOrganizationAdmin(organizationId: str, email: str, name: str, orgAcces
 
 ##### Example:
 ```
-meraki organizations createOrganizationAdmin --organizationId 'STRING' --email 'STRING' --name 'STRING' --orgAccess 'STRING'
+meraki organizations createOrganizationAdmin --organizationId 'STRING' --email 'STRING' --name 'STRING' --orgAccess 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
 
@@ -678,7 +678,7 @@ def createOrganizationBrandingPolicy(organizationId: str, name: str, enabled: bo
 
 ##### Example:
 ```
-meraki organizations createOrganizationBrandingPolicy --organizationId 'STRING' --name 'STRING' --enabled --adminSettings JSON_STRING
+meraki organizations createOrganizationBrandingPolicy --organizationId 'STRING' --name 'STRING' --enabled --adminSettings JSON_STRING --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
 
@@ -703,7 +703,7 @@ def createOrganizationConfigTemplate(organizationId: str, name: str, **kwargs):
 
 ##### Example:
 ```
-meraki organizations createOrganizationConfigTemplate --organizationId 'STRING' --name 'STRING'
+meraki organizations createOrganizationConfigTemplate --organizationId 'STRING' --name 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
 
@@ -730,7 +730,7 @@ def createOrganizationNetwork(organizationId: str, name: str, productTypes: list
 
 ##### Example:
 ```
-meraki organizations createOrganizationNetwork --organizationId 'STRING' --name 'STRING' --productTypes ITEM
+meraki organizations createOrganizationNetwork --organizationId 'STRING' --name 'STRING' --productTypes ITEM --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
 
@@ -754,7 +754,7 @@ def createOrganizationSamlIdp(organizationId: str, x509certSha1Fingerprint: str,
 
 ##### Example:
 ```
-meraki organizations createOrganizationSamlIdp --organizationId 'STRING' --x509certSha1Fingerprint 'STRING'
+meraki organizations createOrganizationSamlIdp --organizationId 'STRING' --x509certSha1Fingerprint 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
 
@@ -780,7 +780,7 @@ def createOrganizationSamlRole(organizationId: str, role: str, orgAccess: str, *
 
 ##### Example:
 ```
-meraki organizations createOrganizationSamlRole --organizationId 'STRING' --role 'STRING' --orgAccess 'STRING'
+meraki organizations createOrganizationSamlRole --organizationId 'STRING' --role 'STRING' --orgAccess 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
 
@@ -1008,7 +1008,7 @@ def getOrganizationActionBatches(organizationId: str, **kwargs):
 
 ##### Example:
 ```
-meraki organizations getOrganizationActionBatches --organizationId 'STRING'
+meraki organizations getOrganizationActionBatches --organizationId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
 
@@ -1065,7 +1065,7 @@ def getOrganizationApiRequests(organizationId: str, total_pages=1, direction='ne
 
 ##### Example:
 ```
-meraki organizations getOrganizationApiRequests --organizationId 'STRING'
+meraki organizations getOrganizationApiRequests --organizationId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
 
@@ -1090,7 +1090,7 @@ def getOrganizationApiRequestsOverview(organizationId: str, **kwargs):
 
 ##### Example:
 ```
-meraki organizations getOrganizationApiRequestsOverview --organizationId 'STRING'
+meraki organizations getOrganizationApiRequestsOverview --organizationId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
 
@@ -1234,7 +1234,7 @@ def getOrganizationConfigurationChanges(organizationId: str, total_pages=1, dire
 
 ##### Example:
 ```
-meraki organizations getOrganizationConfigurationChanges --organizationId 'STRING'
+meraki organizations getOrganizationConfigurationChanges --organizationId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
 
@@ -1262,7 +1262,7 @@ def getOrganizationDevices(organizationId: str, total_pages=1, direction='next',
 
 ##### Example:
 ```
-meraki organizations getOrganizationDevices --organizationId 'STRING'
+meraki organizations getOrganizationDevices --organizationId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
 
@@ -1289,7 +1289,7 @@ def getOrganizationDevicesStatuses(organizationId: str, total_pages=1, direction
 
 ##### Example:
 ```
-meraki organizations getOrganizationDevicesStatuses --organizationId 'STRING'
+meraki organizations getOrganizationDevicesStatuses --organizationId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
 
@@ -1316,7 +1316,7 @@ def getOrganizationDevicesUplinksLossAndLatency(organizationId: str, **kwargs):
 
 ##### Example:
 ```
-meraki organizations getOrganizationDevicesUplinksLossAndLatency --organizationId 'STRING'
+meraki organizations getOrganizationDevicesUplinksLossAndLatency --organizationId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
 
@@ -1368,7 +1368,7 @@ def getOrganizationInventoryDevices(organizationId: str, total_pages=1, directio
 
 ##### Example:
 ```
-meraki organizations getOrganizationInventoryDevices --organizationId 'STRING'
+meraki organizations getOrganizationInventoryDevices --organizationId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
 
@@ -1421,7 +1421,7 @@ def getOrganizationLicenses(organizationId: str, total_pages=1, direction='next'
 
 ##### Example:
 ```
-meraki organizations getOrganizationLicenses --organizationId 'STRING'
+meraki organizations getOrganizationLicenses --organizationId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
 
@@ -1495,7 +1495,7 @@ def getOrganizationNetworks(organizationId: str, total_pages=1, direction='next'
 
 ##### Example:
 ```
-meraki organizations getOrganizationNetworks --organizationId 'STRING'
+meraki organizations getOrganizationNetworks --organizationId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
 
@@ -1681,7 +1681,7 @@ def getOrganizationUplinksStatuses(organizationId: str, total_pages=1, direction
 
 ##### Example:
 ```
-meraki organizations getOrganizationUplinksStatuses --organizationId 'STRING'
+meraki organizations getOrganizationUplinksStatuses --organizationId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
 
@@ -1734,7 +1734,7 @@ def getOrganizationWebhooksLogs(organizationId: str, total_pages=1, direction='n
 
 ##### Example:
 ```
-meraki organizations getOrganizationWebhooksLogs --organizationId 'STRING'
+meraki organizations getOrganizationWebhooksLogs --organizationId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
 
@@ -1851,7 +1851,7 @@ def updateOrganization(organizationId: str, **kwargs):
 
 ##### Example:
 ```
-meraki organizations updateOrganization --organizationId 'STRING'
+meraki organizations updateOrganization --organizationId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
 
@@ -1876,7 +1876,7 @@ def updateOrganizationActionBatch(organizationId: str, actionBatchId: str, **kwa
 
 ##### Example:
 ```
-meraki organizations updateOrganizationActionBatch --organizationId 'STRING' --actionBatchId 'STRING'
+meraki organizations updateOrganizationActionBatch --organizationId 'STRING' --actionBatchId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
 
@@ -1903,7 +1903,7 @@ def updateOrganizationAdmin(organizationId: str, adminId: str, **kwargs):
 
 ##### Example:
 ```
-meraki organizations updateOrganizationAdmin --organizationId 'STRING' --adminId 'STRING'
+meraki organizations updateOrganizationAdmin --organizationId 'STRING' --adminId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
 
@@ -1957,7 +1957,7 @@ def updateOrganizationBrandingPolicy(organizationId: str, brandingPolicyId: str,
 
 ##### Example:
 ```
-meraki organizations updateOrganizationBrandingPolicy --organizationId 'STRING' --brandingPolicyId 'STRING'
+meraki organizations updateOrganizationBrandingPolicy --organizationId 'STRING' --brandingPolicyId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
 
@@ -1982,7 +1982,7 @@ def updateOrganizationConfigTemplate(organizationId: str, configTemplateId: str,
 
 ##### Example:
 ```
-meraki organizations updateOrganizationConfigTemplate --organizationId 'STRING' --configTemplateId 'STRING'
+meraki organizations updateOrganizationConfigTemplate --organizationId 'STRING' --configTemplateId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
 
@@ -2006,7 +2006,7 @@ def updateOrganizationLicense(organizationId: str, licenseId: str, **kwargs):
 
 ##### Example:
 ```
-meraki organizations updateOrganizationLicense --organizationId 'STRING' --licenseId 'STRING'
+meraki organizations updateOrganizationLicense --organizationId 'STRING' --licenseId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
 
@@ -2040,7 +2040,7 @@ def updateOrganizationLoginSecurity(organizationId: str, **kwargs):
 
 ##### Example:
 ```
-meraki organizations updateOrganizationLoginSecurity --organizationId 'STRING'
+meraki organizations updateOrganizationLoginSecurity --organizationId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
 
@@ -2063,7 +2063,7 @@ def updateOrganizationSaml(organizationId: str, **kwargs):
 
 ##### Example:
 ```
-meraki organizations updateOrganizationSaml --organizationId 'STRING'
+meraki organizations updateOrganizationSaml --organizationId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
 
@@ -2088,7 +2088,7 @@ def updateOrganizationSamlIdp(organizationId: str, idpId: str, **kwargs):
 
 ##### Example:
 ```
-meraki organizations updateOrganizationSamlIdp --organizationId 'STRING' --idpId 'STRING'
+meraki organizations updateOrganizationSamlIdp --organizationId 'STRING' --idpId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
 
@@ -2115,7 +2115,7 @@ def updateOrganizationSamlRole(organizationId: str, samlRoleId: str, **kwargs):
 
 ##### Example:
 ```
-meraki organizations updateOrganizationSamlRole --organizationId 'STRING' --samlRoleId 'STRING'
+meraki organizations updateOrganizationSamlRole --organizationId 'STRING' --samlRoleId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
 
@@ -2144,7 +2144,7 @@ def updateOrganizationSnmp(organizationId: str, **kwargs):
 
 ##### Example:
 ```
-meraki organizations updateOrganizationSnmp --organizationId 'STRING'
+meraki organizations updateOrganizationSnmp --organizationId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
 
@@ -2174,7 +2174,7 @@ def bindNetwork(networkId: str, configTemplateId: str, **kwargs):
 
 ##### Example:
 ```
-meraki networks bindNetwork --networkId 'STRING' --configTemplateId 'STRING'
+meraki networks bindNetwork --networkId 'STRING' --configTemplateId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
 
@@ -2226,7 +2226,7 @@ def createNetworkFloorPlan(networkId: str, name: str, imageContents: str, **kwar
 
 ##### Example:
 ```
-meraki networks createNetworkFloorPlan --networkId 'STRING' --name 'STRING' --imageContents 'STRING'
+meraki networks createNetworkFloorPlan --networkId 'STRING' --name 'STRING' --imageContents 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
 
@@ -2259,7 +2259,7 @@ def createNetworkGroupPolicy(networkId: str, name: str, **kwargs):
 
 ##### Example:
 ```
-meraki networks createNetworkGroupPolicy --networkId 'STRING' --name 'STRING'
+meraki networks createNetworkGroupPolicy --networkId 'STRING' --name 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
 
@@ -2287,7 +2287,7 @@ def createNetworkMerakiAuthUser(networkId: str, email: str, name: str, password:
 
 ##### Example:
 ```
-meraki networks createNetworkMerakiAuthUser --networkId 'STRING' --email 'STRING' --name 'STRING' --password 'STRING' --authorizations ITEM
+meraki networks createNetworkMerakiAuthUser --networkId 'STRING' --email 'STRING' --name 'STRING' --password 'STRING' --authorizations ITEM --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
 
@@ -2341,7 +2341,7 @@ def createNetworkPiiRequest(networkId: str, **kwargs):
 
 ##### Example:
 ```
-meraki networks createNetworkPiiRequest --networkId 'STRING'
+meraki networks createNetworkPiiRequest --networkId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
 
@@ -2366,7 +2366,7 @@ def createNetworkWebhooksHttpServer(networkId: str, name: str, url: str, **kwarg
 
 ##### Example:
 ```
-meraki networks createNetworkWebhooksHttpServer --networkId 'STRING' --name 'STRING' --url 'STRING'
+meraki networks createNetworkWebhooksHttpServer --networkId 'STRING' --name 'STRING' --url 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
 
@@ -2390,7 +2390,7 @@ def createNetworkWebhooksWebhookTest(networkId: str, url: str, **kwargs):
 
 ##### Example:
 ```
-meraki networks createNetworkWebhooksWebhookTest --networkId 'STRING' --url 'STRING'
+meraki networks createNetworkWebhooksWebhookTest --networkId 'STRING' --url 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
 
@@ -2619,7 +2619,7 @@ def getNetworkBluetoothClient(networkId: str, bluetoothClientId: str, **kwargs):
 
 ##### Example:
 ```
-meraki networks getNetworkBluetoothClient --networkId 'STRING' --bluetoothClientId 'STRING'
+meraki networks getNetworkBluetoothClient --networkId 'STRING' --bluetoothClientId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
 
@@ -2649,7 +2649,7 @@ def getNetworkBluetoothClients(networkId: str, total_pages=1, direction='next', 
 
 ##### Example:
 ```
-meraki networks getNetworkBluetoothClients --networkId 'STRING'
+meraki networks getNetworkBluetoothClients --networkId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
 
@@ -2746,7 +2746,7 @@ def getNetworkClientTrafficHistory(networkId: str, clientId: str, total_pages=1,
 
 ##### Example:
 ```
-meraki networks getNetworkClientTrafficHistory --networkId 'STRING' --clientId 'STRING'
+meraki networks getNetworkClientTrafficHistory --networkId 'STRING' --clientId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
 
@@ -2798,7 +2798,7 @@ def getNetworkClients(networkId: str, total_pages=1, direction='next', **kwargs)
 
 ##### Example:
 ```
-meraki networks getNetworkClients --networkId 'STRING'
+meraki networks getNetworkClients --networkId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
 
@@ -2830,7 +2830,7 @@ def getNetworkClientsApplicationUsage(networkID: str, clients: str, total_pages=
 
 ##### Example:
 ```
-meraki networks getNetworkClientsApplicationUsage --networkID 'STRING' --clients 'STRING'
+meraki networks getNetworkClientsApplicationUsage --networkID 'STRING' --clients 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
 
@@ -2862,7 +2862,7 @@ def getNetworkClientsUsageHistories(networkID: str, clients: str, total_pages=1,
 
 ##### Example:
 ```
-meraki networks getNetworkClientsUsageHistories --networkID 'STRING' --clients 'STRING'
+meraki networks getNetworkClientsUsageHistories --networkID 'STRING' --clients 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
 
@@ -2923,7 +2923,7 @@ def getNetworkEvents(networkId: str, total_pages=1, direction='prev', event_log_
 
 ##### Example:
 ```
-meraki networks getNetworkEvents --networkId 'STRING'
+meraki networks getNetworkEvents --networkId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
 
@@ -3200,7 +3200,7 @@ def getNetworkNetworkHealthChannelUtilization(networkId: str, total_pages=1, dir
 
 ##### Example:
 ```
-meraki networks getNetworkNetworkHealthChannelUtilization --networkId 'STRING'
+meraki networks getNetworkNetworkHealthChannelUtilization --networkId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
 
@@ -3228,7 +3228,7 @@ def getNetworkPiiPiiKeys(networkId: str, **kwargs):
 
 ##### Example:
 ```
-meraki networks getNetworkPiiPiiKeys --networkId 'STRING'
+meraki networks getNetworkPiiPiiKeys --networkId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
 
@@ -3301,7 +3301,7 @@ def getNetworkPiiSmDevicesForKey(networkId: str, **kwargs):
 
 ##### Example:
 ```
-meraki networks getNetworkPiiSmDevicesForKey --networkId 'STRING'
+meraki networks getNetworkPiiSmDevicesForKey --networkId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
 
@@ -3329,7 +3329,7 @@ def getNetworkPiiSmOwnersForKey(networkId: str, **kwargs):
 
 ##### Example:
 ```
-meraki networks getNetworkPiiSmOwnersForKey --networkId 'STRING'
+meraki networks getNetworkPiiSmOwnersForKey --networkId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
 
@@ -3398,7 +3398,7 @@ def getNetworkSplashLoginAttempts(networkId: str, **kwargs):
 
 ##### Example:
 ```
-meraki networks getNetworkSplashLoginAttempts --networkId 'STRING'
+meraki networks getNetworkSplashLoginAttempts --networkId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
 
@@ -3445,7 +3445,7 @@ def getNetworkTraffic(networkId: str, **kwargs):
 
 ##### Example:
 ```
-meraki networks getNetworkTraffic --networkId 'STRING'
+meraki networks getNetworkTraffic --networkId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
 
@@ -3606,7 +3606,7 @@ def provisionNetworkClients(networkId: str, clients: list, devicePolicy: str, **
 
 ##### Example:
 ```
-meraki networks provisionNetworkClients --networkId 'STRING' --clients ITEM --devicePolicy 'STRING'
+meraki networks provisionNetworkClients --networkId 'STRING' --clients ITEM --devicePolicy 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
 
@@ -3699,7 +3699,7 @@ def updateNetwork(networkId: str, **kwargs):
 
 ##### Example:
 ```
-meraki networks updateNetwork --networkId 'STRING'
+meraki networks updateNetwork --networkId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
 
@@ -3723,7 +3723,7 @@ def updateNetworkAlertsSettings(networkId: str, **kwargs):
 
 ##### Example:
 ```
-meraki networks updateNetworkAlertsSettings --networkId 'STRING'
+meraki networks updateNetworkAlertsSettings --networkId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
 
@@ -3748,7 +3748,7 @@ def updateNetworkClientPolicy(networkId: str, clientId: str, devicePolicy: str, 
 
 ##### Example:
 ```
-meraki networks updateNetworkClientPolicy --networkId 'STRING' --clientId 'STRING' --devicePolicy 'STRING'
+meraki networks updateNetworkClientPolicy --networkId 'STRING' --clientId 'STRING' --devicePolicy 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
 
@@ -3795,7 +3795,7 @@ def updateNetworkFirmwareUpgrades(networkId: str, **kwargs):
 
 ##### Example:
 ```
-meraki networks updateNetworkFirmwareUpgrades --networkId 'STRING'
+meraki networks updateNetworkFirmwareUpgrades --networkId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
 
@@ -3825,7 +3825,7 @@ def updateNetworkFloorPlan(networkId: str, floorPlanId: str, **kwargs):
 
 ##### Example:
 ```
-meraki networks updateNetworkFloorPlan --networkId 'STRING' --floorPlanId 'STRING'
+meraki networks updateNetworkFloorPlan --networkId 'STRING' --floorPlanId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
 
@@ -3859,7 +3859,7 @@ def updateNetworkGroupPolicy(networkId: str, groupPolicyId: str, **kwargs):
 
 ##### Example:
 ```
-meraki networks updateNetworkGroupPolicy --networkId 'STRING' --groupPolicyId 'STRING'
+meraki networks updateNetworkGroupPolicy --networkId 'STRING' --groupPolicyId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
 
@@ -3886,7 +3886,7 @@ def updateNetworkMerakiAuthUser(networkId: str, merakiAuthUserId: str, **kwargs)
 
 ##### Example:
 ```
-meraki networks updateNetworkMerakiAuthUser --networkId 'STRING' --merakiAuthUserId 'STRING'
+meraki networks updateNetworkMerakiAuthUser --networkId 'STRING' --merakiAuthUserId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
 
@@ -3912,7 +3912,7 @@ def updateNetworkMqttBroker(networkId: str, mqttBrokerId: str, **kwargs):
 
 ##### Example:
 ```
-meraki networks updateNetworkMqttBroker --networkId 'STRING' --mqttBrokerId 'STRING'
+meraki networks updateNetworkMqttBroker --networkId 'STRING' --mqttBrokerId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
 
@@ -3937,7 +3937,7 @@ def updateNetworkNetflow(networkId: str, **kwargs):
 
 ##### Example:
 ```
-meraki networks updateNetworkNetflow --networkId 'STRING'
+meraki networks updateNetworkNetflow --networkId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
 
@@ -3961,7 +3961,7 @@ def updateNetworkSettings(networkId: str, **kwargs):
 
 ##### Example:
 ```
-meraki networks updateNetworkSettings --networkId 'STRING'
+meraki networks updateNetworkSettings --networkId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
 
@@ -3986,7 +3986,7 @@ def updateNetworkSnmp(networkId: str, **kwargs):
 
 ##### Example:
 ```
-meraki networks updateNetworkSnmp --networkId 'STRING'
+meraki networks updateNetworkSnmp --networkId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
 
@@ -4035,7 +4035,7 @@ def updateNetworkTrafficAnalysis(networkId: str, **kwargs):
 
 ##### Example:
 ```
-meraki networks updateNetworkTrafficAnalysis --networkId 'STRING'
+meraki networks updateNetworkTrafficAnalysis --networkId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
 
@@ -4061,7 +4061,7 @@ def updateNetworkWebhooksHttpServer(networkId: str, httpServerId: str, **kwargs)
 
 ##### Example:
 ```
-meraki networks updateNetworkWebhooksHttpServer --networkId 'STRING' --httpServerId 'STRING'
+meraki networks updateNetworkWebhooksHttpServer --networkId 'STRING' --httpServerId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
 
@@ -4092,7 +4092,7 @@ def blinkDeviceLeds(serial: str, **kwargs):
 
 ##### Example:
 ```
-meraki devices blinkDeviceLeds --serial 'STRING'
+meraki devices blinkDeviceLeds --serial 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
 
@@ -4138,7 +4138,7 @@ def getDeviceClients(serial: str, **kwargs):
 
 ##### Example:
 ```
-meraki devices getDeviceClients --serial 'STRING'
+meraki devices getDeviceClients --serial 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
 
@@ -4188,7 +4188,7 @@ def getDeviceLossAndLatencyHistory(serial: str, ip: str, **kwargs):
 
 ##### Example:
 ```
-meraki devices getDeviceLossAndLatencyHistory --serial 'STRING' --ip 'STRING'
+meraki devices getDeviceLossAndLatencyHistory --serial 'STRING' --ip 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
 
@@ -4263,7 +4263,7 @@ def updateDevice(serial: str, **kwargs):
 
 ##### Example:
 ```
-meraki devices updateDevice --serial 'STRING'
+meraki devices updateDevice --serial 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
 
@@ -4287,7 +4287,7 @@ def updateDeviceManagementInterface(serial: str, **kwargs):
 
 ##### Example:
 ```
-meraki devices updateDeviceManagementInterface --serial 'STRING'
+meraki devices updateDeviceManagementInterface --serial 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
 
@@ -4344,7 +4344,7 @@ def createNetworkApplianceTrafficShapingCustomPerformanceClass(networkId: str, n
 
 ##### Example:
 ```
-meraki appliance createNetworkApplianceTrafficShapingCustomPerformanceClass --networkId 'STRING' --name 'STRING'
+meraki appliance createNetworkApplianceTrafficShapingCustomPerformanceClass --networkId 'STRING' --name 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
 
@@ -4371,7 +4371,7 @@ def createNetworkApplianceVlan(networkId: str, id: str, name: str, **kwargs):
 
 ##### Example:
 ```
-meraki appliance createNetworkApplianceVlan --networkId 'STRING' --id 'STRING' --name 'STRING'
+meraki appliance createNetworkApplianceVlan --networkId 'STRING' --id 'STRING' --name 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
 
@@ -4516,7 +4516,7 @@ def getNetworkApplianceClientSecurityEvents(networkId: str, clientId: str, total
 
 ##### Example:
 ```
-meraki appliance getNetworkApplianceClientSecurityEvents --networkId 'STRING' --clientId 'STRING'
+meraki appliance getNetworkApplianceClientSecurityEvents --networkId 'STRING' --clientId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
 
@@ -4879,7 +4879,7 @@ def getNetworkApplianceSecurityEvents(networkId: str, total_pages=1, direction='
 
 ##### Example:
 ```
-meraki appliance getNetworkApplianceSecurityEvents --networkId 'STRING'
+meraki appliance getNetworkApplianceSecurityEvents --networkId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
 
@@ -5309,7 +5309,7 @@ def getOrganizationApplianceSecurityEvents(organizationId: str, total_pages=1, d
 
 ##### Example:
 ```
-meraki appliance getOrganizationApplianceSecurityEvents --organizationId 'STRING'
+meraki appliance getOrganizationApplianceSecurityEvents --organizationId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
 
@@ -5361,7 +5361,7 @@ def getOrganizationApplianceUplinkStatuses(organizationId: str, total_pages=1, d
 
 ##### Example:
 ```
-meraki appliance getOrganizationApplianceUplinkStatuses --organizationId 'STRING'
+meraki appliance getOrganizationApplianceUplinkStatuses --organizationId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
 
@@ -5392,7 +5392,7 @@ def getOrganizationApplianceVpnStats(organizationId: str, total_pages=1, directi
 
 ##### Example:
 ```
-meraki appliance getOrganizationApplianceVpnStats --organizationId 'STRING'
+meraki appliance getOrganizationApplianceVpnStats --organizationId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
 
@@ -5420,7 +5420,7 @@ def getOrganizationApplianceVpnStatuses(organizationId: str, total_pages=1, dire
 
 ##### Example:
 ```
-meraki appliance getOrganizationApplianceVpnStatuses --organizationId 'STRING'
+meraki appliance getOrganizationApplianceVpnStatuses --organizationId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
 
@@ -5509,7 +5509,7 @@ def updateNetworkApplianceConnectivityMonitoringDestinations(networkId: str, **k
 
 ##### Example:
 ```
-meraki appliance updateNetworkApplianceConnectivityMonitoringDestinations --networkId 'STRING'
+meraki appliance updateNetworkApplianceConnectivityMonitoringDestinations --networkId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
 
@@ -5535,7 +5535,7 @@ def updateNetworkApplianceContentFiltering(networkId: str, **kwargs):
 
 ##### Example:
 ```
-meraki appliance updateNetworkApplianceContentFiltering --networkId 'STRING'
+meraki appliance updateNetworkApplianceContentFiltering --networkId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
 
@@ -5558,7 +5558,7 @@ def updateNetworkApplianceFirewallCellularFirewallRules(networkId: str, **kwargs
 
 ##### Example:
 ```
-meraki appliance updateNetworkApplianceFirewallCellularFirewallRules --networkId 'STRING'
+meraki appliance updateNetworkApplianceFirewallCellularFirewallRules --networkId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
 
@@ -5583,7 +5583,7 @@ def updateNetworkApplianceFirewallFirewalledService(networkId: str, service: str
 
 ##### Example:
 ```
-meraki appliance updateNetworkApplianceFirewallFirewalledService --networkId 'STRING' --service 'STRING' --access 'STRING'
+meraki appliance updateNetworkApplianceFirewallFirewalledService --networkId 'STRING' --service 'STRING' --access 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
 
@@ -5607,7 +5607,7 @@ def updateNetworkApplianceFirewallInboundFirewallRules(networkId: str, **kwargs)
 
 ##### Example:
 ```
-meraki appliance updateNetworkApplianceFirewallInboundFirewallRules --networkId 'STRING'
+meraki appliance updateNetworkApplianceFirewallInboundFirewallRules --networkId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
 
@@ -5631,7 +5631,7 @@ def updateNetworkApplianceFirewallL3FirewallRules(networkId: str, **kwargs):
 
 ##### Example:
 ```
-meraki appliance updateNetworkApplianceFirewallL3FirewallRules --networkId 'STRING'
+meraki appliance updateNetworkApplianceFirewallL3FirewallRules --networkId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
 
@@ -5654,7 +5654,7 @@ def updateNetworkApplianceFirewallL7FirewallRules(networkId: str, **kwargs):
 
 ##### Example:
 ```
-meraki appliance updateNetworkApplianceFirewallL7FirewallRules --networkId 'STRING'
+meraki appliance updateNetworkApplianceFirewallL7FirewallRules --networkId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
 
@@ -5752,7 +5752,7 @@ def updateNetworkAppliancePort(networkId: str, portId: str, **kwargs):
 
 ##### Example:
 ```
-meraki appliance updateNetworkAppliancePort --networkId 'STRING' --portId 'STRING'
+meraki appliance updateNetworkAppliancePort --networkId 'STRING' --portId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
 
@@ -5777,7 +5777,7 @@ def updateNetworkApplianceSecurityIntrusion(networkId: str, **kwargs):
 
 ##### Example:
 ```
-meraki appliance updateNetworkApplianceSecurityIntrusion --networkId 'STRING'
+meraki appliance updateNetworkApplianceSecurityIntrusion --networkId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
 
@@ -5802,7 +5802,7 @@ def updateNetworkApplianceSecurityMalware(networkId: str, mode: str, **kwargs):
 
 ##### Example:
 ```
-meraki appliance updateNetworkApplianceSecurityMalware --networkId 'STRING' --mode 'STRING'
+meraki appliance updateNetworkApplianceSecurityMalware --networkId 'STRING' --mode 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
 
@@ -5826,7 +5826,7 @@ def updateNetworkApplianceSingleLan(networkId: str, **kwargs):
 
 ##### Example:
 ```
-meraki appliance updateNetworkApplianceSingleLan --networkId 'STRING'
+meraki appliance updateNetworkApplianceSingleLan --networkId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
 
@@ -5855,7 +5855,7 @@ def updateNetworkApplianceStaticRoute(networkId: str, staticRouteId: str, **kwar
 
 ##### Example:
 ```
-meraki appliance updateNetworkApplianceStaticRoute --networkId 'STRING' --staticRouteId 'STRING'
+meraki appliance updateNetworkApplianceStaticRoute --networkId 'STRING' --staticRouteId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
 
@@ -5878,7 +5878,7 @@ def updateNetworkApplianceTrafficShaping(networkId: str, **kwargs):
 
 ##### Example:
 ```
-meraki appliance updateNetworkApplianceTrafficShaping --networkId 'STRING'
+meraki appliance updateNetworkApplianceTrafficShaping --networkId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
 
@@ -5905,7 +5905,7 @@ def updateNetworkApplianceTrafficShapingCustomPerformanceClass(networkId: str, c
 
 ##### Example:
 ```
-meraki appliance updateNetworkApplianceTrafficShapingCustomPerformanceClass --networkId 'STRING' --customPerformanceClassId 'STRING'
+meraki appliance updateNetworkApplianceTrafficShapingCustomPerformanceClass --networkId 'STRING' --customPerformanceClassId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
 
@@ -5932,7 +5932,7 @@ def updateNetworkApplianceTrafficShapingRules(networkId: str, **kwargs):
 
 ##### Example:
 ```
-meraki appliance updateNetworkApplianceTrafficShapingRules --networkId 'STRING'
+meraki appliance updateNetworkApplianceTrafficShapingRules --networkId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
 
@@ -5955,7 +5955,7 @@ def updateNetworkApplianceTrafficShapingUplinkBandwidth(networkId: str, **kwargs
 
 ##### Example:
 ```
-meraki appliance updateNetworkApplianceTrafficShapingUplinkBandwidth --networkId 'STRING'
+meraki appliance updateNetworkApplianceTrafficShapingUplinkBandwidth --networkId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
 
@@ -5982,7 +5982,7 @@ def updateNetworkApplianceTrafficShapingUplinkSelection(networkId: str, **kwargs
 
 ##### Example:
 ```
-meraki appliance updateNetworkApplianceTrafficShapingUplinkSelection --networkId 'STRING'
+meraki appliance updateNetworkApplianceTrafficShapingUplinkSelection --networkId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
 
@@ -6020,7 +6020,7 @@ def updateNetworkApplianceVlan(networkId: str, vlanId: str, **kwargs):
 
 ##### Example:
 ```
-meraki appliance updateNetworkApplianceVlan --networkId 'STRING' --vlanId 'STRING'
+meraki appliance updateNetworkApplianceVlan --networkId 'STRING' --vlanId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
 
@@ -6043,7 +6043,7 @@ def updateNetworkApplianceVlansSettings(networkId: str, **kwargs):
 
 ##### Example:
 ```
-meraki appliance updateNetworkApplianceVlansSettings --networkId 'STRING'
+meraki appliance updateNetworkApplianceVlansSettings --networkId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
 
@@ -6069,7 +6069,7 @@ def updateNetworkApplianceVpnBgp(networkId: str, enabled: bool, **kwargs):
 
 ##### Example:
 ```
-meraki appliance updateNetworkApplianceVpnBgp --networkId 'STRING' --enabled
+meraki appliance updateNetworkApplianceVpnBgp --networkId 'STRING' --enabled --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
 
@@ -6094,7 +6094,7 @@ def updateNetworkApplianceVpnSiteToSiteVpn(networkId: str, mode: str, **kwargs):
 
 ##### Example:
 ```
-meraki appliance updateNetworkApplianceVpnSiteToSiteVpn --networkId 'STRING' --mode 'STRING'
+meraki appliance updateNetworkApplianceVpnSiteToSiteVpn --networkId 'STRING' --mode 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
 
@@ -6121,7 +6121,7 @@ def updateNetworkApplianceWarmSpare(networkId: str, enabled: bool, **kwargs):
 
 ##### Example:
 ```
-meraki appliance updateNetworkApplianceWarmSpare --networkId 'STRING' --enabled
+meraki appliance updateNetworkApplianceWarmSpare --networkId 'STRING' --enabled --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
 
@@ -6191,7 +6191,7 @@ def updateOrganizationApplianceVpnVpnFirewallRules(organizationId: str, **kwargs
 
 ##### Example:
 ```
-meraki appliance updateOrganizationApplianceVpnVpnFirewallRules --organizationId 'STRING'
+meraki appliance updateOrganizationApplianceVpnVpnFirewallRules --organizationId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
 
@@ -6228,7 +6228,7 @@ def createNetworkCameraQualityRetentionProfile(networkId: str, name: str, **kwar
 
 ##### Example:
 ```
-meraki camera createNetworkCameraQualityRetentionProfile --networkId 'STRING' --name 'STRING'
+meraki camera createNetworkCameraQualityRetentionProfile --networkId 'STRING' --name 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
 
@@ -6275,7 +6275,7 @@ def generateDeviceCameraSnapshot(serial: str, **kwargs):
 
 ##### Example:
 ```
-meraki camera generateDeviceCameraSnapshot --serial 'STRING'
+meraki camera generateDeviceCameraSnapshot --serial 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
 
@@ -6323,7 +6323,7 @@ def getDeviceCameraAnalyticsOverview(serial: str, **kwargs):
 
 ##### Example:
 ```
-meraki camera getDeviceCameraAnalyticsOverview --serial 'STRING'
+meraki camera getDeviceCameraAnalyticsOverview --serial 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
 
@@ -6346,7 +6346,7 @@ def getDeviceCameraAnalyticsRecent(serial: str, **kwargs):
 
 ##### Example:
 ```
-meraki camera getDeviceCameraAnalyticsRecent --serial 'STRING'
+meraki camera getDeviceCameraAnalyticsRecent --serial 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
 
@@ -6374,7 +6374,7 @@ def getDeviceCameraAnalyticsZoneHistory(serial: str, zoneId: str, **kwargs):
 
 ##### Example:
 ```
-meraki camera getDeviceCameraAnalyticsZoneHistory --serial 'STRING' --zoneId 'STRING'
+meraki camera getDeviceCameraAnalyticsZoneHistory --serial 'STRING' --zoneId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
 
@@ -6485,7 +6485,7 @@ def getDeviceCameraVideoLink(serial: str, **kwargs):
 
 ##### Example:
 ```
-meraki camera getDeviceCameraVideoLink --serial 'STRING'
+meraki camera getDeviceCameraVideoLink --serial 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
 
@@ -6603,7 +6603,7 @@ def updateDeviceCameraQualityAndRetention(serial: str, **kwargs):
 
 ##### Example:
 ```
-meraki camera updateDeviceCameraQualityAndRetention --serial 'STRING'
+meraki camera updateDeviceCameraQualityAndRetention --serial 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
 
@@ -6628,7 +6628,7 @@ def updateDeviceCameraSense(serial: str, **kwargs):
 
 ##### Example:
 ```
-meraki camera updateDeviceCameraSense --serial 'STRING'
+meraki camera updateDeviceCameraSense --serial 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
 
@@ -6651,7 +6651,7 @@ def updateDeviceCameraVideoSettings(serial: str, **kwargs):
 
 ##### Example:
 ```
-meraki camera updateDeviceCameraVideoSettings --serial 'STRING'
+meraki camera updateDeviceCameraVideoSettings --serial 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
 
@@ -6683,7 +6683,7 @@ def updateNetworkCameraQualityRetentionProfile(networkId: str, qualityRetentionP
 
 ##### Example:
 ```
-meraki camera updateNetworkCameraQualityRetentionProfile --networkId 'STRING' --qualityRetentionProfileId 'STRING'
+meraki camera updateNetworkCameraQualityRetentionProfile --networkId 'STRING' --qualityRetentionProfileId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
 
@@ -6851,7 +6851,7 @@ def getOrganizationCellularGatewayUplinkStatuses(organizationId: str, total_page
 
 ##### Example:
 ```
-meraki cellularGateway getOrganizationCellularGatewayUplinkStatuses --organizationId 'STRING'
+meraki cellularGateway getOrganizationCellularGatewayUplinkStatuses --organizationId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
 
@@ -6875,7 +6875,7 @@ def updateDeviceCellularGatewayLan(serial: str, **kwargs):
 
 ##### Example:
 ```
-meraki cellularGateway updateDeviceCellularGatewayLan --serial 'STRING'
+meraki cellularGateway updateDeviceCellularGatewayLan --serial 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
 
@@ -6898,7 +6898,7 @@ def updateDeviceCellularGatewayPortForwardingRules(serial: str, **kwargs):
 
 ##### Example:
 ```
-meraki cellularGateway updateDeviceCellularGatewayPortForwardingRules --serial 'STRING'
+meraki cellularGateway updateDeviceCellularGatewayPortForwardingRules --serial 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
 
@@ -6921,7 +6921,7 @@ def updateNetworkCellularGatewayConnectivityMonitoringDestinations(networkId: st
 
 ##### Example:
 ```
-meraki cellularGateway updateNetworkCellularGatewayConnectivityMonitoringDestinations --networkId 'STRING'
+meraki cellularGateway updateNetworkCellularGatewayConnectivityMonitoringDestinations --networkId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
 
@@ -6946,7 +6946,7 @@ def updateNetworkCellularGatewayDhcp(networkId: str, **kwargs):
 
 ##### Example:
 ```
-meraki cellularGateway updateNetworkCellularGatewayDhcp --networkId 'STRING'
+meraki cellularGateway updateNetworkCellularGatewayDhcp --networkId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
 
@@ -6970,7 +6970,7 @@ def updateNetworkCellularGatewaySubnetPool(networkId: str, **kwargs):
 
 ##### Example:
 ```
-meraki cellularGateway updateNetworkCellularGatewaySubnetPool --networkId 'STRING'
+meraki cellularGateway updateNetworkCellularGatewaySubnetPool --networkId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
 
@@ -6993,7 +6993,7 @@ def updateNetworkCellularGatewayUplink(networkId: str, **kwargs):
 
 ##### Example:
 ```
-meraki cellularGateway updateNetworkCellularGatewayUplink --networkId 'STRING'
+meraki cellularGateway updateNetworkCellularGatewayUplink --networkId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
 
@@ -7024,7 +7024,7 @@ def createOrganizationInsightMonitoredMediaServer(organizationId: str, name: str
 
 ##### Example:
 ```
-meraki insight createOrganizationInsightMonitoredMediaServer --organizationId 'STRING' --name 'STRING' --address 'STRING'
+meraki insight createOrganizationInsightMonitoredMediaServer --organizationId 'STRING' --name 'STRING' --address 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
 
@@ -7118,7 +7118,7 @@ def updateOrganizationInsightMonitoredMediaServer(organizationId: str, monitored
 
 ##### Example:
 ```
-meraki insight updateOrganizationInsightMonitoredMediaServer --organizationId 'STRING' --monitoredMediaServerId 'STRING'
+meraki insight updateOrganizationInsightMonitoredMediaServer --organizationId 'STRING' --monitoredMediaServerId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
 
@@ -7150,7 +7150,7 @@ def checkinNetworkSmDevices(networkId: str, **kwargs):
 
 ##### Example:
 ```
-meraki sm checkinNetworkSmDevices --networkId 'STRING'
+meraki sm checkinNetworkSmDevices --networkId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
 
@@ -7197,7 +7197,7 @@ def createNetworkSmTargetGroup(networkId: str, **kwargs):
 
 ##### Example:
 ```
-meraki sm createNetworkSmTargetGroup --networkId 'STRING'
+meraki sm createNetworkSmTargetGroup --networkId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
 
@@ -7340,7 +7340,7 @@ def getNetworkSmDeviceConnectivity(networkId: str, deviceId: str, total_pages=1,
 
 ##### Example:
 ```
-meraki sm getNetworkSmDeviceConnectivity --networkId 'STRING' --deviceId 'STRING'
+meraki sm getNetworkSmDeviceConnectivity --networkId 'STRING' --deviceId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
 
@@ -7368,7 +7368,7 @@ def getNetworkSmDeviceDesktopLogs(networkId: str, deviceId: str, total_pages=1, 
 
 ##### Example:
 ```
-meraki sm getNetworkSmDeviceDesktopLogs --networkId 'STRING' --deviceId 'STRING'
+meraki sm getNetworkSmDeviceDesktopLogs --networkId 'STRING' --deviceId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
 
@@ -7396,7 +7396,7 @@ def getNetworkSmDeviceDeviceCommandLogs(networkId: str, deviceId: str, total_pag
 
 ##### Example:
 ```
-meraki sm getNetworkSmDeviceDeviceCommandLogs --networkId 'STRING' --deviceId 'STRING'
+meraki sm getNetworkSmDeviceDeviceCommandLogs --networkId 'STRING' --deviceId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
 
@@ -7470,7 +7470,7 @@ def getNetworkSmDevicePerformanceHistory(networkId: str, deviceId: str, total_pa
 
 ##### Example:
 ```
-meraki sm getNetworkSmDevicePerformanceHistory --networkId 'STRING' --deviceId 'STRING'
+meraki sm getNetworkSmDevicePerformanceHistory --networkId 'STRING' --deviceId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
 
@@ -7600,7 +7600,7 @@ def getNetworkSmDevices(networkId: str, total_pages=1, direction='next', **kwarg
 
 ##### Example:
 ```
-meraki sm getNetworkSmDevices --networkId 'STRING'
+meraki sm getNetworkSmDevices --networkId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
 
@@ -7646,7 +7646,7 @@ def getNetworkSmTargetGroup(networkId: str, targetGroupId: str, **kwargs):
 
 ##### Example:
 ```
-meraki sm getNetworkSmTargetGroup --networkId 'STRING' --targetGroupId 'STRING'
+meraki sm getNetworkSmTargetGroup --networkId 'STRING' --targetGroupId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
 
@@ -7669,7 +7669,7 @@ def getNetworkSmTargetGroups(networkId: str, **kwargs):
 
 ##### Example:
 ```
-meraki sm getNetworkSmTargetGroups --networkId 'STRING'
+meraki sm getNetworkSmTargetGroups --networkId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
 
@@ -7696,7 +7696,7 @@ def getNetworkSmUserAccessDevices(networkId: str, total_pages=1, direction='next
 
 ##### Example:
 ```
-meraki sm getNetworkSmUserAccessDevices --networkId 'STRING'
+meraki sm getNetworkSmUserAccessDevices --networkId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
 
@@ -7768,7 +7768,7 @@ def getNetworkSmUsers(networkId: str, **kwargs):
 
 ##### Example:
 ```
-meraki sm getNetworkSmUsers --networkId 'STRING'
+meraki sm getNetworkSmUsers --networkId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
 
@@ -7862,7 +7862,7 @@ def lockNetworkSmDevices(networkId: str, **kwargs):
 
 ##### Example:
 ```
-meraki sm lockNetworkSmDevices --networkId 'STRING'
+meraki sm lockNetworkSmDevices --networkId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
 
@@ -7890,7 +7890,7 @@ def modifyNetworkSmDevicesTags(networkId: str, tags: list, updateAction: str, **
 
 ##### Example:
 ```
-meraki sm modifyNetworkSmDevicesTags --networkId 'STRING' --tags ITEM --updateAction 'STRING'
+meraki sm modifyNetworkSmDevicesTags --networkId 'STRING' --tags ITEM --updateAction 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
 
@@ -7917,7 +7917,7 @@ def moveNetworkSmDevices(networkId: str, newNetwork: str, **kwargs):
 
 ##### Example:
 ```
-meraki sm moveNetworkSmDevices --networkId 'STRING' --newNetwork 'STRING'
+meraki sm moveNetworkSmDevices --networkId 'STRING' --newNetwork 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
 
@@ -7989,7 +7989,7 @@ def updateNetworkSmDevicesFields(networkId: str, deviceFields: dict, **kwargs):
 
 ##### Example:
 ```
-meraki sm updateNetworkSmDevicesFields --networkId 'STRING' --deviceFields JSON_STRING
+meraki sm updateNetworkSmDevicesFields --networkId 'STRING' --deviceFields JSON_STRING --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
 
@@ -8014,7 +8014,7 @@ def updateNetworkSmTargetGroup(networkId: str, targetGroupId: str, **kwargs):
 
 ##### Example:
 ```
-meraki sm updateNetworkSmTargetGroup --networkId 'STRING' --targetGroupId 'STRING'
+meraki sm updateNetworkSmTargetGroup --networkId 'STRING' --targetGroupId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
 
@@ -8040,7 +8040,7 @@ def wipeNetworkSmDevices(networkId: str, **kwargs):
 
 ##### Example:
 ```
-meraki sm wipeNetworkSmDevices --networkId 'STRING'
+meraki sm wipeNetworkSmDevices --networkId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
 
@@ -8123,7 +8123,7 @@ def createDeviceSwitchRoutingInterface(serial: str, name: str, interfaceIp: str,
 
 ##### Example:
 ```
-meraki switch createDeviceSwitchRoutingInterface --serial 'STRING' --name 'STRING' --interfaceIp 'STRING' --vlanId INT
+meraki switch createDeviceSwitchRoutingInterface --serial 'STRING' --name 'STRING' --interfaceIp 'STRING' --vlanId INT --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
 
@@ -8150,7 +8150,7 @@ def createDeviceSwitchRoutingStaticRoute(serial: str, subnet: str, nextHopIp: st
 
 ##### Example:
 ```
-meraki switch createDeviceSwitchRoutingStaticRoute --serial 'STRING' --subnet 'STRING' --nextHopIp 'STRING'
+meraki switch createDeviceSwitchRoutingStaticRoute --serial 'STRING' --subnet 'STRING' --nextHopIp 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
 
@@ -8185,7 +8185,7 @@ def createNetworkSwitchAccessPolicy(networkId: str, name: str, radiusServers: li
 
 ##### Example:
 ```
-meraki switch createNetworkSwitchAccessPolicy --networkId 'STRING' --name 'STRING' --radiusServers ITEM --radiusTestingEnabled --radiusCoaSupportEnabled --radiusAccountingEnabled --hostMode 'STRING' --urlRedirectWalledGardenEnabled
+meraki switch createNetworkSwitchAccessPolicy --networkId 'STRING' --name 'STRING' --radiusServers ITEM --radiusTestingEnabled --radiusCoaSupportEnabled --radiusAccountingEnabled --hostMode 'STRING' --urlRedirectWalledGardenEnabled --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
 
@@ -8209,7 +8209,7 @@ def createNetworkSwitchLinkAggregation(networkId: str, **kwargs):
 
 ##### Example:
 ```
-meraki switch createNetworkSwitchLinkAggregation --networkId 'STRING'
+meraki switch createNetworkSwitchLinkAggregation --networkId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
 
@@ -8236,7 +8236,7 @@ def createNetworkSwitchPortSchedule(networkId: str, name: str, **kwargs):
 
 ##### Example:
 ```
-meraki switch createNetworkSwitchPortSchedule --networkId 'STRING' --name 'STRING'
+meraki switch createNetworkSwitchPortSchedule --networkId 'STRING' --name 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
 
@@ -8265,7 +8265,7 @@ def createNetworkSwitchQosRule(networkId: str, vlan: int, **kwargs):
 
 ##### Example:
 ```
-meraki switch createNetworkSwitchQosRule --networkId 'STRING' --vlan INT
+meraki switch createNetworkSwitchQosRule --networkId 'STRING' --vlan INT --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
 
@@ -8343,7 +8343,7 @@ def createNetworkSwitchStackRoutingInterface(networkId: str, switchStackId: str,
 
 ##### Example:
 ```
-meraki switch createNetworkSwitchStackRoutingInterface --networkId 'STRING' --switchStackId 'STRING' --name 'STRING' --subnet 'STRING' --interfaceIp 'STRING' --vlanId INT
+meraki switch createNetworkSwitchStackRoutingInterface --networkId 'STRING' --switchStackId 'STRING' --name 'STRING' --subnet 'STRING' --interfaceIp 'STRING' --vlanId INT --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
 
@@ -8371,7 +8371,7 @@ def createNetworkSwitchStackRoutingStaticRoute(networkId: str, switchStackId: st
 
 ##### Example:
 ```
-meraki switch createNetworkSwitchStackRoutingStaticRoute --networkId 'STRING' --switchStackId 'STRING' --subnet 'STRING' --nextHopIp 'STRING'
+meraki switch createNetworkSwitchStackRoutingStaticRoute --networkId 'STRING' --switchStackId 'STRING' --subnet 'STRING' --nextHopIp 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
 
@@ -8695,7 +8695,7 @@ def getDeviceSwitchPortsStatuses(serial: str, **kwargs):
 
 ##### Example:
 ```
-meraki switch getDeviceSwitchPortsStatuses --serial 'STRING'
+meraki switch getDeviceSwitchPortsStatuses --serial 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
 
@@ -8719,7 +8719,7 @@ def getDeviceSwitchPortsStatusesPackets(serial: str, **kwargs):
 
 ##### Example:
 ```
-meraki switch getDeviceSwitchPortsStatusesPackets --serial 'STRING'
+meraki switch getDeviceSwitchPortsStatusesPackets --serial 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
 
@@ -9556,7 +9556,7 @@ def updateDeviceSwitchPort(serial: str, portId: str, **kwargs):
 
 ##### Example:
 ```
-meraki switch updateDeviceSwitchPort --serial 'STRING' --portId 'STRING'
+meraki switch updateDeviceSwitchPort --serial 'STRING' --portId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
 
@@ -9585,7 +9585,7 @@ def updateDeviceSwitchRoutingInterface(serial: str, interfaceId: str, **kwargs):
 
 ##### Example:
 ```
-meraki switch updateDeviceSwitchRoutingInterface --serial 'STRING' --interfaceId 'STRING'
+meraki switch updateDeviceSwitchRoutingInterface --serial 'STRING' --interfaceId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
 
@@ -9619,7 +9619,7 @@ def updateDeviceSwitchRoutingInterfaceDhcp(serial: str, interfaceId: str, **kwar
 
 ##### Example:
 ```
-meraki switch updateDeviceSwitchRoutingInterfaceDhcp --serial 'STRING' --interfaceId 'STRING'
+meraki switch updateDeviceSwitchRoutingInterfaceDhcp --serial 'STRING' --interfaceId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
 
@@ -9647,7 +9647,7 @@ def updateDeviceSwitchRoutingStaticRoute(serial: str, staticRouteId: str, **kwar
 
 ##### Example:
 ```
-meraki switch updateDeviceSwitchRoutingStaticRoute --serial 'STRING' --staticRouteId 'STRING'
+meraki switch updateDeviceSwitchRoutingStaticRoute --serial 'STRING' --staticRouteId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
 
@@ -9671,7 +9671,7 @@ def updateDeviceSwitchWarmSpare(serial: str, enabled: bool, **kwargs):
 
 ##### Example:
 ```
-meraki switch updateDeviceSwitchWarmSpare --serial 'STRING' --enabled
+meraki switch updateDeviceSwitchWarmSpare --serial 'STRING' --enabled --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
 
@@ -9730,7 +9730,7 @@ def updateNetworkSwitchAccessPolicy(networkId: str, accessPolicyNumber: str, **k
 
 ##### Example:
 ```
-meraki switch updateNetworkSwitchAccessPolicy --networkId 'STRING' --accessPolicyNumber 'STRING'
+meraki switch updateNetworkSwitchAccessPolicy --networkId 'STRING' --accessPolicyNumber 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
 
@@ -9755,7 +9755,7 @@ def updateNetworkSwitchDhcpServerPolicy(networkId: str, **kwargs):
 
 ##### Example:
 ```
-meraki switch updateNetworkSwitchDhcpServerPolicy --networkId 'STRING'
+meraki switch updateNetworkSwitchDhcpServerPolicy --networkId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
 
@@ -9803,7 +9803,7 @@ def updateNetworkSwitchLinkAggregation(networkId: str, linkAggregationId: str, *
 
 ##### Example:
 ```
-meraki switch updateNetworkSwitchLinkAggregation --networkId 'STRING' --linkAggregationId 'STRING'
+meraki switch updateNetworkSwitchLinkAggregation --networkId 'STRING' --linkAggregationId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
 
@@ -9827,7 +9827,7 @@ def updateNetworkSwitchMtu(networkId: str, **kwargs):
 
 ##### Example:
 ```
-meraki switch updateNetworkSwitchMtu --networkId 'STRING'
+meraki switch updateNetworkSwitchMtu --networkId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
 
@@ -9855,7 +9855,7 @@ def updateNetworkSwitchPortSchedule(networkId: str, portScheduleId: str, **kwarg
 
 ##### Example:
 ```
-meraki switch updateNetworkSwitchPortSchedule --networkId 'STRING' --portScheduleId 'STRING'
+meraki switch updateNetworkSwitchPortSchedule --networkId 'STRING' --portScheduleId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
 
@@ -9885,7 +9885,7 @@ def updateNetworkSwitchQosRule(networkId: str, qosRuleId: str, **kwargs):
 
 ##### Example:
 ```
-meraki switch updateNetworkSwitchQosRule --networkId 'STRING' --qosRuleId 'STRING'
+meraki switch updateNetworkSwitchQosRule --networkId 'STRING' --qosRuleId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
 
@@ -9932,7 +9932,7 @@ def updateNetworkSwitchRoutingMulticast(networkId: str, **kwargs):
 
 ##### Example:
 ```
-meraki switch updateNetworkSwitchRoutingMulticast --networkId 'STRING'
+meraki switch updateNetworkSwitchRoutingMulticast --networkId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
 
@@ -9985,7 +9985,7 @@ def updateNetworkSwitchRoutingOspf(networkId: str, **kwargs):
 
 ##### Example:
 ```
-meraki switch updateNetworkSwitchRoutingOspf --networkId 'STRING'
+meraki switch updateNetworkSwitchRoutingOspf --networkId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
 
@@ -10010,7 +10010,7 @@ def updateNetworkSwitchSettings(networkId: str, **kwargs):
 
 ##### Example:
 ```
-meraki switch updateNetworkSwitchSettings --networkId 'STRING'
+meraki switch updateNetworkSwitchSettings --networkId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
 
@@ -10040,7 +10040,7 @@ def updateNetworkSwitchStackRoutingInterface(networkId: str, switchStackId: str,
 
 ##### Example:
 ```
-meraki switch updateNetworkSwitchStackRoutingInterface --networkId 'STRING' --switchStackId 'STRING' --interfaceId 'STRING'
+meraki switch updateNetworkSwitchStackRoutingInterface --networkId 'STRING' --switchStackId 'STRING' --interfaceId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
 
@@ -10075,7 +10075,7 @@ def updateNetworkSwitchStackRoutingInterfaceDhcp(networkId: str, switchStackId: 
 
 ##### Example:
 ```
-meraki switch updateNetworkSwitchStackRoutingInterfaceDhcp --networkId 'STRING' --switchStackId 'STRING' --interfaceId 'STRING'
+meraki switch updateNetworkSwitchStackRoutingInterfaceDhcp --networkId 'STRING' --switchStackId 'STRING' --interfaceId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
 
@@ -10104,7 +10104,7 @@ def updateNetworkSwitchStackRoutingStaticRoute(networkId: str, switchStackId: st
 
 ##### Example:
 ```
-meraki switch updateNetworkSwitchStackRoutingStaticRoute --networkId 'STRING' --switchStackId 'STRING' --staticRouteId 'STRING'
+meraki switch updateNetworkSwitchStackRoutingStaticRoute --networkId 'STRING' --switchStackId 'STRING' --staticRouteId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
 
@@ -10129,7 +10129,7 @@ def updateNetworkSwitchStormControl(networkId: str, **kwargs):
 
 ##### Example:
 ```
-meraki switch updateNetworkSwitchStormControl --networkId 'STRING'
+meraki switch updateNetworkSwitchStormControl --networkId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
 
@@ -10153,7 +10153,7 @@ def updateNetworkSwitchStp(networkId: str, **kwargs):
 
 ##### Example:
 ```
-meraki switch updateNetworkSwitchStp --networkId 'STRING'
+meraki switch updateNetworkSwitchStp --networkId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
 
@@ -10199,7 +10199,7 @@ def updateOrganizationConfigTemplateSwitchProfilePort(organizationId: str, confi
 
 ##### Example:
 ```
-meraki switch updateOrganizationConfigTemplateSwitchProfilePort --organizationId 'STRING' --configTemplateId 'STRING' --profileId 'STRING' --portId 'STRING'
+meraki switch updateOrganizationConfigTemplateSwitchProfilePort --organizationId 'STRING' --configTemplateId 'STRING' --profileId 'STRING' --portId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
 
@@ -10234,7 +10234,7 @@ def createNetworkWirelessRfProfile(networkId: str, name: str, bandSelectionType:
 
 ##### Example:
 ```
-meraki wireless createNetworkWirelessRfProfile --networkId 'STRING' --name 'STRING' --bandSelectionType 'STRING'
+meraki wireless createNetworkWirelessRfProfile --networkId 'STRING' --name 'STRING' --bandSelectionType 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
 
@@ -10358,7 +10358,7 @@ def getDeviceWirelessConnectionStats(serial: str, **kwargs):
 
 ##### Example:
 ```
-meraki wireless getDeviceWirelessConnectionStats --serial 'STRING'
+meraki wireless getDeviceWirelessConnectionStats --serial 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
 
@@ -10388,7 +10388,7 @@ def getDeviceWirelessLatencyStats(serial: str, **kwargs):
 
 ##### Example:
 ```
-meraki wireless getDeviceWirelessLatencyStats --serial 'STRING'
+meraki wireless getDeviceWirelessLatencyStats --serial 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
 
@@ -10456,7 +10456,7 @@ def getNetworkWirelessAirMarshal(networkId: str, **kwargs):
 
 ##### Example:
 ```
-meraki wireless getNetworkWirelessAirMarshal --networkId 'STRING'
+meraki wireless getNetworkWirelessAirMarshal --networkId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
 
@@ -10531,7 +10531,7 @@ def getNetworkWirelessChannelUtilizationHistory(networkId: str, **kwargs):
 
 ##### Example:
 ```
-meraki wireless getNetworkWirelessChannelUtilizationHistory --networkId 'STRING'
+meraki wireless getNetworkWirelessChannelUtilizationHistory --networkId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
 
@@ -10561,7 +10561,7 @@ def getNetworkWirelessClientConnectionStats(networkId: str, clientId: str, **kwa
 
 ##### Example:
 ```
-meraki wireless getNetworkWirelessClientConnectionStats --networkId 'STRING' --clientId 'STRING'
+meraki wireless getNetworkWirelessClientConnectionStats --networkId 'STRING' --clientId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
 
@@ -10597,7 +10597,7 @@ def getNetworkWirelessClientConnectivityEvents(networkId: str, clientId: str, to
 
 ##### Example:
 ```
-meraki wireless getNetworkWirelessClientConnectivityEvents --networkId 'STRING' --clientId 'STRING'
+meraki wireless getNetworkWirelessClientConnectivityEvents --networkId 'STRING' --clientId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
 
@@ -10629,7 +10629,7 @@ def getNetworkWirelessClientCountHistory(networkId: str, **kwargs):
 
 ##### Example:
 ```
-meraki wireless getNetworkWirelessClientCountHistory --networkId 'STRING'
+meraki wireless getNetworkWirelessClientCountHistory --networkId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
 
@@ -10656,7 +10656,7 @@ def getNetworkWirelessClientLatencyHistory(networkId: str, clientId: str, **kwar
 
 ##### Example:
 ```
-meraki wireless getNetworkWirelessClientLatencyHistory --networkId 'STRING' --clientId 'STRING'
+meraki wireless getNetworkWirelessClientLatencyHistory --networkId 'STRING' --clientId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
 
@@ -10687,7 +10687,7 @@ def getNetworkWirelessClientLatencyStats(networkId: str, clientId: str, **kwargs
 
 ##### Example:
 ```
-meraki wireless getNetworkWirelessClientLatencyStats --networkId 'STRING' --clientId 'STRING'
+meraki wireless getNetworkWirelessClientLatencyStats --networkId 'STRING' --clientId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
 
@@ -10716,7 +10716,7 @@ def getNetworkWirelessClientsConnectionStats(networkId: str, **kwargs):
 
 ##### Example:
 ```
-meraki wireless getNetworkWirelessClientsConnectionStats --networkId 'STRING'
+meraki wireless getNetworkWirelessClientsConnectionStats --networkId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
 
@@ -10746,7 +10746,7 @@ def getNetworkWirelessClientsLatencyStats(networkId: str, **kwargs):
 
 ##### Example:
 ```
-meraki wireless getNetworkWirelessClientsLatencyStats --networkId 'STRING'
+meraki wireless getNetworkWirelessClientsLatencyStats --networkId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
 
@@ -10775,7 +10775,7 @@ def getNetworkWirelessConnectionStats(networkId: str, **kwargs):
 
 ##### Example:
 ```
-meraki wireless getNetworkWirelessConnectionStats --networkId 'STRING'
+meraki wireless getNetworkWirelessConnectionStats --networkId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
 
@@ -10807,7 +10807,7 @@ def getNetworkWirelessDataRateHistory(networkId: str, **kwargs):
 
 ##### Example:
 ```
-meraki wireless getNetworkWirelessDataRateHistory --networkId 'STRING'
+meraki wireless getNetworkWirelessDataRateHistory --networkId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
 
@@ -10836,7 +10836,7 @@ def getNetworkWirelessDevicesConnectionStats(networkId: str, **kwargs):
 
 ##### Example:
 ```
-meraki wireless getNetworkWirelessDevicesConnectionStats --networkId 'STRING'
+meraki wireless getNetworkWirelessDevicesConnectionStats --networkId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
 
@@ -10866,7 +10866,7 @@ def getNetworkWirelessDevicesLatencyStats(networkId: str, **kwargs):
 
 ##### Example:
 ```
-meraki wireless getNetworkWirelessDevicesLatencyStats --networkId 'STRING'
+meraki wireless getNetworkWirelessDevicesLatencyStats --networkId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
 
@@ -10897,7 +10897,7 @@ def getNetworkWirelessFailedConnections(networkId: str, **kwargs):
 
 ##### Example:
 ```
-meraki wireless getNetworkWirelessFailedConnections --networkId 'STRING'
+meraki wireless getNetworkWirelessFailedConnections --networkId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
 
@@ -10930,7 +10930,7 @@ def getNetworkWirelessLatencyHistory(networkId: str, **kwargs):
 
 ##### Example:
 ```
-meraki wireless getNetworkWirelessLatencyHistory --networkId 'STRING'
+meraki wireless getNetworkWirelessLatencyHistory --networkId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
 
@@ -10960,7 +10960,7 @@ def getNetworkWirelessLatencyStats(networkId: str, **kwargs):
 
 ##### Example:
 ```
-meraki wireless getNetworkWirelessLatencyStats --networkId 'STRING'
+meraki wireless getNetworkWirelessLatencyStats --networkId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
 
@@ -10987,7 +10987,7 @@ def getNetworkWirelessMeshStatuses(networkId: str, total_pages=1, direction='nex
 
 ##### Example:
 ```
-meraki wireless getNetworkWirelessMeshStatuses --networkId 'STRING'
+meraki wireless getNetworkWirelessMeshStatuses --networkId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
 
@@ -11033,7 +11033,7 @@ def getNetworkWirelessRfProfiles(networkId: str, **kwargs):
 
 ##### Example:
 ```
-meraki wireless getNetworkWirelessRfProfiles --networkId 'STRING'
+meraki wireless getNetworkWirelessRfProfiles --networkId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
 
@@ -11087,7 +11087,7 @@ def getNetworkWirelessSignalQualityHistory(networkId: str, **kwargs):
 
 ##### Example:
 ```
-meraki wireless getNetworkWirelessSignalQualityHistory --networkId 'STRING'
+meraki wireless getNetworkWirelessSignalQualityHistory --networkId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
 
@@ -11303,7 +11303,7 @@ def getNetworkWirelessUsageHistory(networkId: str, **kwargs):
 
 ##### Example:
 ```
-meraki wireless getNetworkWirelessUsageHistory --networkId 'STRING'
+meraki wireless getNetworkWirelessUsageHistory --networkId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
 
@@ -11328,7 +11328,7 @@ def updateDeviceWirelessBluetoothSettings(serial: str, **kwargs):
 
 ##### Example:
 ```
-meraki wireless updateDeviceWirelessBluetoothSettings --serial 'STRING'
+meraki wireless updateDeviceWirelessBluetoothSettings --serial 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
 
@@ -11353,7 +11353,7 @@ def updateDeviceWirelessRadioSettings(serial: str, **kwargs):
 
 ##### Example:
 ```
-meraki wireless updateDeviceWirelessRadioSettings --serial 'STRING'
+meraki wireless updateDeviceWirelessRadioSettings --serial 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
 
@@ -11379,7 +11379,7 @@ def updateNetworkWirelessAlternateManagementInterface(networkId: str, **kwargs):
 
 ##### Example:
 ```
-meraki wireless updateNetworkWirelessAlternateManagementInterface --networkId 'STRING'
+meraki wireless updateNetworkWirelessAlternateManagementInterface --networkId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
 
@@ -11407,7 +11407,7 @@ def updateNetworkWirelessBluetoothSettings(networkId: str, **kwargs):
 
 ##### Example:
 ```
-meraki wireless updateNetworkWirelessBluetoothSettings --networkId 'STRING'
+meraki wireless updateNetworkWirelessBluetoothSettings --networkId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
 
@@ -11437,7 +11437,7 @@ def updateNetworkWirelessRfProfile(networkId: str, rfProfileId: str, **kwargs):
 
 ##### Example:
 ```
-meraki wireless updateNetworkWirelessRfProfile --networkId 'STRING' --rfProfileId 'STRING'
+meraki wireless updateNetworkWirelessRfProfile --networkId 'STRING' --rfProfileId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
 
@@ -11464,7 +11464,7 @@ def updateNetworkWirelessSettings(networkId: str, **kwargs):
 
 ##### Example:
 ```
-meraki wireless updateNetworkWirelessSettings --networkId 'STRING'
+meraki wireless updateNetworkWirelessSettings --networkId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
 
@@ -11527,7 +11527,7 @@ def updateNetworkWirelessSsid(networkId: str, number: str, **kwargs):
 
 ##### Example:
 ```
-meraki wireless updateNetworkWirelessSsid --networkId 'STRING' --number 'STRING'
+meraki wireless updateNetworkWirelessSsid --networkId 'STRING' --number 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
 
@@ -11552,7 +11552,7 @@ def updateNetworkWirelessSsidFirewallL3FirewallRules(networkId: str, number: str
 
 ##### Example:
 ```
-meraki wireless updateNetworkWirelessSsidFirewallL3FirewallRules --networkId 'STRING' --number 'STRING'
+meraki wireless updateNetworkWirelessSsidFirewallL3FirewallRules --networkId 'STRING' --number 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
 
@@ -11576,7 +11576,7 @@ def updateNetworkWirelessSsidFirewallL7FirewallRules(networkId: str, number: str
 
 ##### Example:
 ```
-meraki wireless updateNetworkWirelessSsidFirewallL7FirewallRules --networkId 'STRING' --number 'STRING'
+meraki wireless updateNetworkWirelessSsidFirewallL7FirewallRules --networkId 'STRING' --number 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
 
@@ -11603,7 +11603,7 @@ def updateNetworkWirelessSsidIdentityPsk(networkId: str, number: str, identityPs
 
 ##### Example:
 ```
-meraki wireless updateNetworkWirelessSsidIdentityPsk --networkId 'STRING' --number 'STRING' --identityPskId 'STRING'
+meraki wireless updateNetworkWirelessSsidIdentityPsk --networkId 'STRING' --number 'STRING' --identityPskId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
 
@@ -11635,7 +11635,7 @@ def updateNetworkWirelessSsidSplashSettings(networkId: str, number: str, **kwarg
 
 ##### Example:
 ```
-meraki wireless updateNetworkWirelessSsidSplashSettings --networkId 'STRING' --number 'STRING'
+meraki wireless updateNetworkWirelessSsidSplashSettings --networkId 'STRING' --number 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
 
@@ -11664,6 +11664,6 @@ def updateNetworkWirelessSsidTrafficShapingRules(networkId: str, number: str, **
 
 ##### Example:
 ```
-meraki wireless updateNetworkWirelessSsidTrafficShapingRules --networkId 'STRING' --number 'STRING'
+meraki wireless updateNetworkWirelessSsidTrafficShapingRules --networkId 'STRING' --number 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 

@@ -96,6 +96,9 @@ def _cmd_args(arg_obj: Args) -> str:
             metavar = ' '+climain.ANNOTATION_MAP[arg.annotation]['metavar']
         # Build the argument example and add it to the result
         result += f' --{arg.name}{metavar}'
+    if arg_obj.varkw:
+        json_data = '\'{"key1": "value1", "key2": "value2"}\''
+        result += f' --{arg_obj.varkw.name} {json_data}'
     return result
 
 
