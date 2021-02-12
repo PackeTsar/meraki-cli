@@ -494,7 +494,7 @@ https://developer.cisco.com/meraki/api-v1/#!assign-organization-licenses-seats
 
 ##### Method Code:
 ```python
-def (organizationId: str, licenseId: str, networkId: str, seatCount: int):
+def assignOrganizationLicensesSeats(organizationId: str, licenseId: str, networkId: str, seatCount: int):
     # Code
 ````
 
@@ -519,7 +519,7 @@ https://developer.cisco.com/meraki/api-v1/#!claim-into-organization
 
 ##### Method Code:
 ```python
-def (organizationId: str, **kwargs):
+def claimIntoOrganization(organizationId: str, **kwargs):
     # Code
 ````
 
@@ -542,7 +542,7 @@ https://developer.cisco.com/meraki/api-v1/#!clone-organization
 
 ##### Method Code:
 ```python
-def (organizationId: str, name: str):
+def cloneOrganization(organizationId: str, name: str):
     # Code
 ````
 
@@ -567,7 +567,7 @@ https://developer.cisco.com/meraki/api-v1/#!combine-organization-networks
 
 ##### Method Code:
 ```python
-def (organizationId: str, name: str, networkIds: list, **kwargs):
+def combineOrganizationNetworks(organizationId: str, name: str, networkIds: list, **kwargs):
     # Code
 ````
 
@@ -589,7 +589,7 @@ https://developer.cisco.com/meraki/api-v1/#!create-organization
 
 ##### Method Code:
 ```python
-def (name: str):
+def createOrganization(name: str):
     # Code
 ````
 
@@ -614,7 +614,7 @@ https://developer.cisco.com/meraki/api-v1/#!create-organization-action-batch
 
 ##### Method Code:
 ```python
-def (organizationId: str, actions: list, **kwargs):
+def createOrganizationActionBatch(organizationId: str, actions: list, **kwargs):
     # Code
 ````
 
@@ -642,7 +642,7 @@ https://developer.cisco.com/meraki/api-v1/#!create-organization-admin
 
 ##### Method Code:
 ```python
-def (organizationId: str, email: str, name: str, orgAccess: str, **kwargs):
+def createOrganizationAdmin(organizationId: str, email: str, name: str, orgAccess: str, **kwargs):
     # Code
 ````
 
@@ -672,7 +672,7 @@ Each property defaults to 'default or inherit' when not provided.
 
 ##### Method Code:
 ```python
-def (organizationId: str, name: str, enabled: bool, adminSettings: dict, **kwargs):
+def createOrganizationBrandingPolicy(organizationId: str, name: str, enabled: bool, adminSettings: dict, **kwargs):
     # Code
 ````
 
@@ -697,7 +697,7 @@ https://developer.cisco.com/meraki/api-v1/#!create-organization-config-template
 
 ##### Method Code:
 ```python
-def (organizationId: str, name: str, **kwargs):
+def createOrganizationConfigTemplate(organizationId: str, name: str, **kwargs):
     # Code
 ````
 
@@ -724,7 +724,7 @@ https://developer.cisco.com/meraki/api-v1/#!create-organization-network
 
 ##### Method Code:
 ```python
-def (organizationId: str, name: str, productTypes: list, **kwargs):
+def createOrganizationNetwork(organizationId: str, name: str, productTypes: list, **kwargs):
     # Code
 ````
 
@@ -748,7 +748,7 @@ https://developer.cisco.com/meraki/api-v1/#!create-organization-saml-idp
 
 ##### Method Code:
 ```python
-def (organizationId: str, x509certSha1Fingerprint: str, **kwargs):
+def createOrganizationSamlIdp(organizationId: str, x509certSha1Fingerprint: str, **kwargs):
     # Code
 ````
 
@@ -774,7 +774,7 @@ https://developer.cisco.com/meraki/api-v1/#!create-organization-saml-role
 
 ##### Method Code:
 ```python
-def (organizationId: str, role: str, orgAccess: str, **kwargs):
+def createOrganizationSamlRole(organizationId: str, role: str, orgAccess: str, **kwargs):
     # Code
 ````
 
@@ -796,7 +796,7 @@ https://developer.cisco.com/meraki/api-v1/#!delete-organization
 
 ##### Method Code:
 ```python
-def (organizationId: str):
+def deleteOrganization(organizationId: str):
     # Code
 ````
 
@@ -819,7 +819,7 @@ https://developer.cisco.com/meraki/api-v1/#!delete-organization-action-batch
 
 ##### Method Code:
 ```python
-def (organizationId: str, actionBatchId: str):
+def deleteOrganizationActionBatch(organizationId: str, actionBatchId: str):
     # Code
 ````
 
@@ -842,7 +842,7 @@ https://developer.cisco.com/meraki/api-v1/#!delete-organization-admin
 
 ##### Method Code:
 ```python
-def (organizationId: str, adminId: str):
+def deleteOrganizationAdmin(organizationId: str, adminId: str):
     # Code
 ````
 
@@ -865,7 +865,7 @@ https://developer.cisco.com/meraki/api-v1/#!delete-organization-branding-policy
 
 ##### Method Code:
 ```python
-def (organizationId: str, brandingPolicyId: str):
+def deleteOrganizationBrandingPolicy(organizationId: str, brandingPolicyId: str):
     # Code
 ````
 
@@ -888,7 +888,7 @@ https://developer.cisco.com/meraki/api-v1/#!delete-organization-config-template
 
 ##### Method Code:
 ```python
-def (organizationId: str, configTemplateId: str):
+def deleteOrganizationConfigTemplate(organizationId: str, configTemplateId: str):
     # Code
 ````
 
@@ -911,7 +911,7 @@ https://developer.cisco.com/meraki/api-v1/#!delete-organization-saml-idp
 
 ##### Method Code:
 ```python
-def (organizationId: str, idpId: str):
+def deleteOrganizationSamlIdp(organizationId: str, idpId: str):
     # Code
 ````
 
@@ -934,7 +934,7 @@ https://developer.cisco.com/meraki/api-v1/#!delete-organization-saml-role
 
 ##### Method Code:
 ```python
-def (organizationId: str, samlRoleId: str):
+def deleteOrganizationSamlRole(organizationId: str, samlRoleId: str):
     # Code
 ````
 
@@ -956,7 +956,7 @@ https://developer.cisco.com/meraki/api-v1/#!get-organization
 
 ##### Method Code:
 ```python
-def (organizationId: str):
+def getOrganization(organizationId: str):
     # Code
 ````
 
@@ -979,7 +979,7 @@ https://developer.cisco.com/meraki/api-v1/#!get-organization-action-batch
 
 ##### Method Code:
 ```python
-def (organizationId: str, actionBatchId: str):
+def getOrganizationActionBatch(organizationId: str, actionBatchId: str):
     # Code
 ````
 
@@ -1002,7 +1002,7 @@ https://developer.cisco.com/meraki/api-v1/#!get-organization-action-batches
 
 ##### Method Code:
 ```python
-def (organizationId: str, **kwargs):
+def getOrganizationActionBatches(organizationId: str, **kwargs):
     # Code
 ````
 
@@ -1024,7 +1024,7 @@ https://developer.cisco.com/meraki/api-v1/#!get-organization-admins
 
 ##### Method Code:
 ```python
-def (organizationId: str):
+def getOrganizationAdmins(organizationId: str):
     # Code
 ````
 
@@ -1059,7 +1059,7 @@ https://developer.cisco.com/meraki/api-v1/#!get-organization-api-requests
 
 ##### Method Code:
 ```python
-def (organizationId: str, total_pages=1, direction='next', **kwargs):
+def getOrganizationApiRequests(organizationId: str, total_pages=1, direction='next', **kwargs):
     # Code
 ````
 
@@ -1084,7 +1084,7 @@ https://developer.cisco.com/meraki/api-v1/#!get-organization-api-requests-overvi
 
 ##### Method Code:
 ```python
-def (organizationId: str, **kwargs):
+def getOrganizationApiRequestsOverview(organizationId: str, **kwargs):
     # Code
 ````
 
@@ -1106,7 +1106,7 @@ https://developer.cisco.com/meraki/api-v1/#!get-organization-branding-policies
 
 ##### Method Code:
 ```python
-def (organizationId: str):
+def getOrganizationBrandingPolicies(organizationId: str):
     # Code
 ````
 
@@ -1128,7 +1128,7 @@ https://developer.cisco.com/meraki/api-v1/#!get-organization-branding-policies-p
 
 ##### Method Code:
 ```python
-def (organizationId: str):
+def getOrganizationBrandingPoliciesPriorities(organizationId: str):
     # Code
 ````
 
@@ -1151,7 +1151,7 @@ https://developer.cisco.com/meraki/api-v1/#!get-organization-branding-policy
 
 ##### Method Code:
 ```python
-def (organizationId: str, brandingPolicyId: str):
+def getOrganizationBrandingPolicy(organizationId: str, brandingPolicyId: str):
     # Code
 ````
 
@@ -1174,7 +1174,7 @@ https://developer.cisco.com/meraki/api-v1/#!get-organization-config-template
 
 ##### Method Code:
 ```python
-def (organizationId: str, configTemplateId: str):
+def getOrganizationConfigTemplate(organizationId: str, configTemplateId: str):
     # Code
 ````
 
@@ -1196,7 +1196,7 @@ https://developer.cisco.com/meraki/api-v1/#!get-organization-config-templates
 
 ##### Method Code:
 ```python
-def (organizationId: str):
+def getOrganizationConfigTemplates(organizationId: str):
     # Code
 ````
 
@@ -1228,7 +1228,7 @@ https://developer.cisco.com/meraki/api-v1/#!get-organization-configuration-chang
 
 ##### Method Code:
 ```python
-def (organizationId: str, total_pages=1, direction='prev', **kwargs):
+def getOrganizationConfigurationChanges(organizationId: str, total_pages=1, direction='prev', **kwargs):
     # Code
 ````
 
@@ -1256,7 +1256,7 @@ https://developer.cisco.com/meraki/api-v1/#!get-organization-devices
 
 ##### Method Code:
 ```python
-def (organizationId: str, total_pages=1, direction='next', **kwargs):
+def getOrganizationDevices(organizationId: str, total_pages=1, direction='next', **kwargs):
     # Code
 ````
 
@@ -1283,7 +1283,7 @@ https://developer.cisco.com/meraki/api-v1/#!get-organization-devices-statuses
 
 ##### Method Code:
 ```python
-def (organizationId: str, total_pages=1, direction='next', **kwargs):
+def getOrganizationDevicesStatuses(organizationId: str, total_pages=1, direction='next', **kwargs):
     # Code
 ````
 
@@ -1310,7 +1310,7 @@ https://developer.cisco.com/meraki/api-v1/#!get-organization-devices-uplinks-los
 
 ##### Method Code:
 ```python
-def (organizationId: str, **kwargs):
+def getOrganizationDevicesUplinksLossAndLatency(organizationId: str, **kwargs):
     # Code
 ````
 
@@ -1333,7 +1333,7 @@ https://developer.cisco.com/meraki/api-v1/#!get-organization-inventory-device
 
 ##### Method Code:
 ```python
-def (organizationId: str, serial: str):
+def getOrganizationInventoryDevice(organizationId: str, serial: str):
     # Code
 ````
 
@@ -1362,7 +1362,7 @@ https://developer.cisco.com/meraki/api-v1/#!get-organization-inventory-devices
 
 ##### Method Code:
 ```python
-def (organizationId: str, total_pages=1, direction='next', **kwargs):
+def getOrganizationInventoryDevices(organizationId: str, total_pages=1, direction='next', **kwargs):
     # Code
 ````
 
@@ -1385,7 +1385,7 @@ https://developer.cisco.com/meraki/api-v1/#!get-organization-license
 
 ##### Method Code:
 ```python
-def (organizationId: str, licenseId: str):
+def getOrganizationLicense(organizationId: str, licenseId: str):
     # Code
 ````
 
@@ -1415,7 +1415,7 @@ https://developer.cisco.com/meraki/api-v1/#!get-organization-licenses
 
 ##### Method Code:
 ```python
-def (organizationId: str, total_pages=1, direction='next', **kwargs):
+def getOrganizationLicenses(organizationId: str, total_pages=1, direction='next', **kwargs):
     # Code
 ````
 
@@ -1437,7 +1437,7 @@ https://developer.cisco.com/meraki/api-v1/#!get-organization-licenses-overview
 
 ##### Method Code:
 ```python
-def (organizationId: str):
+def getOrganizationLicensesOverview(organizationId: str):
     # Code
 ````
 
@@ -1459,7 +1459,7 @@ https://developer.cisco.com/meraki/api-v1/#!get-organization-login-security
 
 ##### Method Code:
 ```python
-def (organizationId: str):
+def getOrganizationLoginSecurity(organizationId: str):
     # Code
 ````
 
@@ -1489,7 +1489,7 @@ https://developer.cisco.com/meraki/api-v1/#!get-organization-networks
 
 ##### Method Code:
 ```python
-def (organizationId: str, total_pages=1, direction='next', **kwargs):
+def getOrganizationNetworks(organizationId: str, total_pages=1, direction='next', **kwargs):
     # Code
 ````
 
@@ -1511,7 +1511,7 @@ https://developer.cisco.com/meraki/api-v1/#!get-organization-openapi-spec
 
 ##### Method Code:
 ```python
-def (organizationId: str):
+def getOrganizationOpenapiSpec(organizationId: str):
     # Code
 ````
 
@@ -1533,7 +1533,7 @@ https://developer.cisco.com/meraki/api-v1/#!get-organization-saml
 
 ##### Method Code:
 ```python
-def (organizationId: str):
+def getOrganizationSaml(organizationId: str):
     # Code
 ````
 
@@ -1556,7 +1556,7 @@ https://developer.cisco.com/meraki/api-v1/#!get-organization-saml-idp
 
 ##### Method Code:
 ```python
-def (organizationId: str, idpId: str):
+def getOrganizationSamlIdp(organizationId: str, idpId: str):
     # Code
 ````
 
@@ -1578,7 +1578,7 @@ https://developer.cisco.com/meraki/api-v1/#!get-organization-saml-idps
 
 ##### Method Code:
 ```python
-def (organizationId: str):
+def getOrganizationSamlIdps(organizationId: str):
     # Code
 ````
 
@@ -1601,7 +1601,7 @@ https://developer.cisco.com/meraki/api-v1/#!get-organization-saml-role
 
 ##### Method Code:
 ```python
-def (organizationId: str, samlRoleId: str):
+def getOrganizationSamlRole(organizationId: str, samlRoleId: str):
     # Code
 ````
 
@@ -1623,7 +1623,7 @@ https://developer.cisco.com/meraki/api-v1/#!get-organization-saml-roles
 
 ##### Method Code:
 ```python
-def (organizationId: str):
+def getOrganizationSamlRoles(organizationId: str):
     # Code
 ````
 
@@ -1645,7 +1645,7 @@ https://developer.cisco.com/meraki/api-v1/#!get-organization-snmp
 
 ##### Method Code:
 ```python
-def (organizationId: str):
+def getOrganizationSnmp(organizationId: str):
     # Code
 ````
 
@@ -1675,7 +1675,7 @@ https://developer.cisco.com/meraki/api-v1/#!get-organization-uplinks-statuses
 
 ##### Method Code:
 ```python
-def (organizationId: str, total_pages=1, direction='next', **kwargs):
+def getOrganizationUplinksStatuses(organizationId: str, total_pages=1, direction='next', **kwargs):
     # Code
 ````
 
@@ -1697,7 +1697,7 @@ https://developer.cisco.com/meraki/api-v1/#!get-organization-webhooks-alert-type
 
 ##### Method Code:
 ```python
-def (organizationId: str):
+def getOrganizationWebhooksAlertTypes(organizationId: str):
     # Code
 ````
 
@@ -1728,7 +1728,7 @@ https://developer.cisco.com/meraki/api-v1/#!get-organization-webhooks-logs
 
 ##### Method Code:
 ```python
-def (organizationId: str, total_pages=1, direction='next', **kwargs):
+def getOrganizationWebhooksLogs(organizationId: str, total_pages=1, direction='next', **kwargs):
     # Code
 ````
 
@@ -1749,7 +1749,7 @@ https://developer.cisco.com/meraki/api-v1/#!get-organizations
 
 ##### Method Code:
 ```python
-def ():
+def getOrganizations():
     # Code
 ````
 
@@ -1773,7 +1773,7 @@ https://developer.cisco.com/meraki/api-v1/#!move-organization-licenses
 
 ##### Method Code:
 ```python
-def (organizationId: str, destOrganizationId: str, licenseIds: list):
+def moveOrganizationLicenses(organizationId: str, destOrganizationId: str, licenseIds: list):
     # Code
 ````
 
@@ -1798,7 +1798,7 @@ https://developer.cisco.com/meraki/api-v1/#!move-organization-licenses-seats
 
 ##### Method Code:
 ```python
-def (organizationId: str, destOrganizationId: str, licenseId: str, seatCount: int):
+def moveOrganizationLicensesSeats(organizationId: str, destOrganizationId: str, licenseId: str, seatCount: int):
     # Code
 ````
 
@@ -1822,7 +1822,7 @@ https://developer.cisco.com/meraki/api-v1/#!renew-organization-licenses-seats
 
 ##### Method Code:
 ```python
-def (organizationId: str, licenseIdToRenew: str, unusedLicenseId: str):
+def renewOrganizationLicensesSeats(organizationId: str, licenseIdToRenew: str, unusedLicenseId: str):
     # Code
 ````
 
@@ -1845,7 +1845,7 @@ https://developer.cisco.com/meraki/api-v1/#!update-organization
 
 ##### Method Code:
 ```python
-def (organizationId: str, **kwargs):
+def updateOrganization(organizationId: str, **kwargs):
     # Code
 ````
 
@@ -1870,7 +1870,7 @@ https://developer.cisco.com/meraki/api-v1/#!update-organization-action-batch
 
 ##### Method Code:
 ```python
-def (organizationId: str, actionBatchId: str, **kwargs):
+def updateOrganizationActionBatch(organizationId: str, actionBatchId: str, **kwargs):
     # Code
 ````
 
@@ -1897,7 +1897,7 @@ https://developer.cisco.com/meraki/api-v1/#!update-organization-admin
 
 ##### Method Code:
 ```python
-def (organizationId: str, adminId: str, **kwargs):
+def updateOrganizationAdmin(organizationId: str, adminId: str, **kwargs):
     # Code
 ````
 
@@ -1920,7 +1920,7 @@ https://developer.cisco.com/meraki/api-v1/#!update-organization-branding-policie
 
 ##### Method Code:
 ```python
-def (organizationId: str, brandingPolicyIds: list):
+def updateOrganizationBrandingPoliciesPriorities(organizationId: str, brandingPolicyIds: list):
     # Code
 ````
 
@@ -1951,7 +1951,7 @@ Dashboard; see the documentation for each property to see the allowed values.
 
 ##### Method Code:
 ```python
-def (organizationId: str, brandingPolicyId: str, **kwargs):
+def updateOrganizationBrandingPolicy(organizationId: str, brandingPolicyId: str, **kwargs):
     # Code
 ````
 
@@ -1976,7 +1976,7 @@ https://developer.cisco.com/meraki/api-v1/#!update-organization-config-template
 
 ##### Method Code:
 ```python
-def (organizationId: str, configTemplateId: str, **kwargs):
+def updateOrganizationConfigTemplate(organizationId: str, configTemplateId: str, **kwargs):
     # Code
 ````
 
@@ -2000,7 +2000,7 @@ https://developer.cisco.com/meraki/api-v1/#!update-organization-license
 
 ##### Method Code:
 ```python
-def (organizationId: str, licenseId: str, **kwargs):
+def updateOrganizationLicense(organizationId: str, licenseId: str, **kwargs):
     # Code
 ````
 
@@ -2034,7 +2034,7 @@ https://developer.cisco.com/meraki/api-v1/#!update-organization-login-security
 
 ##### Method Code:
 ```python
-def (organizationId: str, **kwargs):
+def updateOrganizationLoginSecurity(organizationId: str, **kwargs):
     # Code
 ````
 
@@ -2057,7 +2057,7 @@ https://developer.cisco.com/meraki/api-v1/#!update-organization-saml
 
 ##### Method Code:
 ```python
-def (organizationId: str, **kwargs):
+def updateOrganizationSaml(organizationId: str, **kwargs):
     # Code
 ````
 
@@ -2082,7 +2082,7 @@ https://developer.cisco.com/meraki/api-v1/#!update-organization-saml-idp
 
 ##### Method Code:
 ```python
-def (organizationId: str, idpId: str, **kwargs):
+def updateOrganizationSamlIdp(organizationId: str, idpId: str, **kwargs):
     # Code
 ````
 
@@ -2109,7 +2109,7 @@ https://developer.cisco.com/meraki/api-v1/#!update-organization-saml-role
 
 ##### Method Code:
 ```python
-def (organizationId: str, samlRoleId: str, **kwargs):
+def updateOrganizationSamlRole(organizationId: str, samlRoleId: str, **kwargs):
     # Code
 ````
 
@@ -2138,7 +2138,7 @@ https://developer.cisco.com/meraki/api-v1/#!update-organization-snmp
 
 ##### Method Code:
 ```python
-def (organizationId: str, **kwargs):
+def updateOrganizationSnmp(organizationId: str, **kwargs):
     # Code
 ````
 
@@ -2168,7 +2168,7 @@ https://developer.cisco.com/meraki/api-v1/#!bind-network
 
 ##### Method Code:
 ```python
-def (networkId: str, configTemplateId: str, **kwargs):
+def bindNetwork(networkId: str, configTemplateId: str, **kwargs):
     # Code
 ````
 
@@ -2191,7 +2191,7 @@ https://developer.cisco.com/meraki/api-v1/#!claim-network-devices
 
 ##### Method Code:
 ```python
-def (networkId: str, serials: list):
+def claimNetworkDevices(networkId: str, serials: list):
     # Code
 ````
 
@@ -2220,7 +2220,7 @@ https://developer.cisco.com/meraki/api-v1/#!create-network-floor-plan
 
 ##### Method Code:
 ```python
-def (networkId: str, name: str, imageContents: str, **kwargs):
+def createNetworkFloorPlan(networkId: str, name: str, imageContents: str, **kwargs):
     # Code
 ````
 
@@ -2253,7 +2253,7 @@ https://developer.cisco.com/meraki/api-v1/#!create-network-group-policy
 
 ##### Method Code:
 ```python
-def (networkId: str, name: str, **kwargs):
+def createNetworkGroupPolicy(networkId: str, name: str, **kwargs):
     # Code
 ````
 
@@ -2281,7 +2281,7 @@ https://developer.cisco.com/meraki/api-v1/#!create-network-meraki-auth-user
 
 ##### Method Code:
 ```python
-def (networkId: str, email: str, name: str, password: str, authorizations: list, **kwargs):
+def createNetworkMerakiAuthUser(networkId: str, email: str, name: str, password: str, authorizations: list, **kwargs):
     # Code
 ````
 
@@ -2306,7 +2306,7 @@ https://developer.cisco.com/meraki/api-v1/#!create-network-mqtt-broker
 
 ##### Method Code:
 ```python
-def (networkId: str, name: str, host: str, port: int):
+def createNetworkMqttBroker(networkId: str, name: str, host: str, port: int):
     # Code
 ````
 
@@ -2335,7 +2335,7 @@ https://developer.cisco.com/meraki/api-v1/#!create-network-pii-request
 
 ##### Method Code:
 ```python
-def (networkId: str, **kwargs):
+def createNetworkPiiRequest(networkId: str, **kwargs):
     # Code
 ````
 
@@ -2360,7 +2360,7 @@ https://developer.cisco.com/meraki/api-v1/#!create-network-webhooks-http-server
 
 ##### Method Code:
 ```python
-def (networkId: str, name: str, url: str, **kwargs):
+def createNetworkWebhooksHttpServer(networkId: str, name: str, url: str, **kwargs):
     # Code
 ````
 
@@ -2384,7 +2384,7 @@ https://developer.cisco.com/meraki/api-v1/#!create-network-webhooks-webhook-test
 
 ##### Method Code:
 ```python
-def (networkId: str, url: str, **kwargs):
+def createNetworkWebhooksWebhookTest(networkId: str, url: str, **kwargs):
     # Code
 ````
 
@@ -2406,7 +2406,7 @@ https://developer.cisco.com/meraki/api-v1/#!delete-network
 
 ##### Method Code:
 ```python
-def (networkId: str):
+def deleteNetwork(networkId: str):
     # Code
 ````
 
@@ -2429,7 +2429,7 @@ https://developer.cisco.com/meraki/api-v1/#!delete-network-floor-plan
 
 ##### Method Code:
 ```python
-def (networkId: str, floorPlanId: str):
+def deleteNetworkFloorPlan(networkId: str, floorPlanId: str):
     # Code
 ````
 
@@ -2452,7 +2452,7 @@ https://developer.cisco.com/meraki/api-v1/#!delete-network-group-policy
 
 ##### Method Code:
 ```python
-def (networkId: str, groupPolicyId: str):
+def deleteNetworkGroupPolicy(networkId: str, groupPolicyId: str):
     # Code
 ````
 
@@ -2475,7 +2475,7 @@ https://developer.cisco.com/meraki/api-v1/#!delete-network-meraki-auth-user
 
 ##### Method Code:
 ```python
-def (networkId: str, merakiAuthUserId: str):
+def deleteNetworkMerakiAuthUser(networkId: str, merakiAuthUserId: str):
     # Code
 ````
 
@@ -2498,7 +2498,7 @@ https://developer.cisco.com/meraki/api-v1/#!delete-network-mqtt-broker
 
 ##### Method Code:
 ```python
-def (networkId: str, mqttBrokerId: str):
+def deleteNetworkMqttBroker(networkId: str, mqttBrokerId: str):
     # Code
 ````
 
@@ -2521,7 +2521,7 @@ https://developer.cisco.com/meraki/api-v1/#!delete-network-pii-request
 
 ##### Method Code:
 ```python
-def (networkId: str, requestId: str):
+def deleteNetworkPiiRequest(networkId: str, requestId: str):
     # Code
 ````
 
@@ -2544,7 +2544,7 @@ https://developer.cisco.com/meraki/api-v1/#!delete-network-webhooks-http-server
 
 ##### Method Code:
 ```python
-def (networkId: str, httpServerId: str):
+def deleteNetworkWebhooksHttpServer(networkId: str, httpServerId: str):
     # Code
 ````
 
@@ -2566,7 +2566,7 @@ https://developer.cisco.com/meraki/api-v1/#!get-network
 
 ##### Method Code:
 ```python
-def (networkId: str):
+def getNetwork(networkId: str):
     # Code
 ````
 
@@ -2588,7 +2588,7 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-alerts-settings
 
 ##### Method Code:
 ```python
-def (networkId: str):
+def getNetworkAlertsSettings(networkId: str):
     # Code
 ````
 
@@ -2613,7 +2613,7 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-bluetooth-client
 
 ##### Method Code:
 ```python
-def (networkId: str, bluetoothClientId: str, **kwargs):
+def getNetworkBluetoothClient(networkId: str, bluetoothClientId: str, **kwargs):
     # Code
 ````
 
@@ -2643,7 +2643,7 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-bluetooth-clients
 
 ##### Method Code:
 ```python
-def (networkId: str, total_pages=1, direction='next', **kwargs):
+def getNetworkBluetoothClients(networkId: str, total_pages=1, direction='next', **kwargs):
     # Code
 ````
 
@@ -2666,7 +2666,7 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-client
 
 ##### Method Code:
 ```python
-def (networkId: str, clientId: str):
+def getNetworkClient(networkId: str, clientId: str):
     # Code
 ````
 
@@ -2689,7 +2689,7 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-client-policy
 
 ##### Method Code:
 ```python
-def (networkId: str, clientId: str):
+def getNetworkClientPolicy(networkId: str, clientId: str):
     # Code
 ````
 
@@ -2712,7 +2712,7 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-client-splash-authorizat
 
 ##### Method Code:
 ```python
-def (networkId: str, clientId: str):
+def getNetworkClientSplashAuthorizationStatus(networkId: str, clientId: str):
     # Code
 ````
 
@@ -2740,7 +2740,7 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-client-traffic-history
 
 ##### Method Code:
 ```python
-def (networkId: str, clientId: str, total_pages=1, direction='next', **kwargs):
+def getNetworkClientTrafficHistory(networkId: str, clientId: str, total_pages=1, direction='next', **kwargs):
     # Code
 ````
 
@@ -2763,7 +2763,7 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-client-usage-history
 
 ##### Method Code:
 ```python
-def (networkId: str, clientId: str):
+def getNetworkClientUsageHistory(networkId: str, clientId: str):
     # Code
 ````
 
@@ -2792,7 +2792,7 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-clients
 
 ##### Method Code:
 ```python
-def (networkId: str, total_pages=1, direction='next', **kwargs):
+def getNetworkClients(networkId: str, total_pages=1, direction='next', **kwargs):
     # Code
 ````
 
@@ -2824,7 +2824,7 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-clients-application-usag
 
 ##### Method Code:
 ```python
-def (networkID: str, clients: str, total_pages=1, direction='next', **kwargs):
+def getNetworkClientsApplicationUsage(networkID: str, clients: str, total_pages=1, direction='next', **kwargs):
     # Code
 ````
 
@@ -2856,7 +2856,7 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-clients-usage-histories
 
 ##### Method Code:
 ```python
-def (networkID: str, clients: str, total_pages=1, direction='next', **kwargs):
+def getNetworkClientsUsageHistories(networkID: str, clients: str, total_pages=1, direction='next', **kwargs):
     # Code
 ````
 
@@ -2878,7 +2878,7 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-devices
 
 ##### Method Code:
 ```python
-def (networkId: str):
+def getNetworkDevices(networkId: str):
     # Code
 ````
 
@@ -2917,7 +2917,7 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-events
 
 ##### Method Code:
 ```python
-def (networkId: str, total_pages=1, direction='prev', event_log_end_time=None, **kwargs):
+def getNetworkEvents(networkId: str, total_pages=1, direction='prev', event_log_end_time=None, **kwargs):
     # Code
 ````
 
@@ -2939,7 +2939,7 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-events-event-types
 
 ##### Method Code:
 ```python
-def (networkId: str):
+def getNetworkEventsEventTypes(networkId: str):
     # Code
 ````
 
@@ -2961,7 +2961,7 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-firmware-upgrades
 
 ##### Method Code:
 ```python
-def (networkId: str):
+def getNetworkFirmwareUpgrades(networkId: str):
     # Code
 ````
 
@@ -2984,7 +2984,7 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-floor-plan
 
 ##### Method Code:
 ```python
-def (networkId: str, floorPlanId: str):
+def getNetworkFloorPlan(networkId: str, floorPlanId: str):
     # Code
 ````
 
@@ -3006,7 +3006,7 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-floor-plans
 
 ##### Method Code:
 ```python
-def (networkId: str):
+def getNetworkFloorPlans(networkId: str):
     # Code
 ````
 
@@ -3028,7 +3028,7 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-group-policies
 
 ##### Method Code:
 ```python
-def (networkId: str):
+def getNetworkGroupPolicies(networkId: str):
     # Code
 ````
 
@@ -3051,7 +3051,7 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-group-policy
 
 ##### Method Code:
 ```python
-def (networkId: str, groupPolicyId: str):
+def getNetworkGroupPolicy(networkId: str, groupPolicyId: str):
     # Code
 ````
 
@@ -3074,7 +3074,7 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-meraki-auth-user
 
 ##### Method Code:
 ```python
-def (networkId: str, merakiAuthUserId: str):
+def getNetworkMerakiAuthUser(networkId: str, merakiAuthUserId: str):
     # Code
 ````
 
@@ -3096,7 +3096,7 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-meraki-auth-users
 
 ##### Method Code:
 ```python
-def (networkId: str):
+def getNetworkMerakiAuthUsers(networkId: str):
     # Code
 ````
 
@@ -3119,7 +3119,7 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-mqtt-broker
 
 ##### Method Code:
 ```python
-def (networkId: str, mqttBrokerId: str):
+def getNetworkMqttBroker(networkId: str, mqttBrokerId: str):
     # Code
 ````
 
@@ -3141,7 +3141,7 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-mqtt-brokers
 
 ##### Method Code:
 ```python
-def (networkId: str):
+def getNetworkMqttBrokers(networkId: str):
     # Code
 ````
 
@@ -3163,7 +3163,7 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-netflow
 
 ##### Method Code:
 ```python
-def (networkId: str):
+def getNetworkNetflow(networkId: str):
     # Code
 ````
 
@@ -3194,7 +3194,7 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-network-health-channel-u
 
 ##### Method Code:
 ```python
-def (networkId: str, total_pages=1, direction='next', **kwargs):
+def getNetworkNetworkHealthChannelUtilization(networkId: str, total_pages=1, direction='next', **kwargs):
     # Code
 ````
 
@@ -3222,7 +3222,7 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-pii-pii-keys
 
 ##### Method Code:
 ```python
-def (networkId: str, **kwargs):
+def getNetworkPiiPiiKeys(networkId: str, **kwargs):
     # Code
 ````
 
@@ -3245,7 +3245,7 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-pii-request
 
 ##### Method Code:
 ```python
-def (networkId: str, requestId: str):
+def getNetworkPiiRequest(networkId: str, requestId: str):
     # Code
 ````
 
@@ -3267,7 +3267,7 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-pii-requests
 
 ##### Method Code:
 ```python
-def (networkId: str):
+def getNetworkPiiRequests(networkId: str):
     # Code
 ````
 
@@ -3295,7 +3295,7 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-pii-sm-devices-for-key
 
 ##### Method Code:
 ```python
-def (networkId: str, **kwargs):
+def getNetworkPiiSmDevicesForKey(networkId: str, **kwargs):
     # Code
 ````
 
@@ -3323,7 +3323,7 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-pii-sm-owners-for-key
 
 ##### Method Code:
 ```python
-def (networkId: str, **kwargs):
+def getNetworkPiiSmOwnersForKey(networkId: str, **kwargs):
     # Code
 ````
 
@@ -3345,7 +3345,7 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-settings
 
 ##### Method Code:
 ```python
-def (networkId: str):
+def getNetworkSettings(networkId: str):
     # Code
 ````
 
@@ -3367,7 +3367,7 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-snmp
 
 ##### Method Code:
 ```python
-def (networkId: str):
+def getNetworkSnmp(networkId: str):
     # Code
 ````
 
@@ -3392,7 +3392,7 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-splash-login-attempts
 
 ##### Method Code:
 ```python
-def (networkId: str, **kwargs):
+def getNetworkSplashLoginAttempts(networkId: str, **kwargs):
     # Code
 ````
 
@@ -3414,7 +3414,7 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-syslog-servers
 
 ##### Method Code:
 ```python
-def (networkId: str):
+def getNetworkSyslogServers(networkId: str):
     # Code
 ````
 
@@ -3439,7 +3439,7 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-traffic
 
 ##### Method Code:
 ```python
-def (networkId: str, **kwargs):
+def getNetworkTraffic(networkId: str, **kwargs):
     # Code
 ````
 
@@ -3461,7 +3461,7 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-traffic-analysis
 
 ##### Method Code:
 ```python
-def (networkId: str):
+def getNetworkTrafficAnalysis(networkId: str):
     # Code
 ````
 
@@ -3483,7 +3483,7 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-traffic-shaping-applicat
 
 ##### Method Code:
 ```python
-def (networkId: str):
+def getNetworkTrafficShapingApplicationCategories(networkId: str):
     # Code
 ````
 
@@ -3505,7 +3505,7 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-traffic-shaping-dscp-tag
 
 ##### Method Code:
 ```python
-def (networkId: str):
+def getNetworkTrafficShapingDscpTaggingOptions(networkId: str):
     # Code
 ````
 
@@ -3528,7 +3528,7 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-webhooks-http-server
 
 ##### Method Code:
 ```python
-def (networkId: str, httpServerId: str):
+def getNetworkWebhooksHttpServer(networkId: str, httpServerId: str):
     # Code
 ````
 
@@ -3550,7 +3550,7 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-webhooks-http-servers
 
 ##### Method Code:
 ```python
-def (networkId: str):
+def getNetworkWebhooksHttpServers(networkId: str):
     # Code
 ````
 
@@ -3573,7 +3573,7 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-webhooks-webhook-test
 
 ##### Method Code:
 ```python
-def (networkId: str, webhookTestId: str):
+def getNetworkWebhooksWebhookTest(networkId: str, webhookTestId: str):
     # Code
 ````
 
@@ -3600,7 +3600,7 @@ https://developer.cisco.com/meraki/api-v1/#!provision-network-clients
 
 ##### Method Code:
 ```python
-def (networkId: str, clients: list, devicePolicy: str, **kwargs):
+def provisionNetworkClients(networkId: str, clients: list, devicePolicy: str, **kwargs):
     # Code
 ````
 
@@ -3623,7 +3623,7 @@ https://developer.cisco.com/meraki/api-v1/#!remove-network-devices
 
 ##### Method Code:
 ```python
-def (networkId: str, serial: str):
+def removeNetworkDevices(networkId: str, serial: str):
     # Code
 ````
 
@@ -3645,7 +3645,7 @@ https://developer.cisco.com/meraki/api-v1/#!split-network
 
 ##### Method Code:
 ```python
-def (networkId: str):
+def splitNetwork(networkId: str):
     # Code
 ````
 
@@ -3667,7 +3667,7 @@ https://developer.cisco.com/meraki/api-v1/#!unbind-network
 
 ##### Method Code:
 ```python
-def (networkId: str):
+def unbindNetwork(networkId: str):
     # Code
 ````
 
@@ -3693,7 +3693,7 @@ https://developer.cisco.com/meraki/api-v1/#!update-network
 
 ##### Method Code:
 ```python
-def (networkId: str, **kwargs):
+def updateNetwork(networkId: str, **kwargs):
     # Code
 ````
 
@@ -3717,7 +3717,7 @@ https://developer.cisco.com/meraki/api-v1/#!update-network-alerts-settings
 
 ##### Method Code:
 ```python
-def (networkId: str, **kwargs):
+def updateNetworkAlertsSettings(networkId: str, **kwargs):
     # Code
 ````
 
@@ -3742,7 +3742,7 @@ https://developer.cisco.com/meraki/api-v1/#!update-network-client-policy
 
 ##### Method Code:
 ```python
-def (networkId: str, clientId: str, devicePolicy: str, **kwargs):
+def updateNetworkClientPolicy(networkId: str, clientId: str, devicePolicy: str, **kwargs):
     # Code
 ````
 
@@ -3766,7 +3766,7 @@ https://developer.cisco.com/meraki/api-v1/#!update-network-client-splash-authori
 
 ##### Method Code:
 ```python
-def (networkId: str, clientId: str, ssids: dict):
+def updateNetworkClientSplashAuthorizationStatus(networkId: str, clientId: str, ssids: dict):
     # Code
 ````
 
@@ -3789,7 +3789,7 @@ https://developer.cisco.com/meraki/api-v1/#!update-network-firmware-upgrades
 
 ##### Method Code:
 ```python
-def (networkId: str, **kwargs):
+def updateNetworkFirmwareUpgrades(networkId: str, **kwargs):
     # Code
 ````
 
@@ -3819,7 +3819,7 @@ https://developer.cisco.com/meraki/api-v1/#!update-network-floor-plan
 
 ##### Method Code:
 ```python
-def (networkId: str, floorPlanId: str, **kwargs):
+def updateNetworkFloorPlan(networkId: str, floorPlanId: str, **kwargs):
     # Code
 ````
 
@@ -3853,7 +3853,7 @@ https://developer.cisco.com/meraki/api-v1/#!update-network-group-policy
 
 ##### Method Code:
 ```python
-def (networkId: str, groupPolicyId: str, **kwargs):
+def updateNetworkGroupPolicy(networkId: str, groupPolicyId: str, **kwargs):
     # Code
 ````
 
@@ -3880,7 +3880,7 @@ https://developer.cisco.com/meraki/api-v1/#!update-network-meraki-auth-user
 
 ##### Method Code:
 ```python
-def (networkId: str, merakiAuthUserId: str, **kwargs):
+def updateNetworkMerakiAuthUser(networkId: str, merakiAuthUserId: str, **kwargs):
     # Code
 ````
 
@@ -3906,7 +3906,7 @@ https://developer.cisco.com/meraki/api-v1/#!update-network-mqtt-broker
 
 ##### Method Code:
 ```python
-def (networkId: str, mqttBrokerId: str, **kwargs):
+def updateNetworkMqttBroker(networkId: str, mqttBrokerId: str, **kwargs):
     # Code
 ````
 
@@ -3931,7 +3931,7 @@ https://developer.cisco.com/meraki/api-v1/#!update-network-netflow
 
 ##### Method Code:
 ```python
-def (networkId: str, **kwargs):
+def updateNetworkNetflow(networkId: str, **kwargs):
     # Code
 ````
 
@@ -3955,7 +3955,7 @@ https://developer.cisco.com/meraki/api-v1/#!update-network-settings
 
 ##### Method Code:
 ```python
-def (networkId: str, **kwargs):
+def updateNetworkSettings(networkId: str, **kwargs):
     # Code
 ````
 
@@ -3980,7 +3980,7 @@ https://developer.cisco.com/meraki/api-v1/#!update-network-snmp
 
 ##### Method Code:
 ```python
-def (networkId: str, **kwargs):
+def updateNetworkSnmp(networkId: str, **kwargs):
     # Code
 ````
 
@@ -4003,7 +4003,7 @@ https://developer.cisco.com/meraki/api-v1/#!update-network-syslog-servers
 
 ##### Method Code:
 ```python
-def (networkId: str, servers: list):
+def updateNetworkSyslogServers(networkId: str, servers: list):
     # Code
 ````
 
@@ -4029,7 +4029,7 @@ https://developer.cisco.com/meraki/api-v1/#!update-network-traffic-analysis
 
 ##### Method Code:
 ```python
-def (networkId: str, **kwargs):
+def updateNetworkTrafficAnalysis(networkId: str, **kwargs):
     # Code
 ````
 
@@ -4055,7 +4055,7 @@ https://developer.cisco.com/meraki/api-v1/#!update-network-webhooks-http-server
 
 ##### Method Code:
 ```python
-def (networkId: str, httpServerId: str, **kwargs):
+def updateNetworkWebhooksHttpServer(networkId: str, httpServerId: str, **kwargs):
     # Code
 ````
 
@@ -4086,7 +4086,7 @@ https://developer.cisco.com/meraki/api-v1/#!blink-device-leds
 
 ##### Method Code:
 ```python
-def (serial: str, **kwargs):
+def blinkDeviceLeds(serial: str, **kwargs):
     # Code
 ````
 
@@ -4108,7 +4108,7 @@ https://developer.cisco.com/meraki/api-v1/#!get-device
 
 ##### Method Code:
 ```python
-def (serial: str):
+def getDevice(serial: str):
     # Code
 ````
 
@@ -4132,7 +4132,7 @@ https://developer.cisco.com/meraki/api-v1/#!get-device-clients
 
 ##### Method Code:
 ```python
-def (serial: str, **kwargs):
+def getDeviceClients(serial: str, **kwargs):
     # Code
 ````
 
@@ -4154,7 +4154,7 @@ https://developer.cisco.com/meraki/api-v1/#!get-device-lldp-cdp
 
 ##### Method Code:
 ```python
-def (serial: str):
+def getDeviceLldpCdp(serial: str):
     # Code
 ````
 
@@ -4182,7 +4182,7 @@ https://developer.cisco.com/meraki/api-v1/#!get-device-loss-and-latency-history
 
 ##### Method Code:
 ```python
-def (serial: str, ip: str, **kwargs):
+def getDeviceLossAndLatencyHistory(serial: str, ip: str, **kwargs):
     # Code
 ````
 
@@ -4204,7 +4204,7 @@ https://developer.cisco.com/meraki/api-v1/#!get-device-management-interface
 
 ##### Method Code:
 ```python
-def (serial: str):
+def getDeviceManagementInterface(serial: str):
     # Code
 ````
 
@@ -4226,7 +4226,7 @@ https://developer.cisco.com/meraki/api-v1/#!reboot-device
 
 ##### Method Code:
 ```python
-def (serial: str):
+def rebootDevice(serial: str):
     # Code
 ````
 
@@ -4257,7 +4257,7 @@ https://developer.cisco.com/meraki/api-v1/#!update-device
 
 ##### Method Code:
 ```python
-def (serial: str, **kwargs):
+def updateDevice(serial: str, **kwargs):
     # Code
 ````
 
@@ -4281,7 +4281,7 @@ https://developer.cisco.com/meraki/api-v1/#!update-device-management-interface
 
 ##### Method Code:
 ```python
-def (serial: str, **kwargs):
+def updateDeviceManagementInterface(serial: str, **kwargs):
     # Code
 ````
 
@@ -4312,7 +4312,7 @@ https://developer.cisco.com/meraki/api-v1/#!create-network-appliance-static-rout
 
 ##### Method Code:
 ```python
-def (networkId: str, name: str, subnet: str, gatewayIp: str):
+def createNetworkApplianceStaticRoute(networkId: str, name: str, subnet: str, gatewayIp: str):
     # Code
 ````
 
@@ -4338,7 +4338,7 @@ https://developer.cisco.com/meraki/api-v1/#!create-network-appliance-traffic-sha
 
 ##### Method Code:
 ```python
-def (networkId: str, name: str, **kwargs):
+def createNetworkApplianceTrafficShapingCustomPerformanceClass(networkId: str, name: str, **kwargs):
     # Code
 ````
 
@@ -4365,7 +4365,7 @@ https://developer.cisco.com/meraki/api-v1/#!create-network-appliance-vlan
 
 ##### Method Code:
 ```python
-def (networkId: str, id: str, name: str, **kwargs):
+def createNetworkApplianceVlan(networkId: str, id: str, name: str, **kwargs):
     # Code
 ````
 
@@ -4388,7 +4388,7 @@ https://developer.cisco.com/meraki/api-v1/#!delete-network-appliance-static-rout
 
 ##### Method Code:
 ```python
-def (networkId: str, staticRouteId: str):
+def deleteNetworkApplianceStaticRoute(networkId: str, staticRouteId: str):
     # Code
 ````
 
@@ -4411,7 +4411,7 @@ https://developer.cisco.com/meraki/api-v1/#!delete-network-appliance-traffic-sha
 
 ##### Method Code:
 ```python
-def (networkId: str, customPerformanceClassId: str):
+def deleteNetworkApplianceTrafficShapingCustomPerformanceClass(networkId: str, customPerformanceClassId: str):
     # Code
 ````
 
@@ -4434,7 +4434,7 @@ https://developer.cisco.com/meraki/api-v1/#!delete-network-appliance-vlan
 
 ##### Method Code:
 ```python
-def (networkId: str, vlanId: str):
+def deleteNetworkApplianceVlan(networkId: str, vlanId: str):
     # Code
 ````
 
@@ -4456,7 +4456,7 @@ https://developer.cisco.com/meraki/api-v1/#!get-device-appliance-dhcp-subnets
 
 ##### Method Code:
 ```python
-def (serial: str):
+def getDeviceApplianceDhcpSubnets(serial: str):
     # Code
 ````
 
@@ -4478,7 +4478,7 @@ https://developer.cisco.com/meraki/api-v1/#!get-device-appliance-performance
 
 ##### Method Code:
 ```python
-def (serial: str):
+def getDeviceAppliancePerformance(serial: str):
     # Code
 ````
 
@@ -4510,7 +4510,7 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-appliance-client-securit
 
 ##### Method Code:
 ```python
-def (networkId: str, clientId: str, total_pages=1, direction='next', **kwargs):
+def getNetworkApplianceClientSecurityEvents(networkId: str, clientId: str, total_pages=1, direction='next', **kwargs):
     # Code
 ````
 
@@ -4532,7 +4532,7 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-appliance-connectivity-m
 
 ##### Method Code:
 ```python
-def (networkId: str):
+def getNetworkApplianceConnectivityMonitoringDestinations(networkId: str):
     # Code
 ````
 
@@ -4554,7 +4554,7 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-appliance-content-filter
 
 ##### Method Code:
 ```python
-def (networkId: str):
+def getNetworkApplianceContentFiltering(networkId: str):
     # Code
 ````
 
@@ -4576,7 +4576,7 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-appliance-content-filter
 
 ##### Method Code:
 ```python
-def (networkId: str):
+def getNetworkApplianceContentFilteringCategories(networkId: str):
     # Code
 ````
 
@@ -4598,7 +4598,7 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-appliance-firewall-cellu
 
 ##### Method Code:
 ```python
-def (networkId: str):
+def getNetworkApplianceFirewallCellularFirewallRules(networkId: str):
     # Code
 ````
 
@@ -4621,7 +4621,7 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-appliance-firewall-firew
 
 ##### Method Code:
 ```python
-def (networkId: str, service: str):
+def getNetworkApplianceFirewallFirewalledService(networkId: str, service: str):
     # Code
 ````
 
@@ -4643,7 +4643,7 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-appliance-firewall-firew
 
 ##### Method Code:
 ```python
-def (networkId: str):
+def getNetworkApplianceFirewallFirewalledServices(networkId: str):
     # Code
 ````
 
@@ -4665,7 +4665,7 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-appliance-firewall-inbou
 
 ##### Method Code:
 ```python
-def (networkId: str):
+def getNetworkApplianceFirewallInboundFirewallRules(networkId: str):
     # Code
 ````
 
@@ -4687,7 +4687,7 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-appliance-firewall-l-3-f
 
 ##### Method Code:
 ```python
-def (networkId: str):
+def getNetworkApplianceFirewallL3FirewallRules(networkId: str):
     # Code
 ````
 
@@ -4709,7 +4709,7 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-appliance-firewall-l-7-f
 
 ##### Method Code:
 ```python
-def (networkId: str):
+def getNetworkApplianceFirewallL7FirewallRules(networkId: str):
     # Code
 ````
 
@@ -4731,7 +4731,7 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-appliance-firewall-l-7-f
 
 ##### Method Code:
 ```python
-def (networkId: str):
+def getNetworkApplianceFirewallL7FirewallRulesApplicationCategories(networkId: str):
     # Code
 ````
 
@@ -4753,7 +4753,7 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-appliance-firewall-one-t
 
 ##### Method Code:
 ```python
-def (networkId: str):
+def getNetworkApplianceFirewallOneToManyNatRules(networkId: str):
     # Code
 ````
 
@@ -4775,7 +4775,7 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-appliance-firewall-one-t
 
 ##### Method Code:
 ```python
-def (networkId: str):
+def getNetworkApplianceFirewallOneToOneNatRules(networkId: str):
     # Code
 ````
 
@@ -4797,7 +4797,7 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-appliance-firewall-port-
 
 ##### Method Code:
 ```python
-def (networkId: str):
+def getNetworkApplianceFirewallPortForwardingRules(networkId: str):
     # Code
 ````
 
@@ -4820,7 +4820,7 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-appliance-port
 
 ##### Method Code:
 ```python
-def (networkId: str, portId: str):
+def getNetworkAppliancePort(networkId: str, portId: str):
     # Code
 ````
 
@@ -4842,7 +4842,7 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-appliance-ports
 
 ##### Method Code:
 ```python
-def (networkId: str):
+def getNetworkAppliancePorts(networkId: str):
     # Code
 ````
 
@@ -4873,7 +4873,7 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-appliance-security-event
 
 ##### Method Code:
 ```python
-def (networkId: str, total_pages=1, direction='next', **kwargs):
+def getNetworkApplianceSecurityEvents(networkId: str, total_pages=1, direction='next', **kwargs):
     # Code
 ````
 
@@ -4895,7 +4895,7 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-appliance-security-intru
 
 ##### Method Code:
 ```python
-def (networkId: str):
+def getNetworkApplianceSecurityIntrusion(networkId: str):
     # Code
 ````
 
@@ -4917,7 +4917,7 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-appliance-security-malwa
 
 ##### Method Code:
 ```python
-def (networkId: str):
+def getNetworkApplianceSecurityMalware(networkId: str):
     # Code
 ````
 
@@ -4939,7 +4939,7 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-appliance-settings
 
 ##### Method Code:
 ```python
-def (networkId: str):
+def getNetworkApplianceSettings(networkId: str):
     # Code
 ````
 
@@ -4961,7 +4961,7 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-appliance-single-lan
 
 ##### Method Code:
 ```python
-def (networkId: str):
+def getNetworkApplianceSingleLan(networkId: str):
     # Code
 ````
 
@@ -4984,7 +4984,7 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-appliance-static-route
 
 ##### Method Code:
 ```python
-def (networkId: str, staticRouteId: str):
+def getNetworkApplianceStaticRoute(networkId: str, staticRouteId: str):
     # Code
 ````
 
@@ -5006,7 +5006,7 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-appliance-static-routes
 
 ##### Method Code:
 ```python
-def (networkId: str):
+def getNetworkApplianceStaticRoutes(networkId: str):
     # Code
 ````
 
@@ -5028,7 +5028,7 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-appliance-traffic-shapin
 
 ##### Method Code:
 ```python
-def (networkId: str):
+def getNetworkApplianceTrafficShaping(networkId: str):
     # Code
 ````
 
@@ -5051,7 +5051,7 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-appliance-traffic-shapin
 
 ##### Method Code:
 ```python
-def (networkId: str, customPerformanceClassId: str):
+def getNetworkApplianceTrafficShapingCustomPerformanceClass(networkId: str, customPerformanceClassId: str):
     # Code
 ````
 
@@ -5073,7 +5073,7 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-appliance-traffic-shapin
 
 ##### Method Code:
 ```python
-def (networkId: str):
+def getNetworkApplianceTrafficShapingCustomPerformanceClasses(networkId: str):
     # Code
 ````
 
@@ -5095,7 +5095,7 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-appliance-traffic-shapin
 
 ##### Method Code:
 ```python
-def (networkId: str):
+def getNetworkApplianceTrafficShapingRules(networkId: str):
     # Code
 ````
 
@@ -5117,7 +5117,7 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-appliance-traffic-shapin
 
 ##### Method Code:
 ```python
-def (networkId: str):
+def getNetworkApplianceTrafficShapingUplinkBandwidth(networkId: str):
     # Code
 ````
 
@@ -5139,7 +5139,7 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-appliance-traffic-shapin
 
 ##### Method Code:
 ```python
-def (networkId: str):
+def getNetworkApplianceTrafficShapingUplinkSelection(networkId: str):
     # Code
 ````
 
@@ -5162,7 +5162,7 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-appliance-vlan
 
 ##### Method Code:
 ```python
-def (networkId: str, vlanId: str):
+def getNetworkApplianceVlan(networkId: str, vlanId: str):
     # Code
 ````
 
@@ -5184,7 +5184,7 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-appliance-vlans
 
 ##### Method Code:
 ```python
-def (networkId: str):
+def getNetworkApplianceVlans(networkId: str):
     # Code
 ````
 
@@ -5206,7 +5206,7 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-appliance-vlans-settings
 
 ##### Method Code:
 ```python
-def (networkId: str):
+def getNetworkApplianceVlansSettings(networkId: str):
     # Code
 ````
 
@@ -5228,7 +5228,7 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-appliance-vpn-bgp
 
 ##### Method Code:
 ```python
-def (networkId: str):
+def getNetworkApplianceVpnBgp(networkId: str):
     # Code
 ````
 
@@ -5250,7 +5250,7 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-appliance-vpn-site-to-si
 
 ##### Method Code:
 ```python
-def (networkId: str):
+def getNetworkApplianceVpnSiteToSiteVpn(networkId: str):
     # Code
 ````
 
@@ -5272,7 +5272,7 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-appliance-warm-spare
 
 ##### Method Code:
 ```python
-def (networkId: str):
+def getNetworkApplianceWarmSpare(networkId: str):
     # Code
 ````
 
@@ -5303,7 +5303,7 @@ https://developer.cisco.com/meraki/api-v1/#!get-organization-appliance-security-
 
 ##### Method Code:
 ```python
-def (organizationId: str, total_pages=1, direction='next', **kwargs):
+def getOrganizationApplianceSecurityEvents(organizationId: str, total_pages=1, direction='next', **kwargs):
     # Code
 ````
 
@@ -5325,7 +5325,7 @@ https://developer.cisco.com/meraki/api-v1/#!get-organization-appliance-security-
 
 ##### Method Code:
 ```python
-def (organizationId: str):
+def getOrganizationApplianceSecurityIntrusion(organizationId: str):
     # Code
 ````
 
@@ -5355,7 +5355,7 @@ https://developer.cisco.com/meraki/api-v1/#!get-organization-appliance-uplink-st
 
 ##### Method Code:
 ```python
-def (organizationId: str, total_pages=1, direction='next', **kwargs):
+def getOrganizationApplianceUplinkStatuses(organizationId: str, total_pages=1, direction='next', **kwargs):
     # Code
 ````
 
@@ -5386,7 +5386,7 @@ https://developer.cisco.com/meraki/api-v1/#!get-organization-appliance-vpn-stats
 
 ##### Method Code:
 ```python
-def (organizationId: str, total_pages=1, direction='next', **kwargs):
+def getOrganizationApplianceVpnStats(organizationId: str, total_pages=1, direction='next', **kwargs):
     # Code
 ````
 
@@ -5414,7 +5414,7 @@ https://developer.cisco.com/meraki/api-v1/#!get-organization-appliance-vpn-statu
 
 ##### Method Code:
 ```python
-def (organizationId: str, total_pages=1, direction='next', **kwargs):
+def getOrganizationApplianceVpnStatuses(organizationId: str, total_pages=1, direction='next', **kwargs):
     # Code
 ````
 
@@ -5436,7 +5436,7 @@ https://developer.cisco.com/meraki/api-v1/#!get-organization-appliance-vpn-third
 
 ##### Method Code:
 ```python
-def (organizationId: str):
+def getOrganizationApplianceVpnThirdPartyVPNPeers(organizationId: str):
     # Code
 ````
 
@@ -5458,7 +5458,7 @@ https://developer.cisco.com/meraki/api-v1/#!get-organization-appliance-vpn-vpn-f
 
 ##### Method Code:
 ```python
-def (organizationId: str):
+def getOrganizationApplianceVpnVpnFirewallRules(organizationId: str):
     # Code
 ````
 
@@ -5480,7 +5480,7 @@ https://developer.cisco.com/meraki/api-v1/#!swap-network-appliance-warm-spare
 
 ##### Method Code:
 ```python
-def (networkId: str):
+def swapNetworkApplianceWarmSpare(networkId: str):
     # Code
 ````
 
@@ -5503,7 +5503,7 @@ https://developer.cisco.com/meraki/api-v1/#!update-network-appliance-connectivit
 
 ##### Method Code:
 ```python
-def (networkId: str, **kwargs):
+def updateNetworkApplianceConnectivityMonitoringDestinations(networkId: str, **kwargs):
     # Code
 ````
 
@@ -5529,7 +5529,7 @@ https://developer.cisco.com/meraki/api-v1/#!update-network-appliance-content-fil
 
 ##### Method Code:
 ```python
-def (networkId: str, **kwargs):
+def updateNetworkApplianceContentFiltering(networkId: str, **kwargs):
     # Code
 ````
 
@@ -5552,7 +5552,7 @@ https://developer.cisco.com/meraki/api-v1/#!update-network-appliance-firewall-ce
 
 ##### Method Code:
 ```python
-def (networkId: str, **kwargs):
+def updateNetworkApplianceFirewallCellularFirewallRules(networkId: str, **kwargs):
     # Code
 ````
 
@@ -5577,7 +5577,7 @@ https://developer.cisco.com/meraki/api-v1/#!update-network-appliance-firewall-fi
 
 ##### Method Code:
 ```python
-def (networkId: str, service: str, access: str, **kwargs):
+def updateNetworkApplianceFirewallFirewalledService(networkId: str, service: str, access: str, **kwargs):
     # Code
 ````
 
@@ -5601,7 +5601,7 @@ https://developer.cisco.com/meraki/api-v1/#!update-network-appliance-firewall-in
 
 ##### Method Code:
 ```python
-def (networkId: str, **kwargs):
+def updateNetworkApplianceFirewallInboundFirewallRules(networkId: str, **kwargs):
     # Code
 ````
 
@@ -5625,7 +5625,7 @@ https://developer.cisco.com/meraki/api-v1/#!update-network-appliance-firewall-l-
 
 ##### Method Code:
 ```python
-def (networkId: str, **kwargs):
+def updateNetworkApplianceFirewallL3FirewallRules(networkId: str, **kwargs):
     # Code
 ````
 
@@ -5648,7 +5648,7 @@ https://developer.cisco.com/meraki/api-v1/#!update-network-appliance-firewall-l-
 
 ##### Method Code:
 ```python
-def (networkId: str, **kwargs):
+def updateNetworkApplianceFirewallL7FirewallRules(networkId: str, **kwargs):
     # Code
 ````
 
@@ -5671,7 +5671,7 @@ https://developer.cisco.com/meraki/api-v1/#!update-network-appliance-firewall-on
 
 ##### Method Code:
 ```python
-def (networkId: str, rules: list):
+def updateNetworkApplianceFirewallOneToManyNatRules(networkId: str, rules: list):
     # Code
 ````
 
@@ -5694,7 +5694,7 @@ https://developer.cisco.com/meraki/api-v1/#!update-network-appliance-firewall-on
 
 ##### Method Code:
 ```python
-def (networkId: str, rules: list):
+def updateNetworkApplianceFirewallOneToOneNatRules(networkId: str, rules: list):
     # Code
 ````
 
@@ -5717,7 +5717,7 @@ https://developer.cisco.com/meraki/api-v1/#!update-network-appliance-firewall-po
 
 ##### Method Code:
 ```python
-def (networkId: str, rules: list):
+def updateNetworkApplianceFirewallPortForwardingRules(networkId: str, rules: list):
     # Code
 ````
 
@@ -5746,7 +5746,7 @@ https://developer.cisco.com/meraki/api-v1/#!update-network-appliance-port
 
 ##### Method Code:
 ```python
-def (networkId: str, portId: str, **kwargs):
+def updateNetworkAppliancePort(networkId: str, portId: str, **kwargs):
     # Code
 ````
 
@@ -5771,7 +5771,7 @@ https://developer.cisco.com/meraki/api-v1/#!update-network-appliance-security-in
 
 ##### Method Code:
 ```python
-def (networkId: str, **kwargs):
+def updateNetworkApplianceSecurityIntrusion(networkId: str, **kwargs):
     # Code
 ````
 
@@ -5796,7 +5796,7 @@ https://developer.cisco.com/meraki/api-v1/#!update-network-appliance-security-ma
 
 ##### Method Code:
 ```python
-def (networkId: str, mode: str, **kwargs):
+def updateNetworkApplianceSecurityMalware(networkId: str, mode: str, **kwargs):
     # Code
 ````
 
@@ -5820,7 +5820,7 @@ https://developer.cisco.com/meraki/api-v1/#!update-network-appliance-single-lan
 
 ##### Method Code:
 ```python
-def (networkId: str, **kwargs):
+def updateNetworkApplianceSingleLan(networkId: str, **kwargs):
     # Code
 ````
 
@@ -5849,7 +5849,7 @@ https://developer.cisco.com/meraki/api-v1/#!update-network-appliance-static-rout
 
 ##### Method Code:
 ```python
-def (networkId: str, staticRouteId: str, **kwargs):
+def updateNetworkApplianceStaticRoute(networkId: str, staticRouteId: str, **kwargs):
     # Code
 ````
 
@@ -5872,7 +5872,7 @@ https://developer.cisco.com/meraki/api-v1/#!update-network-appliance-traffic-sha
 
 ##### Method Code:
 ```python
-def (networkId: str, **kwargs):
+def updateNetworkApplianceTrafficShaping(networkId: str, **kwargs):
     # Code
 ````
 
@@ -5899,7 +5899,7 @@ https://developer.cisco.com/meraki/api-v1/#!update-network-appliance-traffic-sha
 
 ##### Method Code:
 ```python
-def (networkId: str, customPerformanceClassId: str, **kwargs):
+def updateNetworkApplianceTrafficShapingCustomPerformanceClass(networkId: str, customPerformanceClassId: str, **kwargs):
     # Code
 ````
 
@@ -5926,7 +5926,7 @@ you are allowed a maximum of 8 rules.
 
 ##### Method Code:
 ```python
-def (networkId: str, **kwargs):
+def updateNetworkApplianceTrafficShapingRules(networkId: str, **kwargs):
     # Code
 ````
 
@@ -5949,7 +5949,7 @@ https://developer.cisco.com/meraki/api-v1/#!update-network-appliance-traffic-sha
 
 ##### Method Code:
 ```python
-def (networkId: str, **kwargs):
+def updateNetworkApplianceTrafficShapingUplinkBandwidth(networkId: str, **kwargs):
     # Code
 ````
 
@@ -5976,7 +5976,7 @@ https://developer.cisco.com/meraki/api-v1/#!update-network-appliance-traffic-sha
 
 ##### Method Code:
 ```python
-def (networkId: str, **kwargs):
+def updateNetworkApplianceTrafficShapingUplinkSelection(networkId: str, **kwargs):
     # Code
 ````
 
@@ -6014,7 +6014,7 @@ https://developer.cisco.com/meraki/api-v1/#!update-network-appliance-vlan
 
 ##### Method Code:
 ```python
-def (networkId: str, vlanId: str, **kwargs):
+def updateNetworkApplianceVlan(networkId: str, vlanId: str, **kwargs):
     # Code
 ````
 
@@ -6037,7 +6037,7 @@ https://developer.cisco.com/meraki/api-v1/#!update-network-appliance-vlans-setti
 
 ##### Method Code:
 ```python
-def (networkId: str, **kwargs):
+def updateNetworkApplianceVlansSettings(networkId: str, **kwargs):
     # Code
 ````
 
@@ -6063,7 +6063,7 @@ https://developer.cisco.com/meraki/api-v1/#!update-network-appliance-vpn-bgp
 
 ##### Method Code:
 ```python
-def (networkId: str, enabled: bool, **kwargs):
+def updateNetworkApplianceVpnBgp(networkId: str, enabled: bool, **kwargs):
     # Code
 ````
 
@@ -6088,7 +6088,7 @@ https://developer.cisco.com/meraki/api-v1/#!update-network-appliance-vpn-site-to
 
 ##### Method Code:
 ```python
-def (networkId: str, mode: str, **kwargs):
+def updateNetworkApplianceVpnSiteToSiteVpn(networkId: str, mode: str, **kwargs):
     # Code
 ````
 
@@ -6115,7 +6115,7 @@ https://developer.cisco.com/meraki/api-v1/#!update-network-appliance-warm-spare
 
 ##### Method Code:
 ```python
-def (networkId: str, enabled: bool, **kwargs):
+def updateNetworkApplianceWarmSpare(networkId: str, enabled: bool, **kwargs):
     # Code
 ````
 
@@ -6138,7 +6138,7 @@ https://developer.cisco.com/meraki/api-v1/#!update-organization-appliance-securi
 
 ##### Method Code:
 ```python
-def (organizationId: str, allowedRules: list):
+def updateOrganizationApplianceSecurityIntrusion(organizationId: str, allowedRules: list):
     # Code
 ````
 
@@ -6161,7 +6161,7 @@ https://developer.cisco.com/meraki/api-v1/#!update-organization-appliance-vpn-th
 
 ##### Method Code:
 ```python
-def (organizationId: str, peers: list):
+def updateOrganizationApplianceVpnThirdPartyVPNPeers(organizationId: str, peers: list):
     # Code
 ````
 
@@ -6185,7 +6185,7 @@ https://developer.cisco.com/meraki/api-v1/#!update-organization-appliance-vpn-vp
 
 ##### Method Code:
 ```python
-def (organizationId: str, **kwargs):
+def updateOrganizationApplianceVpnVpnFirewallRules(organizationId: str, **kwargs):
     # Code
 ````
 
@@ -6222,7 +6222,7 @@ https://developer.cisco.com/meraki/api-v1/#!create-network-camera-quality-retent
 
 ##### Method Code:
 ```python
-def (networkId: str, name: str, **kwargs):
+def createNetworkCameraQualityRetentionProfile(networkId: str, name: str, **kwargs):
     # Code
 ````
 
@@ -6245,7 +6245,7 @@ https://developer.cisco.com/meraki/api-v1/#!delete-network-camera-quality-retent
 
 ##### Method Code:
 ```python
-def (networkId: str, qualityRetentionProfileId: str):
+def deleteNetworkCameraQualityRetentionProfile(networkId: str, qualityRetentionProfileId: str):
     # Code
 ````
 
@@ -6269,7 +6269,7 @@ https://developer.cisco.com/meraki/api-v1/#!generate-device-camera-snapshot
 
 ##### Method Code:
 ```python
-def (serial: str, **kwargs):
+def generateDeviceCameraSnapshot(serial: str, **kwargs):
     # Code
 ````
 
@@ -6291,7 +6291,7 @@ https://developer.cisco.com/meraki/api-v1/#!get-device-camera-analytics-live
 
 ##### Method Code:
 ```python
-def (serial: str):
+def getDeviceCameraAnalyticsLive(serial: str):
     # Code
 ````
 
@@ -6317,7 +6317,7 @@ https://developer.cisco.com/meraki/api-v1/#!get-device-camera-analytics-overview
 
 ##### Method Code:
 ```python
-def (serial: str, **kwargs):
+def getDeviceCameraAnalyticsOverview(serial: str, **kwargs):
     # Code
 ````
 
@@ -6340,7 +6340,7 @@ https://developer.cisco.com/meraki/api-v1/#!get-device-camera-analytics-recent
 
 ##### Method Code:
 ```python
-def (serial: str, **kwargs):
+def getDeviceCameraAnalyticsRecent(serial: str, **kwargs):
     # Code
 ````
 
@@ -6368,7 +6368,7 @@ https://developer.cisco.com/meraki/api-v1/#!get-device-camera-analytics-zone-his
 
 ##### Method Code:
 ```python
-def (serial: str, zoneId: str, **kwargs):
+def getDeviceCameraAnalyticsZoneHistory(serial: str, zoneId: str, **kwargs):
     # Code
 ````
 
@@ -6390,7 +6390,7 @@ https://developer.cisco.com/meraki/api-v1/#!get-device-camera-analytics-zones
 
 ##### Method Code:
 ```python
-def (serial: str):
+def getDeviceCameraAnalyticsZones(serial: str):
     # Code
 ````
 
@@ -6412,7 +6412,7 @@ https://developer.cisco.com/meraki/api-v1/#!get-device-camera-quality-and-retent
 
 ##### Method Code:
 ```python
-def (serial: str):
+def getDeviceCameraQualityAndRetention(serial: str):
     # Code
 ````
 
@@ -6434,7 +6434,7 @@ https://developer.cisco.com/meraki/api-v1/#!get-device-camera-sense
 
 ##### Method Code:
 ```python
-def (serial: str):
+def getDeviceCameraSense(serial: str):
     # Code
 ````
 
@@ -6456,7 +6456,7 @@ https://developer.cisco.com/meraki/api-v1/#!get-device-camera-sense-object-detec
 
 ##### Method Code:
 ```python
-def (serial: str):
+def getDeviceCameraSenseObjectDetectionModels(serial: str):
     # Code
 ````
 
@@ -6479,7 +6479,7 @@ https://developer.cisco.com/meraki/api-v1/#!get-device-camera-video-link
 
 ##### Method Code:
 ```python
-def (serial: str, **kwargs):
+def getDeviceCameraVideoLink(serial: str, **kwargs):
     # Code
 ````
 
@@ -6501,7 +6501,7 @@ https://developer.cisco.com/meraki/api-v1/#!get-device-camera-video-settings
 
 ##### Method Code:
 ```python
-def (serial: str):
+def getDeviceCameraVideoSettings(serial: str):
     # Code
 ````
 
@@ -6524,7 +6524,7 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-camera-quality-retention
 
 ##### Method Code:
 ```python
-def (networkId: str, qualityRetentionProfileId: str):
+def getNetworkCameraQualityRetentionProfile(networkId: str, qualityRetentionProfileId: str):
     # Code
 ````
 
@@ -6546,7 +6546,7 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-camera-quality-retention
 
 ##### Method Code:
 ```python
-def (networkId: str):
+def getNetworkCameraQualityRetentionProfiles(networkId: str):
     # Code
 ````
 
@@ -6568,7 +6568,7 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-camera-schedules
 
 ##### Method Code:
 ```python
-def (networkId: str):
+def getNetworkCameraSchedules(networkId: str):
     # Code
 ````
 
@@ -6597,7 +6597,7 @@ https://developer.cisco.com/meraki/api-v1/#!update-device-camera-quality-and-ret
 
 ##### Method Code:
 ```python
-def (serial: str, **kwargs):
+def updateDeviceCameraQualityAndRetention(serial: str, **kwargs):
     # Code
 ````
 
@@ -6622,7 +6622,7 @@ https://developer.cisco.com/meraki/api-v1/#!update-device-camera-sense
 
 ##### Method Code:
 ```python
-def (serial: str, **kwargs):
+def updateDeviceCameraSense(serial: str, **kwargs):
     # Code
 ````
 
@@ -6645,7 +6645,7 @@ https://developer.cisco.com/meraki/api-v1/#!update-device-camera-video-settings
 
 ##### Method Code:
 ```python
-def (serial: str, **kwargs):
+def updateDeviceCameraVideoSettings(serial: str, **kwargs):
     # Code
 ````
 
@@ -6677,7 +6677,7 @@ https://developer.cisco.com/meraki/api-v1/#!update-network-camera-quality-retent
 
 ##### Method Code:
 ```python
-def (networkId: str, qualityRetentionProfileId: str, **kwargs):
+def updateNetworkCameraQualityRetentionProfile(networkId: str, qualityRetentionProfileId: str, **kwargs):
     # Code
 ````
 
@@ -6705,7 +6705,7 @@ https://developer.cisco.com/meraki/api-v1/#!get-device-cellular-gateway-lan
 
 ##### Method Code:
 ```python
-def (serial: str):
+def getDeviceCellularGatewayLan(serial: str):
     # Code
 ````
 
@@ -6727,7 +6727,7 @@ https://developer.cisco.com/meraki/api-v1/#!get-device-cellular-gateway-port-for
 
 ##### Method Code:
 ```python
-def (serial: str):
+def getDeviceCellularGatewayPortForwardingRules(serial: str):
     # Code
 ````
 
@@ -6749,7 +6749,7 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-cellular-gateway-connect
 
 ##### Method Code:
 ```python
-def (networkId: str):
+def getNetworkCellularGatewayConnectivityMonitoringDestinations(networkId: str):
     # Code
 ````
 
@@ -6771,7 +6771,7 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-cellular-gateway-dhcp
 
 ##### Method Code:
 ```python
-def (networkId: str):
+def getNetworkCellularGatewayDhcp(networkId: str):
     # Code
 ````
 
@@ -6793,7 +6793,7 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-cellular-gateway-subnet-
 
 ##### Method Code:
 ```python
-def (networkId: str):
+def getNetworkCellularGatewaySubnetPool(networkId: str):
     # Code
 ````
 
@@ -6815,7 +6815,7 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-cellular-gateway-uplink
 
 ##### Method Code:
 ```python
-def (networkId: str):
+def getNetworkCellularGatewayUplink(networkId: str):
     # Code
 ````
 
@@ -6845,7 +6845,7 @@ https://developer.cisco.com/meraki/api-v1/#!get-organization-cellular-gateway-up
 
 ##### Method Code:
 ```python
-def (organizationId: str, total_pages=1, direction='next', **kwargs):
+def getOrganizationCellularGatewayUplinkStatuses(organizationId: str, total_pages=1, direction='next', **kwargs):
     # Code
 ````
 
@@ -6869,7 +6869,7 @@ https://developer.cisco.com/meraki/api-v1/#!update-device-cellular-gateway-lan
 
 ##### Method Code:
 ```python
-def (serial: str, **kwargs):
+def updateDeviceCellularGatewayLan(serial: str, **kwargs):
     # Code
 ````
 
@@ -6892,7 +6892,7 @@ https://developer.cisco.com/meraki/api-v1/#!update-device-cellular-gateway-port-
 
 ##### Method Code:
 ```python
-def (serial: str, **kwargs):
+def updateDeviceCellularGatewayPortForwardingRules(serial: str, **kwargs):
     # Code
 ````
 
@@ -6915,7 +6915,7 @@ https://developer.cisco.com/meraki/api-v1/#!update-network-cellular-gateway-conn
 
 ##### Method Code:
 ```python
-def (networkId: str, **kwargs):
+def updateNetworkCellularGatewayConnectivityMonitoringDestinations(networkId: str, **kwargs):
     # Code
 ````
 
@@ -6940,7 +6940,7 @@ https://developer.cisco.com/meraki/api-v1/#!update-network-cellular-gateway-dhcp
 
 ##### Method Code:
 ```python
-def (networkId: str, **kwargs):
+def updateNetworkCellularGatewayDhcp(networkId: str, **kwargs):
     # Code
 ````
 
@@ -6964,7 +6964,7 @@ https://developer.cisco.com/meraki/api-v1/#!update-network-cellular-gateway-subn
 
 ##### Method Code:
 ```python
-def (networkId: str, **kwargs):
+def updateNetworkCellularGatewaySubnetPool(networkId: str, **kwargs):
     # Code
 ````
 
@@ -6987,7 +6987,7 @@ https://developer.cisco.com/meraki/api-v1/#!update-network-cellular-gateway-upli
 
 ##### Method Code:
 ```python
-def (networkId: str, **kwargs):
+def updateNetworkCellularGatewayUplink(networkId: str, **kwargs):
     # Code
 ````
 
@@ -7018,7 +7018,7 @@ https://developer.cisco.com/meraki/api-v1/#!create-organization-insight-monitore
 
 ##### Method Code:
 ```python
-def (organizationId: str, name: str, address: str, **kwargs):
+def createOrganizationInsightMonitoredMediaServer(organizationId: str, name: str, address: str, **kwargs):
     # Code
 ````
 
@@ -7041,7 +7041,7 @@ https://developer.cisco.com/meraki/api-v1/#!delete-organization-insight-monitore
 
 ##### Method Code:
 ```python
-def (organizationId: str, monitoredMediaServerId: str):
+def deleteOrganizationInsightMonitoredMediaServer(organizationId: str, monitoredMediaServerId: str):
     # Code
 ````
 
@@ -7064,7 +7064,7 @@ https://developer.cisco.com/meraki/api-v1/#!get-organization-insight-monitored-m
 
 ##### Method Code:
 ```python
-def (organizationId: str, monitoredMediaServerId: str):
+def getOrganizationInsightMonitoredMediaServer(organizationId: str, monitoredMediaServerId: str):
     # Code
 ````
 
@@ -7086,7 +7086,7 @@ https://developer.cisco.com/meraki/api-v1/#!get-organization-insight-monitored-m
 
 ##### Method Code:
 ```python
-def (organizationId: str):
+def getOrganizationInsightMonitoredMediaServers(organizationId: str):
     # Code
 ````
 
@@ -7112,7 +7112,7 @@ https://developer.cisco.com/meraki/api-v1/#!update-organization-insight-monitore
 
 ##### Method Code:
 ```python
-def (organizationId: str, monitoredMediaServerId: str, **kwargs):
+def updateOrganizationInsightMonitoredMediaServer(organizationId: str, monitoredMediaServerId: str, **kwargs):
     # Code
 ````
 
@@ -7144,7 +7144,7 @@ https://developer.cisco.com/meraki/api-v1/#!checkin-network-sm-devices
 
 ##### Method Code:
 ```python
-def (networkId: str, **kwargs):
+def checkinNetworkSmDevices(networkId: str, **kwargs):
     # Code
 ````
 
@@ -7167,7 +7167,7 @@ https://developer.cisco.com/meraki/api-v1/#!create-network-sm-bypass-activation-
 
 ##### Method Code:
 ```python
-def (networkId: str, ids: list):
+def createNetworkSmBypassActivationLockAttempt(networkId: str, ids: list):
     # Code
 ````
 
@@ -7191,7 +7191,7 @@ https://developer.cisco.com/meraki/api-v1/#!create-network-sm-target-group
 
 ##### Method Code:
 ```python
-def (networkId: str, **kwargs):
+def createNetworkSmTargetGroup(networkId: str, **kwargs):
     # Code
 ````
 
@@ -7214,7 +7214,7 @@ https://developer.cisco.com/meraki/api-v1/#!delete-network-sm-target-group
 
 ##### Method Code:
 ```python
-def (networkId: str, targetGroupId: str):
+def deleteNetworkSmTargetGroup(networkId: str, targetGroupId: str):
     # Code
 ````
 
@@ -7237,7 +7237,7 @@ https://developer.cisco.com/meraki/api-v1/#!delete-network-sm-user-access-device
 
 ##### Method Code:
 ```python
-def (networkId: str, userAccessDeviceId: str):
+def deleteNetworkSmUserAccessDevice(networkId: str, userAccessDeviceId: str):
     # Code
 ````
 
@@ -7260,7 +7260,7 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-sm-bypass-activation-loc
 
 ##### Method Code:
 ```python
-def (networkId: str, attemptId: str):
+def getNetworkSmBypassActivationLockAttempt(networkId: str, attemptId: str):
     # Code
 ````
 
@@ -7283,7 +7283,7 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-sm-device-cellular-usage
 
 ##### Method Code:
 ```python
-def (networkId: str, deviceId: str):
+def getNetworkSmDeviceCellularUsageHistory(networkId: str, deviceId: str):
     # Code
 ````
 
@@ -7306,7 +7306,7 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-sm-device-certs
 
 ##### Method Code:
 ```python
-def (networkId: str, deviceId: str):
+def getNetworkSmDeviceCerts(networkId: str, deviceId: str):
     # Code
 ````
 
@@ -7334,7 +7334,7 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-sm-device-connectivity
 
 ##### Method Code:
 ```python
-def (networkId: str, deviceId: str, total_pages=1, direction='next', **kwargs):
+def getNetworkSmDeviceConnectivity(networkId: str, deviceId: str, total_pages=1, direction='next', **kwargs):
     # Code
 ````
 
@@ -7362,7 +7362,7 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-sm-device-desktop-logs
 
 ##### Method Code:
 ```python
-def (networkId: str, deviceId: str, total_pages=1, direction='next', **kwargs):
+def getNetworkSmDeviceDesktopLogs(networkId: str, deviceId: str, total_pages=1, direction='next', **kwargs):
     # Code
 ````
 
@@ -7390,7 +7390,7 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-sm-device-device-command
 
 ##### Method Code:
 ```python
-def (networkId: str, deviceId: str, total_pages=1, direction='next', **kwargs):
+def getNetworkSmDeviceDeviceCommandLogs(networkId: str, deviceId: str, total_pages=1, direction='next', **kwargs):
     # Code
 ````
 
@@ -7413,7 +7413,7 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-sm-device-device-profile
 
 ##### Method Code:
 ```python
-def (networkId: str, deviceId: str):
+def getNetworkSmDeviceDeviceProfiles(networkId: str, deviceId: str):
     # Code
 ````
 
@@ -7436,7 +7436,7 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-sm-device-network-adapte
 
 ##### Method Code:
 ```python
-def (networkId: str, deviceId: str):
+def getNetworkSmDeviceNetworkAdapters(networkId: str, deviceId: str):
     # Code
 ````
 
@@ -7464,7 +7464,7 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-sm-device-performance-hi
 
 ##### Method Code:
 ```python
-def (networkId: str, deviceId: str, total_pages=1, direction='next', **kwargs):
+def getNetworkSmDevicePerformanceHistory(networkId: str, deviceId: str, total_pages=1, direction='next', **kwargs):
     # Code
 ````
 
@@ -7487,7 +7487,7 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-sm-device-restrictions
 
 ##### Method Code:
 ```python
-def (networkId: str, deviceId: str):
+def getNetworkSmDeviceRestrictions(networkId: str, deviceId: str):
     # Code
 ````
 
@@ -7510,7 +7510,7 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-sm-device-security-cente
 
 ##### Method Code:
 ```python
-def (networkId: str, deviceId: str):
+def getNetworkSmDeviceSecurityCenters(networkId: str, deviceId: str):
     # Code
 ````
 
@@ -7533,7 +7533,7 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-sm-device-softwares
 
 ##### Method Code:
 ```python
-def (networkId: str, deviceId: str):
+def getNetworkSmDeviceSoftwares(networkId: str, deviceId: str):
     # Code
 ````
 
@@ -7556,7 +7556,7 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-sm-device-wlan-lists
 
 ##### Method Code:
 ```python
-def (networkId: str, deviceId: str):
+def getNetworkSmDeviceWlanLists(networkId: str, deviceId: str):
     # Code
 ````
 
@@ -7594,7 +7594,7 @@ hardwareEncryptionCaps, passCodeLock, usesHardwareKeystore, and androidSecurityP
 
 ##### Method Code:
 ```python
-def (networkId: str, total_pages=1, direction='next', **kwargs):
+def getNetworkSmDevices(networkId: str, total_pages=1, direction='next', **kwargs):
     # Code
 ````
 
@@ -7616,7 +7616,7 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-sm-profiles
 
 ##### Method Code:
 ```python
-def (networkId: str):
+def getNetworkSmProfiles(networkId: str):
     # Code
 ````
 
@@ -7640,7 +7640,7 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-sm-target-group
 
 ##### Method Code:
 ```python
-def (networkId: str, targetGroupId: str, **kwargs):
+def getNetworkSmTargetGroup(networkId: str, targetGroupId: str, **kwargs):
     # Code
 ````
 
@@ -7663,7 +7663,7 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-sm-target-groups
 
 ##### Method Code:
 ```python
-def (networkId: str, **kwargs):
+def getNetworkSmTargetGroups(networkId: str, **kwargs):
     # Code
 ````
 
@@ -7690,7 +7690,7 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-sm-user-access-devices
 
 ##### Method Code:
 ```python
-def (networkId: str, total_pages=1, direction='next', **kwargs):
+def getNetworkSmUserAccessDevices(networkId: str, total_pages=1, direction='next', **kwargs):
     # Code
 ````
 
@@ -7713,7 +7713,7 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-sm-user-device-profiles
 
 ##### Method Code:
 ```python
-def (networkId: str, userId: str):
+def getNetworkSmUserDeviceProfiles(networkId: str, userId: str):
     # Code
 ````
 
@@ -7736,7 +7736,7 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-sm-user-softwares
 
 ##### Method Code:
 ```python
-def (networkId: str, userId: str):
+def getNetworkSmUserSoftwares(networkId: str, userId: str):
     # Code
 ````
 
@@ -7762,7 +7762,7 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-sm-users
 
 ##### Method Code:
 ```python
-def (networkId: str, **kwargs):
+def getNetworkSmUsers(networkId: str, **kwargs):
     # Code
 ````
 
@@ -7784,7 +7784,7 @@ https://developer.cisco.com/meraki/api-v1/#!get-organization-sm-apns-cert
 
 ##### Method Code:
 ```python
-def (organizationId: str):
+def getOrganizationSmApnsCert(organizationId: str):
     # Code
 ````
 
@@ -7807,7 +7807,7 @@ https://developer.cisco.com/meraki/api-v1/#!get-organization-sm-vpp-account
 
 ##### Method Code:
 ```python
-def (organizationId: str, vppAccountId: str):
+def getOrganizationSmVppAccount(organizationId: str, vppAccountId: str):
     # Code
 ````
 
@@ -7829,7 +7829,7 @@ https://developer.cisco.com/meraki/api-v1/#!get-organization-sm-vpp-accounts
 
 ##### Method Code:
 ```python
-def (organizationId: str):
+def getOrganizationSmVppAccounts(organizationId: str):
     # Code
 ````
 
@@ -7856,7 +7856,7 @@ https://developer.cisco.com/meraki/api-v1/#!lock-network-sm-devices
 
 ##### Method Code:
 ```python
-def (networkId: str, **kwargs):
+def lockNetworkSmDevices(networkId: str, **kwargs):
     # Code
 ````
 
@@ -7884,7 +7884,7 @@ https://developer.cisco.com/meraki/api-v1/#!modify-network-sm-devices-tags
 
 ##### Method Code:
 ```python
-def (networkId: str, tags: list, updateAction: str, **kwargs):
+def modifyNetworkSmDevicesTags(networkId: str, tags: list, updateAction: str, **kwargs):
     # Code
 ````
 
@@ -7911,7 +7911,7 @@ https://developer.cisco.com/meraki/api-v1/#!move-network-sm-devices
 
 ##### Method Code:
 ```python
-def (networkId: str, newNetwork: str, **kwargs):
+def moveNetworkSmDevices(networkId: str, newNetwork: str, **kwargs):
     # Code
 ````
 
@@ -7934,7 +7934,7 @@ https://developer.cisco.com/meraki/api-v1/#!refresh-network-sm-device-details
 
 ##### Method Code:
 ```python
-def (networkId: str, deviceId: str):
+def refreshNetworkSmDeviceDetails(networkId: str, deviceId: str):
     # Code
 ````
 
@@ -7957,7 +7957,7 @@ https://developer.cisco.com/meraki/api-v1/#!unenroll-network-sm-device
 
 ##### Method Code:
 ```python
-def (networkId: str, deviceId: str):
+def unenrollNetworkSmDevice(networkId: str, deviceId: str):
     # Code
 ````
 
@@ -7983,7 +7983,7 @@ https://developer.cisco.com/meraki/api-v1/#!update-network-sm-devices-fields
 
 ##### Method Code:
 ```python
-def (networkId: str, deviceFields: dict, **kwargs):
+def updateNetworkSmDevicesFields(networkId: str, deviceFields: dict, **kwargs):
     # Code
 ````
 
@@ -8008,7 +8008,7 @@ https://developer.cisco.com/meraki/api-v1/#!update-network-sm-target-group
 
 ##### Method Code:
 ```python
-def (networkId: str, targetGroupId: str, **kwargs):
+def updateNetworkSmTargetGroup(networkId: str, targetGroupId: str, **kwargs):
     # Code
 ````
 
@@ -8034,7 +8034,7 @@ https://developer.cisco.com/meraki/api-v1/#!wipe-network-sm-devices
 
 ##### Method Code:
 ```python
-def (networkId: str, **kwargs):
+def wipeNetworkSmDevices(networkId: str, **kwargs):
     # Code
 ````
 
@@ -8064,7 +8064,7 @@ https://developer.cisco.com/meraki/api-v1/#!add-network-switch-stack
 
 ##### Method Code:
 ```python
-def (networkId: str, switchStackId: str, serial: str):
+def addNetworkSwitchStack(networkId: str, switchStackId: str, serial: str):
     # Code
 ````
 
@@ -8088,7 +8088,7 @@ https://developer.cisco.com/meraki/api-v1/#!clone-organization-switch-devices
 
 ##### Method Code:
 ```python
-def (organizationId: str, sourceSerial: str, targetSerials: list):
+def cloneOrganizationSwitchDevices(organizationId: str, sourceSerial: str, targetSerials: list):
     # Code
 ````
 
@@ -8117,7 +8117,7 @@ https://developer.cisco.com/meraki/api-v1/#!create-device-switch-routing-interfa
 
 ##### Method Code:
 ```python
-def (serial: str, name: str, interfaceIp: str, vlanId: int, **kwargs):
+def createDeviceSwitchRoutingInterface(serial: str, name: str, interfaceIp: str, vlanId: int, **kwargs):
     # Code
 ````
 
@@ -8144,7 +8144,7 @@ https://developer.cisco.com/meraki/api-v1/#!create-device-switch-routing-static-
 
 ##### Method Code:
 ```python
-def (serial: str, subnet: str, nextHopIp: str, **kwargs):
+def createDeviceSwitchRoutingStaticRoute(serial: str, subnet: str, nextHopIp: str, **kwargs):
     # Code
 ````
 
@@ -8179,7 +8179,7 @@ https://developer.cisco.com/meraki/api-v1/#!create-network-switch-access-policy
 
 ##### Method Code:
 ```python
-def (networkId: str, name: str, radiusServers: list, radiusTestingEnabled: bool, radiusCoaSupportEnabled: bool, radiusAccountingEnabled: bool, hostMode: str, urlRedirectWalledGardenEnabled: bool, **kwargs):
+def createNetworkSwitchAccessPolicy(networkId: str, name: str, radiusServers: list, radiusTestingEnabled: bool, radiusCoaSupportEnabled: bool, radiusAccountingEnabled: bool, hostMode: str, urlRedirectWalledGardenEnabled: bool, **kwargs):
     # Code
 ````
 
@@ -8203,7 +8203,7 @@ https://developer.cisco.com/meraki/api-v1/#!create-network-switch-link-aggregati
 
 ##### Method Code:
 ```python
-def (networkId: str, **kwargs):
+def createNetworkSwitchLinkAggregation(networkId: str, **kwargs):
     # Code
 ````
 
@@ -8230,7 +8230,7 @@ Any unspecified day in the schedule is added as a default schedule configuration
 
 ##### Method Code:
 ```python
-def (networkId: str, name: str, **kwargs):
+def createNetworkSwitchPortSchedule(networkId: str, name: str, **kwargs):
     # Code
 ````
 
@@ -8259,7 +8259,7 @@ https://developer.cisco.com/meraki/api-v1/#!create-network-switch-qos-rule
 
 ##### Method Code:
 ```python
-def (networkId: str, vlan: int, **kwargs):
+def createNetworkSwitchQosRule(networkId: str, vlan: int, **kwargs):
     # Code
 ````
 
@@ -8283,7 +8283,7 @@ https://developer.cisco.com/meraki/api-v1/#!create-network-switch-routing-multic
 
 ##### Method Code:
 ```python
-def (networkId: str, interfaceIp: str, multicastGroup: str):
+def createNetworkSwitchRoutingMulticastRendezvousPoint(networkId: str, interfaceIp: str, multicastGroup: str):
     # Code
 ````
 
@@ -8307,7 +8307,7 @@ https://developer.cisco.com/meraki/api-v1/#!create-network-switch-stack
 
 ##### Method Code:
 ```python
-def (networkId: str, name: str, serials: list):
+def createNetworkSwitchStack(networkId: str, name: str, serials: list):
     # Code
 ````
 
@@ -8337,7 +8337,7 @@ https://developer.cisco.com/meraki/api-v1/#!create-network-switch-stack-routing-
 
 ##### Method Code:
 ```python
-def (networkId: str, switchStackId: str, name: str, subnet: str, interfaceIp: str, vlanId: int, **kwargs):
+def createNetworkSwitchStackRoutingInterface(networkId: str, switchStackId: str, name: str, subnet: str, interfaceIp: str, vlanId: int, **kwargs):
     # Code
 ````
 
@@ -8365,7 +8365,7 @@ https://developer.cisco.com/meraki/api-v1/#!create-network-switch-stack-routing-
 
 ##### Method Code:
 ```python
-def (networkId: str, switchStackId: str, subnet: str, nextHopIp: str, **kwargs):
+def createNetworkSwitchStackRoutingStaticRoute(networkId: str, switchStackId: str, subnet: str, nextHopIp: str, **kwargs):
     # Code
 ````
 
@@ -8388,7 +8388,7 @@ https://developer.cisco.com/meraki/api-v1/#!cycle-device-switch-ports
 
 ##### Method Code:
 ```python
-def (serial: str, ports: list):
+def cycleDeviceSwitchPorts(serial: str, ports: list):
     # Code
 ````
 
@@ -8411,7 +8411,7 @@ https://developer.cisco.com/meraki/api-v1/#!delete-device-switch-routing-interfa
 
 ##### Method Code:
 ```python
-def (serial: str, interfaceId: str):
+def deleteDeviceSwitchRoutingInterface(serial: str, interfaceId: str):
     # Code
 ````
 
@@ -8434,7 +8434,7 @@ https://developer.cisco.com/meraki/api-v1/#!delete-device-switch-routing-static-
 
 ##### Method Code:
 ```python
-def (serial: str, staticRouteId: str):
+def deleteDeviceSwitchRoutingStaticRoute(serial: str, staticRouteId: str):
     # Code
 ````
 
@@ -8457,7 +8457,7 @@ https://developer.cisco.com/meraki/api-v1/#!delete-network-switch-access-policy
 
 ##### Method Code:
 ```python
-def (networkId: str, accessPolicyNumber: str):
+def deleteNetworkSwitchAccessPolicy(networkId: str, accessPolicyNumber: str):
     # Code
 ````
 
@@ -8480,7 +8480,7 @@ https://developer.cisco.com/meraki/api-v1/#!delete-network-switch-link-aggregati
 
 ##### Method Code:
 ```python
-def (networkId: str, linkAggregationId: str):
+def deleteNetworkSwitchLinkAggregation(networkId: str, linkAggregationId: str):
     # Code
 ````
 
@@ -8503,7 +8503,7 @@ https://developer.cisco.com/meraki/api-v1/#!delete-network-switch-port-schedule
 
 ##### Method Code:
 ```python
-def (networkId: str, portScheduleId: str):
+def deleteNetworkSwitchPortSchedule(networkId: str, portScheduleId: str):
     # Code
 ````
 
@@ -8526,7 +8526,7 @@ https://developer.cisco.com/meraki/api-v1/#!delete-network-switch-qos-rule
 
 ##### Method Code:
 ```python
-def (networkId: str, qosRuleId: str):
+def deleteNetworkSwitchQosRule(networkId: str, qosRuleId: str):
     # Code
 ````
 
@@ -8549,7 +8549,7 @@ https://developer.cisco.com/meraki/api-v1/#!delete-network-switch-routing-multic
 
 ##### Method Code:
 ```python
-def (networkId: str, rendezvousPointId: str):
+def deleteNetworkSwitchRoutingMulticastRendezvousPoint(networkId: str, rendezvousPointId: str):
     # Code
 ````
 
@@ -8572,7 +8572,7 @@ https://developer.cisco.com/meraki/api-v1/#!delete-network-switch-stack
 
 ##### Method Code:
 ```python
-def (networkId: str, switchStackId: str):
+def deleteNetworkSwitchStack(networkId: str, switchStackId: str):
     # Code
 ````
 
@@ -8596,7 +8596,7 @@ https://developer.cisco.com/meraki/api-v1/#!delete-network-switch-stack-routing-
 
 ##### Method Code:
 ```python
-def (networkId: str, switchStackId: str, interfaceId: str):
+def deleteNetworkSwitchStackRoutingInterface(networkId: str, switchStackId: str, interfaceId: str):
     # Code
 ````
 
@@ -8620,7 +8620,7 @@ https://developer.cisco.com/meraki/api-v1/#!delete-network-switch-stack-routing-
 
 ##### Method Code:
 ```python
-def (networkId: str, switchStackId: str, staticRouteId: str):
+def deleteNetworkSwitchStackRoutingStaticRoute(networkId: str, switchStackId: str, staticRouteId: str):
     # Code
 ````
 
@@ -8643,7 +8643,7 @@ https://developer.cisco.com/meraki/api-v1/#!get-device-switch-port
 
 ##### Method Code:
 ```python
-def (serial: str, portId: str):
+def getDeviceSwitchPort(serial: str, portId: str):
     # Code
 ````
 
@@ -8665,7 +8665,7 @@ https://developer.cisco.com/meraki/api-v1/#!get-device-switch-ports
 
 ##### Method Code:
 ```python
-def (serial: str):
+def getDeviceSwitchPorts(serial: str):
     # Code
 ````
 
@@ -8689,7 +8689,7 @@ https://developer.cisco.com/meraki/api-v1/#!get-device-switch-ports-statuses
 
 ##### Method Code:
 ```python
-def (serial: str, **kwargs):
+def getDeviceSwitchPortsStatuses(serial: str, **kwargs):
     # Code
 ````
 
@@ -8713,7 +8713,7 @@ https://developer.cisco.com/meraki/api-v1/#!get-device-switch-ports-statuses-pac
 
 ##### Method Code:
 ```python
-def (serial: str, **kwargs):
+def getDeviceSwitchPortsStatusesPackets(serial: str, **kwargs):
     # Code
 ````
 
@@ -8736,7 +8736,7 @@ https://developer.cisco.com/meraki/api-v1/#!get-device-switch-routing-interface
 
 ##### Method Code:
 ```python
-def (serial: str, interfaceId: str):
+def getDeviceSwitchRoutingInterface(serial: str, interfaceId: str):
     # Code
 ````
 
@@ -8759,7 +8759,7 @@ https://developer.cisco.com/meraki/api-v1/#!get-device-switch-routing-interface-
 
 ##### Method Code:
 ```python
-def (serial: str, interfaceId: str):
+def getDeviceSwitchRoutingInterfaceDhcp(serial: str, interfaceId: str):
     # Code
 ````
 
@@ -8781,7 +8781,7 @@ https://developer.cisco.com/meraki/api-v1/#!get-device-switch-routing-interfaces
 
 ##### Method Code:
 ```python
-def (serial: str):
+def getDeviceSwitchRoutingInterfaces(serial: str):
     # Code
 ````
 
@@ -8804,7 +8804,7 @@ https://developer.cisco.com/meraki/api-v1/#!get-device-switch-routing-static-rou
 
 ##### Method Code:
 ```python
-def (serial: str, staticRouteId: str):
+def getDeviceSwitchRoutingStaticRoute(serial: str, staticRouteId: str):
     # Code
 ````
 
@@ -8826,7 +8826,7 @@ https://developer.cisco.com/meraki/api-v1/#!get-device-switch-routing-static-rou
 
 ##### Method Code:
 ```python
-def (serial: str):
+def getDeviceSwitchRoutingStaticRoutes(serial: str):
     # Code
 ````
 
@@ -8848,7 +8848,7 @@ https://developer.cisco.com/meraki/api-v1/#!get-device-switch-warm-spare
 
 ##### Method Code:
 ```python
-def (serial: str):
+def getDeviceSwitchWarmSpare(serial: str):
     # Code
 ````
 
@@ -8870,7 +8870,7 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-switch-access-control-li
 
 ##### Method Code:
 ```python
-def (networkId: str):
+def getNetworkSwitchAccessControlLists(networkId: str):
     # Code
 ````
 
@@ -8892,7 +8892,7 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-switch-access-policies
 
 ##### Method Code:
 ```python
-def (networkId: str):
+def getNetworkSwitchAccessPolicies(networkId: str):
     # Code
 ````
 
@@ -8915,7 +8915,7 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-switch-access-policy
 
 ##### Method Code:
 ```python
-def (networkId: str, accessPolicyNumber: str):
+def getNetworkSwitchAccessPolicy(networkId: str, accessPolicyNumber: str):
     # Code
 ````
 
@@ -8937,7 +8937,7 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-switch-dhcp-server-polic
 
 ##### Method Code:
 ```python
-def (networkId: str):
+def getNetworkSwitchDhcpServerPolicy(networkId: str):
     # Code
 ````
 
@@ -8959,7 +8959,7 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-switch-dscp-to-cos-mappi
 
 ##### Method Code:
 ```python
-def (networkId: str):
+def getNetworkSwitchDscpToCosMappings(networkId: str):
     # Code
 ````
 
@@ -8981,7 +8981,7 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-switch-link-aggregations
 
 ##### Method Code:
 ```python
-def (networkId: str):
+def getNetworkSwitchLinkAggregations(networkId: str):
     # Code
 ````
 
@@ -9003,7 +9003,7 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-switch-mtu
 
 ##### Method Code:
 ```python
-def (networkId: str):
+def getNetworkSwitchMtu(networkId: str):
     # Code
 ````
 
@@ -9025,7 +9025,7 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-switch-port-schedules
 
 ##### Method Code:
 ```python
-def (networkId: str):
+def getNetworkSwitchPortSchedules(networkId: str):
     # Code
 ````
 
@@ -9048,7 +9048,7 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-switch-qos-rule
 
 ##### Method Code:
 ```python
-def (networkId: str, qosRuleId: str):
+def getNetworkSwitchQosRule(networkId: str, qosRuleId: str):
     # Code
 ````
 
@@ -9070,7 +9070,7 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-switch-qos-rules
 
 ##### Method Code:
 ```python
-def (networkId: str):
+def getNetworkSwitchQosRules(networkId: str):
     # Code
 ````
 
@@ -9092,7 +9092,7 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-switch-qos-rules-order
 
 ##### Method Code:
 ```python
-def (networkId: str):
+def getNetworkSwitchQosRulesOrder(networkId: str):
     # Code
 ````
 
@@ -9114,7 +9114,7 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-switch-routing-multicast
 
 ##### Method Code:
 ```python
-def (networkId: str):
+def getNetworkSwitchRoutingMulticast(networkId: str):
     # Code
 ````
 
@@ -9137,7 +9137,7 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-switch-routing-multicast
 
 ##### Method Code:
 ```python
-def (networkId: str, rendezvousPointId: str):
+def getNetworkSwitchRoutingMulticastRendezvousPoint(networkId: str, rendezvousPointId: str):
     # Code
 ````
 
@@ -9159,7 +9159,7 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-switch-routing-multicast
 
 ##### Method Code:
 ```python
-def (networkId: str):
+def getNetworkSwitchRoutingMulticastRendezvousPoints(networkId: str):
     # Code
 ````
 
@@ -9181,7 +9181,7 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-switch-routing-ospf
 
 ##### Method Code:
 ```python
-def (networkId: str):
+def getNetworkSwitchRoutingOspf(networkId: str):
     # Code
 ````
 
@@ -9203,7 +9203,7 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-switch-settings
 
 ##### Method Code:
 ```python
-def (networkId: str):
+def getNetworkSwitchSettings(networkId: str):
     # Code
 ````
 
@@ -9226,7 +9226,7 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-switch-stack
 
 ##### Method Code:
 ```python
-def (networkId: str, switchStackId: str):
+def getNetworkSwitchStack(networkId: str, switchStackId: str):
     # Code
 ````
 
@@ -9250,7 +9250,7 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-switch-stack-routing-int
 
 ##### Method Code:
 ```python
-def (networkId: str, switchStackId: str, interfaceId: str):
+def getNetworkSwitchStackRoutingInterface(networkId: str, switchStackId: str, interfaceId: str):
     # Code
 ````
 
@@ -9274,7 +9274,7 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-switch-stack-routing-int
 
 ##### Method Code:
 ```python
-def (networkId: str, switchStackId: str, interfaceId: str):
+def getNetworkSwitchStackRoutingInterfaceDhcp(networkId: str, switchStackId: str, interfaceId: str):
     # Code
 ````
 
@@ -9297,7 +9297,7 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-switch-stack-routing-int
 
 ##### Method Code:
 ```python
-def (networkId: str, switchStackId: str):
+def getNetworkSwitchStackRoutingInterfaces(networkId: str, switchStackId: str):
     # Code
 ````
 
@@ -9321,7 +9321,7 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-switch-stack-routing-sta
 
 ##### Method Code:
 ```python
-def (networkId: str, switchStackId: str, staticRouteId: str):
+def getNetworkSwitchStackRoutingStaticRoute(networkId: str, switchStackId: str, staticRouteId: str):
     # Code
 ````
 
@@ -9344,7 +9344,7 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-switch-stack-routing-sta
 
 ##### Method Code:
 ```python
-def (networkId: str, switchStackId: str):
+def getNetworkSwitchStackRoutingStaticRoutes(networkId: str, switchStackId: str):
     # Code
 ````
 
@@ -9366,7 +9366,7 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-switch-stacks
 
 ##### Method Code:
 ```python
-def (networkId: str):
+def getNetworkSwitchStacks(networkId: str):
     # Code
 ````
 
@@ -9388,7 +9388,7 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-switch-storm-control
 
 ##### Method Code:
 ```python
-def (networkId: str):
+def getNetworkSwitchStormControl(networkId: str):
     # Code
 ````
 
@@ -9410,7 +9410,7 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-switch-stp
 
 ##### Method Code:
 ```python
-def (networkId: str):
+def getNetworkSwitchStp(networkId: str):
     # Code
 ````
 
@@ -9435,7 +9435,7 @@ https://developer.cisco.com/meraki/api-v1/#!get-organization-config-template-swi
 
 ##### Method Code:
 ```python
-def (organizationId: str, configTemplateId: str, profileId: str, portId: str):
+def getOrganizationConfigTemplateSwitchProfilePort(organizationId: str, configTemplateId: str, profileId: str, portId: str):
     # Code
 ````
 
@@ -9459,7 +9459,7 @@ https://developer.cisco.com/meraki/api-v1/#!get-organization-config-template-swi
 
 ##### Method Code:
 ```python
-def (organizationId: str, configTemplateId: str, profileId: str):
+def getOrganizationConfigTemplateSwitchProfilePorts(organizationId: str, configTemplateId: str, profileId: str):
     # Code
 ````
 
@@ -9482,7 +9482,7 @@ https://developer.cisco.com/meraki/api-v1/#!get-organization-config-template-swi
 
 ##### Method Code:
 ```python
-def (organizationId: str, configTemplateId: str):
+def getOrganizationConfigTemplateSwitchProfiles(organizationId: str, configTemplateId: str):
     # Code
 ````
 
@@ -9506,7 +9506,7 @@ https://developer.cisco.com/meraki/api-v1/#!remove-network-switch-stack
 
 ##### Method Code:
 ```python
-def (networkId: str, switchStackId: str, serial: str):
+def removeNetworkSwitchStack(networkId: str, switchStackId: str, serial: str):
     # Code
 ````
 
@@ -9550,7 +9550,7 @@ https://developer.cisco.com/meraki/api-v1/#!update-device-switch-port
 
 ##### Method Code:
 ```python
-def (serial: str, portId: str, **kwargs):
+def updateDeviceSwitchPort(serial: str, portId: str, **kwargs):
     # Code
 ````
 
@@ -9579,7 +9579,7 @@ https://developer.cisco.com/meraki/api-v1/#!update-device-switch-routing-interfa
 
 ##### Method Code:
 ```python
-def (serial: str, interfaceId: str, **kwargs):
+def updateDeviceSwitchRoutingInterface(serial: str, interfaceId: str, **kwargs):
     # Code
 ````
 
@@ -9613,7 +9613,7 @@ https://developer.cisco.com/meraki/api-v1/#!update-device-switch-routing-interfa
 
 ##### Method Code:
 ```python
-def (serial: str, interfaceId: str, **kwargs):
+def updateDeviceSwitchRoutingInterfaceDhcp(serial: str, interfaceId: str, **kwargs):
     # Code
 ````
 
@@ -9641,7 +9641,7 @@ https://developer.cisco.com/meraki/api-v1/#!update-device-switch-routing-static-
 
 ##### Method Code:
 ```python
-def (serial: str, staticRouteId: str, **kwargs):
+def updateDeviceSwitchRoutingStaticRoute(serial: str, staticRouteId: str, **kwargs):
     # Code
 ````
 
@@ -9665,7 +9665,7 @@ https://developer.cisco.com/meraki/api-v1/#!update-device-switch-warm-spare
 
 ##### Method Code:
 ```python
-def (serial: str, enabled: bool, **kwargs):
+def updateDeviceSwitchWarmSpare(serial: str, enabled: bool, **kwargs):
     # Code
 ````
 
@@ -9688,7 +9688,7 @@ https://developer.cisco.com/meraki/api-v1/#!update-network-switch-access-control
 
 ##### Method Code:
 ```python
-def (networkId: str, rules: list):
+def updateNetworkSwitchAccessControlLists(networkId: str, rules: list):
     # Code
 ````
 
@@ -9724,7 +9724,7 @@ https://developer.cisco.com/meraki/api-v1/#!update-network-switch-access-policy
 
 ##### Method Code:
 ```python
-def (networkId: str, accessPolicyNumber: str, **kwargs):
+def updateNetworkSwitchAccessPolicy(networkId: str, accessPolicyNumber: str, **kwargs):
     # Code
 ````
 
@@ -9749,7 +9749,7 @@ https://developer.cisco.com/meraki/api-v1/#!update-network-switch-dhcp-server-po
 
 ##### Method Code:
 ```python
-def (networkId: str, **kwargs):
+def updateNetworkSwitchDhcpServerPolicy(networkId: str, **kwargs):
     # Code
 ````
 
@@ -9772,7 +9772,7 @@ https://developer.cisco.com/meraki/api-v1/#!update-network-switch-dscp-to-cos-ma
 
 ##### Method Code:
 ```python
-def (networkId: str, mappings: list):
+def updateNetworkSwitchDscpToCosMappings(networkId: str, mappings: list):
     # Code
 ````
 
@@ -9797,7 +9797,7 @@ https://developer.cisco.com/meraki/api-v1/#!update-network-switch-link-aggregati
 
 ##### Method Code:
 ```python
-def (networkId: str, linkAggregationId: str, **kwargs):
+def updateNetworkSwitchLinkAggregation(networkId: str, linkAggregationId: str, **kwargs):
     # Code
 ````
 
@@ -9821,7 +9821,7 @@ https://developer.cisco.com/meraki/api-v1/#!update-network-switch-mtu
 
 ##### Method Code:
 ```python
-def (networkId: str, **kwargs):
+def updateNetworkSwitchMtu(networkId: str, **kwargs):
     # Code
 ````
 
@@ -9849,7 +9849,7 @@ Any unspecified day in the schedule is added as a default schedule configuration
 
 ##### Method Code:
 ```python
-def (networkId: str, portScheduleId: str, **kwargs):
+def updateNetworkSwitchPortSchedule(networkId: str, portScheduleId: str, **kwargs):
     # Code
 ````
 
@@ -9879,7 +9879,7 @@ https://developer.cisco.com/meraki/api-v1/#!update-network-switch-qos-rule
 
 ##### Method Code:
 ```python
-def (networkId: str, qosRuleId: str, **kwargs):
+def updateNetworkSwitchQosRule(networkId: str, qosRuleId: str, **kwargs):
     # Code
 ````
 
@@ -9902,7 +9902,7 @@ https://developer.cisco.com/meraki/api-v1/#!update-network-switch-qos-rules-orde
 
 ##### Method Code:
 ```python
-def (networkId: str, ruleIds: list):
+def updateNetworkSwitchQosRulesOrder(networkId: str, ruleIds: list):
     # Code
 ````
 
@@ -9926,7 +9926,7 @@ https://developer.cisco.com/meraki/api-v1/#!update-network-switch-routing-multic
 
 ##### Method Code:
 ```python
-def (networkId: str, **kwargs):
+def updateNetworkSwitchRoutingMulticast(networkId: str, **kwargs):
     # Code
 ````
 
@@ -9951,7 +9951,7 @@ https://developer.cisco.com/meraki/api-v1/#!update-network-switch-routing-multic
 
 ##### Method Code:
 ```python
-def (networkId: str, rendezvousPointId: str, interfaceIp: str, multicastGroup: str):
+def updateNetworkSwitchRoutingMulticastRendezvousPoint(networkId: str, rendezvousPointId: str, interfaceIp: str, multicastGroup: str):
     # Code
 ````
 
@@ -9979,7 +9979,7 @@ https://developer.cisco.com/meraki/api-v1/#!update-network-switch-routing-ospf
 
 ##### Method Code:
 ```python
-def (networkId: str, **kwargs):
+def updateNetworkSwitchRoutingOspf(networkId: str, **kwargs):
     # Code
 ````
 
@@ -10004,7 +10004,7 @@ https://developer.cisco.com/meraki/api-v1/#!update-network-switch-settings
 
 ##### Method Code:
 ```python
-def (networkId: str, **kwargs):
+def updateNetworkSwitchSettings(networkId: str, **kwargs):
     # Code
 ````
 
@@ -10034,7 +10034,7 @@ https://developer.cisco.com/meraki/api-v1/#!update-network-switch-stack-routing-
 
 ##### Method Code:
 ```python
-def (networkId: str, switchStackId: str, interfaceId: str, **kwargs):
+def updateNetworkSwitchStackRoutingInterface(networkId: str, switchStackId: str, interfaceId: str, **kwargs):
     # Code
 ````
 
@@ -10069,7 +10069,7 @@ https://developer.cisco.com/meraki/api-v1/#!update-network-switch-stack-routing-
 
 ##### Method Code:
 ```python
-def (networkId: str, switchStackId: str, interfaceId: str, **kwargs):
+def updateNetworkSwitchStackRoutingInterfaceDhcp(networkId: str, switchStackId: str, interfaceId: str, **kwargs):
     # Code
 ````
 
@@ -10098,7 +10098,7 @@ https://developer.cisco.com/meraki/api-v1/#!update-network-switch-stack-routing-
 
 ##### Method Code:
 ```python
-def (networkId: str, switchStackId: str, staticRouteId: str, **kwargs):
+def updateNetworkSwitchStackRoutingStaticRoute(networkId: str, switchStackId: str, staticRouteId: str, **kwargs):
     # Code
 ````
 
@@ -10123,7 +10123,7 @@ https://developer.cisco.com/meraki/api-v1/#!update-network-switch-storm-control
 
 ##### Method Code:
 ```python
-def (networkId: str, **kwargs):
+def updateNetworkSwitchStormControl(networkId: str, **kwargs):
     # Code
 ````
 
@@ -10147,7 +10147,7 @@ https://developer.cisco.com/meraki/api-v1/#!update-network-switch-stp
 
 ##### Method Code:
 ```python
-def (networkId: str, **kwargs):
+def updateNetworkSwitchStp(networkId: str, **kwargs):
     # Code
 ````
 
@@ -10193,7 +10193,7 @@ https://developer.cisco.com/meraki/api-v1/#!update-organization-config-template-
 
 ##### Method Code:
 ```python
-def (organizationId: str, configTemplateId: str, profileId: str, portId: str, **kwargs):
+def updateOrganizationConfigTemplateSwitchProfilePort(organizationId: str, configTemplateId: str, profileId: str, portId: str, **kwargs):
     # Code
 ````
 
@@ -10228,7 +10228,7 @@ https://developer.cisco.com/meraki/api-v1/#!create-network-wireless-rf-profile
 
 ##### Method Code:
 ```python
-def (networkId: str, name: str, bandSelectionType: str, **kwargs):
+def createNetworkWirelessRfProfile(networkId: str, name: str, bandSelectionType: str, **kwargs):
     # Code
 ````
 
@@ -10254,7 +10254,7 @@ https://developer.cisco.com/meraki/api-v1/#!create-network-wireless-ssid-identit
 
 ##### Method Code:
 ```python
-def (networkId: str, number: str, name: str, passphrase: str, groupPolicyId: str):
+def createNetworkWirelessSsidIdentityPsk(networkId: str, number: str, name: str, passphrase: str, groupPolicyId: str):
     # Code
 ````
 
@@ -10277,7 +10277,7 @@ https://developer.cisco.com/meraki/api-v1/#!delete-network-wireless-rf-profile
 
 ##### Method Code:
 ```python
-def (networkId: str, rfProfileId: str):
+def deleteNetworkWirelessRfProfile(networkId: str, rfProfileId: str):
     # Code
 ````
 
@@ -10301,7 +10301,7 @@ https://developer.cisco.com/meraki/api-v1/#!delete-network-wireless-ssid-identit
 
 ##### Method Code:
 ```python
-def (networkId: str, number: str, identityPskId: str):
+def deleteNetworkWirelessSsidIdentityPsk(networkId: str, number: str, identityPskId: str):
     # Code
 ````
 
@@ -10323,7 +10323,7 @@ https://developer.cisco.com/meraki/api-v1/#!get-device-wireless-bluetooth-settin
 
 ##### Method Code:
 ```python
-def (serial: str):
+def getDeviceWirelessBluetoothSettings(serial: str):
     # Code
 ````
 
@@ -10352,7 +10352,7 @@ https://developer.cisco.com/meraki/api-v1/#!get-device-wireless-connection-stats
 
 ##### Method Code:
 ```python
-def (serial: str, **kwargs):
+def getDeviceWirelessConnectionStats(serial: str, **kwargs):
     # Code
 ````
 
@@ -10382,7 +10382,7 @@ https://developer.cisco.com/meraki/api-v1/#!get-device-wireless-latency-stats
 
 ##### Method Code:
 ```python
-def (serial: str, **kwargs):
+def getDeviceWirelessLatencyStats(serial: str, **kwargs):
     # Code
 ````
 
@@ -10404,7 +10404,7 @@ https://developer.cisco.com/meraki/api-v1/#!get-device-wireless-radio-settings
 
 ##### Method Code:
 ```python
-def (serial: str):
+def getDeviceWirelessRadioSettings(serial: str):
     # Code
 ````
 
@@ -10426,7 +10426,7 @@ https://developer.cisco.com/meraki/api-v1/#!get-device-wireless-status
 
 ##### Method Code:
 ```python
-def (serial: str):
+def getDeviceWirelessStatus(serial: str):
     # Code
 ````
 
@@ -10450,7 +10450,7 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-wireless-air-marshal
 
 ##### Method Code:
 ```python
-def (networkId: str, **kwargs):
+def getNetworkWirelessAirMarshal(networkId: str, **kwargs):
     # Code
 ````
 
@@ -10472,7 +10472,7 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-wireless-alternate-manag
 
 ##### Method Code:
 ```python
-def (networkId: str):
+def getNetworkWirelessAlternateManagementInterface(networkId: str):
     # Code
 ````
 
@@ -10494,7 +10494,7 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-wireless-bluetooth-setti
 
 ##### Method Code:
 ```python
-def (networkId: str):
+def getNetworkWirelessBluetoothSettings(networkId: str):
     # Code
 ````
 
@@ -10525,7 +10525,7 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-wireless-channel-utiliza
 
 ##### Method Code:
 ```python
-def (networkId: str, **kwargs):
+def getNetworkWirelessChannelUtilizationHistory(networkId: str, **kwargs):
     # Code
 ````
 
@@ -10555,7 +10555,7 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-wireless-client-connecti
 
 ##### Method Code:
 ```python
-def (networkId: str, clientId: str, **kwargs):
+def getNetworkWirelessClientConnectionStats(networkId: str, clientId: str, **kwargs):
     # Code
 ````
 
@@ -10591,7 +10591,7 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-wireless-client-connecti
 
 ##### Method Code:
 ```python
-def (networkId: str, clientId: str, total_pages=1, direction='next', **kwargs):
+def getNetworkWirelessClientConnectivityEvents(networkId: str, clientId: str, total_pages=1, direction='next', **kwargs):
     # Code
 ````
 
@@ -10623,7 +10623,7 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-wireless-client-count-hi
 
 ##### Method Code:
 ```python
-def (networkId: str, **kwargs):
+def getNetworkWirelessClientCountHistory(networkId: str, **kwargs):
     # Code
 ````
 
@@ -10650,7 +10650,7 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-wireless-client-latency-
 
 ##### Method Code:
 ```python
-def (networkId: str, clientId: str, **kwargs):
+def getNetworkWirelessClientLatencyHistory(networkId: str, clientId: str, **kwargs):
     # Code
 ````
 
@@ -10681,7 +10681,7 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-wireless-client-latency-
 
 ##### Method Code:
 ```python
-def (networkId: str, clientId: str, **kwargs):
+def getNetworkWirelessClientLatencyStats(networkId: str, clientId: str, **kwargs):
     # Code
 ````
 
@@ -10710,7 +10710,7 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-wireless-clients-connect
 
 ##### Method Code:
 ```python
-def (networkId: str, **kwargs):
+def getNetworkWirelessClientsConnectionStats(networkId: str, **kwargs):
     # Code
 ````
 
@@ -10740,7 +10740,7 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-wireless-clients-latency
 
 ##### Method Code:
 ```python
-def (networkId: str, **kwargs):
+def getNetworkWirelessClientsLatencyStats(networkId: str, **kwargs):
     # Code
 ````
 
@@ -10769,7 +10769,7 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-wireless-connection-stat
 
 ##### Method Code:
 ```python
-def (networkId: str, **kwargs):
+def getNetworkWirelessConnectionStats(networkId: str, **kwargs):
     # Code
 ````
 
@@ -10801,7 +10801,7 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-wireless-data-rate-histo
 
 ##### Method Code:
 ```python
-def (networkId: str, **kwargs):
+def getNetworkWirelessDataRateHistory(networkId: str, **kwargs):
     # Code
 ````
 
@@ -10830,7 +10830,7 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-wireless-devices-connect
 
 ##### Method Code:
 ```python
-def (networkId: str, **kwargs):
+def getNetworkWirelessDevicesConnectionStats(networkId: str, **kwargs):
     # Code
 ````
 
@@ -10860,7 +10860,7 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-wireless-devices-latency
 
 ##### Method Code:
 ```python
-def (networkId: str, **kwargs):
+def getNetworkWirelessDevicesLatencyStats(networkId: str, **kwargs):
     # Code
 ````
 
@@ -10891,7 +10891,7 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-wireless-failed-connecti
 
 ##### Method Code:
 ```python
-def (networkId: str, **kwargs):
+def getNetworkWirelessFailedConnections(networkId: str, **kwargs):
     # Code
 ````
 
@@ -10924,7 +10924,7 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-wireless-latency-history
 
 ##### Method Code:
 ```python
-def (networkId: str, **kwargs):
+def getNetworkWirelessLatencyHistory(networkId: str, **kwargs):
     # Code
 ````
 
@@ -10954,7 +10954,7 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-wireless-latency-stats
 
 ##### Method Code:
 ```python
-def (networkId: str, **kwargs):
+def getNetworkWirelessLatencyStats(networkId: str, **kwargs):
     # Code
 ````
 
@@ -10981,7 +10981,7 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-wireless-mesh-statuses
 
 ##### Method Code:
 ```python
-def (networkId: str, total_pages=1, direction='next', **kwargs):
+def getNetworkWirelessMeshStatuses(networkId: str, total_pages=1, direction='next', **kwargs):
     # Code
 ````
 
@@ -11004,7 +11004,7 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-wireless-rf-profile
 
 ##### Method Code:
 ```python
-def (networkId: str, rfProfileId: str):
+def getNetworkWirelessRfProfile(networkId: str, rfProfileId: str):
     # Code
 ````
 
@@ -11027,7 +11027,7 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-wireless-rf-profiles
 
 ##### Method Code:
 ```python
-def (networkId: str, **kwargs):
+def getNetworkWirelessRfProfiles(networkId: str, **kwargs):
     # Code
 ````
 
@@ -11049,7 +11049,7 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-wireless-settings
 
 ##### Method Code:
 ```python
-def (networkId: str):
+def getNetworkWirelessSettings(networkId: str):
     # Code
 ````
 
@@ -11081,7 +11081,7 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-wireless-signal-quality-
 
 ##### Method Code:
 ```python
-def (networkId: str, **kwargs):
+def getNetworkWirelessSignalQualityHistory(networkId: str, **kwargs):
     # Code
 ````
 
@@ -11104,7 +11104,7 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-wireless-ssid
 
 ##### Method Code:
 ```python
-def (networkId: str, number: str):
+def getNetworkWirelessSsid(networkId: str, number: str):
     # Code
 ````
 
@@ -11127,7 +11127,7 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-wireless-ssid-firewall-l
 
 ##### Method Code:
 ```python
-def (networkId: str, number: str):
+def getNetworkWirelessSsidFirewallL3FirewallRules(networkId: str, number: str):
     # Code
 ````
 
@@ -11150,7 +11150,7 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-wireless-ssid-firewall-l
 
 ##### Method Code:
 ```python
-def (networkId: str, number: str):
+def getNetworkWirelessSsidFirewallL7FirewallRules(networkId: str, number: str):
     # Code
 ````
 
@@ -11174,7 +11174,7 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-wireless-ssid-identity-p
 
 ##### Method Code:
 ```python
-def (networkId: str, number: str, identityPskId: str):
+def getNetworkWirelessSsidIdentityPsk(networkId: str, number: str, identityPskId: str):
     # Code
 ````
 
@@ -11197,7 +11197,7 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-wireless-ssid-identity-p
 
 ##### Method Code:
 ```python
-def (networkId: str, number: str):
+def getNetworkWirelessSsidIdentityPsks(networkId: str, number: str):
     # Code
 ````
 
@@ -11220,7 +11220,7 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-wireless-ssid-splash-set
 
 ##### Method Code:
 ```python
-def (networkId: str, number: str):
+def getNetworkWirelessSsidSplashSettings(networkId: str, number: str):
     # Code
 ````
 
@@ -11243,7 +11243,7 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-wireless-ssid-traffic-sh
 
 ##### Method Code:
 ```python
-def (networkId: str, number: str):
+def getNetworkWirelessSsidTrafficShapingRules(networkId: str, number: str):
     # Code
 ````
 
@@ -11265,7 +11265,7 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-wireless-ssids
 
 ##### Method Code:
 ```python
-def (networkId: str):
+def getNetworkWirelessSsids(networkId: str):
     # Code
 ````
 
@@ -11297,7 +11297,7 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-wireless-usage-history
 
 ##### Method Code:
 ```python
-def (networkId: str, **kwargs):
+def getNetworkWirelessUsageHistory(networkId: str, **kwargs):
     # Code
 ````
 
@@ -11322,7 +11322,7 @@ https://developer.cisco.com/meraki/api-v1/#!update-device-wireless-bluetooth-set
 
 ##### Method Code:
 ```python
-def (serial: str, **kwargs):
+def updateDeviceWirelessBluetoothSettings(serial: str, **kwargs):
     # Code
 ````
 
@@ -11347,7 +11347,7 @@ https://developer.cisco.com/meraki/api-v1/#!update-device-wireless-radio-setting
 
 ##### Method Code:
 ```python
-def (serial: str, **kwargs):
+def updateDeviceWirelessRadioSettings(serial: str, **kwargs):
     # Code
 ````
 
@@ -11373,7 +11373,7 @@ https://developer.cisco.com/meraki/api-v1/#!update-network-wireless-alternate-ma
 
 ##### Method Code:
 ```python
-def (networkId: str, **kwargs):
+def updateNetworkWirelessAlternateManagementInterface(networkId: str, **kwargs):
     # Code
 ````
 
@@ -11401,7 +11401,7 @@ https://developer.cisco.com/meraki/api-v1/#!update-network-wireless-bluetooth-se
 
 ##### Method Code:
 ```python
-def (networkId: str, **kwargs):
+def updateNetworkWirelessBluetoothSettings(networkId: str, **kwargs):
     # Code
 ````
 
@@ -11431,7 +11431,7 @@ https://developer.cisco.com/meraki/api-v1/#!update-network-wireless-rf-profile
 
 ##### Method Code:
 ```python
-def (networkId: str, rfProfileId: str, **kwargs):
+def updateNetworkWirelessRfProfile(networkId: str, rfProfileId: str, **kwargs):
     # Code
 ````
 
@@ -11458,7 +11458,7 @@ https://developer.cisco.com/meraki/api-v1/#!update-network-wireless-settings
 
 ##### Method Code:
 ```python
-def (networkId: str, **kwargs):
+def updateNetworkWirelessSettings(networkId: str, **kwargs):
     # Code
 ````
 
@@ -11521,7 +11521,7 @@ https://developer.cisco.com/meraki/api-v1/#!update-network-wireless-ssid
 
 ##### Method Code:
 ```python
-def (networkId: str, number: str, **kwargs):
+def updateNetworkWirelessSsid(networkId: str, number: str, **kwargs):
     # Code
 ````
 
@@ -11546,7 +11546,7 @@ https://developer.cisco.com/meraki/api-v1/#!update-network-wireless-ssid-firewal
 
 ##### Method Code:
 ```python
-def (networkId: str, number: str, **kwargs):
+def updateNetworkWirelessSsidFirewallL3FirewallRules(networkId: str, number: str, **kwargs):
     # Code
 ````
 
@@ -11570,7 +11570,7 @@ https://developer.cisco.com/meraki/api-v1/#!update-network-wireless-ssid-firewal
 
 ##### Method Code:
 ```python
-def (networkId: str, number: str, **kwargs):
+def updateNetworkWirelessSsidFirewallL7FirewallRules(networkId: str, number: str, **kwargs):
     # Code
 ````
 
@@ -11597,7 +11597,7 @@ https://developer.cisco.com/meraki/api-v1/#!update-network-wireless-ssid-identit
 
 ##### Method Code:
 ```python
-def (networkId: str, number: str, identityPskId: str, **kwargs):
+def updateNetworkWirelessSsidIdentityPsk(networkId: str, number: str, identityPskId: str, **kwargs):
     # Code
 ````
 
@@ -11629,7 +11629,7 @@ https://developer.cisco.com/meraki/api-v1/#!update-network-wireless-ssid-splash-
 
 ##### Method Code:
 ```python
-def (networkId: str, number: str, **kwargs):
+def updateNetworkWirelessSsidSplashSettings(networkId: str, number: str, **kwargs):
     # Code
 ````
 
@@ -11658,7 +11658,7 @@ you are allowed a maximum of 8 rules.
 
 ##### Method Code:
 ```python
-def (networkId: str, number: str, **kwargs):
+def updateNetworkWirelessSsidTrafficShapingRules(networkId: str, number: str, **kwargs):
     # Code
 ````
 
