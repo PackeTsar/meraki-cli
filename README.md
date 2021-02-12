@@ -107,13 +107,78 @@ To see any help menu, use the `-h` option at any command level:
 If you have any Meraki MS switches available, try viewing the port configurations with `meraki switch getDeviceSwitchPorts --serial 1234-ABCD-5678` or you can view the operational port stats by using `meraki switch getDeviceSwitchPortsStatuses --serial 1234-ABCD-5678`
 
 
+## A Note About --kwargs
+
+Some Meraki-CLI commands require arguments to be provided which are not explicitly defined in the underlying functions, but are documented in the command help page. To see an example of this, run the command `meraki switch updateDeviceSwitchPort -h`. The example is shown below
+
+```
+~$
+~$ meraki switch updateDeviceSwitchPort -h
+usage: meraki-cli.py switch updateDeviceSwitchPort [-h] --serial STRING --portId STRING [--kwargs JSON_STRING]
+
+        **Update a switch port**
+        https://developer.cisco.com/meraki/api-v1/#!update-device-switch-port
+
+        - serial (string): (required)
+        - portId (string): (required)
+        - name (string): The name of the switch port
+        - tags (array): The list of tags of the switch port
+        - enabled (boolean): The status of the switch port
+        - type (string): The type of the switch port ('trunk' or 'access')
+        - vlan (integer): The VLAN of the switch port. A null value will clear the value set for trunk ports.
+        - voiceVlan (integer): The voice VLAN of the switch port. Only applicable to access ports.
+        - allowedVlans (string): The VLANs allowed on the switch port. Only applicable to trunk ports.
+        - poeEnabled (boolean): The PoE status of the switch port
+        - isolationEnabled (boolean): The isolation status of the switch port
+        - rstpEnabled (boolean): The rapid spanning tree protocol status
+        - stpGuard (string): The state of the STP guard ('disabled', 'root guard', 'bpdu guard' or 'loop guard')
+        - linkNegotiation (string): The link speed for the switch port
+        - portScheduleId (string): The ID of the port schedule. A value of null will clear the port schedule.
+        - udld (string): The action to take when Unidirectional Link is detected (Alert only, Enforce). Default configuration is Alert only.
+        - accessPolicyType (string): The type of the access policy of the switch port. Only applicable to access ports. Can be one of 'Open', 'Custom access policy', 'MAC allow list' or 'Sticky MAC allow list'
+        - accessPolicyNumber (integer): The number of a custom access policy to configure on the switch port. Only applicable when 'accessPolicyType' is 'Custom access policy'
+        - macAllowList (array): Only devices with MAC addresses specified in this list will have access to this port. Up to 20 MAC addresses can be defined. Only applicable when 'accessPolicyType' is 'MAC allow list'
+        - stickyMacAllowList (array): The initial list of MAC addresses for sticky Mac allow list. Only applicable when 'accessPolicyType' is 'Sticky MAC allow list'
+        - stickyMacAllowListLimit (integer): The maximum number of MAC addresses for sticky MAC allow list. Only applicable when 'accessPolicyType' is 'Sticky MAC allow list'
+        - stormControlEnabled (boolean): The storm control status of the switch port
+        - flexibleStackingEnabled (boolean): For supported switches (e.g. MS420/MS425), whether or not the port has flexible stacking enabled.
+
+        >>> def updateDeviceSwitchPort(serial: str, portId: str, **kwargs):
+
+optional arguments:
+  -h, --help            show this help message and exit
+  --serial STRING       (required)
+  --portId STRING       (required)
+  --kwargs JSON_STRING  (JSON formatted extra arguments)
+~$
+~$
+```
+
+In the example you will see many arguments described in the documentation, but only two are required: `serial` and `portId`, you can see that by looking in the 'optional arguments' section at the bottom of the help page. Some of the other arguments in the documentation are `name`, `tags`, `enabled`, etc.
+
+When the option to provide these other arguments exists for a command, you will see a `--kwargs` argument in that 'optional arguments' section. The `--kwargs` option allows you to insert extra key, value pairs into the command in the form of a JSON string. You do this by providing the argument and JSON value like `--kwargs '{"name": "Data Port", "vlan": "100"}'`. At times these arguments are required in order for the command to work. At other times they are optional.
+
 ## Making Some Changes
 
-Pushing changes into Meraki is done by running the correct command and passing in the required arguments. At times, this requires passing JSON data into the CLI with something like `--kwargs '{"applianceIp": "10.0.0.1", "subnet": "10.0.0.0/24"}'`. Any data you need to pass into the program which is not a defined argument when viewing the help page with `-h` has to be passed in this way. The help page for a specific command will often give you details about what kinds of data can be passed in this way.
+Pushing changes into Meraki is done by running the correct command and passing in the required arguments, including using the `--kwargs` argument appropriately when required.
 
 For example, if we want to change the VLAN ID on a MS switch port, we would use:
 
 `meraki switch updateDeviceSwitchPort --serial 1234-ABCD-5678 --portId 24 --kwargs '{"vlan": "100"}'`
+
+If the change succeeds, you will often see the newly updated object echoed back like this:
+
+```
+~$
+~$ meraki switch updateDeviceSwitchPort --serial Q2HP-F5K5-R88R --portId 1 --kwargs '{"name": "Data Port", "vlan": "100"}'
+┏━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━┳━━━━━━━━━━━━┳━━━━━━━┳━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━┳━━━━━━━━━━┳━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━┓
+┃ portId ┃ name      ┃ enabled ┃ poeEnabled ┃ type  ┃ vlan ┃ voiceVlan ┃ allowedVlans ┃ isolationEnabled ┃ rstpEnabled ┃ stpGuard ┃ linkNegotiation ┃ portScheduleId ┃ udld       ┃
+┡━━━━━━━━╇━━━━━━━━━━━╇━━━━━━━━━╇━━━━━━━━━━━━╇━━━━━━━╇━━━━━━╇━━━━━━━━━━━╇━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━╇━━━━━━━━━━╇━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━┩
+│ 1      │ Data Port │ True    │ True       │ trunk │ 100  │ None      │ all          │ False            │ True        │ disabled │ Auto negotiate  │ None           │ Alert only │
+└────────┴───────────┴─────────┴────────────┴───────┴──────┴───────────┴──────────────┴──────────────────┴─────────────┴──────────┴─────────────────┴────────────────┴────────────┘
+~$
+~$
+```
 
 
 ## Debugging and Logging
