@@ -71,7 +71,7 @@ def _cmd_section(arg_obj: Args) -> str:
     result = re.sub(r'(\*\*.*\*\*\n)', r'\1\n', result)
     # Grab each of the bullet point parameter names and wrap the name in
     #     backticks for markdown formatting.
-    result = re.sub(r'- ([a-zA-Z]+)', r'- `\1`', result)
+    result = re.sub(r'- ([a-zA-Z0-9_]+) ', r'- `\1` ', result)
     return result
 
 

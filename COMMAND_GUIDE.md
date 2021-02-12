@@ -743,7 +743,7 @@ meraki organizations createOrganizationNetwork --organizationId 'STRING' --name 
 https://developer.cisco.com/meraki/api-v1/#!create-organization-saml-idp
 
 - `organizationId` (string): (required)
-- `x`509certSha1Fingerprint (string): Fingerprint (SHA1) of the SAML certificate provided by your Identity Provider (IdP). This will be used for encryption / validation.
+- `x509certSha1Fingerprint` (string): Fingerprint (SHA1) of the SAML certificate provided by your Identity Provider (IdP). This will be used for encryption / validation.
 - `sloLogoutUrl` (string): Dashboard will redirect users to this URL when they sign out.
 
 ##### Method Code:
@@ -1043,10 +1043,10 @@ meraki organizations getOrganizationAdmins --organizationId 'STRING'
 https://developer.cisco.com/meraki/api-v1/#!get-organization-api-requests
 
 - `organizationId` (string): (required)
-- `total`_pages (integer or string): use with perPage to get total results up to total_pages*perPage; -1 or "all" for all pages
+- `total_pages` (integer or string): use with perPage to get total results up to total_pages*perPage; -1 or "all" for all pages
 - `direction` (string): direction to paginate, either "next" (default) or "prev" page
-- `t`0 (string): The beginning of the timespan for the data. The maximum lookback period is 31 days from today.
-- `t`1 (string): The end of the timespan for the data. t1 can be a maximum of 31 days after t0.
+- `t0` (string): The beginning of the timespan for the data. The maximum lookback period is 31 days from today.
+- `t1` (string): The end of the timespan for the data. t1 can be a maximum of 31 days after t0.
 - `timespan` (number): The timespan for which the information will be fetched. If specifying timespan, do not specify parameters t0 and t1. The value must be in seconds and be less than or equal to 31 days. The default is 31 days.
 - `perPage` (integer): The number of entries per page returned. Acceptable range is 3 - 1000. Default is 50.
 - `startingAfter` (string): A token used by the server to indicate the start of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it.
@@ -1078,8 +1078,8 @@ meraki organizations getOrganizationApiRequests --organizationId 'STRING'
 https://developer.cisco.com/meraki/api-v1/#!get-organization-api-requests-overview
 
 - `organizationId` (string): (required)
-- `t`0 (string): The beginning of the timespan for the data. The maximum lookback period is 31 days from today.
-- `t`1 (string): The end of the timespan for the data. t1 can be a maximum of 31 days after t0.
+- `t0` (string): The beginning of the timespan for the data. The maximum lookback period is 31 days from today.
+- `t1` (string): The end of the timespan for the data. t1 can be a maximum of 31 days after t0.
 - `timespan` (number): The timespan for which the information will be fetched. If specifying timespan, do not specify parameters t0 and t1. The value must be in seconds and be less than or equal to 31 days. The default is 31 days.
 
 ##### Method Code:
@@ -1215,10 +1215,10 @@ meraki organizations getOrganizationConfigTemplates --organizationId 'STRING'
 https://developer.cisco.com/meraki/api-v1/#!get-organization-configuration-changes
 
 - `organizationId` (string): (required)
-- `total`_pages (integer or string): use with perPage to get total results up to total_pages*perPage; -1 or "all" for all pages
+- `total_pages` (integer or string): use with perPage to get total results up to total_pages*perPage; -1 or "all" for all pages
 - `direction` (string): direction to paginate, either "next" or "prev" (default) page
-- `t`0 (string): The beginning of the timespan for the data. The maximum lookback period is 365 days from today.
-- `t`1 (string): The end of the timespan for the data. t1 can be a maximum of 365 days after t0.
+- `t0` (string): The beginning of the timespan for the data. The maximum lookback period is 365 days from today.
+- `t1` (string): The end of the timespan for the data. t1 can be a maximum of 365 days after t0.
 - `timespan` (number): The timespan for which the information will be fetched. If specifying timespan, do not specify parameters t0 and t1. The value must be in seconds and be less than or equal to 365 days. The default is 365 days.
 - `perPage` (integer): The number of entries per page returned. Acceptable range is 3 - 5000. Default is 5000.
 - `startingAfter` (string): A token used by the server to indicate the start of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it.
@@ -1247,7 +1247,7 @@ meraki organizations getOrganizationConfigurationChanges --organizationId 'STRIN
 https://developer.cisco.com/meraki/api-v1/#!get-organization-devices
 
 - `organizationId` (string): (required)
-- `total`_pages (integer or string): use with perPage to get total results up to total_pages*perPage; -1 or "all" for all pages
+- `total_pages` (integer or string): use with perPage to get total results up to total_pages*perPage; -1 or "all" for all pages
 - `direction` (string): direction to paginate, either "next" (default) or "prev" page
 - `perPage` (integer): The number of entries per page returned. Acceptable range is 3 - 1000. Default is 1000.
 - `startingAfter` (string): A token used by the server to indicate the start of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it.
@@ -1275,7 +1275,7 @@ meraki organizations getOrganizationDevices --organizationId 'STRING'
 https://developer.cisco.com/meraki/api-v1/#!get-organization-devices-statuses
 
 - `organizationId` (string): (required)
-- `total`_pages (integer or string): use with perPage to get total results up to total_pages*perPage; -1 or "all" for all pages
+- `total_pages` (integer or string): use with perPage to get total results up to total_pages*perPage; -1 or "all" for all pages
 - `direction` (string): direction to paginate, either "next" (default) or "prev" page
 - `perPage` (integer): The number of entries per page returned. Acceptable range is 3 - 1000. Default is 1000.
 - `startingAfter` (string): A token used by the server to indicate the start of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it.
@@ -1302,8 +1302,8 @@ meraki organizations getOrganizationDevicesStatuses --organizationId 'STRING'
 https://developer.cisco.com/meraki/api-v1/#!get-organization-devices-uplinks-loss-and-latency
 
 - `organizationId` (string): (required)
-- `t`0 (string): The beginning of the timespan for the data. The maximum lookback period is 365 days from today.
-- `t`1 (string): The end of the timespan for the data. t1 can be a maximum of 5 minutes after t0. The latest possible time that t1 can be is 2 minutes into the past.
+- `t0` (string): The beginning of the timespan for the data. The maximum lookback period is 365 days from today.
+- `t1` (string): The end of the timespan for the data. t1 can be a maximum of 5 minutes after t0. The latest possible time that t1 can be is 2 minutes into the past.
 - `timespan` (number): The timespan for which the information will be fetched. If specifying timespan, do not specify parameters t0 and t1. The value must be in seconds and be less than or equal to 5 minutes. The default is 5 minutes.
 - `uplink` (string): Optional filter for a specific WAN uplink. Valid uplinks are wan1, wan2, cellular. Default will return all uplinks.
 - `ip` (string): Optional filter for a specific destination IP. Default will return all destination IPs.
@@ -1352,7 +1352,7 @@ meraki organizations getOrganizationInventoryDevice --organizationId 'STRING' --
 https://developer.cisco.com/meraki/api-v1/#!get-organization-inventory-devices
 
 - `organizationId` (string): (required)
-- `total`_pages (integer or string): use with perPage to get total results up to total_pages*perPage; -1 or "all" for all pages
+- `total_pages` (integer or string): use with perPage to get total results up to total_pages*perPage; -1 or "all" for all pages
 - `direction` (string): direction to paginate, either "next" (default) or "prev" page
 - `perPage` (integer): The number of entries per page returned. Acceptable range is 3 - 1000. Default is 1000.
 - `startingAfter` (string): A token used by the server to indicate the start of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it.
@@ -1404,7 +1404,7 @@ meraki organizations getOrganizationLicense --organizationId 'STRING' --licenseI
 https://developer.cisco.com/meraki/api-v1/#!get-organization-licenses
 
 - `organizationId` (string): (required)
-- `total`_pages (integer or string): use with perPage to get total results up to total_pages*perPage; -1 or "all" for all pages
+- `total_pages` (integer or string): use with perPage to get total results up to total_pages*perPage; -1 or "all" for all pages
 - `direction` (string): direction to paginate, either "next" (default) or "prev" page
 - `perPage` (integer): The number of entries per page returned. Acceptable range is 3 - 1000. Default is 1000.
 - `startingAfter` (string): A token used by the server to indicate the start of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it.
@@ -1478,7 +1478,7 @@ meraki organizations getOrganizationLoginSecurity --organizationId 'STRING'
 https://developer.cisco.com/meraki/api-v1/#!get-organization-networks
 
 - `organizationId` (string): (required)
-- `total`_pages (integer or string): use with perPage to get total results up to total_pages*perPage; -1 or "all" for all pages
+- `total_pages` (integer or string): use with perPage to get total results up to total_pages*perPage; -1 or "all" for all pages
 - `direction` (string): direction to paginate, either "next" (default) or "prev" page
 - `configTemplateId` (string): An optional parameter that is the ID of a config template. Will return all networks bound to that template.
 - `tags` (array): An optional parameter to filter networks by tags. The filtering is case-sensitive. If tags are included, 'tagsFilterType' should also be included (see below).
@@ -1664,7 +1664,7 @@ meraki organizations getOrganizationSnmp --organizationId 'STRING'
 https://developer.cisco.com/meraki/api-v1/#!get-organization-uplinks-statuses
 
 - `organizationId` (string): (required)
-- `total`_pages (integer or string): use with perPage to get total results up to total_pages*perPage; -1 or "all" for all pages
+- `total_pages` (integer or string): use with perPage to get total results up to total_pages*perPage; -1 or "all" for all pages
 - `direction` (string): direction to paginate, either "next" (default) or "prev" page
 - `perPage` (integer): The number of entries per page returned. Acceptable range is 3 - 1000. Default is 1000.
 - `startingAfter` (string): A token used by the server to indicate the start of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it.
@@ -1716,10 +1716,10 @@ meraki organizations getOrganizationWebhooksAlertTypes --organizationId 'STRING'
 https://developer.cisco.com/meraki/api-v1/#!get-organization-webhooks-logs
 
 - `organizationId` (string): (required)
-- `total`_pages (integer or string): use with perPage to get total results up to total_pages*perPage; -1 or "all" for all pages
+- `total_pages` (integer or string): use with perPage to get total results up to total_pages*perPage; -1 or "all" for all pages
 - `direction` (string): direction to paginate, either "next" (default) or "prev" page
-- `t`0 (string): The beginning of the timespan for the data. The maximum lookback period is 90 days from today.
-- `t`1 (string): The end of the timespan for the data. t1 can be a maximum of 31 days after t0.
+- `t0` (string): The beginning of the timespan for the data. The maximum lookback period is 90 days from today.
+- `t1` (string): The end of the timespan for the data. t1 can be a maximum of 31 days after t0.
 - `timespan` (number): The timespan for which the information will be fetched. If specifying timespan, do not specify parameters t0 and t1. The value must be in seconds and be less than or equal to 31 days. The default is 1 day.
 - `perPage` (integer): The number of entries per page returned. Acceptable range is 3 - 1000. Default is 50.
 - `startingAfter` (string): A token used by the server to indicate the start of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it.
@@ -2077,7 +2077,7 @@ https://developer.cisco.com/meraki/api-v1/#!update-organization-saml-idp
 
 - `organizationId` (string): (required)
 - `idpId` (string): (required)
-- `x`509certSha1Fingerprint (string): Fingerprint (SHA1) of the SAML certificate provided by your Identity Provider (IdP). This will be used for encryption / validation.
+- `x509certSha1Fingerprint` (string): Fingerprint (SHA1) of the SAML certificate provided by your Identity Provider (IdP). This will be used for encryption / validation.
 - `sloLogoutUrl` (string): Dashboard will redirect users to this URL when they sign out.
 
 ##### Method Code:
@@ -2128,12 +2128,12 @@ meraki organizations updateOrganizationSamlRole --organizationId 'STRING' --saml
 https://developer.cisco.com/meraki/api-v1/#!update-organization-snmp
 
 - `organizationId` (string): (required)
-- `v`2cEnabled (boolean): Boolean indicating whether SNMP version 2c is enabled for the organization.
-- `v`3Enabled (boolean): Boolean indicating whether SNMP version 3 is enabled for the organization.
-- `v`3AuthMode (string): The SNMP version 3 authentication mode. Can be either 'MD5' or 'SHA'.
-- `v`3AuthPass (string): The SNMP version 3 authentication password. Must be at least 8 characters if specified.
-- `v`3PrivMode (string): The SNMP version 3 privacy mode. Can be either 'DES' or 'AES128'.
-- `v`3PrivPass (string): The SNMP version 3 privacy password. Must be at least 8 characters if specified.
+- `v2cEnabled` (boolean): Boolean indicating whether SNMP version 2c is enabled for the organization.
+- `v3Enabled` (boolean): Boolean indicating whether SNMP version 3 is enabled for the organization.
+- `v3AuthMode` (string): The SNMP version 3 authentication mode. Can be either 'MD5' or 'SHA'.
+- `v3AuthPass` (string): The SNMP version 3 authentication password. Must be at least 8 characters if specified.
+- `v3PrivMode` (string): The SNMP version 3 privacy mode. Can be either 'DES' or 'AES128'.
+- `v3PrivPass` (string): The SNMP version 3 privacy password. Must be at least 8 characters if specified.
 - `peerIps` (array): The list of IPv4 addresses that are allowed to access the SNMP server.
 
 ##### Method Code:
@@ -2632,9 +2632,9 @@ meraki networks getNetworkBluetoothClient --networkId 'STRING' --bluetoothClient
 https://developer.cisco.com/meraki/api-v1/#!get-network-bluetooth-clients
 
 - `networkId` (string): (required)
-- `total`_pages (integer or string): use with perPage to get total results up to total_pages*perPage; -1 or "all" for all pages
+- `total_pages` (integer or string): use with perPage to get total results up to total_pages*perPage; -1 or "all" for all pages
 - `direction` (string): direction to paginate, either "next" (default) or "prev" page
-- `t`0 (string): The beginning of the timespan for the data. The maximum lookback period is 7 days from today.
+- `t0` (string): The beginning of the timespan for the data. The maximum lookback period is 7 days from today.
 - `timespan` (number): The timespan for which the information will be fetched. If specifying timespan, do not specify parameter t0. The value must be in seconds and be less than or equal to 7 days. The default is 1 day.
 - `perPage` (integer): The number of entries per page returned. Acceptable range is 5 - 1000. Default is 10.
 - `startingAfter` (string): A token used by the server to indicate the start of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it.
@@ -2732,7 +2732,7 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-client-traffic-history
 
 - `networkId` (string): (required)
 - `clientId` (string): (required)
-- `total`_pages (integer or string): use with perPage to get total results up to total_pages*perPage; -1 or "all" for all pages
+- `total_pages` (integer or string): use with perPage to get total results up to total_pages*perPage; -1 or "all" for all pages
 - `direction` (string): direction to paginate, either "next" (default) or "prev" page
 - `perPage` (integer): The number of entries per page returned. Acceptable range is 3 - 1000.
 - `startingAfter` (string): A token used by the server to indicate the start of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it.
@@ -2782,9 +2782,9 @@ meraki networks getNetworkClientUsageHistory --networkId 'STRING' --clientId 'ST
 https://developer.cisco.com/meraki/api-v1/#!get-network-clients
 
 - `networkId` (string): (required)
-- `total`_pages (integer or string): use with perPage to get total results up to total_pages*perPage; -1 or "all" for all pages
+- `total_pages` (integer or string): use with perPage to get total results up to total_pages*perPage; -1 or "all" for all pages
 - `direction` (string): direction to paginate, either "next" (default) or "prev" page
-- `t`0 (string): The beginning of the timespan for the data. The maximum lookback period is 31 days from today.
+- `t0` (string): The beginning of the timespan for the data. The maximum lookback period is 31 days from today.
 - `timespan` (number): The timespan for which the information will be fetched. If specifying timespan, do not specify parameter t0. The value must be in seconds and be less than or equal to 31 days. The default is 1 day.
 - `perPage` (integer): The number of entries per page returned. Acceptable range is 3 - 1000. Default is 10.
 - `startingAfter` (string): A token used by the server to indicate the start of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it.
@@ -2812,14 +2812,14 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-clients-application-usag
 
 - `networkID` (string): (required)
 - `clients` (string): A list of client keys, MACs or IPs separated by comma.
-- `total`_pages (integer or string): use with perPage to get total results up to total_pages*perPage; -1 or "all" for all pages
+- `total_pages` (integer or string): use with perPage to get total results up to total_pages*perPage; -1 or "all" for all pages
 - `direction` (string): direction to paginate, either "next" (default) or "prev" page
 - `ssidNumber` (integer): An SSID number to include. If not specified, eveusage histories application usagents for all SSIDs will be returned.
 - `perPage` (integer): The number of entries per page returned. Acceptable range is 3 - 1000.
 - `startingAfter` (string): A token used by the server to indicate the start of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it.
 - `endingBefore` (string): A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it.
-- `t`0 (string): The beginning of the timespan for the data. The maximum lookback period is 31 days from today.
-- `t`1 (string): The end of the timespan for the data. t1 can be a maximum of 31 days after t0.
+- `t0` (string): The beginning of the timespan for the data. The maximum lookback period is 31 days from today.
+- `t1` (string): The end of the timespan for the data. t1 can be a maximum of 31 days after t0.
 - `timespan` (number): The timespan for which the information will be fetched. If specifying timespan, do not specify parameters t0 and t1. The value must be in seconds and be less than or equal to 31 days. The default is 1 day.
 
 ##### Method Code:
@@ -2844,14 +2844,14 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-clients-usage-histories
 
 - `networkID` (string): (required)
 - `clients` (string): A list of client keys, MACs or IPs separated by comma.
-- `total`_pages (integer or string): use with perPage to get total results up to total_pages*perPage; -1 or "all" for all pages
+- `total_pages` (integer or string): use with perPage to get total results up to total_pages*perPage; -1 or "all" for all pages
 - `direction` (string): direction to paginate, either "next" (default) or "prev" page
 - `ssidNumber` (integer): An SSID number to include. If not specified, events for all SSIDs will be returned.
 - `perPage` (integer): The number of entries per page returned. Acceptable range is 3 - 1000.
 - `startingAfter` (string): A token used by the server to indicate the start of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it.
 - `endingBefore` (string): A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it.
-- `t`0 (string): The beginning of the timespan for the data. The maximum lookback period is 31 days from today.
-- `t`1 (string): The end of the timespan for the data. t1 can be a maximum of 31 days after t0.
+- `t0` (string): The beginning of the timespan for the data. The maximum lookback period is 31 days from today.
+- `t1` (string): The end of the timespan for the data. t1 can be a maximum of 31 days after t0.
 - `timespan` (number): The timespan for which the information will be fetched. If specifying timespan, do not specify parameters t0 and t1. The value must be in seconds and be less than or equal to 31 days. The default is 1 day.
 
 ##### Method Code:
@@ -2897,9 +2897,9 @@ meraki networks getNetworkDevices --networkId 'STRING'
 https://developer.cisco.com/meraki/api-v1/#!get-network-events
 
 - `networkId` (string): (required)
-- `total`_pages (integer or string): use with perPage to get total results up to total_pages*perPage; -1 or "all" for all pages
+- `total_pages` (integer or string): use with perPage to get total results up to total_pages*perPage; -1 or "all" for all pages
 - `direction` (string): direction to paginate, either "next" or "prev" (default) page
-- `event`_log_end_time (string): ISO8601 Zulu/UTC time, to use in conjunction with startingAfter, to retrieve events within a time window
+- `event_log_end_time` (string): ISO8601 Zulu/UTC time, to use in conjunction with startingAfter, to retrieve events within a time window
 - `productType` (string): The product type to fetch events for. This parameter is required for networks with multiple device types. Valid types are wireless, appliance, switch, systemsManager, camera, cellularGateway, and environmental
 - `includedEventTypes` (array): A list of event types. The returned events will be filtered to only include events with these types.
 - `excludedEventTypes` (array): A list of event types. The returned events will be filtered to exclude events with these types.
@@ -3182,10 +3182,10 @@ meraki networks getNetworkNetflow --networkId 'STRING'
 https://developer.cisco.com/meraki/api-v1/#!get-network-network-health-channel-utilization
 
 - `networkId` (string): (required)
-- `total`_pages (integer or string): use with perPage to get total results up to total_pages*perPage; -1 or "all" for all pages
+- `total_pages` (integer or string): use with perPage to get total results up to total_pages*perPage; -1 or "all" for all pages
 - `direction` (string): direction to paginate, either "next" (default) or "prev" page
-- `t`0 (string): The beginning of the timespan for the data. The maximum lookback period is 31 days from today.
-- `t`1 (string): The end of the timespan for the data. t1 can be a maximum of 31 days after t0.
+- `t0` (string): The beginning of the timespan for the data. The maximum lookback period is 31 days from today.
+- `t1` (string): The end of the timespan for the data. t1 can be a maximum of 31 days after t0.
 - `timespan` (number): The timespan for which the information will be fetched. If specifying timespan, do not specify parameters t0 and t1. The value must be in seconds and be less than or equal to 31 days. The default is 1 day.
 - `resolution` (integer): The time resolution in seconds for returned data. The valid resolutions are: 600. The default is 600.
 - `perPage` (integer): The number of entries per page returned. Acceptable range is 3 - 100. Default is 10.
@@ -3433,7 +3433,7 @@ meraki networks getNetworkSyslogServers --networkId 'STRING'
 https://developer.cisco.com/meraki/api-v1/#!get-network-traffic
 
 - `networkId` (string): (required)
-- `t`0 (string): The beginning of the timespan for the data. The maximum lookback period is 30 days from today.
+- `t0` (string): The beginning of the timespan for the data. The maximum lookback period is 30 days from today.
 - `timespan` (number): The timespan for which the information will be fetched. If specifying timespan, do not specify parameter t0. The value must be in seconds and be less than or equal to 30 days.
 - `deviceType` (string): Filter the data by device type: 'combined', 'wireless', 'switch' or 'appliance'. Defaults to 'combined'. When using 'combined', for each rule the data will come from the device type with the most usage.
 
@@ -4127,7 +4127,7 @@ meraki devices getDevice --serial 'STRING'
 https://developer.cisco.com/meraki/api-v1/#!get-device-clients
 
 - `serial` (string): (required)
-- `t`0 (string): The beginning of the timespan for the data. The maximum lookback period is 31 days from today.
+- `t0` (string): The beginning of the timespan for the data. The maximum lookback period is 31 days from today.
 - `timespan` (number): The timespan for which the information will be fetched. If specifying timespan, do not specify parameter t0. The value must be in seconds and be less than or equal to 31 days. The default is 1 day.
 
 ##### Method Code:
@@ -4174,8 +4174,8 @@ https://developer.cisco.com/meraki/api-v1/#!get-device-loss-and-latency-history
 
 - `serial` (string): (required)
 - `ip` (string): The destination IP used to obtain the requested stats. This is required.
-- `t`0 (string): The beginning of the timespan for the data. The maximum lookback period is 365 days from today.
-- `t`1 (string): The end of the timespan for the data. t1 can be a maximum of 31 days after t0.
+- `t0` (string): The beginning of the timespan for the data. The maximum lookback period is 365 days from today.
+- `t1` (string): The end of the timespan for the data. t1 can be a maximum of 31 days after t0.
 - `timespan` (number): The timespan for which the information will be fetched. If specifying timespan, do not specify parameters t0 and t1. The value must be in seconds and be less than or equal to 31 days. The default is 1 day.
 - `resolution` (integer): The time resolution in seconds for returned data. The valid resolutions are: 60, 600, 3600, 86400. The default is 60.
 - `uplink` (string): The WAN uplink used to obtain the requested stats. Valid uplinks are wan1, wan2, cellular. The default is wan1.
@@ -4276,8 +4276,8 @@ meraki devices updateDevice --serial 'STRING'
 https://developer.cisco.com/meraki/api-v1/#!update-device-management-interface
 
 - `serial` (string): (required)
-- `wan`1 (object): WAN 1 settings
-- `wan`2 (object): WAN 2 settings (only for MX devices)
+- `wan1` (object): WAN 1 settings
+- `wan2` (object): WAN 2 settings (only for MX devices)
 
 ##### Method Code:
 ```python
@@ -4498,10 +4498,10 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-appliance-client-securit
 
 - `networkId` (string): (required)
 - `clientId` (string): (required)
-- `total`_pages (integer or string): use with perPage to get total results up to total_pages*perPage; -1 or "all" for all pages
+- `total_pages` (integer or string): use with perPage to get total results up to total_pages*perPage; -1 or "all" for all pages
 - `direction` (string): direction to paginate, either "next" (default) or "prev" page
-- `t`0 (string): The beginning of the timespan for the data. Data is gathered after the specified t0 value. The maximum lookback period is 791 days from today.
-- `t`1 (string): The end of the timespan for the data. t1 can be a maximum of 791 days after t0.
+- `t0` (string): The beginning of the timespan for the data. Data is gathered after the specified t0 value. The maximum lookback period is 791 days from today.
+- `t1` (string): The end of the timespan for the data. t1 can be a maximum of 791 days after t0.
 - `timespan` (number): The timespan for which the information will be fetched. If specifying timespan, do not specify parameters t0 and t1. The value must be in seconds and be less than or equal to 791 days. The default is 31 days.
 - `perPage` (integer): The number of entries per page returned. Acceptable range is 3 - 1000. Default is 100.
 - `startingAfter` (string): A token used by the server to indicate the start of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it.
@@ -4861,10 +4861,10 @@ meraki appliance getNetworkAppliancePorts --networkId 'STRING'
 https://developer.cisco.com/meraki/api-v1/#!get-network-appliance-security-events
 
 - `networkId` (string): (required)
-- `total`_pages (integer or string): use with perPage to get total results up to total_pages*perPage; -1 or "all" for all pages
+- `total_pages` (integer or string): use with perPage to get total results up to total_pages*perPage; -1 or "all" for all pages
 - `direction` (string): direction to paginate, either "next" (default) or "prev" page
-- `t`0 (string): The beginning of the timespan for the data. Data is gathered after the specified t0 value. The maximum lookback period is 365 days from today.
-- `t`1 (string): The end of the timespan for the data. t1 can be a maximum of 365 days after t0.
+- `t0` (string): The beginning of the timespan for the data. Data is gathered after the specified t0 value. The maximum lookback period is 365 days from today.
+- `t1` (string): The end of the timespan for the data. t1 can be a maximum of 365 days after t0.
 - `timespan` (number): The timespan for which the information will be fetched. If specifying timespan, do not specify parameters t0 and t1. The value must be in seconds and be less than or equal to 365 days. The default is 31 days.
 - `perPage` (integer): The number of entries per page returned. Acceptable range is 3 - 1000. Default is 100.
 - `startingAfter` (string): A token used by the server to indicate the start of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it.
@@ -5291,10 +5291,10 @@ meraki appliance getNetworkApplianceWarmSpare --networkId 'STRING'
 https://developer.cisco.com/meraki/api-v1/#!get-organization-appliance-security-events
 
 - `organizationId` (string): (required)
-- `total`_pages (integer or string): use with perPage to get total results up to total_pages*perPage; -1 or "all" for all pages
+- `total_pages` (integer or string): use with perPage to get total results up to total_pages*perPage; -1 or "all" for all pages
 - `direction` (string): direction to paginate, either "next" (default) or "prev" page
-- `t`0 (string): The beginning of the timespan for the data. Data is gathered after the specified t0 value. The maximum lookback period is 365 days from today.
-- `t`1 (string): The end of the timespan for the data. t1 can be a maximum of 365 days after t0.
+- `t0` (string): The beginning of the timespan for the data. Data is gathered after the specified t0 value. The maximum lookback period is 365 days from today.
+- `t1` (string): The end of the timespan for the data. t1 can be a maximum of 365 days after t0.
 - `timespan` (number): The timespan for which the information will be fetched. If specifying timespan, do not specify parameters t0 and t1. The value must be in seconds and be less than or equal to 365 days. The default is 31 days.
 - `perPage` (integer): The number of entries per page returned. Acceptable range is 3 - 1000. Default is 100.
 - `startingAfter` (string): A token used by the server to indicate the start of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it.
@@ -5344,7 +5344,7 @@ meraki appliance getOrganizationApplianceSecurityIntrusion --organizationId 'STR
 https://developer.cisco.com/meraki/api-v1/#!get-organization-appliance-uplink-statuses
 
 - `organizationId` (string): (required)
-- `total`_pages (integer or string): use with perPage to get total results up to total_pages*perPage; -1 or "all" for all pages
+- `total_pages` (integer or string): use with perPage to get total results up to total_pages*perPage; -1 or "all" for all pages
 - `direction` (string): direction to paginate, either "next" (default) or "prev" page
 - `perPage` (integer): The number of entries per page returned. Acceptable range is 3 - 1000. Default is 1000.
 - `startingAfter` (string): A token used by the server to indicate the start of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it.
@@ -5374,14 +5374,14 @@ meraki appliance getOrganizationApplianceUplinkStatuses --organizationId 'STRING
 https://developer.cisco.com/meraki/api-v1/#!get-organization-appliance-vpn-stats
 
 - `organizationId` (string): (required)
-- `total`_pages (integer or string): use with perPage to get total results up to total_pages*perPage; -1 or "all" for all pages
+- `total_pages` (integer or string): use with perPage to get total results up to total_pages*perPage; -1 or "all" for all pages
 - `direction` (string): direction to paginate, either "next" (default) or "prev" page
 - `perPage` (integer): The number of entries per page returned. Acceptable range is 3 - 300. Default is 300.
 - `startingAfter` (string): A token used by the server to indicate the start of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it.
 - `endingBefore` (string): A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it.
 - `networkIds` (array): A list of Meraki network IDs to filter results to contain only specified networks. E.g.: networkIds[]=N_12345678&networkIds[]=L_3456
-- `t`0 (string): The beginning of the timespan for the data. The maximum lookback period is 31 days from today.
-- `t`1 (string): The end of the timespan for the data. t1 can be a maximum of 31 days after t0.
+- `t0` (string): The beginning of the timespan for the data. The maximum lookback period is 31 days from today.
+- `t1` (string): The end of the timespan for the data. t1 can be a maximum of 31 days after t0.
 - `timespan` (number): The timespan for which the information will be fetched. If specifying timespan, do not specify parameters t0 and t1. The value must be in seconds and be less than or equal to 31 days. The default is 1 day.
 
 ##### Method Code:
@@ -5405,7 +5405,7 @@ meraki appliance getOrganizationApplianceVpnStats --organizationId 'STRING'
 https://developer.cisco.com/meraki/api-v1/#!get-organization-appliance-vpn-statuses
 
 - `organizationId` (string): (required)
-- `total`_pages (integer or string): use with perPage to get total results up to total_pages*perPage; -1 or "all" for all pages
+- `total_pages` (integer or string): use with perPage to get total results up to total_pages*perPage; -1 or "all" for all pages
 - `direction` (string): direction to paginate, either "next" (default) or "prev" page
 - `perPage` (integer): The number of entries per page returned. Acceptable range is 3 - 300. Default is 300.
 - `startingAfter` (string): A token used by the server to indicate the start of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it.
@@ -6110,8 +6110,8 @@ https://developer.cisco.com/meraki/api-v1/#!update-network-appliance-warm-spare
 - `enabled` (boolean): Enable warm spare
 - `spareSerial` (string): Serial number of the warm spare appliance
 - `uplinkMode` (string): Uplink mode, either virtual or public
-- `virtualIp`1 (string): The WAN 1 shared IP
-- `virtualIp`2 (string): The WAN 2 shared IP
+- `virtualIp1` (string): The WAN 1 shared IP
+- `virtualIp2` (string): The WAN 2 shared IP
 
 ##### Method Code:
 ```python
@@ -6310,8 +6310,8 @@ meraki camera getDeviceCameraAnalyticsLive --serial 'STRING'
 https://developer.cisco.com/meraki/api-v1/#!get-device-camera-analytics-overview
 
 - `serial` (string): (required)
-- `t`0 (string): The beginning of the timespan for the data. The maximum lookback period is 365 days from today.
-- `t`1 (string): The end of the timespan for the data. t1 can be a maximum of 7 days after t0.
+- `t0` (string): The beginning of the timespan for the data. The maximum lookback period is 365 days from today.
+- `t1` (string): The end of the timespan for the data. t1 can be a maximum of 7 days after t0.
 - `timespan` (number): The timespan for which the information will be fetched. If specifying timespan, do not specify parameters t0 and t1. The value must be in seconds and be less than or equal to 7 days. The default is 1 hour.
 - `objectType` (string): [optional] The object type for which analytics will be retrieved. The default object type is person. The available types are [person, vehicle].
 
@@ -6360,8 +6360,8 @@ https://developer.cisco.com/meraki/api-v1/#!get-device-camera-analytics-zone-his
 
 - `serial` (string): (required)
 - `zoneId` (string): (required)
-- `t`0 (string): The beginning of the timespan for the data. The maximum lookback period is 365 days from today.
-- `t`1 (string): The end of the timespan for the data. t1 can be a maximum of 14 hours after t0.
+- `t0` (string): The beginning of the timespan for the data. The maximum lookback period is 365 days from today.
+- `t1` (string): The end of the timespan for the data. t1 can be a maximum of 14 hours after t0.
 - `timespan` (number): The timespan for which the information will be fetched. If specifying timespan, do not specify parameters t0 and t1. The value must be in seconds and be less than or equal to 14 hours. The default is 1 hour.
 - `resolution` (integer): The time resolution in seconds for returned data. The valid resolutions are: 60. The default is 60.
 - `objectType` (string): [optional] The object type for which analytics will be retrieved. The default object type is person. The available types are [person, vehicle].
@@ -6834,7 +6834,7 @@ meraki cellularGateway getNetworkCellularGatewayUplink --networkId 'STRING'
 https://developer.cisco.com/meraki/api-v1/#!get-organization-cellular-gateway-uplink-statuses
 
 - `organizationId` (string): (required)
-- `total`_pages (integer or string): use with perPage to get total results up to total_pages*perPage; -1 or "all" for all pages
+- `total_pages` (integer or string): use with perPage to get total results up to total_pages*perPage; -1 or "all" for all pages
 - `direction` (string): direction to paginate, either "next" (default) or "prev" page
 - `perPage` (integer): The number of entries per page returned. Acceptable range is 3 - 1000. Default is 1000.
 - `startingAfter` (string): A token used by the server to indicate the start of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it.
@@ -7326,7 +7326,7 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-sm-device-connectivity
 
 - `networkId` (string): (required)
 - `deviceId` (string): (required)
-- `total`_pages (integer or string): use with perPage to get total results up to total_pages*perPage; -1 or "all" for all pages
+- `total_pages` (integer or string): use with perPage to get total results up to total_pages*perPage; -1 or "all" for all pages
 - `direction` (string): direction to paginate, either "next" (default) or "prev" page
 - `perPage` (integer): The number of entries per page returned. Acceptable range is 3 - 1000. Default is 1000.
 - `startingAfter` (string): A token used by the server to indicate the start of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it.
@@ -7354,7 +7354,7 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-sm-device-desktop-logs
 
 - `networkId` (string): (required)
 - `deviceId` (string): (required)
-- `total`_pages (integer or string): use with perPage to get total results up to total_pages*perPage; -1 or "all" for all pages
+- `total_pages` (integer or string): use with perPage to get total results up to total_pages*perPage; -1 or "all" for all pages
 - `direction` (string): direction to paginate, either "next" (default) or "prev" page
 - `perPage` (integer): The number of entries per page returned. Acceptable range is 3 - 1000. Default is 1000.
 - `startingAfter` (string): A token used by the server to indicate the start of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it.
@@ -7382,7 +7382,7 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-sm-device-device-command
 
 - `networkId` (string): (required)
 - `deviceId` (string): (required)
-- `total`_pages (integer or string): use with perPage to get total results up to total_pages*perPage; -1 or "all" for all pages
+- `total_pages` (integer or string): use with perPage to get total results up to total_pages*perPage; -1 or "all" for all pages
 - `direction` (string): direction to paginate, either "next" (default) or "prev" page
 - `perPage` (integer): The number of entries per page returned. Acceptable range is 3 - 1000. Default is 1000.
 - `startingAfter` (string): A token used by the server to indicate the start of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it.
@@ -7456,7 +7456,7 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-sm-device-performance-hi
 
 - `networkId` (string): (required)
 - `deviceId` (string): (required)
-- `total`_pages (integer or string): use with perPage to get total results up to total_pages*perPage; -1 or "all" for all pages
+- `total_pages` (integer or string): use with perPage to get total results up to total_pages*perPage; -1 or "all" for all pages
 - `direction` (string): direction to paginate, either "next" (default) or "prev" page
 - `perPage` (integer): The number of entries per page returned. Acceptable range is 3 - 1000. Default is 1000.
 - `startingAfter` (string): A token used by the server to indicate the start of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it.
@@ -7575,7 +7575,7 @@ meraki sm getNetworkSmDeviceWlanLists --networkId 'STRING' --deviceId 'STRING'
 https://developer.cisco.com/meraki/api-v1/#!get-network-sm-devices
 
 - `networkId` (string): (required)
-- `total`_pages (integer or string): use with perPage to get total results up to total_pages*perPage; -1 or "all" for all pages
+- `total_pages` (integer or string): use with perPage to get total results up to total_pages*perPage; -1 or "all" for all pages
 - `direction` (string): direction to paginate, either "next" (default) or "prev" page
 - `fields` (array): Additional fields that will be displayed for each device.
 The default fields are: id, name, tags, ssid, wifiMac, osName, systemModel, uuid, and serialNumber. The additional fields are: ip,
@@ -7682,7 +7682,7 @@ meraki sm getNetworkSmTargetGroups --networkId 'STRING'
 https://developer.cisco.com/meraki/api-v1/#!get-network-sm-user-access-devices
 
 - `networkId` (string): (required)
-- `total`_pages (integer or string): use with perPage to get total results up to total_pages*perPage; -1 or "all" for all pages
+- `total_pages` (integer or string): use with perPage to get total results up to total_pages*perPage; -1 or "all" for all pages
 - `direction` (string): direction to paginate, either "next" (default) or "prev" page
 - `perPage` (integer): The number of entries per page returned. Acceptable range is 3 - 1000. Default is 100.
 - `startingAfter` (string): A token used by the server to indicate the start of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it.
@@ -8684,7 +8684,7 @@ meraki switch getDeviceSwitchPorts --serial 'STRING'
 https://developer.cisco.com/meraki/api-v1/#!get-device-switch-ports-statuses
 
 - `serial` (string): (required)
-- `t`0 (string): The beginning of the timespan for the data. The maximum lookback period is 31 days from today.
+- `t0` (string): The beginning of the timespan for the data. The maximum lookback period is 31 days from today.
 - `timespan` (number): The timespan for which the information will be fetched. If specifying timespan, do not specify parameter t0. The value must be in seconds and be less than or equal to 31 days. The default is 1 day.
 
 ##### Method Code:
@@ -8708,7 +8708,7 @@ meraki switch getDeviceSwitchPortsStatuses --serial 'STRING'
 https://developer.cisco.com/meraki/api-v1/#!get-device-switch-ports-statuses-packets
 
 - `serial` (string): (required)
-- `t`0 (string): The beginning of the timespan for the data. The maximum lookback period is 1 day from today.
+- `t0` (string): The beginning of the timespan for the data. The maximum lookback period is 1 day from today.
 - `timespan` (number): The timespan for which the information will be fetched. If specifying timespan, do not specify parameter t0. The value must be in seconds and be less than or equal to 1 day. The default is 1 day.
 
 ##### Method Code:
@@ -9974,8 +9974,8 @@ https://developer.cisco.com/meraki/api-v1/#!update-network-switch-routing-ospf
 - `helloTimerInSeconds` (integer): Time interval in seconds at which hello packet will be sent to OSPF neighbors to maintain connectivity. Value must be between 1 and 255. Default is 10 seconds
 - `deadTimerInSeconds` (integer): Time interval to determine when the peer will be declare inactive/dead. Value must be between 1 and 65535
 - `areas` (array): OSPF areas
-- `md`5AuthenticationEnabled (boolean): Boolean value to enable or disable MD5 authentication. MD5 authentication is disabled by default.
-- `md`5AuthenticationKey (object): MD5 authentication credentials. This param is only relevant if md5AuthenticationEnabled is true
+- `md5AuthenticationEnabled` (boolean): Boolean value to enable or disable MD5 authentication. MD5 authentication is disabled by default.
+- `md5AuthenticationKey` (object): MD5 authentication credentials. This param is only relevant if md5AuthenticationEnabled is true
 
 ##### Method Code:
 ```python
@@ -10342,8 +10342,8 @@ meraki wireless getDeviceWirelessBluetoothSettings --serial 'STRING'
 https://developer.cisco.com/meraki/api-v1/#!get-device-wireless-connection-stats
 
 - `serial` (string): (required)
-- `t`0 (string): The beginning of the timespan for the data. The maximum lookback period is 180 days from today.
-- `t`1 (string): The end of the timespan for the data. t1 can be a maximum of 7 days after t0.
+- `t0` (string): The beginning of the timespan for the data. The maximum lookback period is 180 days from today.
+- `t1` (string): The end of the timespan for the data. t1 can be a maximum of 7 days after t0.
 - `timespan` (number): The timespan for which the information will be fetched. If specifying timespan, do not specify parameters t0 and t1. The value must be in seconds and be less than or equal to 7 days.
 - `band` (string): Filter results by band (either '2.4' or '5'). Note that data prior to February 2020 will not have band information.
 - `ssid` (integer): Filter results by SSID
@@ -10371,8 +10371,8 @@ meraki wireless getDeviceWirelessConnectionStats --serial 'STRING'
 https://developer.cisco.com/meraki/api-v1/#!get-device-wireless-latency-stats
 
 - `serial` (string): (required)
-- `t`0 (string): The beginning of the timespan for the data. The maximum lookback period is 180 days from today.
-- `t`1 (string): The end of the timespan for the data. t1 can be a maximum of 7 days after t0.
+- `t0` (string): The beginning of the timespan for the data. The maximum lookback period is 180 days from today.
+- `t1` (string): The end of the timespan for the data. t1 can be a maximum of 7 days after t0.
 - `timespan` (number): The timespan for which the information will be fetched. If specifying timespan, do not specify parameters t0 and t1. The value must be in seconds and be less than or equal to 7 days.
 - `band` (string): Filter results by band (either '2.4' or '5'). Note that data prior to February 2020 will not have band information.
 - `ssid` (integer): Filter results by SSID
@@ -10445,7 +10445,7 @@ meraki wireless getDeviceWirelessStatus --serial 'STRING'
 https://developer.cisco.com/meraki/api-v1/#!get-network-wireless-air-marshal
 
 - `networkId` (string): (required)
-- `t`0 (string): The beginning of the timespan for the data. The maximum lookback period is 31 days from today.
+- `t0` (string): The beginning of the timespan for the data. The maximum lookback period is 31 days from today.
 - `timespan` (number): The timespan for which the information will be fetched. If specifying timespan, do not specify parameter t0. The value must be in seconds and be less than or equal to 31 days. The default is 7 days.
 
 ##### Method Code:
@@ -10513,8 +10513,8 @@ meraki wireless getNetworkWirelessBluetoothSettings --networkId 'STRING'
 https://developer.cisco.com/meraki/api-v1/#!get-network-wireless-channel-utilization-history
 
 - `networkId` (string): (required)
-- `t`0 (string): The beginning of the timespan for the data. The maximum lookback period is 31 days from today.
-- `t`1 (string): The end of the timespan for the data. t1 can be a maximum of 31 days after t0.
+- `t0` (string): The beginning of the timespan for the data. The maximum lookback period is 31 days from today.
+- `t1` (string): The end of the timespan for the data. t1 can be a maximum of 31 days after t0.
 - `timespan` (number): The timespan for which the information will be fetched. If specifying timespan, do not specify parameters t0 and t1. The value must be in seconds and be less than or equal to 31 days. The default is 7 days.
 - `resolution` (integer): The time resolution in seconds for returned data. The valid resolutions are: 600, 1200, 3600, 14400, 86400. The default is 86400.
 - `autoResolution` (boolean): Automatically select a data resolution based on the given timespan; this overrides the value specified by the 'resolution' parameter. The default setting is false.
@@ -10545,8 +10545,8 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-wireless-client-connecti
 
 - `networkId` (string): (required)
 - `clientId` (string): (required)
-- `t`0 (string): The beginning of the timespan for the data. The maximum lookback period is 180 days from today.
-- `t`1 (string): The end of the timespan for the data. t1 can be a maximum of 7 days after t0.
+- `t0` (string): The beginning of the timespan for the data. The maximum lookback period is 180 days from today.
+- `t1` (string): The end of the timespan for the data. t1 can be a maximum of 7 days after t0.
 - `timespan` (number): The timespan for which the information will be fetched. If specifying timespan, do not specify parameters t0 and t1. The value must be in seconds and be less than or equal to 7 days.
 - `band` (string): Filter results by band (either '2.4' or '5'). Note that data prior to February 2020 will not have band information.
 - `ssid` (integer): Filter results by SSID
@@ -10575,13 +10575,13 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-wireless-client-connecti
 
 - `networkId` (string): (required)
 - `clientId` (string): (required)
-- `total`_pages (integer or string): use with perPage to get total results up to total_pages*perPage; -1 or "all" for all pages
+- `total_pages` (integer or string): use with perPage to get total results up to total_pages*perPage; -1 or "all" for all pages
 - `direction` (string): direction to paginate, either "next" (default) or "prev" page
 - `perPage` (integer): The number of entries per page returned. Acceptable range is 3 - 1000.
 - `startingAfter` (string): A token used by the server to indicate the start of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it.
 - `endingBefore` (string): A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it.
-- `t`0 (string): The beginning of the timespan for the data. The maximum lookback period is 31 days from today.
-- `t`1 (string): The end of the timespan for the data. t1 can be a maximum of 31 days after t0.
+- `t0` (string): The beginning of the timespan for the data. The maximum lookback period is 31 days from today.
+- `t1` (string): The end of the timespan for the data. t1 can be a maximum of 31 days after t0.
 - `timespan` (number): The timespan for which the information will be fetched. If specifying timespan, do not specify parameters t0 and t1. The value must be in seconds and be less than or equal to 31 days. The default is 1 day.
 - `types` (array): A list of event types to include. If not specified, events of all types will be returned. Valid types are 'assoc', 'disassoc', 'auth', 'deauth', 'dns', 'dhcp', 'roam', 'connection' and/or 'sticky'.
 - `includedSeverities` (array): A list of severities to include. If not specified, events of all severities will be returned. Valid severities are 'good', 'info', 'warn' and/or 'bad'.
@@ -10610,8 +10610,8 @@ meraki wireless getNetworkWirelessClientConnectivityEvents --networkId 'STRING' 
 https://developer.cisco.com/meraki/api-v1/#!get-network-wireless-client-count-history
 
 - `networkId` (string): (required)
-- `t`0 (string): The beginning of the timespan for the data. The maximum lookback period is 31 days from today.
-- `t`1 (string): The end of the timespan for the data. t1 can be a maximum of 31 days after t0.
+- `t0` (string): The beginning of the timespan for the data. The maximum lookback period is 31 days from today.
+- `t1` (string): The end of the timespan for the data. t1 can be a maximum of 31 days after t0.
 - `timespan` (number): The timespan for which the information will be fetched. If specifying timespan, do not specify parameters t0 and t1. The value must be in seconds and be less than or equal to 31 days. The default is 7 days.
 - `resolution` (integer): The time resolution in seconds for returned data. The valid resolutions are: 300, 600, 1200, 3600, 14400, 86400. The default is 86400.
 - `autoResolution` (boolean): Automatically select a data resolution based on the given timespan; this overrides the value specified by the 'resolution' parameter. The default setting is false.
@@ -10643,8 +10643,8 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-wireless-client-latency-
 
 - `networkId` (string): (required)
 - `clientId` (string): (required)
-- `t`0 (string): The beginning of the timespan for the data. The maximum lookback period is 791 days from today.
-- `t`1 (string): The end of the timespan for the data. t1 can be a maximum of 791 days after t0.
+- `t0` (string): The beginning of the timespan for the data. The maximum lookback period is 791 days from today.
+- `t1` (string): The end of the timespan for the data. t1 can be a maximum of 791 days after t0.
 - `timespan` (number): The timespan for which the information will be fetched. If specifying timespan, do not specify parameters t0 and t1. The value must be in seconds and be less than or equal to 791 days. The default is 1 day.
 - `resolution` (integer): The time resolution in seconds for returned data. The valid resolutions are: 86400. The default is 86400.
 
@@ -10670,8 +10670,8 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-wireless-client-latency-
 
 - `networkId` (string): (required)
 - `clientId` (string): (required)
-- `t`0 (string): The beginning of the timespan for the data. The maximum lookback period is 180 days from today.
-- `t`1 (string): The end of the timespan for the data. t1 can be a maximum of 7 days after t0.
+- `t0` (string): The beginning of the timespan for the data. The maximum lookback period is 180 days from today.
+- `t1` (string): The end of the timespan for the data. t1 can be a maximum of 7 days after t0.
 - `timespan` (number): The timespan for which the information will be fetched. If specifying timespan, do not specify parameters t0 and t1. The value must be in seconds and be less than or equal to 7 days.
 - `band` (string): Filter results by band (either '2.4' or '5'). Note that data prior to February 2020 will not have band information.
 - `ssid` (integer): Filter results by SSID
@@ -10700,8 +10700,8 @@ meraki wireless getNetworkWirelessClientLatencyStats --networkId 'STRING' --clie
 https://developer.cisco.com/meraki/api-v1/#!get-network-wireless-clients-connection-stats
 
 - `networkId` (string): (required)
-- `t`0 (string): The beginning of the timespan for the data. The maximum lookback period is 180 days from today.
-- `t`1 (string): The end of the timespan for the data. t1 can be a maximum of 7 days after t0.
+- `t0` (string): The beginning of the timespan for the data. The maximum lookback period is 180 days from today.
+- `t1` (string): The end of the timespan for the data. t1 can be a maximum of 7 days after t0.
 - `timespan` (number): The timespan for which the information will be fetched. If specifying timespan, do not specify parameters t0 and t1. The value must be in seconds and be less than or equal to 7 days.
 - `band` (string): Filter results by band (either '2.4' or '5'). Note that data prior to February 2020 will not have band information.
 - `ssid` (integer): Filter results by SSID
@@ -10729,8 +10729,8 @@ meraki wireless getNetworkWirelessClientsConnectionStats --networkId 'STRING'
 https://developer.cisco.com/meraki/api-v1/#!get-network-wireless-clients-latency-stats
 
 - `networkId` (string): (required)
-- `t`0 (string): The beginning of the timespan for the data. The maximum lookback period is 180 days from today.
-- `t`1 (string): The end of the timespan for the data. t1 can be a maximum of 7 days after t0.
+- `t0` (string): The beginning of the timespan for the data. The maximum lookback period is 180 days from today.
+- `t1` (string): The end of the timespan for the data. t1 can be a maximum of 7 days after t0.
 - `timespan` (number): The timespan for which the information will be fetched. If specifying timespan, do not specify parameters t0 and t1. The value must be in seconds and be less than or equal to 7 days.
 - `band` (string): Filter results by band (either '2.4' or '5'). Note that data prior to February 2020 will not have band information.
 - `ssid` (integer): Filter results by SSID
@@ -10759,8 +10759,8 @@ meraki wireless getNetworkWirelessClientsLatencyStats --networkId 'STRING'
 https://developer.cisco.com/meraki/api-v1/#!get-network-wireless-connection-stats
 
 - `networkId` (string): (required)
-- `t`0 (string): The beginning of the timespan for the data. The maximum lookback period is 180 days from today.
-- `t`1 (string): The end of the timespan for the data. t1 can be a maximum of 7 days after t0.
+- `t0` (string): The beginning of the timespan for the data. The maximum lookback period is 180 days from today.
+- `t1` (string): The end of the timespan for the data. t1 can be a maximum of 7 days after t0.
 - `timespan` (number): The timespan for which the information will be fetched. If specifying timespan, do not specify parameters t0 and t1. The value must be in seconds and be less than or equal to 7 days.
 - `band` (string): Filter results by band (either '2.4' or '5'). Note that data prior to February 2020 will not have band information.
 - `ssid` (integer): Filter results by SSID
@@ -10788,8 +10788,8 @@ meraki wireless getNetworkWirelessConnectionStats --networkId 'STRING'
 https://developer.cisco.com/meraki/api-v1/#!get-network-wireless-data-rate-history
 
 - `networkId` (string): (required)
-- `t`0 (string): The beginning of the timespan for the data. The maximum lookback period is 31 days from today.
-- `t`1 (string): The end of the timespan for the data. t1 can be a maximum of 31 days after t0.
+- `t0` (string): The beginning of the timespan for the data. The maximum lookback period is 31 days from today.
+- `t1` (string): The end of the timespan for the data. t1 can be a maximum of 31 days after t0.
 - `timespan` (number): The timespan for which the information will be fetched. If specifying timespan, do not specify parameters t0 and t1. The value must be in seconds and be less than or equal to 31 days. The default is 7 days.
 - `resolution` (integer): The time resolution in seconds for returned data. The valid resolutions are: 300, 600, 1200, 3600, 14400, 86400. The default is 86400.
 - `autoResolution` (boolean): Automatically select a data resolution based on the given timespan; this overrides the value specified by the 'resolution' parameter. The default setting is false.
@@ -10820,8 +10820,8 @@ meraki wireless getNetworkWirelessDataRateHistory --networkId 'STRING'
 https://developer.cisco.com/meraki/api-v1/#!get-network-wireless-devices-connection-stats
 
 - `networkId` (string): (required)
-- `t`0 (string): The beginning of the timespan for the data. The maximum lookback period is 180 days from today.
-- `t`1 (string): The end of the timespan for the data. t1 can be a maximum of 7 days after t0.
+- `t0` (string): The beginning of the timespan for the data. The maximum lookback period is 180 days from today.
+- `t1` (string): The end of the timespan for the data. t1 can be a maximum of 7 days after t0.
 - `timespan` (number): The timespan for which the information will be fetched. If specifying timespan, do not specify parameters t0 and t1. The value must be in seconds and be less than or equal to 7 days.
 - `band` (string): Filter results by band (either '2.4' or '5'). Note that data prior to February 2020 will not have band information.
 - `ssid` (integer): Filter results by SSID
@@ -10849,8 +10849,8 @@ meraki wireless getNetworkWirelessDevicesConnectionStats --networkId 'STRING'
 https://developer.cisco.com/meraki/api-v1/#!get-network-wireless-devices-latency-stats
 
 - `networkId` (string): (required)
-- `t`0 (string): The beginning of the timespan for the data. The maximum lookback period is 180 days from today.
-- `t`1 (string): The end of the timespan for the data. t1 can be a maximum of 7 days after t0.
+- `t0` (string): The beginning of the timespan for the data. The maximum lookback period is 180 days from today.
+- `t1` (string): The end of the timespan for the data. t1 can be a maximum of 7 days after t0.
 - `timespan` (number): The timespan for which the information will be fetched. If specifying timespan, do not specify parameters t0 and t1. The value must be in seconds and be less than or equal to 7 days.
 - `band` (string): Filter results by band (either '2.4' or '5'). Note that data prior to February 2020 will not have band information.
 - `ssid` (integer): Filter results by SSID
@@ -10879,8 +10879,8 @@ meraki wireless getNetworkWirelessDevicesLatencyStats --networkId 'STRING'
 https://developer.cisco.com/meraki/api-v1/#!get-network-wireless-failed-connections
 
 - `networkId` (string): (required)
-- `t`0 (string): The beginning of the timespan for the data. The maximum lookback period is 180 days from today.
-- `t`1 (string): The end of the timespan for the data. t1 can be a maximum of 7 days after t0.
+- `t0` (string): The beginning of the timespan for the data. The maximum lookback period is 180 days from today.
+- `t1` (string): The end of the timespan for the data. t1 can be a maximum of 7 days after t0.
 - `timespan` (number): The timespan for which the information will be fetched. If specifying timespan, do not specify parameters t0 and t1. The value must be in seconds and be less than or equal to 7 days.
 - `band` (string): Filter results by band (either '2.4' or '5'). Note that data prior to February 2020 will not have band information.
 - `ssid` (integer): Filter results by SSID
@@ -10910,8 +10910,8 @@ meraki wireless getNetworkWirelessFailedConnections --networkId 'STRING'
 https://developer.cisco.com/meraki/api-v1/#!get-network-wireless-latency-history
 
 - `networkId` (string): (required)
-- `t`0 (string): The beginning of the timespan for the data. The maximum lookback period is 31 days from today.
-- `t`1 (string): The end of the timespan for the data. t1 can be a maximum of 31 days after t0.
+- `t0` (string): The beginning of the timespan for the data. The maximum lookback period is 31 days from today.
+- `t1` (string): The end of the timespan for the data. t1 can be a maximum of 31 days after t0.
 - `timespan` (number): The timespan for which the information will be fetched. If specifying timespan, do not specify parameters t0 and t1. The value must be in seconds and be less than or equal to 31 days. The default is 7 days.
 - `resolution` (integer): The time resolution in seconds for returned data. The valid resolutions are: 300, 600, 1200, 3600, 14400, 86400. The default is 86400.
 - `autoResolution` (boolean): Automatically select a data resolution based on the given timespan; this overrides the value specified by the 'resolution' parameter. The default setting is false.
@@ -10943,8 +10943,8 @@ meraki wireless getNetworkWirelessLatencyHistory --networkId 'STRING'
 https://developer.cisco.com/meraki/api-v1/#!get-network-wireless-latency-stats
 
 - `networkId` (string): (required)
-- `t`0 (string): The beginning of the timespan for the data. The maximum lookback period is 180 days from today.
-- `t`1 (string): The end of the timespan for the data. t1 can be a maximum of 7 days after t0.
+- `t0` (string): The beginning of the timespan for the data. The maximum lookback period is 180 days from today.
+- `t1` (string): The end of the timespan for the data. t1 can be a maximum of 7 days after t0.
 - `timespan` (number): The timespan for which the information will be fetched. If specifying timespan, do not specify parameters t0 and t1. The value must be in seconds and be less than or equal to 7 days.
 - `band` (string): Filter results by band (either '2.4' or '5'). Note that data prior to February 2020 will not have band information.
 - `ssid` (integer): Filter results by SSID
@@ -10973,7 +10973,7 @@ meraki wireless getNetworkWirelessLatencyStats --networkId 'STRING'
 https://developer.cisco.com/meraki/api-v1/#!get-network-wireless-mesh-statuses
 
 - `networkId` (string): (required)
-- `total`_pages (integer or string): use with perPage to get total results up to total_pages*perPage; -1 or "all" for all pages
+- `total_pages` (integer or string): use with perPage to get total results up to total_pages*perPage; -1 or "all" for all pages
 - `direction` (string): direction to paginate, either "next" (default) or "prev" page
 - `perPage` (integer): The number of entries per page returned. Acceptable range is 3 - 500. Default is 50.
 - `startingAfter` (string): A token used by the server to indicate the start of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it.
@@ -11068,8 +11068,8 @@ meraki wireless getNetworkWirelessSettings --networkId 'STRING'
 https://developer.cisco.com/meraki/api-v1/#!get-network-wireless-signal-quality-history
 
 - `networkId` (string): (required)
-- `t`0 (string): The beginning of the timespan for the data. The maximum lookback period is 31 days from today.
-- `t`1 (string): The end of the timespan for the data. t1 can be a maximum of 31 days after t0.
+- `t0` (string): The beginning of the timespan for the data. The maximum lookback period is 31 days from today.
+- `t1` (string): The end of the timespan for the data. t1 can be a maximum of 31 days after t0.
 - `timespan` (number): The timespan for which the information will be fetched. If specifying timespan, do not specify parameters t0 and t1. The value must be in seconds and be less than or equal to 31 days. The default is 7 days.
 - `resolution` (integer): The time resolution in seconds for returned data. The valid resolutions are: 300, 600, 1200, 3600, 14400, 86400. The default is 86400.
 - `autoResolution` (boolean): Automatically select a data resolution based on the given timespan; this overrides the value specified by the 'resolution' parameter. The default setting is false.
@@ -11284,8 +11284,8 @@ meraki wireless getNetworkWirelessSsids --networkId 'STRING'
 https://developer.cisco.com/meraki/api-v1/#!get-network-wireless-usage-history
 
 - `networkId` (string): (required)
-- `t`0 (string): The beginning of the timespan for the data. The maximum lookback period is 31 days from today.
-- `t`1 (string): The end of the timespan for the data. t1 can be a maximum of 31 days after t0.
+- `t0` (string): The beginning of the timespan for the data. The maximum lookback period is 31 days from today.
+- `t1` (string): The end of the timespan for the data. t1 can be a maximum of 31 days after t0.
 - `timespan` (number): The timespan for which the information will be fetched. If specifying timespan, do not specify parameters t0 and t1. The value must be in seconds and be less than or equal to 31 days. The default is 7 days.
 - `resolution` (integer): The time resolution in seconds for returned data. The valid resolutions are: 300, 600, 1200, 3600, 14400, 86400. The default is 86400.
 - `autoResolution` (boolean): Automatically select a data resolution based on the given timespan; this overrides the value specified by the 'resolution' parameter. The default setting is false.
@@ -11451,7 +11451,7 @@ https://developer.cisco.com/meraki/api-v1/#!update-network-wireless-settings
 
 - `networkId` (string): (required)
 - `meshingEnabled` (boolean): Toggle for enabling or disabling meshing in a network
-- `ipv`6BridgeEnabled (boolean): Toggle for enabling or disabling IPv6 bridging in a network (Note: if enabled, SSIDs must also be configured to use bridge mode)
+- `ipv6BridgeEnabled` (boolean): Toggle for enabling or disabling IPv6 bridging in a network (Note: if enabled, SSIDs must also be configured to use bridge mode)
 - `locationAnalyticsEnabled` (boolean): Toggle for enabling or disabling location analytics for your network
 - `upgradeStrategy` (string): The upgrade strategy to apply to the network. Must be one of 'minimizeUpgradeTime' or 'minimizeClientDowntime'. Requires firmware version MR 26.8 or higher'
 - `ledLightsOn` (boolean): Toggle for enabling or disabling LED lights on all APs in the network (making them run dark)
@@ -11485,8 +11485,8 @@ https://developer.cisco.com/meraki/api-v1/#!update-network-wireless-ssid
 - `encryptionMode` (string): The psk encryption mode for the SSID ('wep' or 'wpa'). This param is only valid if the authMode is 'psk'
 - `psk` (string): The passkey for the SSID. This param is only valid if the authMode is 'psk'
 - `wpaEncryptionMode` (string): The types of WPA encryption. ('WPA1 only', 'WPA1 and WPA2', 'WPA2 only', 'WPA3 Transition Mode' or 'WPA3 only')
-- `dot`11w (object): The current setting for Protected Management Frames (802.11w).
-- `dot`11r (object): The current setting for 802.11r
+- `dot11w` (object): The current setting for Protected Management Frames (802.11w).
+- `dot11r` (object): The current setting for 802.11r
 - `splashPage` (string): The type of splash page for the SSID ('None', 'Click-through splash page', 'Billing', 'Password-protected with Meraki RADIUS', 'Password-protected with custom RADIUS', 'Password-protected with Active Directory', 'Password-protected with LDAP', 'SMS authentication', 'Systems Manager Sentry', 'Facebook Wi-Fi', 'Google OAuth', 'Sponsored guest' or 'Cisco ISE'). This attribute is not supported for template children.
 - `radiusServers` (array): The RADIUS 802.1X servers to be used for authentication. This param is only valid if the authMode is 'open-with-radius', '8021x-radius' or 'ipsk-with-radius'
 - `radiusProxyEnabled` (boolean): If true, Meraki devices will proxy RADIUS messages through the Meraki cloud to the configured RADIUS auth and accounting servers.
