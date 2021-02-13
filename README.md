@@ -70,6 +70,10 @@ You can use PIP to install Meraki-CLI with the command `pip3 install meraki-cli`
 
 To see if Meraki-CLI was successfully installed, run the `meraki` command and see if it displays the help menu.
 
+#### Upgrading
+
+If you already have Meraki-CLi installed and want to upgrade to the latest release, use the command `pip3 install --upgrade --no-cache-dir meraki-cli` or `python3 -m pip install --upgrade --no-cache-dir meraki-cli`.
+
 
 ## Getting and Using your API Key
 
