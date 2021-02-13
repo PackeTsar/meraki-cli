@@ -170,7 +170,7 @@ The `--kwargs` data passed into Meraki-CLI is a JSON string and the JSON standar
 
 To do this, you use regular double-quotes in front of and behind the string to encapsulate it, and you use double-double-quotes in the actual data. That means replacing all uses of a double-quote character in the data with two double-quotes. Your argument ends up looking like this: `--kwargs "{""name"": ""Data Port"", ""vlan"": ""100""}"`. It is probably easiest to use find/replace in a text editor to do this for you.
 
-You can also structure the JSON data and your command a bit if you want to make your command more readable. In Windows, you can do this by ending each line with a carat which will allow the command to continue on the next line. Your command in this example will look like:
+You can also structure the JSON data and your command a bit if you want to make your command more readable. In Windows, you can do this by ending each line with a carat (`^`) which will allow the command to continue on the next line. Your command in this example will look like:
 
 ```
 meraki switch updateDeviceSwitchPort --serial 1234-ABCD-5678 --portId 24 --kwargs ^
