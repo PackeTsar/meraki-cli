@@ -163,6 +163,24 @@ In the example you will see many arguments described in the documentation, but o
 
 When the option to provide these other arguments exists for a command, you will see a `--kwargs` argument in that 'optional arguments' section. The `--kwargs` option allows you to insert extra key, value pairs into the command in the form of a JSON string. You do this by providing the argument and JSON value like `--kwargs '{"name": "Data Port", "vlan": "100"}'`. At times these arguments are required in order for the command to work. At other times they are optional.
 
+
+### Dealing with --kwargs on Windows
+
+The `--kwargs` data passed into Meraki-CLI is a JSON string and the JSON standard requires double-quotes in the data for quoting, it does not allow single-quotes. This becomes challenging on a standard Windows command prompt because Windows usually wants double-quotes used to encapsulate a string on the CLI; how do you use double quotes in the data and to encapsulate it?
+
+To do this, you use regular double-quotes in front of and behind the string to encapsulate it, and you use double-double-quotes in the actual data. That means replacing all uses of a double-quote character in the data with two double-quotes. Your argument ends up looking like this: `--kwargs "{""name"": ""Data Port"", ""vlan"": ""100""}"`. It is probably easiest to use find/replace in a text editor to do this for you.
+
+You can also structure the JSON data and your command a bit if you want to make your command more readable. In Windows, you can do this by ending each line with a carat which will allow the command to continue on the next line. Your command in this example will look like:
+
+```
+meraki switch updateDeviceSwitchPort --serial 1234-ABCD-5678 --portId 24 --kwargs ^
+"{ ^
+    ""name"": ""Data Port"", ^
+    ""vlan"": ""100"", ^
+}"
+```
+
+
 ## Making Some Changes
 
 Pushing changes into Meraki is done by running the correct command and passing in the required arguments, including using the `--kwargs` argument appropriately when required.
