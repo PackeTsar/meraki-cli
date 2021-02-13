@@ -215,6 +215,8 @@ If you want to combine those filters so displayed items have to match both of th
 
 Being able to manipulate the Meraki dashboard from the CLI can be quite useful, but its power grows exponentially when you are able to use pipelining. Pipelining allows you to pass the Meraki objects returned in one command into another and do something with them.
 
+> Note: When using pipelining, you will likely want to save your API key as an environment variable since it will need to be available to each instance of the program. Otherwise you would have to insert it multiple times like `meraki -k abcd1234 <commands> | meraki -k abcd1234 <commands>`.
+
 A simple example of this is to display the switch port statuses of the ports on all switches in a network. To do this use:
 
 `meraki networks getNetworkDevices --networkId N_12345 | meraki switch getDeviceSwitchPorts`
