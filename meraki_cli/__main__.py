@@ -205,6 +205,21 @@ def _configure_logging(parsed_args: argparse.Namespace) -> ():
     return log, meraki_log
 
 
+def _log_exception(exception, exit=False) -> None:
+    """
+    Check the current debug level and log a thrown exception if we are
+        debugging. Then exit the program if switch was thrown.
+
+    - exception: Exception object which was caught in caller
+    - exit: Boolean of whether or not to exit the program
+    """
+    if log.level >= logging.INFO:  # If we are debugging at all
+        log.warning('An exception was thrown and is logged below')
+        log.exception(exception)
+    if exit:
+        sys.exit()
+
+
 def _cmd_title(mtdstr: str) -> str:
     """
     Generate command/method title, based on its name, which is
@@ -303,9 +318,15 @@ def _translate_input(arg_dicts: list, translation_strs: list) -> []:
         ["id=vlanId", "name=description"]
     """
     translations = {}  # Start with no translations
-    for translation_str in translation_strs:
-        okey, ikey = translation_str.split('=')  # Output key, and Input Key
-        translations[ikey] = okey  # Add to dict for lookups
+    try:  # Catch exceptions with poorly formatted translations
+        for translation_str in translation_strs:
+            # Output key, and Input Key
+            okey, ikey = translation_str.split('=')
+            translations[ikey] = okey  # Add to dict for lookups
+    except Exception as e:
+        log.critical(f'Could not interpret translation: "{translation_str}"')
+        # Log the exception and exit
+        _log_exception(e, exit=True)
     log.debug(f'Built translations:\n{json.dumps(translations, indent=4)}')
     result = []  # Start with no result objects (dicts)
     for arg_dict in arg_dicts:
