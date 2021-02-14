@@ -3,3 +3,4 @@
 log.log
 htmlcov
 .coverage
+*.egg-info*
