@@ -825,8 +825,17 @@ def main(argstring=None) -> None:
         log.info('Calling target method with:')
         log.info(f'    *Positionals: {positionals}')
         log.info(f'    **Named/Kwargs: {arg_dict}')
-        # Call the target method to execute the command
-        result = target_method(*positionals, **arg_dict)
+        try:  # Catch exceptions in method call
+            # Call the target method to execute the command
+            result = target_method(*positionals, **arg_dict)
+        except Exception as e:
+            if NO_STDIN:  # If not in front of a pipe (not being fed by STDIN)
+                log.critical('An error occured in command execution, enable '
+                             'debugging to see more detail')
+                _log_exception(e, exit=True)
+            else:  # If we are in front of a pipe
+                # Log the exception but don't exit the program
+                _log_exception(e)
         log.debug(f'Target method result: \n{json.dumps(result, indent=4)}')
         if args.filters:  # If we are supposed to filter result objects
             # Run the results through the filter
