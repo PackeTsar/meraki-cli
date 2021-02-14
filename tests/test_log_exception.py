@@ -8,7 +8,7 @@ class TestLogException(unittest.TestCase):
 
     @patch('meraki_cli.__main__.log.level', logging.INFO)
     def testLogException(self):
-        with self.assertLogs(level='CRITICAL'):
+        with self.assertLogs(level='ERROR'):
             assert _log_exception(Exception('Some Message Here')) is None
 
     def testLogExceptionExit(self):
