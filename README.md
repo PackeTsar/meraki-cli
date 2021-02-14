@@ -18,6 +18,8 @@ Command List: **[Meraki-CLI Command Guide](COMMAND_GUIDE.md)**
 ## VERSION
 The version of Meraki-CLI documented here is: **1.0.5**
 
+Version History: **[Change Log](CHANGELOG.md)**
+
 
 -----------------------------------------
 ## ABOUT
