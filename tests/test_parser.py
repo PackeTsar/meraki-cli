@@ -9,4 +9,5 @@ class TestParser(unittest.TestCase):
         parser.add_argument('--test')
         with self.assertLogs(level='CRITICAL'):
             with self.assertRaises(SystemExit):
-                parser.parse_args()
+                # Parse with bad CLI arguments to force a failure
+                parser.parse_args('test')
