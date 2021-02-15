@@ -124,6 +124,19 @@ class Args:
                 self.keywords.append(value)
 
 
+class Parser(argparse.ArgumentParser):
+    """
+    Customised argparse class with custom error messaging
+    """
+    def error(self, message: str) -> None:
+        """
+        Override the error method to output help instead of usage
+        """
+        self.print_help()  # Display the help info instead of usage
+        log.critical(f'\nERROR: {message}')  # Add the error at the bottom
+        sys.exit(2)  # Exit with an error code
+
+
 # Map to enhance CLI argument parser by providing additional parsing
 #     context extracted from parameter annotation data types.
 ANNOTATION_MAP = {
@@ -622,7 +635,7 @@ def main(argstring=None) -> None:
     #     argparse structure from it
     api = meraki.DashboardAPI('fake_key', suppress_logging=True)
     # Start our arg parser instance
-    parser = argparse.ArgumentParser(add_help=False)
+    parser = Parser(add_help=False)
     argcomplete.autocomplete(parser)
     # Structure top level arguments into groups to make them easier to read.
     #     Any arguments added here need to also be listed in the _clean_args
