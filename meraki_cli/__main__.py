@@ -524,13 +524,34 @@ def _table_ready_dicts(listofdicts: list) -> []:
         set of object atributes where the key will be the table column name.
         The dicts are prepared by discarding any values which cannot be easily
         printed into a table cell (like lists, dicts, etc).
+    The input should be a list of dictionaries, but might be something else.
+        If it is something else, then we need to modify it to be ready for
+        tabluation.
 
     - listofdicts: List of dictionary objects where each dictionary is a series
         of attributes which can be matched against and filtered. Example:
         [{'id': '1', 'name': 'THING1'}, {'id': '2', 'name': 'THING2'}]
     """
-    bad_types = [dict, list]  # Types of data we want to discard
     result = []
+    #################################################
+    # Check For Nested Data
+    if type(listofdicts) is dict:  # If we were given a dict instead of a list
+        if (
+                len(listofdicts) == 1  # If the dict has one kv pair
+                and
+                # The value of that kv pair is a list
+                type(list(listofdicts.values())[0]) is list
+                and
+                # The entries in that list are dicts
+                type(list(listofdicts.values())[0][0]) is dict
+                ):
+            # Use the lsit from the kv pair as the list of dicts
+            listofdicts = list(listofdicts.values())[0]
+        else:
+            listofdicts = [listofdicts]
+    #################################################
+    # Strip Bad Types
+    bad_types = [dict, list]  # Types of data we want to discard
     for d in listofdicts:
         newdict = {}  # Use a new dict instead of deleting kv pairs
         for k, v in d.items():
@@ -539,6 +560,7 @@ def _table_ready_dicts(listofdicts: list) -> []:
             else:
                 log.debug(f'Discarding data in table squash: {k}: {v}')
         result.append(newdict)
+    #################################################
     return result
 
 
@@ -614,9 +636,6 @@ def _output(parsed_args: argparse.Namespace, result: list) -> None:
                   f'Forward pipelining: {not NO_STDOUT}')
         print(json.dumps(result, indent=4))
     else:  # Otherwise let's try to output a nice table.
-        # Make data a list if it is not already
-        if type(result) is dict:
-            result = [result]
         # Prepare data to be formatted into a table by removing value
         #     types unfriendly to tabulation.
         tabledicts = _table_ready_dicts(result)
