@@ -23,12 +23,14 @@ def version():
     return __version__.version
 
 
-with open(os.path.join(localdir, "README.md"), "r") as readme:
+with open(os.path.join(
+        localdir, "README.md"), "r", encoding='utf-8') as readme:
     long_description = readme.read()
     readme.close()
 
 
-with open(os.path.join(localdir, "requirements.txt"), "r") as req_file:
+with open(os.path.join(
+        localdir, "requirements.txt"), "r", encoding='utf-8') as req_file:
     install_requires = []
     for package in req_file.read().split("\n"):
         if package:
