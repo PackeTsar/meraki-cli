@@ -47,6 +47,7 @@ Since the Meraki-CLI tool builds its arguments directly off of Meraki's SDK, it'
     - [A Few Starting Commands](#a-few-starting-commands)
     - [A Note About --kwargs](#a-note-about---kwargs)
     - [Making Some Changes](#making-some-changes)
+    - [Using a Config File](#using-a-config-file)
     - [Debugging and Logging](#debugging-and-logging)
     - [Filtering](#filtering)
 2. [Pipelining](#pipelining)
@@ -81,13 +82,14 @@ If you already have Meraki-CLi installed and want to upgrade to the latest relea
 
 Meraki-CLI is command-line driven and once installed can be run with the command `meraki`. Once you have installed it, you can see the command guide by running the `meraki` command by itself.
 
-In order to operate the CLI you need to input your Meraki API key using one of two methods:
+In order to operate the CLI you need to input your Meraki API key using one of three methods:
 
 1. Saving your API key as an environment variable (recommended):
     - **Windows**: `set MERAKI_DASHBOARD_API_KEY=093b24e85df15a3e66f1fc359f4c48493eaa1b73`
     - **MacOS/Linux**: `export MERAKI_DASHBOARD_API_KEY=093b24e85df15a3e66f1fc359f4c48493eaa1b73`
     - Once saved as an environment variable, you don't need to use the `-k` option when running commands
-2. Use the `-k <api_key>` or `--apiKey <api_key>` argument at the top level of the command like `meraki -k <api_key>`
+2. Save your API key to a config file. See the "[Using a Config File](#using-a-config-file)" section for more info on how to do this.
+3. Use the `-k <api_key>` or `--apiKey <api_key>` argument at the top level of the command like `meraki -k <api_key>`
 
 You can obtain a Meraki API key by logging into the Meraki dashboard and clicking your user name in the top right corner and browsing to **My profile** then view the 'API Access' section near the bottom of the page. Then click on the '**Generate new API key**' button and copy down your new API key before saving. It will be a long hexadecimal string.
 
@@ -205,6 +207,41 @@ If the change succeeds, you will often see the newly updated object echoed back 
 ~$
 ```
 
+
+## Using a Config File
+
+If you find yourself regularly entering the same arguments into the Meraki-CLI tool like your API key, debug level, logfile, etc, it might make sense to save those settings to a static config file in a permanent location.
+
+The Meraki-CLI tool supports the use of a config file to provide any of the its required arguments. The config file should contain proper JSON syntax and should be a simple JS object (Python dictionary) in format. An example is shown below. If you want to use the arguments of a currently working command, set a maximum debug level of `-ddd` and copy/paste the JSON output under the "Argument Settings" log statement.
+
+The config file can be obtained by the program by either explicitly defining its location using the `-c` option like `-c ~/meraki.conf`, or by placing the file in a location searched by Meraki-CLI upon program start. The search locations are provided below and are sorted by common OS usage.
+
+- Windows OS
+  - `%APPDATA%\meraki\meraki.conf`
+    - The `%APPDATA%` is usually equal to `C:\Users\<username>\AppData\Roaming` by default
+    - Assuming the default, the config file location would be: `C:\Users\<username>\AppData\Roaming\meraki\meraki.conf`
+  - `%LOCALAPPDATA%\meraki\meraki.conf`
+    - The `%LOCALAPPDATA%` is usually equal to `C:\Users\<username>\AppData\Local` by default
+    - Assuming the default, the config file location would be: `C:\Users\<username>\AppData\Local\meraki\meraki.conf`
+- MacOS
+  - `~/.meraki/meraki.conf`
+    - The `~` directory is your local user directory. It is usually equal to `/Users/<username>` by default
+    - Assuming the default, the config file location would be: `/Users/<username>/.meraki/meraki.conf`
+    - Note that the directory name has a leading dot, making it a hidden directory
+  - `~/Library/Application Support/meraki/meraki.conf`
+    - The `~` directory is your local user directory. It is usually equal to `/Users/<username>` by default
+    - Assuming the default, the config file location would be: `/Users/<username>/Library/Application Support/meraki/meraki.conf`
+- Linux
+  - `/etc/meraki/meraki.conf`
+
+#### Example meraki.conf Config File
+```
+{
+    "apiKey": "093b24e85df15a3e66f1fc359f4c48493eaa1b73",
+    "debug": 1,
+    "logfile": "meraki.log"
+}
+```
 
 ## Debugging and Logging
 
