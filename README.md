@@ -236,7 +236,7 @@ The config file can be obtained by the program by either explicitly defining its
 
 > Note: Any of the above locations except `/etc/meraki/meraki.conf` will work on any platform. The `APPDATA` and `LOCALAPPDATA` environment variables exist on Windows by default, but can be added to any machine. The two `~` (home) locations will resolve on both Windows or MacOS/Linux to a subdirectory inside the user's home directory.
 
-#### Example meraki.conf Config File
+#### Example `meraki.conf` Config File
 ```
 {
     "apiKey": "093b24e85df15a3e66f1fc359f4c48493eaa1b73",
