@@ -187,6 +187,8 @@ def _reconcile_args(parsed_args: argparse.Namespace, filePath: str) -> None:
     - parsed_args: Parsed arguments namespace object from argparse.
     - filePath: String file path for an existing config file
     """
+    if parsed_args.debug:
+        log.warning(f'INFO: Loading config file: {filePath}')
     try:  # Catch a JSON parsing failure
         # Open file and load contents with JSON
         fileData = json.loads(open(filePath).read())
@@ -226,15 +228,25 @@ def _args_from_file(parsed_args: argparse.Namespace) -> None:
     """
     # Static file paths to check
     filePaths = [
-        'meraki.conf',
-        '~/.meraki/meraki.conf'
-        '~/Library/Application Support/meraki/meraki.conf'
-        '/etc/meraki/meraki.conf',
+        'meraki.conf',  # Current working directory
+        os.path.join(  # Hidden dot (.) folder in user's directory
+            os.path.expanduser("~"),
+            '.meraki',
+            'meraki.conf'
+            ),
+        os.path.join(  # Standard MacOS app config directory
+            os.path.expanduser("~"),
+            'Library',
+            'Application Support',
+            'meraki',
+            'meraki.conf'
+            ),
+        '/etc/meraki/meraki.conf',    # Standard Linux config directory
     ]
     # Environment variable directories to check
     envPaths = [
-        'APPDATA',
-        'LOCALAPPDATA',
+        'APPDATA',  # Windows roamed user settings directory
+        'LOCALAPPDATA',  # Windows machine-specific user settings directory
     ]
     # If a config file path was provided from the CLI
     if parsed_args.configFile:
@@ -246,11 +258,6 @@ def _args_from_file(parsed_args: argparse.Namespace) -> None:
         # If it does exist, process it
         _reconcile_args(parsed_args, parsed_args.configFile)
     else:  # If a path wasn't provided from the CLI
-        # Loop through the static file paths
-        for filePath in filePaths:
-            if os.path.isfile(filePath):  # If this file exists
-                _reconcile_args(parsed_args, filePath)  # Process it
-                return None  # And quit the function
         # Loop through environment variable paths
         for envPath in envPaths:
             # Grab the value (None if non-existant)
@@ -263,6 +270,11 @@ def _args_from_file(parsed_args: argparse.Namespace) -> None:
                     # Process it
                     _reconcile_args(parsed_args, filePath)
                     return None
+        # Loop through the static file paths
+        for filePath in filePaths:
+            if os.path.isfile(filePath):  # If this file exists
+                _reconcile_args(parsed_args, filePath)  # Process it
+                return None  # And quit the function
 
 
 def _configure_logging(parsed_args: argparse.Namespace) -> ():
@@ -876,8 +888,9 @@ def main(argstring=None) -> None:
         args = parser.parse_args(argstring.split(' '))
     else:
         args = parser.parse_args()  # Parse the user provided CLI commands/args
-    _args_from_file(args)  # Process any arguments from a file
     global log  # Make the "log" variable global to anybody can use it
+    log.setLevel(logging.DEBUG)
+    _args_from_file(args)  # Process any arguments from a file
     # Pull in the two logging systems
     log, meraki_log = _configure_logging(args)
     log.debug(f'CLI Arguments: {args}')
