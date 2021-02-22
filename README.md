@@ -16,7 +16,7 @@ Command List: **[Meraki-CLI Command Guide](COMMAND_GUIDE.md)**
 
 -----------------------------------------
 ## VERSION
-The version of Meraki-CLI documented here is: **1.0.6**
+The version of Meraki-CLI documented here is: **1.1.0**
 
 Version History: **[Change Log](CHANGELOG.md)**
 
@@ -212,7 +212,7 @@ If the change succeeds, you will often see the newly updated object echoed back 
 
 If you find yourself regularly entering the same arguments into the Meraki-CLI tool like your API key, debug level, logfile, etc, it might make sense to save those settings to a static config file in a permanent location.
 
-The Meraki-CLI tool supports the use of a config file to provide any of the its required arguments. The config file should contain proper JSON syntax and should be a simple JS object (Python dictionary) in format. An example is shown below. If you want to use the arguments of a currently working command, set a maximum debug level of `-ddd` and copy/paste the JSON output under the "Argument Settings" log statement.
+The Meraki-CLI tool supports the use of a config file to provide any of its arguments. The config file should contain proper JSON syntax and should be a simple JS object (Python dictionary) in format. An example is shown below. If you want to use the arguments of a currently working command, set a maximum debug level of `-ddd` and copy/paste the JSON output under the "Argument Settings" log statement.
 
 The config file can be obtained by the program by either explicitly defining its location using the `-c` option like `-c ~/meraki.conf`, or by placing the file in a location searched by Meraki-CLI upon program start. The search locations are provided below and are sorted by common OS usage.
 
