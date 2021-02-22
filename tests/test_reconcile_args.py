@@ -29,6 +29,12 @@ class TestReconcileArgs(unittest.TestCase):
             with self.assertRaises(SystemExit):
                 _reconcile_args(parsed_args, file.name)
 
+    def testReconcileArgsCommandArg(self):
+        parsed_args, file = self._getArgsAndFile('{"command": "testcommand"}')
+        #parsed_args.command = None
+        _reconcile_args(parsed_args, file.name)
+        assert parsed_args.command == 'testcommand'
+
     def testReconcileArgsUnrecognizedArgError(self):
         parsed_args, file = self._getArgsAndFile('{"badarg": null}')
         with self.assertLogs(level='CRITICAL'):

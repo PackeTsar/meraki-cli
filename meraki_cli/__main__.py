@@ -205,6 +205,10 @@ def _reconcile_args(parsed_args: argparse.Namespace, filePath: str) -> None:
         sys.exit(1)
     # Iterate the key, value items in the config file
     for arg, value in fileData.items():
+        if arg == "command":  # If we are setting the command we are running
+            # Just set it now as it will not exist in the argparse namespace
+            #     if the type was not set at all
+            parsed_args.command = value
         # If the argument is not an argument in the parser
         if arg not in parsed_args.__dict__:
             log.critical(f'ERROR: Argument from file ({arg}) is not a '
@@ -893,7 +897,7 @@ def main(argstring=None) -> None:
     _args_from_file(args)  # Process any arguments from a file
     # Pull in the two logging systems
     log, meraki_log = _configure_logging(args)
-    log.debug(f'CLI Arguments: {args}')
+    log.debug(f'Argument Settings: \n{json.dumps(args.__dict__, indent=4)}')
     if not args.type:  # If a type (networks, switch, etc) wasn't specified
         parser.print_help()  # Print help so the user can see options
         sys.exit()  # And exit the program
