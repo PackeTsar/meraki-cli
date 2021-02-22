@@ -13,3 +13,5 @@ class ParsedArgs:
         self.kwargs = '{"address": "192.168.1.1"}'
         self.jsonOutput = False
         self.columns = None
+        self.apiKey = None
+        self.configFile = None

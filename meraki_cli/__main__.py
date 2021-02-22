@@ -177,6 +177,94 @@ log = logging.getLogger('testing')
 log.setLevel(logging.CRITICAL)
 
 
+def _reconcile_args(parsed_args: argparse.Namespace, filePath: str) -> None:
+    """
+    Process arguments from a static config file against arguments provided
+        at the CLI. Prefer CLI-provided arguments over file-based ones. Also
+        prefer the MERAKI_DASHBOARD_API_KEY environment variable over one
+        provided by a config file.
+
+    - parsed_args: Parsed arguments namespace object from argparse.
+    - filePath: String file path for an existing config file
+    """
+    try:  # Catch a JSON parsing failure
+        # Open file and load contents with JSON
+        fileData = json.loads(open(filePath).read())
+    except json.decoder.JSONDecodeError as e:
+        # If there is bad JSON data, throw error and exit
+        log.critical(f'ERROR: Config file {filePath} contains malformatted'
+                     ' JSON data')
+        log.critical(e)
+        sys.exit(1)
+    # Throw error and exit if the type of config file data is incorrect
+    if type(fileData) is not dict:
+        log.critical('ERROR: Config file data is not dict (object). Data '
+                     'must be formatted like: {"argname": "value"}')
+        sys.exit(1)
+    # Iterate the key, value items in the config file
+    for arg, value in fileData.items():
+        # If the argument is not an argument in the parser
+        if arg not in parsed_args.__dict__:
+            log.critical(f'ERROR: Argument from file ({arg}) is not a '
+                         'recognized argument for this program')
+            sys.exit(1)
+        # If the value was not set in the CLI
+        if not getattr(parsed_args, arg):
+            # If the argument is the API key and there is an environment var
+            if arg == 'apiKey' and os.environ.get('MERAKI_DASHBOARD_API_KEY'):
+                continue  # Don't set the value, prefer the env variable
+            # Set the attribute
+            setattr(parsed_args, arg, value)
+
+
+def _args_from_file(parsed_args: argparse.Namespace) -> None:
+    """
+    Check some pre-set and CLI-provided locations for a config file and load
+        config parameters from that file.
+
+    - parsed_args: Parsed arguments namespace object from argparse.
+    """
+    # Static file paths to check
+    filePaths = [
+        'meraki.conf',
+        '~/.meraki/meraki.conf'
+        '~/Library/Application Support/meraki/meraki.conf'
+        '/etc/meraki/meraki.conf',
+    ]
+    # Environment variable directories to check
+    envPaths = [
+        'APPDATA',
+        'LOCALAPPDATA',
+    ]
+    # If a config file path was provided from the CLI
+    if parsed_args.configFile:
+        # If that file doesn't exist, throw error and exit
+        if not os.path.isfile(parsed_args.configFile):
+            log.critical(f'Defined config file ({parsed_args.configFile})'
+                         ' does not exist')
+            sys.exit(1)
+        # If it does exist, process it
+        _reconcile_args(parsed_args, parsed_args.configFile)
+    else:  # If a path wasn't provided from the CLI
+        # Loop through the static file paths
+        for filePath in filePaths:
+            if os.path.isfile(filePath):  # If this file exists
+                _reconcile_args(parsed_args, filePath)  # Process it
+                return None  # And quit the function
+        # Loop through environment variable paths
+        for envPath in envPaths:
+            # Grab the value (None if non-existant)
+            value = os.environ.get(envPath)
+            if value:  # If there was an env variable
+                # Use ./meraki/meraki.conf as the path
+                filePath = os.path.join(value, 'meraki', 'meraki.conf')
+                # If the file exists in that path
+                if os.path.isfile(filePath):
+                    # Process it
+                    _reconcile_args(parsed_args, filePath)
+                    return None
+
+
 def _configure_logging(parsed_args: argparse.Namespace) -> ():
     """
     Prepare and return two logging objects: one for the general program, and
@@ -270,9 +358,9 @@ def _clean_args(parsed_args: argparse.Namespace):
     # Start with a copy of the namespace dict so it can be modified.
     arg_dict = dict(parsed_args.__dict__)
     # Iterate a list of known static arguments
-    for key in ['apiKey', 'debug', 'logfile', 'jsonOutput', 'type',
-                'filters', 'and_logic', 'command', 'kwargs', 'columns',
-                'translations', 'output_commands']:
+    for key in ['apiKey', 'debug', 'logfile', 'jsonOutput', 'configFile',
+                'type', 'filters', 'and_logic', 'command', 'kwargs',
+                'columns', 'translations', 'output_commands']:
         try:
             del arg_dict[key]  # Remove each from the dict
         except KeyError:
@@ -681,12 +769,16 @@ def main(argstring=None) -> None:
                              help='Write logs to a logfile',
                              metavar='PATH',
                              dest='logfile')
+    basic_group.add_argument('-c', '--configFile',
+                             help='Use a config file for some arguments',
+                             metavar='PATH',
+                             dest='configFile')
     output_group = parser.add_argument_group('Output Formatting')
     output_group.add_argument('-j', '--jsonOutput',
                               help='Format output as JSON insted of default',
                               dest='jsonOutput',
                               action='store_true')
-    output_group.add_argument('-c', '--columns',
+    output_group.add_argument('-s', '--columns',
                               help='Filter/Order Table Columns '
                               '(ie: id,networkId,etc)',
                               metavar='STRING',
@@ -784,6 +876,7 @@ def main(argstring=None) -> None:
         args = parser.parse_args(argstring.split(' '))
     else:
         args = parser.parse_args()  # Parse the user provided CLI commands/args
+    _args_from_file(args)  # Process any arguments from a file
     global log  # Make the "log" variable global to anybody can use it
     # Pull in the two logging systems
     log, meraki_log = _configure_logging(args)
