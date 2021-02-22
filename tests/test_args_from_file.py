@@ -20,11 +20,12 @@ class TestArgsFromFile(unittest.TestCase):
         # If an env variable exists, delete it so it doesn't interfere
         if os.environ.get('MERAKI_DASHBOARD_API_KEY'):
             del os.environ['MERAKI_DASHBOARD_API_KEY']
-        self.file = tempfile.NamedTemporaryFile('w')
-        self.file.write('{"apiKey": "abcdef"}')
-        self.file.seek(0)
-        self.parsed_args.configFile = self.file.name
+        file = tempfile.NamedTemporaryFile('w', delete=False)
+        file.write('{"apiKey": "abcdef"}')
+        file.close()
+        self.parsed_args.configFile = file.name
         _args_from_file(self.parsed_args)
+        os.remove(file.name)
         assert self.parsed_args.apiKey == 'abcdef'
 
     def testArgsFromFileExplicitPathSuccess(self):

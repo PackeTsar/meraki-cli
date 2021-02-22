@@ -7,11 +7,15 @@ from meraki_cli.__main__ import _reconcile_args
 
 class TestReconcileArgs(unittest.TestCase):
 
+    def tearDown(self):
+        if 'file' in self.__dict__:
+            os.remove(self.file.name)
+
     def _getArgsAndFile(self, fileContents: str):
-        file = tempfile.NamedTemporaryFile('w')
-        file.write(fileContents)
-        file.seek(0)
-        return ParsedArgs(), file
+        self.file = tempfile.NamedTemporaryFile('w', delete=False)
+        self.file.write(fileContents)
+        self.file.close()
+        return ParsedArgs(), self.file
 
     def testReconcileArgsBadJsonError(self):
         parsed_args, file = self._getArgsAndFile('')
