@@ -19,6 +19,8 @@ class TestStdin(unittest.TestCase):
         self.arg_obj = Args(Function)
         self.proper_output = [(['100', 200], {'networkId': 'N_12345'})]
 
+    # @patch added for Windows testing
+    @patch('meraki_cli.__main__.NO_STDIN', False)
     def testJsonToArgs(self):
         # Pass the string directly to the argument first
         output = _json_to_args(JSON_DATA, self.parsed_args, self.arg_obj)
@@ -38,6 +40,8 @@ class TestStdin(unittest.TestCase):
             _get_stdin_args(self.parsed_args, self.arg_obj)
 
     @patch('sys.stdin', StringIO(JSON_DATA))
+    # @patch added for Windows testing
+    @patch('meraki_cli.__main__.NO_STDIN', False)
     def testStdinSuccess(self):
         # Should try to read from STDIN and succeed because it is properly
         #     formatted JSON data
