@@ -31,7 +31,6 @@ class TestReconcileArgs(unittest.TestCase):
 
     def testReconcileArgsCommandArg(self):
         parsed_args, file = self._getArgsAndFile('{"command": "testcommand"}')
-        #parsed_args.command = None
         _reconcile_args(parsed_args, file.name)
         assert parsed_args.command == 'testcommand'
 
