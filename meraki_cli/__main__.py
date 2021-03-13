@@ -232,20 +232,20 @@ def _args_from_file(parsed_args: argparse.Namespace) -> None:
     """
     # Static file paths to check
     filePaths = [
-        'meraki.conf',  # Current working directory
+        'meraki-cli.conf',  # Current working directory
         os.path.join(  # Hidden dot (.) folder in user's directory
             os.path.expanduser("~"),
-            '.meraki',
-            'meraki.conf'
+            '.meraki-cli',
+            'meraki-cli.conf'
             ),
         os.path.join(  # Standard MacOS app config directory
             os.path.expanduser("~"),
             'Library',
             'Application Support',
-            'meraki',
-            'meraki.conf'
+            'meraki-cli',
+            'meraki-cli.conf'
             ),
-        '/etc/meraki/meraki.conf',    # Standard Linux config directory
+        '/etc/meraki-cli/meraki-cli.conf',  # Standard Linux config directory
     ]
     # Environment variable directories to check
     envPaths = [
@@ -268,7 +268,7 @@ def _args_from_file(parsed_args: argparse.Namespace) -> None:
             value = os.environ.get(envPath)
             if value:  # If there was an env variable
                 # Use ./meraki/meraki.conf as the path
-                filePath = os.path.join(value, 'meraki', 'meraki.conf')
+                filePath = os.path.join(value, 'meraki-cli', 'meraki-cli.conf')
                 # If the file exists in that path
                 if os.path.isfile(filePath):
                     # Process it

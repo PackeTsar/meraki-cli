@@ -16,7 +16,7 @@ Command List: **[Meraki-CLI Command Guide](COMMAND_GUIDE.md)**
 
 -----------------------------------------
 ## VERSION
-The version of Meraki-CLI documented here is: **1.1.0**
+The version of Meraki-CLI documented here is: **1.1.0a**
 
 Version History: **[Change Log](CHANGELOG.md)**
 
@@ -214,29 +214,29 @@ If you find yourself regularly entering the same arguments into the Meraki-CLI t
 
 The Meraki-CLI tool supports the use of a config file to provide any of its arguments. The config file should contain proper JSON syntax and should be a simple JS object (Python dictionary) in format. An example is shown below. If you want to use the arguments of a currently working command, set a maximum debug level of `-ddd` and copy/paste the JSON output under the "Argument Settings" log statement.
 
-The config file can be obtained by the program by either explicitly defining its location using the `-c` option like `-c ~/meraki.conf`, or by placing the file in a location searched by Meraki-CLI upon program start. The search locations are provided below and are sorted by common OS usage.
+The config file can be obtained by the program by either explicitly defining its location using the `-c` option like `-c ~/meraki-cli.conf`, or by placing the file in a location searched by Meraki-CLI upon program start. The search locations are provided below and are sorted by common OS usage.
 
 - Windows OS
-  - `%APPDATA%\meraki\meraki.conf`
+  - `%APPDATA%\meraki-cli\meraki-cli.conf`
     - The `%APPDATA%` is usually equal to `C:\Users\<username>\AppData\Roaming` by default
-    - Assuming the default, the config file location would be: `C:\Users\<username>\AppData\Roaming\meraki\meraki.conf`
-  - `%LOCALAPPDATA%\meraki\meraki.conf`
+    - Assuming the default, the config file location would be: `C:\Users\<username>\AppData\Roaming\meraki-cli\meraki-cli.conf`
+  - `%LOCALAPPDATA%\meraki-cli\meraki-cli.conf`
     - The `%LOCALAPPDATA%` is usually equal to `C:\Users\<username>\AppData\Local` by default
-    - Assuming the default, the config file location would be: `C:\Users\<username>\AppData\Local\meraki\meraki.conf`
+    - Assuming the default, the config file location would be: `C:\Users\<username>\AppData\Local\meraki-cli\meraki-cli.conf`
 - MacOS
-  - `~/.meraki/meraki.conf`
-    - The `~` directory is your local user directory. It is usually equal to `/Users/<username>` by default
-    - Assuming the default, the config file location would be: `/Users/<username>/.meraki/meraki.conf`
+  - `~/.meraki-cli/meraki-cli.conf`
+    - The `~` directory is your local user directory. It is usually equal to `/Users/<username>/` by default
+    - Assuming the default, the config file location would be: `/Users/<username>/.meraki-cli/meraki-cli.conf`
     - Note that the directory name has a leading dot, making it a hidden directory
-  - `~/Library/Application Support/meraki/meraki.conf`
-    - The `~` directory is your local user directory. It is usually equal to `/Users/<username>` by default
-    - Assuming the default, the config file location would be: `/Users/<username>/Library/Application Support/meraki/meraki.conf`
+  - `~/Library/Application Support/meraki-cli/meraki-cli.conf`
+    - The `~` directory is your local user directory. It is usually equal to `/Users/<username>/` by default
+    - Assuming the default, the config file location would be: `/Users/<username>/Library/Application Support/meraki-cli/meraki-cli.conf`
 - Linux
-  - `/etc/meraki/meraki.conf`
+  - `/etc/meraki-cli/meraki-cli.conf`
 
-> Note: Any of the above locations except `/etc/meraki/meraki.conf` will work on any platform. The `APPDATA` and `LOCALAPPDATA` environment variables exist on Windows by default, but can be added to any machine. The two `~` (home) locations will resolve on both Windows or MacOS/Linux to a subdirectory inside the user's home directory.
+> Note: Any of the above locations except `/etc/meraki-cli/meraki-cli.conf` will work on any platform. The `APPDATA` and `LOCALAPPDATA` environment variables exist on Windows by default, but can be added to any machine. The two `~` (home) locations will resolve on both Windows or MacOS/Linux to a subdirectory inside the user's home directory.
 
-#### Example `meraki.conf` Config File
+#### Example `meraki-cli.conf` Config File
 ```
 {
     "apiKey": "093b24e85df15a3e66f1fc359f4c48493eaa1b73",

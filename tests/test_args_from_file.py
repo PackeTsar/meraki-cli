@@ -30,7 +30,7 @@ class TestArgsFromFile(unittest.TestCase):
 
     def testArgsFromFileExplicitPathSuccess(self):
         # Create a temp meraki.conf file in the current dir
-        configFile = open(os.path.join(os.getcwd(), 'meraki.conf'), 'w')
+        configFile = open(os.path.join(os.getcwd(), 'meraki-cli.conf'), 'w')
         configFile.write('{"logfile": "expathtest.log"}')
         configFile.close()
         _args_from_file(self.parsed_args)
@@ -42,10 +42,10 @@ class TestArgsFromFile(unittest.TestCase):
         # Set the APPDATA env var so we can test with it
         os.environ['APPDATA'] = folder.name
         # Create a ./meraki/ directory in the temp directory
-        mdir = os.path.join(folder.name, 'meraki')
+        mdir = os.path.join(folder.name, 'meraki-cli')
         os.mkdir(mdir)
         # Create a ./meraki/meraki.conf temp config file
-        configFile = open(os.path.join(mdir, 'meraki.conf'), 'w')
+        configFile = open(os.path.join(mdir, 'meraki-cli.conf'), 'w')
         configFile.write('{"logfile": "envpathtest.log"}')
         configFile.close()
         _args_from_file(self.parsed_args)
