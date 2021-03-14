@@ -525,6 +525,60 @@ def _get_stdin_args(parsed_args: argparse.Namespace, arg_obj: Args) -> []:
     return _json_to_args(stdin, parsed_args, arg_obj)
 
 
+class ExtrasParser(argparse.ArgumentParser):
+    """
+    Customised argparse class for minimal errors on parsing extra args for
+        use in kwargs
+    """
+    def error(self, message: str) -> None:
+        """
+        Override the error method to output minimal info
+        """
+        log.critical(message)  # Output using our logging
+        sys.exit(2)  # Exit with an error code
+
+
+def _extra_args_to_kwargs(existing_kwarg_dict: dict, arglist: list) -> {}:
+    """
+    Interpret a list of 'extra' uninterpreted arguments from the CLI into a
+        dict of arguments which are then combined with the existing kwargs
+        dict. This resulting kwargs dict is then passed into the target method
+        for keyword parameters as well as target_method(**kwargs) for POST
+        bodies in the API.
+
+    - existing_kwarg_dict: Dict of existing kwargs from the main interpreter
+    - arglist: List of extra, unrecognized CLI arguments discarded by the
+        primary parser.
+    """
+    if not arglist:  # If there were no extra arguments provided
+        return existing_kwarg_dict  # Just return what we started with
+    parser = ExtrasParser()  # Instantiate our custom parser class
+    for arg in arglist:  # For each of the words in the unparsed arguments
+        if arg[:2] == '--':  # If the args starts with two hyphens
+            parser.add_argument(arg)  # Add it as an argument in the parser
+    # Parse known args so we ignore any extra info in the CLI (like comments)
+    #     and grab the first entry from the tuple (since it will pass thru
+    #     any other extras)
+    args = parser.parse_known_args(arglist)[0]
+    extra_arg_dict = {}  # Start with an empty dict for the extra args
+    # Iterate each key, value pair in the parsed args
+    for key, value in args.__dict__.items():
+        try:  # Allow JSON parsing to fail
+            # Try to read as JSON data in case it is nested
+            data = json.loads(value)
+            # If the data is a list or a dict
+            if type(data) is list or type(data) is dict:
+                # Then add it as that native data type
+                extra_arg_dict[key] = json.loads(value)
+            else:  # If it is not a list or a dict
+                extra_arg_dict[key] = value  # Add it as the standard string
+        except Exception:  # If this was non-compliant JSON data
+            extra_arg_dict[key] = value  # Add it as the stnadard string
+    # Merge the extra_arg_dict into the existing kwargs
+    existing_kwarg_dict.update(extra_arg_dict)
+    return existing_kwarg_dict  # And return it for use in the target method
+
+
 def _print_commands(parsed_args: argparse.Namespace,
                     argtups: tuple, arg_obj: Args) -> None:
     """
@@ -889,9 +943,10 @@ def main(argstring=None) -> None:
     # If an argstring was passed in, we are probably being tested
     if argstring:
         # Split up the args and pass them in as a list to be parsed
-        args = parser.parse_args(argstring.split(' '))
+        args, extraarglist = parser.parse_known_args(argstring.split(' '))
     else:
-        args = parser.parse_args()  # Parse the user provided CLI commands/args
+        # Parse the user provided CLI commands/args
+        args, extraarglist = parser.parse_known_args()
     global log  # Make the "log" variable global to anybody can use it
     log.setLevel(logging.DEBUG)
     _args_from_file(args)  # Process any arguments from a file
@@ -964,6 +1019,8 @@ def main(argstring=None) -> None:
             arg_dict = argtup[1]
         else:
             arg_dict = {}
+        if extraarglist:
+            arg_dict = _extra_args_to_kwargs(arg_dict, extraarglist)
         log.info('Calling target method with:')
         log.info(f'    *Positionals: {positionals}')
         log.info(f'    **Named/Kwargs: {arg_dict}')
