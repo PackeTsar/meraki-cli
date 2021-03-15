@@ -1,4 +1,5 @@
 import unittest
+import os
 from meraki_cli.__main__ import _cmd_title, _cmd_help
 
 
@@ -8,10 +9,14 @@ class TestHelps(unittest.TestCase):
         # Use the importlib to help import the _get_structure builder from the
         #     command guide builder file
         from importlib.machinery import SourceFileLoader
+        # Get the directory of this file
+        filedir = os.path.abspath(os.path.join(__file__, os.pardir))
+        # Get the parent dir of this dir
+        pardir = os.path.dirname(filedir)
+        # Build the path to the .command_guide_build.py file
+        builderfile = os.path.join(pardir, '.command_guide_build.py')
         # Create a module out of the command guide builder file
-        self.builder = SourceFileLoader(
-            'builder',
-            '../.command_guide_build.py').load_module()
+        self.builder = SourceFileLoader('builder', builderfile).load_module()
         # Grab the class and method structure
         struct = self.builder._get_structure()
         self.arg_object_list = []  # Make a list to contain all the arg objects
