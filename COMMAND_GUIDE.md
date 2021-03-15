@@ -499,17 +499,17 @@ https://developer.cisco.com/meraki/api-v1/#!assign-organization-licenses-seats
 - `--networkId` (string): The ID of the SM network to assign the seats to
 - `--seatCount` (integer): The number of seats to assign to the SM network. Must be less than or equal to the total number of seats of the license
 
-##### Method Code:
-```python
-def assignOrganizationLicensesSeats(organizationId: str, licenseId: str, networkId: str, seatCount: int):
-    # Code
-````
 
 ##### Example:
 ```
 meraki organizations assignOrganizationLicensesSeats --organizationId 'STRING' --licenseId 'STRING' --networkId 'STRING' --seatCount INT
 ````
 
+##### Method Code:
+```python
+def assignOrganizationLicensesSeats(organizationId: str, licenseId: str, networkId: str, seatCount: int):
+    # Code
+````
 
 ----------------------------------------
 ## Claim Into Organization
@@ -525,11 +525,6 @@ https://developer.cisco.com/meraki/api-v1/#!claim-into-organization
 - `--serials` (array): The serials of the devices that should be claimed
 - `--licenses` (array): The licenses that should be claimed
 
-##### Method Code:
-```python
-def claimIntoOrganization(organizationId: str, **kwargs):
-    # Code
-````
 
 ##### Example:
 ```
@@ -541,6 +536,11 @@ meraki organizations claimIntoOrganization --organizationId 'STRING' --optionalA
 meraki organizations claimIntoOrganization --organizationId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
+##### Method Code:
+```python
+def claimIntoOrganization(organizationId: str, **kwargs):
+    # Code
+````
 
 ----------------------------------------
 ## Clone Organization
@@ -554,17 +554,17 @@ https://developer.cisco.com/meraki/api-v1/#!clone-organization
 - `--organizationId` (string): (required)
 - `--name` (string): The name of the new organization
 
-##### Method Code:
-```python
-def cloneOrganization(organizationId: str, name: str):
-    # Code
-````
 
 ##### Example:
 ```
 meraki organizations cloneOrganization --organizationId 'STRING' --name 'STRING'
 ````
 
+##### Method Code:
+```python
+def cloneOrganization(organizationId: str, name: str):
+    # Code
+````
 
 ----------------------------------------
 ## Combine Organization Networks
@@ -580,11 +580,6 @@ https://developer.cisco.com/meraki/api-v1/#!combine-organization-networks
 - `--networkIds` (array): A list of the network IDs that will be combined. If an ID of a combined network is included in this list, the other networks in the list will be grouped into that network
 - `--enrollmentString` (string): A unique identifier which can be used for device enrollment or easy access through the Meraki SM Registration page or the Self Service Portal. Please note that changing this field may cause existing bookmarks to break. All networks that are part of this combined network will have their enrollment string appended by '-network_type'. If left empty, all exisitng enrollment strings will be deleted.
 
-##### Method Code:
-```python
-def combineOrganizationNetworks(organizationId: str, name: str, networkIds: list, **kwargs):
-    # Code
-````
 
 ##### Example:
 ```
@@ -596,6 +591,11 @@ meraki organizations combineOrganizationNetworks --organizationId 'STRING' --nam
 meraki organizations combineOrganizationNetworks --organizationId 'STRING' --name 'STRING' --networkIds ITEM --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
+##### Method Code:
+```python
+def combineOrganizationNetworks(organizationId: str, name: str, networkIds: list, **kwargs):
+    # Code
+````
 
 ----------------------------------------
 ## Create Organization
@@ -608,17 +608,17 @@ https://developer.cisco.com/meraki/api-v1/#!create-organization
 ##### Arguments
 - `--name` (string): The name of the organization
 
-##### Method Code:
-```python
-def createOrganization(name: str):
-    # Code
-````
 
 ##### Example:
 ```
 meraki organizations createOrganization --name 'STRING'
 ````
 
+##### Method Code:
+```python
+def createOrganization(name: str):
+    # Code
+````
 
 ----------------------------------------
 ## Create Organization Action Batch
@@ -631,15 +631,9 @@ https://developer.cisco.com/meraki/api-v1/#!create-organization-action-batch
 ##### Arguments
 - `--organizationId` (string): (required)
 - `--actions` (array): A set of changes to make as part of this action (<a href='https://developer.cisco.com/meraki/api/#/rest/guides/action-batches/'>more details</a>)
-
-##### Arguments- `--confirmed` (boolean): Set to true for immediate execution. Set to false if the action should be previewed before executing. This property cannot be unset once it is true. Defaults to false.
+- `--confirmed` (boolean): Set to true for immediate execution. Set to false if the action should be previewed before executing. This property cannot be unset once it is true. Defaults to false.
 - `--synchronous` (boolean): Set to true to force the batch to run synchronous. There can be at most 20 actions in synchronous batch. Defaults to false.
 
-##### Method Code:
-```python
-def createOrganizationActionBatch(organizationId: str, actions: list, **kwargs):
-    # Code
-````
 
 ##### Example:
 ```
@@ -651,6 +645,11 @@ meraki organizations createOrganizationActionBatch --organizationId 'STRING' --a
 meraki organizations createOrganizationActionBatch --organizationId 'STRING' --actions ITEM --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
+##### Method Code:
+```python
+def createOrganizationActionBatch(organizationId: str, actions: list, **kwargs):
+    # Code
+````
 
 ----------------------------------------
 ## Create Organization Admin
@@ -669,11 +668,6 @@ https://developer.cisco.com/meraki/api-v1/#!create-organization-admin
 - `--networks` (array): The list of networks that the dashboard administrator has privileges on
 - `--authenticationMethod` (string): The method of authentication the user will use to sign in to the Meraki dashboard. Can be one of 'Email' or 'Cisco SecureX Sign-On'. The default is Email authentication
 
-##### Method Code:
-```python
-def createOrganizationAdmin(organizationId: str, email: str, name: str, orgAccess: str, **kwargs):
-    # Code
-````
 
 ##### Example:
 ```
@@ -685,6 +679,11 @@ meraki organizations createOrganizationAdmin --organizationId 'STRING' --email '
 meraki organizations createOrganizationAdmin --organizationId 'STRING' --email 'STRING' --name 'STRING' --orgAccess 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
+##### Method Code:
+```python
+def createOrganizationAdmin(organizationId: str, email: str, name: str, orgAccess: str, **kwargs):
+    # Code
+````
 
 ----------------------------------------
 ## Create Organization Branding Policy
@@ -705,11 +704,6 @@ the section on Dashboard). Some properties in this object also accept custom HTM
 Dashboard; see the documentation for each property to see the allowed values.
 Each property defaults to 'default or inherit' when not provided.
 
-##### Method Code:
-```python
-def createOrganizationBrandingPolicy(organizationId: str, name: str, enabled: bool, adminSettings: dict, **kwargs):
-    # Code
-````
 
 ##### Example:
 ```
@@ -721,6 +715,11 @@ meraki organizations createOrganizationBrandingPolicy --organizationId 'STRING' 
 meraki organizations createOrganizationBrandingPolicy --organizationId 'STRING' --name 'STRING' --enabled --adminSettings JSON_STRING --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
+##### Method Code:
+```python
+def createOrganizationBrandingPolicy(organizationId: str, name: str, enabled: bool, adminSettings: dict, **kwargs):
+    # Code
+````
 
 ----------------------------------------
 ## Create Organization Config Template
@@ -734,14 +733,8 @@ https://developer.cisco.com/meraki/api-v1/#!create-organization-config-template
 - `--organizationId` (string): (required)
 - `--name` (string): The name of the configuration template
 - `--timeZone` (string): The timezone of the configuration template. For a list of allowed timezones, please see the 'TZ' column in the table in <a target='_blank' href='https://en.wikipedia.org/wiki/List_of_tz_database_time_zones'>this article</a>. Not applicable if copying from existing network or template
+- `--copyFromNetworkId` (string): The ID of the network or config template to copy configuration from
 
-##### Arguments- `--copyFromNetworkId` (string): The ID of the network or config template to copy configuration from
-
-##### Method Code:
-```python
-def createOrganizationConfigTemplate(organizationId: str, name: str, **kwargs):
-    # Code
-````
 
 ##### Example:
 ```
@@ -753,6 +746,11 @@ meraki organizations createOrganizationConfigTemplate --organizationId 'STRING' 
 meraki organizations createOrganizationConfigTemplate --organizationId 'STRING' --name 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
+##### Method Code:
+```python
+def createOrganizationConfigTemplate(organizationId: str, name: str, **kwargs):
+    # Code
+````
 
 ----------------------------------------
 ## Create Organization Network
@@ -768,15 +766,9 @@ https://developer.cisco.com/meraki/api-v1/#!create-organization-network
 - `--productTypes` (array): The product type(s) of the new network. Valid types are wireless, appliance, switch, systemsManager, camera, cellularGateway, environmental. If more than one type is included, the network will be a combined network.
 - `--tags` (array): A list of tags to be applied to the network
 - `--timeZone` (string): The timezone of the network. For a list of allowed timezones, please see the 'TZ' column in the table in <a target='_blank' href='https://en.wikipedia.org/wiki/List_of_tz_database_time_zones'>this article.</a>
-
-##### Arguments- `--copyFromNetworkId` (string): The ID of the network to copy configuration from. Other provided parameters will override the copied configuration, except type which must match this network's type exactly.
+- `--copyFromNetworkId` (string): The ID of the network to copy configuration from. Other provided parameters will override the copied configuration, except type which must match this network's type exactly.
 - `--notes` (string): Add any notes or additional information about this network here.
 
-##### Method Code:
-```python
-def createOrganizationNetwork(organizationId: str, name: str, productTypes: list, **kwargs):
-    # Code
-````
 
 ##### Example:
 ```
@@ -788,6 +780,11 @@ meraki organizations createOrganizationNetwork --organizationId 'STRING' --name 
 meraki organizations createOrganizationNetwork --organizationId 'STRING' --name 'STRING' --productTypes ITEM --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
+##### Method Code:
+```python
+def createOrganizationNetwork(organizationId: str, name: str, productTypes: list, **kwargs):
+    # Code
+````
 
 ----------------------------------------
 ## Create Organization Saml Idp
@@ -802,11 +799,6 @@ https://developer.cisco.com/meraki/api-v1/#!create-organization-saml-idp
 - `--x509certSha1Fingerprint` (string): Fingerprint (SHA1) of the SAML certificate provided by your Identity Provider (IdP). This will be used for encryption / validation.
 - `--sloLogoutUrl` (string): Dashboard will redirect users to this URL when they sign out.
 
-##### Method Code:
-```python
-def createOrganizationSamlIdp(organizationId: str, x509certSha1Fingerprint: str, **kwargs):
-    # Code
-````
 
 ##### Example:
 ```
@@ -818,6 +810,11 @@ meraki organizations createOrganizationSamlIdp --organizationId 'STRING' --x509c
 meraki organizations createOrganizationSamlIdp --organizationId 'STRING' --x509certSha1Fingerprint 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
+##### Method Code:
+```python
+def createOrganizationSamlIdp(organizationId: str, x509certSha1Fingerprint: str, **kwargs):
+    # Code
+````
 
 ----------------------------------------
 ## Create Organization Saml Role
@@ -834,11 +831,6 @@ https://developer.cisco.com/meraki/api-v1/#!create-organization-saml-role
 - `--tags` (array): The list of tags that the SAML administrator has privleges on
 - `--networks` (array): The list of networks that the SAML administrator has privileges on
 
-##### Method Code:
-```python
-def createOrganizationSamlRole(organizationId: str, role: str, orgAccess: str, **kwargs):
-    # Code
-````
 
 ##### Example:
 ```
@@ -850,6 +842,11 @@ meraki organizations createOrganizationSamlRole --organizationId 'STRING' --role
 meraki organizations createOrganizationSamlRole --organizationId 'STRING' --role 'STRING' --orgAccess 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
+##### Method Code:
+```python
+def createOrganizationSamlRole(organizationId: str, role: str, orgAccess: str, **kwargs):
+    # Code
+````
 
 ----------------------------------------
 ## Delete Organization
@@ -862,17 +859,17 @@ https://developer.cisco.com/meraki/api-v1/#!delete-organization
 ##### Arguments
 - `--organizationId` (string): (required)
 
-##### Method Code:
-```python
-def deleteOrganization(organizationId: str):
-    # Code
-````
 
 ##### Example:
 ```
 meraki organizations deleteOrganization --organizationId 'STRING'
 ````
 
+##### Method Code:
+```python
+def deleteOrganization(organizationId: str):
+    # Code
+````
 
 ----------------------------------------
 ## Delete Organization Action Batch
@@ -886,17 +883,17 @@ https://developer.cisco.com/meraki/api-v1/#!delete-organization-action-batch
 - `--organizationId` (string): (required)
 - `--actionBatchId` (string): (required)
 
-##### Method Code:
-```python
-def deleteOrganizationActionBatch(organizationId: str, actionBatchId: str):
-    # Code
-````
 
 ##### Example:
 ```
 meraki organizations deleteOrganizationActionBatch --organizationId 'STRING' --actionBatchId 'STRING'
 ````
 
+##### Method Code:
+```python
+def deleteOrganizationActionBatch(organizationId: str, actionBatchId: str):
+    # Code
+````
 
 ----------------------------------------
 ## Delete Organization Admin
@@ -910,17 +907,17 @@ https://developer.cisco.com/meraki/api-v1/#!delete-organization-admin
 - `--organizationId` (string): (required)
 - `--adminId` (string): (required)
 
-##### Method Code:
-```python
-def deleteOrganizationAdmin(organizationId: str, adminId: str):
-    # Code
-````
 
 ##### Example:
 ```
 meraki organizations deleteOrganizationAdmin --organizationId 'STRING' --adminId 'STRING'
 ````
 
+##### Method Code:
+```python
+def deleteOrganizationAdmin(organizationId: str, adminId: str):
+    # Code
+````
 
 ----------------------------------------
 ## Delete Organization Branding Policy
@@ -934,17 +931,17 @@ https://developer.cisco.com/meraki/api-v1/#!delete-organization-branding-policy
 - `--organizationId` (string): (required)
 - `--brandingPolicyId` (string): (required)
 
-##### Method Code:
-```python
-def deleteOrganizationBrandingPolicy(organizationId: str, brandingPolicyId: str):
-    # Code
-````
 
 ##### Example:
 ```
 meraki organizations deleteOrganizationBrandingPolicy --organizationId 'STRING' --brandingPolicyId 'STRING'
 ````
 
+##### Method Code:
+```python
+def deleteOrganizationBrandingPolicy(organizationId: str, brandingPolicyId: str):
+    # Code
+````
 
 ----------------------------------------
 ## Delete Organization Config Template
@@ -958,17 +955,17 @@ https://developer.cisco.com/meraki/api-v1/#!delete-organization-config-template
 - `--organizationId` (string): (required)
 - `--configTemplateId` (string): (required)
 
-##### Method Code:
-```python
-def deleteOrganizationConfigTemplate(organizationId: str, configTemplateId: str):
-    # Code
-````
 
 ##### Example:
 ```
 meraki organizations deleteOrganizationConfigTemplate --organizationId 'STRING' --configTemplateId 'STRING'
 ````
 
+##### Method Code:
+```python
+def deleteOrganizationConfigTemplate(organizationId: str, configTemplateId: str):
+    # Code
+````
 
 ----------------------------------------
 ## Delete Organization Saml Idp
@@ -982,17 +979,17 @@ https://developer.cisco.com/meraki/api-v1/#!delete-organization-saml-idp
 - `--organizationId` (string): (required)
 - `--idpId` (string): (required)
 
-##### Method Code:
-```python
-def deleteOrganizationSamlIdp(organizationId: str, idpId: str):
-    # Code
-````
 
 ##### Example:
 ```
 meraki organizations deleteOrganizationSamlIdp --organizationId 'STRING' --idpId 'STRING'
 ````
 
+##### Method Code:
+```python
+def deleteOrganizationSamlIdp(organizationId: str, idpId: str):
+    # Code
+````
 
 ----------------------------------------
 ## Delete Organization Saml Role
@@ -1006,17 +1003,17 @@ https://developer.cisco.com/meraki/api-v1/#!delete-organization-saml-role
 - `--organizationId` (string): (required)
 - `--samlRoleId` (string): (required)
 
-##### Method Code:
-```python
-def deleteOrganizationSamlRole(organizationId: str, samlRoleId: str):
-    # Code
-````
 
 ##### Example:
 ```
 meraki organizations deleteOrganizationSamlRole --organizationId 'STRING' --samlRoleId 'STRING'
 ````
 
+##### Method Code:
+```python
+def deleteOrganizationSamlRole(organizationId: str, samlRoleId: str):
+    # Code
+````
 
 ----------------------------------------
 ## Get Organization
@@ -1029,17 +1026,17 @@ https://developer.cisco.com/meraki/api-v1/#!get-organization
 ##### Arguments
 - `--organizationId` (string): (required)
 
-##### Method Code:
-```python
-def getOrganization(organizationId: str):
-    # Code
-````
 
 ##### Example:
 ```
 meraki organizations getOrganization --organizationId 'STRING'
 ````
 
+##### Method Code:
+```python
+def getOrganization(organizationId: str):
+    # Code
+````
 
 ----------------------------------------
 ## Get Organization Action Batch
@@ -1053,17 +1050,17 @@ https://developer.cisco.com/meraki/api-v1/#!get-organization-action-batch
 - `--organizationId` (string): (required)
 - `--actionBatchId` (string): (required)
 
-##### Method Code:
-```python
-def getOrganizationActionBatch(organizationId: str, actionBatchId: str):
-    # Code
-````
 
 ##### Example:
 ```
 meraki organizations getOrganizationActionBatch --organizationId 'STRING' --actionBatchId 'STRING'
 ````
 
+##### Method Code:
+```python
+def getOrganizationActionBatch(organizationId: str, actionBatchId: str):
+    # Code
+````
 
 ----------------------------------------
 ## Get Organization Action Batches
@@ -1077,11 +1074,6 @@ https://developer.cisco.com/meraki/api-v1/#!get-organization-action-batches
 - `--organizationId` (string): (required)
 - `--status` (string): Filter batches by status. Valid types are pending, completed, and failed.
 
-##### Method Code:
-```python
-def getOrganizationActionBatches(organizationId: str, **kwargs):
-    # Code
-````
 
 ##### Example:
 ```
@@ -1093,6 +1085,11 @@ meraki organizations getOrganizationActionBatches --organizationId 'STRING' --op
 meraki organizations getOrganizationActionBatches --organizationId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
+##### Method Code:
+```python
+def getOrganizationActionBatches(organizationId: str, **kwargs):
+    # Code
+````
 
 ----------------------------------------
 ## Get Organization Admins
@@ -1105,17 +1102,17 @@ https://developer.cisco.com/meraki/api-v1/#!get-organization-admins
 ##### Arguments
 - `--organizationId` (string): (required)
 
-##### Method Code:
-```python
-def getOrganizationAdmins(organizationId: str):
-    # Code
-````
 
 ##### Example:
 ```
 meraki organizations getOrganizationAdmins --organizationId 'STRING'
 ````
 
+##### Method Code:
+```python
+def getOrganizationAdmins(organizationId: str):
+    # Code
+````
 
 ----------------------------------------
 ## Get Organization Api Requests
@@ -1141,11 +1138,6 @@ https://developer.cisco.com/meraki/api-v1/#!get-organization-api-requests
 - `--responseCode` (integer): Filter the results by the response code of the API requests
 - `--sourceIp` (string): Filter the results by the IP address of the originating API request
 
-##### Method Code:
-```python
-def getOrganizationApiRequests(organizationId: str, total_pages=1, direction='next', **kwargs):
-    # Code
-````
 
 ##### Example:
 ```
@@ -1157,6 +1149,11 @@ meraki organizations getOrganizationApiRequests --organizationId 'STRING' --opti
 meraki organizations getOrganizationApiRequests --organizationId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
+##### Method Code:
+```python
+def getOrganizationApiRequests(organizationId: str, total_pages=1, direction='next', **kwargs):
+    # Code
+````
 
 ----------------------------------------
 ## Get Organization Api Requests Overview
@@ -1172,11 +1169,6 @@ https://developer.cisco.com/meraki/api-v1/#!get-organization-api-requests-overvi
 - `--t1` (string): The end of the timespan for the data. t1 can be a maximum of 31 days after t0.
 - `--timespan` (number): The timespan for which the information will be fetched. If specifying timespan, do not specify parameters t0 and t1. The value must be in seconds and be less than or equal to 31 days. The default is 31 days.
 
-##### Method Code:
-```python
-def getOrganizationApiRequestsOverview(organizationId: str, **kwargs):
-    # Code
-````
 
 ##### Example:
 ```
@@ -1188,6 +1180,11 @@ meraki organizations getOrganizationApiRequestsOverview --organizationId 'STRING
 meraki organizations getOrganizationApiRequestsOverview --organizationId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
+##### Method Code:
+```python
+def getOrganizationApiRequestsOverview(organizationId: str, **kwargs):
+    # Code
+````
 
 ----------------------------------------
 ## Get Organization Branding Policies
@@ -1200,17 +1197,17 @@ https://developer.cisco.com/meraki/api-v1/#!get-organization-branding-policies
 ##### Arguments
 - `--organizationId` (string): (required)
 
-##### Method Code:
-```python
-def getOrganizationBrandingPolicies(organizationId: str):
-    # Code
-````
 
 ##### Example:
 ```
 meraki organizations getOrganizationBrandingPolicies --organizationId 'STRING'
 ````
 
+##### Method Code:
+```python
+def getOrganizationBrandingPolicies(organizationId: str):
+    # Code
+````
 
 ----------------------------------------
 ## Get Organization Branding Policies Priorities
@@ -1223,17 +1220,17 @@ https://developer.cisco.com/meraki/api-v1/#!get-organization-branding-policies-p
 ##### Arguments
 - `--organizationId` (string): (required)
 
-##### Method Code:
-```python
-def getOrganizationBrandingPoliciesPriorities(organizationId: str):
-    # Code
-````
 
 ##### Example:
 ```
 meraki organizations getOrganizationBrandingPoliciesPriorities --organizationId 'STRING'
 ````
 
+##### Method Code:
+```python
+def getOrganizationBrandingPoliciesPriorities(organizationId: str):
+    # Code
+````
 
 ----------------------------------------
 ## Get Organization Branding Policy
@@ -1247,17 +1244,17 @@ https://developer.cisco.com/meraki/api-v1/#!get-organization-branding-policy
 - `--organizationId` (string): (required)
 - `--brandingPolicyId` (string): (required)
 
-##### Method Code:
-```python
-def getOrganizationBrandingPolicy(organizationId: str, brandingPolicyId: str):
-    # Code
-````
 
 ##### Example:
 ```
 meraki organizations getOrganizationBrandingPolicy --organizationId 'STRING' --brandingPolicyId 'STRING'
 ````
 
+##### Method Code:
+```python
+def getOrganizationBrandingPolicy(organizationId: str, brandingPolicyId: str):
+    # Code
+````
 
 ----------------------------------------
 ## Get Organization Config Template
@@ -1271,17 +1268,17 @@ https://developer.cisco.com/meraki/api-v1/#!get-organization-config-template
 - `--organizationId` (string): (required)
 - `--configTemplateId` (string): (required)
 
-##### Method Code:
-```python
-def getOrganizationConfigTemplate(organizationId: str, configTemplateId: str):
-    # Code
-````
 
 ##### Example:
 ```
 meraki organizations getOrganizationConfigTemplate --organizationId 'STRING' --configTemplateId 'STRING'
 ````
 
+##### Method Code:
+```python
+def getOrganizationConfigTemplate(organizationId: str, configTemplateId: str):
+    # Code
+````
 
 ----------------------------------------
 ## Get Organization Config Templates
@@ -1294,17 +1291,17 @@ https://developer.cisco.com/meraki/api-v1/#!get-organization-config-templates
 ##### Arguments
 - `--organizationId` (string): (required)
 
-##### Method Code:
-```python
-def getOrganizationConfigTemplates(organizationId: str):
-    # Code
-````
 
 ##### Example:
 ```
 meraki organizations getOrganizationConfigTemplates --organizationId 'STRING'
 ````
 
+##### Method Code:
+```python
+def getOrganizationConfigTemplates(organizationId: str):
+    # Code
+````
 
 ----------------------------------------
 ## Get Organization Configuration Changes
@@ -1327,11 +1324,6 @@ https://developer.cisco.com/meraki/api-v1/#!get-organization-configuration-chang
 - `--networkId` (string): Filters on the given network
 - `--adminId` (string): Filters on the given Admin
 
-##### Method Code:
-```python
-def getOrganizationConfigurationChanges(organizationId: str, total_pages=1, direction='prev', **kwargs):
-    # Code
-````
 
 ##### Example:
 ```
@@ -1343,6 +1335,11 @@ meraki organizations getOrganizationConfigurationChanges --organizationId 'STRIN
 meraki organizations getOrganizationConfigurationChanges --organizationId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
+##### Method Code:
+```python
+def getOrganizationConfigurationChanges(organizationId: str, total_pages=1, direction='prev', **kwargs):
+    # Code
+````
 
 ----------------------------------------
 ## Get Organization Devices
@@ -1361,11 +1358,6 @@ https://developer.cisco.com/meraki/api-v1/#!get-organization-devices
 - `--endingBefore` (string): A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it.
 - `--configurationUpdatedAfter` (string): Filter results by whether or not the device's configuration has been updated after the given timestamp
 
-##### Method Code:
-```python
-def getOrganizationDevices(organizationId: str, total_pages=1, direction='next', **kwargs):
-    # Code
-````
 
 ##### Example:
 ```
@@ -1377,6 +1369,11 @@ meraki organizations getOrganizationDevices --organizationId 'STRING' --optional
 meraki organizations getOrganizationDevices --organizationId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
+##### Method Code:
+```python
+def getOrganizationDevices(organizationId: str, total_pages=1, direction='next', **kwargs):
+    # Code
+````
 
 ----------------------------------------
 ## Get Organization Devices Statuses
@@ -1394,11 +1391,6 @@ https://developer.cisco.com/meraki/api-v1/#!get-organization-devices-statuses
 - `--startingAfter` (string): A token used by the server to indicate the start of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it.
 - `--endingBefore` (string): A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it.
 
-##### Method Code:
-```python
-def getOrganizationDevicesStatuses(organizationId: str, total_pages=1, direction='next', **kwargs):
-    # Code
-````
 
 ##### Example:
 ```
@@ -1410,6 +1402,11 @@ meraki organizations getOrganizationDevicesStatuses --organizationId 'STRING' --
 meraki organizations getOrganizationDevicesStatuses --organizationId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
+##### Method Code:
+```python
+def getOrganizationDevicesStatuses(organizationId: str, total_pages=1, direction='next', **kwargs):
+    # Code
+````
 
 ----------------------------------------
 ## Get Organization Devices Uplinks Loss And Latency
@@ -1427,11 +1424,6 @@ https://developer.cisco.com/meraki/api-v1/#!get-organization-devices-uplinks-los
 - `--uplink` (string): Optional filter for a specific WAN uplink. Valid uplinks are wan1, wan2, cellular. Default will return all uplinks.
 - `--ip` (string): Optional filter for a specific destination IP. Default will return all destination IPs.
 
-##### Method Code:
-```python
-def getOrganizationDevicesUplinksLossAndLatency(organizationId: str, **kwargs):
-    # Code
-````
 
 ##### Example:
 ```
@@ -1443,6 +1435,11 @@ meraki organizations getOrganizationDevicesUplinksLossAndLatency --organizationI
 meraki organizations getOrganizationDevicesUplinksLossAndLatency --organizationId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
+##### Method Code:
+```python
+def getOrganizationDevicesUplinksLossAndLatency(organizationId: str, **kwargs):
+    # Code
+````
 
 ----------------------------------------
 ## Get Organization Inventory Device
@@ -1456,17 +1453,17 @@ https://developer.cisco.com/meraki/api-v1/#!get-organization-inventory-device
 - `--organizationId` (string): (required)
 - `--serial` (string): (required)
 
-##### Method Code:
-```python
-def getOrganizationInventoryDevice(organizationId: str, serial: str):
-    # Code
-````
 
 ##### Example:
 ```
 meraki organizations getOrganizationInventoryDevice --organizationId 'STRING' --serial 'STRING'
 ````
 
+##### Method Code:
+```python
+def getOrganizationInventoryDevice(organizationId: str, serial: str):
+    # Code
+````
 
 ----------------------------------------
 ## Get Organization Inventory Devices
@@ -1486,11 +1483,6 @@ https://developer.cisco.com/meraki/api-v1/#!get-organization-inventory-devices
 - `--usedState` (string): Filter results by used or unused inventory. Accepted values are "used" or "unused".
 - `--search` (string): Search for devices in inventory based on serial number, mac address, or model.
 
-##### Method Code:
-```python
-def getOrganizationInventoryDevices(organizationId: str, total_pages=1, direction='next', **kwargs):
-    # Code
-````
 
 ##### Example:
 ```
@@ -1502,6 +1494,11 @@ meraki organizations getOrganizationInventoryDevices --organizationId 'STRING' -
 meraki organizations getOrganizationInventoryDevices --organizationId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
+##### Method Code:
+```python
+def getOrganizationInventoryDevices(organizationId: str, total_pages=1, direction='next', **kwargs):
+    # Code
+````
 
 ----------------------------------------
 ## Get Organization License
@@ -1515,17 +1512,17 @@ https://developer.cisco.com/meraki/api-v1/#!get-organization-license
 - `--organizationId` (string): (required)
 - `--licenseId` (string): (required)
 
-##### Method Code:
-```python
-def getOrganizationLicense(organizationId: str, licenseId: str):
-    # Code
-````
 
 ##### Example:
 ```
 meraki organizations getOrganizationLicense --organizationId 'STRING' --licenseId 'STRING'
 ````
 
+##### Method Code:
+```python
+def getOrganizationLicense(organizationId: str, licenseId: str):
+    # Code
+````
 
 ----------------------------------------
 ## Get Organization Licenses
@@ -1546,11 +1543,6 @@ https://developer.cisco.com/meraki/api-v1/#!get-organization-licenses
 - `--networkId` (string): Filter the licenses to those assigned in a particular network
 - `--state` (string): Filter the licenses to those in a particular state. Can be one of 'active', 'expired', 'expiring', 'unused', 'unusedActive' or 'recentlyQueued'
 
-##### Method Code:
-```python
-def getOrganizationLicenses(organizationId: str, total_pages=1, direction='next', **kwargs):
-    # Code
-````
 
 ##### Example:
 ```
@@ -1562,6 +1554,11 @@ meraki organizations getOrganizationLicenses --organizationId 'STRING' --optiona
 meraki organizations getOrganizationLicenses --organizationId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
+##### Method Code:
+```python
+def getOrganizationLicenses(organizationId: str, total_pages=1, direction='next', **kwargs):
+    # Code
+````
 
 ----------------------------------------
 ## Get Organization Licenses Overview
@@ -1574,17 +1571,17 @@ https://developer.cisco.com/meraki/api-v1/#!get-organization-licenses-overview
 ##### Arguments
 - `--organizationId` (string): (required)
 
-##### Method Code:
-```python
-def getOrganizationLicensesOverview(organizationId: str):
-    # Code
-````
 
 ##### Example:
 ```
 meraki organizations getOrganizationLicensesOverview --organizationId 'STRING'
 ````
 
+##### Method Code:
+```python
+def getOrganizationLicensesOverview(organizationId: str):
+    # Code
+````
 
 ----------------------------------------
 ## Get Organization Login Security
@@ -1597,17 +1594,17 @@ https://developer.cisco.com/meraki/api-v1/#!get-organization-login-security
 ##### Arguments
 - `--organizationId` (string): (required)
 
-##### Method Code:
-```python
-def getOrganizationLoginSecurity(organizationId: str):
-    # Code
-````
 
 ##### Example:
 ```
 meraki organizations getOrganizationLoginSecurity --organizationId 'STRING'
 ````
 
+##### Method Code:
+```python
+def getOrganizationLoginSecurity(organizationId: str):
+    # Code
+````
 
 ----------------------------------------
 ## Get Organization Networks
@@ -1628,11 +1625,6 @@ https://developer.cisco.com/meraki/api-v1/#!get-organization-networks
 - `--startingAfter` (string): A token used by the server to indicate the start of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it.
 - `--endingBefore` (string): A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it.
 
-##### Method Code:
-```python
-def getOrganizationNetworks(organizationId: str, total_pages=1, direction='next', **kwargs):
-    # Code
-````
 
 ##### Example:
 ```
@@ -1644,6 +1636,11 @@ meraki organizations getOrganizationNetworks --organizationId 'STRING' --optiona
 meraki organizations getOrganizationNetworks --organizationId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
+##### Method Code:
+```python
+def getOrganizationNetworks(organizationId: str, total_pages=1, direction='next', **kwargs):
+    # Code
+````
 
 ----------------------------------------
 ## Get Organization Openapi Spec
@@ -1656,17 +1653,17 @@ https://developer.cisco.com/meraki/api-v1/#!get-organization-openapi-spec
 ##### Arguments
 - `--organizationId` (string): (required)
 
-##### Method Code:
-```python
-def getOrganizationOpenapiSpec(organizationId: str):
-    # Code
-````
 
 ##### Example:
 ```
 meraki organizations getOrganizationOpenapiSpec --organizationId 'STRING'
 ````
 
+##### Method Code:
+```python
+def getOrganizationOpenapiSpec(organizationId: str):
+    # Code
+````
 
 ----------------------------------------
 ## Get Organization Saml
@@ -1679,17 +1676,17 @@ https://developer.cisco.com/meraki/api-v1/#!get-organization-saml
 ##### Arguments
 - `--organizationId` (string): (required)
 
-##### Method Code:
-```python
-def getOrganizationSaml(organizationId: str):
-    # Code
-````
 
 ##### Example:
 ```
 meraki organizations getOrganizationSaml --organizationId 'STRING'
 ````
 
+##### Method Code:
+```python
+def getOrganizationSaml(organizationId: str):
+    # Code
+````
 
 ----------------------------------------
 ## Get Organization Saml Idp
@@ -1703,17 +1700,17 @@ https://developer.cisco.com/meraki/api-v1/#!get-organization-saml-idp
 - `--organizationId` (string): (required)
 - `--idpId` (string): (required)
 
-##### Method Code:
-```python
-def getOrganizationSamlIdp(organizationId: str, idpId: str):
-    # Code
-````
 
 ##### Example:
 ```
 meraki organizations getOrganizationSamlIdp --organizationId 'STRING' --idpId 'STRING'
 ````
 
+##### Method Code:
+```python
+def getOrganizationSamlIdp(organizationId: str, idpId: str):
+    # Code
+````
 
 ----------------------------------------
 ## Get Organization Saml Idps
@@ -1726,17 +1723,17 @@ https://developer.cisco.com/meraki/api-v1/#!get-organization-saml-idps
 ##### Arguments
 - `--organizationId` (string): (required)
 
-##### Method Code:
-```python
-def getOrganizationSamlIdps(organizationId: str):
-    # Code
-````
 
 ##### Example:
 ```
 meraki organizations getOrganizationSamlIdps --organizationId 'STRING'
 ````
 
+##### Method Code:
+```python
+def getOrganizationSamlIdps(organizationId: str):
+    # Code
+````
 
 ----------------------------------------
 ## Get Organization Saml Role
@@ -1750,17 +1747,17 @@ https://developer.cisco.com/meraki/api-v1/#!get-organization-saml-role
 - `--organizationId` (string): (required)
 - `--samlRoleId` (string): (required)
 
-##### Method Code:
-```python
-def getOrganizationSamlRole(organizationId: str, samlRoleId: str):
-    # Code
-````
 
 ##### Example:
 ```
 meraki organizations getOrganizationSamlRole --organizationId 'STRING' --samlRoleId 'STRING'
 ````
 
+##### Method Code:
+```python
+def getOrganizationSamlRole(organizationId: str, samlRoleId: str):
+    # Code
+````
 
 ----------------------------------------
 ## Get Organization Saml Roles
@@ -1773,17 +1770,17 @@ https://developer.cisco.com/meraki/api-v1/#!get-organization-saml-roles
 ##### Arguments
 - `--organizationId` (string): (required)
 
-##### Method Code:
-```python
-def getOrganizationSamlRoles(organizationId: str):
-    # Code
-````
 
 ##### Example:
 ```
 meraki organizations getOrganizationSamlRoles --organizationId 'STRING'
 ````
 
+##### Method Code:
+```python
+def getOrganizationSamlRoles(organizationId: str):
+    # Code
+````
 
 ----------------------------------------
 ## Get Organization Snmp
@@ -1796,17 +1793,17 @@ https://developer.cisco.com/meraki/api-v1/#!get-organization-snmp
 ##### Arguments
 - `--organizationId` (string): (required)
 
-##### Method Code:
-```python
-def getOrganizationSnmp(organizationId: str):
-    # Code
-````
 
 ##### Example:
 ```
 meraki organizations getOrganizationSnmp --organizationId 'STRING'
 ````
 
+##### Method Code:
+```python
+def getOrganizationSnmp(organizationId: str):
+    # Code
+````
 
 ----------------------------------------
 ## Get Organization Uplinks Statuses
@@ -1827,11 +1824,6 @@ https://developer.cisco.com/meraki/api-v1/#!get-organization-uplinks-statuses
 - `--serials` (array): A list of serial numbers. The returned devices will be filtered to only include these serials.
 - `--iccids` (array): A list of ICCIDs. The returned devices will be filtered to only include these ICCIDs.
 
-##### Method Code:
-```python
-def getOrganizationUplinksStatuses(organizationId: str, total_pages=1, direction='next', **kwargs):
-    # Code
-````
 
 ##### Example:
 ```
@@ -1843,6 +1835,11 @@ meraki organizations getOrganizationUplinksStatuses --organizationId 'STRING' --
 meraki organizations getOrganizationUplinksStatuses --organizationId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
+##### Method Code:
+```python
+def getOrganizationUplinksStatuses(organizationId: str, total_pages=1, direction='next', **kwargs):
+    # Code
+````
 
 ----------------------------------------
 ## Get Organization Webhooks Alert Types
@@ -1855,17 +1852,17 @@ https://developer.cisco.com/meraki/api-v1/#!get-organization-webhooks-alert-type
 ##### Arguments
 - `--organizationId` (string): (required)
 
-##### Method Code:
-```python
-def getOrganizationWebhooksAlertTypes(organizationId: str):
-    # Code
-````
 
 ##### Example:
 ```
 meraki organizations getOrganizationWebhooksAlertTypes --organizationId 'STRING'
 ````
 
+##### Method Code:
+```python
+def getOrganizationWebhooksAlertTypes(organizationId: str):
+    # Code
+````
 
 ----------------------------------------
 ## Get Organization Webhooks Logs
@@ -1887,11 +1884,6 @@ https://developer.cisco.com/meraki/api-v1/#!get-organization-webhooks-logs
 - `--endingBefore` (string): A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it.
 - `--url` (string): The URL the webhook was sent to
 
-##### Method Code:
-```python
-def getOrganizationWebhooksLogs(organizationId: str, total_pages=1, direction='next', **kwargs):
-    # Code
-````
 
 ##### Example:
 ```
@@ -1903,6 +1895,11 @@ meraki organizations getOrganizationWebhooksLogs --organizationId 'STRING' --opt
 meraki organizations getOrganizationWebhooksLogs --organizationId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
+##### Method Code:
+```python
+def getOrganizationWebhooksLogs(organizationId: str, total_pages=1, direction='next', **kwargs):
+    # Code
+````
 
 ----------------------------------------
 ## Get Organizations
@@ -1914,17 +1911,17 @@ https://developer.cisco.com/meraki/api-v1/#!get-organizations
 
 ##### Arguments
 
-##### Method Code:
-```python
-def getOrganizations():
-    # Code
-````
 
 ##### Example:
 ```
 meraki organizations getOrganizations
 ````
 
+##### Method Code:
+```python
+def getOrganizations():
+    # Code
+````
 
 ----------------------------------------
 ## Move Organization Licenses
@@ -1939,17 +1936,17 @@ https://developer.cisco.com/meraki/api-v1/#!move-organization-licenses
 - `--destOrganizationId` (string): The ID of the organization to move the licenses to
 - `--licenseIds` (array): A list of IDs of licenses to move to the new organization
 
-##### Method Code:
-```python
-def moveOrganizationLicenses(organizationId: str, destOrganizationId: str, licenseIds: list):
-    # Code
-````
 
 ##### Example:
 ```
 meraki organizations moveOrganizationLicenses --organizationId 'STRING' --destOrganizationId 'STRING' --licenseIds ITEM
 ````
 
+##### Method Code:
+```python
+def moveOrganizationLicenses(organizationId: str, destOrganizationId: str, licenseIds: list):
+    # Code
+````
 
 ----------------------------------------
 ## Move Organization Licenses Seats
@@ -1965,17 +1962,17 @@ https://developer.cisco.com/meraki/api-v1/#!move-organization-licenses-seats
 - `--licenseId` (string): The ID of the SM license to move the seats from
 - `--seatCount` (integer): The number of seats to move to the new organization. Must be less than or equal to the total number of seats of the license
 
-##### Method Code:
-```python
-def moveOrganizationLicensesSeats(organizationId: str, destOrganizationId: str, licenseId: str, seatCount: int):
-    # Code
-````
 
 ##### Example:
 ```
 meraki organizations moveOrganizationLicensesSeats --organizationId 'STRING' --destOrganizationId 'STRING' --licenseId 'STRING' --seatCount INT
 ````
 
+##### Method Code:
+```python
+def moveOrganizationLicensesSeats(organizationId: str, destOrganizationId: str, licenseId: str, seatCount: int):
+    # Code
+````
 
 ----------------------------------------
 ## Renew Organization Licenses Seats
@@ -1990,17 +1987,17 @@ https://developer.cisco.com/meraki/api-v1/#!renew-organization-licenses-seats
 - `--licenseIdToRenew` (string): The ID of the SM license to renew. This license must already be assigned to an SM network
 - `--unusedLicenseId` (string): The SM license to use to renew the seats on 'licenseIdToRenew'. This license must have at least as many seats available as there are seats on 'licenseIdToRenew'
 
-##### Method Code:
-```python
-def renewOrganizationLicensesSeats(organizationId: str, licenseIdToRenew: str, unusedLicenseId: str):
-    # Code
-````
 
 ##### Example:
 ```
 meraki organizations renewOrganizationLicensesSeats --organizationId 'STRING' --licenseIdToRenew 'STRING' --unusedLicenseId 'STRING'
 ````
 
+##### Method Code:
+```python
+def renewOrganizationLicensesSeats(organizationId: str, licenseIdToRenew: str, unusedLicenseId: str):
+    # Code
+````
 
 ----------------------------------------
 ## Update Organization
@@ -2014,11 +2011,6 @@ https://developer.cisco.com/meraki/api-v1/#!update-organization
 - `--organizationId` (string): (required)
 - `--name` (string): The name of the organization
 
-##### Method Code:
-```python
-def updateOrganization(organizationId: str, **kwargs):
-    # Code
-````
 
 ##### Example:
 ```
@@ -2030,6 +2022,11 @@ meraki organizations updateOrganization --organizationId 'STRING' --optionalArg1
 meraki organizations updateOrganization --organizationId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
+##### Method Code:
+```python
+def updateOrganization(organizationId: str, **kwargs):
+    # Code
+````
 
 ----------------------------------------
 ## Update Organization Action Batch
@@ -2045,11 +2042,6 @@ https://developer.cisco.com/meraki/api-v1/#!update-organization-action-batch
 - `--confirmed` (boolean): A boolean representing whether or not the batch has been confirmed. This property cannot be unset once it is true.
 - `--synchronous` (boolean): Set to true to force the batch to run synchronous. There can be at most 20 actions in synchronous batch.
 
-##### Method Code:
-```python
-def updateOrganizationActionBatch(organizationId: str, actionBatchId: str, **kwargs):
-    # Code
-````
 
 ##### Example:
 ```
@@ -2061,6 +2053,11 @@ meraki organizations updateOrganizationActionBatch --organizationId 'STRING' --a
 meraki organizations updateOrganizationActionBatch --organizationId 'STRING' --actionBatchId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
+##### Method Code:
+```python
+def updateOrganizationActionBatch(organizationId: str, actionBatchId: str, **kwargs):
+    # Code
+````
 
 ----------------------------------------
 ## Update Organization Admin
@@ -2078,11 +2075,6 @@ https://developer.cisco.com/meraki/api-v1/#!update-organization-admin
 - `--tags` (array): The list of tags that the dashboard administrator has privileges on
 - `--networks` (array): The list of networks that the dashboard administrator has privileges on
 
-##### Method Code:
-```python
-def updateOrganizationAdmin(organizationId: str, adminId: str, **kwargs):
-    # Code
-````
 
 ##### Example:
 ```
@@ -2094,6 +2086,11 @@ meraki organizations updateOrganizationAdmin --organizationId 'STRING' --adminId
 meraki organizations updateOrganizationAdmin --organizationId 'STRING' --adminId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
+##### Method Code:
+```python
+def updateOrganizationAdmin(organizationId: str, adminId: str, **kwargs):
+    # Code
+````
 
 ----------------------------------------
 ## Update Organization Branding Policies Priorities
@@ -2107,17 +2104,17 @@ https://developer.cisco.com/meraki/api-v1/#!update-organization-branding-policie
 - `--organizationId` (string): (required)
 - `--brandingPolicyIds` (array): A list of branding policy IDs arranged in ascending priority order (IDs later in the array have higher priority).
 
-##### Method Code:
-```python
-def updateOrganizationBrandingPoliciesPriorities(organizationId: str, brandingPolicyIds: list):
-    # Code
-````
 
 ##### Example:
 ```
 meraki organizations updateOrganizationBrandingPoliciesPriorities --organizationId 'STRING' --brandingPolicyIds ITEM
 ````
 
+##### Method Code:
+```python
+def updateOrganizationBrandingPoliciesPriorities(organizationId: str, brandingPolicyIds: list):
+    # Code
+````
 
 ----------------------------------------
 ## Update Organization Branding Policy
@@ -2139,11 +2136,6 @@ the section on Dashboard). Some properties in this object also accept custom HTM
 Dashboard; see the documentation for each property to see the allowed values.
 
 
-##### Method Code:
-```python
-def updateOrganizationBrandingPolicy(organizationId: str, brandingPolicyId: str, **kwargs):
-    # Code
-````
 
 ##### Example:
 ```
@@ -2155,6 +2147,11 @@ meraki organizations updateOrganizationBrandingPolicy --organizationId 'STRING' 
 meraki organizations updateOrganizationBrandingPolicy --organizationId 'STRING' --brandingPolicyId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
+##### Method Code:
+```python
+def updateOrganizationBrandingPolicy(organizationId: str, brandingPolicyId: str, **kwargs):
+    # Code
+````
 
 ----------------------------------------
 ## Update Organization Config Template
@@ -2170,12 +2167,6 @@ https://developer.cisco.com/meraki/api-v1/#!update-organization-config-template
 - `--name` (string): The name of the configuration template
 - `--timeZone` (string): The timezone of the configuration template. For a list of allowed timezones, please see the 'TZ' column in the table in <a target='_blank' href='https://en.wikipedia.org/wiki/List_of_tz_database_time_zones'>this article.</a>
 
-##### Arguments
-##### Method Code:
-```python
-def updateOrganizationConfigTemplate(organizationId: str, configTemplateId: str, **kwargs):
-    # Code
-````
 
 ##### Example:
 ```
@@ -2187,6 +2178,11 @@ meraki organizations updateOrganizationConfigTemplate --organizationId 'STRING' 
 meraki organizations updateOrganizationConfigTemplate --organizationId 'STRING' --configTemplateId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
+##### Method Code:
+```python
+def updateOrganizationConfigTemplate(organizationId: str, configTemplateId: str, **kwargs):
+    # Code
+````
 
 ----------------------------------------
 ## Update Organization License
@@ -2201,11 +2197,6 @@ https://developer.cisco.com/meraki/api-v1/#!update-organization-license
 - `--licenseId` (string): (required)
 - `--deviceSerial` (string): The serial number of the device to assign this license to. Set this to null to unassign the license. If a different license is already active on the device, this parameter will control queueing/dequeuing this license.
 
-##### Method Code:
-```python
-def updateOrganizationLicense(organizationId: str, licenseId: str, **kwargs):
-    # Code
-````
 
 ##### Example:
 ```
@@ -2217,6 +2208,11 @@ meraki organizations updateOrganizationLicense --organizationId 'STRING' --licen
 meraki organizations updateOrganizationLicense --organizationId 'STRING' --licenseId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
+##### Method Code:
+```python
+def updateOrganizationLicense(organizationId: str, licenseId: str, **kwargs):
+    # Code
+````
 
 ----------------------------------------
 ## Update Organization Login Security
@@ -2241,11 +2237,6 @@ https://developer.cisco.com/meraki/api-v1/#!update-organization-login-security
 - `--enforceLoginIpRanges` (boolean): Boolean indicating whether organization will restrict access to Dashboard (including the API) from certain IP addresses.
 - `--loginIpRanges` (array): List of acceptable IP ranges. Entries can be single IP addresses, IP address ranges, and CIDR subnets.
 
-##### Method Code:
-```python
-def updateOrganizationLoginSecurity(organizationId: str, **kwargs):
-    # Code
-````
 
 ##### Example:
 ```
@@ -2257,6 +2248,11 @@ meraki organizations updateOrganizationLoginSecurity --organizationId 'STRING' -
 meraki organizations updateOrganizationLoginSecurity --organizationId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
+##### Method Code:
+```python
+def updateOrganizationLoginSecurity(organizationId: str, **kwargs):
+    # Code
+````
 
 ----------------------------------------
 ## Update Organization Saml
@@ -2270,11 +2266,6 @@ https://developer.cisco.com/meraki/api-v1/#!update-organization-saml
 - `--organizationId` (string): (required)
 - `--enabled` (boolean): Boolean for updating SAML SSO enabled settings.
 
-##### Method Code:
-```python
-def updateOrganizationSaml(organizationId: str, **kwargs):
-    # Code
-````
 
 ##### Example:
 ```
@@ -2286,6 +2277,11 @@ meraki organizations updateOrganizationSaml --organizationId 'STRING' --optional
 meraki organizations updateOrganizationSaml --organizationId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
+##### Method Code:
+```python
+def updateOrganizationSaml(organizationId: str, **kwargs):
+    # Code
+````
 
 ----------------------------------------
 ## Update Organization Saml Idp
@@ -2301,11 +2297,6 @@ https://developer.cisco.com/meraki/api-v1/#!update-organization-saml-idp
 - `--x509certSha1Fingerprint` (string): Fingerprint (SHA1) of the SAML certificate provided by your Identity Provider (IdP). This will be used for encryption / validation.
 - `--sloLogoutUrl` (string): Dashboard will redirect users to this URL when they sign out.
 
-##### Method Code:
-```python
-def updateOrganizationSamlIdp(organizationId: str, idpId: str, **kwargs):
-    # Code
-````
 
 ##### Example:
 ```
@@ -2317,6 +2308,11 @@ meraki organizations updateOrganizationSamlIdp --organizationId 'STRING' --idpId
 meraki organizations updateOrganizationSamlIdp --organizationId 'STRING' --idpId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
+##### Method Code:
+```python
+def updateOrganizationSamlIdp(organizationId: str, idpId: str, **kwargs):
+    # Code
+````
 
 ----------------------------------------
 ## Update Organization Saml Role
@@ -2334,11 +2330,6 @@ https://developer.cisco.com/meraki/api-v1/#!update-organization-saml-role
 - `--tags` (array): The list of tags that the SAML administrator has privleges on
 - `--networks` (array): The list of networks that the SAML administrator has privileges on
 
-##### Method Code:
-```python
-def updateOrganizationSamlRole(organizationId: str, samlRoleId: str, **kwargs):
-    # Code
-````
 
 ##### Example:
 ```
@@ -2350,6 +2341,11 @@ meraki organizations updateOrganizationSamlRole --organizationId 'STRING' --saml
 meraki organizations updateOrganizationSamlRole --organizationId 'STRING' --samlRoleId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
+##### Method Code:
+```python
+def updateOrganizationSamlRole(organizationId: str, samlRoleId: str, **kwargs):
+    # Code
+````
 
 ----------------------------------------
 ## Update Organization Snmp
@@ -2369,11 +2365,6 @@ https://developer.cisco.com/meraki/api-v1/#!update-organization-snmp
 - `--v3PrivPass` (string): The SNMP version 3 privacy password. Must be at least 8 characters if specified.
 - `--peerIps` (array): The list of IPv4 addresses that are allowed to access the SNMP server.
 
-##### Method Code:
-```python
-def updateOrganizationSnmp(organizationId: str, **kwargs):
-    # Code
-````
 
 ##### Example:
 ```
@@ -2385,6 +2376,11 @@ meraki organizations updateOrganizationSnmp --organizationId 'STRING' --optional
 meraki organizations updateOrganizationSnmp --organizationId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
+##### Method Code:
+```python
+def updateOrganizationSnmp(organizationId: str, **kwargs):
+    # Code
+````
 
 ----------------------------------------
 
@@ -2405,11 +2401,6 @@ https://developer.cisco.com/meraki/api-v1/#!bind-network
 - `--configTemplateId` (string): The ID of the template to which the network should be bound.
 - `--autoBind` (boolean): Optional boolean indicating whether the network's switches should automatically bind to profiles of the same model. Defaults to false if left unspecified. This option only affects switch networks and switch templates. Auto-bind is not valid unless the switch template has at least one profile and has at most one profile per switch model.
 
-##### Method Code:
-```python
-def bindNetwork(networkId: str, configTemplateId: str, **kwargs):
-    # Code
-````
 
 ##### Example:
 ```
@@ -2421,6 +2412,11 @@ meraki networks bindNetwork --networkId 'STRING' --configTemplateId 'STRING' --o
 meraki networks bindNetwork --networkId 'STRING' --configTemplateId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
+##### Method Code:
+```python
+def bindNetwork(networkId: str, configTemplateId: str, **kwargs):
+    # Code
+````
 
 ----------------------------------------
 ## Claim Network Devices
@@ -2434,17 +2430,17 @@ https://developer.cisco.com/meraki/api-v1/#!claim-network-devices
 - `--networkId` (string): (required)
 - `--serials` (array): A list of serials of devices to claim
 
-##### Method Code:
-```python
-def claimNetworkDevices(networkId: str, serials: list):
-    # Code
-````
 
 ##### Example:
 ```
 meraki networks claimNetworkDevices --networkId 'STRING' --serials ITEM
 ````
 
+##### Method Code:
+```python
+def claimNetworkDevices(networkId: str, serials: list):
+    # Code
+````
 
 ----------------------------------------
 ## Create Network Floor Plan
@@ -2464,11 +2460,6 @@ https://developer.cisco.com/meraki/api-v1/#!create-network-floor-plan
 - `--topLeftCorner` (object): The longitude and latitude of the top left corner of your floor plan.
 - `--topRightCorner` (object): The longitude and latitude of the top right corner of your floor plan.
 
-##### Method Code:
-```python
-def createNetworkFloorPlan(networkId: str, name: str, imageContents: str, **kwargs):
-    # Code
-````
 
 ##### Example:
 ```
@@ -2480,6 +2471,11 @@ meraki networks createNetworkFloorPlan --networkId 'STRING' --name 'STRING' --im
 meraki networks createNetworkFloorPlan --networkId 'STRING' --name 'STRING' --imageContents 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
+##### Method Code:
+```python
+def createNetworkFloorPlan(networkId: str, name: str, imageContents: str, **kwargs):
+    # Code
+````
 
 ----------------------------------------
 ## Create Network Group Policy
@@ -2503,11 +2499,6 @@ https://developer.cisco.com/meraki/api-v1/#!create-network-group-policy
 - `--vlanTagging` (object): The VLAN tagging settings for your group policy. Only available if your network has a wireless configuration.
 - `--bonjourForwarding` (object): The Bonjour settings for your group policy. Only valid if your network has a wireless configuration.
 
-##### Method Code:
-```python
-def createNetworkGroupPolicy(networkId: str, name: str, **kwargs):
-    # Code
-````
 
 ##### Example:
 ```
@@ -2519,6 +2510,11 @@ meraki networks createNetworkGroupPolicy --networkId 'STRING' --name 'STRING' --
 meraki networks createNetworkGroupPolicy --networkId 'STRING' --name 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
+##### Method Code:
+```python
+def createNetworkGroupPolicy(networkId: str, name: str, **kwargs):
+    # Code
+````
 
 ----------------------------------------
 ## Create Network Meraki Auth User
@@ -2537,11 +2533,6 @@ https://developer.cisco.com/meraki/api-v1/#!create-network-meraki-auth-user
 - `--accountType` (string): Authorization type for user. Can be 'Guest' or '802.1X' for wireless networks, or 'Client VPN' for wired networks. Defaults to '802.1X'.
 - `--emailPasswordToUser` (boolean): Whether or not Meraki should email the password to user. Default is false.
 
-##### Method Code:
-```python
-def createNetworkMerakiAuthUser(networkId: str, email: str, name: str, password: str, authorizations: list, **kwargs):
-    # Code
-````
 
 ##### Example:
 ```
@@ -2553,6 +2544,11 @@ meraki networks createNetworkMerakiAuthUser --networkId 'STRING' --email 'STRING
 meraki networks createNetworkMerakiAuthUser --networkId 'STRING' --email 'STRING' --name 'STRING' --password 'STRING' --authorizations ITEM --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
+##### Method Code:
+```python
+def createNetworkMerakiAuthUser(networkId: str, email: str, name: str, password: str, authorizations: list, **kwargs):
+    # Code
+````
 
 ----------------------------------------
 ## Create Network Mqtt Broker
@@ -2568,17 +2564,17 @@ https://developer.cisco.com/meraki/api-v1/#!create-network-mqtt-broker
 - `--host` (string): Host name/IP address where MQTT broker runs
 - `--port` (integer): Host port though which MQTT broker can be reached
 
-##### Method Code:
-```python
-def createNetworkMqttBroker(networkId: str, name: str, host: str, port: int):
-    # Code
-````
 
 ##### Example:
 ```
 meraki networks createNetworkMqttBroker --networkId 'STRING' --name 'STRING' --host 'STRING' --port INT
 ````
 
+##### Method Code:
+```python
+def createNetworkMqttBroker(networkId: str, name: str, host: str, port: int):
+    # Code
+````
 
 ----------------------------------------
 ## Create Network Pii Request
@@ -2598,11 +2594,6 @@ https://developer.cisco.com/meraki/api-v1/#!create-network-pii-request
 - `--smDeviceId` (string): The sm_device_id of a Systems Manager device. The only way to "restrict processing" or "delete" a Systems Manager device. Must include "device" in the dataset for a "delete" request to destroy the device.
 - `--smUserId` (string): The sm_user_id of a Systems Manager user. The only way to "restrict processing" or "delete" a Systems Manager user. Must include "user" in the dataset for a "delete" request to destroy the user.
 
-##### Method Code:
-```python
-def createNetworkPiiRequest(networkId: str, **kwargs):
-    # Code
-````
 
 ##### Example:
 ```
@@ -2614,6 +2605,11 @@ meraki networks createNetworkPiiRequest --networkId 'STRING' --optionalArg1 'opt
 meraki networks createNetworkPiiRequest --networkId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
+##### Method Code:
+```python
+def createNetworkPiiRequest(networkId: str, **kwargs):
+    # Code
+````
 
 ----------------------------------------
 ## Create Network Webhooks Http Server
@@ -2629,11 +2625,6 @@ https://developer.cisco.com/meraki/api-v1/#!create-network-webhooks-http-server
 - `--url` (string): The URL of the HTTP server
 - `--sharedSecret` (string): A shared secret that will be included in POSTs sent to the HTTP server. This secret can be used to verify that the request was sent by Meraki.
 
-##### Method Code:
-```python
-def createNetworkWebhooksHttpServer(networkId: str, name: str, url: str, **kwargs):
-    # Code
-````
 
 ##### Example:
 ```
@@ -2645,6 +2636,11 @@ meraki networks createNetworkWebhooksHttpServer --networkId 'STRING' --name 'STR
 meraki networks createNetworkWebhooksHttpServer --networkId 'STRING' --name 'STRING' --url 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
+##### Method Code:
+```python
+def createNetworkWebhooksHttpServer(networkId: str, name: str, url: str, **kwargs):
+    # Code
+````
 
 ----------------------------------------
 ## Create Network Webhooks Webhook Test
@@ -2659,11 +2655,6 @@ https://developer.cisco.com/meraki/api-v1/#!create-network-webhooks-webhook-test
 - `--url` (string): The URL where the test webhook will be sent
 - `--sharedSecret` (string): The shared secret the test webhook will send. Optional. Defaults to an empty string.
 
-##### Method Code:
-```python
-def createNetworkWebhooksWebhookTest(networkId: str, url: str, **kwargs):
-    # Code
-````
 
 ##### Example:
 ```
@@ -2675,6 +2666,11 @@ meraki networks createNetworkWebhooksWebhookTest --networkId 'STRING' --url 'STR
 meraki networks createNetworkWebhooksWebhookTest --networkId 'STRING' --url 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
+##### Method Code:
+```python
+def createNetworkWebhooksWebhookTest(networkId: str, url: str, **kwargs):
+    # Code
+````
 
 ----------------------------------------
 ## Delete Network
@@ -2687,17 +2683,17 @@ https://developer.cisco.com/meraki/api-v1/#!delete-network
 ##### Arguments
 - `--networkId` (string): (required)
 
-##### Method Code:
-```python
-def deleteNetwork(networkId: str):
-    # Code
-````
 
 ##### Example:
 ```
 meraki networks deleteNetwork --networkId 'STRING'
 ````
 
+##### Method Code:
+```python
+def deleteNetwork(networkId: str):
+    # Code
+````
 
 ----------------------------------------
 ## Delete Network Floor Plan
@@ -2711,17 +2707,17 @@ https://developer.cisco.com/meraki/api-v1/#!delete-network-floor-plan
 - `--networkId` (string): (required)
 - `--floorPlanId` (string): (required)
 
-##### Method Code:
-```python
-def deleteNetworkFloorPlan(networkId: str, floorPlanId: str):
-    # Code
-````
 
 ##### Example:
 ```
 meraki networks deleteNetworkFloorPlan --networkId 'STRING' --floorPlanId 'STRING'
 ````
 
+##### Method Code:
+```python
+def deleteNetworkFloorPlan(networkId: str, floorPlanId: str):
+    # Code
+````
 
 ----------------------------------------
 ## Delete Network Group Policy
@@ -2735,17 +2731,17 @@ https://developer.cisco.com/meraki/api-v1/#!delete-network-group-policy
 - `--networkId` (string): (required)
 - `--groupPolicyId` (string): (required)
 
-##### Method Code:
-```python
-def deleteNetworkGroupPolicy(networkId: str, groupPolicyId: str):
-    # Code
-````
 
 ##### Example:
 ```
 meraki networks deleteNetworkGroupPolicy --networkId 'STRING' --groupPolicyId 'STRING'
 ````
 
+##### Method Code:
+```python
+def deleteNetworkGroupPolicy(networkId: str, groupPolicyId: str):
+    # Code
+````
 
 ----------------------------------------
 ## Delete Network Meraki Auth User
@@ -2759,17 +2755,17 @@ https://developer.cisco.com/meraki/api-v1/#!delete-network-meraki-auth-user
 - `--networkId` (string): (required)
 - `--merakiAuthUserId` (string): (required)
 
-##### Method Code:
-```python
-def deleteNetworkMerakiAuthUser(networkId: str, merakiAuthUserId: str):
-    # Code
-````
 
 ##### Example:
 ```
 meraki networks deleteNetworkMerakiAuthUser --networkId 'STRING' --merakiAuthUserId 'STRING'
 ````
 
+##### Method Code:
+```python
+def deleteNetworkMerakiAuthUser(networkId: str, merakiAuthUserId: str):
+    # Code
+````
 
 ----------------------------------------
 ## Delete Network Mqtt Broker
@@ -2783,17 +2779,17 @@ https://developer.cisco.com/meraki/api-v1/#!delete-network-mqtt-broker
 - `--networkId` (string): (required)
 - `--mqttBrokerId` (string): (required)
 
-##### Method Code:
-```python
-def deleteNetworkMqttBroker(networkId: str, mqttBrokerId: str):
-    # Code
-````
 
 ##### Example:
 ```
 meraki networks deleteNetworkMqttBroker --networkId 'STRING' --mqttBrokerId 'STRING'
 ````
 
+##### Method Code:
+```python
+def deleteNetworkMqttBroker(networkId: str, mqttBrokerId: str):
+    # Code
+````
 
 ----------------------------------------
 ## Delete Network Pii Request
@@ -2807,17 +2803,17 @@ https://developer.cisco.com/meraki/api-v1/#!delete-network-pii-request
 - `--networkId` (string): (required)
 - `--requestId` (string): (required)
 
-##### Method Code:
-```python
-def deleteNetworkPiiRequest(networkId: str, requestId: str):
-    # Code
-````
 
 ##### Example:
 ```
 meraki networks deleteNetworkPiiRequest --networkId 'STRING' --requestId 'STRING'
 ````
 
+##### Method Code:
+```python
+def deleteNetworkPiiRequest(networkId: str, requestId: str):
+    # Code
+````
 
 ----------------------------------------
 ## Delete Network Webhooks Http Server
@@ -2831,17 +2827,17 @@ https://developer.cisco.com/meraki/api-v1/#!delete-network-webhooks-http-server
 - `--networkId` (string): (required)
 - `--httpServerId` (string): (required)
 
-##### Method Code:
-```python
-def deleteNetworkWebhooksHttpServer(networkId: str, httpServerId: str):
-    # Code
-````
 
 ##### Example:
 ```
 meraki networks deleteNetworkWebhooksHttpServer --networkId 'STRING' --httpServerId 'STRING'
 ````
 
+##### Method Code:
+```python
+def deleteNetworkWebhooksHttpServer(networkId: str, httpServerId: str):
+    # Code
+````
 
 ----------------------------------------
 ## Get Network
@@ -2854,17 +2850,17 @@ https://developer.cisco.com/meraki/api-v1/#!get-network
 ##### Arguments
 - `--networkId` (string): (required)
 
-##### Method Code:
-```python
-def getNetwork(networkId: str):
-    # Code
-````
 
 ##### Example:
 ```
 meraki networks getNetwork --networkId 'STRING'
 ````
 
+##### Method Code:
+```python
+def getNetwork(networkId: str):
+    # Code
+````
 
 ----------------------------------------
 ## Get Network Alerts Settings
@@ -2877,17 +2873,17 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-alerts-settings
 ##### Arguments
 - `--networkId` (string): (required)
 
-##### Method Code:
-```python
-def getNetworkAlertsSettings(networkId: str):
-    # Code
-````
 
 ##### Example:
 ```
 meraki networks getNetworkAlertsSettings --networkId 'STRING'
 ````
 
+##### Method Code:
+```python
+def getNetworkAlertsSettings(networkId: str):
+    # Code
+````
 
 ----------------------------------------
 ## Get Network Bluetooth Client
@@ -2903,11 +2899,6 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-bluetooth-client
 - `--includeConnectivityHistory` (boolean): Include the connectivity history for this client
 - `--connectivityHistoryTimespan` (integer): The timespan, in seconds, for the connectivityHistory data. By default 1 day, 86400, will be used.
 
-##### Method Code:
-```python
-def getNetworkBluetoothClient(networkId: str, bluetoothClientId: str, **kwargs):
-    # Code
-````
 
 ##### Example:
 ```
@@ -2919,6 +2910,11 @@ meraki networks getNetworkBluetoothClient --networkId 'STRING' --bluetoothClient
 meraki networks getNetworkBluetoothClient --networkId 'STRING' --bluetoothClientId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
+##### Method Code:
+```python
+def getNetworkBluetoothClient(networkId: str, bluetoothClientId: str, **kwargs):
+    # Code
+````
 
 ----------------------------------------
 ## Get Network Bluetooth Clients
@@ -2939,11 +2935,6 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-bluetooth-clients
 - `--endingBefore` (string): A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it.
 - `--includeConnectivityHistory` (boolean): Include the connectivity history for this client
 
-##### Method Code:
-```python
-def getNetworkBluetoothClients(networkId: str, total_pages=1, direction='next', **kwargs):
-    # Code
-````
 
 ##### Example:
 ```
@@ -2955,6 +2946,11 @@ meraki networks getNetworkBluetoothClients --networkId 'STRING' --optionalArg1 '
 meraki networks getNetworkBluetoothClients --networkId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
+##### Method Code:
+```python
+def getNetworkBluetoothClients(networkId: str, total_pages=1, direction='next', **kwargs):
+    # Code
+````
 
 ----------------------------------------
 ## Get Network Client
@@ -2968,17 +2964,17 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-client
 - `--networkId` (string): (required)
 - `--clientId` (string): (required)
 
-##### Method Code:
-```python
-def getNetworkClient(networkId: str, clientId: str):
-    # Code
-````
 
 ##### Example:
 ```
 meraki networks getNetworkClient --networkId 'STRING' --clientId 'STRING'
 ````
 
+##### Method Code:
+```python
+def getNetworkClient(networkId: str, clientId: str):
+    # Code
+````
 
 ----------------------------------------
 ## Get Network Client Policy
@@ -2992,17 +2988,17 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-client-policy
 - `--networkId` (string): (required)
 - `--clientId` (string): (required)
 
-##### Method Code:
-```python
-def getNetworkClientPolicy(networkId: str, clientId: str):
-    # Code
-````
 
 ##### Example:
 ```
 meraki networks getNetworkClientPolicy --networkId 'STRING' --clientId 'STRING'
 ````
 
+##### Method Code:
+```python
+def getNetworkClientPolicy(networkId: str, clientId: str):
+    # Code
+````
 
 ----------------------------------------
 ## Get Network Client Splash Authorization Status
@@ -3016,17 +3012,17 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-client-splash-authorizat
 - `--networkId` (string): (required)
 - `--clientId` (string): (required)
 
-##### Method Code:
-```python
-def getNetworkClientSplashAuthorizationStatus(networkId: str, clientId: str):
-    # Code
-````
 
 ##### Example:
 ```
 meraki networks getNetworkClientSplashAuthorizationStatus --networkId 'STRING' --clientId 'STRING'
 ````
 
+##### Method Code:
+```python
+def getNetworkClientSplashAuthorizationStatus(networkId: str, clientId: str):
+    # Code
+````
 
 ----------------------------------------
 ## Get Network Client Traffic History
@@ -3045,11 +3041,6 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-client-traffic-history
 - `--startingAfter` (string): A token used by the server to indicate the start of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it.
 - `--endingBefore` (string): A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it.
 
-##### Method Code:
-```python
-def getNetworkClientTrafficHistory(networkId: str, clientId: str, total_pages=1, direction='next', **kwargs):
-    # Code
-````
 
 ##### Example:
 ```
@@ -3061,6 +3052,11 @@ meraki networks getNetworkClientTrafficHistory --networkId 'STRING' --clientId '
 meraki networks getNetworkClientTrafficHistory --networkId 'STRING' --clientId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
+##### Method Code:
+```python
+def getNetworkClientTrafficHistory(networkId: str, clientId: str, total_pages=1, direction='next', **kwargs):
+    # Code
+````
 
 ----------------------------------------
 ## Get Network Client Usage History
@@ -3074,17 +3070,17 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-client-usage-history
 - `--networkId` (string): (required)
 - `--clientId` (string): (required)
 
-##### Method Code:
-```python
-def getNetworkClientUsageHistory(networkId: str, clientId: str):
-    # Code
-````
 
 ##### Example:
 ```
 meraki networks getNetworkClientUsageHistory --networkId 'STRING' --clientId 'STRING'
 ````
 
+##### Method Code:
+```python
+def getNetworkClientUsageHistory(networkId: str, clientId: str):
+    # Code
+````
 
 ----------------------------------------
 ## Get Network Clients
@@ -3104,11 +3100,6 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-clients
 - `--startingAfter` (string): A token used by the server to indicate the start of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it.
 - `--endingBefore` (string): A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it.
 
-##### Method Code:
-```python
-def getNetworkClients(networkId: str, total_pages=1, direction='next', **kwargs):
-    # Code
-````
 
 ##### Example:
 ```
@@ -3120,6 +3111,11 @@ meraki networks getNetworkClients --networkId 'STRING' --optionalArg1 'optionala
 meraki networks getNetworkClients --networkId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
+##### Method Code:
+```python
+def getNetworkClients(networkId: str, total_pages=1, direction='next', **kwargs):
+    # Code
+````
 
 ----------------------------------------
 ## Get Network Clients Application Usage
@@ -3142,11 +3138,6 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-clients-application-usag
 - `--t1` (string): The end of the timespan for the data. t1 can be a maximum of 31 days after t0.
 - `--timespan` (number): The timespan for which the information will be fetched. If specifying timespan, do not specify parameters t0 and t1. The value must be in seconds and be less than or equal to 31 days. The default is 1 day.
 
-##### Method Code:
-```python
-def getNetworkClientsApplicationUsage(networkId: str, clients: str, total_pages=1, direction='next', **kwargs):
-    # Code
-````
 
 ##### Example:
 ```
@@ -3158,6 +3149,11 @@ meraki networks getNetworkClientsApplicationUsage --networkId 'STRING' --clients
 meraki networks getNetworkClientsApplicationUsage --networkId 'STRING' --clients 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
+##### Method Code:
+```python
+def getNetworkClientsApplicationUsage(networkId: str, clients: str, total_pages=1, direction='next', **kwargs):
+    # Code
+````
 
 ----------------------------------------
 ## Get Network Clients Usage Histories
@@ -3180,11 +3176,6 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-clients-usage-histories
 - `--t1` (string): The end of the timespan for the data. t1 can be a maximum of 31 days after t0.
 - `--timespan` (number): The timespan for which the information will be fetched. If specifying timespan, do not specify parameters t0 and t1. The value must be in seconds and be less than or equal to 31 days. The default is 1 day.
 
-##### Method Code:
-```python
-def getNetworkClientsUsageHistories(networkId: str, clients: str, total_pages=1, direction='next', **kwargs):
-    # Code
-````
 
 ##### Example:
 ```
@@ -3196,6 +3187,11 @@ meraki networks getNetworkClientsUsageHistories --networkId 'STRING' --clients '
 meraki networks getNetworkClientsUsageHistories --networkId 'STRING' --clients 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
+##### Method Code:
+```python
+def getNetworkClientsUsageHistories(networkId: str, clients: str, total_pages=1, direction='next', **kwargs):
+    # Code
+````
 
 ----------------------------------------
 ## Get Network Devices
@@ -3208,17 +3204,17 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-devices
 ##### Arguments
 - `--networkId` (string): (required)
 
-##### Method Code:
-```python
-def getNetworkDevices(networkId: str):
-    # Code
-````
 
 ##### Example:
 ```
 meraki networks getNetworkDevices --networkId 'STRING'
 ````
 
+##### Method Code:
+```python
+def getNetworkDevices(networkId: str):
+    # Code
+````
 
 ----------------------------------------
 ## Get Network Events
@@ -3248,11 +3244,6 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-events
 - `--startingAfter` (string): A token used by the server to indicate the start of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it.
 - `--endingBefore` (string): A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it.
 
-##### Method Code:
-```python
-def getNetworkEvents(networkId: str, total_pages=1, direction='prev', event_log_end_time=None, **kwargs):
-    # Code
-````
 
 ##### Example:
 ```
@@ -3264,6 +3255,11 @@ meraki networks getNetworkEvents --networkId 'STRING' --optionalArg1 'optionalar
 meraki networks getNetworkEvents --networkId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
+##### Method Code:
+```python
+def getNetworkEvents(networkId: str, total_pages=1, direction='prev', event_log_end_time=None, **kwargs):
+    # Code
+````
 
 ----------------------------------------
 ## Get Network Events Event Types
@@ -3276,17 +3272,17 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-events-event-types
 ##### Arguments
 - `--networkId` (string): (required)
 
-##### Method Code:
-```python
-def getNetworkEventsEventTypes(networkId: str):
-    # Code
-````
 
 ##### Example:
 ```
 meraki networks getNetworkEventsEventTypes --networkId 'STRING'
 ````
 
+##### Method Code:
+```python
+def getNetworkEventsEventTypes(networkId: str):
+    # Code
+````
 
 ----------------------------------------
 ## Get Network Firmware Upgrades
@@ -3299,17 +3295,17 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-firmware-upgrades
 ##### Arguments
 - `--networkId` (string): (required)
 
-##### Method Code:
-```python
-def getNetworkFirmwareUpgrades(networkId: str):
-    # Code
-````
 
 ##### Example:
 ```
 meraki networks getNetworkFirmwareUpgrades --networkId 'STRING'
 ````
 
+##### Method Code:
+```python
+def getNetworkFirmwareUpgrades(networkId: str):
+    # Code
+````
 
 ----------------------------------------
 ## Get Network Floor Plan
@@ -3323,17 +3319,17 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-floor-plan
 - `--networkId` (string): (required)
 - `--floorPlanId` (string): (required)
 
-##### Method Code:
-```python
-def getNetworkFloorPlan(networkId: str, floorPlanId: str):
-    # Code
-````
 
 ##### Example:
 ```
 meraki networks getNetworkFloorPlan --networkId 'STRING' --floorPlanId 'STRING'
 ````
 
+##### Method Code:
+```python
+def getNetworkFloorPlan(networkId: str, floorPlanId: str):
+    # Code
+````
 
 ----------------------------------------
 ## Get Network Floor Plans
@@ -3346,17 +3342,17 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-floor-plans
 ##### Arguments
 - `--networkId` (string): (required)
 
-##### Method Code:
-```python
-def getNetworkFloorPlans(networkId: str):
-    # Code
-````
 
 ##### Example:
 ```
 meraki networks getNetworkFloorPlans --networkId 'STRING'
 ````
 
+##### Method Code:
+```python
+def getNetworkFloorPlans(networkId: str):
+    # Code
+````
 
 ----------------------------------------
 ## Get Network Group Policies
@@ -3369,17 +3365,17 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-group-policies
 ##### Arguments
 - `--networkId` (string): (required)
 
-##### Method Code:
-```python
-def getNetworkGroupPolicies(networkId: str):
-    # Code
-````
 
 ##### Example:
 ```
 meraki networks getNetworkGroupPolicies --networkId 'STRING'
 ````
 
+##### Method Code:
+```python
+def getNetworkGroupPolicies(networkId: str):
+    # Code
+````
 
 ----------------------------------------
 ## Get Network Group Policy
@@ -3393,17 +3389,17 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-group-policy
 - `--networkId` (string): (required)
 - `--groupPolicyId` (string): (required)
 
-##### Method Code:
-```python
-def getNetworkGroupPolicy(networkId: str, groupPolicyId: str):
-    # Code
-````
 
 ##### Example:
 ```
 meraki networks getNetworkGroupPolicy --networkId 'STRING' --groupPolicyId 'STRING'
 ````
 
+##### Method Code:
+```python
+def getNetworkGroupPolicy(networkId: str, groupPolicyId: str):
+    # Code
+````
 
 ----------------------------------------
 ## Get Network Meraki Auth User
@@ -3417,17 +3413,17 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-meraki-auth-user
 - `--networkId` (string): (required)
 - `--merakiAuthUserId` (string): (required)
 
-##### Method Code:
-```python
-def getNetworkMerakiAuthUser(networkId: str, merakiAuthUserId: str):
-    # Code
-````
 
 ##### Example:
 ```
 meraki networks getNetworkMerakiAuthUser --networkId 'STRING' --merakiAuthUserId 'STRING'
 ````
 
+##### Method Code:
+```python
+def getNetworkMerakiAuthUser(networkId: str, merakiAuthUserId: str):
+    # Code
+````
 
 ----------------------------------------
 ## Get Network Meraki Auth Users
@@ -3440,17 +3436,17 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-meraki-auth-users
 ##### Arguments
 - `--networkId` (string): (required)
 
-##### Method Code:
-```python
-def getNetworkMerakiAuthUsers(networkId: str):
-    # Code
-````
 
 ##### Example:
 ```
 meraki networks getNetworkMerakiAuthUsers --networkId 'STRING'
 ````
 
+##### Method Code:
+```python
+def getNetworkMerakiAuthUsers(networkId: str):
+    # Code
+````
 
 ----------------------------------------
 ## Get Network Mqtt Broker
@@ -3464,17 +3460,17 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-mqtt-broker
 - `--networkId` (string): (required)
 - `--mqttBrokerId` (string): (required)
 
-##### Method Code:
-```python
-def getNetworkMqttBroker(networkId: str, mqttBrokerId: str):
-    # Code
-````
 
 ##### Example:
 ```
 meraki networks getNetworkMqttBroker --networkId 'STRING' --mqttBrokerId 'STRING'
 ````
 
+##### Method Code:
+```python
+def getNetworkMqttBroker(networkId: str, mqttBrokerId: str):
+    # Code
+````
 
 ----------------------------------------
 ## Get Network Mqtt Brokers
@@ -3487,17 +3483,17 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-mqtt-brokers
 ##### Arguments
 - `--networkId` (string): (required)
 
-##### Method Code:
-```python
-def getNetworkMqttBrokers(networkId: str):
-    # Code
-````
 
 ##### Example:
 ```
 meraki networks getNetworkMqttBrokers --networkId 'STRING'
 ````
 
+##### Method Code:
+```python
+def getNetworkMqttBrokers(networkId: str):
+    # Code
+````
 
 ----------------------------------------
 ## Get Network Netflow
@@ -3510,17 +3506,17 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-netflow
 ##### Arguments
 - `--networkId` (string): (required)
 
-##### Method Code:
-```python
-def getNetworkNetflow(networkId: str):
-    # Code
-````
 
 ##### Example:
 ```
 meraki networks getNetworkNetflow --networkId 'STRING'
 ````
 
+##### Method Code:
+```python
+def getNetworkNetflow(networkId: str):
+    # Code
+````
 
 ----------------------------------------
 ## Get Network Network Health Channel Utilization
@@ -3542,11 +3538,6 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-network-health-channel-u
 - `--startingAfter` (string): A token used by the server to indicate the start of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it.
 - `--endingBefore` (string): A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it.
 
-##### Method Code:
-```python
-def getNetworkNetworkHealthChannelUtilization(networkId: str, total_pages=1, direction='next', **kwargs):
-    # Code
-````
 
 ##### Example:
 ```
@@ -3558,6 +3549,11 @@ meraki networks getNetworkNetworkHealthChannelUtilization --networkId 'STRING' -
 meraki networks getNetworkNetworkHealthChannelUtilization --networkId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
+##### Method Code:
+```python
+def getNetworkNetworkHealthChannelUtilization(networkId: str, total_pages=1, direction='next', **kwargs):
+    # Code
+````
 
 ----------------------------------------
 ## Get Network Pii Pii Keys
@@ -3576,11 +3572,6 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-pii-pii-keys
 - `--imei` (string): The IMEI of a Systems Manager device
 - `--bluetoothMac` (string): The MAC of a Bluetooth client
 
-##### Method Code:
-```python
-def getNetworkPiiPiiKeys(networkId: str, **kwargs):
-    # Code
-````
 
 ##### Example:
 ```
@@ -3592,6 +3583,11 @@ meraki networks getNetworkPiiPiiKeys --networkId 'STRING' --optionalArg1 'option
 meraki networks getNetworkPiiPiiKeys --networkId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
+##### Method Code:
+```python
+def getNetworkPiiPiiKeys(networkId: str, **kwargs):
+    # Code
+````
 
 ----------------------------------------
 ## Get Network Pii Request
@@ -3605,17 +3601,17 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-pii-request
 - `--networkId` (string): (required)
 - `--requestId` (string): (required)
 
-##### Method Code:
-```python
-def getNetworkPiiRequest(networkId: str, requestId: str):
-    # Code
-````
 
 ##### Example:
 ```
 meraki networks getNetworkPiiRequest --networkId 'STRING' --requestId 'STRING'
 ````
 
+##### Method Code:
+```python
+def getNetworkPiiRequest(networkId: str, requestId: str):
+    # Code
+````
 
 ----------------------------------------
 ## Get Network Pii Requests
@@ -3628,17 +3624,17 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-pii-requests
 ##### Arguments
 - `--networkId` (string): (required)
 
-##### Method Code:
-```python
-def getNetworkPiiRequests(networkId: str):
-    # Code
-````
 
 ##### Example:
 ```
 meraki networks getNetworkPiiRequests --networkId 'STRING'
 ````
 
+##### Method Code:
+```python
+def getNetworkPiiRequests(networkId: str):
+    # Code
+````
 
 ----------------------------------------
 ## Get Network Pii Sm Devices For Key
@@ -3657,11 +3653,6 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-pii-sm-devices-for-key
 - `--imei` (string): The IMEI of a Systems Manager device
 - `--bluetoothMac` (string): The MAC of a Bluetooth client
 
-##### Method Code:
-```python
-def getNetworkPiiSmDevicesForKey(networkId: str, **kwargs):
-    # Code
-````
 
 ##### Example:
 ```
@@ -3673,6 +3664,11 @@ meraki networks getNetworkPiiSmDevicesForKey --networkId 'STRING' --optionalArg1
 meraki networks getNetworkPiiSmDevicesForKey --networkId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
+##### Method Code:
+```python
+def getNetworkPiiSmDevicesForKey(networkId: str, **kwargs):
+    # Code
+````
 
 ----------------------------------------
 ## Get Network Pii Sm Owners For Key
@@ -3691,11 +3687,6 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-pii-sm-owners-for-key
 - `--imei` (string): The IMEI of a Systems Manager device
 - `--bluetoothMac` (string): The MAC of a Bluetooth client
 
-##### Method Code:
-```python
-def getNetworkPiiSmOwnersForKey(networkId: str, **kwargs):
-    # Code
-````
 
 ##### Example:
 ```
@@ -3707,6 +3698,11 @@ meraki networks getNetworkPiiSmOwnersForKey --networkId 'STRING' --optionalArg1 
 meraki networks getNetworkPiiSmOwnersForKey --networkId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
+##### Method Code:
+```python
+def getNetworkPiiSmOwnersForKey(networkId: str, **kwargs):
+    # Code
+````
 
 ----------------------------------------
 ## Get Network Settings
@@ -3719,17 +3715,17 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-settings
 ##### Arguments
 - `--networkId` (string): (required)
 
-##### Method Code:
-```python
-def getNetworkSettings(networkId: str):
-    # Code
-````
 
 ##### Example:
 ```
 meraki networks getNetworkSettings --networkId 'STRING'
 ````
 
+##### Method Code:
+```python
+def getNetworkSettings(networkId: str):
+    # Code
+````
 
 ----------------------------------------
 ## Get Network Snmp
@@ -3742,17 +3738,17 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-snmp
 ##### Arguments
 - `--networkId` (string): (required)
 
-##### Method Code:
-```python
-def getNetworkSnmp(networkId: str):
-    # Code
-````
 
 ##### Example:
 ```
 meraki networks getNetworkSnmp --networkId 'STRING'
 ````
 
+##### Method Code:
+```python
+def getNetworkSnmp(networkId: str):
+    # Code
+````
 
 ----------------------------------------
 ## Get Network Splash Login Attempts
@@ -3768,11 +3764,6 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-splash-login-attempts
 - `--loginIdentifier` (string): The username, email, or phone number used during login
 - `--timespan` (integer): The timespan, in seconds, for the login attempts. The period will be from [timespan] seconds ago until now. The maximum timespan is 3 months
 
-##### Method Code:
-```python
-def getNetworkSplashLoginAttempts(networkId: str, **kwargs):
-    # Code
-````
 
 ##### Example:
 ```
@@ -3784,6 +3775,11 @@ meraki networks getNetworkSplashLoginAttempts --networkId 'STRING' --optionalArg
 meraki networks getNetworkSplashLoginAttempts --networkId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
+##### Method Code:
+```python
+def getNetworkSplashLoginAttempts(networkId: str, **kwargs):
+    # Code
+````
 
 ----------------------------------------
 ## Get Network Syslog Servers
@@ -3796,17 +3792,17 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-syslog-servers
 ##### Arguments
 - `--networkId` (string): (required)
 
-##### Method Code:
-```python
-def getNetworkSyslogServers(networkId: str):
-    # Code
-````
 
 ##### Example:
 ```
 meraki networks getNetworkSyslogServers --networkId 'STRING'
 ````
 
+##### Method Code:
+```python
+def getNetworkSyslogServers(networkId: str):
+    # Code
+````
 
 ----------------------------------------
 ## Get Network Traffic
@@ -3822,11 +3818,6 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-traffic
 - `--timespan` (number): The timespan for which the information will be fetched. If specifying timespan, do not specify parameter t0. The value must be in seconds and be less than or equal to 30 days.
 - `--deviceType` (string): Filter the data by device type: 'combined', 'wireless', 'switch' or 'appliance'. Defaults to 'combined'. When using 'combined', for each rule the data will come from the device type with the most usage.
 
-##### Method Code:
-```python
-def getNetworkTraffic(networkId: str, **kwargs):
-    # Code
-````
 
 ##### Example:
 ```
@@ -3838,6 +3829,11 @@ meraki networks getNetworkTraffic --networkId 'STRING' --optionalArg1 'optionala
 meraki networks getNetworkTraffic --networkId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
+##### Method Code:
+```python
+def getNetworkTraffic(networkId: str, **kwargs):
+    # Code
+````
 
 ----------------------------------------
 ## Get Network Traffic Analysis
@@ -3850,17 +3846,17 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-traffic-analysis
 ##### Arguments
 - `--networkId` (string): (required)
 
-##### Method Code:
-```python
-def getNetworkTrafficAnalysis(networkId: str):
-    # Code
-````
 
 ##### Example:
 ```
 meraki networks getNetworkTrafficAnalysis --networkId 'STRING'
 ````
 
+##### Method Code:
+```python
+def getNetworkTrafficAnalysis(networkId: str):
+    # Code
+````
 
 ----------------------------------------
 ## Get Network Traffic Shaping Application Categories
@@ -3873,17 +3869,17 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-traffic-shaping-applicat
 ##### Arguments
 - `--networkId` (string): (required)
 
-##### Method Code:
-```python
-def getNetworkTrafficShapingApplicationCategories(networkId: str):
-    # Code
-````
 
 ##### Example:
 ```
 meraki networks getNetworkTrafficShapingApplicationCategories --networkId 'STRING'
 ````
 
+##### Method Code:
+```python
+def getNetworkTrafficShapingApplicationCategories(networkId: str):
+    # Code
+````
 
 ----------------------------------------
 ## Get Network Traffic Shaping Dscp Tagging Options
@@ -3896,17 +3892,17 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-traffic-shaping-dscp-tag
 ##### Arguments
 - `--networkId` (string): (required)
 
-##### Method Code:
-```python
-def getNetworkTrafficShapingDscpTaggingOptions(networkId: str):
-    # Code
-````
 
 ##### Example:
 ```
 meraki networks getNetworkTrafficShapingDscpTaggingOptions --networkId 'STRING'
 ````
 
+##### Method Code:
+```python
+def getNetworkTrafficShapingDscpTaggingOptions(networkId: str):
+    # Code
+````
 
 ----------------------------------------
 ## Get Network Webhooks Http Server
@@ -3920,17 +3916,17 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-webhooks-http-server
 - `--networkId` (string): (required)
 - `--httpServerId` (string): (required)
 
-##### Method Code:
-```python
-def getNetworkWebhooksHttpServer(networkId: str, httpServerId: str):
-    # Code
-````
 
 ##### Example:
 ```
 meraki networks getNetworkWebhooksHttpServer --networkId 'STRING' --httpServerId 'STRING'
 ````
 
+##### Method Code:
+```python
+def getNetworkWebhooksHttpServer(networkId: str, httpServerId: str):
+    # Code
+````
 
 ----------------------------------------
 ## Get Network Webhooks Http Servers
@@ -3943,17 +3939,17 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-webhooks-http-servers
 ##### Arguments
 - `--networkId` (string): (required)
 
-##### Method Code:
-```python
-def getNetworkWebhooksHttpServers(networkId: str):
-    # Code
-````
 
 ##### Example:
 ```
 meraki networks getNetworkWebhooksHttpServers --networkId 'STRING'
 ````
 
+##### Method Code:
+```python
+def getNetworkWebhooksHttpServers(networkId: str):
+    # Code
+````
 
 ----------------------------------------
 ## Get Network Webhooks Webhook Test
@@ -3967,17 +3963,17 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-webhooks-webhook-test
 - `--networkId` (string): (required)
 - `--webhookTestId` (string): (required)
 
-##### Method Code:
-```python
-def getNetworkWebhooksWebhookTest(networkId: str, webhookTestId: str):
-    # Code
-````
 
 ##### Example:
 ```
 meraki networks getNetworkWebhooksWebhookTest --networkId 'STRING' --webhookTestId 'STRING'
 ````
 
+##### Method Code:
+```python
+def getNetworkWebhooksWebhookTest(networkId: str, webhookTestId: str):
+    # Code
+````
 
 ----------------------------------------
 ## Provision Network Clients
@@ -3995,11 +3991,6 @@ https://developer.cisco.com/meraki/api-v1/#!provision-network-clients
 - `--policiesBySecurityAppliance` (object): An object, describing what the policy-connection association is for the security appliance. (Only relevant if the security appliance is actually within the network)
 - `--policiesBySsid` (object): An object, describing the policy-connection associations for each active SSID within the network. Keys should be the number of enabled SSIDs, mapping to an object describing the client's policy
 
-##### Method Code:
-```python
-def provisionNetworkClients(networkId: str, clients: list, devicePolicy: str, **kwargs):
-    # Code
-````
 
 ##### Example:
 ```
@@ -4011,6 +4002,11 @@ meraki networks provisionNetworkClients --networkId 'STRING' --clients ITEM --de
 meraki networks provisionNetworkClients --networkId 'STRING' --clients ITEM --devicePolicy 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
+##### Method Code:
+```python
+def provisionNetworkClients(networkId: str, clients: list, devicePolicy: str, **kwargs):
+    # Code
+````
 
 ----------------------------------------
 ## Remove Network Devices
@@ -4024,17 +4020,17 @@ https://developer.cisco.com/meraki/api-v1/#!remove-network-devices
 - `--networkId` (string): (required)
 - `--serial` (string): The serial of a device
 
-##### Method Code:
-```python
-def removeNetworkDevices(networkId: str, serial: str):
-    # Code
-````
 
 ##### Example:
 ```
 meraki networks removeNetworkDevices --networkId 'STRING' --serial 'STRING'
 ````
 
+##### Method Code:
+```python
+def removeNetworkDevices(networkId: str, serial: str):
+    # Code
+````
 
 ----------------------------------------
 ## Split Network
@@ -4047,17 +4043,17 @@ https://developer.cisco.com/meraki/api-v1/#!split-network
 ##### Arguments
 - `--networkId` (string): (required)
 
-##### Method Code:
-```python
-def splitNetwork(networkId: str):
-    # Code
-````
 
 ##### Example:
 ```
 meraki networks splitNetwork --networkId 'STRING'
 ````
 
+##### Method Code:
+```python
+def splitNetwork(networkId: str):
+    # Code
+````
 
 ----------------------------------------
 ## Unbind Network
@@ -4070,17 +4066,17 @@ https://developer.cisco.com/meraki/api-v1/#!unbind-network
 ##### Arguments
 - `--networkId` (string): (required)
 
-##### Method Code:
-```python
-def unbindNetwork(networkId: str):
-    # Code
-````
 
 ##### Example:
 ```
 meraki networks unbindNetwork --networkId 'STRING'
 ````
 
+##### Method Code:
+```python
+def unbindNetwork(networkId: str):
+    # Code
+````
 
 ----------------------------------------
 ## Update Network
@@ -4094,16 +4090,10 @@ https://developer.cisco.com/meraki/api-v1/#!update-network
 - `--networkId` (string): (required)
 - `--name` (string): The name of the network
 - `--timeZone` (string): The timezone of the network. For a list of allowed timezones, please see the 'TZ' column in the table in <a target='_blank' href='https://en.wikipedia.org/wiki/List_of_tz_database_time_zones'>this article.</a>
-
-##### Arguments- `--tags` (array): A list of tags to be applied to the network
+- `--tags` (array): A list of tags to be applied to the network
 - `--enrollmentString` (string): A unique identifier which can be used for device enrollment or easy access through the Meraki SM Registration page or the Self Service Portal. Please note that changing this field may cause existing bookmarks to break.
 - `--notes` (string): Add any notes or additional information about this network here.
 
-##### Method Code:
-```python
-def updateNetwork(networkId: str, **kwargs):
-    # Code
-````
 
 ##### Example:
 ```
@@ -4115,6 +4105,11 @@ meraki networks updateNetwork --networkId 'STRING' --optionalArg1 'optionalarg1v
 meraki networks updateNetwork --networkId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
+##### Method Code:
+```python
+def updateNetwork(networkId: str, **kwargs):
+    # Code
+````
 
 ----------------------------------------
 ## Update Network Alerts Settings
@@ -4129,11 +4124,6 @@ https://developer.cisco.com/meraki/api-v1/#!update-network-alerts-settings
 - `--defaultDestinations` (object): The network-wide destinations for all alerts on the network.
 - `--alerts` (array): Alert-specific configuration for each type. Only alerts that pertain to the network can be updated.
 
-##### Method Code:
-```python
-def updateNetworkAlertsSettings(networkId: str, **kwargs):
-    # Code
-````
 
 ##### Example:
 ```
@@ -4145,6 +4135,11 @@ meraki networks updateNetworkAlertsSettings --networkId 'STRING' --optionalArg1 
 meraki networks updateNetworkAlertsSettings --networkId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
+##### Method Code:
+```python
+def updateNetworkAlertsSettings(networkId: str, **kwargs):
+    # Code
+````
 
 ----------------------------------------
 ## Update Network Client Policy
@@ -4160,11 +4155,6 @@ https://developer.cisco.com/meraki/api-v1/#!update-network-client-policy
 - `--devicePolicy` (string): The policy to assign. Can be 'Whitelisted', 'Blocked', 'Normal' or 'Group policy'. Required.
 - `--groupPolicyId` (string): [optional] If 'devicePolicy' is set to 'Group policy' this param is used to specify the group policy ID.
 
-##### Method Code:
-```python
-def updateNetworkClientPolicy(networkId: str, clientId: str, devicePolicy: str, **kwargs):
-    # Code
-````
 
 ##### Example:
 ```
@@ -4176,6 +4166,11 @@ meraki networks updateNetworkClientPolicy --networkId 'STRING' --clientId 'STRIN
 meraki networks updateNetworkClientPolicy --networkId 'STRING' --clientId 'STRING' --devicePolicy 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
+##### Method Code:
+```python
+def updateNetworkClientPolicy(networkId: str, clientId: str, devicePolicy: str, **kwargs):
+    # Code
+````
 
 ----------------------------------------
 ## Update Network Client Splash Authorization Status
@@ -4190,17 +4185,17 @@ https://developer.cisco.com/meraki/api-v1/#!update-network-client-splash-authori
 - `--clientId` (string): (required)
 - `--ssids` (object): The target SSIDs. Each SSID must be enabled and must have Click-through splash enabled. For each SSID where isAuthorized is true, the expiration time will automatically be set according to the SSID's splash frequency. Not all networks support configuring all SSIDs
 
-##### Method Code:
-```python
-def updateNetworkClientSplashAuthorizationStatus(networkId: str, clientId: str, ssids: dict):
-    # Code
-````
 
 ##### Example:
 ```
 meraki networks updateNetworkClientSplashAuthorizationStatus --networkId 'STRING' --clientId 'STRING' --ssids JSON_STRING
 ````
 
+##### Method Code:
+```python
+def updateNetworkClientSplashAuthorizationStatus(networkId: str, clientId: str, ssids: dict):
+    # Code
+````
 
 ----------------------------------------
 ## Update Network Firmware Upgrades
@@ -4214,11 +4209,6 @@ https://developer.cisco.com/meraki/api-v1/#!update-network-firmware-upgrades
 - `--networkId` (string): (required)
 - `--upgradeWindow` (object): Upgrade window for devices in network
 
-##### Method Code:
-```python
-def updateNetworkFirmwareUpgrades(networkId: str, **kwargs):
-    # Code
-````
 
 ##### Example:
 ```
@@ -4230,6 +4220,11 @@ meraki networks updateNetworkFirmwareUpgrades --networkId 'STRING' --optionalArg
 meraki networks updateNetworkFirmwareUpgrades --networkId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
+##### Method Code:
+```python
+def updateNetworkFirmwareUpgrades(networkId: str, **kwargs):
+    # Code
+````
 
 ----------------------------------------
 ## Update Network Floor Plan
@@ -4250,11 +4245,6 @@ https://developer.cisco.com/meraki/api-v1/#!update-network-floor-plan
 - `--topRightCorner` (object): The longitude and latitude of the top right corner of your floor plan.
 - `--imageContents` (string): The file contents (a base 64 encoded string) of your new image. Supported formats are PNG, GIF, and JPG. Note that all images are saved as PNG files, regardless of the format they are uploaded in. If you upload a new image, and you do NOT specify any new geolocation fields ('center, 'topLeftCorner', etc), the floor plan will be recentered with no rotation in order to maintain the aspect ratio of your new image.
 
-##### Method Code:
-```python
-def updateNetworkFloorPlan(networkId: str, floorPlanId: str, **kwargs):
-    # Code
-````
 
 ##### Example:
 ```
@@ -4266,6 +4256,11 @@ meraki networks updateNetworkFloorPlan --networkId 'STRING' --floorPlanId 'STRIN
 meraki networks updateNetworkFloorPlan --networkId 'STRING' --floorPlanId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
+##### Method Code:
+```python
+def updateNetworkFloorPlan(networkId: str, floorPlanId: str, **kwargs):
+    # Code
+````
 
 ----------------------------------------
 ## Update Network Group Policy
@@ -4290,11 +4285,6 @@ https://developer.cisco.com/meraki/api-v1/#!update-network-group-policy
 - `--vlanTagging` (object): The VLAN tagging settings for your group policy. Only available if your network has a wireless configuration.
 - `--bonjourForwarding` (object): The Bonjour settings for your group policy. Only valid if your network has a wireless configuration.
 
-##### Method Code:
-```python
-def updateNetworkGroupPolicy(networkId: str, groupPolicyId: str, **kwargs):
-    # Code
-````
 
 ##### Example:
 ```
@@ -4306,6 +4296,11 @@ meraki networks updateNetworkGroupPolicy --networkId 'STRING' --groupPolicyId 'S
 meraki networks updateNetworkGroupPolicy --networkId 'STRING' --groupPolicyId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
+##### Method Code:
+```python
+def updateNetworkGroupPolicy(networkId: str, groupPolicyId: str, **kwargs):
+    # Code
+````
 
 ----------------------------------------
 ## Update Network Meraki Auth User
@@ -4323,11 +4318,6 @@ https://developer.cisco.com/meraki/api-v1/#!update-network-meraki-auth-user
 - `--emailPasswordToUser` (boolean): Whether or not Meraki should email the password to user. Default is false.
 - `--authorizations` (array): Authorization zones and expiration dates for the user.
 
-##### Method Code:
-```python
-def updateNetworkMerakiAuthUser(networkId: str, merakiAuthUserId: str, **kwargs):
-    # Code
-````
 
 ##### Example:
 ```
@@ -4339,6 +4329,11 @@ meraki networks updateNetworkMerakiAuthUser --networkId 'STRING' --merakiAuthUse
 meraki networks updateNetworkMerakiAuthUser --networkId 'STRING' --merakiAuthUserId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
+##### Method Code:
+```python
+def updateNetworkMerakiAuthUser(networkId: str, merakiAuthUserId: str, **kwargs):
+    # Code
+````
 
 ----------------------------------------
 ## Update Network Mqtt Broker
@@ -4355,11 +4350,6 @@ https://developer.cisco.com/meraki/api-v1/#!update-network-mqtt-broker
 - `--host` (string): Host name where mqtt broker runs
 - `--port` (integer): Host port though which mqtt broker can be reached
 
-##### Method Code:
-```python
-def updateNetworkMqttBroker(networkId: str, mqttBrokerId: str, **kwargs):
-    # Code
-````
 
 ##### Example:
 ```
@@ -4371,6 +4361,11 @@ meraki networks updateNetworkMqttBroker --networkId 'STRING' --mqttBrokerId 'STR
 meraki networks updateNetworkMqttBroker --networkId 'STRING' --mqttBrokerId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
+##### Method Code:
+```python
+def updateNetworkMqttBroker(networkId: str, mqttBrokerId: str, **kwargs):
+    # Code
+````
 
 ----------------------------------------
 ## Update Network Netflow
@@ -4386,11 +4381,6 @@ https://developer.cisco.com/meraki/api-v1/#!update-network-netflow
 - `--collectorIp` (string): The IPv4 address of the NetFlow collector.
 - `--collectorPort` (integer): The port that the NetFlow collector will be listening on.
 
-##### Method Code:
-```python
-def updateNetworkNetflow(networkId: str, **kwargs):
-    # Code
-````
 
 ##### Example:
 ```
@@ -4402,6 +4392,11 @@ meraki networks updateNetworkNetflow --networkId 'STRING' --optionalArg1 'option
 meraki networks updateNetworkNetflow --networkId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
+##### Method Code:
+```python
+def updateNetworkNetflow(networkId: str, **kwargs):
+    # Code
+````
 
 ----------------------------------------
 ## Update Network Settings
@@ -4417,11 +4412,6 @@ https://developer.cisco.com/meraki/api-v1/#!update-network-settings
 - `--remoteStatusPageEnabled` (boolean): Enables / disables access to the device status page (<a target='_blank'>http://[device's LAN IP])</a>. Optional. Can only be set if localStatusPageEnabled is set to true
 - `--secureConnect` (object): A hash of SecureConnect options applied to the Network.
 
-##### Method Code:
-```python
-def updateNetworkSettings(networkId: str, **kwargs):
-    # Code
-````
 
 ##### Example:
 ```
@@ -4433,6 +4423,11 @@ meraki networks updateNetworkSettings --networkId 'STRING' --optionalArg1 'optio
 meraki networks updateNetworkSettings --networkId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
+##### Method Code:
+```python
+def updateNetworkSettings(networkId: str, **kwargs):
+    # Code
+````
 
 ----------------------------------------
 ## Update Network Snmp
@@ -4448,11 +4443,6 @@ https://developer.cisco.com/meraki/api-v1/#!update-network-snmp
 - `--communityString` (string): The SNMP community string. Only relevant if 'access' is set to 'community'.
 - `--users` (array): The list of SNMP users. Only relevant if 'access' is set to 'users'.
 
-##### Method Code:
-```python
-def updateNetworkSnmp(networkId: str, **kwargs):
-    # Code
-````
 
 ##### Example:
 ```
@@ -4464,6 +4454,11 @@ meraki networks updateNetworkSnmp --networkId 'STRING' --optionalArg1 'optionala
 meraki networks updateNetworkSnmp --networkId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
+##### Method Code:
+```python
+def updateNetworkSnmp(networkId: str, **kwargs):
+    # Code
+````
 
 ----------------------------------------
 ## Update Network Syslog Servers
@@ -4477,17 +4472,17 @@ https://developer.cisco.com/meraki/api-v1/#!update-network-syslog-servers
 - `--networkId` (string): (required)
 - `--servers` (array): A list of the syslog servers for this network
 
-##### Method Code:
-```python
-def updateNetworkSyslogServers(networkId: str, servers: list):
-    # Code
-````
 
 ##### Example:
 ```
 meraki networks updateNetworkSyslogServers --networkId 'STRING' --servers ITEM
 ````
 
+##### Method Code:
+```python
+def updateNetworkSyslogServers(networkId: str, servers: list):
+    # Code
+````
 
 ----------------------------------------
 ## Update Network Traffic Analysis
@@ -4504,11 +4499,6 @@ https://developer.cisco.com/meraki/api-v1/#!update-network-traffic-analysis
 
 - `--customPieChartItems` (array): The list of items that make up the custom pie chart for traffic reporting.
 
-##### Method Code:
-```python
-def updateNetworkTrafficAnalysis(networkId: str, **kwargs):
-    # Code
-````
 
 ##### Example:
 ```
@@ -4520,6 +4510,11 @@ meraki networks updateNetworkTrafficAnalysis --networkId 'STRING' --optionalArg1
 meraki networks updateNetworkTrafficAnalysis --networkId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
+##### Method Code:
+```python
+def updateNetworkTrafficAnalysis(networkId: str, **kwargs):
+    # Code
+````
 
 ----------------------------------------
 ## Update Network Webhooks Http Server
@@ -4536,11 +4531,6 @@ https://developer.cisco.com/meraki/api-v1/#!update-network-webhooks-http-server
 - `--url` (string): The URL of the HTTP server
 - `--sharedSecret` (string): A shared secret that will be included in POSTs sent to the HTTP server. This secret can be used to verify that the request was sent by Meraki.
 
-##### Method Code:
-```python
-def updateNetworkWebhooksHttpServer(networkId: str, httpServerId: str, **kwargs):
-    # Code
-````
 
 ##### Example:
 ```
@@ -4552,6 +4542,11 @@ meraki networks updateNetworkWebhooksHttpServer --networkId 'STRING' --httpServe
 meraki networks updateNetworkWebhooksHttpServer --networkId 'STRING' --httpServerId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
+##### Method Code:
+```python
+def updateNetworkWebhooksHttpServer(networkId: str, httpServerId: str, **kwargs):
+    # Code
+````
 
 ----------------------------------------
 
@@ -4573,11 +4568,6 @@ https://developer.cisco.com/meraki/api-v1/#!blink-device-leds
 - `--period` (integer): The period in milliseconds. Must be between 100 and 1000. Default is 160 milliseconds
 - `--duty` (integer): The duty cycle as the percent active. Must be between 10 and 90. Default is 50.
 
-##### Method Code:
-```python
-def blinkDeviceLeds(serial: str, **kwargs):
-    # Code
-````
 
 ##### Example:
 ```
@@ -4589,6 +4579,11 @@ meraki devices blinkDeviceLeds --serial 'STRING' --optionalArg1 'optionalarg1val
 meraki devices blinkDeviceLeds --serial 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
+##### Method Code:
+```python
+def blinkDeviceLeds(serial: str, **kwargs):
+    # Code
+````
 
 ----------------------------------------
 ## Get Device
@@ -4601,17 +4596,17 @@ https://developer.cisco.com/meraki/api-v1/#!get-device
 ##### Arguments
 - `--serial` (string): (required)
 
-##### Method Code:
-```python
-def getDevice(serial: str):
-    # Code
-````
 
 ##### Example:
 ```
 meraki devices getDevice --serial 'STRING'
 ````
 
+##### Method Code:
+```python
+def getDevice(serial: str):
+    # Code
+````
 
 ----------------------------------------
 ## Get Device Clients
@@ -4626,11 +4621,6 @@ https://developer.cisco.com/meraki/api-v1/#!get-device-clients
 - `--t0` (string): The beginning of the timespan for the data. The maximum lookback period is 31 days from today.
 - `--timespan` (number): The timespan for which the information will be fetched. If specifying timespan, do not specify parameter t0. The value must be in seconds and be less than or equal to 31 days. The default is 1 day.
 
-##### Method Code:
-```python
-def getDeviceClients(serial: str, **kwargs):
-    # Code
-````
 
 ##### Example:
 ```
@@ -4642,6 +4632,11 @@ meraki devices getDeviceClients --serial 'STRING' --optionalArg1 'optionalarg1va
 meraki devices getDeviceClients --serial 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
+##### Method Code:
+```python
+def getDeviceClients(serial: str, **kwargs):
+    # Code
+````
 
 ----------------------------------------
 ## Get Device Lldp Cdp
@@ -4654,17 +4649,17 @@ https://developer.cisco.com/meraki/api-v1/#!get-device-lldp-cdp
 ##### Arguments
 - `--serial` (string): (required)
 
-##### Method Code:
-```python
-def getDeviceLldpCdp(serial: str):
-    # Code
-````
 
 ##### Example:
 ```
 meraki devices getDeviceLldpCdp --serial 'STRING'
 ````
 
+##### Method Code:
+```python
+def getDeviceLldpCdp(serial: str):
+    # Code
+````
 
 ----------------------------------------
 ## Get Device Loss And Latency History
@@ -4683,11 +4678,6 @@ https://developer.cisco.com/meraki/api-v1/#!get-device-loss-and-latency-history
 - `--resolution` (integer): The time resolution in seconds for returned data. The valid resolutions are: 60, 600, 3600, 86400. The default is 60.
 - `--uplink` (string): The WAN uplink used to obtain the requested stats. Valid uplinks are wan1, wan2, cellular. The default is wan1.
 
-##### Method Code:
-```python
-def getDeviceLossAndLatencyHistory(serial: str, ip: str, **kwargs):
-    # Code
-````
 
 ##### Example:
 ```
@@ -4699,6 +4689,11 @@ meraki devices getDeviceLossAndLatencyHistory --serial 'STRING' --ip 'STRING' --
 meraki devices getDeviceLossAndLatencyHistory --serial 'STRING' --ip 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
+##### Method Code:
+```python
+def getDeviceLossAndLatencyHistory(serial: str, ip: str, **kwargs):
+    # Code
+````
 
 ----------------------------------------
 ## Get Device Management Interface
@@ -4711,17 +4706,17 @@ https://developer.cisco.com/meraki/api-v1/#!get-device-management-interface
 ##### Arguments
 - `--serial` (string): (required)
 
-##### Method Code:
-```python
-def getDeviceManagementInterface(serial: str):
-    # Code
-````
 
 ##### Example:
 ```
 meraki devices getDeviceManagementInterface --serial 'STRING'
 ````
 
+##### Method Code:
+```python
+def getDeviceManagementInterface(serial: str):
+    # Code
+````
 
 ----------------------------------------
 ## Reboot Device
@@ -4734,17 +4729,17 @@ https://developer.cisco.com/meraki/api-v1/#!reboot-device
 ##### Arguments
 - `--serial` (string): (required)
 
-##### Method Code:
-```python
-def rebootDevice(serial: str):
-    # Code
-````
 
 ##### Example:
 ```
 meraki devices rebootDevice --serial 'STRING'
 ````
 
+##### Method Code:
+```python
+def rebootDevice(serial: str):
+    # Code
+````
 
 ----------------------------------------
 ## Update Device
@@ -4766,11 +4761,6 @@ https://developer.cisco.com/meraki/api-v1/#!update-device
 - `--switchProfileId` (string): The ID of a switch profile to bind to the device (for available switch profiles, see the 'Switch Profiles' endpoint). Use null to unbind the switch device from the current profile. For a device to be bindable to a switch profile, it must (1) be a switch, and (2) belong to a network that is bound to a configuration template.
 - `--floorPlanId` (string): The floor plan to associate to this device. null disassociates the device from the floorplan.
 
-##### Method Code:
-```python
-def updateDevice(serial: str, **kwargs):
-    # Code
-````
 
 ##### Example:
 ```
@@ -4782,6 +4772,11 @@ meraki devices updateDevice --serial 'STRING' --optionalArg1 'optionalarg1value'
 meraki devices updateDevice --serial 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
+##### Method Code:
+```python
+def updateDevice(serial: str, **kwargs):
+    # Code
+````
 
 ----------------------------------------
 ## Update Device Management Interface
@@ -4796,11 +4791,6 @@ https://developer.cisco.com/meraki/api-v1/#!update-device-management-interface
 - `--wan1` (object): WAN 1 settings
 - `--wan2` (object): WAN 2 settings (only for MX devices)
 
-##### Method Code:
-```python
-def updateDeviceManagementInterface(serial: str, **kwargs):
-    # Code
-````
 
 ##### Example:
 ```
@@ -4812,6 +4802,11 @@ meraki devices updateDeviceManagementInterface --serial 'STRING' --optionalArg1 
 meraki devices updateDeviceManagementInterface --serial 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
+##### Method Code:
+```python
+def updateDeviceManagementInterface(serial: str, **kwargs):
+    # Code
+````
 
 ----------------------------------------
 
@@ -4833,17 +4828,17 @@ https://developer.cisco.com/meraki/api-v1/#!create-network-appliance-static-rout
 - `--subnet` (string): The subnet of the static route
 - `--gatewayIp` (string): The gateway IP (next hop) of the static route
 
-##### Method Code:
-```python
-def createNetworkApplianceStaticRoute(networkId: str, name: str, subnet: str, gatewayIp: str):
-    # Code
-````
 
 ##### Example:
 ```
 meraki appliance createNetworkApplianceStaticRoute --networkId 'STRING' --name 'STRING' --subnet 'STRING' --gatewayIp 'STRING'
 ````
 
+##### Method Code:
+```python
+def createNetworkApplianceStaticRoute(networkId: str, name: str, subnet: str, gatewayIp: str):
+    # Code
+````
 
 ----------------------------------------
 ## Create Network Appliance Traffic Shaping Custom Performance Class
@@ -4860,11 +4855,6 @@ https://developer.cisco.com/meraki/api-v1/#!create-network-appliance-traffic-sha
 - `--maxJitter` (integer): Maximum jitter in milliseconds
 - `--maxLossPercentage` (integer): Maximum percentage of packet loss
 
-##### Method Code:
-```python
-def createNetworkApplianceTrafficShapingCustomPerformanceClass(networkId: str, name: str, **kwargs):
-    # Code
-````
 
 ##### Example:
 ```
@@ -4876,6 +4866,11 @@ meraki appliance createNetworkApplianceTrafficShapingCustomPerformanceClass --ne
 meraki appliance createNetworkApplianceTrafficShapingCustomPerformanceClass --networkId 'STRING' --name 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
+##### Method Code:
+```python
+def createNetworkApplianceTrafficShapingCustomPerformanceClass(networkId: str, name: str, **kwargs):
+    # Code
+````
 
 ----------------------------------------
 ## Create Network Appliance Vlan
@@ -4893,11 +4888,6 @@ https://developer.cisco.com/meraki/api-v1/#!create-network-appliance-vlan
 - `--applianceIp` (string): The local IP of the appliance on the VLAN
 - `--groupPolicyId` (string): The id of the desired group policy to apply to the VLAN
 
-##### Method Code:
-```python
-def createNetworkApplianceVlan(networkId: str, id: str, name: str, **kwargs):
-    # Code
-````
 
 ##### Example:
 ```
@@ -4909,6 +4899,11 @@ meraki appliance createNetworkApplianceVlan --networkId 'STRING' --id 'STRING' -
 meraki appliance createNetworkApplianceVlan --networkId 'STRING' --id 'STRING' --name 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
+##### Method Code:
+```python
+def createNetworkApplianceVlan(networkId: str, id: str, name: str, **kwargs):
+    # Code
+````
 
 ----------------------------------------
 ## Delete Network Appliance Static Route
@@ -4922,17 +4917,17 @@ https://developer.cisco.com/meraki/api-v1/#!delete-network-appliance-static-rout
 - `--networkId` (string): (required)
 - `--staticRouteId` (string): (required)
 
-##### Method Code:
-```python
-def deleteNetworkApplianceStaticRoute(networkId: str, staticRouteId: str):
-    # Code
-````
 
 ##### Example:
 ```
 meraki appliance deleteNetworkApplianceStaticRoute --networkId 'STRING' --staticRouteId 'STRING'
 ````
 
+##### Method Code:
+```python
+def deleteNetworkApplianceStaticRoute(networkId: str, staticRouteId: str):
+    # Code
+````
 
 ----------------------------------------
 ## Delete Network Appliance Traffic Shaping Custom Performance Class
@@ -4946,17 +4941,17 @@ https://developer.cisco.com/meraki/api-v1/#!delete-network-appliance-traffic-sha
 - `--networkId` (string): (required)
 - `--customPerformanceClassId` (string): (required)
 
-##### Method Code:
-```python
-def deleteNetworkApplianceTrafficShapingCustomPerformanceClass(networkId: str, customPerformanceClassId: str):
-    # Code
-````
 
 ##### Example:
 ```
 meraki appliance deleteNetworkApplianceTrafficShapingCustomPerformanceClass --networkId 'STRING' --customPerformanceClassId 'STRING'
 ````
 
+##### Method Code:
+```python
+def deleteNetworkApplianceTrafficShapingCustomPerformanceClass(networkId: str, customPerformanceClassId: str):
+    # Code
+````
 
 ----------------------------------------
 ## Delete Network Appliance Vlan
@@ -4970,17 +4965,17 @@ https://developer.cisco.com/meraki/api-v1/#!delete-network-appliance-vlan
 - `--networkId` (string): (required)
 - `--vlanId` (string): (required)
 
-##### Method Code:
-```python
-def deleteNetworkApplianceVlan(networkId: str, vlanId: str):
-    # Code
-````
 
 ##### Example:
 ```
 meraki appliance deleteNetworkApplianceVlan --networkId 'STRING' --vlanId 'STRING'
 ````
 
+##### Method Code:
+```python
+def deleteNetworkApplianceVlan(networkId: str, vlanId: str):
+    # Code
+````
 
 ----------------------------------------
 ## Get Device Appliance Dhcp Subnets
@@ -4993,17 +4988,17 @@ https://developer.cisco.com/meraki/api-v1/#!get-device-appliance-dhcp-subnets
 ##### Arguments
 - `--serial` (string): (required)
 
-##### Method Code:
-```python
-def getDeviceApplianceDhcpSubnets(serial: str):
-    # Code
-````
 
 ##### Example:
 ```
 meraki appliance getDeviceApplianceDhcpSubnets --serial 'STRING'
 ````
 
+##### Method Code:
+```python
+def getDeviceApplianceDhcpSubnets(serial: str):
+    # Code
+````
 
 ----------------------------------------
 ## Get Device Appliance Performance
@@ -5016,17 +5011,17 @@ https://developer.cisco.com/meraki/api-v1/#!get-device-appliance-performance
 ##### Arguments
 - `--serial` (string): (required)
 
-##### Method Code:
-```python
-def getDeviceAppliancePerformance(serial: str):
-    # Code
-````
 
 ##### Example:
 ```
 meraki appliance getDeviceAppliancePerformance --serial 'STRING'
 ````
 
+##### Method Code:
+```python
+def getDeviceAppliancePerformance(serial: str):
+    # Code
+````
 
 ----------------------------------------
 ## Get Network Appliance Client Security Events
@@ -5049,11 +5044,6 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-appliance-client-securit
 - `--endingBefore` (string): A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it.
 - `--sortOrder` (string): Sorted order of security events based on event detection time. Order options are 'ascending' or 'descending'. Default is ascending order.
 
-##### Method Code:
-```python
-def getNetworkApplianceClientSecurityEvents(networkId: str, clientId: str, total_pages=1, direction='next', **kwargs):
-    # Code
-````
 
 ##### Example:
 ```
@@ -5065,6 +5055,11 @@ meraki appliance getNetworkApplianceClientSecurityEvents --networkId 'STRING' --
 meraki appliance getNetworkApplianceClientSecurityEvents --networkId 'STRING' --clientId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
+##### Method Code:
+```python
+def getNetworkApplianceClientSecurityEvents(networkId: str, clientId: str, total_pages=1, direction='next', **kwargs):
+    # Code
+````
 
 ----------------------------------------
 ## Get Network Appliance Connectivity Monitoring Destinations
@@ -5077,17 +5072,17 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-appliance-connectivity-m
 ##### Arguments
 - `--networkId` (string): (required)
 
-##### Method Code:
-```python
-def getNetworkApplianceConnectivityMonitoringDestinations(networkId: str):
-    # Code
-````
 
 ##### Example:
 ```
 meraki appliance getNetworkApplianceConnectivityMonitoringDestinations --networkId 'STRING'
 ````
 
+##### Method Code:
+```python
+def getNetworkApplianceConnectivityMonitoringDestinations(networkId: str):
+    # Code
+````
 
 ----------------------------------------
 ## Get Network Appliance Content Filtering
@@ -5100,17 +5095,17 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-appliance-content-filter
 ##### Arguments
 - `--networkId` (string): (required)
 
-##### Method Code:
-```python
-def getNetworkApplianceContentFiltering(networkId: str):
-    # Code
-````
 
 ##### Example:
 ```
 meraki appliance getNetworkApplianceContentFiltering --networkId 'STRING'
 ````
 
+##### Method Code:
+```python
+def getNetworkApplianceContentFiltering(networkId: str):
+    # Code
+````
 
 ----------------------------------------
 ## Get Network Appliance Content Filtering Categories
@@ -5123,17 +5118,17 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-appliance-content-filter
 ##### Arguments
 - `--networkId` (string): (required)
 
-##### Method Code:
-```python
-def getNetworkApplianceContentFilteringCategories(networkId: str):
-    # Code
-````
 
 ##### Example:
 ```
 meraki appliance getNetworkApplianceContentFilteringCategories --networkId 'STRING'
 ````
 
+##### Method Code:
+```python
+def getNetworkApplianceContentFilteringCategories(networkId: str):
+    # Code
+````
 
 ----------------------------------------
 ## Get Network Appliance Firewall Cellular Firewall Rules
@@ -5146,17 +5141,17 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-appliance-firewall-cellu
 ##### Arguments
 - `--networkId` (string): (required)
 
-##### Method Code:
-```python
-def getNetworkApplianceFirewallCellularFirewallRules(networkId: str):
-    # Code
-````
 
 ##### Example:
 ```
 meraki appliance getNetworkApplianceFirewallCellularFirewallRules --networkId 'STRING'
 ````
 
+##### Method Code:
+```python
+def getNetworkApplianceFirewallCellularFirewallRules(networkId: str):
+    # Code
+````
 
 ----------------------------------------
 ## Get Network Appliance Firewall Firewalled Service
@@ -5170,17 +5165,17 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-appliance-firewall-firew
 - `--networkId` (string): (required)
 - `--service` (string): (required)
 
-##### Method Code:
-```python
-def getNetworkApplianceFirewallFirewalledService(networkId: str, service: str):
-    # Code
-````
 
 ##### Example:
 ```
 meraki appliance getNetworkApplianceFirewallFirewalledService --networkId 'STRING' --service 'STRING'
 ````
 
+##### Method Code:
+```python
+def getNetworkApplianceFirewallFirewalledService(networkId: str, service: str):
+    # Code
+````
 
 ----------------------------------------
 ## Get Network Appliance Firewall Firewalled Services
@@ -5193,17 +5188,17 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-appliance-firewall-firew
 ##### Arguments
 - `--networkId` (string): (required)
 
-##### Method Code:
-```python
-def getNetworkApplianceFirewallFirewalledServices(networkId: str):
-    # Code
-````
 
 ##### Example:
 ```
 meraki appliance getNetworkApplianceFirewallFirewalledServices --networkId 'STRING'
 ````
 
+##### Method Code:
+```python
+def getNetworkApplianceFirewallFirewalledServices(networkId: str):
+    # Code
+````
 
 ----------------------------------------
 ## Get Network Appliance Firewall Inbound Firewall Rules
@@ -5216,17 +5211,17 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-appliance-firewall-inbou
 ##### Arguments
 - `--networkId` (string): (required)
 
-##### Method Code:
-```python
-def getNetworkApplianceFirewallInboundFirewallRules(networkId: str):
-    # Code
-````
 
 ##### Example:
 ```
 meraki appliance getNetworkApplianceFirewallInboundFirewallRules --networkId 'STRING'
 ````
 
+##### Method Code:
+```python
+def getNetworkApplianceFirewallInboundFirewallRules(networkId: str):
+    # Code
+````
 
 ----------------------------------------
 ## Get Network Appliance Firewall L3 Firewall Rules
@@ -5239,17 +5234,17 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-appliance-firewall-l-3-f
 ##### Arguments
 - `--networkId` (string): (required)
 
-##### Method Code:
-```python
-def getNetworkApplianceFirewallL3FirewallRules(networkId: str):
-    # Code
-````
 
 ##### Example:
 ```
 meraki appliance getNetworkApplianceFirewallL3FirewallRules --networkId 'STRING'
 ````
 
+##### Method Code:
+```python
+def getNetworkApplianceFirewallL3FirewallRules(networkId: str):
+    # Code
+````
 
 ----------------------------------------
 ## Get Network Appliance Firewall L7 Firewall Rules
@@ -5262,17 +5257,17 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-appliance-firewall-l-7-f
 ##### Arguments
 - `--networkId` (string): (required)
 
-##### Method Code:
-```python
-def getNetworkApplianceFirewallL7FirewallRules(networkId: str):
-    # Code
-````
 
 ##### Example:
 ```
 meraki appliance getNetworkApplianceFirewallL7FirewallRules --networkId 'STRING'
 ````
 
+##### Method Code:
+```python
+def getNetworkApplianceFirewallL7FirewallRules(networkId: str):
+    # Code
+````
 
 ----------------------------------------
 ## Get Network Appliance Firewall L7 Firewall Rules Application Categories
@@ -5285,17 +5280,17 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-appliance-firewall-l-7-f
 ##### Arguments
 - `--networkId` (string): (required)
 
-##### Method Code:
-```python
-def getNetworkApplianceFirewallL7FirewallRulesApplicationCategories(networkId: str):
-    # Code
-````
 
 ##### Example:
 ```
 meraki appliance getNetworkApplianceFirewallL7FirewallRulesApplicationCategories --networkId 'STRING'
 ````
 
+##### Method Code:
+```python
+def getNetworkApplianceFirewallL7FirewallRulesApplicationCategories(networkId: str):
+    # Code
+````
 
 ----------------------------------------
 ## Get Network Appliance Firewall One To Many Nat Rules
@@ -5308,17 +5303,17 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-appliance-firewall-one-t
 ##### Arguments
 - `--networkId` (string): (required)
 
-##### Method Code:
-```python
-def getNetworkApplianceFirewallOneToManyNatRules(networkId: str):
-    # Code
-````
 
 ##### Example:
 ```
 meraki appliance getNetworkApplianceFirewallOneToManyNatRules --networkId 'STRING'
 ````
 
+##### Method Code:
+```python
+def getNetworkApplianceFirewallOneToManyNatRules(networkId: str):
+    # Code
+````
 
 ----------------------------------------
 ## Get Network Appliance Firewall One To One Nat Rules
@@ -5331,17 +5326,17 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-appliance-firewall-one-t
 ##### Arguments
 - `--networkId` (string): (required)
 
-##### Method Code:
-```python
-def getNetworkApplianceFirewallOneToOneNatRules(networkId: str):
-    # Code
-````
 
 ##### Example:
 ```
 meraki appliance getNetworkApplianceFirewallOneToOneNatRules --networkId 'STRING'
 ````
 
+##### Method Code:
+```python
+def getNetworkApplianceFirewallOneToOneNatRules(networkId: str):
+    # Code
+````
 
 ----------------------------------------
 ## Get Network Appliance Firewall Port Forwarding Rules
@@ -5354,17 +5349,17 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-appliance-firewall-port-
 ##### Arguments
 - `--networkId` (string): (required)
 
-##### Method Code:
-```python
-def getNetworkApplianceFirewallPortForwardingRules(networkId: str):
-    # Code
-````
 
 ##### Example:
 ```
 meraki appliance getNetworkApplianceFirewallPortForwardingRules --networkId 'STRING'
 ````
 
+##### Method Code:
+```python
+def getNetworkApplianceFirewallPortForwardingRules(networkId: str):
+    # Code
+````
 
 ----------------------------------------
 ## Get Network Appliance Port
@@ -5378,17 +5373,17 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-appliance-port
 - `--networkId` (string): (required)
 - `--portId` (string): (required)
 
-##### Method Code:
-```python
-def getNetworkAppliancePort(networkId: str, portId: str):
-    # Code
-````
 
 ##### Example:
 ```
 meraki appliance getNetworkAppliancePort --networkId 'STRING' --portId 'STRING'
 ````
 
+##### Method Code:
+```python
+def getNetworkAppliancePort(networkId: str, portId: str):
+    # Code
+````
 
 ----------------------------------------
 ## Get Network Appliance Ports
@@ -5401,17 +5396,17 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-appliance-ports
 ##### Arguments
 - `--networkId` (string): (required)
 
-##### Method Code:
-```python
-def getNetworkAppliancePorts(networkId: str):
-    # Code
-````
 
 ##### Example:
 ```
 meraki appliance getNetworkAppliancePorts --networkId 'STRING'
 ````
 
+##### Method Code:
+```python
+def getNetworkAppliancePorts(networkId: str):
+    # Code
+````
 
 ----------------------------------------
 ## Get Network Appliance Security Events
@@ -5433,11 +5428,6 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-appliance-security-event
 - `--endingBefore` (string): A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it.
 - `--sortOrder` (string): Sorted order of security events based on event detection time. Order options are 'ascending' or 'descending'. Default is ascending order.
 
-##### Method Code:
-```python
-def getNetworkApplianceSecurityEvents(networkId: str, total_pages=1, direction='next', **kwargs):
-    # Code
-````
 
 ##### Example:
 ```
@@ -5449,6 +5439,11 @@ meraki appliance getNetworkApplianceSecurityEvents --networkId 'STRING' --option
 meraki appliance getNetworkApplianceSecurityEvents --networkId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
+##### Method Code:
+```python
+def getNetworkApplianceSecurityEvents(networkId: str, total_pages=1, direction='next', **kwargs):
+    # Code
+````
 
 ----------------------------------------
 ## Get Network Appliance Security Intrusion
@@ -5461,17 +5456,17 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-appliance-security-intru
 ##### Arguments
 - `--networkId` (string): (required)
 
-##### Method Code:
-```python
-def getNetworkApplianceSecurityIntrusion(networkId: str):
-    # Code
-````
 
 ##### Example:
 ```
 meraki appliance getNetworkApplianceSecurityIntrusion --networkId 'STRING'
 ````
 
+##### Method Code:
+```python
+def getNetworkApplianceSecurityIntrusion(networkId: str):
+    # Code
+````
 
 ----------------------------------------
 ## Get Network Appliance Security Malware
@@ -5484,17 +5479,17 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-appliance-security-malwa
 ##### Arguments
 - `--networkId` (string): (required)
 
-##### Method Code:
-```python
-def getNetworkApplianceSecurityMalware(networkId: str):
-    # Code
-````
 
 ##### Example:
 ```
 meraki appliance getNetworkApplianceSecurityMalware --networkId 'STRING'
 ````
 
+##### Method Code:
+```python
+def getNetworkApplianceSecurityMalware(networkId: str):
+    # Code
+````
 
 ----------------------------------------
 ## Get Network Appliance Settings
@@ -5507,17 +5502,17 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-appliance-settings
 ##### Arguments
 - `--networkId` (string): (required)
 
-##### Method Code:
-```python
-def getNetworkApplianceSettings(networkId: str):
-    # Code
-````
 
 ##### Example:
 ```
 meraki appliance getNetworkApplianceSettings --networkId 'STRING'
 ````
 
+##### Method Code:
+```python
+def getNetworkApplianceSettings(networkId: str):
+    # Code
+````
 
 ----------------------------------------
 ## Get Network Appliance Single Lan
@@ -5530,17 +5525,17 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-appliance-single-lan
 ##### Arguments
 - `--networkId` (string): (required)
 
-##### Method Code:
-```python
-def getNetworkApplianceSingleLan(networkId: str):
-    # Code
-````
 
 ##### Example:
 ```
 meraki appliance getNetworkApplianceSingleLan --networkId 'STRING'
 ````
 
+##### Method Code:
+```python
+def getNetworkApplianceSingleLan(networkId: str):
+    # Code
+````
 
 ----------------------------------------
 ## Get Network Appliance Static Route
@@ -5554,17 +5549,17 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-appliance-static-route
 - `--networkId` (string): (required)
 - `--staticRouteId` (string): (required)
 
-##### Method Code:
-```python
-def getNetworkApplianceStaticRoute(networkId: str, staticRouteId: str):
-    # Code
-````
 
 ##### Example:
 ```
 meraki appliance getNetworkApplianceStaticRoute --networkId 'STRING' --staticRouteId 'STRING'
 ````
 
+##### Method Code:
+```python
+def getNetworkApplianceStaticRoute(networkId: str, staticRouteId: str):
+    # Code
+````
 
 ----------------------------------------
 ## Get Network Appliance Static Routes
@@ -5577,17 +5572,17 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-appliance-static-routes
 ##### Arguments
 - `--networkId` (string): (required)
 
-##### Method Code:
-```python
-def getNetworkApplianceStaticRoutes(networkId: str):
-    # Code
-````
 
 ##### Example:
 ```
 meraki appliance getNetworkApplianceStaticRoutes --networkId 'STRING'
 ````
 
+##### Method Code:
+```python
+def getNetworkApplianceStaticRoutes(networkId: str):
+    # Code
+````
 
 ----------------------------------------
 ## Get Network Appliance Traffic Shaping
@@ -5600,17 +5595,17 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-appliance-traffic-shapin
 ##### Arguments
 - `--networkId` (string): (required)
 
-##### Method Code:
-```python
-def getNetworkApplianceTrafficShaping(networkId: str):
-    # Code
-````
 
 ##### Example:
 ```
 meraki appliance getNetworkApplianceTrafficShaping --networkId 'STRING'
 ````
 
+##### Method Code:
+```python
+def getNetworkApplianceTrafficShaping(networkId: str):
+    # Code
+````
 
 ----------------------------------------
 ## Get Network Appliance Traffic Shaping Custom Performance Class
@@ -5624,17 +5619,17 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-appliance-traffic-shapin
 - `--networkId` (string): (required)
 - `--customPerformanceClassId` (string): (required)
 
-##### Method Code:
-```python
-def getNetworkApplianceTrafficShapingCustomPerformanceClass(networkId: str, customPerformanceClassId: str):
-    # Code
-````
 
 ##### Example:
 ```
 meraki appliance getNetworkApplianceTrafficShapingCustomPerformanceClass --networkId 'STRING' --customPerformanceClassId 'STRING'
 ````
 
+##### Method Code:
+```python
+def getNetworkApplianceTrafficShapingCustomPerformanceClass(networkId: str, customPerformanceClassId: str):
+    # Code
+````
 
 ----------------------------------------
 ## Get Network Appliance Traffic Shaping Custom Performance Classes
@@ -5647,17 +5642,17 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-appliance-traffic-shapin
 ##### Arguments
 - `--networkId` (string): (required)
 
-##### Method Code:
-```python
-def getNetworkApplianceTrafficShapingCustomPerformanceClasses(networkId: str):
-    # Code
-````
 
 ##### Example:
 ```
 meraki appliance getNetworkApplianceTrafficShapingCustomPerformanceClasses --networkId 'STRING'
 ````
 
+##### Method Code:
+```python
+def getNetworkApplianceTrafficShapingCustomPerformanceClasses(networkId: str):
+    # Code
+````
 
 ----------------------------------------
 ## Get Network Appliance Traffic Shaping Rules
@@ -5670,17 +5665,17 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-appliance-traffic-shapin
 ##### Arguments
 - `--networkId` (string): (required)
 
-##### Method Code:
-```python
-def getNetworkApplianceTrafficShapingRules(networkId: str):
-    # Code
-````
 
 ##### Example:
 ```
 meraki appliance getNetworkApplianceTrafficShapingRules --networkId 'STRING'
 ````
 
+##### Method Code:
+```python
+def getNetworkApplianceTrafficShapingRules(networkId: str):
+    # Code
+````
 
 ----------------------------------------
 ## Get Network Appliance Traffic Shaping Uplink Bandwidth
@@ -5693,17 +5688,17 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-appliance-traffic-shapin
 ##### Arguments
 - `--networkId` (string): (required)
 
-##### Method Code:
-```python
-def getNetworkApplianceTrafficShapingUplinkBandwidth(networkId: str):
-    # Code
-````
 
 ##### Example:
 ```
 meraki appliance getNetworkApplianceTrafficShapingUplinkBandwidth --networkId 'STRING'
 ````
 
+##### Method Code:
+```python
+def getNetworkApplianceTrafficShapingUplinkBandwidth(networkId: str):
+    # Code
+````
 
 ----------------------------------------
 ## Get Network Appliance Traffic Shaping Uplink Selection
@@ -5716,17 +5711,17 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-appliance-traffic-shapin
 ##### Arguments
 - `--networkId` (string): (required)
 
-##### Method Code:
-```python
-def getNetworkApplianceTrafficShapingUplinkSelection(networkId: str):
-    # Code
-````
 
 ##### Example:
 ```
 meraki appliance getNetworkApplianceTrafficShapingUplinkSelection --networkId 'STRING'
 ````
 
+##### Method Code:
+```python
+def getNetworkApplianceTrafficShapingUplinkSelection(networkId: str):
+    # Code
+````
 
 ----------------------------------------
 ## Get Network Appliance Vlan
@@ -5740,17 +5735,17 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-appliance-vlan
 - `--networkId` (string): (required)
 - `--vlanId` (string): (required)
 
-##### Method Code:
-```python
-def getNetworkApplianceVlan(networkId: str, vlanId: str):
-    # Code
-````
 
 ##### Example:
 ```
 meraki appliance getNetworkApplianceVlan --networkId 'STRING' --vlanId 'STRING'
 ````
 
+##### Method Code:
+```python
+def getNetworkApplianceVlan(networkId: str, vlanId: str):
+    # Code
+````
 
 ----------------------------------------
 ## Get Network Appliance Vlans
@@ -5763,17 +5758,17 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-appliance-vlans
 ##### Arguments
 - `--networkId` (string): (required)
 
-##### Method Code:
-```python
-def getNetworkApplianceVlans(networkId: str):
-    # Code
-````
 
 ##### Example:
 ```
 meraki appliance getNetworkApplianceVlans --networkId 'STRING'
 ````
 
+##### Method Code:
+```python
+def getNetworkApplianceVlans(networkId: str):
+    # Code
+````
 
 ----------------------------------------
 ## Get Network Appliance Vlans Settings
@@ -5786,17 +5781,17 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-appliance-vlans-settings
 ##### Arguments
 - `--networkId` (string): (required)
 
-##### Method Code:
-```python
-def getNetworkApplianceVlansSettings(networkId: str):
-    # Code
-````
 
 ##### Example:
 ```
 meraki appliance getNetworkApplianceVlansSettings --networkId 'STRING'
 ````
 
+##### Method Code:
+```python
+def getNetworkApplianceVlansSettings(networkId: str):
+    # Code
+````
 
 ----------------------------------------
 ## Get Network Appliance Vpn Bgp
@@ -5809,17 +5804,17 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-appliance-vpn-bgp
 ##### Arguments
 - `--networkId` (string): (required)
 
-##### Method Code:
-```python
-def getNetworkApplianceVpnBgp(networkId: str):
-    # Code
-````
 
 ##### Example:
 ```
 meraki appliance getNetworkApplianceVpnBgp --networkId 'STRING'
 ````
 
+##### Method Code:
+```python
+def getNetworkApplianceVpnBgp(networkId: str):
+    # Code
+````
 
 ----------------------------------------
 ## Get Network Appliance Vpn Site To Site Vpn
@@ -5832,17 +5827,17 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-appliance-vpn-site-to-si
 ##### Arguments
 - `--networkId` (string): (required)
 
-##### Method Code:
-```python
-def getNetworkApplianceVpnSiteToSiteVpn(networkId: str):
-    # Code
-````
 
 ##### Example:
 ```
 meraki appliance getNetworkApplianceVpnSiteToSiteVpn --networkId 'STRING'
 ````
 
+##### Method Code:
+```python
+def getNetworkApplianceVpnSiteToSiteVpn(networkId: str):
+    # Code
+````
 
 ----------------------------------------
 ## Get Network Appliance Warm Spare
@@ -5855,17 +5850,17 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-appliance-warm-spare
 ##### Arguments
 - `--networkId` (string): (required)
 
-##### Method Code:
-```python
-def getNetworkApplianceWarmSpare(networkId: str):
-    # Code
-````
 
 ##### Example:
 ```
 meraki appliance getNetworkApplianceWarmSpare --networkId 'STRING'
 ````
 
+##### Method Code:
+```python
+def getNetworkApplianceWarmSpare(networkId: str):
+    # Code
+````
 
 ----------------------------------------
 ## Get Organization Appliance Security Events
@@ -5887,11 +5882,6 @@ https://developer.cisco.com/meraki/api-v1/#!get-organization-appliance-security-
 - `--endingBefore` (string): A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it.
 - `--sortOrder` (string): Sorted order of security events based on event detection time. Order options are 'ascending' or 'descending'. Default is ascending order.
 
-##### Method Code:
-```python
-def getOrganizationApplianceSecurityEvents(organizationId: str, total_pages=1, direction='next', **kwargs):
-    # Code
-````
 
 ##### Example:
 ```
@@ -5903,6 +5893,11 @@ meraki appliance getOrganizationApplianceSecurityEvents --organizationId 'STRING
 meraki appliance getOrganizationApplianceSecurityEvents --organizationId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
+##### Method Code:
+```python
+def getOrganizationApplianceSecurityEvents(organizationId: str, total_pages=1, direction='next', **kwargs):
+    # Code
+````
 
 ----------------------------------------
 ## Get Organization Appliance Security Intrusion
@@ -5915,17 +5910,17 @@ https://developer.cisco.com/meraki/api-v1/#!get-organization-appliance-security-
 ##### Arguments
 - `--organizationId` (string): (required)
 
-##### Method Code:
-```python
-def getOrganizationApplianceSecurityIntrusion(organizationId: str):
-    # Code
-````
 
 ##### Example:
 ```
 meraki appliance getOrganizationApplianceSecurityIntrusion --organizationId 'STRING'
 ````
 
+##### Method Code:
+```python
+def getOrganizationApplianceSecurityIntrusion(organizationId: str):
+    # Code
+````
 
 ----------------------------------------
 ## Get Organization Appliance Uplink Statuses
@@ -5946,11 +5941,6 @@ https://developer.cisco.com/meraki/api-v1/#!get-organization-appliance-uplink-st
 - `--serials` (array): A list of serial numbers. The returned devices will be filtered to only include these serials.
 - `--iccids` (array): A list of ICCIDs. The returned devices will be filtered to only include these ICCIDs.
 
-##### Method Code:
-```python
-def getOrganizationApplianceUplinkStatuses(organizationId: str, total_pages=1, direction='next', **kwargs):
-    # Code
-````
 
 ##### Example:
 ```
@@ -5962,6 +5952,11 @@ meraki appliance getOrganizationApplianceUplinkStatuses --organizationId 'STRING
 meraki appliance getOrganizationApplianceUplinkStatuses --organizationId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
+##### Method Code:
+```python
+def getOrganizationApplianceUplinkStatuses(organizationId: str, total_pages=1, direction='next', **kwargs):
+    # Code
+````
 
 ----------------------------------------
 ## Get Organization Appliance Vpn Stats
@@ -5983,11 +5978,6 @@ https://developer.cisco.com/meraki/api-v1/#!get-organization-appliance-vpn-stats
 - `--t1` (string): The end of the timespan for the data. t1 can be a maximum of 31 days after t0.
 - `--timespan` (number): The timespan for which the information will be fetched. If specifying timespan, do not specify parameters t0 and t1. The value must be in seconds and be less than or equal to 31 days. The default is 1 day.
 
-##### Method Code:
-```python
-def getOrganizationApplianceVpnStats(organizationId: str, total_pages=1, direction='next', **kwargs):
-    # Code
-````
 
 ##### Example:
 ```
@@ -5999,6 +5989,11 @@ meraki appliance getOrganizationApplianceVpnStats --organizationId 'STRING' --op
 meraki appliance getOrganizationApplianceVpnStats --organizationId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
+##### Method Code:
+```python
+def getOrganizationApplianceVpnStats(organizationId: str, total_pages=1, direction='next', **kwargs):
+    # Code
+````
 
 ----------------------------------------
 ## Get Organization Appliance Vpn Statuses
@@ -6017,11 +6012,6 @@ https://developer.cisco.com/meraki/api-v1/#!get-organization-appliance-vpn-statu
 - `--endingBefore` (string): A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it.
 - `--networkIds` (array): A list of Meraki network IDs to filter results to contain only specified networks. E.g.: networkIds[]=N_12345678&networkIds[]=L_3456
 
-##### Method Code:
-```python
-def getOrganizationApplianceVpnStatuses(organizationId: str, total_pages=1, direction='next', **kwargs):
-    # Code
-````
 
 ##### Example:
 ```
@@ -6033,6 +6023,11 @@ meraki appliance getOrganizationApplianceVpnStatuses --organizationId 'STRING' -
 meraki appliance getOrganizationApplianceVpnStatuses --organizationId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
+##### Method Code:
+```python
+def getOrganizationApplianceVpnStatuses(organizationId: str, total_pages=1, direction='next', **kwargs):
+    # Code
+````
 
 ----------------------------------------
 ## Get Organization Appliance Vpn Third Party V P N Peers
@@ -6045,17 +6040,17 @@ https://developer.cisco.com/meraki/api-v1/#!get-organization-appliance-vpn-third
 ##### Arguments
 - `--organizationId` (string): (required)
 
-##### Method Code:
-```python
-def getOrganizationApplianceVpnThirdPartyVPNPeers(organizationId: str):
-    # Code
-````
 
 ##### Example:
 ```
 meraki appliance getOrganizationApplianceVpnThirdPartyVPNPeers --organizationId 'STRING'
 ````
 
+##### Method Code:
+```python
+def getOrganizationApplianceVpnThirdPartyVPNPeers(organizationId: str):
+    # Code
+````
 
 ----------------------------------------
 ## Get Organization Appliance Vpn Vpn Firewall Rules
@@ -6068,17 +6063,17 @@ https://developer.cisco.com/meraki/api-v1/#!get-organization-appliance-vpn-vpn-f
 ##### Arguments
 - `--organizationId` (string): (required)
 
-##### Method Code:
-```python
-def getOrganizationApplianceVpnVpnFirewallRules(organizationId: str):
-    # Code
-````
 
 ##### Example:
 ```
 meraki appliance getOrganizationApplianceVpnVpnFirewallRules --organizationId 'STRING'
 ````
 
+##### Method Code:
+```python
+def getOrganizationApplianceVpnVpnFirewallRules(organizationId: str):
+    # Code
+````
 
 ----------------------------------------
 ## Swap Network Appliance Warm Spare
@@ -6091,17 +6086,17 @@ https://developer.cisco.com/meraki/api-v1/#!swap-network-appliance-warm-spare
 ##### Arguments
 - `--networkId` (string): (required)
 
-##### Method Code:
-```python
-def swapNetworkApplianceWarmSpare(networkId: str):
-    # Code
-````
 
 ##### Example:
 ```
 meraki appliance swapNetworkApplianceWarmSpare --networkId 'STRING'
 ````
 
+##### Method Code:
+```python
+def swapNetworkApplianceWarmSpare(networkId: str):
+    # Code
+````
 
 ----------------------------------------
 ## Update Network Appliance Connectivity Monitoring Destinations
@@ -6115,11 +6110,6 @@ https://developer.cisco.com/meraki/api-v1/#!update-network-appliance-connectivit
 - `--networkId` (string): (required)
 - `--destinations` (array): The list of connectivity monitoring destinations
 
-##### Method Code:
-```python
-def updateNetworkApplianceConnectivityMonitoringDestinations(networkId: str, **kwargs):
-    # Code
-````
 
 ##### Example:
 ```
@@ -6131,6 +6121,11 @@ meraki appliance updateNetworkApplianceConnectivityMonitoringDestinations --netw
 meraki appliance updateNetworkApplianceConnectivityMonitoringDestinations --networkId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
+##### Method Code:
+```python
+def updateNetworkApplianceConnectivityMonitoringDestinations(networkId: str, **kwargs):
+    # Code
+````
 
 ----------------------------------------
 ## Update Network Appliance Content Filtering
@@ -6147,11 +6142,6 @@ https://developer.cisco.com/meraki/api-v1/#!update-network-appliance-content-fil
 - `--blockedUrlCategories` (array): A list of URL categories to block
 - `--urlCategoryListSize` (string): URL category list size which is either 'topSites' or 'fullList'
 
-##### Method Code:
-```python
-def updateNetworkApplianceContentFiltering(networkId: str, **kwargs):
-    # Code
-````
 
 ##### Example:
 ```
@@ -6163,6 +6153,11 @@ meraki appliance updateNetworkApplianceContentFiltering --networkId 'STRING' --o
 meraki appliance updateNetworkApplianceContentFiltering --networkId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
+##### Method Code:
+```python
+def updateNetworkApplianceContentFiltering(networkId: str, **kwargs):
+    # Code
+````
 
 ----------------------------------------
 ## Update Network Appliance Firewall Cellular Firewall Rules
@@ -6176,11 +6171,6 @@ https://developer.cisco.com/meraki/api-v1/#!update-network-appliance-firewall-ce
 - `--networkId` (string): (required)
 - `--rules` (array): An ordered array of the firewall rules (not including the default rule)
 
-##### Method Code:
-```python
-def updateNetworkApplianceFirewallCellularFirewallRules(networkId: str, **kwargs):
-    # Code
-````
 
 ##### Example:
 ```
@@ -6192,6 +6182,11 @@ meraki appliance updateNetworkApplianceFirewallCellularFirewallRules --networkId
 meraki appliance updateNetworkApplianceFirewallCellularFirewallRules --networkId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
+##### Method Code:
+```python
+def updateNetworkApplianceFirewallCellularFirewallRules(networkId: str, **kwargs):
+    # Code
+````
 
 ----------------------------------------
 ## Update Network Appliance Firewall Firewalled Service
@@ -6207,11 +6202,6 @@ https://developer.cisco.com/meraki/api-v1/#!update-network-appliance-firewall-fi
 - `--access` (string): A string indicating the rule for which IPs are allowed to use the specified service. Acceptable values are "blocked" (no remote IPs can access the service), "restricted" (only allowed IPs can access the service), and "unrestriced" (any remote IP can access the service). This field is required
 - `--allowedIps` (array): An array of allowed IPs that can access the service. This field is required if "access" is set to "restricted". Otherwise this field is ignored
 
-##### Method Code:
-```python
-def updateNetworkApplianceFirewallFirewalledService(networkId: str, service: str, access: str, **kwargs):
-    # Code
-````
 
 ##### Example:
 ```
@@ -6223,6 +6213,11 @@ meraki appliance updateNetworkApplianceFirewallFirewalledService --networkId 'ST
 meraki appliance updateNetworkApplianceFirewallFirewalledService --networkId 'STRING' --service 'STRING' --access 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
+##### Method Code:
+```python
+def updateNetworkApplianceFirewallFirewalledService(networkId: str, service: str, access: str, **kwargs):
+    # Code
+````
 
 ----------------------------------------
 ## Update Network Appliance Firewall Inbound Firewall Rules
@@ -6237,11 +6232,6 @@ https://developer.cisco.com/meraki/api-v1/#!update-network-appliance-firewall-in
 - `--rules` (array): An ordered array of the firewall rules (not including the default rule)
 - `--syslogDefaultRule` (boolean): Log the special default rule (boolean value - `--enable` only if you've configured a syslog server) (optional)
 
-##### Method Code:
-```python
-def updateNetworkApplianceFirewallInboundFirewallRules(networkId: str, **kwargs):
-    # Code
-````
 
 ##### Example:
 ```
@@ -6253,6 +6243,11 @@ meraki appliance updateNetworkApplianceFirewallInboundFirewallRules --networkId 
 meraki appliance updateNetworkApplianceFirewallInboundFirewallRules --networkId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
+##### Method Code:
+```python
+def updateNetworkApplianceFirewallInboundFirewallRules(networkId: str, **kwargs):
+    # Code
+````
 
 ----------------------------------------
 ## Update Network Appliance Firewall L3 Firewall Rules
@@ -6267,11 +6262,6 @@ https://developer.cisco.com/meraki/api-v1/#!update-network-appliance-firewall-l-
 - `--rules` (array): An ordered array of the firewall rules (not including the default rule)
 - `--syslogDefaultRule` (boolean): Log the special default rule (boolean value - `--enable` only if you've configured a syslog server) (optional)
 
-##### Method Code:
-```python
-def updateNetworkApplianceFirewallL3FirewallRules(networkId: str, **kwargs):
-    # Code
-````
 
 ##### Example:
 ```
@@ -6283,6 +6273,11 @@ meraki appliance updateNetworkApplianceFirewallL3FirewallRules --networkId 'STRI
 meraki appliance updateNetworkApplianceFirewallL3FirewallRules --networkId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
+##### Method Code:
+```python
+def updateNetworkApplianceFirewallL3FirewallRules(networkId: str, **kwargs):
+    # Code
+````
 
 ----------------------------------------
 ## Update Network Appliance Firewall L7 Firewall Rules
@@ -6296,11 +6291,6 @@ https://developer.cisco.com/meraki/api-v1/#!update-network-appliance-firewall-l-
 - `--networkId` (string): (required)
 - `--rules` (array): An ordered array of the MX L7 firewall rules
 
-##### Method Code:
-```python
-def updateNetworkApplianceFirewallL7FirewallRules(networkId: str, **kwargs):
-    # Code
-````
 
 ##### Example:
 ```
@@ -6312,6 +6302,11 @@ meraki appliance updateNetworkApplianceFirewallL7FirewallRules --networkId 'STRI
 meraki appliance updateNetworkApplianceFirewallL7FirewallRules --networkId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
+##### Method Code:
+```python
+def updateNetworkApplianceFirewallL7FirewallRules(networkId: str, **kwargs):
+    # Code
+````
 
 ----------------------------------------
 ## Update Network Appliance Firewall One To Many Nat Rules
@@ -6325,17 +6320,17 @@ https://developer.cisco.com/meraki/api-v1/#!update-network-appliance-firewall-on
 - `--networkId` (string): (required)
 - `--rules` (array): An array of 1:Many nat rules
 
-##### Method Code:
-```python
-def updateNetworkApplianceFirewallOneToManyNatRules(networkId: str, rules: list):
-    # Code
-````
 
 ##### Example:
 ```
 meraki appliance updateNetworkApplianceFirewallOneToManyNatRules --networkId 'STRING' --rules ITEM
 ````
 
+##### Method Code:
+```python
+def updateNetworkApplianceFirewallOneToManyNatRules(networkId: str, rules: list):
+    # Code
+````
 
 ----------------------------------------
 ## Update Network Appliance Firewall One To One Nat Rules
@@ -6349,17 +6344,17 @@ https://developer.cisco.com/meraki/api-v1/#!update-network-appliance-firewall-on
 - `--networkId` (string): (required)
 - `--rules` (array): An array of 1:1 nat rules
 
-##### Method Code:
-```python
-def updateNetworkApplianceFirewallOneToOneNatRules(networkId: str, rules: list):
-    # Code
-````
 
 ##### Example:
 ```
 meraki appliance updateNetworkApplianceFirewallOneToOneNatRules --networkId 'STRING' --rules ITEM
 ````
 
+##### Method Code:
+```python
+def updateNetworkApplianceFirewallOneToOneNatRules(networkId: str, rules: list):
+    # Code
+````
 
 ----------------------------------------
 ## Update Network Appliance Firewall Port Forwarding Rules
@@ -6373,17 +6368,17 @@ https://developer.cisco.com/meraki/api-v1/#!update-network-appliance-firewall-po
 - `--networkId` (string): (required)
 - `--rules` (array): An array of port forwarding params
 
-##### Method Code:
-```python
-def updateNetworkApplianceFirewallPortForwardingRules(networkId: str, rules: list):
-    # Code
-````
 
 ##### Example:
 ```
 meraki appliance updateNetworkApplianceFirewallPortForwardingRules --networkId 'STRING' --rules ITEM
 ````
 
+##### Method Code:
+```python
+def updateNetworkApplianceFirewallPortForwardingRules(networkId: str, rules: list):
+    # Code
+````
 
 ----------------------------------------
 ## Update Network Appliance Port
@@ -6403,11 +6398,6 @@ https://developer.cisco.com/meraki/api-v1/#!update-network-appliance-port
 - `--allowedVlans` (string): Comma-delimited list of the VLAN ID's allowed on the port, or 'all' to permit all VLAN's on the port.
 - `--accessPolicy` (string): The name of the policy. Only applicable to Access ports. Valid values are: 'open', '8021x-radius', 'mac-radius', 'hybris-radius' for MX64 or Z3 or any MX supporting the per port authentication feature. Otherwise, 'open' is the only valid value and 'open' is the default value if the field is missing.
 
-##### Method Code:
-```python
-def updateNetworkAppliancePort(networkId: str, portId: str, **kwargs):
-    # Code
-````
 
 ##### Example:
 ```
@@ -6419,6 +6409,11 @@ meraki appliance updateNetworkAppliancePort --networkId 'STRING' --portId 'STRIN
 meraki appliance updateNetworkAppliancePort --networkId 'STRING' --portId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
+##### Method Code:
+```python
+def updateNetworkAppliancePort(networkId: str, portId: str, **kwargs):
+    # Code
+````
 
 ----------------------------------------
 ## Update Network Appliance Security Intrusion
@@ -6434,11 +6429,6 @@ https://developer.cisco.com/meraki/api-v1/#!update-network-appliance-security-in
 - `--idsRulesets` (string): Set the detection ruleset 'connectivity'/'balanced'/'security' (optional - `--omitting` will leave current config unchanged). Default value is 'balanced' if none currently saved
 - `--protectedNetworks` (object): Set the included/excluded networks from the intrusion engine (optional - `--omitting` will leave current config unchanged). This is available only in 'passthrough' mode
 
-##### Method Code:
-```python
-def updateNetworkApplianceSecurityIntrusion(networkId: str, **kwargs):
-    # Code
-````
 
 ##### Example:
 ```
@@ -6450,6 +6440,11 @@ meraki appliance updateNetworkApplianceSecurityIntrusion --networkId 'STRING' --
 meraki appliance updateNetworkApplianceSecurityIntrusion --networkId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
+##### Method Code:
+```python
+def updateNetworkApplianceSecurityIntrusion(networkId: str, **kwargs):
+    # Code
+````
 
 ----------------------------------------
 ## Update Network Appliance Security Malware
@@ -6465,11 +6460,6 @@ https://developer.cisco.com/meraki/api-v1/#!update-network-appliance-security-ma
 - `--allowedUrls` (array): The urls that should be permitted by the malware detection engine. If omitted, the current config will remain unchanged. This is available only if your network supports AMP allow listing
 - `--allowedFiles` (array): The sha256 digests of files that should be permitted by the malware detection engine. If omitted, the current config will remain unchanged. This is available only if your network supports AMP allow listing
 
-##### Method Code:
-```python
-def updateNetworkApplianceSecurityMalware(networkId: str, mode: str, **kwargs):
-    # Code
-````
 
 ##### Example:
 ```
@@ -6481,6 +6471,11 @@ meraki appliance updateNetworkApplianceSecurityMalware --networkId 'STRING' --mo
 meraki appliance updateNetworkApplianceSecurityMalware --networkId 'STRING' --mode 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
+##### Method Code:
+```python
+def updateNetworkApplianceSecurityMalware(networkId: str, mode: str, **kwargs):
+    # Code
+````
 
 ----------------------------------------
 ## Update Network Appliance Single Lan
@@ -6495,11 +6490,6 @@ https://developer.cisco.com/meraki/api-v1/#!update-network-appliance-single-lan
 - `--subnet` (string): The subnet of the single LAN configuration
 - `--applianceIp` (string): The appliance IP address of the single LAN
 
-##### Method Code:
-```python
-def updateNetworkApplianceSingleLan(networkId: str, **kwargs):
-    # Code
-````
 
 ##### Example:
 ```
@@ -6511,6 +6501,11 @@ meraki appliance updateNetworkApplianceSingleLan --networkId 'STRING' --optional
 meraki appliance updateNetworkApplianceSingleLan --networkId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
+##### Method Code:
+```python
+def updateNetworkApplianceSingleLan(networkId: str, **kwargs):
+    # Code
+````
 
 ----------------------------------------
 ## Update Network Appliance Static Route
@@ -6530,11 +6525,6 @@ https://developer.cisco.com/meraki/api-v1/#!update-network-appliance-static-rout
 - `--fixedIpAssignments` (object): The DHCP fixed IP assignments on the static route. This should be an object that contains mappings from MAC addresses to objects that themselves each contain "ip" and "name" string fields. See the sample request/response for more details.
 - `--reservedIpRanges` (array): The DHCP reserved IP ranges on the static route
 
-##### Method Code:
-```python
-def updateNetworkApplianceStaticRoute(networkId: str, staticRouteId: str, **kwargs):
-    # Code
-````
 
 ##### Example:
 ```
@@ -6546,6 +6536,11 @@ meraki appliance updateNetworkApplianceStaticRoute --networkId 'STRING' --static
 meraki appliance updateNetworkApplianceStaticRoute --networkId 'STRING' --staticRouteId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
+##### Method Code:
+```python
+def updateNetworkApplianceStaticRoute(networkId: str, staticRouteId: str, **kwargs):
+    # Code
+````
 
 ----------------------------------------
 ## Update Network Appliance Traffic Shaping
@@ -6559,11 +6554,6 @@ https://developer.cisco.com/meraki/api-v1/#!update-network-appliance-traffic-sha
 - `--networkId` (string): (required)
 - `--globalBandwidthLimits` (object): Global per-client bandwidth limit
 
-##### Method Code:
-```python
-def updateNetworkApplianceTrafficShaping(networkId: str, **kwargs):
-    # Code
-````
 
 ##### Example:
 ```
@@ -6575,6 +6565,11 @@ meraki appliance updateNetworkApplianceTrafficShaping --networkId 'STRING' --opt
 meraki appliance updateNetworkApplianceTrafficShaping --networkId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
+##### Method Code:
+```python
+def updateNetworkApplianceTrafficShaping(networkId: str, **kwargs):
+    # Code
+````
 
 ----------------------------------------
 ## Update Network Appliance Traffic Shaping Custom Performance Class
@@ -6592,11 +6587,6 @@ https://developer.cisco.com/meraki/api-v1/#!update-network-appliance-traffic-sha
 - `--maxJitter` (integer): Maximum jitter in milliseconds
 - `--maxLossPercentage` (integer): Maximum percentage of packet loss
 
-##### Method Code:
-```python
-def updateNetworkApplianceTrafficShapingCustomPerformanceClass(networkId: str, customPerformanceClassId: str, **kwargs):
-    # Code
-````
 
 ##### Example:
 ```
@@ -6608,6 +6598,11 @@ meraki appliance updateNetworkApplianceTrafficShapingCustomPerformanceClass --ne
 meraki appliance updateNetworkApplianceTrafficShapingCustomPerformanceClass --networkId 'STRING' --customPerformanceClassId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
+##### Method Code:
+```python
+def updateNetworkApplianceTrafficShapingCustomPerformanceClass(networkId: str, customPerformanceClassId: str, **kwargs):
+    # Code
+````
 
 ----------------------------------------
 ## Update Network Appliance Traffic Shaping Rules
@@ -6625,11 +6620,6 @@ they are specified in. An empty list (or null) means no rules. Note that
 you are allowed a maximum of 8 rules.
 
 
-##### Method Code:
-```python
-def updateNetworkApplianceTrafficShapingRules(networkId: str, **kwargs):
-    # Code
-````
 
 ##### Example:
 ```
@@ -6641,6 +6631,11 @@ meraki appliance updateNetworkApplianceTrafficShapingRules --networkId 'STRING' 
 meraki appliance updateNetworkApplianceTrafficShapingRules --networkId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
+##### Method Code:
+```python
+def updateNetworkApplianceTrafficShapingRules(networkId: str, **kwargs):
+    # Code
+````
 
 ----------------------------------------
 ## Update Network Appliance Traffic Shaping Uplink Bandwidth
@@ -6654,11 +6649,6 @@ https://developer.cisco.com/meraki/api-v1/#!update-network-appliance-traffic-sha
 - `--networkId` (string): (required)
 - `--bandwidthLimits` (object): A mapping of uplinks to their bandwidth settings (be sure to check which uplinks are supported for your network)
 
-##### Method Code:
-```python
-def updateNetworkApplianceTrafficShapingUplinkBandwidth(networkId: str, **kwargs):
-    # Code
-````
 
 ##### Example:
 ```
@@ -6670,6 +6660,11 @@ meraki appliance updateNetworkApplianceTrafficShapingUplinkBandwidth --networkId
 meraki appliance updateNetworkApplianceTrafficShapingUplinkBandwidth --networkId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
+##### Method Code:
+```python
+def updateNetworkApplianceTrafficShapingUplinkBandwidth(networkId: str, **kwargs):
+    # Code
+````
 
 ----------------------------------------
 ## Update Network Appliance Traffic Shaping Uplink Selection
@@ -6687,11 +6682,6 @@ https://developer.cisco.com/meraki/api-v1/#!update-network-appliance-traffic-sha
 - `--wanTrafficUplinkPreferences` (array): Array of uplink preference rules for WAN traffic
 - `--vpnTrafficUplinkPreferences` (array): Array of uplink preference rules for VPN traffic
 
-##### Method Code:
-```python
-def updateNetworkApplianceTrafficShapingUplinkSelection(networkId: str, **kwargs):
-    # Code
-````
 
 ##### Example:
 ```
@@ -6703,6 +6693,11 @@ meraki appliance updateNetworkApplianceTrafficShapingUplinkSelection --networkId
 meraki appliance updateNetworkApplianceTrafficShapingUplinkSelection --networkId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
+##### Method Code:
+```python
+def updateNetworkApplianceTrafficShapingUplinkSelection(networkId: str, **kwargs):
+    # Code
+````
 
 ----------------------------------------
 ## Update Network Appliance Vlan
@@ -6731,11 +6726,6 @@ https://developer.cisco.com/meraki/api-v1/#!update-network-appliance-vlan
 - `--dnsNameservers` (string): The DNS nameservers used for DHCP responses, either "upstream_dns", "google_dns", "opendns", or a newline seperated string of IP addresses or domain names
 - `--dhcpOptions` (array): The list of DHCP options that will be included in DHCP responses. Each object in the list should have "code", "type", and "value" properties.
 
-##### Method Code:
-```python
-def updateNetworkApplianceVlan(networkId: str, vlanId: str, **kwargs):
-    # Code
-````
 
 ##### Example:
 ```
@@ -6747,6 +6737,11 @@ meraki appliance updateNetworkApplianceVlan --networkId 'STRING' --vlanId 'STRIN
 meraki appliance updateNetworkApplianceVlan --networkId 'STRING' --vlanId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
+##### Method Code:
+```python
+def updateNetworkApplianceVlan(networkId: str, vlanId: str, **kwargs):
+    # Code
+````
 
 ----------------------------------------
 ## Update Network Appliance Vlans Settings
@@ -6760,11 +6755,6 @@ https://developer.cisco.com/meraki/api-v1/#!update-network-appliance-vlans-setti
 - `--networkId` (string): (required)
 - `--vlansEnabled` (boolean): Boolean indicating whether to enable (true) or disable (false) VLANs for the network
 
-##### Method Code:
-```python
-def updateNetworkApplianceVlansSettings(networkId: str, **kwargs):
-    # Code
-````
 
 ##### Example:
 ```
@@ -6776,6 +6766,11 @@ meraki appliance updateNetworkApplianceVlansSettings --networkId 'STRING' --opti
 meraki appliance updateNetworkApplianceVlansSettings --networkId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
+##### Method Code:
+```python
+def updateNetworkApplianceVlansSettings(networkId: str, **kwargs):
+    # Code
+````
 
 ----------------------------------------
 ## Update Network Appliance Vpn Bgp
@@ -6792,11 +6787,6 @@ https://developer.cisco.com/meraki/api-v1/#!update-network-appliance-vpn-bgp
 - `--ibgpHoldTimer` (integer): The IBGP holdtimer in seconds. The IBGP holdtimer must be an integer between 12 and 240. When absent, this field is not updated. If no value exists then it defaults to 240.
 - `--neighbors` (array): List of BGP neighbors. This list replaces the existing set of neighbors. When absent, this field is not updated.
 
-##### Method Code:
-```python
-def updateNetworkApplianceVpnBgp(networkId: str, enabled: bool, **kwargs):
-    # Code
-````
 
 ##### Example:
 ```
@@ -6808,6 +6798,11 @@ meraki appliance updateNetworkApplianceVpnBgp --networkId 'STRING' --enabled --o
 meraki appliance updateNetworkApplianceVpnBgp --networkId 'STRING' --enabled --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
+##### Method Code:
+```python
+def updateNetworkApplianceVpnBgp(networkId: str, enabled: bool, **kwargs):
+    # Code
+````
 
 ----------------------------------------
 ## Update Network Appliance Vpn Site To Site Vpn
@@ -6823,11 +6818,6 @@ https://developer.cisco.com/meraki/api-v1/#!update-network-appliance-vpn-site-to
 - `--hubs` (array): The list of VPN hubs, in order of preference. In spoke mode, at least 1 hub is required.
 - `--subnets` (array): The list of subnets and their VPN presence.
 
-##### Method Code:
-```python
-def updateNetworkApplianceVpnSiteToSiteVpn(networkId: str, mode: str, **kwargs):
-    # Code
-````
 
 ##### Example:
 ```
@@ -6839,6 +6829,11 @@ meraki appliance updateNetworkApplianceVpnSiteToSiteVpn --networkId 'STRING' --m
 meraki appliance updateNetworkApplianceVpnSiteToSiteVpn --networkId 'STRING' --mode 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
+##### Method Code:
+```python
+def updateNetworkApplianceVpnSiteToSiteVpn(networkId: str, mode: str, **kwargs):
+    # Code
+````
 
 ----------------------------------------
 ## Update Network Appliance Warm Spare
@@ -6856,11 +6851,6 @@ https://developer.cisco.com/meraki/api-v1/#!update-network-appliance-warm-spare
 - `--virtualIp1` (string): The WAN 1 shared IP
 - `--virtualIp2` (string): The WAN 2 shared IP
 
-##### Method Code:
-```python
-def updateNetworkApplianceWarmSpare(networkId: str, enabled: bool, **kwargs):
-    # Code
-````
 
 ##### Example:
 ```
@@ -6872,6 +6862,11 @@ meraki appliance updateNetworkApplianceWarmSpare --networkId 'STRING' --enabled 
 meraki appliance updateNetworkApplianceWarmSpare --networkId 'STRING' --enabled --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
+##### Method Code:
+```python
+def updateNetworkApplianceWarmSpare(networkId: str, enabled: bool, **kwargs):
+    # Code
+````
 
 ----------------------------------------
 ## Update Organization Appliance Security Intrusion
@@ -6885,17 +6880,17 @@ https://developer.cisco.com/meraki/api-v1/#!update-organization-appliance-securi
 - `--organizationId` (string): (required)
 - `--allowedRules` (array): Sets a list of specific SNORT signatures to allow
 
-##### Method Code:
-```python
-def updateOrganizationApplianceSecurityIntrusion(organizationId: str, allowedRules: list):
-    # Code
-````
 
 ##### Example:
 ```
 meraki appliance updateOrganizationApplianceSecurityIntrusion --organizationId 'STRING' --allowedRules ITEM
 ````
 
+##### Method Code:
+```python
+def updateOrganizationApplianceSecurityIntrusion(organizationId: str, allowedRules: list):
+    # Code
+````
 
 ----------------------------------------
 ## Update Organization Appliance Vpn Third Party V P N Peers
@@ -6909,17 +6904,17 @@ https://developer.cisco.com/meraki/api-v1/#!update-organization-appliance-vpn-th
 - `--organizationId` (string): (required)
 - `--peers` (array): The list of VPN peers
 
-##### Method Code:
-```python
-def updateOrganizationApplianceVpnThirdPartyVPNPeers(organizationId: str, peers: list):
-    # Code
-````
 
 ##### Example:
 ```
 meraki appliance updateOrganizationApplianceVpnThirdPartyVPNPeers --organizationId 'STRING' --peers ITEM
 ````
 
+##### Method Code:
+```python
+def updateOrganizationApplianceVpnThirdPartyVPNPeers(organizationId: str, peers: list):
+    # Code
+````
 
 ----------------------------------------
 ## Update Organization Appliance Vpn Vpn Firewall Rules
@@ -6934,11 +6929,6 @@ https://developer.cisco.com/meraki/api-v1/#!update-organization-appliance-vpn-vp
 - `--rules` (array): An ordered array of the firewall rules (not including the default rule)
 - `--syslogDefaultRule` (boolean): Log the special default rule (boolean value - `--enable` only if you've configured a syslog server) (optional)
 
-##### Method Code:
-```python
-def updateOrganizationApplianceVpnVpnFirewallRules(organizationId: str, **kwargs):
-    # Code
-````
 
 ##### Example:
 ```
@@ -6950,6 +6940,11 @@ meraki appliance updateOrganizationApplianceVpnVpnFirewallRules --organizationId
 meraki appliance updateOrganizationApplianceVpnVpnFirewallRules --organizationId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
+##### Method Code:
+```python
+def updateOrganizationApplianceVpnVpnFirewallRules(organizationId: str, **kwargs):
+    # Code
+````
 
 ----------------------------------------
 
@@ -6977,11 +6972,6 @@ https://developer.cisco.com/meraki/api-v1/#!create-network-camera-quality-retent
 - `--maxRetentionDays` (integer): The maximum number of days for which the data will be stored, or 'null' to keep data until storage space runs out. If the former, it can be one of [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 14, 30, 60, 90] days
 - `--videoSettings` (object): Video quality and resolution settings for all the camera models.
 
-##### Method Code:
-```python
-def createNetworkCameraQualityRetentionProfile(networkId: str, name: str, **kwargs):
-    # Code
-````
 
 ##### Example:
 ```
@@ -6993,6 +6983,11 @@ meraki camera createNetworkCameraQualityRetentionProfile --networkId 'STRING' --
 meraki camera createNetworkCameraQualityRetentionProfile --networkId 'STRING' --name 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
+##### Method Code:
+```python
+def createNetworkCameraQualityRetentionProfile(networkId: str, name: str, **kwargs):
+    # Code
+````
 
 ----------------------------------------
 ## Delete Network Camera Quality Retention Profile
@@ -7006,17 +7001,17 @@ https://developer.cisco.com/meraki/api-v1/#!delete-network-camera-quality-retent
 - `--networkId` (string): (required)
 - `--qualityRetentionProfileId` (string): (required)
 
-##### Method Code:
-```python
-def deleteNetworkCameraQualityRetentionProfile(networkId: str, qualityRetentionProfileId: str):
-    # Code
-````
 
 ##### Example:
 ```
 meraki camera deleteNetworkCameraQualityRetentionProfile --networkId 'STRING' --qualityRetentionProfileId 'STRING'
 ````
 
+##### Method Code:
+```python
+def deleteNetworkCameraQualityRetentionProfile(networkId: str, qualityRetentionProfileId: str):
+    # Code
+````
 
 ----------------------------------------
 ## Generate Device Camera Snapshot
@@ -7031,11 +7026,6 @@ https://developer.cisco.com/meraki/api-v1/#!generate-device-camera-snapshot
 - `--timestamp` (string): [optional] The snapshot will be taken from this time on the camera. The timestamp is expected to be in ISO 8601 format. If no timestamp is specified, we will assume current time.
 - `--fullframe` (boolean): [optional] If set to "true" the snapshot will be taken at full sensor resolution. This will error if used with timestamp.
 
-##### Method Code:
-```python
-def generateDeviceCameraSnapshot(serial: str, **kwargs):
-    # Code
-````
 
 ##### Example:
 ```
@@ -7047,6 +7037,11 @@ meraki camera generateDeviceCameraSnapshot --serial 'STRING' --optionalArg1 'opt
 meraki camera generateDeviceCameraSnapshot --serial 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
+##### Method Code:
+```python
+def generateDeviceCameraSnapshot(serial: str, **kwargs):
+    # Code
+````
 
 ----------------------------------------
 ## Get Device Camera Analytics Live
@@ -7059,17 +7054,17 @@ https://developer.cisco.com/meraki/api-v1/#!get-device-camera-analytics-live
 ##### Arguments
 - `--serial` (string): (required)
 
-##### Method Code:
-```python
-def getDeviceCameraAnalyticsLive(serial: str):
-    # Code
-````
 
 ##### Example:
 ```
 meraki camera getDeviceCameraAnalyticsLive --serial 'STRING'
 ````
 
+##### Method Code:
+```python
+def getDeviceCameraAnalyticsLive(serial: str):
+    # Code
+````
 
 ----------------------------------------
 ## Get Device Camera Analytics Overview
@@ -7086,11 +7081,6 @@ https://developer.cisco.com/meraki/api-v1/#!get-device-camera-analytics-overview
 - `--timespan` (number): The timespan for which the information will be fetched. If specifying timespan, do not specify parameters t0 and t1. The value must be in seconds and be less than or equal to 7 days. The default is 1 hour.
 - `--objectType` (string): [optional] The object type for which analytics will be retrieved. The default object type is person. The available types are [person, vehicle].
 
-##### Method Code:
-```python
-def getDeviceCameraAnalyticsOverview(serial: str, **kwargs):
-    # Code
-````
 
 ##### Example:
 ```
@@ -7102,6 +7092,11 @@ meraki camera getDeviceCameraAnalyticsOverview --serial 'STRING' --optionalArg1 
 meraki camera getDeviceCameraAnalyticsOverview --serial 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
+##### Method Code:
+```python
+def getDeviceCameraAnalyticsOverview(serial: str, **kwargs):
+    # Code
+````
 
 ----------------------------------------
 ## Get Device Camera Analytics Recent
@@ -7115,11 +7110,6 @@ https://developer.cisco.com/meraki/api-v1/#!get-device-camera-analytics-recent
 - `--serial` (string): (required)
 - `--objectType` (string): [optional] The object type for which analytics will be retrieved. The default object type is person. The available types are [person, vehicle].
 
-##### Method Code:
-```python
-def getDeviceCameraAnalyticsRecent(serial: str, **kwargs):
-    # Code
-````
 
 ##### Example:
 ```
@@ -7131,6 +7121,11 @@ meraki camera getDeviceCameraAnalyticsRecent --serial 'STRING' --optionalArg1 'o
 meraki camera getDeviceCameraAnalyticsRecent --serial 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
+##### Method Code:
+```python
+def getDeviceCameraAnalyticsRecent(serial: str, **kwargs):
+    # Code
+````
 
 ----------------------------------------
 ## Get Device Camera Analytics Zone History
@@ -7149,11 +7144,6 @@ https://developer.cisco.com/meraki/api-v1/#!get-device-camera-analytics-zone-his
 - `--resolution` (integer): The time resolution in seconds for returned data. The valid resolutions are: 60. The default is 60.
 - `--objectType` (string): [optional] The object type for which analytics will be retrieved. The default object type is person. The available types are [person, vehicle].
 
-##### Method Code:
-```python
-def getDeviceCameraAnalyticsZoneHistory(serial: str, zoneId: str, **kwargs):
-    # Code
-````
 
 ##### Example:
 ```
@@ -7165,6 +7155,11 @@ meraki camera getDeviceCameraAnalyticsZoneHistory --serial 'STRING' --zoneId 'ST
 meraki camera getDeviceCameraAnalyticsZoneHistory --serial 'STRING' --zoneId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
+##### Method Code:
+```python
+def getDeviceCameraAnalyticsZoneHistory(serial: str, zoneId: str, **kwargs):
+    # Code
+````
 
 ----------------------------------------
 ## Get Device Camera Analytics Zones
@@ -7177,17 +7172,17 @@ https://developer.cisco.com/meraki/api-v1/#!get-device-camera-analytics-zones
 ##### Arguments
 - `--serial` (string): (required)
 
-##### Method Code:
-```python
-def getDeviceCameraAnalyticsZones(serial: str):
-    # Code
-````
 
 ##### Example:
 ```
 meraki camera getDeviceCameraAnalyticsZones --serial 'STRING'
 ````
 
+##### Method Code:
+```python
+def getDeviceCameraAnalyticsZones(serial: str):
+    # Code
+````
 
 ----------------------------------------
 ## Get Device Camera Quality And Retention
@@ -7200,17 +7195,17 @@ https://developer.cisco.com/meraki/api-v1/#!get-device-camera-quality-and-retent
 ##### Arguments
 - `--serial` (string): (required)
 
-##### Method Code:
-```python
-def getDeviceCameraQualityAndRetention(serial: str):
-    # Code
-````
 
 ##### Example:
 ```
 meraki camera getDeviceCameraQualityAndRetention --serial 'STRING'
 ````
 
+##### Method Code:
+```python
+def getDeviceCameraQualityAndRetention(serial: str):
+    # Code
+````
 
 ----------------------------------------
 ## Get Device Camera Sense
@@ -7223,17 +7218,17 @@ https://developer.cisco.com/meraki/api-v1/#!get-device-camera-sense
 ##### Arguments
 - `--serial` (string): (required)
 
-##### Method Code:
-```python
-def getDeviceCameraSense(serial: str):
-    # Code
-````
 
 ##### Example:
 ```
 meraki camera getDeviceCameraSense --serial 'STRING'
 ````
 
+##### Method Code:
+```python
+def getDeviceCameraSense(serial: str):
+    # Code
+````
 
 ----------------------------------------
 ## Get Device Camera Sense Object Detection Models
@@ -7246,17 +7241,17 @@ https://developer.cisco.com/meraki/api-v1/#!get-device-camera-sense-object-detec
 ##### Arguments
 - `--serial` (string): (required)
 
-##### Method Code:
-```python
-def getDeviceCameraSenseObjectDetectionModels(serial: str):
-    # Code
-````
 
 ##### Example:
 ```
 meraki camera getDeviceCameraSenseObjectDetectionModels --serial 'STRING'
 ````
 
+##### Method Code:
+```python
+def getDeviceCameraSenseObjectDetectionModels(serial: str):
+    # Code
+````
 
 ----------------------------------------
 ## Get Device Camera Video Link
@@ -7270,11 +7265,6 @@ https://developer.cisco.com/meraki/api-v1/#!get-device-camera-video-link
 - `--serial` (string): (required)
 - `--timestamp` (string): [optional] The video link will start at this time. The timestamp should be a string in ISO8601 format. If no timestamp is specified, we will assume current time.
 
-##### Method Code:
-```python
-def getDeviceCameraVideoLink(serial: str, **kwargs):
-    # Code
-````
 
 ##### Example:
 ```
@@ -7286,6 +7276,11 @@ meraki camera getDeviceCameraVideoLink --serial 'STRING' --optionalArg1 'optiona
 meraki camera getDeviceCameraVideoLink --serial 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
+##### Method Code:
+```python
+def getDeviceCameraVideoLink(serial: str, **kwargs):
+    # Code
+````
 
 ----------------------------------------
 ## Get Device Camera Video Settings
@@ -7298,17 +7293,17 @@ https://developer.cisco.com/meraki/api-v1/#!get-device-camera-video-settings
 ##### Arguments
 - `--serial` (string): (required)
 
-##### Method Code:
-```python
-def getDeviceCameraVideoSettings(serial: str):
-    # Code
-````
 
 ##### Example:
 ```
 meraki camera getDeviceCameraVideoSettings --serial 'STRING'
 ````
 
+##### Method Code:
+```python
+def getDeviceCameraVideoSettings(serial: str):
+    # Code
+````
 
 ----------------------------------------
 ## Get Network Camera Quality Retention Profile
@@ -7322,17 +7317,17 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-camera-quality-retention
 - `--networkId` (string): (required)
 - `--qualityRetentionProfileId` (string): (required)
 
-##### Method Code:
-```python
-def getNetworkCameraQualityRetentionProfile(networkId: str, qualityRetentionProfileId: str):
-    # Code
-````
 
 ##### Example:
 ```
 meraki camera getNetworkCameraQualityRetentionProfile --networkId 'STRING' --qualityRetentionProfileId 'STRING'
 ````
 
+##### Method Code:
+```python
+def getNetworkCameraQualityRetentionProfile(networkId: str, qualityRetentionProfileId: str):
+    # Code
+````
 
 ----------------------------------------
 ## Get Network Camera Quality Retention Profiles
@@ -7345,17 +7340,17 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-camera-quality-retention
 ##### Arguments
 - `--networkId` (string): (required)
 
-##### Method Code:
-```python
-def getNetworkCameraQualityRetentionProfiles(networkId: str):
-    # Code
-````
 
 ##### Example:
 ```
 meraki camera getNetworkCameraQualityRetentionProfiles --networkId 'STRING'
 ````
 
+##### Method Code:
+```python
+def getNetworkCameraQualityRetentionProfiles(networkId: str):
+    # Code
+````
 
 ----------------------------------------
 ## Get Network Camera Schedules
@@ -7368,17 +7363,17 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-camera-schedules
 ##### Arguments
 - `--networkId` (string): (required)
 
-##### Method Code:
-```python
-def getNetworkCameraSchedules(networkId: str):
-    # Code
-````
 
 ##### Example:
 ```
 meraki camera getNetworkCameraSchedules --networkId 'STRING'
 ````
 
+##### Method Code:
+```python
+def getNetworkCameraSchedules(networkId: str):
+    # Code
+````
 
 ----------------------------------------
 ## Update Device Camera Quality And Retention
@@ -7398,11 +7393,6 @@ https://developer.cisco.com/meraki/api-v1/#!update-device-camera-quality-and-ret
 - `--resolution` (string): Resolution of the camera. Can be one of '1280x720', '1920x1080', '1080x1080' or '2058x2058'. Not all resolutions are supported by every camera model.
 - `--motionDetectorVersion` (integer): The version of the motion detector that will be used by the camera. Only applies to Gen 2 cameras. Defaults to v2.
 
-##### Method Code:
-```python
-def updateDeviceCameraQualityAndRetention(serial: str, **kwargs):
-    # Code
-````
 
 ##### Example:
 ```
@@ -7414,6 +7404,11 @@ meraki camera updateDeviceCameraQualityAndRetention --serial 'STRING' --optional
 meraki camera updateDeviceCameraQualityAndRetention --serial 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
+##### Method Code:
+```python
+def updateDeviceCameraQualityAndRetention(serial: str, **kwargs):
+    # Code
+````
 
 ----------------------------------------
 ## Update Device Camera Sense
@@ -7429,11 +7424,6 @@ https://developer.cisco.com/meraki/api-v1/#!update-device-camera-sense
 - `--mqttBrokerId` (string): The ID of the MQTT broker to be enabled on the camera. A value of null will disable MQTT on the camera
 - `--detectionModelId` (string): The ID of the object detection model
 
-##### Method Code:
-```python
-def updateDeviceCameraSense(serial: str, **kwargs):
-    # Code
-````
 
 ##### Example:
 ```
@@ -7445,6 +7435,11 @@ meraki camera updateDeviceCameraSense --serial 'STRING' --optionalArg1 'optional
 meraki camera updateDeviceCameraSense --serial 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
+##### Method Code:
+```python
+def updateDeviceCameraSense(serial: str, **kwargs):
+    # Code
+````
 
 ----------------------------------------
 ## Update Device Camera Video Settings
@@ -7458,11 +7453,6 @@ https://developer.cisco.com/meraki/api-v1/#!update-device-camera-video-settings
 - `--serial` (string): (required)
 - `--externalRtspEnabled` (boolean): Boolean indicating if external rtsp stream is exposed
 
-##### Method Code:
-```python
-def updateDeviceCameraVideoSettings(serial: str, **kwargs):
-    # Code
-````
 
 ##### Example:
 ```
@@ -7474,6 +7464,11 @@ meraki camera updateDeviceCameraVideoSettings --serial 'STRING' --optionalArg1 '
 meraki camera updateDeviceCameraVideoSettings --serial 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
+##### Method Code:
+```python
+def updateDeviceCameraVideoSettings(serial: str, **kwargs):
+    # Code
+````
 
 ----------------------------------------
 ## Update Network Camera Quality Retention Profile
@@ -7496,11 +7491,6 @@ https://developer.cisco.com/meraki/api-v1/#!update-network-camera-quality-retent
 - `--maxRetentionDays` (integer): The maximum number of days for which the data will be stored, or 'null' to keep data until storage space runs out. If the former, it can be one of [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 14, 30, 60, 90] days
 - `--videoSettings` (object): Video quality and resolution settings for all the camera models.
 
-##### Method Code:
-```python
-def updateNetworkCameraQualityRetentionProfile(networkId: str, qualityRetentionProfileId: str, **kwargs):
-    # Code
-````
 
 ##### Example:
 ```
@@ -7512,6 +7502,11 @@ meraki camera updateNetworkCameraQualityRetentionProfile --networkId 'STRING' --
 meraki camera updateNetworkCameraQualityRetentionProfile --networkId 'STRING' --qualityRetentionProfileId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
+##### Method Code:
+```python
+def updateNetworkCameraQualityRetentionProfile(networkId: str, qualityRetentionProfileId: str, **kwargs):
+    # Code
+````
 
 ----------------------------------------
 
@@ -7530,17 +7525,17 @@ https://developer.cisco.com/meraki/api-v1/#!get-device-cellular-gateway-lan
 ##### Arguments
 - `--serial` (string): (required)
 
-##### Method Code:
-```python
-def getDeviceCellularGatewayLan(serial: str):
-    # Code
-````
 
 ##### Example:
 ```
 meraki cellularGateway getDeviceCellularGatewayLan --serial 'STRING'
 ````
 
+##### Method Code:
+```python
+def getDeviceCellularGatewayLan(serial: str):
+    # Code
+````
 
 ----------------------------------------
 ## Get Device Cellular Gateway Port Forwarding Rules
@@ -7553,17 +7548,17 @@ https://developer.cisco.com/meraki/api-v1/#!get-device-cellular-gateway-port-for
 ##### Arguments
 - `--serial` (string): (required)
 
-##### Method Code:
-```python
-def getDeviceCellularGatewayPortForwardingRules(serial: str):
-    # Code
-````
 
 ##### Example:
 ```
 meraki cellularGateway getDeviceCellularGatewayPortForwardingRules --serial 'STRING'
 ````
 
+##### Method Code:
+```python
+def getDeviceCellularGatewayPortForwardingRules(serial: str):
+    # Code
+````
 
 ----------------------------------------
 ## Get Network Cellular Gateway Connectivity Monitoring Destinations
@@ -7576,17 +7571,17 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-cellular-gateway-connect
 ##### Arguments
 - `--networkId` (string): (required)
 
-##### Method Code:
-```python
-def getNetworkCellularGatewayConnectivityMonitoringDestinations(networkId: str):
-    # Code
-````
 
 ##### Example:
 ```
 meraki cellularGateway getNetworkCellularGatewayConnectivityMonitoringDestinations --networkId 'STRING'
 ````
 
+##### Method Code:
+```python
+def getNetworkCellularGatewayConnectivityMonitoringDestinations(networkId: str):
+    # Code
+````
 
 ----------------------------------------
 ## Get Network Cellular Gateway Dhcp
@@ -7599,17 +7594,17 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-cellular-gateway-dhcp
 ##### Arguments
 - `--networkId` (string): (required)
 
-##### Method Code:
-```python
-def getNetworkCellularGatewayDhcp(networkId: str):
-    # Code
-````
 
 ##### Example:
 ```
 meraki cellularGateway getNetworkCellularGatewayDhcp --networkId 'STRING'
 ````
 
+##### Method Code:
+```python
+def getNetworkCellularGatewayDhcp(networkId: str):
+    # Code
+````
 
 ----------------------------------------
 ## Get Network Cellular Gateway Subnet Pool
@@ -7622,17 +7617,17 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-cellular-gateway-subnet-
 ##### Arguments
 - `--networkId` (string): (required)
 
-##### Method Code:
-```python
-def getNetworkCellularGatewaySubnetPool(networkId: str):
-    # Code
-````
 
 ##### Example:
 ```
 meraki cellularGateway getNetworkCellularGatewaySubnetPool --networkId 'STRING'
 ````
 
+##### Method Code:
+```python
+def getNetworkCellularGatewaySubnetPool(networkId: str):
+    # Code
+````
 
 ----------------------------------------
 ## Get Network Cellular Gateway Uplink
@@ -7645,17 +7640,17 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-cellular-gateway-uplink
 ##### Arguments
 - `--networkId` (string): (required)
 
-##### Method Code:
-```python
-def getNetworkCellularGatewayUplink(networkId: str):
-    # Code
-````
 
 ##### Example:
 ```
 meraki cellularGateway getNetworkCellularGatewayUplink --networkId 'STRING'
 ````
 
+##### Method Code:
+```python
+def getNetworkCellularGatewayUplink(networkId: str):
+    # Code
+````
 
 ----------------------------------------
 ## Get Organization Cellular Gateway Uplink Statuses
@@ -7676,11 +7671,6 @@ https://developer.cisco.com/meraki/api-v1/#!get-organization-cellular-gateway-up
 - `--serials` (array): A list of serial numbers. The returned devices will be filtered to only include these serials.
 - `--iccids` (array): A list of ICCIDs. The returned devices will be filtered to only include these ICCIDs.
 
-##### Method Code:
-```python
-def getOrganizationCellularGatewayUplinkStatuses(organizationId: str, total_pages=1, direction='next', **kwargs):
-    # Code
-````
 
 ##### Example:
 ```
@@ -7692,6 +7682,11 @@ meraki cellularGateway getOrganizationCellularGatewayUplinkStatuses --organizati
 meraki cellularGateway getOrganizationCellularGatewayUplinkStatuses --organizationId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
+##### Method Code:
+```python
+def getOrganizationCellularGatewayUplinkStatuses(organizationId: str, total_pages=1, direction='next', **kwargs):
+    # Code
+````
 
 ----------------------------------------
 ## Update Device Cellular Gateway Lan
@@ -7706,11 +7701,6 @@ https://developer.cisco.com/meraki/api-v1/#!update-device-cellular-gateway-lan
 - `--reservedIpRanges` (array): list of all reserved IP ranges for a single MG
 - `--fixedIpAssignments` (array): list of all fixed IP assignments for a single MG
 
-##### Method Code:
-```python
-def updateDeviceCellularGatewayLan(serial: str, **kwargs):
-    # Code
-````
 
 ##### Example:
 ```
@@ -7722,6 +7712,11 @@ meraki cellularGateway updateDeviceCellularGatewayLan --serial 'STRING' --option
 meraki cellularGateway updateDeviceCellularGatewayLan --serial 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
+##### Method Code:
+```python
+def updateDeviceCellularGatewayLan(serial: str, **kwargs):
+    # Code
+````
 
 ----------------------------------------
 ## Update Device Cellular Gateway Port Forwarding Rules
@@ -7735,11 +7730,6 @@ https://developer.cisco.com/meraki/api-v1/#!update-device-cellular-gateway-port-
 - `--serial` (string): (required)
 - `--rules` (array): An array of port forwarding params
 
-##### Method Code:
-```python
-def updateDeviceCellularGatewayPortForwardingRules(serial: str, **kwargs):
-    # Code
-````
 
 ##### Example:
 ```
@@ -7751,6 +7741,11 @@ meraki cellularGateway updateDeviceCellularGatewayPortForwardingRules --serial '
 meraki cellularGateway updateDeviceCellularGatewayPortForwardingRules --serial 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
+##### Method Code:
+```python
+def updateDeviceCellularGatewayPortForwardingRules(serial: str, **kwargs):
+    # Code
+````
 
 ----------------------------------------
 ## Update Network Cellular Gateway Connectivity Monitoring Destinations
@@ -7764,11 +7759,6 @@ https://developer.cisco.com/meraki/api-v1/#!update-network-cellular-gateway-conn
 - `--networkId` (string): (required)
 - `--destinations` (array): The list of connectivity monitoring destinations
 
-##### Method Code:
-```python
-def updateNetworkCellularGatewayConnectivityMonitoringDestinations(networkId: str, **kwargs):
-    # Code
-````
 
 ##### Example:
 ```
@@ -7780,6 +7770,11 @@ meraki cellularGateway updateNetworkCellularGatewayConnectivityMonitoringDestina
 meraki cellularGateway updateNetworkCellularGatewayConnectivityMonitoringDestinations --networkId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
+##### Method Code:
+```python
+def updateNetworkCellularGatewayConnectivityMonitoringDestinations(networkId: str, **kwargs):
+    # Code
+````
 
 ----------------------------------------
 ## Update Network Cellular Gateway Dhcp
@@ -7795,11 +7790,6 @@ https://developer.cisco.com/meraki/api-v1/#!update-network-cellular-gateway-dhcp
 - `--dnsNameservers` (string): DNS name servers mode for all MG of the network. It can take 4 different values: 'upstream_dns', 'google_dns', 'opendns', 'custom'.
 - `--dnsCustomNameservers` (array): list of fixed IP representing the the DNS Name servers when the mode is 'custom'
 
-##### Method Code:
-```python
-def updateNetworkCellularGatewayDhcp(networkId: str, **kwargs):
-    # Code
-````
 
 ##### Example:
 ```
@@ -7811,6 +7801,11 @@ meraki cellularGateway updateNetworkCellularGatewayDhcp --networkId 'STRING' --o
 meraki cellularGateway updateNetworkCellularGatewayDhcp --networkId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
+##### Method Code:
+```python
+def updateNetworkCellularGatewayDhcp(networkId: str, **kwargs):
+    # Code
+````
 
 ----------------------------------------
 ## Update Network Cellular Gateway Subnet Pool
@@ -7825,11 +7820,6 @@ https://developer.cisco.com/meraki/api-v1/#!update-network-cellular-gateway-subn
 - `--mask` (integer): Mask used for the subnet of all MGs in  this network.
 - `--cidr` (string): CIDR of the pool of subnets. Each MG in this network will automatically pick a subnet from this pool.
 
-##### Method Code:
-```python
-def updateNetworkCellularGatewaySubnetPool(networkId: str, **kwargs):
-    # Code
-````
 
 ##### Example:
 ```
@@ -7841,6 +7831,11 @@ meraki cellularGateway updateNetworkCellularGatewaySubnetPool --networkId 'STRIN
 meraki cellularGateway updateNetworkCellularGatewaySubnetPool --networkId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
+##### Method Code:
+```python
+def updateNetworkCellularGatewaySubnetPool(networkId: str, **kwargs):
+    # Code
+````
 
 ----------------------------------------
 ## Update Network Cellular Gateway Uplink
@@ -7854,11 +7849,6 @@ https://developer.cisco.com/meraki/api-v1/#!update-network-cellular-gateway-upli
 - `--networkId` (string): (required)
 - `--bandwidthLimits` (object): The bandwidth settings for the 'cellular' uplink
 
-##### Method Code:
-```python
-def updateNetworkCellularGatewayUplink(networkId: str, **kwargs):
-    # Code
-````
 
 ##### Example:
 ```
@@ -7870,6 +7860,11 @@ meraki cellularGateway updateNetworkCellularGatewayUplink --networkId 'STRING' -
 meraki cellularGateway updateNetworkCellularGatewayUplink --networkId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
+##### Method Code:
+```python
+def updateNetworkCellularGatewayUplink(networkId: str, **kwargs):
+    # Code
+````
 
 ----------------------------------------
 
@@ -7891,11 +7886,6 @@ https://developer.cisco.com/meraki/api-v1/#!create-organization-insight-monitore
 - `--address` (string): The IP address (IPv4 only) or hostname of the media server to monitor
 - `--bestEffortMonitoringEnabled` (boolean): Indicates that if the media server doesn't respond to ICMP pings, the nearest hop will be used in its stead.
 
-##### Method Code:
-```python
-def createOrganizationInsightMonitoredMediaServer(organizationId: str, name: str, address: str, **kwargs):
-    # Code
-````
 
 ##### Example:
 ```
@@ -7907,6 +7897,11 @@ meraki insight createOrganizationInsightMonitoredMediaServer --organizationId 'S
 meraki insight createOrganizationInsightMonitoredMediaServer --organizationId 'STRING' --name 'STRING' --address 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
+##### Method Code:
+```python
+def createOrganizationInsightMonitoredMediaServer(organizationId: str, name: str, address: str, **kwargs):
+    # Code
+````
 
 ----------------------------------------
 ## Delete Organization Insight Monitored Media Server
@@ -7920,17 +7915,17 @@ https://developer.cisco.com/meraki/api-v1/#!delete-organization-insight-monitore
 - `--organizationId` (string): (required)
 - `--monitoredMediaServerId` (string): (required)
 
-##### Method Code:
-```python
-def deleteOrganizationInsightMonitoredMediaServer(organizationId: str, monitoredMediaServerId: str):
-    # Code
-````
 
 ##### Example:
 ```
 meraki insight deleteOrganizationInsightMonitoredMediaServer --organizationId 'STRING' --monitoredMediaServerId 'STRING'
 ````
 
+##### Method Code:
+```python
+def deleteOrganizationInsightMonitoredMediaServer(organizationId: str, monitoredMediaServerId: str):
+    # Code
+````
 
 ----------------------------------------
 ## Get Organization Insight Monitored Media Server
@@ -7944,17 +7939,17 @@ https://developer.cisco.com/meraki/api-v1/#!get-organization-insight-monitored-m
 - `--organizationId` (string): (required)
 - `--monitoredMediaServerId` (string): (required)
 
-##### Method Code:
-```python
-def getOrganizationInsightMonitoredMediaServer(organizationId: str, monitoredMediaServerId: str):
-    # Code
-````
 
 ##### Example:
 ```
 meraki insight getOrganizationInsightMonitoredMediaServer --organizationId 'STRING' --monitoredMediaServerId 'STRING'
 ````
 
+##### Method Code:
+```python
+def getOrganizationInsightMonitoredMediaServer(organizationId: str, monitoredMediaServerId: str):
+    # Code
+````
 
 ----------------------------------------
 ## Get Organization Insight Monitored Media Servers
@@ -7967,17 +7962,17 @@ https://developer.cisco.com/meraki/api-v1/#!get-organization-insight-monitored-m
 ##### Arguments
 - `--organizationId` (string): (required)
 
-##### Method Code:
-```python
-def getOrganizationInsightMonitoredMediaServers(organizationId: str):
-    # Code
-````
 
 ##### Example:
 ```
 meraki insight getOrganizationInsightMonitoredMediaServers --organizationId 'STRING'
 ````
 
+##### Method Code:
+```python
+def getOrganizationInsightMonitoredMediaServers(organizationId: str):
+    # Code
+````
 
 ----------------------------------------
 ## Update Organization Insight Monitored Media Server
@@ -7994,11 +7989,6 @@ https://developer.cisco.com/meraki/api-v1/#!update-organization-insight-monitore
 - `--address` (string): The IP address (IPv4 only) or hostname of the media server to monitor
 - `--bestEffortMonitoringEnabled` (boolean): Indicates that if the media server doesn't respond to ICMP pings, the nearest hop will be used in its stead.
 
-##### Method Code:
-```python
-def updateOrganizationInsightMonitoredMediaServer(organizationId: str, monitoredMediaServerId: str, **kwargs):
-    # Code
-````
 
 ##### Example:
 ```
@@ -8010,6 +8000,11 @@ meraki insight updateOrganizationInsightMonitoredMediaServer --organizationId 'S
 meraki insight updateOrganizationInsightMonitoredMediaServer --organizationId 'STRING' --monitoredMediaServerId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
+##### Method Code:
+```python
+def updateOrganizationInsightMonitoredMediaServer(organizationId: str, monitoredMediaServerId: str, **kwargs):
+    # Code
+````
 
 ----------------------------------------
 
@@ -8032,11 +8027,6 @@ https://developer.cisco.com/meraki/api-v1/#!checkin-network-sm-devices
 - `--serials` (array): The serials of the devices to be checked-in.
 - `--scope` (array): The scope (one of all, none, withAny, withAll, withoutAny, or withoutAll) and a set of tags of the devices to be checked-in.
 
-##### Method Code:
-```python
-def checkinNetworkSmDevices(networkId: str, **kwargs):
-    # Code
-````
 
 ##### Example:
 ```
@@ -8048,6 +8038,11 @@ meraki sm checkinNetworkSmDevices --networkId 'STRING' --optionalArg1 'optionala
 meraki sm checkinNetworkSmDevices --networkId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
+##### Method Code:
+```python
+def checkinNetworkSmDevices(networkId: str, **kwargs):
+    # Code
+````
 
 ----------------------------------------
 ## Create Network Sm Bypass Activation Lock Attempt
@@ -8061,17 +8056,17 @@ https://developer.cisco.com/meraki/api-v1/#!create-network-sm-bypass-activation-
 - `--networkId` (string): (required)
 - `--ids` (array): The ids of the devices to attempt activation lock bypass.
 
-##### Method Code:
-```python
-def createNetworkSmBypassActivationLockAttempt(networkId: str, ids: list):
-    # Code
-````
 
 ##### Example:
 ```
 meraki sm createNetworkSmBypassActivationLockAttempt --networkId 'STRING' --ids ITEM
 ````
 
+##### Method Code:
+```python
+def createNetworkSmBypassActivationLockAttempt(networkId: str, ids: list):
+    # Code
+````
 
 ----------------------------------------
 ## Create Network Sm Target Group
@@ -8086,11 +8081,6 @@ https://developer.cisco.com/meraki/api-v1/#!create-network-sm-target-group
 - `--name` (string): The name of this target group
 - `--scope` (string): The scope and tag options of the target group. Comma separated values beginning with one of withAny, withAll, withoutAny, withoutAll, all, none, followed by tags. Default to none if empty.
 
-##### Method Code:
-```python
-def createNetworkSmTargetGroup(networkId: str, **kwargs):
-    # Code
-````
 
 ##### Example:
 ```
@@ -8102,6 +8092,11 @@ meraki sm createNetworkSmTargetGroup --networkId 'STRING' --optionalArg1 'option
 meraki sm createNetworkSmTargetGroup --networkId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
+##### Method Code:
+```python
+def createNetworkSmTargetGroup(networkId: str, **kwargs):
+    # Code
+````
 
 ----------------------------------------
 ## Delete Network Sm Target Group
@@ -8115,17 +8110,17 @@ https://developer.cisco.com/meraki/api-v1/#!delete-network-sm-target-group
 - `--networkId` (string): (required)
 - `--targetGroupId` (string): (required)
 
-##### Method Code:
-```python
-def deleteNetworkSmTargetGroup(networkId: str, targetGroupId: str):
-    # Code
-````
 
 ##### Example:
 ```
 meraki sm deleteNetworkSmTargetGroup --networkId 'STRING' --targetGroupId 'STRING'
 ````
 
+##### Method Code:
+```python
+def deleteNetworkSmTargetGroup(networkId: str, targetGroupId: str):
+    # Code
+````
 
 ----------------------------------------
 ## Delete Network Sm User Access Device
@@ -8139,17 +8134,17 @@ https://developer.cisco.com/meraki/api-v1/#!delete-network-sm-user-access-device
 - `--networkId` (string): (required)
 - `--userAccessDeviceId` (string): (required)
 
-##### Method Code:
-```python
-def deleteNetworkSmUserAccessDevice(networkId: str, userAccessDeviceId: str):
-    # Code
-````
 
 ##### Example:
 ```
 meraki sm deleteNetworkSmUserAccessDevice --networkId 'STRING' --userAccessDeviceId 'STRING'
 ````
 
+##### Method Code:
+```python
+def deleteNetworkSmUserAccessDevice(networkId: str, userAccessDeviceId: str):
+    # Code
+````
 
 ----------------------------------------
 ## Get Network Sm Bypass Activation Lock Attempt
@@ -8163,17 +8158,17 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-sm-bypass-activation-loc
 - `--networkId` (string): (required)
 - `--attemptId` (string): (required)
 
-##### Method Code:
-```python
-def getNetworkSmBypassActivationLockAttempt(networkId: str, attemptId: str):
-    # Code
-````
 
 ##### Example:
 ```
 meraki sm getNetworkSmBypassActivationLockAttempt --networkId 'STRING' --attemptId 'STRING'
 ````
 
+##### Method Code:
+```python
+def getNetworkSmBypassActivationLockAttempt(networkId: str, attemptId: str):
+    # Code
+````
 
 ----------------------------------------
 ## Get Network Sm Device Cellular Usage History
@@ -8187,17 +8182,17 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-sm-device-cellular-usage
 - `--networkId` (string): (required)
 - `--deviceId` (string): (required)
 
-##### Method Code:
-```python
-def getNetworkSmDeviceCellularUsageHistory(networkId: str, deviceId: str):
-    # Code
-````
 
 ##### Example:
 ```
 meraki sm getNetworkSmDeviceCellularUsageHistory --networkId 'STRING' --deviceId 'STRING'
 ````
 
+##### Method Code:
+```python
+def getNetworkSmDeviceCellularUsageHistory(networkId: str, deviceId: str):
+    # Code
+````
 
 ----------------------------------------
 ## Get Network Sm Device Certs
@@ -8211,17 +8206,17 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-sm-device-certs
 - `--networkId` (string): (required)
 - `--deviceId` (string): (required)
 
-##### Method Code:
-```python
-def getNetworkSmDeviceCerts(networkId: str, deviceId: str):
-    # Code
-````
 
 ##### Example:
 ```
 meraki sm getNetworkSmDeviceCerts --networkId 'STRING' --deviceId 'STRING'
 ````
 
+##### Method Code:
+```python
+def getNetworkSmDeviceCerts(networkId: str, deviceId: str):
+    # Code
+````
 
 ----------------------------------------
 ## Get Network Sm Device Connectivity
@@ -8240,11 +8235,6 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-sm-device-connectivity
 - `--startingAfter` (string): A token used by the server to indicate the start of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it.
 - `--endingBefore` (string): A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it.
 
-##### Method Code:
-```python
-def getNetworkSmDeviceConnectivity(networkId: str, deviceId: str, total_pages=1, direction='next', **kwargs):
-    # Code
-````
 
 ##### Example:
 ```
@@ -8256,6 +8246,11 @@ meraki sm getNetworkSmDeviceConnectivity --networkId 'STRING' --deviceId 'STRING
 meraki sm getNetworkSmDeviceConnectivity --networkId 'STRING' --deviceId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
+##### Method Code:
+```python
+def getNetworkSmDeviceConnectivity(networkId: str, deviceId: str, total_pages=1, direction='next', **kwargs):
+    # Code
+````
 
 ----------------------------------------
 ## Get Network Sm Device Desktop Logs
@@ -8274,11 +8269,6 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-sm-device-desktop-logs
 - `--startingAfter` (string): A token used by the server to indicate the start of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it.
 - `--endingBefore` (string): A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it.
 
-##### Method Code:
-```python
-def getNetworkSmDeviceDesktopLogs(networkId: str, deviceId: str, total_pages=1, direction='next', **kwargs):
-    # Code
-````
 
 ##### Example:
 ```
@@ -8290,6 +8280,11 @@ meraki sm getNetworkSmDeviceDesktopLogs --networkId 'STRING' --deviceId 'STRING'
 meraki sm getNetworkSmDeviceDesktopLogs --networkId 'STRING' --deviceId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
+##### Method Code:
+```python
+def getNetworkSmDeviceDesktopLogs(networkId: str, deviceId: str, total_pages=1, direction='next', **kwargs):
+    # Code
+````
 
 ----------------------------------------
 ## Get Network Sm Device Device Command Logs
@@ -8308,11 +8303,6 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-sm-device-device-command
 - `--startingAfter` (string): A token used by the server to indicate the start of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it.
 - `--endingBefore` (string): A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it.
 
-##### Method Code:
-```python
-def getNetworkSmDeviceDeviceCommandLogs(networkId: str, deviceId: str, total_pages=1, direction='next', **kwargs):
-    # Code
-````
 
 ##### Example:
 ```
@@ -8324,6 +8314,11 @@ meraki sm getNetworkSmDeviceDeviceCommandLogs --networkId 'STRING' --deviceId 'S
 meraki sm getNetworkSmDeviceDeviceCommandLogs --networkId 'STRING' --deviceId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
+##### Method Code:
+```python
+def getNetworkSmDeviceDeviceCommandLogs(networkId: str, deviceId: str, total_pages=1, direction='next', **kwargs):
+    # Code
+````
 
 ----------------------------------------
 ## Get Network Sm Device Device Profiles
@@ -8337,17 +8332,17 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-sm-device-device-profile
 - `--networkId` (string): (required)
 - `--deviceId` (string): (required)
 
-##### Method Code:
-```python
-def getNetworkSmDeviceDeviceProfiles(networkId: str, deviceId: str):
-    # Code
-````
 
 ##### Example:
 ```
 meraki sm getNetworkSmDeviceDeviceProfiles --networkId 'STRING' --deviceId 'STRING'
 ````
 
+##### Method Code:
+```python
+def getNetworkSmDeviceDeviceProfiles(networkId: str, deviceId: str):
+    # Code
+````
 
 ----------------------------------------
 ## Get Network Sm Device Network Adapters
@@ -8361,17 +8356,17 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-sm-device-network-adapte
 - `--networkId` (string): (required)
 - `--deviceId` (string): (required)
 
-##### Method Code:
-```python
-def getNetworkSmDeviceNetworkAdapters(networkId: str, deviceId: str):
-    # Code
-````
 
 ##### Example:
 ```
 meraki sm getNetworkSmDeviceNetworkAdapters --networkId 'STRING' --deviceId 'STRING'
 ````
 
+##### Method Code:
+```python
+def getNetworkSmDeviceNetworkAdapters(networkId: str, deviceId: str):
+    # Code
+````
 
 ----------------------------------------
 ## Get Network Sm Device Performance History
@@ -8390,11 +8385,6 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-sm-device-performance-hi
 - `--startingAfter` (string): A token used by the server to indicate the start of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it.
 - `--endingBefore` (string): A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it.
 
-##### Method Code:
-```python
-def getNetworkSmDevicePerformanceHistory(networkId: str, deviceId: str, total_pages=1, direction='next', **kwargs):
-    # Code
-````
 
 ##### Example:
 ```
@@ -8406,6 +8396,11 @@ meraki sm getNetworkSmDevicePerformanceHistory --networkId 'STRING' --deviceId '
 meraki sm getNetworkSmDevicePerformanceHistory --networkId 'STRING' --deviceId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
+##### Method Code:
+```python
+def getNetworkSmDevicePerformanceHistory(networkId: str, deviceId: str, total_pages=1, direction='next', **kwargs):
+    # Code
+````
 
 ----------------------------------------
 ## Get Network Sm Device Restrictions
@@ -8419,17 +8414,17 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-sm-device-restrictions
 - `--networkId` (string): (required)
 - `--deviceId` (string): (required)
 
-##### Method Code:
-```python
-def getNetworkSmDeviceRestrictions(networkId: str, deviceId: str):
-    # Code
-````
 
 ##### Example:
 ```
 meraki sm getNetworkSmDeviceRestrictions --networkId 'STRING' --deviceId 'STRING'
 ````
 
+##### Method Code:
+```python
+def getNetworkSmDeviceRestrictions(networkId: str, deviceId: str):
+    # Code
+````
 
 ----------------------------------------
 ## Get Network Sm Device Security Centers
@@ -8443,17 +8438,17 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-sm-device-security-cente
 - `--networkId` (string): (required)
 - `--deviceId` (string): (required)
 
-##### Method Code:
-```python
-def getNetworkSmDeviceSecurityCenters(networkId: str, deviceId: str):
-    # Code
-````
 
 ##### Example:
 ```
 meraki sm getNetworkSmDeviceSecurityCenters --networkId 'STRING' --deviceId 'STRING'
 ````
 
+##### Method Code:
+```python
+def getNetworkSmDeviceSecurityCenters(networkId: str, deviceId: str):
+    # Code
+````
 
 ----------------------------------------
 ## Get Network Sm Device Softwares
@@ -8467,17 +8462,17 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-sm-device-softwares
 - `--networkId` (string): (required)
 - `--deviceId` (string): (required)
 
-##### Method Code:
-```python
-def getNetworkSmDeviceSoftwares(networkId: str, deviceId: str):
-    # Code
-````
 
 ##### Example:
 ```
 meraki sm getNetworkSmDeviceSoftwares --networkId 'STRING' --deviceId 'STRING'
 ````
 
+##### Method Code:
+```python
+def getNetworkSmDeviceSoftwares(networkId: str, deviceId: str):
+    # Code
+````
 
 ----------------------------------------
 ## Get Network Sm Device Wlan Lists
@@ -8491,17 +8486,17 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-sm-device-wlan-lists
 - `--networkId` (string): (required)
 - `--deviceId` (string): (required)
 
-##### Method Code:
-```python
-def getNetworkSmDeviceWlanLists(networkId: str, deviceId: str):
-    # Code
-````
 
 ##### Example:
 ```
 meraki sm getNetworkSmDeviceWlanLists --networkId 'STRING' --deviceId 'STRING'
 ````
 
+##### Method Code:
+```python
+def getNetworkSmDeviceWlanLists(networkId: str, deviceId: str):
+    # Code
+````
 
 ----------------------------------------
 ## Get Network Sm Devices
@@ -8530,11 +8525,6 @@ hardwareEncryptionCaps, passCodeLock, usesHardwareKeystore, and androidSecurityP
 - `--startingAfter` (string): A token used by the server to indicate the start of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it.
 - `--endingBefore` (string): A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it.
 
-##### Method Code:
-```python
-def getNetworkSmDevices(networkId: str, total_pages=1, direction='next', **kwargs):
-    # Code
-````
 
 ##### Example:
 ```
@@ -8546,6 +8536,11 @@ meraki sm getNetworkSmDevices --networkId 'STRING' --optionalArg1 'optionalarg1v
 meraki sm getNetworkSmDevices --networkId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
+##### Method Code:
+```python
+def getNetworkSmDevices(networkId: str, total_pages=1, direction='next', **kwargs):
+    # Code
+````
 
 ----------------------------------------
 ## Get Network Sm Profiles
@@ -8558,17 +8553,17 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-sm-profiles
 ##### Arguments
 - `--networkId` (string): (required)
 
-##### Method Code:
-```python
-def getNetworkSmProfiles(networkId: str):
-    # Code
-````
 
 ##### Example:
 ```
 meraki sm getNetworkSmProfiles --networkId 'STRING'
 ````
 
+##### Method Code:
+```python
+def getNetworkSmProfiles(networkId: str):
+    # Code
+````
 
 ----------------------------------------
 ## Get Network Sm Target Group
@@ -8583,11 +8578,6 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-sm-target-group
 - `--targetGroupId` (string): (required)
 - `--withDetails` (boolean): Boolean indicating if the the ids of the devices or users scoped by the target group should be included in the response
 
-##### Method Code:
-```python
-def getNetworkSmTargetGroup(networkId: str, targetGroupId: str, **kwargs):
-    # Code
-````
 
 ##### Example:
 ```
@@ -8599,6 +8589,11 @@ meraki sm getNetworkSmTargetGroup --networkId 'STRING' --targetGroupId 'STRING' 
 meraki sm getNetworkSmTargetGroup --networkId 'STRING' --targetGroupId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
+##### Method Code:
+```python
+def getNetworkSmTargetGroup(networkId: str, targetGroupId: str, **kwargs):
+    # Code
+````
 
 ----------------------------------------
 ## Get Network Sm Target Groups
@@ -8612,11 +8607,6 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-sm-target-groups
 - `--networkId` (string): (required)
 - `--withDetails` (boolean): Boolean indicating if the the ids of the devices or users scoped by the target group should be included in the response
 
-##### Method Code:
-```python
-def getNetworkSmTargetGroups(networkId: str, **kwargs):
-    # Code
-````
 
 ##### Example:
 ```
@@ -8628,6 +8618,11 @@ meraki sm getNetworkSmTargetGroups --networkId 'STRING' --optionalArg1 'optional
 meraki sm getNetworkSmTargetGroups --networkId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
+##### Method Code:
+```python
+def getNetworkSmTargetGroups(networkId: str, **kwargs):
+    # Code
+````
 
 ----------------------------------------
 ## Get Network Sm User Access Devices
@@ -8645,11 +8640,6 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-sm-user-access-devices
 - `--startingAfter` (string): A token used by the server to indicate the start of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it.
 - `--endingBefore` (string): A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it.
 
-##### Method Code:
-```python
-def getNetworkSmUserAccessDevices(networkId: str, total_pages=1, direction='next', **kwargs):
-    # Code
-````
 
 ##### Example:
 ```
@@ -8661,6 +8651,11 @@ meraki sm getNetworkSmUserAccessDevices --networkId 'STRING' --optionalArg1 'opt
 meraki sm getNetworkSmUserAccessDevices --networkId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
+##### Method Code:
+```python
+def getNetworkSmUserAccessDevices(networkId: str, total_pages=1, direction='next', **kwargs):
+    # Code
+````
 
 ----------------------------------------
 ## Get Network Sm User Device Profiles
@@ -8674,17 +8669,17 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-sm-user-device-profiles
 - `--networkId` (string): (required)
 - `--userId` (string): (required)
 
-##### Method Code:
-```python
-def getNetworkSmUserDeviceProfiles(networkId: str, userId: str):
-    # Code
-````
 
 ##### Example:
 ```
 meraki sm getNetworkSmUserDeviceProfiles --networkId 'STRING' --userId 'STRING'
 ````
 
+##### Method Code:
+```python
+def getNetworkSmUserDeviceProfiles(networkId: str, userId: str):
+    # Code
+````
 
 ----------------------------------------
 ## Get Network Sm User Softwares
@@ -8698,17 +8693,17 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-sm-user-softwares
 - `--networkId` (string): (required)
 - `--userId` (string): (required)
 
-##### Method Code:
-```python
-def getNetworkSmUserSoftwares(networkId: str, userId: str):
-    # Code
-````
 
 ##### Example:
 ```
 meraki sm getNetworkSmUserSoftwares --networkId 'STRING' --userId 'STRING'
 ````
 
+##### Method Code:
+```python
+def getNetworkSmUserSoftwares(networkId: str, userId: str):
+    # Code
+````
 
 ----------------------------------------
 ## Get Network Sm Users
@@ -8725,11 +8720,6 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-sm-users
 - `--emails` (array): Filter users by email(s).
 - `--scope` (array): Specifiy a scope (one of all, none, withAny, withAll, withoutAny, withoutAll) and a set of tags.
 
-##### Method Code:
-```python
-def getNetworkSmUsers(networkId: str, **kwargs):
-    # Code
-````
 
 ##### Example:
 ```
@@ -8741,6 +8731,11 @@ meraki sm getNetworkSmUsers --networkId 'STRING' --optionalArg1 'optionalarg1val
 meraki sm getNetworkSmUsers --networkId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
+##### Method Code:
+```python
+def getNetworkSmUsers(networkId: str, **kwargs):
+    # Code
+````
 
 ----------------------------------------
 ## Get Organization Sm Apns Cert
@@ -8753,17 +8748,17 @@ https://developer.cisco.com/meraki/api-v1/#!get-organization-sm-apns-cert
 ##### Arguments
 - `--organizationId` (string): (required)
 
-##### Method Code:
-```python
-def getOrganizationSmApnsCert(organizationId: str):
-    # Code
-````
 
 ##### Example:
 ```
 meraki sm getOrganizationSmApnsCert --organizationId 'STRING'
 ````
 
+##### Method Code:
+```python
+def getOrganizationSmApnsCert(organizationId: str):
+    # Code
+````
 
 ----------------------------------------
 ## Get Organization Sm Vpp Account
@@ -8777,17 +8772,17 @@ https://developer.cisco.com/meraki/api-v1/#!get-organization-sm-vpp-account
 - `--organizationId` (string): (required)
 - `--vppAccountId` (string): (required)
 
-##### Method Code:
-```python
-def getOrganizationSmVppAccount(organizationId: str, vppAccountId: str):
-    # Code
-````
 
 ##### Example:
 ```
 meraki sm getOrganizationSmVppAccount --organizationId 'STRING' --vppAccountId 'STRING'
 ````
 
+##### Method Code:
+```python
+def getOrganizationSmVppAccount(organizationId: str, vppAccountId: str):
+    # Code
+````
 
 ----------------------------------------
 ## Get Organization Sm Vpp Accounts
@@ -8800,17 +8795,17 @@ https://developer.cisco.com/meraki/api-v1/#!get-organization-sm-vpp-accounts
 ##### Arguments
 - `--organizationId` (string): (required)
 
-##### Method Code:
-```python
-def getOrganizationSmVppAccounts(organizationId: str):
-    # Code
-````
 
 ##### Example:
 ```
 meraki sm getOrganizationSmVppAccounts --organizationId 'STRING'
 ````
 
+##### Method Code:
+```python
+def getOrganizationSmVppAccounts(organizationId: str):
+    # Code
+````
 
 ----------------------------------------
 ## Lock Network Sm Devices
@@ -8828,11 +8823,6 @@ https://developer.cisco.com/meraki/api-v1/#!lock-network-sm-devices
 - `--scope` (array): The scope (one of all, none, withAny, withAll, withoutAny, or withoutAll) and a set of tags of the devices to be wiped.
 - `--pin` (integer): The pin number for locking macOS devices (a six digit number). Required only for macOS devices.
 
-##### Method Code:
-```python
-def lockNetworkSmDevices(networkId: str, **kwargs):
-    # Code
-````
 
 ##### Example:
 ```
@@ -8844,6 +8834,11 @@ meraki sm lockNetworkSmDevices --networkId 'STRING' --optionalArg1 'optionalarg1
 meraki sm lockNetworkSmDevices --networkId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
+##### Method Code:
+```python
+def lockNetworkSmDevices(networkId: str, **kwargs):
+    # Code
+````
 
 ----------------------------------------
 ## Modify Network Sm Devices Tags
@@ -8862,11 +8857,6 @@ https://developer.cisco.com/meraki/api-v1/#!modify-network-sm-devices-tags
 - `--serials` (array): The serials of the devices to be modified.
 - `--scope` (array): The scope (one of all, none, withAny, withAll, withoutAny, or withoutAll) and a set of tags of the devices to be modified.
 
-##### Method Code:
-```python
-def modifyNetworkSmDevicesTags(networkId: str, tags: list, updateAction: str, **kwargs):
-    # Code
-````
 
 ##### Example:
 ```
@@ -8878,6 +8868,11 @@ meraki sm modifyNetworkSmDevicesTags --networkId 'STRING' --tags ITEM --updateAc
 meraki sm modifyNetworkSmDevicesTags --networkId 'STRING' --tags ITEM --updateAction 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
+##### Method Code:
+```python
+def modifyNetworkSmDevicesTags(networkId: str, tags: list, updateAction: str, **kwargs):
+    # Code
+````
 
 ----------------------------------------
 ## Move Network Sm Devices
@@ -8895,11 +8890,6 @@ https://developer.cisco.com/meraki/api-v1/#!move-network-sm-devices
 - `--serials` (array): The serials of the devices to be moved.
 - `--scope` (array): The scope (one of all, none, withAny, withAll, withoutAny, or withoutAll) and a set of tags of the devices to be moved.
 
-##### Method Code:
-```python
-def moveNetworkSmDevices(networkId: str, newNetwork: str, **kwargs):
-    # Code
-````
 
 ##### Example:
 ```
@@ -8911,6 +8901,11 @@ meraki sm moveNetworkSmDevices --networkId 'STRING' --newNetwork 'STRING' --opti
 meraki sm moveNetworkSmDevices --networkId 'STRING' --newNetwork 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
+##### Method Code:
+```python
+def moveNetworkSmDevices(networkId: str, newNetwork: str, **kwargs):
+    # Code
+````
 
 ----------------------------------------
 ## Refresh Network Sm Device Details
@@ -8924,17 +8919,17 @@ https://developer.cisco.com/meraki/api-v1/#!refresh-network-sm-device-details
 - `--networkId` (string): (required)
 - `--deviceId` (string): (required)
 
-##### Method Code:
-```python
-def refreshNetworkSmDeviceDetails(networkId: str, deviceId: str):
-    # Code
-````
 
 ##### Example:
 ```
 meraki sm refreshNetworkSmDeviceDetails --networkId 'STRING' --deviceId 'STRING'
 ````
 
+##### Method Code:
+```python
+def refreshNetworkSmDeviceDetails(networkId: str, deviceId: str):
+    # Code
+````
 
 ----------------------------------------
 ## Unenroll Network Sm Device
@@ -8948,17 +8943,17 @@ https://developer.cisco.com/meraki/api-v1/#!unenroll-network-sm-device
 - `--networkId` (string): (required)
 - `--deviceId` (string): (required)
 
-##### Method Code:
-```python
-def unenrollNetworkSmDevice(networkId: str, deviceId: str):
-    # Code
-````
 
 ##### Example:
 ```
 meraki sm unenrollNetworkSmDevice --networkId 'STRING' --deviceId 'STRING'
 ````
 
+##### Method Code:
+```python
+def unenrollNetworkSmDevice(networkId: str, deviceId: str):
+    # Code
+````
 
 ----------------------------------------
 ## Update Network Sm Devices Fields
@@ -8975,11 +8970,6 @@ https://developer.cisco.com/meraki/api-v1/#!update-network-sm-devices-fields
 - `--id` (string): The id of the device to be modified.
 - `--serial` (string): The serial of the device to be modified.
 
-##### Method Code:
-```python
-def updateNetworkSmDevicesFields(networkId: str, deviceFields: dict, **kwargs):
-    # Code
-````
 
 ##### Example:
 ```
@@ -8991,6 +8981,11 @@ meraki sm updateNetworkSmDevicesFields --networkId 'STRING' --deviceFields JSON_
 meraki sm updateNetworkSmDevicesFields --networkId 'STRING' --deviceFields JSON_STRING --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
+##### Method Code:
+```python
+def updateNetworkSmDevicesFields(networkId: str, deviceFields: dict, **kwargs):
+    # Code
+````
 
 ----------------------------------------
 ## Update Network Sm Target Group
@@ -9006,11 +9001,6 @@ https://developer.cisco.com/meraki/api-v1/#!update-network-sm-target-group
 - `--name` (string): The name of this target group
 - `--scope` (string): The scope and tag options of the target group. Comma separated values beginning with one of withAny, withAll, withoutAny, withoutAll, all, none, followed by tags. Default to none if empty.
 
-##### Method Code:
-```python
-def updateNetworkSmTargetGroup(networkId: str, targetGroupId: str, **kwargs):
-    # Code
-````
 
 ##### Example:
 ```
@@ -9022,6 +9012,11 @@ meraki sm updateNetworkSmTargetGroup --networkId 'STRING' --targetGroupId 'STRIN
 meraki sm updateNetworkSmTargetGroup --networkId 'STRING' --targetGroupId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
+##### Method Code:
+```python
+def updateNetworkSmTargetGroup(networkId: str, targetGroupId: str, **kwargs):
+    # Code
+````
 
 ----------------------------------------
 ## Wipe Network Sm Devices
@@ -9038,11 +9033,6 @@ https://developer.cisco.com/meraki/api-v1/#!wipe-network-sm-devices
 - `--serial` (string): The serial of the device to be wiped.
 - `--pin` (integer): The pin number (a six digit value) for wiping a macOS device. Required only for macOS devices.
 
-##### Method Code:
-```python
-def wipeNetworkSmDevices(networkId: str, **kwargs):
-    # Code
-````
 
 ##### Example:
 ```
@@ -9054,6 +9044,11 @@ meraki sm wipeNetworkSmDevices --networkId 'STRING' --optionalArg1 'optionalarg1
 meraki sm wipeNetworkSmDevices --networkId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
+##### Method Code:
+```python
+def wipeNetworkSmDevices(networkId: str, **kwargs):
+    # Code
+````
 
 ----------------------------------------
 
@@ -9074,17 +9069,17 @@ https://developer.cisco.com/meraki/api-v1/#!add-network-switch-stack
 - `--switchStackId` (string): (required)
 - `--serial` (string): The serial of the switch to be added
 
-##### Method Code:
-```python
-def addNetworkSwitchStack(networkId: str, switchStackId: str, serial: str):
-    # Code
-````
 
 ##### Example:
 ```
 meraki switch addNetworkSwitchStack --networkId 'STRING' --switchStackId 'STRING' --serial 'STRING'
 ````
 
+##### Method Code:
+```python
+def addNetworkSwitchStack(networkId: str, switchStackId: str, serial: str):
+    # Code
+````
 
 ----------------------------------------
 ## Clone Organization Switch Devices
@@ -9099,17 +9094,17 @@ https://developer.cisco.com/meraki/api-v1/#!clone-organization-switch-devices
 - `--sourceSerial` (string): Serial number of the source switch (must be on a network not bound to a template)
 - `--targetSerials` (array): Array of serial numbers of one or more target switches (must be on a network not bound to a template)
 
-##### Method Code:
-```python
-def cloneOrganizationSwitchDevices(organizationId: str, sourceSerial: str, targetSerials: list):
-    # Code
-````
 
 ##### Example:
 ```
 meraki switch cloneOrganizationSwitchDevices --organizationId 'STRING' --sourceSerial 'STRING' --targetSerials ITEM
 ````
 
+##### Method Code:
+```python
+def cloneOrganizationSwitchDevices(organizationId: str, sourceSerial: str, targetSerials: list):
+    # Code
+````
 
 ----------------------------------------
 ## Create Device Switch Routing Interface
@@ -9129,11 +9124,6 @@ https://developer.cisco.com/meraki/api-v1/#!create-device-switch-routing-interfa
 - `--defaultGateway` (string): The next hop for any traffic that isn't going to a directly connected subnet or over a static route. This IP address must exist in a subnet with a routed interface.
 - `--ospfSettings` (object): The OSPF routing settings of the interface.
 
-##### Method Code:
-```python
-def createDeviceSwitchRoutingInterface(serial: str, name: str, interfaceIp: str, vlanId: int, **kwargs):
-    # Code
-````
 
 ##### Example:
 ```
@@ -9145,6 +9135,11 @@ meraki switch createDeviceSwitchRoutingInterface --serial 'STRING' --name 'STRIN
 meraki switch createDeviceSwitchRoutingInterface --serial 'STRING' --name 'STRING' --interfaceIp 'STRING' --vlanId INT --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
+##### Method Code:
+```python
+def createDeviceSwitchRoutingInterface(serial: str, name: str, interfaceIp: str, vlanId: int, **kwargs):
+    # Code
+````
 
 ----------------------------------------
 ## Create Device Switch Routing Static Route
@@ -9162,11 +9157,6 @@ https://developer.cisco.com/meraki/api-v1/#!create-device-switch-routing-static-
 - `--advertiseViaOspfEnabled` (boolean): Option to advertise static route via OSPF
 - `--preferOverOspfRoutesEnabled` (boolean): Option to prefer static route over OSPF routes
 
-##### Method Code:
-```python
-def createDeviceSwitchRoutingStaticRoute(serial: str, subnet: str, nextHopIp: str, **kwargs):
-    # Code
-````
 
 ##### Example:
 ```
@@ -9178,6 +9168,11 @@ meraki switch createDeviceSwitchRoutingStaticRoute --serial 'STRING' --subnet 'S
 meraki switch createDeviceSwitchRoutingStaticRoute --serial 'STRING' --subnet 'STRING' --nextHopIp 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
+##### Method Code:
+```python
+def createDeviceSwitchRoutingStaticRoute(serial: str, subnet: str, nextHopIp: str, **kwargs):
+    # Code
+````
 
 ----------------------------------------
 ## Create Network Switch Access Policy
@@ -9204,11 +9199,6 @@ https://developer.cisco.com/meraki/api-v1/#!create-network-switch-access-policy
 - `--voiceVlanClients` (boolean): CDP/LLDP capable voice clients will be able to use this VLAN. Automatically true when hostMode is 'Multi-Domain'.
 - `--urlRedirectWalledGardenRanges` (array): IP address ranges, in CIDR notation, to restrict access for clients to a specific set of IP addresses or hostnames prior to authentication
 
-##### Method Code:
-```python
-def createNetworkSwitchAccessPolicy(networkId: str, name: str, radiusServers: list, radiusTestingEnabled: bool, radiusCoaSupportEnabled: bool, radiusAccountingEnabled: bool, hostMode: str, urlRedirectWalledGardenEnabled: bool, **kwargs):
-    # Code
-````
 
 ##### Example:
 ```
@@ -9220,6 +9210,11 @@ meraki switch createNetworkSwitchAccessPolicy --networkId 'STRING' --name 'STRIN
 meraki switch createNetworkSwitchAccessPolicy --networkId 'STRING' --name 'STRING' --radiusServers ITEM --radiusTestingEnabled --radiusCoaSupportEnabled --radiusAccountingEnabled --hostMode 'STRING' --urlRedirectWalledGardenEnabled --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
+##### Method Code:
+```python
+def createNetworkSwitchAccessPolicy(networkId: str, name: str, radiusServers: list, radiusTestingEnabled: bool, radiusCoaSupportEnabled: bool, radiusAccountingEnabled: bool, hostMode: str, urlRedirectWalledGardenEnabled: bool, **kwargs):
+    # Code
+````
 
 ----------------------------------------
 ## Create Network Switch Link Aggregation
@@ -9234,11 +9229,6 @@ https://developer.cisco.com/meraki/api-v1/#!create-network-switch-link-aggregati
 - `--switchPorts` (array): Array of switch or stack ports for creating aggregation group. Minimum 2 and maximum 8 ports are supported.
 - `--switchProfilePorts` (array): Array of switch profile ports for creating aggregation group. Minimum 2 and maximum 8 ports are supported.
 
-##### Method Code:
-```python
-def createNetworkSwitchLinkAggregation(networkId: str, **kwargs):
-    # Code
-````
 
 ##### Example:
 ```
@@ -9250,6 +9240,11 @@ meraki switch createNetworkSwitchLinkAggregation --networkId 'STRING' --optional
 meraki switch createNetworkSwitchLinkAggregation --networkId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
+##### Method Code:
+```python
+def createNetworkSwitchLinkAggregation(networkId: str, **kwargs):
+    # Code
+````
 
 ----------------------------------------
 ## Create Network Switch Port Schedule
@@ -9267,11 +9262,6 @@ When it's empty, default schedule with all days of a week are configured.
 Any unspecified day in the schedule is added as a default schedule configuration of the day.
 
 
-##### Method Code:
-```python
-def createNetworkSwitchPortSchedule(networkId: str, name: str, **kwargs):
-    # Code
-````
 
 ##### Example:
 ```
@@ -9283,6 +9273,11 @@ meraki switch createNetworkSwitchPortSchedule --networkId 'STRING' --name 'STRIN
 meraki switch createNetworkSwitchPortSchedule --networkId 'STRING' --name 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
+##### Method Code:
+```python
+def createNetworkSwitchPortSchedule(networkId: str, name: str, **kwargs):
+    # Code
+````
 
 ----------------------------------------
 ## Create Network Switch Qos Rule
@@ -9302,11 +9297,6 @@ https://developer.cisco.com/meraki/api-v1/#!create-network-switch-qos-rule
 - `--dstPortRange` (string): The destination port range of the incoming packet. Applicable only if protocol is set to TCP or UDP. Example: 70-80
 - `--dscp` (integer): DSCP tag. Set this to -1 to trust incoming DSCP. Default value is 0
 
-##### Method Code:
-```python
-def createNetworkSwitchQosRule(networkId: str, vlan: int, **kwargs):
-    # Code
-````
 
 ##### Example:
 ```
@@ -9318,6 +9308,11 @@ meraki switch createNetworkSwitchQosRule --networkId 'STRING' --vlan INT --optio
 meraki switch createNetworkSwitchQosRule --networkId 'STRING' --vlan INT --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
+##### Method Code:
+```python
+def createNetworkSwitchQosRule(networkId: str, vlan: int, **kwargs):
+    # Code
+````
 
 ----------------------------------------
 ## Create Network Switch Routing Multicast Rendezvous Point
@@ -9332,17 +9327,17 @@ https://developer.cisco.com/meraki/api-v1/#!create-network-switch-routing-multic
 - `--interfaceIp` (string): The IP address of the interface where the RP needs to be created.
 - `--multicastGroup` (string): 'Any', or the IP address of a multicast group
 
-##### Method Code:
-```python
-def createNetworkSwitchRoutingMulticastRendezvousPoint(networkId: str, interfaceIp: str, multicastGroup: str):
-    # Code
-````
 
 ##### Example:
 ```
 meraki switch createNetworkSwitchRoutingMulticastRendezvousPoint --networkId 'STRING' --interfaceIp 'STRING' --multicastGroup 'STRING'
 ````
 
+##### Method Code:
+```python
+def createNetworkSwitchRoutingMulticastRendezvousPoint(networkId: str, interfaceIp: str, multicastGroup: str):
+    # Code
+````
 
 ----------------------------------------
 ## Create Network Switch Stack
@@ -9357,17 +9352,17 @@ https://developer.cisco.com/meraki/api-v1/#!create-network-switch-stack
 - `--name` (string): The name of the new stack
 - `--serials` (array): An array of switch serials to be added into the new stack
 
-##### Method Code:
-```python
-def createNetworkSwitchStack(networkId: str, name: str, serials: list):
-    # Code
-````
 
 ##### Example:
 ```
 meraki switch createNetworkSwitchStack --networkId 'STRING' --name 'STRING' --serials ITEM
 ````
 
+##### Method Code:
+```python
+def createNetworkSwitchStack(networkId: str, name: str, serials: list):
+    # Code
+````
 
 ----------------------------------------
 ## Create Network Switch Stack Routing Interface
@@ -9388,11 +9383,6 @@ https://developer.cisco.com/meraki/api-v1/#!create-network-switch-stack-routing-
 - `--defaultGateway` (string): The next hop for any traffic that isn't going to a directly connected subnet or over a static route. This IP address must exist in a subnet with a routed interface.
 - `--ospfSettings` (object): The OSPF routing settings of the interface.
 
-##### Method Code:
-```python
-def createNetworkSwitchStackRoutingInterface(networkId: str, switchStackId: str, name: str, subnet: str, interfaceIp: str, vlanId: int, **kwargs):
-    # Code
-````
 
 ##### Example:
 ```
@@ -9404,6 +9394,11 @@ meraki switch createNetworkSwitchStackRoutingInterface --networkId 'STRING' --sw
 meraki switch createNetworkSwitchStackRoutingInterface --networkId 'STRING' --switchStackId 'STRING' --name 'STRING' --subnet 'STRING' --interfaceIp 'STRING' --vlanId INT --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
+##### Method Code:
+```python
+def createNetworkSwitchStackRoutingInterface(networkId: str, switchStackId: str, name: str, subnet: str, interfaceIp: str, vlanId: int, **kwargs):
+    # Code
+````
 
 ----------------------------------------
 ## Create Network Switch Stack Routing Static Route
@@ -9422,11 +9417,6 @@ https://developer.cisco.com/meraki/api-v1/#!create-network-switch-stack-routing-
 - `--advertiseViaOspfEnabled` (boolean): Option to advertise static route via OSPF
 - `--preferOverOspfRoutesEnabled` (boolean): Option to prefer static route over OSPF routes
 
-##### Method Code:
-```python
-def createNetworkSwitchStackRoutingStaticRoute(networkId: str, switchStackId: str, subnet: str, nextHopIp: str, **kwargs):
-    # Code
-````
 
 ##### Example:
 ```
@@ -9438,6 +9428,11 @@ meraki switch createNetworkSwitchStackRoutingStaticRoute --networkId 'STRING' --
 meraki switch createNetworkSwitchStackRoutingStaticRoute --networkId 'STRING' --switchStackId 'STRING' --subnet 'STRING' --nextHopIp 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
+##### Method Code:
+```python
+def createNetworkSwitchStackRoutingStaticRoute(networkId: str, switchStackId: str, subnet: str, nextHopIp: str, **kwargs):
+    # Code
+````
 
 ----------------------------------------
 ## Cycle Device Switch Ports
@@ -9451,17 +9446,17 @@ https://developer.cisco.com/meraki/api-v1/#!cycle-device-switch-ports
 - `--serial` (string): (required)
 - `--ports` (array): List of switch ports. Example: [1, 2-5, 1_MA-MOD-8X10G_1, 1_MA-MOD-8X10G_2-1_MA-MOD-8X10G_8]
 
-##### Method Code:
-```python
-def cycleDeviceSwitchPorts(serial: str, ports: list):
-    # Code
-````
 
 ##### Example:
 ```
 meraki switch cycleDeviceSwitchPorts --serial 'STRING' --ports ITEM
 ````
 
+##### Method Code:
+```python
+def cycleDeviceSwitchPorts(serial: str, ports: list):
+    # Code
+````
 
 ----------------------------------------
 ## Delete Device Switch Routing Interface
@@ -9475,17 +9470,17 @@ https://developer.cisco.com/meraki/api-v1/#!delete-device-switch-routing-interfa
 - `--serial` (string): (required)
 - `--interfaceId` (string): (required)
 
-##### Method Code:
-```python
-def deleteDeviceSwitchRoutingInterface(serial: str, interfaceId: str):
-    # Code
-````
 
 ##### Example:
 ```
 meraki switch deleteDeviceSwitchRoutingInterface --serial 'STRING' --interfaceId 'STRING'
 ````
 
+##### Method Code:
+```python
+def deleteDeviceSwitchRoutingInterface(serial: str, interfaceId: str):
+    # Code
+````
 
 ----------------------------------------
 ## Delete Device Switch Routing Static Route
@@ -9499,17 +9494,17 @@ https://developer.cisco.com/meraki/api-v1/#!delete-device-switch-routing-static-
 - `--serial` (string): (required)
 - `--staticRouteId` (string): (required)
 
-##### Method Code:
-```python
-def deleteDeviceSwitchRoutingStaticRoute(serial: str, staticRouteId: str):
-    # Code
-````
 
 ##### Example:
 ```
 meraki switch deleteDeviceSwitchRoutingStaticRoute --serial 'STRING' --staticRouteId 'STRING'
 ````
 
+##### Method Code:
+```python
+def deleteDeviceSwitchRoutingStaticRoute(serial: str, staticRouteId: str):
+    # Code
+````
 
 ----------------------------------------
 ## Delete Network Switch Access Policy
@@ -9523,17 +9518,17 @@ https://developer.cisco.com/meraki/api-v1/#!delete-network-switch-access-policy
 - `--networkId` (string): (required)
 - `--accessPolicyNumber` (string): (required)
 
-##### Method Code:
-```python
-def deleteNetworkSwitchAccessPolicy(networkId: str, accessPolicyNumber: str):
-    # Code
-````
 
 ##### Example:
 ```
 meraki switch deleteNetworkSwitchAccessPolicy --networkId 'STRING' --accessPolicyNumber 'STRING'
 ````
 
+##### Method Code:
+```python
+def deleteNetworkSwitchAccessPolicy(networkId: str, accessPolicyNumber: str):
+    # Code
+````
 
 ----------------------------------------
 ## Delete Network Switch Link Aggregation
@@ -9547,17 +9542,17 @@ https://developer.cisco.com/meraki/api-v1/#!delete-network-switch-link-aggregati
 - `--networkId` (string): (required)
 - `--linkAggregationId` (string): (required)
 
-##### Method Code:
-```python
-def deleteNetworkSwitchLinkAggregation(networkId: str, linkAggregationId: str):
-    # Code
-````
 
 ##### Example:
 ```
 meraki switch deleteNetworkSwitchLinkAggregation --networkId 'STRING' --linkAggregationId 'STRING'
 ````
 
+##### Method Code:
+```python
+def deleteNetworkSwitchLinkAggregation(networkId: str, linkAggregationId: str):
+    # Code
+````
 
 ----------------------------------------
 ## Delete Network Switch Port Schedule
@@ -9571,17 +9566,17 @@ https://developer.cisco.com/meraki/api-v1/#!delete-network-switch-port-schedule
 - `--networkId` (string): (required)
 - `--portScheduleId` (string): (required)
 
-##### Method Code:
-```python
-def deleteNetworkSwitchPortSchedule(networkId: str, portScheduleId: str):
-    # Code
-````
 
 ##### Example:
 ```
 meraki switch deleteNetworkSwitchPortSchedule --networkId 'STRING' --portScheduleId 'STRING'
 ````
 
+##### Method Code:
+```python
+def deleteNetworkSwitchPortSchedule(networkId: str, portScheduleId: str):
+    # Code
+````
 
 ----------------------------------------
 ## Delete Network Switch Qos Rule
@@ -9595,17 +9590,17 @@ https://developer.cisco.com/meraki/api-v1/#!delete-network-switch-qos-rule
 - `--networkId` (string): (required)
 - `--qosRuleId` (string): (required)
 
-##### Method Code:
-```python
-def deleteNetworkSwitchQosRule(networkId: str, qosRuleId: str):
-    # Code
-````
 
 ##### Example:
 ```
 meraki switch deleteNetworkSwitchQosRule --networkId 'STRING' --qosRuleId 'STRING'
 ````
 
+##### Method Code:
+```python
+def deleteNetworkSwitchQosRule(networkId: str, qosRuleId: str):
+    # Code
+````
 
 ----------------------------------------
 ## Delete Network Switch Routing Multicast Rendezvous Point
@@ -9619,17 +9614,17 @@ https://developer.cisco.com/meraki/api-v1/#!delete-network-switch-routing-multic
 - `--networkId` (string): (required)
 - `--rendezvousPointId` (string): (required)
 
-##### Method Code:
-```python
-def deleteNetworkSwitchRoutingMulticastRendezvousPoint(networkId: str, rendezvousPointId: str):
-    # Code
-````
 
 ##### Example:
 ```
 meraki switch deleteNetworkSwitchRoutingMulticastRendezvousPoint --networkId 'STRING' --rendezvousPointId 'STRING'
 ````
 
+##### Method Code:
+```python
+def deleteNetworkSwitchRoutingMulticastRendezvousPoint(networkId: str, rendezvousPointId: str):
+    # Code
+````
 
 ----------------------------------------
 ## Delete Network Switch Stack
@@ -9643,17 +9638,17 @@ https://developer.cisco.com/meraki/api-v1/#!delete-network-switch-stack
 - `--networkId` (string): (required)
 - `--switchStackId` (string): (required)
 
-##### Method Code:
-```python
-def deleteNetworkSwitchStack(networkId: str, switchStackId: str):
-    # Code
-````
 
 ##### Example:
 ```
 meraki switch deleteNetworkSwitchStack --networkId 'STRING' --switchStackId 'STRING'
 ````
 
+##### Method Code:
+```python
+def deleteNetworkSwitchStack(networkId: str, switchStackId: str):
+    # Code
+````
 
 ----------------------------------------
 ## Delete Network Switch Stack Routing Interface
@@ -9668,17 +9663,17 @@ https://developer.cisco.com/meraki/api-v1/#!delete-network-switch-stack-routing-
 - `--switchStackId` (string): (required)
 - `--interfaceId` (string): (required)
 
-##### Method Code:
-```python
-def deleteNetworkSwitchStackRoutingInterface(networkId: str, switchStackId: str, interfaceId: str):
-    # Code
-````
 
 ##### Example:
 ```
 meraki switch deleteNetworkSwitchStackRoutingInterface --networkId 'STRING' --switchStackId 'STRING' --interfaceId 'STRING'
 ````
 
+##### Method Code:
+```python
+def deleteNetworkSwitchStackRoutingInterface(networkId: str, switchStackId: str, interfaceId: str):
+    # Code
+````
 
 ----------------------------------------
 ## Delete Network Switch Stack Routing Static Route
@@ -9693,17 +9688,17 @@ https://developer.cisco.com/meraki/api-v1/#!delete-network-switch-stack-routing-
 - `--switchStackId` (string): (required)
 - `--staticRouteId` (string): (required)
 
-##### Method Code:
-```python
-def deleteNetworkSwitchStackRoutingStaticRoute(networkId: str, switchStackId: str, staticRouteId: str):
-    # Code
-````
 
 ##### Example:
 ```
 meraki switch deleteNetworkSwitchStackRoutingStaticRoute --networkId 'STRING' --switchStackId 'STRING' --staticRouteId 'STRING'
 ````
 
+##### Method Code:
+```python
+def deleteNetworkSwitchStackRoutingStaticRoute(networkId: str, switchStackId: str, staticRouteId: str):
+    # Code
+````
 
 ----------------------------------------
 ## Get Device Switch Port
@@ -9717,17 +9712,17 @@ https://developer.cisco.com/meraki/api-v1/#!get-device-switch-port
 - `--serial` (string): (required)
 - `--portId` (string): (required)
 
-##### Method Code:
-```python
-def getDeviceSwitchPort(serial: str, portId: str):
-    # Code
-````
 
 ##### Example:
 ```
 meraki switch getDeviceSwitchPort --serial 'STRING' --portId 'STRING'
 ````
 
+##### Method Code:
+```python
+def getDeviceSwitchPort(serial: str, portId: str):
+    # Code
+````
 
 ----------------------------------------
 ## Get Device Switch Ports
@@ -9740,17 +9735,17 @@ https://developer.cisco.com/meraki/api-v1/#!get-device-switch-ports
 ##### Arguments
 - `--serial` (string): (required)
 
-##### Method Code:
-```python
-def getDeviceSwitchPorts(serial: str):
-    # Code
-````
 
 ##### Example:
 ```
 meraki switch getDeviceSwitchPorts --serial 'STRING'
 ````
 
+##### Method Code:
+```python
+def getDeviceSwitchPorts(serial: str):
+    # Code
+````
 
 ----------------------------------------
 ## Get Device Switch Ports Statuses
@@ -9765,11 +9760,6 @@ https://developer.cisco.com/meraki/api-v1/#!get-device-switch-ports-statuses
 - `--t0` (string): The beginning of the timespan for the data. The maximum lookback period is 31 days from today.
 - `--timespan` (number): The timespan for which the information will be fetched. If specifying timespan, do not specify parameter t0. The value must be in seconds and be less than or equal to 31 days. The default is 1 day.
 
-##### Method Code:
-```python
-def getDeviceSwitchPortsStatuses(serial: str, **kwargs):
-    # Code
-````
 
 ##### Example:
 ```
@@ -9781,6 +9771,11 @@ meraki switch getDeviceSwitchPortsStatuses --serial 'STRING' --optionalArg1 'opt
 meraki switch getDeviceSwitchPortsStatuses --serial 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
+##### Method Code:
+```python
+def getDeviceSwitchPortsStatuses(serial: str, **kwargs):
+    # Code
+````
 
 ----------------------------------------
 ## Get Device Switch Ports Statuses Packets
@@ -9795,11 +9790,6 @@ https://developer.cisco.com/meraki/api-v1/#!get-device-switch-ports-statuses-pac
 - `--t0` (string): The beginning of the timespan for the data. The maximum lookback period is 1 day from today.
 - `--timespan` (number): The timespan for which the information will be fetched. If specifying timespan, do not specify parameter t0. The value must be in seconds and be less than or equal to 1 day. The default is 1 day.
 
-##### Method Code:
-```python
-def getDeviceSwitchPortsStatusesPackets(serial: str, **kwargs):
-    # Code
-````
 
 ##### Example:
 ```
@@ -9811,6 +9801,11 @@ meraki switch getDeviceSwitchPortsStatusesPackets --serial 'STRING' --optionalAr
 meraki switch getDeviceSwitchPortsStatusesPackets --serial 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
+##### Method Code:
+```python
+def getDeviceSwitchPortsStatusesPackets(serial: str, **kwargs):
+    # Code
+````
 
 ----------------------------------------
 ## Get Device Switch Routing Interface
@@ -9824,17 +9819,17 @@ https://developer.cisco.com/meraki/api-v1/#!get-device-switch-routing-interface
 - `--serial` (string): (required)
 - `--interfaceId` (string): (required)
 
-##### Method Code:
-```python
-def getDeviceSwitchRoutingInterface(serial: str, interfaceId: str):
-    # Code
-````
 
 ##### Example:
 ```
 meraki switch getDeviceSwitchRoutingInterface --serial 'STRING' --interfaceId 'STRING'
 ````
 
+##### Method Code:
+```python
+def getDeviceSwitchRoutingInterface(serial: str, interfaceId: str):
+    # Code
+````
 
 ----------------------------------------
 ## Get Device Switch Routing Interface Dhcp
@@ -9848,17 +9843,17 @@ https://developer.cisco.com/meraki/api-v1/#!get-device-switch-routing-interface-
 - `--serial` (string): (required)
 - `--interfaceId` (string): (required)
 
-##### Method Code:
-```python
-def getDeviceSwitchRoutingInterfaceDhcp(serial: str, interfaceId: str):
-    # Code
-````
 
 ##### Example:
 ```
 meraki switch getDeviceSwitchRoutingInterfaceDhcp --serial 'STRING' --interfaceId 'STRING'
 ````
 
+##### Method Code:
+```python
+def getDeviceSwitchRoutingInterfaceDhcp(serial: str, interfaceId: str):
+    # Code
+````
 
 ----------------------------------------
 ## Get Device Switch Routing Interfaces
@@ -9871,17 +9866,17 @@ https://developer.cisco.com/meraki/api-v1/#!get-device-switch-routing-interfaces
 ##### Arguments
 - `--serial` (string): (required)
 
-##### Method Code:
-```python
-def getDeviceSwitchRoutingInterfaces(serial: str):
-    # Code
-````
 
 ##### Example:
 ```
 meraki switch getDeviceSwitchRoutingInterfaces --serial 'STRING'
 ````
 
+##### Method Code:
+```python
+def getDeviceSwitchRoutingInterfaces(serial: str):
+    # Code
+````
 
 ----------------------------------------
 ## Get Device Switch Routing Static Route
@@ -9895,17 +9890,17 @@ https://developer.cisco.com/meraki/api-v1/#!get-device-switch-routing-static-rou
 - `--serial` (string): (required)
 - `--staticRouteId` (string): (required)
 
-##### Method Code:
-```python
-def getDeviceSwitchRoutingStaticRoute(serial: str, staticRouteId: str):
-    # Code
-````
 
 ##### Example:
 ```
 meraki switch getDeviceSwitchRoutingStaticRoute --serial 'STRING' --staticRouteId 'STRING'
 ````
 
+##### Method Code:
+```python
+def getDeviceSwitchRoutingStaticRoute(serial: str, staticRouteId: str):
+    # Code
+````
 
 ----------------------------------------
 ## Get Device Switch Routing Static Routes
@@ -9918,17 +9913,17 @@ https://developer.cisco.com/meraki/api-v1/#!get-device-switch-routing-static-rou
 ##### Arguments
 - `--serial` (string): (required)
 
-##### Method Code:
-```python
-def getDeviceSwitchRoutingStaticRoutes(serial: str):
-    # Code
-````
 
 ##### Example:
 ```
 meraki switch getDeviceSwitchRoutingStaticRoutes --serial 'STRING'
 ````
 
+##### Method Code:
+```python
+def getDeviceSwitchRoutingStaticRoutes(serial: str):
+    # Code
+````
 
 ----------------------------------------
 ## Get Device Switch Warm Spare
@@ -9941,17 +9936,17 @@ https://developer.cisco.com/meraki/api-v1/#!get-device-switch-warm-spare
 ##### Arguments
 - `--serial` (string): (required)
 
-##### Method Code:
-```python
-def getDeviceSwitchWarmSpare(serial: str):
-    # Code
-````
 
 ##### Example:
 ```
 meraki switch getDeviceSwitchWarmSpare --serial 'STRING'
 ````
 
+##### Method Code:
+```python
+def getDeviceSwitchWarmSpare(serial: str):
+    # Code
+````
 
 ----------------------------------------
 ## Get Network Switch Access Control Lists
@@ -9964,17 +9959,17 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-switch-access-control-li
 ##### Arguments
 - `--networkId` (string): (required)
 
-##### Method Code:
-```python
-def getNetworkSwitchAccessControlLists(networkId: str):
-    # Code
-````
 
 ##### Example:
 ```
 meraki switch getNetworkSwitchAccessControlLists --networkId 'STRING'
 ````
 
+##### Method Code:
+```python
+def getNetworkSwitchAccessControlLists(networkId: str):
+    # Code
+````
 
 ----------------------------------------
 ## Get Network Switch Access Policies
@@ -9987,17 +9982,17 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-switch-access-policies
 ##### Arguments
 - `--networkId` (string): (required)
 
-##### Method Code:
-```python
-def getNetworkSwitchAccessPolicies(networkId: str):
-    # Code
-````
 
 ##### Example:
 ```
 meraki switch getNetworkSwitchAccessPolicies --networkId 'STRING'
 ````
 
+##### Method Code:
+```python
+def getNetworkSwitchAccessPolicies(networkId: str):
+    # Code
+````
 
 ----------------------------------------
 ## Get Network Switch Access Policy
@@ -10011,17 +10006,17 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-switch-access-policy
 - `--networkId` (string): (required)
 - `--accessPolicyNumber` (string): (required)
 
-##### Method Code:
-```python
-def getNetworkSwitchAccessPolicy(networkId: str, accessPolicyNumber: str):
-    # Code
-````
 
 ##### Example:
 ```
 meraki switch getNetworkSwitchAccessPolicy --networkId 'STRING' --accessPolicyNumber 'STRING'
 ````
 
+##### Method Code:
+```python
+def getNetworkSwitchAccessPolicy(networkId: str, accessPolicyNumber: str):
+    # Code
+````
 
 ----------------------------------------
 ## Get Network Switch Alternate Management Interface
@@ -10034,17 +10029,17 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-switch-alternate-managem
 ##### Arguments
 - `--networkId` (string): (required)
 
-##### Method Code:
-```python
-def getNetworkSwitchAlternateManagementInterface(networkId: str):
-    # Code
-````
 
 ##### Example:
 ```
 meraki switch getNetworkSwitchAlternateManagementInterface --networkId 'STRING'
 ````
 
+##### Method Code:
+```python
+def getNetworkSwitchAlternateManagementInterface(networkId: str):
+    # Code
+````
 
 ----------------------------------------
 ## Get Network Switch Dhcp Server Policy
@@ -10057,17 +10052,17 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-switch-dhcp-server-polic
 ##### Arguments
 - `--networkId` (string): (required)
 
-##### Method Code:
-```python
-def getNetworkSwitchDhcpServerPolicy(networkId: str):
-    # Code
-````
 
 ##### Example:
 ```
 meraki switch getNetworkSwitchDhcpServerPolicy --networkId 'STRING'
 ````
 
+##### Method Code:
+```python
+def getNetworkSwitchDhcpServerPolicy(networkId: str):
+    # Code
+````
 
 ----------------------------------------
 ## Get Network Switch Dscp To Cos Mappings
@@ -10080,17 +10075,17 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-switch-dscp-to-cos-mappi
 ##### Arguments
 - `--networkId` (string): (required)
 
-##### Method Code:
-```python
-def getNetworkSwitchDscpToCosMappings(networkId: str):
-    # Code
-````
 
 ##### Example:
 ```
 meraki switch getNetworkSwitchDscpToCosMappings --networkId 'STRING'
 ````
 
+##### Method Code:
+```python
+def getNetworkSwitchDscpToCosMappings(networkId: str):
+    # Code
+````
 
 ----------------------------------------
 ## Get Network Switch Link Aggregations
@@ -10103,17 +10098,17 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-switch-link-aggregations
 ##### Arguments
 - `--networkId` (string): (required)
 
-##### Method Code:
-```python
-def getNetworkSwitchLinkAggregations(networkId: str):
-    # Code
-````
 
 ##### Example:
 ```
 meraki switch getNetworkSwitchLinkAggregations --networkId 'STRING'
 ````
 
+##### Method Code:
+```python
+def getNetworkSwitchLinkAggregations(networkId: str):
+    # Code
+````
 
 ----------------------------------------
 ## Get Network Switch Mtu
@@ -10126,17 +10121,17 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-switch-mtu
 ##### Arguments
 - `--networkId` (string): (required)
 
-##### Method Code:
-```python
-def getNetworkSwitchMtu(networkId: str):
-    # Code
-````
 
 ##### Example:
 ```
 meraki switch getNetworkSwitchMtu --networkId 'STRING'
 ````
 
+##### Method Code:
+```python
+def getNetworkSwitchMtu(networkId: str):
+    # Code
+````
 
 ----------------------------------------
 ## Get Network Switch Port Schedules
@@ -10149,17 +10144,17 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-switch-port-schedules
 ##### Arguments
 - `--networkId` (string): (required)
 
-##### Method Code:
-```python
-def getNetworkSwitchPortSchedules(networkId: str):
-    # Code
-````
 
 ##### Example:
 ```
 meraki switch getNetworkSwitchPortSchedules --networkId 'STRING'
 ````
 
+##### Method Code:
+```python
+def getNetworkSwitchPortSchedules(networkId: str):
+    # Code
+````
 
 ----------------------------------------
 ## Get Network Switch Qos Rule
@@ -10173,17 +10168,17 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-switch-qos-rule
 - `--networkId` (string): (required)
 - `--qosRuleId` (string): (required)
 
-##### Method Code:
-```python
-def getNetworkSwitchQosRule(networkId: str, qosRuleId: str):
-    # Code
-````
 
 ##### Example:
 ```
 meraki switch getNetworkSwitchQosRule --networkId 'STRING' --qosRuleId 'STRING'
 ````
 
+##### Method Code:
+```python
+def getNetworkSwitchQosRule(networkId: str, qosRuleId: str):
+    # Code
+````
 
 ----------------------------------------
 ## Get Network Switch Qos Rules
@@ -10196,17 +10191,17 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-switch-qos-rules
 ##### Arguments
 - `--networkId` (string): (required)
 
-##### Method Code:
-```python
-def getNetworkSwitchQosRules(networkId: str):
-    # Code
-````
 
 ##### Example:
 ```
 meraki switch getNetworkSwitchQosRules --networkId 'STRING'
 ````
 
+##### Method Code:
+```python
+def getNetworkSwitchQosRules(networkId: str):
+    # Code
+````
 
 ----------------------------------------
 ## Get Network Switch Qos Rules Order
@@ -10219,17 +10214,17 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-switch-qos-rules-order
 ##### Arguments
 - `--networkId` (string): (required)
 
-##### Method Code:
-```python
-def getNetworkSwitchQosRulesOrder(networkId: str):
-    # Code
-````
 
 ##### Example:
 ```
 meraki switch getNetworkSwitchQosRulesOrder --networkId 'STRING'
 ````
 
+##### Method Code:
+```python
+def getNetworkSwitchQosRulesOrder(networkId: str):
+    # Code
+````
 
 ----------------------------------------
 ## Get Network Switch Routing Multicast
@@ -10242,17 +10237,17 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-switch-routing-multicast
 ##### Arguments
 - `--networkId` (string): (required)
 
-##### Method Code:
-```python
-def getNetworkSwitchRoutingMulticast(networkId: str):
-    # Code
-````
 
 ##### Example:
 ```
 meraki switch getNetworkSwitchRoutingMulticast --networkId 'STRING'
 ````
 
+##### Method Code:
+```python
+def getNetworkSwitchRoutingMulticast(networkId: str):
+    # Code
+````
 
 ----------------------------------------
 ## Get Network Switch Routing Multicast Rendezvous Point
@@ -10266,17 +10261,17 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-switch-routing-multicast
 - `--networkId` (string): (required)
 - `--rendezvousPointId` (string): (required)
 
-##### Method Code:
-```python
-def getNetworkSwitchRoutingMulticastRendezvousPoint(networkId: str, rendezvousPointId: str):
-    # Code
-````
 
 ##### Example:
 ```
 meraki switch getNetworkSwitchRoutingMulticastRendezvousPoint --networkId 'STRING' --rendezvousPointId 'STRING'
 ````
 
+##### Method Code:
+```python
+def getNetworkSwitchRoutingMulticastRendezvousPoint(networkId: str, rendezvousPointId: str):
+    # Code
+````
 
 ----------------------------------------
 ## Get Network Switch Routing Multicast Rendezvous Points
@@ -10289,17 +10284,17 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-switch-routing-multicast
 ##### Arguments
 - `--networkId` (string): (required)
 
-##### Method Code:
-```python
-def getNetworkSwitchRoutingMulticastRendezvousPoints(networkId: str):
-    # Code
-````
 
 ##### Example:
 ```
 meraki switch getNetworkSwitchRoutingMulticastRendezvousPoints --networkId 'STRING'
 ````
 
+##### Method Code:
+```python
+def getNetworkSwitchRoutingMulticastRendezvousPoints(networkId: str):
+    # Code
+````
 
 ----------------------------------------
 ## Get Network Switch Routing Ospf
@@ -10312,17 +10307,17 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-switch-routing-ospf
 ##### Arguments
 - `--networkId` (string): (required)
 
-##### Method Code:
-```python
-def getNetworkSwitchRoutingOspf(networkId: str):
-    # Code
-````
 
 ##### Example:
 ```
 meraki switch getNetworkSwitchRoutingOspf --networkId 'STRING'
 ````
 
+##### Method Code:
+```python
+def getNetworkSwitchRoutingOspf(networkId: str):
+    # Code
+````
 
 ----------------------------------------
 ## Get Network Switch Settings
@@ -10335,17 +10330,17 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-switch-settings
 ##### Arguments
 - `--networkId` (string): (required)
 
-##### Method Code:
-```python
-def getNetworkSwitchSettings(networkId: str):
-    # Code
-````
 
 ##### Example:
 ```
 meraki switch getNetworkSwitchSettings --networkId 'STRING'
 ````
 
+##### Method Code:
+```python
+def getNetworkSwitchSettings(networkId: str):
+    # Code
+````
 
 ----------------------------------------
 ## Get Network Switch Stack
@@ -10359,17 +10354,17 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-switch-stack
 - `--networkId` (string): (required)
 - `--switchStackId` (string): (required)
 
-##### Method Code:
-```python
-def getNetworkSwitchStack(networkId: str, switchStackId: str):
-    # Code
-````
 
 ##### Example:
 ```
 meraki switch getNetworkSwitchStack --networkId 'STRING' --switchStackId 'STRING'
 ````
 
+##### Method Code:
+```python
+def getNetworkSwitchStack(networkId: str, switchStackId: str):
+    # Code
+````
 
 ----------------------------------------
 ## Get Network Switch Stack Routing Interface
@@ -10384,17 +10379,17 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-switch-stack-routing-int
 - `--switchStackId` (string): (required)
 - `--interfaceId` (string): (required)
 
-##### Method Code:
-```python
-def getNetworkSwitchStackRoutingInterface(networkId: str, switchStackId: str, interfaceId: str):
-    # Code
-````
 
 ##### Example:
 ```
 meraki switch getNetworkSwitchStackRoutingInterface --networkId 'STRING' --switchStackId 'STRING' --interfaceId 'STRING'
 ````
 
+##### Method Code:
+```python
+def getNetworkSwitchStackRoutingInterface(networkId: str, switchStackId: str, interfaceId: str):
+    # Code
+````
 
 ----------------------------------------
 ## Get Network Switch Stack Routing Interface Dhcp
@@ -10409,17 +10404,17 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-switch-stack-routing-int
 - `--switchStackId` (string): (required)
 - `--interfaceId` (string): (required)
 
-##### Method Code:
-```python
-def getNetworkSwitchStackRoutingInterfaceDhcp(networkId: str, switchStackId: str, interfaceId: str):
-    # Code
-````
 
 ##### Example:
 ```
 meraki switch getNetworkSwitchStackRoutingInterfaceDhcp --networkId 'STRING' --switchStackId 'STRING' --interfaceId 'STRING'
 ````
 
+##### Method Code:
+```python
+def getNetworkSwitchStackRoutingInterfaceDhcp(networkId: str, switchStackId: str, interfaceId: str):
+    # Code
+````
 
 ----------------------------------------
 ## Get Network Switch Stack Routing Interfaces
@@ -10433,17 +10428,17 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-switch-stack-routing-int
 - `--networkId` (string): (required)
 - `--switchStackId` (string): (required)
 
-##### Method Code:
-```python
-def getNetworkSwitchStackRoutingInterfaces(networkId: str, switchStackId: str):
-    # Code
-````
 
 ##### Example:
 ```
 meraki switch getNetworkSwitchStackRoutingInterfaces --networkId 'STRING' --switchStackId 'STRING'
 ````
 
+##### Method Code:
+```python
+def getNetworkSwitchStackRoutingInterfaces(networkId: str, switchStackId: str):
+    # Code
+````
 
 ----------------------------------------
 ## Get Network Switch Stack Routing Static Route
@@ -10458,17 +10453,17 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-switch-stack-routing-sta
 - `--switchStackId` (string): (required)
 - `--staticRouteId` (string): (required)
 
-##### Method Code:
-```python
-def getNetworkSwitchStackRoutingStaticRoute(networkId: str, switchStackId: str, staticRouteId: str):
-    # Code
-````
 
 ##### Example:
 ```
 meraki switch getNetworkSwitchStackRoutingStaticRoute --networkId 'STRING' --switchStackId 'STRING' --staticRouteId 'STRING'
 ````
 
+##### Method Code:
+```python
+def getNetworkSwitchStackRoutingStaticRoute(networkId: str, switchStackId: str, staticRouteId: str):
+    # Code
+````
 
 ----------------------------------------
 ## Get Network Switch Stack Routing Static Routes
@@ -10482,17 +10477,17 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-switch-stack-routing-sta
 - `--networkId` (string): (required)
 - `--switchStackId` (string): (required)
 
-##### Method Code:
-```python
-def getNetworkSwitchStackRoutingStaticRoutes(networkId: str, switchStackId: str):
-    # Code
-````
 
 ##### Example:
 ```
 meraki switch getNetworkSwitchStackRoutingStaticRoutes --networkId 'STRING' --switchStackId 'STRING'
 ````
 
+##### Method Code:
+```python
+def getNetworkSwitchStackRoutingStaticRoutes(networkId: str, switchStackId: str):
+    # Code
+````
 
 ----------------------------------------
 ## Get Network Switch Stacks
@@ -10505,17 +10500,17 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-switch-stacks
 ##### Arguments
 - `--networkId` (string): (required)
 
-##### Method Code:
-```python
-def getNetworkSwitchStacks(networkId: str):
-    # Code
-````
 
 ##### Example:
 ```
 meraki switch getNetworkSwitchStacks --networkId 'STRING'
 ````
 
+##### Method Code:
+```python
+def getNetworkSwitchStacks(networkId: str):
+    # Code
+````
 
 ----------------------------------------
 ## Get Network Switch Storm Control
@@ -10528,17 +10523,17 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-switch-storm-control
 ##### Arguments
 - `--networkId` (string): (required)
 
-##### Method Code:
-```python
-def getNetworkSwitchStormControl(networkId: str):
-    # Code
-````
 
 ##### Example:
 ```
 meraki switch getNetworkSwitchStormControl --networkId 'STRING'
 ````
 
+##### Method Code:
+```python
+def getNetworkSwitchStormControl(networkId: str):
+    # Code
+````
 
 ----------------------------------------
 ## Get Network Switch Stp
@@ -10551,17 +10546,17 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-switch-stp
 ##### Arguments
 - `--networkId` (string): (required)
 
-##### Method Code:
-```python
-def getNetworkSwitchStp(networkId: str):
-    # Code
-````
 
 ##### Example:
 ```
 meraki switch getNetworkSwitchStp --networkId 'STRING'
 ````
 
+##### Method Code:
+```python
+def getNetworkSwitchStp(networkId: str):
+    # Code
+````
 
 ----------------------------------------
 ## Get Organization Config Template Switch Profile Port
@@ -10577,17 +10572,17 @@ https://developer.cisco.com/meraki/api-v1/#!get-organization-config-template-swi
 - `--profileId` (string): (required)
 - `--portId` (string): (required)
 
-##### Method Code:
-```python
-def getOrganizationConfigTemplateSwitchProfilePort(organizationId: str, configTemplateId: str, profileId: str, portId: str):
-    # Code
-````
 
 ##### Example:
 ```
 meraki switch getOrganizationConfigTemplateSwitchProfilePort --organizationId 'STRING' --configTemplateId 'STRING' --profileId 'STRING' --portId 'STRING'
 ````
 
+##### Method Code:
+```python
+def getOrganizationConfigTemplateSwitchProfilePort(organizationId: str, configTemplateId: str, profileId: str, portId: str):
+    # Code
+````
 
 ----------------------------------------
 ## Get Organization Config Template Switch Profile Ports
@@ -10602,17 +10597,17 @@ https://developer.cisco.com/meraki/api-v1/#!get-organization-config-template-swi
 - `--configTemplateId` (string): (required)
 - `--profileId` (string): (required)
 
-##### Method Code:
-```python
-def getOrganizationConfigTemplateSwitchProfilePorts(organizationId: str, configTemplateId: str, profileId: str):
-    # Code
-````
 
 ##### Example:
 ```
 meraki switch getOrganizationConfigTemplateSwitchProfilePorts --organizationId 'STRING' --configTemplateId 'STRING' --profileId 'STRING'
 ````
 
+##### Method Code:
+```python
+def getOrganizationConfigTemplateSwitchProfilePorts(organizationId: str, configTemplateId: str, profileId: str):
+    # Code
+````
 
 ----------------------------------------
 ## Get Organization Config Template Switch Profiles
@@ -10626,17 +10621,17 @@ https://developer.cisco.com/meraki/api-v1/#!get-organization-config-template-swi
 - `--organizationId` (string): (required)
 - `--configTemplateId` (string): (required)
 
-##### Method Code:
-```python
-def getOrganizationConfigTemplateSwitchProfiles(organizationId: str, configTemplateId: str):
-    # Code
-````
 
 ##### Example:
 ```
 meraki switch getOrganizationConfigTemplateSwitchProfiles --organizationId 'STRING' --configTemplateId 'STRING'
 ````
 
+##### Method Code:
+```python
+def getOrganizationConfigTemplateSwitchProfiles(organizationId: str, configTemplateId: str):
+    # Code
+````
 
 ----------------------------------------
 ## Remove Network Switch Stack
@@ -10651,17 +10646,17 @@ https://developer.cisco.com/meraki/api-v1/#!remove-network-switch-stack
 - `--switchStackId` (string): (required)
 - `--serial` (string): The serial of the switch to be removed
 
-##### Method Code:
-```python
-def removeNetworkSwitchStack(networkId: str, switchStackId: str, serial: str):
-    # Code
-````
 
 ##### Example:
 ```
 meraki switch removeNetworkSwitchStack --networkId 'STRING' --switchStackId 'STRING' --serial 'STRING'
 ````
 
+##### Method Code:
+```python
+def removeNetworkSwitchStack(networkId: str, switchStackId: str, serial: str):
+    # Code
+````
 
 ----------------------------------------
 ## Update Device Switch Port
@@ -10696,11 +10691,6 @@ https://developer.cisco.com/meraki/api-v1/#!update-device-switch-port
 - `--stormControlEnabled` (boolean): The storm control status of the switch port
 - `--flexibleStackingEnabled` (boolean): For supported switches (e.g. MS420/MS425), whether or not the port has flexible stacking enabled.
 
-##### Method Code:
-```python
-def updateDeviceSwitchPort(serial: str, portId: str, **kwargs):
-    # Code
-````
 
 ##### Example:
 ```
@@ -10712,6 +10702,11 @@ meraki switch updateDeviceSwitchPort --serial 'STRING' --portId 'STRING' --optio
 meraki switch updateDeviceSwitchPort --serial 'STRING' --portId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
+##### Method Code:
+```python
+def updateDeviceSwitchPort(serial: str, portId: str, **kwargs):
+    # Code
+````
 
 ----------------------------------------
 ## Update Device Switch Routing Interface
@@ -10731,11 +10726,6 @@ https://developer.cisco.com/meraki/api-v1/#!update-device-switch-routing-interfa
 - `--vlanId` (integer): The VLAN this routed interface is on. VLAN must be between 1 and 4094.
 - `--ospfSettings` (object): The OSPF routing settings of the interface.
 
-##### Method Code:
-```python
-def updateDeviceSwitchRoutingInterface(serial: str, interfaceId: str, **kwargs):
-    # Code
-````
 
 ##### Example:
 ```
@@ -10747,6 +10737,11 @@ meraki switch updateDeviceSwitchRoutingInterface --serial 'STRING' --interfaceId
 meraki switch updateDeviceSwitchRoutingInterface --serial 'STRING' --interfaceId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
+##### Method Code:
+```python
+def updateDeviceSwitchRoutingInterface(serial: str, interfaceId: str, **kwargs):
+    # Code
+````
 
 ----------------------------------------
 ## Update Device Switch Routing Interface Dhcp
@@ -10771,11 +10766,6 @@ https://developer.cisco.com/meraki/api-v1/#!update-device-switch-routing-interfa
 - `--reservedIpRanges` (array): Array of DHCP reserved IP assignments for the DHCP server running on the switch interface
 - `--fixedIpAssignments` (array): Array of DHCP fixed IP assignments for the DHCP server running on the switch interface
 
-##### Method Code:
-```python
-def updateDeviceSwitchRoutingInterfaceDhcp(serial: str, interfaceId: str, **kwargs):
-    # Code
-````
 
 ##### Example:
 ```
@@ -10787,6 +10777,11 @@ meraki switch updateDeviceSwitchRoutingInterfaceDhcp --serial 'STRING' --interfa
 meraki switch updateDeviceSwitchRoutingInterfaceDhcp --serial 'STRING' --interfaceId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
+##### Method Code:
+```python
+def updateDeviceSwitchRoutingInterfaceDhcp(serial: str, interfaceId: str, **kwargs):
+    # Code
+````
 
 ----------------------------------------
 ## Update Device Switch Routing Static Route
@@ -10805,11 +10800,6 @@ https://developer.cisco.com/meraki/api-v1/#!update-device-switch-routing-static-
 - `--advertiseViaOspfEnabled` (boolean): Option to advertise static route via OSPF
 - `--preferOverOspfRoutesEnabled` (boolean): Option to prefer static route over OSPF routes
 
-##### Method Code:
-```python
-def updateDeviceSwitchRoutingStaticRoute(serial: str, staticRouteId: str, **kwargs):
-    # Code
-````
 
 ##### Example:
 ```
@@ -10821,6 +10811,11 @@ meraki switch updateDeviceSwitchRoutingStaticRoute --serial 'STRING' --staticRou
 meraki switch updateDeviceSwitchRoutingStaticRoute --serial 'STRING' --staticRouteId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
+##### Method Code:
+```python
+def updateDeviceSwitchRoutingStaticRoute(serial: str, staticRouteId: str, **kwargs):
+    # Code
+````
 
 ----------------------------------------
 ## Update Device Switch Warm Spare
@@ -10835,11 +10830,6 @@ https://developer.cisco.com/meraki/api-v1/#!update-device-switch-warm-spare
 - `--enabled` (boolean): Enable or disable warm spare for a switch
 - `--spareSerial` (string): Serial number of the warm spare switch
 
-##### Method Code:
-```python
-def updateDeviceSwitchWarmSpare(serial: str, enabled: bool, **kwargs):
-    # Code
-````
 
 ##### Example:
 ```
@@ -10851,6 +10841,11 @@ meraki switch updateDeviceSwitchWarmSpare --serial 'STRING' --enabled --optional
 meraki switch updateDeviceSwitchWarmSpare --serial 'STRING' --enabled --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
+##### Method Code:
+```python
+def updateDeviceSwitchWarmSpare(serial: str, enabled: bool, **kwargs):
+    # Code
+````
 
 ----------------------------------------
 ## Update Network Switch Access Control Lists
@@ -10864,17 +10859,17 @@ https://developer.cisco.com/meraki/api-v1/#!update-network-switch-access-control
 - `--networkId` (string): (required)
 - `--rules` (array): An ordered array of the access control list rules (not including the default rule). An empty array will clear the rules.
 
-##### Method Code:
-```python
-def updateNetworkSwitchAccessControlLists(networkId: str, rules: list):
-    # Code
-````
 
 ##### Example:
 ```
 meraki switch updateNetworkSwitchAccessControlLists --networkId 'STRING' --rules ITEM
 ````
 
+##### Method Code:
+```python
+def updateNetworkSwitchAccessControlLists(networkId: str, rules: list):
+    # Code
+````
 
 ----------------------------------------
 ## Update Network Switch Access Policy
@@ -10902,11 +10897,6 @@ https://developer.cisco.com/meraki/api-v1/#!update-network-switch-access-policy
 - `--urlRedirectWalledGardenEnabled` (boolean): Enable to restrict access for clients to a specific set of IP addresses or hostnames prior to authentication
 - `--urlRedirectWalledGardenRanges` (array): IP address ranges, in CIDR notation, to restrict access for clients to a specific set of IP addresses or hostnames prior to authentication
 
-##### Method Code:
-```python
-def updateNetworkSwitchAccessPolicy(networkId: str, accessPolicyNumber: str, **kwargs):
-    # Code
-````
 
 ##### Example:
 ```
@@ -10918,6 +10908,11 @@ meraki switch updateNetworkSwitchAccessPolicy --networkId 'STRING' --accessPolic
 meraki switch updateNetworkSwitchAccessPolicy --networkId 'STRING' --accessPolicyNumber 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
+##### Method Code:
+```python
+def updateNetworkSwitchAccessPolicy(networkId: str, accessPolicyNumber: str, **kwargs):
+    # Code
+````
 
 ----------------------------------------
 ## Update Network Switch Alternate Management Interface
@@ -10934,11 +10929,6 @@ https://developer.cisco.com/meraki/api-v1/#!update-network-switch-alternate-mana
 - `--protocols` (array): Can be one or more of the following values: 'radius', 'snmp' or 'syslog'
 - `--switches` (array): Array of switch serial number and IP assignment. If parameter is present, it cannot have empty body. Note: switches parameter is not applicable for template networks, in other words, do not put 'switches' in the body when updating template networks. Also, an empty 'switches' array will remove all previous assignments
 
-##### Method Code:
-```python
-def updateNetworkSwitchAlternateManagementInterface(networkId: str, **kwargs):
-    # Code
-````
 
 ##### Example:
 ```
@@ -10950,6 +10940,11 @@ meraki switch updateNetworkSwitchAlternateManagementInterface --networkId 'STRIN
 meraki switch updateNetworkSwitchAlternateManagementInterface --networkId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
+##### Method Code:
+```python
+def updateNetworkSwitchAlternateManagementInterface(networkId: str, **kwargs):
+    # Code
+````
 
 ----------------------------------------
 ## Update Network Switch Dhcp Server Policy
@@ -10965,11 +10960,6 @@ https://developer.cisco.com/meraki/api-v1/#!update-network-switch-dhcp-server-po
 - `--allowedServers` (array): List the MAC addresses of DHCP servers to permit on the network. Applicable only if defaultPolicy is set to block. An empty array will clear the entries.
 - `--blockedServers` (array): List the MAC addresses of DHCP servers to block on the network. Applicable only if defaultPolicy is set to allow. An empty array will clear the entries.
 
-##### Method Code:
-```python
-def updateNetworkSwitchDhcpServerPolicy(networkId: str, **kwargs):
-    # Code
-````
 
 ##### Example:
 ```
@@ -10981,6 +10971,11 @@ meraki switch updateNetworkSwitchDhcpServerPolicy --networkId 'STRING' --optiona
 meraki switch updateNetworkSwitchDhcpServerPolicy --networkId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
+##### Method Code:
+```python
+def updateNetworkSwitchDhcpServerPolicy(networkId: str, **kwargs):
+    # Code
+````
 
 ----------------------------------------
 ## Update Network Switch Dscp To Cos Mappings
@@ -10994,17 +10989,17 @@ https://developer.cisco.com/meraki/api-v1/#!update-network-switch-dscp-to-cos-ma
 - `--networkId` (string): (required)
 - `--mappings` (array): An array of DSCP to CoS mappings. An empty array will reset the mappings to default.
 
-##### Method Code:
-```python
-def updateNetworkSwitchDscpToCosMappings(networkId: str, mappings: list):
-    # Code
-````
 
 ##### Example:
 ```
 meraki switch updateNetworkSwitchDscpToCosMappings --networkId 'STRING' --mappings ITEM
 ````
 
+##### Method Code:
+```python
+def updateNetworkSwitchDscpToCosMappings(networkId: str, mappings: list):
+    # Code
+````
 
 ----------------------------------------
 ## Update Network Switch Link Aggregation
@@ -11020,11 +11015,6 @@ https://developer.cisco.com/meraki/api-v1/#!update-network-switch-link-aggregati
 - `--switchPorts` (array): Array of switch or stack ports for updating aggregation group. Minimum 2 and maximum 8 ports are supported.
 - `--switchProfilePorts` (array): Array of switch profile ports for updating aggregation group. Minimum 2 and maximum 8 ports are supported.
 
-##### Method Code:
-```python
-def updateNetworkSwitchLinkAggregation(networkId: str, linkAggregationId: str, **kwargs):
-    # Code
-````
 
 ##### Example:
 ```
@@ -11036,6 +11026,11 @@ meraki switch updateNetworkSwitchLinkAggregation --networkId 'STRING' --linkAggr
 meraki switch updateNetworkSwitchLinkAggregation --networkId 'STRING' --linkAggregationId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
+##### Method Code:
+```python
+def updateNetworkSwitchLinkAggregation(networkId: str, linkAggregationId: str, **kwargs):
+    # Code
+````
 
 ----------------------------------------
 ## Update Network Switch Mtu
@@ -11050,11 +11045,6 @@ https://developer.cisco.com/meraki/api-v1/#!update-network-switch-mtu
 - `--defaultMtuSize` (integer): MTU size for the entire network. Default value is 9578.
 - `--overrides` (array): Override MTU size for individual switches or switch profiles. An empty array will clear overrides.
 
-##### Method Code:
-```python
-def updateNetworkSwitchMtu(networkId: str, **kwargs):
-    # Code
-````
 
 ##### Example:
 ```
@@ -11066,6 +11056,11 @@ meraki switch updateNetworkSwitchMtu --networkId 'STRING' --optionalArg1 'option
 meraki switch updateNetworkSwitchMtu --networkId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
+##### Method Code:
+```python
+def updateNetworkSwitchMtu(networkId: str, **kwargs):
+    # Code
+````
 
 ----------------------------------------
 ## Update Network Switch Port Schedule
@@ -11084,11 +11079,6 @@ When it's empty, default schedule with all days of a week are configured.
 Any unspecified day in the schedule is added as a default schedule configuration of the day.
 
 
-##### Method Code:
-```python
-def updateNetworkSwitchPortSchedule(networkId: str, portScheduleId: str, **kwargs):
-    # Code
-````
 
 ##### Example:
 ```
@@ -11100,6 +11090,11 @@ meraki switch updateNetworkSwitchPortSchedule --networkId 'STRING' --portSchedul
 meraki switch updateNetworkSwitchPortSchedule --networkId 'STRING' --portScheduleId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
+##### Method Code:
+```python
+def updateNetworkSwitchPortSchedule(networkId: str, portScheduleId: str, **kwargs):
+    # Code
+````
 
 ----------------------------------------
 ## Update Network Switch Qos Rule
@@ -11120,11 +11115,6 @@ https://developer.cisco.com/meraki/api-v1/#!update-network-switch-qos-rule
 - `--dstPortRange` (string): The destination port range of the incoming packet. Applicable only if protocol is set to TCP or UDP. Example: 70-80
 - `--dscp` (integer): DSCP tag that should be assigned to incoming packet. Set this to -1 to trust incoming DSCP. Default value is 0.
 
-##### Method Code:
-```python
-def updateNetworkSwitchQosRule(networkId: str, qosRuleId: str, **kwargs):
-    # Code
-````
 
 ##### Example:
 ```
@@ -11136,6 +11126,11 @@ meraki switch updateNetworkSwitchQosRule --networkId 'STRING' --qosRuleId 'STRIN
 meraki switch updateNetworkSwitchQosRule --networkId 'STRING' --qosRuleId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
+##### Method Code:
+```python
+def updateNetworkSwitchQosRule(networkId: str, qosRuleId: str, **kwargs):
+    # Code
+````
 
 ----------------------------------------
 ## Update Network Switch Qos Rules Order
@@ -11149,17 +11144,17 @@ https://developer.cisco.com/meraki/api-v1/#!update-network-switch-qos-rules-orde
 - `--networkId` (string): (required)
 - `--ruleIds` (array): A list of quality of service rule IDs arranged in order in which they should be processed by the switch.
 
-##### Method Code:
-```python
-def updateNetworkSwitchQosRulesOrder(networkId: str, ruleIds: list):
-    # Code
-````
 
 ##### Example:
 ```
 meraki switch updateNetworkSwitchQosRulesOrder --networkId 'STRING' --ruleIds ITEM
 ````
 
+##### Method Code:
+```python
+def updateNetworkSwitchQosRulesOrder(networkId: str, ruleIds: list):
+    # Code
+````
 
 ----------------------------------------
 ## Update Network Switch Routing Multicast
@@ -11174,11 +11169,6 @@ https://developer.cisco.com/meraki/api-v1/#!update-network-switch-routing-multic
 - `--defaultSettings` (object): Default multicast setting for entire network. IGMP snooping and Flood unknown multicast traffic settings are enabled by default.
 - `--overrides` (array): Array of paired switches/stacks/profiles and corresponding multicast settings. An empty array will clear the multicast settings.
 
-##### Method Code:
-```python
-def updateNetworkSwitchRoutingMulticast(networkId: str, **kwargs):
-    # Code
-````
 
 ##### Example:
 ```
@@ -11190,6 +11180,11 @@ meraki switch updateNetworkSwitchRoutingMulticast --networkId 'STRING' --optiona
 meraki switch updateNetworkSwitchRoutingMulticast --networkId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
+##### Method Code:
+```python
+def updateNetworkSwitchRoutingMulticast(networkId: str, **kwargs):
+    # Code
+````
 
 ----------------------------------------
 ## Update Network Switch Routing Multicast Rendezvous Point
@@ -11205,17 +11200,17 @@ https://developer.cisco.com/meraki/api-v1/#!update-network-switch-routing-multic
 - `--interfaceIp` (string): The IP address of the interface to use
 - `--multicastGroup` (string): 'Any', or the IP address of a multicast group
 
-##### Method Code:
-```python
-def updateNetworkSwitchRoutingMulticastRendezvousPoint(networkId: str, rendezvousPointId: str, interfaceIp: str, multicastGroup: str):
-    # Code
-````
 
 ##### Example:
 ```
 meraki switch updateNetworkSwitchRoutingMulticastRendezvousPoint --networkId 'STRING' --rendezvousPointId 'STRING' --interfaceIp 'STRING' --multicastGroup 'STRING'
 ````
 
+##### Method Code:
+```python
+def updateNetworkSwitchRoutingMulticastRendezvousPoint(networkId: str, rendezvousPointId: str, interfaceIp: str, multicastGroup: str):
+    # Code
+````
 
 ----------------------------------------
 ## Update Network Switch Routing Ospf
@@ -11234,11 +11229,6 @@ https://developer.cisco.com/meraki/api-v1/#!update-network-switch-routing-ospf
 - `--md5AuthenticationEnabled` (boolean): Boolean value to enable or disable MD5 authentication. MD5 authentication is disabled by default.
 - `--md5AuthenticationKey` (object): MD5 authentication credentials. This param is only relevant if md5AuthenticationEnabled is true
 
-##### Method Code:
-```python
-def updateNetworkSwitchRoutingOspf(networkId: str, **kwargs):
-    # Code
-````
 
 ##### Example:
 ```
@@ -11250,6 +11240,11 @@ meraki switch updateNetworkSwitchRoutingOspf --networkId 'STRING' --optionalArg1
 meraki switch updateNetworkSwitchRoutingOspf --networkId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
+##### Method Code:
+```python
+def updateNetworkSwitchRoutingOspf(networkId: str, **kwargs):
+    # Code
+````
 
 ----------------------------------------
 ## Update Network Switch Settings
@@ -11265,11 +11260,6 @@ https://developer.cisco.com/meraki/api-v1/#!update-network-switch-settings
 - `--useCombinedPower` (boolean): The use Combined Power as the default behavior of secondary power supplies on supported devices.
 - `--powerExceptions` (array): Exceptions on a per switch basis to "useCombinedPower"
 
-##### Method Code:
-```python
-def updateNetworkSwitchSettings(networkId: str, **kwargs):
-    # Code
-````
 
 ##### Example:
 ```
@@ -11281,6 +11271,11 @@ meraki switch updateNetworkSwitchSettings --networkId 'STRING' --optionalArg1 'o
 meraki switch updateNetworkSwitchSettings --networkId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
+##### Method Code:
+```python
+def updateNetworkSwitchSettings(networkId: str, **kwargs):
+    # Code
+````
 
 ----------------------------------------
 ## Update Network Switch Stack Routing Interface
@@ -11301,11 +11296,6 @@ https://developer.cisco.com/meraki/api-v1/#!update-network-switch-stack-routing-
 - `--vlanId` (integer): The VLAN this routed interface is on. VLAN must be between 1 and 4094.
 - `--ospfSettings` (object): The OSPF routing settings of the interface.
 
-##### Method Code:
-```python
-def updateNetworkSwitchStackRoutingInterface(networkId: str, switchStackId: str, interfaceId: str, **kwargs):
-    # Code
-````
 
 ##### Example:
 ```
@@ -11317,6 +11307,11 @@ meraki switch updateNetworkSwitchStackRoutingInterface --networkId 'STRING' --sw
 meraki switch updateNetworkSwitchStackRoutingInterface --networkId 'STRING' --switchStackId 'STRING' --interfaceId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
+##### Method Code:
+```python
+def updateNetworkSwitchStackRoutingInterface(networkId: str, switchStackId: str, interfaceId: str, **kwargs):
+    # Code
+````
 
 ----------------------------------------
 ## Update Network Switch Stack Routing Interface Dhcp
@@ -11342,11 +11337,6 @@ https://developer.cisco.com/meraki/api-v1/#!update-network-switch-stack-routing-
 - `--reservedIpRanges` (array): Array of DHCP reserved IP assignments for the DHCP server running on the switch stack interface
 - `--fixedIpAssignments` (array): Array of DHCP fixed IP assignments for the DHCP server running on the switch stack interface
 
-##### Method Code:
-```python
-def updateNetworkSwitchStackRoutingInterfaceDhcp(networkId: str, switchStackId: str, interfaceId: str, **kwargs):
-    # Code
-````
 
 ##### Example:
 ```
@@ -11358,6 +11348,11 @@ meraki switch updateNetworkSwitchStackRoutingInterfaceDhcp --networkId 'STRING' 
 meraki switch updateNetworkSwitchStackRoutingInterfaceDhcp --networkId 'STRING' --switchStackId 'STRING' --interfaceId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
+##### Method Code:
+```python
+def updateNetworkSwitchStackRoutingInterfaceDhcp(networkId: str, switchStackId: str, interfaceId: str, **kwargs):
+    # Code
+````
 
 ----------------------------------------
 ## Update Network Switch Stack Routing Static Route
@@ -11377,11 +11372,6 @@ https://developer.cisco.com/meraki/api-v1/#!update-network-switch-stack-routing-
 - `--advertiseViaOspfEnabled` (boolean): Option to advertise static route via OSPF
 - `--preferOverOspfRoutesEnabled` (boolean): Option to prefer static route over OSPF routes
 
-##### Method Code:
-```python
-def updateNetworkSwitchStackRoutingStaticRoute(networkId: str, switchStackId: str, staticRouteId: str, **kwargs):
-    # Code
-````
 
 ##### Example:
 ```
@@ -11393,6 +11383,11 @@ meraki switch updateNetworkSwitchStackRoutingStaticRoute --networkId 'STRING' --
 meraki switch updateNetworkSwitchStackRoutingStaticRoute --networkId 'STRING' --switchStackId 'STRING' --staticRouteId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
+##### Method Code:
+```python
+def updateNetworkSwitchStackRoutingStaticRoute(networkId: str, switchStackId: str, staticRouteId: str, **kwargs):
+    # Code
+````
 
 ----------------------------------------
 ## Update Network Switch Storm Control
@@ -11408,11 +11403,6 @@ https://developer.cisco.com/meraki/api-v1/#!update-network-switch-storm-control
 - `--multicastThreshold` (integer): Percentage (1 to 99) of total available port bandwidth for multicast traffic type. Default value 100 percent rate is to clear the configuration.
 - `--unknownUnicastThreshold` (integer): Percentage (1 to 99) of total available port bandwidth for unknown unicast (dlf-destination lookup failure) traffic type. Default value 100 percent rate is to clear the configuration.
 
-##### Method Code:
-```python
-def updateNetworkSwitchStormControl(networkId: str, **kwargs):
-    # Code
-````
 
 ##### Example:
 ```
@@ -11424,6 +11414,11 @@ meraki switch updateNetworkSwitchStormControl --networkId 'STRING' --optionalArg
 meraki switch updateNetworkSwitchStormControl --networkId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
+##### Method Code:
+```python
+def updateNetworkSwitchStormControl(networkId: str, **kwargs):
+    # Code
+````
 
 ----------------------------------------
 ## Update Network Switch Stp
@@ -11438,11 +11433,6 @@ https://developer.cisco.com/meraki/api-v1/#!update-network-switch-stp
 - `--rstpEnabled` (boolean): The spanning tree protocol status in network
 - `--stpBridgePriority` (array): STP bridge priority for switches/stacks or switch profiles. An empty array will clear the STP bridge priority settings.
 
-##### Method Code:
-```python
-def updateNetworkSwitchStp(networkId: str, **kwargs):
-    # Code
-````
 
 ##### Example:
 ```
@@ -11454,6 +11444,11 @@ meraki switch updateNetworkSwitchStp --networkId 'STRING' --optionalArg1 'option
 meraki switch updateNetworkSwitchStp --networkId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
+##### Method Code:
+```python
+def updateNetworkSwitchStp(networkId: str, **kwargs):
+    # Code
+````
 
 ----------------------------------------
 ## Update Organization Config Template Switch Profile Port
@@ -11490,11 +11485,6 @@ https://developer.cisco.com/meraki/api-v1/#!update-organization-config-template-
 - `--stormControlEnabled` (boolean): The storm control status of the switch profile port
 - `--flexibleStackingEnabled` (boolean): For supported switches (e.g. MS420/MS425), whether or not the port has flexible stacking enabled.
 
-##### Method Code:
-```python
-def updateOrganizationConfigTemplateSwitchProfilePort(organizationId: str, configTemplateId: str, profileId: str, portId: str, **kwargs):
-    # Code
-````
 
 ##### Example:
 ```
@@ -11506,6 +11496,11 @@ meraki switch updateOrganizationConfigTemplateSwitchProfilePort --organizationId
 meraki switch updateOrganizationConfigTemplateSwitchProfilePort --organizationId 'STRING' --configTemplateId 'STRING' --profileId 'STRING' --portId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
+##### Method Code:
+```python
+def updateOrganizationConfigTemplateSwitchProfilePort(organizationId: str, configTemplateId: str, profileId: str, portId: str, **kwargs):
+    # Code
+````
 
 ----------------------------------------
 
@@ -11531,11 +11526,6 @@ https://developer.cisco.com/meraki/api-v1/#!create-network-wireless-rf-profile
 - `--twoFourGhzSettings` (object): Settings related to 2.4Ghz band
 - `--fiveGhzSettings` (object): Settings related to 5Ghz band
 
-##### Method Code:
-```python
-def createNetworkWirelessRfProfile(networkId: str, name: str, bandSelectionType: str, **kwargs):
-    # Code
-````
 
 ##### Example:
 ```
@@ -11547,6 +11537,11 @@ meraki wireless createNetworkWirelessRfProfile --networkId 'STRING' --name 'STRI
 meraki wireless createNetworkWirelessRfProfile --networkId 'STRING' --name 'STRING' --bandSelectionType 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
+##### Method Code:
+```python
+def createNetworkWirelessRfProfile(networkId: str, name: str, bandSelectionType: str, **kwargs):
+    # Code
+````
 
 ----------------------------------------
 ## Create Network Wireless Ssid Identity Psk
@@ -11563,17 +11558,17 @@ https://developer.cisco.com/meraki/api-v1/#!create-network-wireless-ssid-identit
 - `--passphrase` (string): The passphrase for client authentication
 - `--groupPolicyId` (string): The group policy to be applied to clients
 
-##### Method Code:
-```python
-def createNetworkWirelessSsidIdentityPsk(networkId: str, number: str, name: str, passphrase: str, groupPolicyId: str):
-    # Code
-````
 
 ##### Example:
 ```
 meraki wireless createNetworkWirelessSsidIdentityPsk --networkId 'STRING' --number 'STRING' --name 'STRING' --passphrase 'STRING' --groupPolicyId 'STRING'
 ````
 
+##### Method Code:
+```python
+def createNetworkWirelessSsidIdentityPsk(networkId: str, number: str, name: str, passphrase: str, groupPolicyId: str):
+    # Code
+````
 
 ----------------------------------------
 ## Delete Network Wireless Rf Profile
@@ -11587,17 +11582,17 @@ https://developer.cisco.com/meraki/api-v1/#!delete-network-wireless-rf-profile
 - `--networkId` (string): (required)
 - `--rfProfileId` (string): (required)
 
-##### Method Code:
-```python
-def deleteNetworkWirelessRfProfile(networkId: str, rfProfileId: str):
-    # Code
-````
 
 ##### Example:
 ```
 meraki wireless deleteNetworkWirelessRfProfile --networkId 'STRING' --rfProfileId 'STRING'
 ````
 
+##### Method Code:
+```python
+def deleteNetworkWirelessRfProfile(networkId: str, rfProfileId: str):
+    # Code
+````
 
 ----------------------------------------
 ## Delete Network Wireless Ssid Identity Psk
@@ -11612,17 +11607,17 @@ https://developer.cisco.com/meraki/api-v1/#!delete-network-wireless-ssid-identit
 - `--number` (string): (required)
 - `--identityPskId` (string): (required)
 
-##### Method Code:
-```python
-def deleteNetworkWirelessSsidIdentityPsk(networkId: str, number: str, identityPskId: str):
-    # Code
-````
 
 ##### Example:
 ```
 meraki wireless deleteNetworkWirelessSsidIdentityPsk --networkId 'STRING' --number 'STRING' --identityPskId 'STRING'
 ````
 
+##### Method Code:
+```python
+def deleteNetworkWirelessSsidIdentityPsk(networkId: str, number: str, identityPskId: str):
+    # Code
+````
 
 ----------------------------------------
 ## Get Device Wireless Bluetooth Settings
@@ -11635,17 +11630,17 @@ https://developer.cisco.com/meraki/api-v1/#!get-device-wireless-bluetooth-settin
 ##### Arguments
 - `--serial` (string): (required)
 
-##### Method Code:
-```python
-def getDeviceWirelessBluetoothSettings(serial: str):
-    # Code
-````
 
 ##### Example:
 ```
 meraki wireless getDeviceWirelessBluetoothSettings --serial 'STRING'
 ````
 
+##### Method Code:
+```python
+def getDeviceWirelessBluetoothSettings(serial: str):
+    # Code
+````
 
 ----------------------------------------
 ## Get Device Wireless Connection Stats
@@ -11665,11 +11660,6 @@ https://developer.cisco.com/meraki/api-v1/#!get-device-wireless-connection-stats
 - `--vlan` (integer): Filter results by VLAN
 - `--apTag` (string): Filter results by AP Tag
 
-##### Method Code:
-```python
-def getDeviceWirelessConnectionStats(serial: str, **kwargs):
-    # Code
-````
 
 ##### Example:
 ```
@@ -11681,6 +11671,11 @@ meraki wireless getDeviceWirelessConnectionStats --serial 'STRING' --optionalArg
 meraki wireless getDeviceWirelessConnectionStats --serial 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
+##### Method Code:
+```python
+def getDeviceWirelessConnectionStats(serial: str, **kwargs):
+    # Code
+````
 
 ----------------------------------------
 ## Get Device Wireless Latency Stats
@@ -11701,11 +11696,6 @@ https://developer.cisco.com/meraki/api-v1/#!get-device-wireless-latency-stats
 - `--apTag` (string): Filter results by AP Tag
 - `--fields` (string): Partial selection: If present, this call will return only the selected fields of ["rawDistribution", "avg"]. All fields will be returned by default. Selected fields must be entered as a comma separated string.
 
-##### Method Code:
-```python
-def getDeviceWirelessLatencyStats(serial: str, **kwargs):
-    # Code
-````
 
 ##### Example:
 ```
@@ -11717,6 +11707,11 @@ meraki wireless getDeviceWirelessLatencyStats --serial 'STRING' --optionalArg1 '
 meraki wireless getDeviceWirelessLatencyStats --serial 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
+##### Method Code:
+```python
+def getDeviceWirelessLatencyStats(serial: str, **kwargs):
+    # Code
+````
 
 ----------------------------------------
 ## Get Device Wireless Radio Settings
@@ -11729,17 +11724,17 @@ https://developer.cisco.com/meraki/api-v1/#!get-device-wireless-radio-settings
 ##### Arguments
 - `--serial` (string): (required)
 
-##### Method Code:
-```python
-def getDeviceWirelessRadioSettings(serial: str):
-    # Code
-````
 
 ##### Example:
 ```
 meraki wireless getDeviceWirelessRadioSettings --serial 'STRING'
 ````
 
+##### Method Code:
+```python
+def getDeviceWirelessRadioSettings(serial: str):
+    # Code
+````
 
 ----------------------------------------
 ## Get Device Wireless Status
@@ -11752,17 +11747,17 @@ https://developer.cisco.com/meraki/api-v1/#!get-device-wireless-status
 ##### Arguments
 - `--serial` (string): (required)
 
-##### Method Code:
-```python
-def getDeviceWirelessStatus(serial: str):
-    # Code
-````
 
 ##### Example:
 ```
 meraki wireless getDeviceWirelessStatus --serial 'STRING'
 ````
 
+##### Method Code:
+```python
+def getDeviceWirelessStatus(serial: str):
+    # Code
+````
 
 ----------------------------------------
 ## Get Network Wireless Air Marshal
@@ -11777,11 +11772,6 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-wireless-air-marshal
 - `--t0` (string): The beginning of the timespan for the data. The maximum lookback period is 31 days from today.
 - `--timespan` (number): The timespan for which the information will be fetched. If specifying timespan, do not specify parameter t0. The value must be in seconds and be less than or equal to 31 days. The default is 7 days.
 
-##### Method Code:
-```python
-def getNetworkWirelessAirMarshal(networkId: str, **kwargs):
-    # Code
-````
 
 ##### Example:
 ```
@@ -11793,6 +11783,11 @@ meraki wireless getNetworkWirelessAirMarshal --networkId 'STRING' --optionalArg1
 meraki wireless getNetworkWirelessAirMarshal --networkId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
+##### Method Code:
+```python
+def getNetworkWirelessAirMarshal(networkId: str, **kwargs):
+    # Code
+````
 
 ----------------------------------------
 ## Get Network Wireless Alternate Management Interface
@@ -11805,17 +11800,17 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-wireless-alternate-manag
 ##### Arguments
 - `--networkId` (string): (required)
 
-##### Method Code:
-```python
-def getNetworkWirelessAlternateManagementInterface(networkId: str):
-    # Code
-````
 
 ##### Example:
 ```
 meraki wireless getNetworkWirelessAlternateManagementInterface --networkId 'STRING'
 ````
 
+##### Method Code:
+```python
+def getNetworkWirelessAlternateManagementInterface(networkId: str):
+    # Code
+````
 
 ----------------------------------------
 ## Get Network Wireless Billing
@@ -11828,17 +11823,17 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-wireless-billing
 ##### Arguments
 - `--networkId` (string): (required)
 
-##### Method Code:
-```python
-def getNetworkWirelessBilling(networkId: str):
-    # Code
-````
 
 ##### Example:
 ```
 meraki wireless getNetworkWirelessBilling --networkId 'STRING'
 ````
 
+##### Method Code:
+```python
+def getNetworkWirelessBilling(networkId: str):
+    # Code
+````
 
 ----------------------------------------
 ## Get Network Wireless Bluetooth Settings
@@ -11846,23 +11841,22 @@ meraki wireless getNetworkWirelessBilling --networkId 'STRING'
 
 **Return the Bluetooth settings for a network. <a href="https://documentation.meraki.com/MR/Bluetooth/Bluetooth_Low_Energy_(BLE)">Bluetooth settings</a> must be enabled on the network.**
 
-##### Arguments
 https://developer.cisco.com/meraki/api-v1/#!get-network-wireless-bluetooth-settings
 
 ##### Arguments
 - `--networkId` (string): (required)
 
-##### Method Code:
-```python
-def getNetworkWirelessBluetoothSettings(networkId: str):
-    # Code
-````
 
 ##### Example:
 ```
 meraki wireless getNetworkWirelessBluetoothSettings --networkId 'STRING'
 ````
 
+##### Method Code:
+```python
+def getNetworkWirelessBluetoothSettings(networkId: str):
+    # Code
+````
 
 ----------------------------------------
 ## Get Network Wireless Channel Utilization History
@@ -11884,11 +11878,6 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-wireless-channel-utiliza
 - `--apTag` (string): Filter results by AP tag to return AP channel utilization metrics for devices labeled with the given tag; either :clientId or :deviceSerial must be jointly specified.
 - `--band` (string): Filter results by band (either '2.4' or '5').
 
-##### Method Code:
-```python
-def getNetworkWirelessChannelUtilizationHistory(networkId: str, **kwargs):
-    # Code
-````
 
 ##### Example:
 ```
@@ -11900,6 +11889,11 @@ meraki wireless getNetworkWirelessChannelUtilizationHistory --networkId 'STRING'
 meraki wireless getNetworkWirelessChannelUtilizationHistory --networkId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
+##### Method Code:
+```python
+def getNetworkWirelessChannelUtilizationHistory(networkId: str, **kwargs):
+    # Code
+````
 
 ----------------------------------------
 ## Get Network Wireless Client Connection Stats
@@ -11920,11 +11914,6 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-wireless-client-connecti
 - `--vlan` (integer): Filter results by VLAN
 - `--apTag` (string): Filter results by AP Tag
 
-##### Method Code:
-```python
-def getNetworkWirelessClientConnectionStats(networkId: str, clientId: str, **kwargs):
-    # Code
-````
 
 ##### Example:
 ```
@@ -11936,6 +11925,11 @@ meraki wireless getNetworkWirelessClientConnectionStats --networkId 'STRING' --c
 meraki wireless getNetworkWirelessClientConnectionStats --networkId 'STRING' --clientId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
+##### Method Code:
+```python
+def getNetworkWirelessClientConnectionStats(networkId: str, clientId: str, **kwargs):
+    # Code
+````
 
 ----------------------------------------
 ## Get Network Wireless Client Connectivity Events
@@ -11962,11 +11956,6 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-wireless-client-connecti
 - `--ssidNumber` (integer): An SSID number to include. If not specified, events for all SSIDs will be returned.
 - `--deviceSerial` (string): Filter results by an AP's serial number.
 
-##### Method Code:
-```python
-def getNetworkWirelessClientConnectivityEvents(networkId: str, clientId: str, total_pages=1, direction='next', **kwargs):
-    # Code
-````
 
 ##### Example:
 ```
@@ -11978,6 +11967,11 @@ meraki wireless getNetworkWirelessClientConnectivityEvents --networkId 'STRING' 
 meraki wireless getNetworkWirelessClientConnectivityEvents --networkId 'STRING' --clientId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
+##### Method Code:
+```python
+def getNetworkWirelessClientConnectivityEvents(networkId: str, clientId: str, total_pages=1, direction='next', **kwargs):
+    # Code
+````
 
 ----------------------------------------
 ## Get Network Wireless Client Count History
@@ -12000,11 +11994,6 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-wireless-client-count-hi
 - `--band` (string): Filter results by band (either '2.4' or '5').
 - `--ssid` (integer): Filter results by SSID number.
 
-##### Method Code:
-```python
-def getNetworkWirelessClientCountHistory(networkId: str, **kwargs):
-    # Code
-````
 
 ##### Example:
 ```
@@ -12016,6 +12005,11 @@ meraki wireless getNetworkWirelessClientCountHistory --networkId 'STRING' --opti
 meraki wireless getNetworkWirelessClientCountHistory --networkId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
+##### Method Code:
+```python
+def getNetworkWirelessClientCountHistory(networkId: str, **kwargs):
+    # Code
+````
 
 ----------------------------------------
 ## Get Network Wireless Client Latency History
@@ -12033,11 +12027,6 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-wireless-client-latency-
 - `--timespan` (number): The timespan for which the information will be fetched. If specifying timespan, do not specify parameters t0 and t1. The value must be in seconds and be less than or equal to 791 days. The default is 1 day.
 - `--resolution` (integer): The time resolution in seconds for returned data. The valid resolutions are: 86400. The default is 86400.
 
-##### Method Code:
-```python
-def getNetworkWirelessClientLatencyHistory(networkId: str, clientId: str, **kwargs):
-    # Code
-````
 
 ##### Example:
 ```
@@ -12049,6 +12038,11 @@ meraki wireless getNetworkWirelessClientLatencyHistory --networkId 'STRING' --cl
 meraki wireless getNetworkWirelessClientLatencyHistory --networkId 'STRING' --clientId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
+##### Method Code:
+```python
+def getNetworkWirelessClientLatencyHistory(networkId: str, clientId: str, **kwargs):
+    # Code
+````
 
 ----------------------------------------
 ## Get Network Wireless Client Latency Stats
@@ -12070,11 +12064,6 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-wireless-client-latency-
 - `--apTag` (string): Filter results by AP Tag
 - `--fields` (string): Partial selection: If present, this call will return only the selected fields of ["rawDistribution", "avg"]. All fields will be returned by default. Selected fields must be entered as a comma separated string.
 
-##### Method Code:
-```python
-def getNetworkWirelessClientLatencyStats(networkId: str, clientId: str, **kwargs):
-    # Code
-````
 
 ##### Example:
 ```
@@ -12086,6 +12075,11 @@ meraki wireless getNetworkWirelessClientLatencyStats --networkId 'STRING' --clie
 meraki wireless getNetworkWirelessClientLatencyStats --networkId 'STRING' --clientId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
+##### Method Code:
+```python
+def getNetworkWirelessClientLatencyStats(networkId: str, clientId: str, **kwargs):
+    # Code
+````
 
 ----------------------------------------
 ## Get Network Wireless Clients Connection Stats
@@ -12105,11 +12099,6 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-wireless-clients-connect
 - `--vlan` (integer): Filter results by VLAN
 - `--apTag` (string): Filter results by AP Tag
 
-##### Method Code:
-```python
-def getNetworkWirelessClientsConnectionStats(networkId: str, **kwargs):
-    # Code
-````
 
 ##### Example:
 ```
@@ -12121,6 +12110,11 @@ meraki wireless getNetworkWirelessClientsConnectionStats --networkId 'STRING' --
 meraki wireless getNetworkWirelessClientsConnectionStats --networkId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
+##### Method Code:
+```python
+def getNetworkWirelessClientsConnectionStats(networkId: str, **kwargs):
+    # Code
+````
 
 ----------------------------------------
 ## Get Network Wireless Clients Latency Stats
@@ -12141,11 +12135,6 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-wireless-clients-latency
 - `--apTag` (string): Filter results by AP Tag
 - `--fields` (string): Partial selection: If present, this call will return only the selected fields of ["rawDistribution", "avg"]. All fields will be returned by default. Selected fields must be entered as a comma separated string.
 
-##### Method Code:
-```python
-def getNetworkWirelessClientsLatencyStats(networkId: str, **kwargs):
-    # Code
-````
 
 ##### Example:
 ```
@@ -12157,6 +12146,11 @@ meraki wireless getNetworkWirelessClientsLatencyStats --networkId 'STRING' --opt
 meraki wireless getNetworkWirelessClientsLatencyStats --networkId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
+##### Method Code:
+```python
+def getNetworkWirelessClientsLatencyStats(networkId: str, **kwargs):
+    # Code
+````
 
 ----------------------------------------
 ## Get Network Wireless Connection Stats
@@ -12176,11 +12170,6 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-wireless-connection-stat
 - `--vlan` (integer): Filter results by VLAN
 - `--apTag` (string): Filter results by AP Tag
 
-##### Method Code:
-```python
-def getNetworkWirelessConnectionStats(networkId: str, **kwargs):
-    # Code
-````
 
 ##### Example:
 ```
@@ -12192,6 +12181,11 @@ meraki wireless getNetworkWirelessConnectionStats --networkId 'STRING' --optiona
 meraki wireless getNetworkWirelessConnectionStats --networkId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
+##### Method Code:
+```python
+def getNetworkWirelessConnectionStats(networkId: str, **kwargs):
+    # Code
+````
 
 ----------------------------------------
 ## Get Network Wireless Data Rate History
@@ -12214,11 +12208,6 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-wireless-data-rate-histo
 - `--band` (string): Filter results by band (either '2.4' or '5').
 - `--ssid` (integer): Filter results by SSID number.
 
-##### Method Code:
-```python
-def getNetworkWirelessDataRateHistory(networkId: str, **kwargs):
-    # Code
-````
 
 ##### Example:
 ```
@@ -12230,6 +12219,11 @@ meraki wireless getNetworkWirelessDataRateHistory --networkId 'STRING' --optiona
 meraki wireless getNetworkWirelessDataRateHistory --networkId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
+##### Method Code:
+```python
+def getNetworkWirelessDataRateHistory(networkId: str, **kwargs):
+    # Code
+````
 
 ----------------------------------------
 ## Get Network Wireless Devices Connection Stats
@@ -12249,11 +12243,6 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-wireless-devices-connect
 - `--vlan` (integer): Filter results by VLAN
 - `--apTag` (string): Filter results by AP Tag
 
-##### Method Code:
-```python
-def getNetworkWirelessDevicesConnectionStats(networkId: str, **kwargs):
-    # Code
-````
 
 ##### Example:
 ```
@@ -12265,6 +12254,11 @@ meraki wireless getNetworkWirelessDevicesConnectionStats --networkId 'STRING' --
 meraki wireless getNetworkWirelessDevicesConnectionStats --networkId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
+##### Method Code:
+```python
+def getNetworkWirelessDevicesConnectionStats(networkId: str, **kwargs):
+    # Code
+````
 
 ----------------------------------------
 ## Get Network Wireless Devices Latency Stats
@@ -12285,11 +12279,6 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-wireless-devices-latency
 - `--apTag` (string): Filter results by AP Tag
 - `--fields` (string): Partial selection: If present, this call will return only the selected fields of ["rawDistribution", "avg"]. All fields will be returned by default. Selected fields must be entered as a comma separated string.
 
-##### Method Code:
-```python
-def getNetworkWirelessDevicesLatencyStats(networkId: str, **kwargs):
-    # Code
-````
 
 ##### Example:
 ```
@@ -12301,6 +12290,11 @@ meraki wireless getNetworkWirelessDevicesLatencyStats --networkId 'STRING' --opt
 meraki wireless getNetworkWirelessDevicesLatencyStats --networkId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
+##### Method Code:
+```python
+def getNetworkWirelessDevicesLatencyStats(networkId: str, **kwargs):
+    # Code
+````
 
 ----------------------------------------
 ## Get Network Wireless Failed Connections
@@ -12322,11 +12316,6 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-wireless-failed-connecti
 - `--serial` (string): Filter by AP
 - `--clientId` (string): Filter by client MAC
 
-##### Method Code:
-```python
-def getNetworkWirelessFailedConnections(networkId: str, **kwargs):
-    # Code
-````
 
 ##### Example:
 ```
@@ -12338,6 +12327,11 @@ meraki wireless getNetworkWirelessFailedConnections --networkId 'STRING' --optio
 meraki wireless getNetworkWirelessFailedConnections --networkId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
+##### Method Code:
+```python
+def getNetworkWirelessFailedConnections(networkId: str, **kwargs):
+    # Code
+````
 
 ----------------------------------------
 ## Get Network Wireless Latency History
@@ -12361,11 +12355,6 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-wireless-latency-history
 - `--ssid` (integer): Filter results by SSID number.
 - `--accessCategory` (string): Filter by access category.
 
-##### Method Code:
-```python
-def getNetworkWirelessLatencyHistory(networkId: str, **kwargs):
-    # Code
-````
 
 ##### Example:
 ```
@@ -12377,6 +12366,11 @@ meraki wireless getNetworkWirelessLatencyHistory --networkId 'STRING' --optional
 meraki wireless getNetworkWirelessLatencyHistory --networkId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
+##### Method Code:
+```python
+def getNetworkWirelessLatencyHistory(networkId: str, **kwargs):
+    # Code
+````
 
 ----------------------------------------
 ## Get Network Wireless Latency Stats
@@ -12397,11 +12391,6 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-wireless-latency-stats
 - `--apTag` (string): Filter results by AP Tag
 - `--fields` (string): Partial selection: If present, this call will return only the selected fields of ["rawDistribution", "avg"]. All fields will be returned by default. Selected fields must be entered as a comma separated string.
 
-##### Method Code:
-```python
-def getNetworkWirelessLatencyStats(networkId: str, **kwargs):
-    # Code
-````
 
 ##### Example:
 ```
@@ -12413,6 +12402,11 @@ meraki wireless getNetworkWirelessLatencyStats --networkId 'STRING' --optionalAr
 meraki wireless getNetworkWirelessLatencyStats --networkId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
+##### Method Code:
+```python
+def getNetworkWirelessLatencyStats(networkId: str, **kwargs):
+    # Code
+````
 
 ----------------------------------------
 ## Get Network Wireless Mesh Statuses
@@ -12430,11 +12424,6 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-wireless-mesh-statuses
 - `--startingAfter` (string): A token used by the server to indicate the start of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it.
 - `--endingBefore` (string): A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it.
 
-##### Method Code:
-```python
-def getNetworkWirelessMeshStatuses(networkId: str, total_pages=1, direction='next', **kwargs):
-    # Code
-````
 
 ##### Example:
 ```
@@ -12446,6 +12435,11 @@ meraki wireless getNetworkWirelessMeshStatuses --networkId 'STRING' --optionalAr
 meraki wireless getNetworkWirelessMeshStatuses --networkId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
+##### Method Code:
+```python
+def getNetworkWirelessMeshStatuses(networkId: str, total_pages=1, direction='next', **kwargs):
+    # Code
+````
 
 ----------------------------------------
 ## Get Network Wireless Rf Profile
@@ -12459,17 +12453,17 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-wireless-rf-profile
 - `--networkId` (string): (required)
 - `--rfProfileId` (string): (required)
 
-##### Method Code:
-```python
-def getNetworkWirelessRfProfile(networkId: str, rfProfileId: str):
-    # Code
-````
 
 ##### Example:
 ```
 meraki wireless getNetworkWirelessRfProfile --networkId 'STRING' --rfProfileId 'STRING'
 ````
 
+##### Method Code:
+```python
+def getNetworkWirelessRfProfile(networkId: str, rfProfileId: str):
+    # Code
+````
 
 ----------------------------------------
 ## Get Network Wireless Rf Profiles
@@ -12483,11 +12477,6 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-wireless-rf-profiles
 - `--networkId` (string): (required)
 - `--includeTemplateProfiles` (boolean): If the network is bound to a template, this parameter controls whether or not the non-basic RF profiles defined on the template should be included in the response alongside the non-basic profiles defined on the bound network. Defaults to false.
 
-##### Method Code:
-```python
-def getNetworkWirelessRfProfiles(networkId: str, **kwargs):
-    # Code
-````
 
 ##### Example:
 ```
@@ -12499,6 +12488,11 @@ meraki wireless getNetworkWirelessRfProfiles --networkId 'STRING' --optionalArg1
 meraki wireless getNetworkWirelessRfProfiles --networkId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
+##### Method Code:
+```python
+def getNetworkWirelessRfProfiles(networkId: str, **kwargs):
+    # Code
+````
 
 ----------------------------------------
 ## Get Network Wireless Settings
@@ -12511,17 +12505,17 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-wireless-settings
 ##### Arguments
 - `--networkId` (string): (required)
 
-##### Method Code:
-```python
-def getNetworkWirelessSettings(networkId: str):
-    # Code
-````
 
 ##### Example:
 ```
 meraki wireless getNetworkWirelessSettings --networkId 'STRING'
 ````
 
+##### Method Code:
+```python
+def getNetworkWirelessSettings(networkId: str):
+    # Code
+````
 
 ----------------------------------------
 ## Get Network Wireless Signal Quality History
@@ -12544,11 +12538,6 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-wireless-signal-quality-
 - `--band` (string): Filter results by band (either '2.4' or '5').
 - `--ssid` (integer): Filter results by SSID number.
 
-##### Method Code:
-```python
-def getNetworkWirelessSignalQualityHistory(networkId: str, **kwargs):
-    # Code
-````
 
 ##### Example:
 ```
@@ -12560,6 +12549,11 @@ meraki wireless getNetworkWirelessSignalQualityHistory --networkId 'STRING' --op
 meraki wireless getNetworkWirelessSignalQualityHistory --networkId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
+##### Method Code:
+```python
+def getNetworkWirelessSignalQualityHistory(networkId: str, **kwargs):
+    # Code
+````
 
 ----------------------------------------
 ## Get Network Wireless Ssid
@@ -12573,17 +12567,17 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-wireless-ssid
 - `--networkId` (string): (required)
 - `--number` (string): (required)
 
-##### Method Code:
-```python
-def getNetworkWirelessSsid(networkId: str, number: str):
-    # Code
-````
 
 ##### Example:
 ```
 meraki wireless getNetworkWirelessSsid --networkId 'STRING' --number 'STRING'
 ````
 
+##### Method Code:
+```python
+def getNetworkWirelessSsid(networkId: str, number: str):
+    # Code
+````
 
 ----------------------------------------
 ## Get Network Wireless Ssid Device Type Group Policies
@@ -12597,17 +12591,17 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-wireless-ssid-device-typ
 - `--networkId` (string): (required)
 - `--number` (string): (required)
 
-##### Method Code:
-```python
-def getNetworkWirelessSsidDeviceTypeGroupPolicies(networkId: str, number: str):
-    # Code
-````
 
 ##### Example:
 ```
 meraki wireless getNetworkWirelessSsidDeviceTypeGroupPolicies --networkId 'STRING' --number 'STRING'
 ````
 
+##### Method Code:
+```python
+def getNetworkWirelessSsidDeviceTypeGroupPolicies(networkId: str, number: str):
+    # Code
+````
 
 ----------------------------------------
 ## Get Network Wireless Ssid Firewall L3 Firewall Rules
@@ -12621,17 +12615,17 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-wireless-ssid-firewall-l
 - `--networkId` (string): (required)
 - `--number` (string): (required)
 
-##### Method Code:
-```python
-def getNetworkWirelessSsidFirewallL3FirewallRules(networkId: str, number: str):
-    # Code
-````
 
 ##### Example:
 ```
 meraki wireless getNetworkWirelessSsidFirewallL3FirewallRules --networkId 'STRING' --number 'STRING'
 ````
 
+##### Method Code:
+```python
+def getNetworkWirelessSsidFirewallL3FirewallRules(networkId: str, number: str):
+    # Code
+````
 
 ----------------------------------------
 ## Get Network Wireless Ssid Firewall L7 Firewall Rules
@@ -12645,17 +12639,17 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-wireless-ssid-firewall-l
 - `--networkId` (string): (required)
 - `--number` (string): (required)
 
-##### Method Code:
-```python
-def getNetworkWirelessSsidFirewallL7FirewallRules(networkId: str, number: str):
-    # Code
-````
 
 ##### Example:
 ```
 meraki wireless getNetworkWirelessSsidFirewallL7FirewallRules --networkId 'STRING' --number 'STRING'
 ````
 
+##### Method Code:
+```python
+def getNetworkWirelessSsidFirewallL7FirewallRules(networkId: str, number: str):
+    # Code
+````
 
 ----------------------------------------
 ## Get Network Wireless Ssid Identity Psk
@@ -12670,17 +12664,17 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-wireless-ssid-identity-p
 - `--number` (string): (required)
 - `--identityPskId` (string): (required)
 
-##### Method Code:
-```python
-def getNetworkWirelessSsidIdentityPsk(networkId: str, number: str, identityPskId: str):
-    # Code
-````
 
 ##### Example:
 ```
 meraki wireless getNetworkWirelessSsidIdentityPsk --networkId 'STRING' --number 'STRING' --identityPskId 'STRING'
 ````
 
+##### Method Code:
+```python
+def getNetworkWirelessSsidIdentityPsk(networkId: str, number: str, identityPskId: str):
+    # Code
+````
 
 ----------------------------------------
 ## Get Network Wireless Ssid Identity Psks
@@ -12694,17 +12688,17 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-wireless-ssid-identity-p
 - `--networkId` (string): (required)
 - `--number` (string): (required)
 
-##### Method Code:
-```python
-def getNetworkWirelessSsidIdentityPsks(networkId: str, number: str):
-    # Code
-````
 
 ##### Example:
 ```
 meraki wireless getNetworkWirelessSsidIdentityPsks --networkId 'STRING' --number 'STRING'
 ````
 
+##### Method Code:
+```python
+def getNetworkWirelessSsidIdentityPsks(networkId: str, number: str):
+    # Code
+````
 
 ----------------------------------------
 ## Get Network Wireless Ssid Splash Settings
@@ -12718,17 +12712,17 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-wireless-ssid-splash-set
 - `--networkId` (string): (required)
 - `--number` (string): (required)
 
-##### Method Code:
-```python
-def getNetworkWirelessSsidSplashSettings(networkId: str, number: str):
-    # Code
-````
 
 ##### Example:
 ```
 meraki wireless getNetworkWirelessSsidSplashSettings --networkId 'STRING' --number 'STRING'
 ````
 
+##### Method Code:
+```python
+def getNetworkWirelessSsidSplashSettings(networkId: str, number: str):
+    # Code
+````
 
 ----------------------------------------
 ## Get Network Wireless Ssid Traffic Shaping Rules
@@ -12742,17 +12736,17 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-wireless-ssid-traffic-sh
 - `--networkId` (string): (required)
 - `--number` (string): (required)
 
-##### Method Code:
-```python
-def getNetworkWirelessSsidTrafficShapingRules(networkId: str, number: str):
-    # Code
-````
 
 ##### Example:
 ```
 meraki wireless getNetworkWirelessSsidTrafficShapingRules --networkId 'STRING' --number 'STRING'
 ````
 
+##### Method Code:
+```python
+def getNetworkWirelessSsidTrafficShapingRules(networkId: str, number: str):
+    # Code
+````
 
 ----------------------------------------
 ## Get Network Wireless Ssids
@@ -12765,17 +12759,17 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-wireless-ssids
 ##### Arguments
 - `--networkId` (string): (required)
 
-##### Method Code:
-```python
-def getNetworkWirelessSsids(networkId: str):
-    # Code
-````
 
 ##### Example:
 ```
 meraki wireless getNetworkWirelessSsids --networkId 'STRING'
 ````
 
+##### Method Code:
+```python
+def getNetworkWirelessSsids(networkId: str):
+    # Code
+````
 
 ----------------------------------------
 ## Get Network Wireless Usage History
@@ -12798,11 +12792,6 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-wireless-usage-history
 - `--band` (string): Filter results by band (either '2.4' or '5').
 - `--ssid` (integer): Filter results by SSID number.
 
-##### Method Code:
-```python
-def getNetworkWirelessUsageHistory(networkId: str, **kwargs):
-    # Code
-````
 
 ##### Example:
 ```
@@ -12814,6 +12803,11 @@ meraki wireless getNetworkWirelessUsageHistory --networkId 'STRING' --optionalAr
 meraki wireless getNetworkWirelessUsageHistory --networkId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
+##### Method Code:
+```python
+def getNetworkWirelessUsageHistory(networkId: str, **kwargs):
+    # Code
+````
 
 ----------------------------------------
 ## Update Device Wireless Bluetooth Settings
@@ -12829,11 +12823,6 @@ https://developer.cisco.com/meraki/api-v1/#!update-device-wireless-bluetooth-set
 - `--major` (integer): Desired major value of the beacon. If the value is set to null it will reset to Dashboard's automatically generated value.
 - `--minor` (integer): Desired minor value of the beacon. If the value is set to null it will reset to Dashboard's automatically generated value.
 
-##### Method Code:
-```python
-def updateDeviceWirelessBluetoothSettings(serial: str, **kwargs):
-    # Code
-````
 
 ##### Example:
 ```
@@ -12845,6 +12834,11 @@ meraki wireless updateDeviceWirelessBluetoothSettings --serial 'STRING' --option
 meraki wireless updateDeviceWirelessBluetoothSettings --serial 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
+##### Method Code:
+```python
+def updateDeviceWirelessBluetoothSettings(serial: str, **kwargs):
+    # Code
+````
 
 ----------------------------------------
 ## Update Device Wireless Radio Settings
@@ -12860,11 +12854,6 @@ https://developer.cisco.com/meraki/api-v1/#!update-device-wireless-radio-setting
 - `--twoFourGhzSettings` (object): Manual radio settings for 2.4 GHz.
 - `--fiveGhzSettings` (object): Manual radio settings for 5 GHz.
 
-##### Method Code:
-```python
-def updateDeviceWirelessRadioSettings(serial: str, **kwargs):
-    # Code
-````
 
 ##### Example:
 ```
@@ -12876,6 +12865,11 @@ meraki wireless updateDeviceWirelessRadioSettings --serial 'STRING' --optionalAr
 meraki wireless updateDeviceWirelessRadioSettings --serial 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
+##### Method Code:
+```python
+def updateDeviceWirelessRadioSettings(serial: str, **kwargs):
+    # Code
+````
 
 ----------------------------------------
 ## Update Network Wireless Alternate Management Interface
@@ -12892,11 +12886,6 @@ https://developer.cisco.com/meraki/api-v1/#!update-network-wireless-alternate-ma
 - `--protocols` (array): Can be one or more of the following values: 'radius', 'snmp', 'syslog' or 'ldap'
 - `--accessPoints` (array): Array of access point serial number and IP assignment. Note: accessPoints IP assignment is not applicable for template networks, in other words, do not put 'accessPoints' in the body when updating template networks. Also, an empty 'accessPoints' array will remove all previous static IP assignments
 
-##### Method Code:
-```python
-def updateNetworkWirelessAlternateManagementInterface(networkId: str, **kwargs):
-    # Code
-````
 
 ##### Example:
 ```
@@ -12908,6 +12897,11 @@ meraki wireless updateNetworkWirelessAlternateManagementInterface --networkId 'S
 meraki wireless updateNetworkWirelessAlternateManagementInterface --networkId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
+##### Method Code:
+```python
+def updateNetworkWirelessAlternateManagementInterface(networkId: str, **kwargs):
+    # Code
+````
 
 ----------------------------------------
 ## Update Network Wireless Billing
@@ -12922,11 +12916,6 @@ https://developer.cisco.com/meraki/api-v1/#!update-network-wireless-billing
 - `--currency` (string): The currency code of this node group's billing plans
 - `--plans` (array): Array of billing plans in the node group. (Can configure a maximum of 5)
 
-##### Method Code:
-```python
-def updateNetworkWirelessBilling(networkId: str, **kwargs):
-    # Code
-````
 
 ##### Example:
 ```
@@ -12938,6 +12927,11 @@ meraki wireless updateNetworkWirelessBilling --networkId 'STRING' --optionalArg1
 meraki wireless updateNetworkWirelessBilling --networkId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
+##### Method Code:
+```python
+def updateNetworkWirelessBilling(networkId: str, **kwargs):
+    # Code
+````
 
 ----------------------------------------
 ## Update Network Wireless Bluetooth Settings
@@ -12956,11 +12950,6 @@ https://developer.cisco.com/meraki/api-v1/#!update-network-wireless-bluetooth-se
 - `--major` (integer): The major number to be used in the beacon identifier. Only valid in 'Non-unique' mode.
 - `--minor` (integer): The minor number to be used in the beacon identifier. Only valid in 'Non-unique' mode.
 
-##### Method Code:
-```python
-def updateNetworkWirelessBluetoothSettings(networkId: str, **kwargs):
-    # Code
-````
 
 ##### Example:
 ```
@@ -12972,6 +12961,11 @@ meraki wireless updateNetworkWirelessBluetoothSettings --networkId 'STRING' --op
 meraki wireless updateNetworkWirelessBluetoothSettings --networkId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
+##### Method Code:
+```python
+def updateNetworkWirelessBluetoothSettings(networkId: str, **kwargs):
+    # Code
+````
 
 ----------------------------------------
 ## Update Network Wireless Rf Profile
@@ -12992,11 +12986,6 @@ https://developer.cisco.com/meraki/api-v1/#!update-network-wireless-rf-profile
 - `--twoFourGhzSettings` (object): Settings related to 2.4Ghz band
 - `--fiveGhzSettings` (object): Settings related to 5Ghz band
 
-##### Method Code:
-```python
-def updateNetworkWirelessRfProfile(networkId: str, rfProfileId: str, **kwargs):
-    # Code
-````
 
 ##### Example:
 ```
@@ -13008,6 +12997,11 @@ meraki wireless updateNetworkWirelessRfProfile --networkId 'STRING' --rfProfileI
 meraki wireless updateNetworkWirelessRfProfile --networkId 'STRING' --rfProfileId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
+##### Method Code:
+```python
+def updateNetworkWirelessRfProfile(networkId: str, rfProfileId: str, **kwargs):
+    # Code
+````
 
 ----------------------------------------
 ## Update Network Wireless Settings
@@ -13025,11 +13019,6 @@ https://developer.cisco.com/meraki/api-v1/#!update-network-wireless-settings
 - `--upgradeStrategy` (string): The upgrade strategy to apply to the network. Must be one of 'minimizeUpgradeTime' or 'minimizeClientDowntime'. Requires firmware version MR 26.8 or higher'
 - `--ledLightsOn` (boolean): Toggle for enabling or disabling LED lights on all APs in the network (making them run dark)
 
-##### Method Code:
-```python
-def updateNetworkWirelessSettings(networkId: str, **kwargs):
-    # Code
-````
 
 ##### Example:
 ```
@@ -13041,6 +13030,11 @@ meraki wireless updateNetworkWirelessSettings --networkId 'STRING' --optionalArg
 meraki wireless updateNetworkWirelessSettings --networkId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
+##### Method Code:
+```python
+def updateNetworkWirelessSettings(networkId: str, **kwargs):
+    # Code
+````
 
 ----------------------------------------
 ## Update Network Wireless Ssid
@@ -13105,11 +13099,6 @@ https://developer.cisco.com/meraki/api-v1/#!update-network-wireless-ssid
 - `--adaptivePolicyGroupId` (string): Adaptive policy group ID this SSID is assigned to.
 - `--mandatoryDhcpEnabled` (boolean): If true, Mandatory DHCP will enforce that clients connecting to this SSID must use the IP address assigned by the DHCP server. Clients who use a static IP address won’t be able to associate.
 
-##### Method Code:
-```python
-def updateNetworkWirelessSsid(networkId: str, number: str, **kwargs):
-    # Code
-````
 
 ##### Example:
 ```
@@ -13121,6 +13110,11 @@ meraki wireless updateNetworkWirelessSsid --networkId 'STRING' --number 'STRING'
 meraki wireless updateNetworkWirelessSsid --networkId 'STRING' --number 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
+##### Method Code:
+```python
+def updateNetworkWirelessSsid(networkId: str, number: str, **kwargs):
+    # Code
+````
 
 ----------------------------------------
 ## Update Network Wireless Ssid Device Type Group Policies
@@ -13136,11 +13130,6 @@ https://developer.cisco.com/meraki/api-v1/#!update-network-wireless-ssid-device-
 - `--enabled` (boolean): If true, the SSID device type group policies are enabled.
 - `--deviceTypePolicies` (array): List of device type policies.
 
-##### Method Code:
-```python
-def updateNetworkWirelessSsidDeviceTypeGroupPolicies(networkId: str, number: str, **kwargs):
-    # Code
-````
 
 ##### Example:
 ```
@@ -13152,6 +13141,11 @@ meraki wireless updateNetworkWirelessSsidDeviceTypeGroupPolicies --networkId 'ST
 meraki wireless updateNetworkWirelessSsidDeviceTypeGroupPolicies --networkId 'STRING' --number 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
+##### Method Code:
+```python
+def updateNetworkWirelessSsidDeviceTypeGroupPolicies(networkId: str, number: str, **kwargs):
+    # Code
+````
 
 ----------------------------------------
 ## Update Network Wireless Ssid Firewall L3 Firewall Rules
@@ -13167,11 +13161,6 @@ https://developer.cisco.com/meraki/api-v1/#!update-network-wireless-ssid-firewal
 - `--rules` (array): An ordered array of the firewall rules for this SSID (not including the local LAN access rule or the default rule)
 - `--allowLanAccess` (boolean): Allow wireless client access to local LAN (boolean value - `--true` allows access and false denies access) (optional)
 
-##### Method Code:
-```python
-def updateNetworkWirelessSsidFirewallL3FirewallRules(networkId: str, number: str, **kwargs):
-    # Code
-````
 
 ##### Example:
 ```
@@ -13183,6 +13172,11 @@ meraki wireless updateNetworkWirelessSsidFirewallL3FirewallRules --networkId 'ST
 meraki wireless updateNetworkWirelessSsidFirewallL3FirewallRules --networkId 'STRING' --number 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
+##### Method Code:
+```python
+def updateNetworkWirelessSsidFirewallL3FirewallRules(networkId: str, number: str, **kwargs):
+    # Code
+````
 
 ----------------------------------------
 ## Update Network Wireless Ssid Firewall L7 Firewall Rules
@@ -13197,11 +13191,6 @@ https://developer.cisco.com/meraki/api-v1/#!update-network-wireless-ssid-firewal
 - `--number` (string): (required)
 - `--rules` (array): An array of L7 firewall rules for this SSID. Rules will get applied in the same order user has specified in request. Empty array will clear the L7 firewall rule configuration.
 
-##### Method Code:
-```python
-def updateNetworkWirelessSsidFirewallL7FirewallRules(networkId: str, number: str, **kwargs):
-    # Code
-````
 
 ##### Example:
 ```
@@ -13213,6 +13202,11 @@ meraki wireless updateNetworkWirelessSsidFirewallL7FirewallRules --networkId 'ST
 meraki wireless updateNetworkWirelessSsidFirewallL7FirewallRules --networkId 'STRING' --number 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
+##### Method Code:
+```python
+def updateNetworkWirelessSsidFirewallL7FirewallRules(networkId: str, number: str, **kwargs):
+    # Code
+````
 
 ----------------------------------------
 ## Update Network Wireless Ssid Identity Psk
@@ -13230,11 +13224,6 @@ https://developer.cisco.com/meraki/api-v1/#!update-network-wireless-ssid-identit
 - `--passphrase` (string): The passphrase for client authentication
 - `--groupPolicyId` (string): The group policy to be applied to clients
 
-##### Method Code:
-```python
-def updateNetworkWirelessSsidIdentityPsk(networkId: str, number: str, identityPskId: str, **kwargs):
-    # Code
-````
 
 ##### Example:
 ```
@@ -13246,6 +13235,11 @@ meraki wireless updateNetworkWirelessSsidIdentityPsk --networkId 'STRING' --numb
 meraki wireless updateNetworkWirelessSsidIdentityPsk --networkId 'STRING' --number 'STRING' --identityPskId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
+##### Method Code:
+```python
+def updateNetworkWirelessSsidIdentityPsk(networkId: str, number: str, identityPskId: str, **kwargs):
+    # Code
+````
 
 ----------------------------------------
 ## Update Network Wireless Ssid Splash Settings
@@ -13273,11 +13267,6 @@ https://developer.cisco.com/meraki/api-v1/#!update-network-wireless-ssid-splash-
 - `--guestSponsorship` (object): Details associated with guest sponsored splash.
 - `--billing` (object): Details associated with billing splash.
 
-##### Method Code:
-```python
-def updateNetworkWirelessSsidSplashSettings(networkId: str, number: str, **kwargs):
-    # Code
-````
 
 ##### Example:
 ```
@@ -13289,6 +13278,11 @@ meraki wireless updateNetworkWirelessSsidSplashSettings --networkId 'STRING' --n
 meraki wireless updateNetworkWirelessSsidSplashSettings --networkId 'STRING' --number 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
+##### Method Code:
+```python
+def updateNetworkWirelessSsidSplashSettings(networkId: str, number: str, **kwargs):
+    # Code
+````
 
 ----------------------------------------
 ## Update Network Wireless Ssid Traffic Shaping Rules
@@ -13308,11 +13302,6 @@ they are specified in. An empty list (or null) means no rules. Note that
 you are allowed a maximum of 8 rules.
 
 
-##### Method Code:
-```python
-def updateNetworkWirelessSsidTrafficShapingRules(networkId: str, number: str, **kwargs):
-    # Code
-````
 
 ##### Example:
 ```
@@ -13324,3 +13313,8 @@ meraki wireless updateNetworkWirelessSsidTrafficShapingRules --networkId 'STRING
 meraki wireless updateNetworkWirelessSsidTrafficShapingRules --networkId 'STRING' --number 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
+##### Method Code:
+```python
+def updateNetworkWirelessSsidTrafficShapingRules(networkId: str, number: str, **kwargs):
+    # Code
+````
