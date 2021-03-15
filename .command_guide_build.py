@@ -69,9 +69,12 @@ def _cmd_section(arg_obj: Args) -> str:
     #     '**this**' and has a newline immediately following. And add an
     #     additional newline after it to help with Markdown formatting.
     result = re.sub(r'(\*\*.*\*\*\n)', r'\1\n', result)
+    # Add a '##### Arguments' line below the Meraki link and above the
+    #     argument options.
+    result = re.sub(r'(\nhttps://.*\n)', r'\1\n##### Arguments', result)
     # Grab each of the bullet point parameter names and wrap the name in
     #     backticks for markdown formatting.
-    result = re.sub(r'- ([a-zA-Z0-9_]+) ', r'- `\1` ', result)
+    result = re.sub(r'- ([a-zA-Z0-9_]+) ', r'- `--\1` ', result)
     return result
 
 
@@ -96,9 +99,6 @@ def _cmd_args(arg_obj: Args) -> str:
             metavar = ' '+climain.ANNOTATION_MAP[arg.annotation]['metavar']
         # Build the argument example and add it to the result
         result += f' --{arg.name}{metavar}'
-    if arg_obj.varkw:
-        json_data = '\'{"key1": "value1", "key2": "value2"}\''
-        result += f' --{arg_obj.varkw.name} {json_data}'
     return result
 
 
