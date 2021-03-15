@@ -10,7 +10,7 @@ This documentation is built automatically by parsing the [Meraki Dashboard API P
 
 ## Version
 
-This command guide is based on version **v1.4.3** of the [Meraki Dashboard API Python SDK](https://github.com/meraki/dashboard-api-python). If you want to see the version of the SDK you have installed, issue the command `meraki -v`.
+This command guide is based on version **v1.6.2** of the [Meraki Dashboard API Python SDK](https://github.com/meraki/dashboard-api-python). If you want to see the version of the SDK you have installed, issue the command `meraki -v`.
 
 
 # TABLE OF CONTENTS
@@ -366,6 +366,7 @@ This command guide is based on version **v1.4.3** of the [Meraki Dashboard API P
     - [Get Network Switch Access Control Lists](#get-network-switch-access-control-lists)
     - [Get Network Switch Access Policies](#get-network-switch-access-policies)
     - [Get Network Switch Access Policy](#get-network-switch-access-policy)
+    - [Get Network Switch Alternate Management Interface](#get-network-switch-alternate-management-interface)
     - [Get Network Switch Dhcp Server Policy](#get-network-switch-dhcp-server-policy)
     - [Get Network Switch Dscp To Cos Mappings](#get-network-switch-dscp-to-cos-mappings)
     - [Get Network Switch Link Aggregations](#get-network-switch-link-aggregations)
@@ -399,6 +400,7 @@ This command guide is based on version **v1.4.3** of the [Meraki Dashboard API P
     - [Update Device Switch Warm Spare](#update-device-switch-warm-spare)
     - [Update Network Switch Access Control Lists](#update-network-switch-access-control-lists)
     - [Update Network Switch Access Policy](#update-network-switch-access-policy)
+    - [Update Network Switch Alternate Management Interface](#update-network-switch-alternate-management-interface)
     - [Update Network Switch Dhcp Server Policy](#update-network-switch-dhcp-server-policy)
     - [Update Network Switch Dscp To Cos Mappings](#update-network-switch-dscp-to-cos-mappings)
     - [Update Network Switch Link Aggregation](#update-network-switch-link-aggregation)
@@ -428,6 +430,7 @@ This command guide is based on version **v1.4.3** of the [Meraki Dashboard API P
     - [Get Device Wireless Status](#get-device-wireless-status)
     - [Get Network Wireless Air Marshal](#get-network-wireless-air-marshal)
     - [Get Network Wireless Alternate Management Interface](#get-network-wireless-alternate-management-interface)
+    - [Get Network Wireless Billing](#get-network-wireless-billing)
     - [Get Network Wireless Bluetooth Settings](#get-network-wireless-bluetooth-settings)
     - [Get Network Wireless Channel Utilization History](#get-network-wireless-channel-utilization-history)
     - [Get Network Wireless Client Connection Stats](#get-network-wireless-client-connection-stats)
@@ -450,6 +453,7 @@ This command guide is based on version **v1.4.3** of the [Meraki Dashboard API P
     - [Get Network Wireless Settings](#get-network-wireless-settings)
     - [Get Network Wireless Signal Quality History](#get-network-wireless-signal-quality-history)
     - [Get Network Wireless Ssid](#get-network-wireless-ssid)
+    - [Get Network Wireless Ssid Device Type Group Policies](#get-network-wireless-ssid-device-type-group-policies)
     - [Get Network Wireless Ssid Firewall L3 Firewall Rules](#get-network-wireless-ssid-firewall-l3-firewall-rules)
     - [Get Network Wireless Ssid Firewall L7 Firewall Rules](#get-network-wireless-ssid-firewall-l7-firewall-rules)
     - [Get Network Wireless Ssid Identity Psk](#get-network-wireless-ssid-identity-psk)
@@ -461,10 +465,12 @@ This command guide is based on version **v1.4.3** of the [Meraki Dashboard API P
     - [Update Device Wireless Bluetooth Settings](#update-device-wireless-bluetooth-settings)
     - [Update Device Wireless Radio Settings](#update-device-wireless-radio-settings)
     - [Update Network Wireless Alternate Management Interface](#update-network-wireless-alternate-management-interface)
+    - [Update Network Wireless Billing](#update-network-wireless-billing)
     - [Update Network Wireless Bluetooth Settings](#update-network-wireless-bluetooth-settings)
     - [Update Network Wireless Rf Profile](#update-network-wireless-rf-profile)
     - [Update Network Wireless Settings](#update-network-wireless-settings)
     - [Update Network Wireless Ssid](#update-network-wireless-ssid)
+    - [Update Network Wireless Ssid Device Type Group Policies](#update-network-wireless-ssid-device-type-group-policies)
     - [Update Network Wireless Ssid Firewall L3 Firewall Rules](#update-network-wireless-ssid-firewall-l3-firewall-rules)
     - [Update Network Wireless Ssid Firewall L7 Firewall Rules](#update-network-wireless-ssid-firewall-l7-firewall-rules)
     - [Update Network Wireless Ssid Identity Psk](#update-network-wireless-ssid-identity-psk)
@@ -721,6 +727,7 @@ https://developer.cisco.com/meraki/api-v1/#!create-organization-network
 - `tags` (array): A list of tags to be applied to the network
 - `timeZone` (string): The timezone of the network. For a list of allowed timezones, please see the 'TZ' column in the table in <a target='_blank' href='https://en.wikipedia.org/wiki/List_of_tz_database_time_zones'>this article.</a>
 - `copyFromNetworkId` (string): The ID of the network to copy configuration from. Other provided parameters will override the copied configuration, except type which must match this network's type exactly.
+- `notes` (string): Add any notes or additional information about this network here.
 
 ##### Method Code:
 ```python
@@ -2267,7 +2274,7 @@ meraki networks createNetworkGroupPolicy --networkId 'STRING' --name 'STRING' --
 ## Create Network Meraki Auth User
 
 
-**Create a user configured with Meraki Authentication for a network (currently supports 802.1X, splash guest, and client VPN users, and currently, organizations have a 50,000 user cap)**
+**Authorize a user configured with Meraki Authentication for a network (currently supports 802.1X, splash guest, and client VPN users, and currently, organizations have a 50,000 user cap)**
 
 https://developer.cisco.com/meraki/api-v1/#!create-network-meraki-auth-user
 
@@ -2466,7 +2473,7 @@ meraki networks deleteNetworkGroupPolicy --networkId 'STRING' --groupPolicyId 'S
 ## Delete Network Meraki Auth User
 
 
-**Delete a user configured with Meraki Authentication (currently, 802.1X RADIUS, splash guest, and client VPN users can be deleted)**
+**Deauthorize a user**
 
 https://developer.cisco.com/meraki/api-v1/#!delete-network-meraki-auth-user
 
@@ -2810,7 +2817,7 @@ meraki networks getNetworkClients --networkId 'STRING' --kwargs '{"key1": "value
 
 https://developer.cisco.com/meraki/api-v1/#!get-network-clients-application-usage
 
-- `networkID` (string): (required)
+- `networkId` (string): (required)
 - `clients` (string): A list of client keys, MACs or IPs separated by comma.
 - `total_pages` (integer or string): use with perPage to get total results up to total_pages*perPage; -1 or "all" for all pages
 - `direction` (string): direction to paginate, either "next" (default) or "prev" page
@@ -2824,13 +2831,13 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-clients-application-usag
 
 ##### Method Code:
 ```python
-def getNetworkClientsApplicationUsage(networkID: str, clients: str, total_pages=1, direction='next', **kwargs):
+def getNetworkClientsApplicationUsage(networkId: str, clients: str, total_pages=1, direction='next', **kwargs):
     # Code
 ````
 
 ##### Example:
 ```
-meraki networks getNetworkClientsApplicationUsage --networkID 'STRING' --clients 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
+meraki networks getNetworkClientsApplicationUsage --networkId 'STRING' --clients 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
 
@@ -2842,7 +2849,7 @@ meraki networks getNetworkClientsApplicationUsage --networkID 'STRING' --clients
 
 https://developer.cisco.com/meraki/api-v1/#!get-network-clients-usage-histories
 
-- `networkID` (string): (required)
+- `networkId` (string): (required)
 - `clients` (string): A list of client keys, MACs or IPs separated by comma.
 - `total_pages` (integer or string): use with perPage to get total results up to total_pages*perPage; -1 or "all" for all pages
 - `direction` (string): direction to paginate, either "next" (default) or "prev" page
@@ -2856,13 +2863,13 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-clients-usage-histories
 
 ##### Method Code:
 ```python
-def getNetworkClientsUsageHistories(networkID: str, clients: str, total_pages=1, direction='next', **kwargs):
+def getNetworkClientsUsageHistories(networkId: str, clients: str, total_pages=1, direction='next', **kwargs):
     # Code
 ````
 
 ##### Example:
 ```
-meraki networks getNetworkClientsUsageHistories --networkID 'STRING' --clients 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
+meraki networks getNetworkClientsUsageHistories --networkId 'STRING' --clients 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
 
@@ -3690,6 +3697,7 @@ https://developer.cisco.com/meraki/api-v1/#!update-network
 - `timeZone` (string): The timezone of the network. For a list of allowed timezones, please see the 'TZ' column in the table in <a target='_blank' href='https://en.wikipedia.org/wiki/List_of_tz_database_time_zones'>this article.</a>
 - `tags` (array): A list of tags to be applied to the network
 - `enrollmentString` (string): A unique identifier which can be used for device enrollment or easy access through the Meraki SM Registration page or the Self Service Portal. Please note that changing this field may cause existing bookmarks to break.
+- `notes` (string): Add any notes or additional information about this network here.
 
 ##### Method Code:
 ```python
@@ -3867,7 +3875,7 @@ meraki networks updateNetworkGroupPolicy --networkId 'STRING' --groupPolicyId 'S
 ## Update Network Meraki Auth User
 
 
-**Update a user configured with Meraki Authentication (currently, 802.1X RADIUS, splash guest, and client VPN users can be deleted)**
+**Update a user configured with Meraki Authentication (currently, 802.1X RADIUS, splash guest, and client VPN users can be updated)**
 
 https://developer.cisco.com/meraki/api-v1/#!update-network-meraki-auth-user
 
@@ -3952,6 +3960,7 @@ https://developer.cisco.com/meraki/api-v1/#!update-network-settings
 - `networkId` (string): (required)
 - `localStatusPageEnabled` (boolean): Enables / disables the local device status pages (<a target='_blank' href='http://my.meraki.com/'>my.meraki.com, </a><a target='_blank' href='http://ap.meraki.com/'>ap.meraki.com, </a><a target='_blank' href='http://switch.meraki.com/'>switch.meraki.com, </a><a target='_blank' href='http://wired.meraki.com/'>wired.meraki.com</a>). Optional (defaults to false)
 - `remoteStatusPageEnabled` (boolean): Enables / disables access to the device status page (<a target='_blank'>http://[device's LAN IP])</a>. Optional. Can only be set if localStatusPageEnabled is set to true
+- `secureConnect` (object): A hash of SecureConnect options applied to the Network.
 
 ##### Method Code:
 ```python
@@ -6134,7 +6143,7 @@ meraki appliance updateNetworkApplianceWarmSpare --networkId 'STRING' --enabled 
 https://developer.cisco.com/meraki/api-v1/#!update-organization-appliance-security-intrusion
 
 - `organizationId` (string): (required)
-- `allowedRules` (array): Sets a list of specific SNORT(r) signatures to allow
+- `allowedRules` (array): Sets a list of specific SNORT signatures to allow
 
 ##### Method Code:
 ```python
@@ -6588,7 +6597,7 @@ https://developer.cisco.com/meraki/api-v1/#!update-device-camera-quality-and-ret
 
 - `serial` (string): (required)
 - `profileId` (string): The ID of a quality and retention profile to assign to the camera. The profile's settings will override all of the per-camera quality and retention settings. If the value of this parameter is null, any existing profile will be unassigned from the camera.
-- `motionBasedRetentionEnabled` (boolean): Boolean indicating if motion-based retention is enabled(true) or disabled(false) on the camera
+- `motionBasedRetentionEnabled` (boolean): Boolean indicating if motion-based retention is enabled(true) or disabled(false) on the camera.
 - `audioRecordingEnabled` (boolean): Boolean indicating if audio recording is enabled(true) or disabled(false) on the camera
 - `restrictedBandwidthModeEnabled` (boolean): Boolean indicating if restricted bandwidth is enabled(true) or disabled(false) on the camera
 - `quality` (string): Quality of the camera. Can be one of 'Standard', 'High' or 'Enhanced'. Not all qualities are supported by every camera model.
@@ -8171,6 +8180,7 @@ https://developer.cisco.com/meraki/api-v1/#!create-network-switch-access-policy
 - `hostMode` (string): Choose the Host Mode for the access policy.
 - `urlRedirectWalledGardenEnabled` (boolean): Enable to restrict access for clients to a specific set of IP addresses or hostnames prior to authentication
 - `radiusAccountingServers` (array): List of RADIUS accounting servers to require connecting devices to authenticate against before granting network access
+- `radiusGroupAttribute` (string): Acceptable values are `""` for None, or `"11"` for Group Policies ACL
 - `accessPolicyType` (string): Access Type of the policy. Automatically 'Hybrid authentication' when hostMode is 'Multi-Domain'.
 - `increaseAccessSpeed` (boolean): Enabling this option will make switches execute 802.1X and MAC-bypass authentication simultaneously so that clients authenticate faster. Only required when accessPolicyType is 'Hybrid Authentication.
 - `guestVlanId` (integer): ID for the guest VLAN allow unauthorized devices access to limited network resources
@@ -8278,7 +8288,7 @@ meraki switch createNetworkSwitchQosRule --networkId 'STRING' --vlan INT --kwarg
 https://developer.cisco.com/meraki/api-v1/#!create-network-switch-routing-multicast-rendezvous-point
 
 - `networkId` (string): (required)
-- `interfaceIp` (string): The IP address of the interface where the RP needs to be created.
+- `interfaceIp` (string): The IP address of the interface where the RP needs to be created.
 - `multicastGroup` (string): 'Any', or the IP address of a multicast group
 
 ##### Method Code:
@@ -8922,6 +8932,28 @@ def getNetworkSwitchAccessPolicy(networkId: str, accessPolicyNumber: str):
 ##### Example:
 ```
 meraki switch getNetworkSwitchAccessPolicy --networkId 'STRING' --accessPolicyNumber 'STRING'
+````
+
+
+----------------------------------------
+## Get Network Switch Alternate Management Interface
+
+
+**Return the switch alternate management interface for the network**
+
+https://developer.cisco.com/meraki/api-v1/#!get-network-switch-alternate-management-interface
+
+- `networkId` (string): (required)
+
+##### Method Code:
+```python
+def getNetworkSwitchAlternateManagementInterface(networkId: str):
+    # Code
+````
+
+##### Example:
+```
+meraki switch getNetworkSwitchAlternateManagementInterface --networkId 'STRING'
 ````
 
 
@@ -9714,6 +9746,7 @@ https://developer.cisco.com/meraki/api-v1/#!update-network-switch-access-policy
 - `radiusCoaSupportEnabled` (boolean): Change of authentication for RADIUS re-authentication and disconnection
 - `radiusAccountingEnabled` (boolean): Enable to send start, interim-update and stop messages to a configured RADIUS accounting server for tracking connected clients
 - `radiusAccountingServers` (array): List of RADIUS accounting servers to require connecting devices to authenticate against before granting network access
+- `radiusGroupAttribute` (string): Can be either `""`, which means `None` on Dashboard, or `"11"`, which means `Filter-Id` on Dashboard and will use Group Policy ACLs when supported (firmware 14+)
 - `hostMode` (string): Choose the Host Mode for the access policy.
 - `accessPolicyType` (string): Access Type of the policy. Automatically 'Hybrid authentication' when hostMode is 'Multi-Domain'.
 - `increaseAccessSpeed` (boolean): Enabling this option will make switches execute 802.1X and MAC-bypass authentication simultaneously so that clients authenticate faster. Only required when accessPolicyType is 'Hybrid Authentication.
@@ -9731,6 +9764,32 @@ def updateNetworkSwitchAccessPolicy(networkId: str, accessPolicyNumber: str, **k
 ##### Example:
 ```
 meraki switch updateNetworkSwitchAccessPolicy --networkId 'STRING' --accessPolicyNumber 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
+````
+
+
+----------------------------------------
+## Update Network Switch Alternate Management Interface
+
+
+**Update the switch alternate management interface for the network**
+
+https://developer.cisco.com/meraki/api-v1/#!update-network-switch-alternate-management-interface
+
+- `networkId` (string): (required)
+- `enabled` (boolean): Boolean value to enable or disable AMI configuration. If enabled, VLAN and protocols must be set
+- `vlanId` (integer): Alternate management VLAN, must be between 1 and 4094
+- `protocols` (array): Can be one or more of the following values: 'radius', 'snmp' or 'syslog'
+- `switches` (array): Array of switch serial number and IP assignment. If parameter is present, it cannot have empty body. Note: switches parameter is not applicable for template networks, in other words, do not put 'switches' in the body when updating template networks. Also, an empty 'switches' array will remove all previous assignments
+
+##### Method Code:
+```python
+def updateNetworkSwitchAlternateManagementInterface(networkId: str, **kwargs):
+    # Code
+````
+
+##### Example:
+```
+meraki switch updateNetworkSwitchAlternateManagementInterface --networkId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
 
@@ -10483,6 +10542,28 @@ meraki wireless getNetworkWirelessAlternateManagementInterface --networkId 'STRI
 
 
 ----------------------------------------
+## Get Network Wireless Billing
+
+
+**Return the billing settings of this network**
+
+https://developer.cisco.com/meraki/api-v1/#!get-network-wireless-billing
+
+- `networkId` (string): (required)
+
+##### Method Code:
+```python
+def getNetworkWirelessBilling(networkId: str):
+    # Code
+````
+
+##### Example:
+```
+meraki wireless getNetworkWirelessBilling --networkId 'STRING'
+````
+
+
+----------------------------------------
 ## Get Network Wireless Bluetooth Settings
 
 
@@ -11115,6 +11196,29 @@ meraki wireless getNetworkWirelessSsid --networkId 'STRING' --number 'STRING'
 
 
 ----------------------------------------
+## Get Network Wireless Ssid Device Type Group Policies
+
+
+**List the device type group policies for the SSID**
+
+https://developer.cisco.com/meraki/api-v1/#!get-network-wireless-ssid-device-type-group-policies
+
+- `networkId` (string): (required)
+- `number` (string): (required)
+
+##### Method Code:
+```python
+def getNetworkWirelessSsidDeviceTypeGroupPolicies(networkId: str, number: str):
+    # Code
+````
+
+##### Example:
+```
+meraki wireless getNetworkWirelessSsidDeviceTypeGroupPolicies --networkId 'STRING' --number 'STRING'
+````
+
+
+----------------------------------------
 ## Get Network Wireless Ssid Firewall L3 Firewall Rules
 
 
@@ -11384,6 +11488,30 @@ meraki wireless updateNetworkWirelessAlternateManagementInterface --networkId 'S
 
 
 ----------------------------------------
+## Update Network Wireless Billing
+
+
+**Update the billing settings**
+
+https://developer.cisco.com/meraki/api-v1/#!update-network-wireless-billing
+
+- `networkId` (string): (required)
+- `currency` (string): The currency code of this node group's billing plans
+- `plans` (array): Array of billing plans in the node group. (Can configure a maximum of 5)
+
+##### Method Code:
+```python
+def updateNetworkWirelessBilling(networkId: str, **kwargs):
+    # Code
+````
+
+##### Example:
+```
+meraki wireless updateNetworkWirelessBilling --networkId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
+````
+
+
+----------------------------------------
 ## Update Network Wireless Bluetooth Settings
 
 
@@ -11480,7 +11608,7 @@ https://developer.cisco.com/meraki/api-v1/#!update-network-wireless-ssid
 - `number` (string): (required)
 - `name` (string): The name of the SSID
 - `enabled` (boolean): Whether or not the SSID is enabled
-- `authMode` (string): The association control method for the SSID ('open', 'psk', 'open-with-radius', '8021x-meraki', '8021x-radius', 'ipsk-with-radius' or 'ipsk-without-radius')
+- `authMode` (string): The association control method for the SSID ('open', 'psk', 'open-with-radius', '8021x-meraki', '8021x-radius', '8021x-google', '8021x-localradius', 'ipsk-with-radius' or 'ipsk-without-radius')
 - `enterpriseAdminAccess` (string): Whether or not an SSID is accessible by 'enterprise' administrators ('access disabled' or 'access enabled')
 - `encryptionMode` (string): The psk encryption mode for the SSID ('wep' or 'wpa'). This param is only valid if the authMode is 'psk'
 - `psk` (string): The passkey for the SSID. This param is only valid if the authMode is 'psk'
@@ -11488,13 +11616,23 @@ https://developer.cisco.com/meraki/api-v1/#!update-network-wireless-ssid
 - `dot11w` (object): The current setting for Protected Management Frames (802.11w).
 - `dot11r` (object): The current setting for 802.11r
 - `splashPage` (string): The type of splash page for the SSID ('None', 'Click-through splash page', 'Billing', 'Password-protected with Meraki RADIUS', 'Password-protected with custom RADIUS', 'Password-protected with Active Directory', 'Password-protected with LDAP', 'SMS authentication', 'Systems Manager Sentry', 'Facebook Wi-Fi', 'Google OAuth', 'Sponsored guest' or 'Cisco ISE'). This attribute is not supported for template children.
+- `splashGuestSponsorDomains` (array): Array of valid sponsor email domains for sponsored guest splash type.
+- `ldap` (object): The current setting for LDAP. Only valid if splashPage is 'Password-protected with LDAP'.
+- `activeDirectory` (object): The current setting for Active Directory. Only valid if splashPage is 'Password-protected with Active Directory'
 - `radiusServers` (array): The RADIUS 802.1X servers to be used for authentication. This param is only valid if the authMode is 'open-with-radius', '8021x-radius' or 'ipsk-with-radius'
 - `radiusProxyEnabled` (boolean): If true, Meraki devices will proxy RADIUS messages through the Meraki cloud to the configured RADIUS auth and accounting servers.
+- `radiusTestingEnabled` (boolean): If true, Meraki devices will periodically send Access-Request messages to configured RADIUS servers using identity 'meraki_8021x_test' to ensure that the RADIUS servers are reachable.
+- `radiusCalledStationId` (string): The template of the called station identifier to be used for RADIUS (ex. $NODE_MAC$:$VAP_NUM$).
+- `radiusAuthenticationNasId` (string): The template of the NAS identifier to be used for RADIUS authentication (ex. $NODE_MAC$:$VAP_NUM$).
+- `radiusServerTimeout` (integer): The amount of time for which a RADIUS client waits for a reply from the RADIUS server (must be between 1-10 seconds).
+- `radiusServerAttemptsLimit` (integer): The maximum number of transmit attempts after which a RADIUS server is failed over (must be between 1-5).
+- `radiusFallbackEnabled` (boolean): Whether or not higher priority RADIUS servers should be retried after 60 seconds.
 - `radiusCoaEnabled` (boolean): If true, Meraki devices will act as a RADIUS Dynamic Authorization Server and will respond to RADIUS Change-of-Authorization and Disconnect messages sent by the RADIUS server.
 - `radiusFailoverPolicy` (string): This policy determines how authentication requests should be handled in the event that all of the configured RADIUS servers are unreachable ('Deny access' or 'Allow access')
 - `radiusLoadBalancingPolicy` (string): This policy determines which RADIUS server will be contacted first in an authentication attempt and the ordering of any necessary retry attempts ('Strict priority order' or 'Round robin')
 - `radiusAccountingEnabled` (boolean): Whether or not RADIUS accounting is enabled. This param is only valid if the authMode is 'open-with-radius', '8021x-radius' or 'ipsk-with-radius'
 - `radiusAccountingServers` (array): The RADIUS accounting 802.1X servers to be used for authentication. This param is only valid if the authMode is 'open-with-radius', '8021x-radius' or 'ipsk-with-radius' and radiusAccountingEnabled is 'true'
+- `radiusAccountingInterimInterval` (integer): The interval (in seconds) in which accounting information is updated and sent to the RADIUS accounting server.
 - `radiusAttributeForGroupPolicies` (string): Specify the RADIUS attribute used to look up group policies ('Filter-Id', 'Reply-Message', 'Airespace-ACL-Name' or 'Aruba-User-Role'). Access points must receive this attribute in the RADIUS Access-Accept message
 - `ipAssignmentMode` (string): The client IP assignment mode ('NAT mode', 'Bridge mode', 'Layer 3 roaming', 'Layer 3 roaming with a concentrator' or 'VPN')
 - `useVlanTagging` (boolean): Whether or not traffic should be directed to use specific VLANs. This param is only valid if the ipAssignmentMode is 'Bridge mode' or 'Layer 3 roaming'
@@ -11517,7 +11655,8 @@ https://developer.cisco.com/meraki/api-v1/#!update-network-wireless-ssid
 - `visible` (boolean): Boolean indicating whether APs should advertise or hide this SSID. APs will only broadcast this SSID if set to true
 - `availableOnAllAps` (boolean): Boolean indicating whether all APs should broadcast the SSID or if it should be restricted to APs matching any availability tags. Can only be false if the SSID has availability tags.
 - `availabilityTags` (array): Accepts a list of tags for this SSID. If availableOnAllAps is false, then the SSID will only be broadcast by APs with tags matching any of the tags in this list.
-- `mandatoryDhcpEnabled` (boolean): If true, Mandatory DHCP will enforce that clients connecting to this SSID must use the IP address assigned by the DHCP server. Clients who use a static IP address won't be able to associate.
+- `adaptivePolicyGroupId` (string): Adaptive policy group ID this SSID is assigned to.
+- `mandatoryDhcpEnabled` (boolean): If true, Mandatory DHCP will enforce that clients connecting to this SSID must use the IP address assigned by the DHCP server. Clients who use a static IP address won’t be able to associate.
 
 ##### Method Code:
 ```python
@@ -11528,6 +11667,31 @@ def updateNetworkWirelessSsid(networkId: str, number: str, **kwargs):
 ##### Example:
 ```
 meraki wireless updateNetworkWirelessSsid --networkId 'STRING' --number 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
+````
+
+
+----------------------------------------
+## Update Network Wireless Ssid Device Type Group Policies
+
+
+**Update the device type group policies for the SSID**
+
+https://developer.cisco.com/meraki/api-v1/#!update-network-wireless-ssid-device-type-group-policies
+
+- `networkId` (string): (required)
+- `number` (string): (required)
+- `enabled` (boolean): If true, the SSID device type group policies are enabled.
+- `deviceTypePolicies` (array): List of device type policies.
+
+##### Method Code:
+```python
+def updateNetworkWirelessSsidDeviceTypeGroupPolicies(networkId: str, number: str, **kwargs):
+    # Code
+````
+
+##### Example:
+```
+meraki wireless updateNetworkWirelessSsidDeviceTypeGroupPolicies --networkId 'STRING' --number 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
 
@@ -11626,6 +11790,11 @@ https://developer.cisco.com/meraki/api-v1/#!update-network-wireless-ssid-splash-
 - `splashLogo` (object): The logo used in the splash page.
 - `splashImage` (object): The image used in the splash page.
 - `splashPrepaidFront` (object): The prepaid front image used in the splash page.
+- `blockAllTrafficBeforeSignOn` (boolean): How restricted allowing traffic should be. If true, all traffic types are blocked until the splash page is acknowledged. If false, all non-HTTP traffic is allowed before the splash page is acknowledged.
+- `controllerDisconnectionBehavior` (string): How login attempts should be handled when the controller is unreachable. Can be either 'open', 'restricted', or 'default'.
+- `allowSimultaneousLogins` (boolean): Whether or not to allow simultaneous logins from different devices.
+- `guestSponsorship` (object): Details associated with guest sponsored splash.
+- `billing` (object): Details associated with billing splash.
 
 ##### Method Code:
 ```python
