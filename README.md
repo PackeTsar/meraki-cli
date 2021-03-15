@@ -147,7 +147,7 @@ If the change succeeds, you will often see the newly updated item echoed back li
 
 ## Using --kwargs
 
-Some Meraki-CLI commands require arguments to be provided which are not explicitly defined in the underlying functions, but are documented in the command help page. To see an example of this, run the command `meraki switch updateDeviceSwitchPort -h`. The example is shown below
+Some Meraki-CLI commands require arguments to be provided which are not explicitly defined in the underlying function, but are documented in the command help page. To see an example of this, run the command `meraki switch updateDeviceSwitchPort -h`. The example is shown below:
 
 ```
 ~$
@@ -197,9 +197,9 @@ Misc Arguments:
 ~$
 ```
 
-In the command help page above you will see many argument options under the "All Arguments" section, but only two of them are listed in the "Required Arguments" section: `serial` and `portId`. You can see this by looking in the 'Required Arguments' section towards the bottom of the help page. Some of the other arguments in the documentation are things like `name`, `tags`, `enabled`, etc.
+In the command help page above you will see many argument options under the "All Arguments" section, but only two of them are listed in the "Required Arguments" section: `serial` and `portId`. Some of the other arguments in the documentation are things like `name`, `tags`, `enabled`, etc.
 
-When the values for these arguments are simple things like strings, integers, or booleans these optional arguments can be provided directly on the command line simply as another argument. An example for the above `updateDeviceSwitchPort` command is `--name "My Test Name" --enabled "true"`. When arguments not listed in the "Required Arguments" or "Misc Arguments" sections of the command help page are provided at the command-line, they are parsed into native data types and are included as **kwargs** when the command is executed.
+When arguments are not listed in the "Required Arguments" or "Misc Arguments" sections of the command help page, they are considered to be Optional Arguments.When Optional Arguments are provided at the command-line, they are parsed into native data types and are included as **kwargs** when the command is executed.
 
 This extra-command parsing is included to make it easy to include simple data types in the command without having to use the `--kwargs` argument. The example `--name "My Test Name" --enabled "true"` arguments are exactly equivalent to the alternative `--kwargs '{"name": "My Test Name", "enabled": true}'`.
 
