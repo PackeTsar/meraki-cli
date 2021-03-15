@@ -30,7 +30,7 @@ Meraki-CLI is a wrapper around the official [Meraki Dashboard API Python SDK](ht
 - List your associated organizations: `meraki organizations getOrganizations`
 - List the Meraki networks within an organization: `meraki organizations getOrganizationNetworks --organizationId 123456`
 - List the MX VLANs on a network: `meraki appliance getNetworkApplianceVlans --networkId N_12345`
-- Add a new MX VLAN to a network: `meraki appliance createNetworkApplianceVlan --networkId 'N_12345' --id '100' --name 'My New VLAN' --kwargs '{"applianceIp": "10.0.0.1", "subnet": "10.0.0.0/24"}'`
+- Add a new MX VLAN to a network: `meraki appliance createNetworkApplianceVlan --networkId 'N_12345' --id '100' --name 'My New VLAN' --applianceIp '10.0.0.1' --subnet '10.0.0.0/24'`
 
 ### Capabilities
 
@@ -43,18 +43,22 @@ Since the Meraki-CLI tool builds its arguments directly off of Meraki's SDK, it'
 ## TABLE OF CONTENTS
 1. [Getting Started](#getting-started)
     - [Prepare your OS](#prepare-your-os)
+    - [Install Meraki-CLI](#install-meraki-cli)
+        - [Upgrading](#upgrading)
     - [Getting and Using your API Key](#getting-and-using-your-api-key)
     - [A Few Starting Commands](#a-few-starting-commands)
-    - [A Note About --kwargs](#a-note-about---kwargs)
     - [Making Some Changes](#making-some-changes)
-    - [Using a Config File](#using-a-config-file)
-    - [Debugging and Logging](#debugging-and-logging)
-    - [Filtering](#filtering)
-2. [Pipelining](#pipelining)
+2. [Using --kwargs](#using---kwargs)
+    - [Dealing with --kwargs on Windows](#dealing-with---kwargs-on-windows)
+3. [Using a Config File](#using-a-config-file)
+4. [Debugging and Logging](#debugging-and-logging)
+5. [Filtering](#filtering)
+6. [Pipelining](#pipelining)
     - [Overriding Values](#overriding-values)
     - [Translations](#translations)
     - [Outputting Commands](#outputting-commands)
-3. [Contributing](#contributing)
+    - [How the Pipelining Works](#how-the-pipelining-works)
+7. [Contributing](#contributing)
 
 
 -----------------------------------------
@@ -116,56 +120,94 @@ To see any help menu, use the `-h` option at any command level:
 If you have any Meraki MS switches available, try viewing the port configurations with `meraki switch getDeviceSwitchPorts --serial 1234-ABCD-5678` or you can view the operational port stats by using `meraki switch getDeviceSwitchPortsStatuses --serial 1234-ABCD-5678`
 
 
-## A Note About --kwargs
+## Making Some Changes
+
+Pushing changes into Meraki is done by running the correct command and passing in the necessary arguments.
+
+> Note: Sometimes you will need to use the `--kwargs` option when making more advanced changes. If needed, check out the [Using --kwargs](#using---kwargs) section below for information on how to do that.
+
+For example, if we want to change the VLAN ID on a MS switch port, we would use:
+
+`meraki switch updateDeviceSwitchPort --serial 1234-ABCD-5678 --portId 24 --vlan 100`
+
+If the change succeeds, you will often see the newly updated item echoed back like this:
+
+```
+~$
+~$ meraki switch updateDeviceSwitchPort --serial Q2HP-F5K5-R88R --portId 1 --vlan 100 --name 'Data Port'
+┏━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━┳━━━━━━━━━━━━┳━━━━━━━┳━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━┳━━━━━━━━━━┳━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━┓
+┃ portId ┃ name      ┃ enabled ┃ poeEnabled ┃ type  ┃ vlan ┃ voiceVlan ┃ allowedVlans ┃ isolationEnabled ┃ rstpEnabled ┃ stpGuard ┃ linkNegotiation ┃ portScheduleId ┃ udld       ┃
+┡━━━━━━━━╇━━━━━━━━━━━╇━━━━━━━━━╇━━━━━━━━━━━━╇━━━━━━━╇━━━━━━╇━━━━━━━━━━━╇━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━╇━━━━━━━━━━╇━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━┩
+│ 1      │ Data Port │ True    │ True       │ trunk │ 100  │ None      │ all          │ False            │ True        │ disabled │ Auto negotiate  │ None           │ Alert only │
+└────────┴───────────┴─────────┴────────────┴───────┴──────┴───────────┴──────────────┴──────────────────┴─────────────┴──────────┴─────────────────┴────────────────┴────────────┘
+~$
+~$
+```
+
+
+## Using --kwargs
 
 Some Meraki-CLI commands require arguments to be provided which are not explicitly defined in the underlying functions, but are documented in the command help page. To see an example of this, run the command `meraki switch updateDeviceSwitchPort -h`. The example is shown below
 
 ```
 ~$
 ~$ meraki switch updateDeviceSwitchPort -h
-usage: meraki-cli.py switch updateDeviceSwitchPort [-h] --serial STRING --portId STRING [--kwargs JSON_STRING]
+usage: meraki switch updateDeviceSwitchPort [-h] --serial STRING --portId STRING [--kwargs JSON_STRING]
 
-        **Update a switch port**
-        https://developer.cisco.com/meraki/api-v1/#!update-device-switch-port
+UPDATE A SWITCH PORT
 
-        - serial (string): (required)
-        - portId (string): (required)
-        - name (string): The name of the switch port
-        - tags (array): The list of tags of the switch port
-        - enabled (boolean): The status of the switch port
-        - type (string): The type of the switch port ('trunk' or 'access')
-        - vlan (integer): The VLAN of the switch port. A null value will clear the value set for trunk ports.
-        - voiceVlan (integer): The voice VLAN of the switch port. Only applicable to access ports.
-        - allowedVlans (string): The VLANs allowed on the switch port. Only applicable to trunk ports.
-        - poeEnabled (boolean): The PoE status of the switch port
-        - isolationEnabled (boolean): The isolation status of the switch port
-        - rstpEnabled (boolean): The rapid spanning tree protocol status
-        - stpGuard (string): The state of the STP guard ('disabled', 'root guard', 'bpdu guard' or 'loop guard')
-        - linkNegotiation (string): The link speed for the switch port
-        - portScheduleId (string): The ID of the port schedule. A value of null will clear the port schedule.
-        - udld (string): The action to take when Unidirectional Link is detected (Alert only, Enforce). Default configuration is Alert only.
-        - accessPolicyType (string): The type of the access policy of the switch port. Only applicable to access ports. Can be one of 'Open', 'Custom access policy', 'MAC allow list' or 'Sticky MAC allow list'
-        - accessPolicyNumber (integer): The number of a custom access policy to configure on the switch port. Only applicable when 'accessPolicyType' is 'Custom access policy'
-        - macAllowList (array): Only devices with MAC addresses specified in this list will have access to this port. Up to 20 MAC addresses can be defined. Only applicable when 'accessPolicyType' is 'MAC allow list'
-        - stickyMacAllowList (array): The initial list of MAC addresses for sticky Mac allow list. Only applicable when 'accessPolicyType' is 'Sticky MAC allow list'
-        - stickyMacAllowListLimit (integer): The maximum number of MAC addresses for sticky MAC allow list. Only applicable when 'accessPolicyType' is 'Sticky MAC allow list'
-        - stormControlEnabled (boolean): The storm control status of the switch port
-        - flexibleStackingEnabled (boolean): For supported switches (e.g. MS420/MS425), whether or not the port has flexible stacking enabled.
+https://developer.cisco.com/meraki/api-v1/#!update-device-switch-port		
 
-        >>> def updateDeviceSwitchPort(serial: str, portId: str, **kwargs):
+All Arguments:
+  --serial (string): (required)
+  --portId (string): (required)
+  --name (string): The name of the switch port
+  --tags (array): The list of tags of the switch port
+  --enabled (boolean): The status of the switch port
+  --type (string): The type of the switch port ('trunk' or 'access')
+  --vlan (integer): The VLAN of the switch port. A null value will clear the value set for trunk ports.
+  --voiceVlan (integer): The voice VLAN of the switch port. Only applicable to access ports.
+  --allowedVlans (string): The VLANs allowed on the switch port. Only applicable to trunk ports.
+  --poeEnabled (boolean): The PoE status of the switch port
+  --isolationEnabled (boolean): The isolation status of the switch port
+  --rstpEnabled (boolean): The rapid spanning tree protocol status
+  --stpGuard (string): The state of the STP guard ('disabled', 'root guard', 'bpdu guard' or 'loop guard')
+  --linkNegotiation (string): The link speed for the switch port
+  --portScheduleId (string): The ID of the port schedule. A value of null will clear the port schedule.
+  --udld (string): The action to take when Unidirectional Link is detected (Alert only, Enforce). Default configuration is Alert only.
+  --accessPolicyType (string): The type of the access policy of the switch port. Only applicable to access ports. Can be one of 'Open', 'Custom access policy', 'MAC allow list' or 'Sticky MAC allow list'
+  --accessPolicyNumber (integer): The number of a custom access policy to configure on the switch port. Only applicable when 'accessPolicyType' is 'Custom access policy'
+  --macAllowList (array): Only devices with MAC addresses specified in this list will have access to this port. Up to 20 MAC addresses can be defined. Only applicable when 'accessPolicyType' is 'MAC allow list'
+  --stickyMacAllowList (array): The initial list of MAC addresses for sticky Mac allow list. Only applicable when 'accessPolicyType' is 'Sticky MAC allow list'
+  --stickyMacAllowListLimit (integer): The maximum number of MAC addresses for sticky MAC allow list. Only applicable when 'accessPolicyType' is 'Sticky MAC allow list'
+  --stormControlEnabled (boolean): The storm control status of the switch port
+  --flexibleStackingEnabled (boolean): For supported switches (e.g. MS420/MS425), whether or not the port has flexible stacking enabled.
 
-optional arguments:
-  -h, --help            show this help message and exit
+Function Signature:
+	>>> def updateDeviceSwitchPort(serial: str, portId: str, **kwargs):
+
+Required Arguments:
   --serial STRING       (required)
   --portId STRING       (required)
-  --kwargs JSON_STRING  (JSON formatted extra arguments)
+
+Misc Arguments:
+  -h, --help            Show help for this command
+  --kwargs JSON_STRING  (Optional arguments in JSON format)
 ~$
 ~$
 ```
 
-In the example you will see many arguments described in the documentation, but only two are required: `serial` and `portId`, you can see that by looking in the 'optional arguments' section at the bottom of the help page. Some of the other arguments in the documentation are `name`, `tags`, `enabled`, etc.
+In the command help page above you will see many argument options under the "All Arguments" section, but only two of them are listed in the "Required Arguments" section: `serial` and `portId`. You can see this by looking in the 'Required Arguments' section towards the bottom of the help page. Some of the other arguments in the documentation are things like `name`, `tags`, `enabled`, etc.
 
-When the option to provide these other arguments exists for a command, you will see a `--kwargs` argument in that 'optional arguments' section. The `--kwargs` option allows you to insert extra key, value pairs into the command in the form of a JSON string. You do this by providing the argument and JSON value like `--kwargs '{"name": "Data Port", "vlan": "100"}'`. At times these arguments are required in order for the command to work. At other times they are optional.
+When the values for these arguments are simple things like strings, integers, or booleans these optional arguments can be provided directly on the command line simply as another argument. An example for the above `updateDeviceSwitchPort` command is `--name "My Test Name" --enabled "true"`. When arguments not listed in the "Required Arguments" or "Misc Arguments" sections of the command help page are provided at the command-line, they are parsed into native data types and are included as **kwargs** when the command is executed.
+
+This extra-command parsing is included to make it easy to include simple data types in the command without having to use the `--kwargs` argument. The example `--name "My Test Name" --enabled "true"` arguments are exactly equivalent to the alternative `--kwargs '{"name": "My Test Name", "enabled": true}'`.
+
+Some arguments cannot be simple data types, for example the `tags` argument from above. The `tags` argument must be an array, not a simple string or integer. You have two options for providing this value:
+1. Use the `--tags` option and provide a JSON-parsable array like: `--tags '["first_tag", "second_tag"]'`
+2. Use the `--kwargs` option to provide the higher-level JSON parsable data like `--kwargs '{"tags": ["first_tag", "second_tag"]}'`
+
+Both of these options will result in the same data being sent in the command.
 
 
 ### Dealing with --kwargs on Windows
@@ -182,29 +224,6 @@ meraki switch updateDeviceSwitchPort --serial 1234-ABCD-5678 --portId 24 --kwarg
     ""name"": ""Data Port"", ^
     ""vlan"": ""100"", ^
 }"
-```
-
-
-## Making Some Changes
-
-Pushing changes into Meraki is done by running the correct command and passing in the required arguments, including using the `--kwargs` argument appropriately when required.
-
-For example, if we want to change the VLAN ID on a MS switch port, we would use:
-
-`meraki switch updateDeviceSwitchPort --serial 1234-ABCD-5678 --portId 24 --kwargs '{"vlan": "100"}'`
-
-If the change succeeds, you will often see the newly updated object echoed back like this:
-
-```
-~$
-~$ meraki switch updateDeviceSwitchPort --serial Q2HP-F5K5-R88R --portId 1 --kwargs '{"name": "Data Port", "vlan": "100"}'
-┏━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━┳━━━━━━━━━━━━┳━━━━━━━┳━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━┳━━━━━━━━━━┳━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━┓
-┃ portId ┃ name      ┃ enabled ┃ poeEnabled ┃ type  ┃ vlan ┃ voiceVlan ┃ allowedVlans ┃ isolationEnabled ┃ rstpEnabled ┃ stpGuard ┃ linkNegotiation ┃ portScheduleId ┃ udld       ┃
-┡━━━━━━━━╇━━━━━━━━━━━╇━━━━━━━━━╇━━━━━━━━━━━━╇━━━━━━━╇━━━━━━╇━━━━━━━━━━━╇━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━╇━━━━━━━━━━╇━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━┩
-│ 1      │ Data Port │ True    │ True       │ trunk │ 100  │ None      │ all          │ False            │ True        │ disabled │ Auto negotiate  │ None           │ Alert only │
-└────────┴───────────┴─────────┴────────────┴───────┴──────┴───────────┴──────────────┴──────────────────┴─────────────┴──────────┴─────────────────┴────────────────┴────────────┘
-~$
-~$
 ```
 
 
@@ -274,7 +293,7 @@ If you want to combine those filters so displayed items have to match both of th
 
 
 -----------------------------------------
-## PIPELINING
+## Pipelining
 
 Being able to manipulate the Meraki dashboard from the CLI can be quite useful, but its power grows exponentially when you are able to use pipelining. Pipelining allows you to pass the Meraki objects returned in one command into another and do something with them.
 

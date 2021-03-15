@@ -359,8 +359,20 @@ def _cmd_help(arg_obj: Args) -> str:
     - mtdstr: String name of the method (ie: 'getOrganizations')
     """
     result = arg_obj.method.__doc__  # Start with the doc string
+    # Set the docstring header (wrapped in asterisks) to uppercase
+    result = re.sub(r'\*\*(.*)\*\*', lambda ele: ele.group(0).upper(), result)
+    # Remove leading tabs from header and add en extra line break
+    result = re.sub(r'\t\t\*\*(.*)\*\*', r'\1\n', result)
+    # Remove leading tabs from link
+    result = re.sub(r'\t\t(https://.*)\n', r'\1', result)
+    if arg_obj.positionals:  # If there are positional (required) arguments
+        # Add an "All Arguments" line below http for the argument entries
+        result = re.sub(r'(https://.*)\n', r'\1\n\nAll Arguments:\n', result)
+    # Remove leading tabs from argument entries and append double-hypen
+    result = re.sub(r'\t\t- ([a-zA-Z0-9_]+) ', r'  --\1 ', result)
     # Add the signature at the bottom of the help.
-    result += f'\n        >>> def {arg_obj.name}{arg_obj.signature}:'
+    result += '\nFunction Signature:\n\t'\
+              f'>>> def {arg_obj.name}{arg_obj.signature}:'
     return result
 
 
@@ -907,39 +919,49 @@ def main(argstring=None) -> None:
             #     options
             cmd = tsub.add_parser(
                 mtdstr,  # Use the method name for the command endpoint
+                add_help=False,  # Disable auto help since we add it manually
                 help=_cmd_title(mtdstr),  # Grab the help section (title)
                 description=_cmd_help(arg_obj),  # Grab the help section
                 # Use a raw formatter to allow the help docstring to maintain
                 #     it's multi-line format
                 formatter_class=argparse.RawTextHelpFormatter)
+            # A nice group for required (positional) arguments
+            req_group = cmd.add_argument_group('Required Arguments')
+            # A nice group for known optional (kwargs, help) arguments
+            msc_group = cmd.add_argument_group('Misc Arguments')
+            # Add help manually
+            msc_group.add_argument('-h', '--help',
+                                   help='Show help for this command',
+                                   action='help')
             # Add the method parameter info into the map
             parser_map[clsstr][mtdstr] = arg_obj
             # Iterate the positionals and create argument options for each
             for arg in arg_obj.positionals:
-                cmd.add_argument(f'--{arg.name}',
-                                 dest=arg.name,
-                                 help='(required)',
-                                 # Don't require the arg if we are
-                                 #     parsing the STDIN data
-                                 required=NO_STDIN,
-                                 # Use the annotation map to pass
-                                 #     additional params to the
-                                 #     argument option to make it
-                                 #     easier to use and read
-                                 **ANNOTATION_MAP[arg.annotation])
+                req_group.add_argument(f'--{arg.name}',
+                                       dest=arg.name,
+                                       help='(required)',
+                                       # Don't require the arg if we are
+                                       #     parsing the STDIN data
+                                       required=NO_STDIN,
+                                       # Use the annotation map to pass
+                                       #     additional params to the
+                                       #     argument option to make it
+                                       #     easier to use and read
+                                       **ANNOTATION_MAP[arg.annotation])
                 # Add the parameter name to the positionals list in the map
             for arg in arg_obj.keywords:
-                cmd.add_argument(f'--{arg.name}',
-                                 dest=arg.name,
-                                 default=arg.default,
-                                 # NOTE: These are never required.
-                                 help=f'(default = {arg.default})',
-                                 **ANNOTATION_MAP[type(arg.default)])
+                msc_group.add_argument(f'--{arg.name}',
+                                       dest=arg.name,
+                                       default=arg.default,
+                                       # NOTE: These are never required.
+                                       help=f'(default = {arg.default})',
+                                       **ANNOTATION_MAP[type(arg.default)])
             if arg_obj.varkw:
-                cmd.add_argument(f'--{arg_obj.varkw.name}',
-                                 dest=arg_obj.varkw.name,
-                                 help='(JSON formatted extra arguments)',
-                                 metavar='JSON_STRING',)
+                msc_group.add_argument(f'--{arg_obj.varkw.name}',
+                                       dest=arg_obj.varkw.name,
+                                       help='(Optional arguments '
+                                            'in JSON format)',
+                                       metavar='JSON_STRING',)
     # If an argstring was passed in, we are probably being tested
     if argstring:
         # Split up the args and pass them in as a list to be parsed
