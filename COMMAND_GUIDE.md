@@ -491,7 +491,7 @@ This command guide is based on version **v1.6.2** of the [Meraki Dashboard API P
 
 **Assign SM seats to a network**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!assign-organization-licenses-seats" target="_blank">https://developer.cisco.com/meraki/api-v1/#!assign-organization-licenses-seats</a>
+[https://developer.cisco.com/meraki/api-v1/#!assign-organization-licenses-seats](https://developer.cisco.com/meraki/api-v1/#!assign-organization-licenses-seats){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `organizationId` (string): (required)
 - `licenseId` (string): The ID of the SM license to assign seats from
@@ -516,7 +516,7 @@ meraki organizations assignOrganizationLicensesSeats --organizationId 'STRING' -
 
 **Claim a list of devices, licenses, and/or orders into an organization**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!claim-into-organization" target="_blank">https://developer.cisco.com/meraki/api-v1/#!claim-into-organization</a>
+[https://developer.cisco.com/meraki/api-v1/#!claim-into-organization](https://developer.cisco.com/meraki/api-v1/#!claim-into-organization){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `organizationId` (string): (required)
 - `orders` (array): The numbers of the orders that should be claimed
@@ -541,7 +541,7 @@ meraki organizations claimIntoOrganization --organizationId 'STRING' --kwargs '{
 
 **Create a new organization by cloning the addressed organization**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!clone-organization" target="_blank">https://developer.cisco.com/meraki/api-v1/#!clone-organization</a>
+[https://developer.cisco.com/meraki/api-v1/#!clone-organization](https://developer.cisco.com/meraki/api-v1/#!clone-organization){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `organizationId` (string): (required)
 - `name` (string): The name of the new organization
@@ -564,7 +564,7 @@ meraki organizations cloneOrganization --organizationId 'STRING' --name 'STRING'
 
 **Combine multiple networks into a single network**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!combine-organization-networks" target="_blank">https://developer.cisco.com/meraki/api-v1/#!combine-organization-networks</a>
+[https://developer.cisco.com/meraki/api-v1/#!combine-organization-networks](https://developer.cisco.com/meraki/api-v1/#!combine-organization-networks){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `organizationId` (string): (required)
 - `name` (string): The name of the combined network
@@ -589,7 +589,7 @@ meraki organizations combineOrganizationNetworks --organizationId 'STRING' --nam
 
 **Create a new organization**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!create-organization" target="_blank">https://developer.cisco.com/meraki/api-v1/#!create-organization</a>
+[https://developer.cisco.com/meraki/api-v1/#!create-organization](https://developer.cisco.com/meraki/api-v1/#!create-organization){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `name` (string): The name of the organization
 
@@ -611,10 +611,10 @@ meraki organizations createOrganization --name 'STRING'
 
 **Create an action batch**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!create-organization-action-batch" target="_blank">https://developer.cisco.com/meraki/api-v1/#!create-organization-action-batch</a>
+[https://developer.cisco.com/meraki/api-v1/#!create-organization-action-batch](https://developer.cisco.com/meraki/api-v1/#!create-organization-action-batch){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `organizationId` (string): (required)
-- `actions` (array): A set of changes to make as part of this action (<a href='<a href="https://developer.cisco.com/meraki/api/#/rest/guides/action-batches/'>more details</a>)" target="_blank">https://developer.cisco.com/meraki/api/#/rest/guides/action-batches/'>more details</a>)</a>
+- `actions` (array): A set of changes to make as part of this action (<a href='[https://developer.cisco.com/meraki/api/#/rest/guides/action-batches/'>more details</a>)](https://developer.cisco.com/meraki/api/#/rest/guides/action-batches/'>more details</a>)){:title="Open the Meraki API Description Page"}{:target="_blank"}
 - `confirmed` (boolean): Set to true for immediate execution. Set to false if the action should be previewed before executing. This property cannot be unset once it is true. Defaults to false.
 - `synchronous` (boolean): Set to true to force the batch to run synchronous. There can be at most 20 actions in synchronous batch. Defaults to false.
 
@@ -636,7 +636,7 @@ meraki organizations createOrganizationActionBatch --organizationId 'STRING' --a
 
 **Create a new dashboard administrator**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!create-organization-admin" target="_blank">https://developer.cisco.com/meraki/api-v1/#!create-organization-admin</a>
+[https://developer.cisco.com/meraki/api-v1/#!create-organization-admin](https://developer.cisco.com/meraki/api-v1/#!create-organization-admin){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `organizationId` (string): (required)
 - `email` (string): The email of the dashboard administrator. This attribute can not be updated.
@@ -664,7 +664,7 @@ meraki organizations createOrganizationAdmin --organizationId 'STRING' --email '
 
 **Add a new branding policy to an organization**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!create-organization-branding-policy" target="_blank">https://developer.cisco.com/meraki/api-v1/#!create-organization-branding-policy</a>
+[https://developer.cisco.com/meraki/api-v1/#!create-organization-branding-policy](https://developer.cisco.com/meraki/api-v1/#!create-organization-branding-policy){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `organizationId` (string): (required)
 - `name` (string): Name of the Dashboard branding policy.
@@ -694,11 +694,11 @@ meraki organizations createOrganizationBrandingPolicy --organizationId 'STRING' 
 
 **Create a new configuration template**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!create-organization-config-template" target="_blank">https://developer.cisco.com/meraki/api-v1/#!create-organization-config-template</a>
+[https://developer.cisco.com/meraki/api-v1/#!create-organization-config-template](https://developer.cisco.com/meraki/api-v1/#!create-organization-config-template){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `organizationId` (string): (required)
 - `name` (string): The name of the configuration template
-- `timeZone` (string): The timezone of the configuration template. For a list of allowed timezones, please see the 'TZ' column in the table in <a target='_blank' href='<a href="https://en.wikipedia.org/wiki/List_of_tz_database_time_zones'>this article</a>. Not applicable if copying from existing network or template" target="_blank">https://en.wikipedia.org/wiki/List_of_tz_database_time_zones'>this article</a>. Not applicable if copying from existing network or template</a>
+- `timeZone` (string): The timezone of the configuration template. For a list of allowed timezones, please see the 'TZ' column in the table in <a target='_blank' href='[https://en.wikipedia.org/wiki/List_of_tz_database_time_zones'>this article</a>. Not applicable if copying from existing network or template](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones'>this article</a>. Not applicable if copying from existing network or template){:title="Open the Meraki API Description Page"}{:target="_blank"}
 - `copyFromNetworkId` (string): The ID of the network or config template to copy configuration from
 
 ##### Method Code:
@@ -719,13 +719,13 @@ meraki organizations createOrganizationConfigTemplate --organizationId 'STRING' 
 
 **Create a network**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!create-organization-network" target="_blank">https://developer.cisco.com/meraki/api-v1/#!create-organization-network</a>
+[https://developer.cisco.com/meraki/api-v1/#!create-organization-network](https://developer.cisco.com/meraki/api-v1/#!create-organization-network){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `organizationId` (string): (required)
 - `name` (string): The name of the new network
 - `productTypes` (array): The product type(s) of the new network. Valid types are wireless, appliance, switch, systemsManager, camera, cellularGateway, environmental. If more than one type is included, the network will be a combined network.
 - `tags` (array): A list of tags to be applied to the network
-- `timeZone` (string): The timezone of the network. For a list of allowed timezones, please see the 'TZ' column in the table in <a target='_blank' href='<a href="https://en.wikipedia.org/wiki/List_of_tz_database_time_zones'>this article.</a>" target="_blank">https://en.wikipedia.org/wiki/List_of_tz_database_time_zones'>this article.</a></a>
+- `timeZone` (string): The timezone of the network. For a list of allowed timezones, please see the 'TZ' column in the table in <a target='_blank' href='[https://en.wikipedia.org/wiki/List_of_tz_database_time_zones'>this article.</a>](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones'>this article.</a>){:title="Open the Meraki API Description Page"}{:target="_blank"}
 - `copyFromNetworkId` (string): The ID of the network to copy configuration from. Other provided parameters will override the copied configuration, except type which must match this network's type exactly.
 - `notes` (string): Add any notes or additional information about this network here.
 
@@ -747,7 +747,7 @@ meraki organizations createOrganizationNetwork --organizationId 'STRING' --name 
 
 **Create a SAML IdP for your organization.**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!create-organization-saml-idp" target="_blank">https://developer.cisco.com/meraki/api-v1/#!create-organization-saml-idp</a>
+[https://developer.cisco.com/meraki/api-v1/#!create-organization-saml-idp](https://developer.cisco.com/meraki/api-v1/#!create-organization-saml-idp){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `organizationId` (string): (required)
 - `x509certSha1Fingerprint` (string): Fingerprint (SHA1) of the SAML certificate provided by your Identity Provider (IdP). This will be used for encryption / validation.
@@ -771,7 +771,7 @@ meraki organizations createOrganizationSamlIdp --organizationId 'STRING' --x509c
 
 **Create a SAML role**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!create-organization-saml-role" target="_blank">https://developer.cisco.com/meraki/api-v1/#!create-organization-saml-role</a>
+[https://developer.cisco.com/meraki/api-v1/#!create-organization-saml-role](https://developer.cisco.com/meraki/api-v1/#!create-organization-saml-role){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `organizationId` (string): (required)
 - `role` (string): The role of the SAML administrator
@@ -797,7 +797,7 @@ meraki organizations createOrganizationSamlRole --organizationId 'STRING' --role
 
 **Delete an organization**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!delete-organization" target="_blank">https://developer.cisco.com/meraki/api-v1/#!delete-organization</a>
+[https://developer.cisco.com/meraki/api-v1/#!delete-organization](https://developer.cisco.com/meraki/api-v1/#!delete-organization){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `organizationId` (string): (required)
 
@@ -819,7 +819,7 @@ meraki organizations deleteOrganization --organizationId 'STRING'
 
 **Delete an action batch**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!delete-organization-action-batch" target="_blank">https://developer.cisco.com/meraki/api-v1/#!delete-organization-action-batch</a>
+[https://developer.cisco.com/meraki/api-v1/#!delete-organization-action-batch](https://developer.cisco.com/meraki/api-v1/#!delete-organization-action-batch){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `organizationId` (string): (required)
 - `actionBatchId` (string): (required)
@@ -842,7 +842,7 @@ meraki organizations deleteOrganizationActionBatch --organizationId 'STRING' --a
 
 **Revoke all access for a dashboard administrator within this organization**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!delete-organization-admin" target="_blank">https://developer.cisco.com/meraki/api-v1/#!delete-organization-admin</a>
+[https://developer.cisco.com/meraki/api-v1/#!delete-organization-admin](https://developer.cisco.com/meraki/api-v1/#!delete-organization-admin){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `organizationId` (string): (required)
 - `adminId` (string): (required)
@@ -865,7 +865,7 @@ meraki organizations deleteOrganizationAdmin --organizationId 'STRING' --adminId
 
 **Delete a branding policy**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!delete-organization-branding-policy" target="_blank">https://developer.cisco.com/meraki/api-v1/#!delete-organization-branding-policy</a>
+[https://developer.cisco.com/meraki/api-v1/#!delete-organization-branding-policy](https://developer.cisco.com/meraki/api-v1/#!delete-organization-branding-policy){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `organizationId` (string): (required)
 - `brandingPolicyId` (string): (required)
@@ -888,7 +888,7 @@ meraki organizations deleteOrganizationBrandingPolicy --organizationId 'STRING' 
 
 **Remove a configuration template**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!delete-organization-config-template" target="_blank">https://developer.cisco.com/meraki/api-v1/#!delete-organization-config-template</a>
+[https://developer.cisco.com/meraki/api-v1/#!delete-organization-config-template](https://developer.cisco.com/meraki/api-v1/#!delete-organization-config-template){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `organizationId` (string): (required)
 - `configTemplateId` (string): (required)
@@ -911,7 +911,7 @@ meraki organizations deleteOrganizationConfigTemplate --organizationId 'STRING' 
 
 **Remove a SAML IdP in your organization.**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!delete-organization-saml-idp" target="_blank">https://developer.cisco.com/meraki/api-v1/#!delete-organization-saml-idp</a>
+[https://developer.cisco.com/meraki/api-v1/#!delete-organization-saml-idp](https://developer.cisco.com/meraki/api-v1/#!delete-organization-saml-idp){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `organizationId` (string): (required)
 - `idpId` (string): (required)
@@ -934,7 +934,7 @@ meraki organizations deleteOrganizationSamlIdp --organizationId 'STRING' --idpId
 
 **Remove a SAML role**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!delete-organization-saml-role" target="_blank">https://developer.cisco.com/meraki/api-v1/#!delete-organization-saml-role</a>
+[https://developer.cisco.com/meraki/api-v1/#!delete-organization-saml-role](https://developer.cisco.com/meraki/api-v1/#!delete-organization-saml-role){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `organizationId` (string): (required)
 - `samlRoleId` (string): (required)
@@ -957,7 +957,7 @@ meraki organizations deleteOrganizationSamlRole --organizationId 'STRING' --saml
 
 **Return an organization**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!get-organization" target="_blank">https://developer.cisco.com/meraki/api-v1/#!get-organization</a>
+[https://developer.cisco.com/meraki/api-v1/#!get-organization](https://developer.cisco.com/meraki/api-v1/#!get-organization){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `organizationId` (string): (required)
 
@@ -979,7 +979,7 @@ meraki organizations getOrganization --organizationId 'STRING'
 
 **Return an action batch**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!get-organization-action-batch" target="_blank">https://developer.cisco.com/meraki/api-v1/#!get-organization-action-batch</a>
+[https://developer.cisco.com/meraki/api-v1/#!get-organization-action-batch](https://developer.cisco.com/meraki/api-v1/#!get-organization-action-batch){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `organizationId` (string): (required)
 - `actionBatchId` (string): (required)
@@ -1002,7 +1002,7 @@ meraki organizations getOrganizationActionBatch --organizationId 'STRING' --acti
 
 **Return the list of action batches in the organization**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!get-organization-action-batches" target="_blank">https://developer.cisco.com/meraki/api-v1/#!get-organization-action-batches</a>
+[https://developer.cisco.com/meraki/api-v1/#!get-organization-action-batches](https://developer.cisco.com/meraki/api-v1/#!get-organization-action-batches){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `organizationId` (string): (required)
 - `status` (string): Filter batches by status. Valid types are pending, completed, and failed.
@@ -1025,7 +1025,7 @@ meraki organizations getOrganizationActionBatches --organizationId 'STRING' --kw
 
 **List the dashboard administrators in this organization**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!get-organization-admins" target="_blank">https://developer.cisco.com/meraki/api-v1/#!get-organization-admins</a>
+[https://developer.cisco.com/meraki/api-v1/#!get-organization-admins](https://developer.cisco.com/meraki/api-v1/#!get-organization-admins){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `organizationId` (string): (required)
 
@@ -1047,7 +1047,7 @@ meraki organizations getOrganizationAdmins --organizationId 'STRING'
 
 **List the API requests made by an organization**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!get-organization-api-requests" target="_blank">https://developer.cisco.com/meraki/api-v1/#!get-organization-api-requests</a>
+[https://developer.cisco.com/meraki/api-v1/#!get-organization-api-requests](https://developer.cisco.com/meraki/api-v1/#!get-organization-api-requests){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `organizationId` (string): (required)
 - `total_pages` (integer or string): use with perPage to get total results up to total_pages*perPage; -1 or "all" for all pages
@@ -1082,7 +1082,7 @@ meraki organizations getOrganizationApiRequests --organizationId 'STRING' --kwar
 
 **Return an aggregated overview of API requests data**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!get-organization-api-requests-overview" target="_blank">https://developer.cisco.com/meraki/api-v1/#!get-organization-api-requests-overview</a>
+[https://developer.cisco.com/meraki/api-v1/#!get-organization-api-requests-overview](https://developer.cisco.com/meraki/api-v1/#!get-organization-api-requests-overview){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `organizationId` (string): (required)
 - `t0` (string): The beginning of the timespan for the data. The maximum lookback period is 31 days from today.
@@ -1107,7 +1107,7 @@ meraki organizations getOrganizationApiRequestsOverview --organizationId 'STRING
 
 **List the branding policies of an organization**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!get-organization-branding-policies" target="_blank">https://developer.cisco.com/meraki/api-v1/#!get-organization-branding-policies</a>
+[https://developer.cisco.com/meraki/api-v1/#!get-organization-branding-policies](https://developer.cisco.com/meraki/api-v1/#!get-organization-branding-policies){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `organizationId` (string): (required)
 
@@ -1129,7 +1129,7 @@ meraki organizations getOrganizationBrandingPolicies --organizationId 'STRING'
 
 **Return the branding policy IDs of an organization in priority order**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!get-organization-branding-policies-priorities" target="_blank">https://developer.cisco.com/meraki/api-v1/#!get-organization-branding-policies-priorities</a>
+[https://developer.cisco.com/meraki/api-v1/#!get-organization-branding-policies-priorities](https://developer.cisco.com/meraki/api-v1/#!get-organization-branding-policies-priorities){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `organizationId` (string): (required)
 
@@ -1151,7 +1151,7 @@ meraki organizations getOrganizationBrandingPoliciesPriorities --organizationId 
 
 **Return a branding policy**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!get-organization-branding-policy" target="_blank">https://developer.cisco.com/meraki/api-v1/#!get-organization-branding-policy</a>
+[https://developer.cisco.com/meraki/api-v1/#!get-organization-branding-policy](https://developer.cisco.com/meraki/api-v1/#!get-organization-branding-policy){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `organizationId` (string): (required)
 - `brandingPolicyId` (string): (required)
@@ -1174,7 +1174,7 @@ meraki organizations getOrganizationBrandingPolicy --organizationId 'STRING' --b
 
 **Return a single configuration template**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!get-organization-config-template" target="_blank">https://developer.cisco.com/meraki/api-v1/#!get-organization-config-template</a>
+[https://developer.cisco.com/meraki/api-v1/#!get-organization-config-template](https://developer.cisco.com/meraki/api-v1/#!get-organization-config-template){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `organizationId` (string): (required)
 - `configTemplateId` (string): (required)
@@ -1197,7 +1197,7 @@ meraki organizations getOrganizationConfigTemplate --organizationId 'STRING' --c
 
 **List the configuration templates for this organization**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!get-organization-config-templates" target="_blank">https://developer.cisco.com/meraki/api-v1/#!get-organization-config-templates</a>
+[https://developer.cisco.com/meraki/api-v1/#!get-organization-config-templates](https://developer.cisco.com/meraki/api-v1/#!get-organization-config-templates){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `organizationId` (string): (required)
 
@@ -1219,7 +1219,7 @@ meraki organizations getOrganizationConfigTemplates --organizationId 'STRING'
 
 **View the Change Log for your organization**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!get-organization-configuration-changes" target="_blank">https://developer.cisco.com/meraki/api-v1/#!get-organization-configuration-changes</a>
+[https://developer.cisco.com/meraki/api-v1/#!get-organization-configuration-changes](https://developer.cisco.com/meraki/api-v1/#!get-organization-configuration-changes){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `organizationId` (string): (required)
 - `total_pages` (integer or string): use with perPage to get total results up to total_pages*perPage; -1 or "all" for all pages
@@ -1251,7 +1251,7 @@ meraki organizations getOrganizationConfigurationChanges --organizationId 'STRIN
 
 **List the devices in an organization**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!get-organization-devices" target="_blank">https://developer.cisco.com/meraki/api-v1/#!get-organization-devices</a>
+[https://developer.cisco.com/meraki/api-v1/#!get-organization-devices](https://developer.cisco.com/meraki/api-v1/#!get-organization-devices){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `organizationId` (string): (required)
 - `total_pages` (integer or string): use with perPage to get total results up to total_pages*perPage; -1 or "all" for all pages
@@ -1279,7 +1279,7 @@ meraki organizations getOrganizationDevices --organizationId 'STRING' --kwargs '
 
 **List the status of every Meraki device in the organization**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!get-organization-devices-statuses" target="_blank">https://developer.cisco.com/meraki/api-v1/#!get-organization-devices-statuses</a>
+[https://developer.cisco.com/meraki/api-v1/#!get-organization-devices-statuses](https://developer.cisco.com/meraki/api-v1/#!get-organization-devices-statuses){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `organizationId` (string): (required)
 - `total_pages` (integer or string): use with perPage to get total results up to total_pages*perPage; -1 or "all" for all pages
@@ -1306,7 +1306,7 @@ meraki organizations getOrganizationDevicesStatuses --organizationId 'STRING' --
 
 **Return the uplink loss and latency for every MX in the organization from at latest 2 minutes ago**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!get-organization-devices-uplinks-loss-and-latency" target="_blank">https://developer.cisco.com/meraki/api-v1/#!get-organization-devices-uplinks-loss-and-latency</a>
+[https://developer.cisco.com/meraki/api-v1/#!get-organization-devices-uplinks-loss-and-latency](https://developer.cisco.com/meraki/api-v1/#!get-organization-devices-uplinks-loss-and-latency){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `organizationId` (string): (required)
 - `t0` (string): The beginning of the timespan for the data. The maximum lookback period is 365 days from today.
@@ -1333,7 +1333,7 @@ meraki organizations getOrganizationDevicesUplinksLossAndLatency --organizationI
 
 **Return a single device from the inventory of an organization**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!get-organization-inventory-device" target="_blank">https://developer.cisco.com/meraki/api-v1/#!get-organization-inventory-device</a>
+[https://developer.cisco.com/meraki/api-v1/#!get-organization-inventory-device](https://developer.cisco.com/meraki/api-v1/#!get-organization-inventory-device){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `organizationId` (string): (required)
 - `serial` (string): (required)
@@ -1356,7 +1356,7 @@ meraki organizations getOrganizationInventoryDevice --organizationId 'STRING' --
 
 **Return the device inventory for an organization**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!get-organization-inventory-devices" target="_blank">https://developer.cisco.com/meraki/api-v1/#!get-organization-inventory-devices</a>
+[https://developer.cisco.com/meraki/api-v1/#!get-organization-inventory-devices](https://developer.cisco.com/meraki/api-v1/#!get-organization-inventory-devices){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `organizationId` (string): (required)
 - `total_pages` (integer or string): use with perPage to get total results up to total_pages*perPage; -1 or "all" for all pages
@@ -1385,7 +1385,7 @@ meraki organizations getOrganizationInventoryDevices --organizationId 'STRING' -
 
 **Display a license**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!get-organization-license" target="_blank">https://developer.cisco.com/meraki/api-v1/#!get-organization-license</a>
+[https://developer.cisco.com/meraki/api-v1/#!get-organization-license](https://developer.cisco.com/meraki/api-v1/#!get-organization-license){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `organizationId` (string): (required)
 - `licenseId` (string): (required)
@@ -1408,7 +1408,7 @@ meraki organizations getOrganizationLicense --organizationId 'STRING' --licenseI
 
 **List the licenses for an organization**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!get-organization-licenses" target="_blank">https://developer.cisco.com/meraki/api-v1/#!get-organization-licenses</a>
+[https://developer.cisco.com/meraki/api-v1/#!get-organization-licenses](https://developer.cisco.com/meraki/api-v1/#!get-organization-licenses){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `organizationId` (string): (required)
 - `total_pages` (integer or string): use with perPage to get total results up to total_pages*perPage; -1 or "all" for all pages
@@ -1438,7 +1438,7 @@ meraki organizations getOrganizationLicenses --organizationId 'STRING' --kwargs 
 
 **Return an overview of the license state for an organization**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!get-organization-licenses-overview" target="_blank">https://developer.cisco.com/meraki/api-v1/#!get-organization-licenses-overview</a>
+[https://developer.cisco.com/meraki/api-v1/#!get-organization-licenses-overview](https://developer.cisco.com/meraki/api-v1/#!get-organization-licenses-overview){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `organizationId` (string): (required)
 
@@ -1460,7 +1460,7 @@ meraki organizations getOrganizationLicensesOverview --organizationId 'STRING'
 
 **Returns the login security settings for an organization.**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!get-organization-login-security" target="_blank">https://developer.cisco.com/meraki/api-v1/#!get-organization-login-security</a>
+[https://developer.cisco.com/meraki/api-v1/#!get-organization-login-security](https://developer.cisco.com/meraki/api-v1/#!get-organization-login-security){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `organizationId` (string): (required)
 
@@ -1482,7 +1482,7 @@ meraki organizations getOrganizationLoginSecurity --organizationId 'STRING'
 
 **List the networks that the user has privileges on in an organization**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!get-organization-networks" target="_blank">https://developer.cisco.com/meraki/api-v1/#!get-organization-networks</a>
+[https://developer.cisco.com/meraki/api-v1/#!get-organization-networks](https://developer.cisco.com/meraki/api-v1/#!get-organization-networks){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `organizationId` (string): (required)
 - `total_pages` (integer or string): use with perPage to get total results up to total_pages*perPage; -1 or "all" for all pages
@@ -1512,7 +1512,7 @@ meraki organizations getOrganizationNetworks --organizationId 'STRING' --kwargs 
 
 **Return the OpenAPI 2.0 Specification of the organization's API documentation in JSON**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!get-organization-openapi-spec" target="_blank">https://developer.cisco.com/meraki/api-v1/#!get-organization-openapi-spec</a>
+[https://developer.cisco.com/meraki/api-v1/#!get-organization-openapi-spec](https://developer.cisco.com/meraki/api-v1/#!get-organization-openapi-spec){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `organizationId` (string): (required)
 
@@ -1534,7 +1534,7 @@ meraki organizations getOrganizationOpenapiSpec --organizationId 'STRING'
 
 **Returns the SAML SSO enabled settings for an organization.**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!get-organization-saml" target="_blank">https://developer.cisco.com/meraki/api-v1/#!get-organization-saml</a>
+[https://developer.cisco.com/meraki/api-v1/#!get-organization-saml](https://developer.cisco.com/meraki/api-v1/#!get-organization-saml){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `organizationId` (string): (required)
 
@@ -1556,7 +1556,7 @@ meraki organizations getOrganizationSaml --organizationId 'STRING'
 
 **Get a SAML IdP from your organization.**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!get-organization-saml-idp" target="_blank">https://developer.cisco.com/meraki/api-v1/#!get-organization-saml-idp</a>
+[https://developer.cisco.com/meraki/api-v1/#!get-organization-saml-idp](https://developer.cisco.com/meraki/api-v1/#!get-organization-saml-idp){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `organizationId` (string): (required)
 - `idpId` (string): (required)
@@ -1579,7 +1579,7 @@ meraki organizations getOrganizationSamlIdp --organizationId 'STRING' --idpId 'S
 
 **List the SAML IdPs in your organization.**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!get-organization-saml-idps" target="_blank">https://developer.cisco.com/meraki/api-v1/#!get-organization-saml-idps</a>
+[https://developer.cisco.com/meraki/api-v1/#!get-organization-saml-idps](https://developer.cisco.com/meraki/api-v1/#!get-organization-saml-idps){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `organizationId` (string): (required)
 
@@ -1601,7 +1601,7 @@ meraki organizations getOrganizationSamlIdps --organizationId 'STRING'
 
 **Return a SAML role**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!get-organization-saml-role" target="_blank">https://developer.cisco.com/meraki/api-v1/#!get-organization-saml-role</a>
+[https://developer.cisco.com/meraki/api-v1/#!get-organization-saml-role](https://developer.cisco.com/meraki/api-v1/#!get-organization-saml-role){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `organizationId` (string): (required)
 - `samlRoleId` (string): (required)
@@ -1624,7 +1624,7 @@ meraki organizations getOrganizationSamlRole --organizationId 'STRING' --samlRol
 
 **List the SAML roles for this organization**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!get-organization-saml-roles" target="_blank">https://developer.cisco.com/meraki/api-v1/#!get-organization-saml-roles</a>
+[https://developer.cisco.com/meraki/api-v1/#!get-organization-saml-roles](https://developer.cisco.com/meraki/api-v1/#!get-organization-saml-roles){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `organizationId` (string): (required)
 
@@ -1646,7 +1646,7 @@ meraki organizations getOrganizationSamlRoles --organizationId 'STRING'
 
 **Return the SNMP settings for an organization**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!get-organization-snmp" target="_blank">https://developer.cisco.com/meraki/api-v1/#!get-organization-snmp</a>
+[https://developer.cisco.com/meraki/api-v1/#!get-organization-snmp](https://developer.cisco.com/meraki/api-v1/#!get-organization-snmp){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `organizationId` (string): (required)
 
@@ -1668,7 +1668,7 @@ meraki organizations getOrganizationSnmp --organizationId 'STRING'
 
 **List the uplink status of every Meraki MX, MG and Z series devices in the organization**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!get-organization-uplinks-statuses" target="_blank">https://developer.cisco.com/meraki/api-v1/#!get-organization-uplinks-statuses</a>
+[https://developer.cisco.com/meraki/api-v1/#!get-organization-uplinks-statuses](https://developer.cisco.com/meraki/api-v1/#!get-organization-uplinks-statuses){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `organizationId` (string): (required)
 - `total_pages` (integer or string): use with perPage to get total results up to total_pages*perPage; -1 or "all" for all pages
@@ -1698,7 +1698,7 @@ meraki organizations getOrganizationUplinksStatuses --organizationId 'STRING' --
 
 **Return a list of alert types to be used with managing webhook alerts**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!get-organization-webhooks-alert-types" target="_blank">https://developer.cisco.com/meraki/api-v1/#!get-organization-webhooks-alert-types</a>
+[https://developer.cisco.com/meraki/api-v1/#!get-organization-webhooks-alert-types](https://developer.cisco.com/meraki/api-v1/#!get-organization-webhooks-alert-types){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `organizationId` (string): (required)
 
@@ -1720,7 +1720,7 @@ meraki organizations getOrganizationWebhooksAlertTypes --organizationId 'STRING'
 
 **Return the log of webhook POSTs sent**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!get-organization-webhooks-logs" target="_blank">https://developer.cisco.com/meraki/api-v1/#!get-organization-webhooks-logs</a>
+[https://developer.cisco.com/meraki/api-v1/#!get-organization-webhooks-logs](https://developer.cisco.com/meraki/api-v1/#!get-organization-webhooks-logs){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `organizationId` (string): (required)
 - `total_pages` (integer or string): use with perPage to get total results up to total_pages*perPage; -1 or "all" for all pages
@@ -1751,7 +1751,7 @@ meraki organizations getOrganizationWebhooksLogs --organizationId 'STRING' --kwa
 
 **List the organizations that the user has privileges on**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!get-organizations" target="_blank">https://developer.cisco.com/meraki/api-v1/#!get-organizations</a>
+[https://developer.cisco.com/meraki/api-v1/#!get-organizations](https://developer.cisco.com/meraki/api-v1/#!get-organizations){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 
 ##### Method Code:
@@ -1772,7 +1772,7 @@ meraki organizations getOrganizations
 
 **Move licenses to another organization**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!move-organization-licenses" target="_blank">https://developer.cisco.com/meraki/api-v1/#!move-organization-licenses</a>
+[https://developer.cisco.com/meraki/api-v1/#!move-organization-licenses](https://developer.cisco.com/meraki/api-v1/#!move-organization-licenses){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `organizationId` (string): (required)
 - `destOrganizationId` (string): The ID of the organization to move the licenses to
@@ -1796,7 +1796,7 @@ meraki organizations moveOrganizationLicenses --organizationId 'STRING' --destOr
 
 **Move SM seats to another organization**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!move-organization-licenses-seats" target="_blank">https://developer.cisco.com/meraki/api-v1/#!move-organization-licenses-seats</a>
+[https://developer.cisco.com/meraki/api-v1/#!move-organization-licenses-seats](https://developer.cisco.com/meraki/api-v1/#!move-organization-licenses-seats){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `organizationId` (string): (required)
 - `destOrganizationId` (string): The ID of the organization to move the SM seats to
@@ -1821,7 +1821,7 @@ meraki organizations moveOrganizationLicensesSeats --organizationId 'STRING' --d
 
 **Renew SM seats of a license**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!renew-organization-licenses-seats" target="_blank">https://developer.cisco.com/meraki/api-v1/#!renew-organization-licenses-seats</a>
+[https://developer.cisco.com/meraki/api-v1/#!renew-organization-licenses-seats](https://developer.cisco.com/meraki/api-v1/#!renew-organization-licenses-seats){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `organizationId` (string): (required)
 - `licenseIdToRenew` (string): The ID of the SM license to renew. This license must already be assigned to an SM network
@@ -1845,7 +1845,7 @@ meraki organizations renewOrganizationLicensesSeats --organizationId 'STRING' --
 
 **Update an organization**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!update-organization" target="_blank">https://developer.cisco.com/meraki/api-v1/#!update-organization</a>
+[https://developer.cisco.com/meraki/api-v1/#!update-organization](https://developer.cisco.com/meraki/api-v1/#!update-organization){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `organizationId` (string): (required)
 - `name` (string): The name of the organization
@@ -1868,7 +1868,7 @@ meraki organizations updateOrganization --organizationId 'STRING' --kwargs '{"ke
 
 **Update an action batch**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!update-organization-action-batch" target="_blank">https://developer.cisco.com/meraki/api-v1/#!update-organization-action-batch</a>
+[https://developer.cisco.com/meraki/api-v1/#!update-organization-action-batch](https://developer.cisco.com/meraki/api-v1/#!update-organization-action-batch){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `organizationId` (string): (required)
 - `actionBatchId` (string): (required)
@@ -1893,7 +1893,7 @@ meraki organizations updateOrganizationActionBatch --organizationId 'STRING' --a
 
 **Update an administrator**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!update-organization-admin" target="_blank">https://developer.cisco.com/meraki/api-v1/#!update-organization-admin</a>
+[https://developer.cisco.com/meraki/api-v1/#!update-organization-admin](https://developer.cisco.com/meraki/api-v1/#!update-organization-admin){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `organizationId` (string): (required)
 - `adminId` (string): (required)
@@ -1920,7 +1920,7 @@ meraki organizations updateOrganizationAdmin --organizationId 'STRING' --adminId
 
 **Update the priority ordering of an organization's branding policies.**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!update-organization-branding-policies-priorities" target="_blank">https://developer.cisco.com/meraki/api-v1/#!update-organization-branding-policies-priorities</a>
+[https://developer.cisco.com/meraki/api-v1/#!update-organization-branding-policies-priorities](https://developer.cisco.com/meraki/api-v1/#!update-organization-branding-policies-priorities){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `organizationId` (string): (required)
 - `brandingPolicyIds` (array): A list of branding policy IDs arranged in ascending priority order (IDs later in the array have higher priority).
@@ -1943,7 +1943,7 @@ meraki organizations updateOrganizationBrandingPoliciesPriorities --organization
 
 **Update a branding policy**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!update-organization-branding-policy" target="_blank">https://developer.cisco.com/meraki/api-v1/#!update-organization-branding-policy</a>
+[https://developer.cisco.com/meraki/api-v1/#!update-organization-branding-policy](https://developer.cisco.com/meraki/api-v1/#!update-organization-branding-policy){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `organizationId` (string): (required)
 - `brandingPolicyId` (string): (required)
@@ -1974,12 +1974,12 @@ meraki organizations updateOrganizationBrandingPolicy --organizationId 'STRING' 
 
 **Update a configuration template**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!update-organization-config-template" target="_blank">https://developer.cisco.com/meraki/api-v1/#!update-organization-config-template</a>
+[https://developer.cisco.com/meraki/api-v1/#!update-organization-config-template](https://developer.cisco.com/meraki/api-v1/#!update-organization-config-template){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `organizationId` (string): (required)
 - `configTemplateId` (string): (required)
 - `name` (string): The name of the configuration template
-- `timeZone` (string): The timezone of the configuration template. For a list of allowed timezones, please see the 'TZ' column in the table in <a target='_blank' href='<a href="https://en.wikipedia.org/wiki/List_of_tz_database_time_zones'>this article.</a>" target="_blank">https://en.wikipedia.org/wiki/List_of_tz_database_time_zones'>this article.</a></a>
+- `timeZone` (string): The timezone of the configuration template. For a list of allowed timezones, please see the 'TZ' column in the table in <a target='_blank' href='[https://en.wikipedia.org/wiki/List_of_tz_database_time_zones'>this article.</a>](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones'>this article.</a>){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 ##### Method Code:
 ```python
@@ -1999,7 +1999,7 @@ meraki organizations updateOrganizationConfigTemplate --organizationId 'STRING' 
 
 **Update a license**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!update-organization-license" target="_blank">https://developer.cisco.com/meraki/api-v1/#!update-organization-license</a>
+[https://developer.cisco.com/meraki/api-v1/#!update-organization-license](https://developer.cisco.com/meraki/api-v1/#!update-organization-license){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `organizationId` (string): (required)
 - `licenseId` (string): (required)
@@ -2023,7 +2023,7 @@ meraki organizations updateOrganizationLicense --organizationId 'STRING' --licen
 
 **Update the login security settings for an organization**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!update-organization-login-security" target="_blank">https://developer.cisco.com/meraki/api-v1/#!update-organization-login-security</a>
+[https://developer.cisco.com/meraki/api-v1/#!update-organization-login-security](https://developer.cisco.com/meraki/api-v1/#!update-organization-login-security){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `organizationId` (string): (required)
 - `enforcePasswordExpiration` (boolean): Boolean indicating whether users are forced to change their password every X number of days.
@@ -2057,7 +2057,7 @@ meraki organizations updateOrganizationLoginSecurity --organizationId 'STRING' -
 
 **Updates the SAML SSO enabled settings for an organization.**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!update-organization-saml" target="_blank">https://developer.cisco.com/meraki/api-v1/#!update-organization-saml</a>
+[https://developer.cisco.com/meraki/api-v1/#!update-organization-saml](https://developer.cisco.com/meraki/api-v1/#!update-organization-saml){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `organizationId` (string): (required)
 - `enabled` (boolean): Boolean for updating SAML SSO enabled settings.
@@ -2080,7 +2080,7 @@ meraki organizations updateOrganizationSaml --organizationId 'STRING' --kwargs '
 
 **Update a SAML IdP in your organization**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!update-organization-saml-idp" target="_blank">https://developer.cisco.com/meraki/api-v1/#!update-organization-saml-idp</a>
+[https://developer.cisco.com/meraki/api-v1/#!update-organization-saml-idp](https://developer.cisco.com/meraki/api-v1/#!update-organization-saml-idp){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `organizationId` (string): (required)
 - `idpId` (string): (required)
@@ -2105,7 +2105,7 @@ meraki organizations updateOrganizationSamlIdp --organizationId 'STRING' --idpId
 
 **Update a SAML role**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!update-organization-saml-role" target="_blank">https://developer.cisco.com/meraki/api-v1/#!update-organization-saml-role</a>
+[https://developer.cisco.com/meraki/api-v1/#!update-organization-saml-role](https://developer.cisco.com/meraki/api-v1/#!update-organization-saml-role){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `organizationId` (string): (required)
 - `samlRoleId` (string): (required)
@@ -2132,7 +2132,7 @@ meraki organizations updateOrganizationSamlRole --organizationId 'STRING' --saml
 
 **Update the SNMP settings for an organization**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!update-organization-snmp" target="_blank">https://developer.cisco.com/meraki/api-v1/#!update-organization-snmp</a>
+[https://developer.cisco.com/meraki/api-v1/#!update-organization-snmp](https://developer.cisco.com/meraki/api-v1/#!update-organization-snmp){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `organizationId` (string): (required)
 - `v2cEnabled` (boolean): Boolean indicating whether SNMP version 2c is enabled for the organization.
@@ -2167,7 +2167,7 @@ meraki organizations updateOrganizationSnmp --organizationId 'STRING' --kwargs '
 
 **Bind a network to a template.**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!bind-network" target="_blank">https://developer.cisco.com/meraki/api-v1/#!bind-network</a>
+[https://developer.cisco.com/meraki/api-v1/#!bind-network](https://developer.cisco.com/meraki/api-v1/#!bind-network){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 - `configTemplateId` (string): The ID of the template to which the network should be bound.
@@ -2191,7 +2191,7 @@ meraki networks bindNetwork --networkId 'STRING' --configTemplateId 'STRING' --k
 
 **Claim devices into a network**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!claim-network-devices" target="_blank">https://developer.cisco.com/meraki/api-v1/#!claim-network-devices</a>
+[https://developer.cisco.com/meraki/api-v1/#!claim-network-devices](https://developer.cisco.com/meraki/api-v1/#!claim-network-devices){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 - `serials` (array): A list of serials of devices to claim
@@ -2214,7 +2214,7 @@ meraki networks claimNetworkDevices --networkId 'STRING' --serials ITEM
 
 **Upload a floor plan**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!create-network-floor-plan" target="_blank">https://developer.cisco.com/meraki/api-v1/#!create-network-floor-plan</a>
+[https://developer.cisco.com/meraki/api-v1/#!create-network-floor-plan](https://developer.cisco.com/meraki/api-v1/#!create-network-floor-plan){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 - `name` (string): The name of your floor plan.
@@ -2243,7 +2243,7 @@ meraki networks createNetworkFloorPlan --networkId 'STRING' --name 'STRING' --im
 
 **Create a group policy**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!create-network-group-policy" target="_blank">https://developer.cisco.com/meraki/api-v1/#!create-network-group-policy</a>
+[https://developer.cisco.com/meraki/api-v1/#!create-network-group-policy](https://developer.cisco.com/meraki/api-v1/#!create-network-group-policy){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 - `name` (string): The name for your group policy. Required.
@@ -2276,7 +2276,7 @@ meraki networks createNetworkGroupPolicy --networkId 'STRING' --name 'STRING' --
 
 **Authorize a user configured with Meraki Authentication for a network (currently supports 802.1X, splash guest, and client VPN users, and currently, organizations have a 50,000 user cap)**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!create-network-meraki-auth-user" target="_blank">https://developer.cisco.com/meraki/api-v1/#!create-network-meraki-auth-user</a>
+[https://developer.cisco.com/meraki/api-v1/#!create-network-meraki-auth-user](https://developer.cisco.com/meraki/api-v1/#!create-network-meraki-auth-user){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 - `email` (string): Email address of the user
@@ -2304,7 +2304,7 @@ meraki networks createNetworkMerakiAuthUser --networkId 'STRING' --email 'STRING
 
 **Add an MQTT broker**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!create-network-mqtt-broker" target="_blank">https://developer.cisco.com/meraki/api-v1/#!create-network-mqtt-broker</a>
+[https://developer.cisco.com/meraki/api-v1/#!create-network-mqtt-broker](https://developer.cisco.com/meraki/api-v1/#!create-network-mqtt-broker){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 - `name` (string): Name of the MQTT broker
@@ -2329,7 +2329,7 @@ meraki networks createNetworkMqttBroker --networkId 'STRING' --name 'STRING' --h
 
 **Submit a new delete or restrict processing PII request**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!create-network-pii-request" target="_blank">https://developer.cisco.com/meraki/api-v1/#!create-network-pii-request</a>
+[https://developer.cisco.com/meraki/api-v1/#!create-network-pii-request](https://developer.cisco.com/meraki/api-v1/#!create-network-pii-request){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 - `type` (string): One of "delete" or "restrict processing"
@@ -2358,7 +2358,7 @@ meraki networks createNetworkPiiRequest --networkId 'STRING' --kwargs '{"key1": 
 
 **Add an HTTP server to a network**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!create-network-webhooks-http-server" target="_blank">https://developer.cisco.com/meraki/api-v1/#!create-network-webhooks-http-server</a>
+[https://developer.cisco.com/meraki/api-v1/#!create-network-webhooks-http-server](https://developer.cisco.com/meraki/api-v1/#!create-network-webhooks-http-server){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 - `name` (string): A name for easy reference to the HTTP server
@@ -2383,7 +2383,7 @@ meraki networks createNetworkWebhooksHttpServer --networkId 'STRING' --name 'STR
 
 **Send a test webhook for a network**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!create-network-webhooks-webhook-test" target="_blank">https://developer.cisco.com/meraki/api-v1/#!create-network-webhooks-webhook-test</a>
+[https://developer.cisco.com/meraki/api-v1/#!create-network-webhooks-webhook-test](https://developer.cisco.com/meraki/api-v1/#!create-network-webhooks-webhook-test){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 - `url` (string): The URL where the test webhook will be sent
@@ -2407,7 +2407,7 @@ meraki networks createNetworkWebhooksWebhookTest --networkId 'STRING' --url 'STR
 
 **Delete a network**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!delete-network" target="_blank">https://developer.cisco.com/meraki/api-v1/#!delete-network</a>
+[https://developer.cisco.com/meraki/api-v1/#!delete-network](https://developer.cisco.com/meraki/api-v1/#!delete-network){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 
@@ -2429,7 +2429,7 @@ meraki networks deleteNetwork --networkId 'STRING'
 
 **Destroy a floor plan**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!delete-network-floor-plan" target="_blank">https://developer.cisco.com/meraki/api-v1/#!delete-network-floor-plan</a>
+[https://developer.cisco.com/meraki/api-v1/#!delete-network-floor-plan](https://developer.cisco.com/meraki/api-v1/#!delete-network-floor-plan){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 - `floorPlanId` (string): (required)
@@ -2452,7 +2452,7 @@ meraki networks deleteNetworkFloorPlan --networkId 'STRING' --floorPlanId 'STRIN
 
 **Delete a group policy**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!delete-network-group-policy" target="_blank">https://developer.cisco.com/meraki/api-v1/#!delete-network-group-policy</a>
+[https://developer.cisco.com/meraki/api-v1/#!delete-network-group-policy](https://developer.cisco.com/meraki/api-v1/#!delete-network-group-policy){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 - `groupPolicyId` (string): (required)
@@ -2475,7 +2475,7 @@ meraki networks deleteNetworkGroupPolicy --networkId 'STRING' --groupPolicyId 'S
 
 **Deauthorize a user**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!delete-network-meraki-auth-user" target="_blank">https://developer.cisco.com/meraki/api-v1/#!delete-network-meraki-auth-user</a>
+[https://developer.cisco.com/meraki/api-v1/#!delete-network-meraki-auth-user](https://developer.cisco.com/meraki/api-v1/#!delete-network-meraki-auth-user){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 - `merakiAuthUserId` (string): (required)
@@ -2498,7 +2498,7 @@ meraki networks deleteNetworkMerakiAuthUser --networkId 'STRING' --merakiAuthUse
 
 **Delete an MQTT broker**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!delete-network-mqtt-broker" target="_blank">https://developer.cisco.com/meraki/api-v1/#!delete-network-mqtt-broker</a>
+[https://developer.cisco.com/meraki/api-v1/#!delete-network-mqtt-broker](https://developer.cisco.com/meraki/api-v1/#!delete-network-mqtt-broker){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 - `mqttBrokerId` (string): (required)
@@ -2521,7 +2521,7 @@ meraki networks deleteNetworkMqttBroker --networkId 'STRING' --mqttBrokerId 'STR
 
 **Delete a restrict processing PII request**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!delete-network-pii-request" target="_blank">https://developer.cisco.com/meraki/api-v1/#!delete-network-pii-request</a>
+[https://developer.cisco.com/meraki/api-v1/#!delete-network-pii-request](https://developer.cisco.com/meraki/api-v1/#!delete-network-pii-request){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 - `requestId` (string): (required)
@@ -2544,7 +2544,7 @@ meraki networks deleteNetworkPiiRequest --networkId 'STRING' --requestId 'STRING
 
 **Delete an HTTP server from a network**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!delete-network-webhooks-http-server" target="_blank">https://developer.cisco.com/meraki/api-v1/#!delete-network-webhooks-http-server</a>
+[https://developer.cisco.com/meraki/api-v1/#!delete-network-webhooks-http-server](https://developer.cisco.com/meraki/api-v1/#!delete-network-webhooks-http-server){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 - `httpServerId` (string): (required)
@@ -2567,7 +2567,7 @@ meraki networks deleteNetworkWebhooksHttpServer --networkId 'STRING' --httpServe
 
 **Return a network**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!get-network" target="_blank">https://developer.cisco.com/meraki/api-v1/#!get-network</a>
+[https://developer.cisco.com/meraki/api-v1/#!get-network](https://developer.cisco.com/meraki/api-v1/#!get-network){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 
@@ -2589,7 +2589,7 @@ meraki networks getNetwork --networkId 'STRING'
 
 **Return the alert configuration for this network**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!get-network-alerts-settings" target="_blank">https://developer.cisco.com/meraki/api-v1/#!get-network-alerts-settings</a>
+[https://developer.cisco.com/meraki/api-v1/#!get-network-alerts-settings](https://developer.cisco.com/meraki/api-v1/#!get-network-alerts-settings){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 
@@ -2611,7 +2611,7 @@ meraki networks getNetworkAlertsSettings --networkId 'STRING'
 
 **Return a Bluetooth client**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!get-network-bluetooth-client" target="_blank">https://developer.cisco.com/meraki/api-v1/#!get-network-bluetooth-client</a>
+[https://developer.cisco.com/meraki/api-v1/#!get-network-bluetooth-client](https://developer.cisco.com/meraki/api-v1/#!get-network-bluetooth-client){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 - `bluetoothClientId` (string): (required)
@@ -2636,7 +2636,7 @@ meraki networks getNetworkBluetoothClient --networkId 'STRING' --bluetoothClient
 
 **List the Bluetooth clients seen by APs in this network**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!get-network-bluetooth-clients" target="_blank">https://developer.cisco.com/meraki/api-v1/#!get-network-bluetooth-clients</a>
+[https://developer.cisco.com/meraki/api-v1/#!get-network-bluetooth-clients](https://developer.cisco.com/meraki/api-v1/#!get-network-bluetooth-clients){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 - `total_pages` (integer or string): use with perPage to get total results up to total_pages*perPage; -1 or "all" for all pages
@@ -2666,7 +2666,7 @@ meraki networks getNetworkBluetoothClients --networkId 'STRING' --kwargs '{"key1
 
 **Return the client associated with the given identifier**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!get-network-client" target="_blank">https://developer.cisco.com/meraki/api-v1/#!get-network-client</a>
+[https://developer.cisco.com/meraki/api-v1/#!get-network-client](https://developer.cisco.com/meraki/api-v1/#!get-network-client){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 - `clientId` (string): (required)
@@ -2689,7 +2689,7 @@ meraki networks getNetworkClient --networkId 'STRING' --clientId 'STRING'
 
 **Return the policy assigned to a client on the network**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!get-network-client-policy" target="_blank">https://developer.cisco.com/meraki/api-v1/#!get-network-client-policy</a>
+[https://developer.cisco.com/meraki/api-v1/#!get-network-client-policy](https://developer.cisco.com/meraki/api-v1/#!get-network-client-policy){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 - `clientId` (string): (required)
@@ -2712,7 +2712,7 @@ meraki networks getNetworkClientPolicy --networkId 'STRING' --clientId 'STRING'
 
 **Return the splash authorization for a client, for each SSID they've associated with through splash**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!get-network-client-splash-authorization-status" target="_blank">https://developer.cisco.com/meraki/api-v1/#!get-network-client-splash-authorization-status</a>
+[https://developer.cisco.com/meraki/api-v1/#!get-network-client-splash-authorization-status](https://developer.cisco.com/meraki/api-v1/#!get-network-client-splash-authorization-status){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 - `clientId` (string): (required)
@@ -2735,7 +2735,7 @@ meraki networks getNetworkClientSplashAuthorizationStatus --networkId 'STRING' -
 
 **Return the client's network traffic data over time**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!get-network-client-traffic-history" target="_blank">https://developer.cisco.com/meraki/api-v1/#!get-network-client-traffic-history</a>
+[https://developer.cisco.com/meraki/api-v1/#!get-network-client-traffic-history](https://developer.cisco.com/meraki/api-v1/#!get-network-client-traffic-history){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 - `clientId` (string): (required)
@@ -2763,7 +2763,7 @@ meraki networks getNetworkClientTrafficHistory --networkId 'STRING' --clientId '
 
 **Return the client's daily usage history**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!get-network-client-usage-history" target="_blank">https://developer.cisco.com/meraki/api-v1/#!get-network-client-usage-history</a>
+[https://developer.cisco.com/meraki/api-v1/#!get-network-client-usage-history](https://developer.cisco.com/meraki/api-v1/#!get-network-client-usage-history){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 - `clientId` (string): (required)
@@ -2786,7 +2786,7 @@ meraki networks getNetworkClientUsageHistory --networkId 'STRING' --clientId 'ST
 
 **List the clients that have used this network in the timespan**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!get-network-clients" target="_blank">https://developer.cisco.com/meraki/api-v1/#!get-network-clients</a>
+[https://developer.cisco.com/meraki/api-v1/#!get-network-clients](https://developer.cisco.com/meraki/api-v1/#!get-network-clients){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 - `total_pages` (integer or string): use with perPage to get total results up to total_pages*perPage; -1 or "all" for all pages
@@ -2815,7 +2815,7 @@ meraki networks getNetworkClients --networkId 'STRING' --kwargs '{"key1": "value
 
 **Return the application usage data for clients**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!get-network-clients-application-usage" target="_blank">https://developer.cisco.com/meraki/api-v1/#!get-network-clients-application-usage</a>
+[https://developer.cisco.com/meraki/api-v1/#!get-network-clients-application-usage](https://developer.cisco.com/meraki/api-v1/#!get-network-clients-application-usage){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 - `clients` (string): A list of client keys, MACs or IPs separated by comma.
@@ -2847,7 +2847,7 @@ meraki networks getNetworkClientsApplicationUsage --networkId 'STRING' --clients
 
 **Return the usage histories for clients**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!get-network-clients-usage-histories" target="_blank">https://developer.cisco.com/meraki/api-v1/#!get-network-clients-usage-histories</a>
+[https://developer.cisco.com/meraki/api-v1/#!get-network-clients-usage-histories](https://developer.cisco.com/meraki/api-v1/#!get-network-clients-usage-histories){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 - `clients` (string): A list of client keys, MACs or IPs separated by comma.
@@ -2879,7 +2879,7 @@ meraki networks getNetworkClientsUsageHistories --networkId 'STRING' --clients '
 
 **List the devices in a network**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!get-network-devices" target="_blank">https://developer.cisco.com/meraki/api-v1/#!get-network-devices</a>
+[https://developer.cisco.com/meraki/api-v1/#!get-network-devices](https://developer.cisco.com/meraki/api-v1/#!get-network-devices){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 
@@ -2901,7 +2901,7 @@ meraki networks getNetworkDevices --networkId 'STRING'
 
 **List the events for the network**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!get-network-events" target="_blank">https://developer.cisco.com/meraki/api-v1/#!get-network-events</a>
+[https://developer.cisco.com/meraki/api-v1/#!get-network-events](https://developer.cisco.com/meraki/api-v1/#!get-network-events){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 - `total_pages` (integer or string): use with perPage to get total results up to total_pages*perPage; -1 or "all" for all pages
@@ -2940,7 +2940,7 @@ meraki networks getNetworkEvents --networkId 'STRING' --kwargs '{"key1": "value1
 
 **List the event type to human-readable description**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!get-network-events-event-types" target="_blank">https://developer.cisco.com/meraki/api-v1/#!get-network-events-event-types</a>
+[https://developer.cisco.com/meraki/api-v1/#!get-network-events-event-types](https://developer.cisco.com/meraki/api-v1/#!get-network-events-event-types){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 
@@ -2962,7 +2962,7 @@ meraki networks getNetworkEventsEventTypes --networkId 'STRING'
 
 **Get current maintenance window for a network**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!get-network-firmware-upgrades" target="_blank">https://developer.cisco.com/meraki/api-v1/#!get-network-firmware-upgrades</a>
+[https://developer.cisco.com/meraki/api-v1/#!get-network-firmware-upgrades](https://developer.cisco.com/meraki/api-v1/#!get-network-firmware-upgrades){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 
@@ -2984,7 +2984,7 @@ meraki networks getNetworkFirmwareUpgrades --networkId 'STRING'
 
 **Find a floor plan by ID**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!get-network-floor-plan" target="_blank">https://developer.cisco.com/meraki/api-v1/#!get-network-floor-plan</a>
+[https://developer.cisco.com/meraki/api-v1/#!get-network-floor-plan](https://developer.cisco.com/meraki/api-v1/#!get-network-floor-plan){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 - `floorPlanId` (string): (required)
@@ -3007,7 +3007,7 @@ meraki networks getNetworkFloorPlan --networkId 'STRING' --floorPlanId 'STRING'
 
 **List the floor plans that belong to your network**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!get-network-floor-plans" target="_blank">https://developer.cisco.com/meraki/api-v1/#!get-network-floor-plans</a>
+[https://developer.cisco.com/meraki/api-v1/#!get-network-floor-plans](https://developer.cisco.com/meraki/api-v1/#!get-network-floor-plans){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 
@@ -3029,7 +3029,7 @@ meraki networks getNetworkFloorPlans --networkId 'STRING'
 
 **List the group policies in a network**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!get-network-group-policies" target="_blank">https://developer.cisco.com/meraki/api-v1/#!get-network-group-policies</a>
+[https://developer.cisco.com/meraki/api-v1/#!get-network-group-policies](https://developer.cisco.com/meraki/api-v1/#!get-network-group-policies){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 
@@ -3051,7 +3051,7 @@ meraki networks getNetworkGroupPolicies --networkId 'STRING'
 
 **Display a group policy**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!get-network-group-policy" target="_blank">https://developer.cisco.com/meraki/api-v1/#!get-network-group-policy</a>
+[https://developer.cisco.com/meraki/api-v1/#!get-network-group-policy](https://developer.cisco.com/meraki/api-v1/#!get-network-group-policy){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 - `groupPolicyId` (string): (required)
@@ -3074,7 +3074,7 @@ meraki networks getNetworkGroupPolicy --networkId 'STRING' --groupPolicyId 'STRI
 
 **Return the Meraki Auth splash guest, RADIUS, or client VPN user**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!get-network-meraki-auth-user" target="_blank">https://developer.cisco.com/meraki/api-v1/#!get-network-meraki-auth-user</a>
+[https://developer.cisco.com/meraki/api-v1/#!get-network-meraki-auth-user](https://developer.cisco.com/meraki/api-v1/#!get-network-meraki-auth-user){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 - `merakiAuthUserId` (string): (required)
@@ -3097,7 +3097,7 @@ meraki networks getNetworkMerakiAuthUser --networkId 'STRING' --merakiAuthUserId
 
 **List the users configured under Meraki Authentication for a network (splash guest or RADIUS users for a wireless network, or client VPN users for a wired network)**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!get-network-meraki-auth-users" target="_blank">https://developer.cisco.com/meraki/api-v1/#!get-network-meraki-auth-users</a>
+[https://developer.cisco.com/meraki/api-v1/#!get-network-meraki-auth-users](https://developer.cisco.com/meraki/api-v1/#!get-network-meraki-auth-users){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 
@@ -3119,7 +3119,7 @@ meraki networks getNetworkMerakiAuthUsers --networkId 'STRING'
 
 **Return an MQTT broker**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!get-network-mqtt-broker" target="_blank">https://developer.cisco.com/meraki/api-v1/#!get-network-mqtt-broker</a>
+[https://developer.cisco.com/meraki/api-v1/#!get-network-mqtt-broker](https://developer.cisco.com/meraki/api-v1/#!get-network-mqtt-broker){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 - `mqttBrokerId` (string): (required)
@@ -3142,7 +3142,7 @@ meraki networks getNetworkMqttBroker --networkId 'STRING' --mqttBrokerId 'STRING
 
 **List the MQTT brokers for this network**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!get-network-mqtt-brokers" target="_blank">https://developer.cisco.com/meraki/api-v1/#!get-network-mqtt-brokers</a>
+[https://developer.cisco.com/meraki/api-v1/#!get-network-mqtt-brokers](https://developer.cisco.com/meraki/api-v1/#!get-network-mqtt-brokers){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 
@@ -3164,7 +3164,7 @@ meraki networks getNetworkMqttBrokers --networkId 'STRING'
 
 **Return the NetFlow traffic reporting settings for a network**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!get-network-netflow" target="_blank">https://developer.cisco.com/meraki/api-v1/#!get-network-netflow</a>
+[https://developer.cisco.com/meraki/api-v1/#!get-network-netflow](https://developer.cisco.com/meraki/api-v1/#!get-network-netflow){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 
@@ -3186,7 +3186,7 @@ meraki networks getNetworkNetflow --networkId 'STRING'
 
 **Get the channel utilization over each radio for all APs in a network.**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!get-network-network-health-channel-utilization" target="_blank">https://developer.cisco.com/meraki/api-v1/#!get-network-network-health-channel-utilization</a>
+[https://developer.cisco.com/meraki/api-v1/#!get-network-network-health-channel-utilization](https://developer.cisco.com/meraki/api-v1/#!get-network-network-health-channel-utilization){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 - `total_pages` (integer or string): use with perPage to get total results up to total_pages*perPage; -1 or "all" for all pages
@@ -3217,7 +3217,7 @@ meraki networks getNetworkNetworkHealthChannelUtilization --networkId 'STRING' -
 
 **List the keys required to access Personally Identifiable Information (PII) for a given identifier**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!get-network-pii-pii-keys" target="_blank">https://developer.cisco.com/meraki/api-v1/#!get-network-pii-pii-keys</a>
+[https://developer.cisco.com/meraki/api-v1/#!get-network-pii-pii-keys](https://developer.cisco.com/meraki/api-v1/#!get-network-pii-pii-keys){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 - `username` (string): The username of a Systems Manager user
@@ -3245,7 +3245,7 @@ meraki networks getNetworkPiiPiiKeys --networkId 'STRING' --kwargs '{"key1": "va
 
 **Return a PII request**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!get-network-pii-request" target="_blank">https://developer.cisco.com/meraki/api-v1/#!get-network-pii-request</a>
+[https://developer.cisco.com/meraki/api-v1/#!get-network-pii-request](https://developer.cisco.com/meraki/api-v1/#!get-network-pii-request){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 - `requestId` (string): (required)
@@ -3268,7 +3268,7 @@ meraki networks getNetworkPiiRequest --networkId 'STRING' --requestId 'STRING'
 
 **List the PII requests for this network or organization**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!get-network-pii-requests" target="_blank">https://developer.cisco.com/meraki/api-v1/#!get-network-pii-requests</a>
+[https://developer.cisco.com/meraki/api-v1/#!get-network-pii-requests](https://developer.cisco.com/meraki/api-v1/#!get-network-pii-requests){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 
@@ -3290,7 +3290,7 @@ meraki networks getNetworkPiiRequests --networkId 'STRING'
 
 **Given a piece of Personally Identifiable Information (PII), return the Systems Manager device ID(s) associated with that identifier**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!get-network-pii-sm-devices-for-key" target="_blank">https://developer.cisco.com/meraki/api-v1/#!get-network-pii-sm-devices-for-key</a>
+[https://developer.cisco.com/meraki/api-v1/#!get-network-pii-sm-devices-for-key](https://developer.cisco.com/meraki/api-v1/#!get-network-pii-sm-devices-for-key){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 - `username` (string): The username of a Systems Manager user
@@ -3318,7 +3318,7 @@ meraki networks getNetworkPiiSmDevicesForKey --networkId 'STRING' --kwargs '{"ke
 
 **Given a piece of Personally Identifiable Information (PII), return the Systems Manager owner ID(s) associated with that identifier**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!get-network-pii-sm-owners-for-key" target="_blank">https://developer.cisco.com/meraki/api-v1/#!get-network-pii-sm-owners-for-key</a>
+[https://developer.cisco.com/meraki/api-v1/#!get-network-pii-sm-owners-for-key](https://developer.cisco.com/meraki/api-v1/#!get-network-pii-sm-owners-for-key){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 - `username` (string): The username of a Systems Manager user
@@ -3346,7 +3346,7 @@ meraki networks getNetworkPiiSmOwnersForKey --networkId 'STRING' --kwargs '{"key
 
 **Return the settings for a network**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!get-network-settings" target="_blank">https://developer.cisco.com/meraki/api-v1/#!get-network-settings</a>
+[https://developer.cisco.com/meraki/api-v1/#!get-network-settings](https://developer.cisco.com/meraki/api-v1/#!get-network-settings){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 
@@ -3368,7 +3368,7 @@ meraki networks getNetworkSettings --networkId 'STRING'
 
 **Return the SNMP settings for a network**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!get-network-snmp" target="_blank">https://developer.cisco.com/meraki/api-v1/#!get-network-snmp</a>
+[https://developer.cisco.com/meraki/api-v1/#!get-network-snmp](https://developer.cisco.com/meraki/api-v1/#!get-network-snmp){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 
@@ -3390,7 +3390,7 @@ meraki networks getNetworkSnmp --networkId 'STRING'
 
 **List the splash login attempts for a network**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!get-network-splash-login-attempts" target="_blank">https://developer.cisco.com/meraki/api-v1/#!get-network-splash-login-attempts</a>
+[https://developer.cisco.com/meraki/api-v1/#!get-network-splash-login-attempts](https://developer.cisco.com/meraki/api-v1/#!get-network-splash-login-attempts){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 - `ssidNumber` (integer): Only return the login attempts for the specified SSID
@@ -3415,7 +3415,7 @@ meraki networks getNetworkSplashLoginAttempts --networkId 'STRING' --kwargs '{"k
 
 **List the syslog servers for a network**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!get-network-syslog-servers" target="_blank">https://developer.cisco.com/meraki/api-v1/#!get-network-syslog-servers</a>
+[https://developer.cisco.com/meraki/api-v1/#!get-network-syslog-servers](https://developer.cisco.com/meraki/api-v1/#!get-network-syslog-servers){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 
@@ -3437,7 +3437,7 @@ meraki networks getNetworkSyslogServers --networkId 'STRING'
 
 **Return the traffic analysis data for this network**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!get-network-traffic" target="_blank">https://developer.cisco.com/meraki/api-v1/#!get-network-traffic</a>
+[https://developer.cisco.com/meraki/api-v1/#!get-network-traffic](https://developer.cisco.com/meraki/api-v1/#!get-network-traffic){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 - `t0` (string): The beginning of the timespan for the data. The maximum lookback period is 30 days from today.
@@ -3462,7 +3462,7 @@ meraki networks getNetworkTraffic --networkId 'STRING' --kwargs '{"key1": "value
 
 **Return the traffic analysis settings for a network**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!get-network-traffic-analysis" target="_blank">https://developer.cisco.com/meraki/api-v1/#!get-network-traffic-analysis</a>
+[https://developer.cisco.com/meraki/api-v1/#!get-network-traffic-analysis](https://developer.cisco.com/meraki/api-v1/#!get-network-traffic-analysis){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 
@@ -3484,7 +3484,7 @@ meraki networks getNetworkTrafficAnalysis --networkId 'STRING'
 
 **Returns the application categories for traffic shaping rules.**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!get-network-traffic-shaping-application-categories" target="_blank">https://developer.cisco.com/meraki/api-v1/#!get-network-traffic-shaping-application-categories</a>
+[https://developer.cisco.com/meraki/api-v1/#!get-network-traffic-shaping-application-categories](https://developer.cisco.com/meraki/api-v1/#!get-network-traffic-shaping-application-categories){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 
@@ -3506,7 +3506,7 @@ meraki networks getNetworkTrafficShapingApplicationCategories --networkId 'STRIN
 
 **Returns the available DSCP tagging options for your traffic shaping rules.**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!get-network-traffic-shaping-dscp-tagging-options" target="_blank">https://developer.cisco.com/meraki/api-v1/#!get-network-traffic-shaping-dscp-tagging-options</a>
+[https://developer.cisco.com/meraki/api-v1/#!get-network-traffic-shaping-dscp-tagging-options](https://developer.cisco.com/meraki/api-v1/#!get-network-traffic-shaping-dscp-tagging-options){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 
@@ -3528,7 +3528,7 @@ meraki networks getNetworkTrafficShapingDscpTaggingOptions --networkId 'STRING'
 
 **Return an HTTP server for a network**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!get-network-webhooks-http-server" target="_blank">https://developer.cisco.com/meraki/api-v1/#!get-network-webhooks-http-server</a>
+[https://developer.cisco.com/meraki/api-v1/#!get-network-webhooks-http-server](https://developer.cisco.com/meraki/api-v1/#!get-network-webhooks-http-server){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 - `httpServerId` (string): (required)
@@ -3551,7 +3551,7 @@ meraki networks getNetworkWebhooksHttpServer --networkId 'STRING' --httpServerId
 
 **List the HTTP servers for a network**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!get-network-webhooks-http-servers" target="_blank">https://developer.cisco.com/meraki/api-v1/#!get-network-webhooks-http-servers</a>
+[https://developer.cisco.com/meraki/api-v1/#!get-network-webhooks-http-servers](https://developer.cisco.com/meraki/api-v1/#!get-network-webhooks-http-servers){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 
@@ -3573,7 +3573,7 @@ meraki networks getNetworkWebhooksHttpServers --networkId 'STRING'
 
 **Return the status of a webhook test for a network**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!get-network-webhooks-webhook-test" target="_blank">https://developer.cisco.com/meraki/api-v1/#!get-network-webhooks-webhook-test</a>
+[https://developer.cisco.com/meraki/api-v1/#!get-network-webhooks-webhook-test](https://developer.cisco.com/meraki/api-v1/#!get-network-webhooks-webhook-test){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 - `webhookTestId` (string): (required)
@@ -3596,7 +3596,7 @@ meraki networks getNetworkWebhooksWebhookTest --networkId 'STRING' --webhookTest
 
 **Provisions a client with a name and policy**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!provision-network-clients" target="_blank">https://developer.cisco.com/meraki/api-v1/#!provision-network-clients</a>
+[https://developer.cisco.com/meraki/api-v1/#!provision-network-clients](https://developer.cisco.com/meraki/api-v1/#!provision-network-clients){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 - `clients` (array): The array of clients to provision
@@ -3623,7 +3623,7 @@ meraki networks provisionNetworkClients --networkId 'STRING' --clients ITEM --de
 
 **Remove a single device**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!remove-network-devices" target="_blank">https://developer.cisco.com/meraki/api-v1/#!remove-network-devices</a>
+[https://developer.cisco.com/meraki/api-v1/#!remove-network-devices](https://developer.cisco.com/meraki/api-v1/#!remove-network-devices){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 - `serial` (string): The serial of a device
@@ -3646,7 +3646,7 @@ meraki networks removeNetworkDevices --networkId 'STRING' --serial 'STRING'
 
 **Split a combined network into individual networks for each type of device**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!split-network" target="_blank">https://developer.cisco.com/meraki/api-v1/#!split-network</a>
+[https://developer.cisco.com/meraki/api-v1/#!split-network](https://developer.cisco.com/meraki/api-v1/#!split-network){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 
@@ -3668,7 +3668,7 @@ meraki networks splitNetwork --networkId 'STRING'
 
 **Unbind a network from a template.**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!unbind-network" target="_blank">https://developer.cisco.com/meraki/api-v1/#!unbind-network</a>
+[https://developer.cisco.com/meraki/api-v1/#!unbind-network](https://developer.cisco.com/meraki/api-v1/#!unbind-network){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 
@@ -3690,11 +3690,11 @@ meraki networks unbindNetwork --networkId 'STRING'
 
 **Update a network**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!update-network" target="_blank">https://developer.cisco.com/meraki/api-v1/#!update-network</a>
+[https://developer.cisco.com/meraki/api-v1/#!update-network](https://developer.cisco.com/meraki/api-v1/#!update-network){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 - `name` (string): The name of the network
-- `timeZone` (string): The timezone of the network. For a list of allowed timezones, please see the 'TZ' column in the table in <a target='_blank' href='<a href="https://en.wikipedia.org/wiki/List_of_tz_database_time_zones'>this article.</a>" target="_blank">https://en.wikipedia.org/wiki/List_of_tz_database_time_zones'>this article.</a></a>
+- `timeZone` (string): The timezone of the network. For a list of allowed timezones, please see the 'TZ' column in the table in <a target='_blank' href='[https://en.wikipedia.org/wiki/List_of_tz_database_time_zones'>this article.</a>](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones'>this article.</a>){:title="Open the Meraki API Description Page"}{:target="_blank"}
 - `tags` (array): A list of tags to be applied to the network
 - `enrollmentString` (string): A unique identifier which can be used for device enrollment or easy access through the Meraki SM Registration page or the Self Service Portal. Please note that changing this field may cause existing bookmarks to break.
 - `notes` (string): Add any notes or additional information about this network here.
@@ -3717,7 +3717,7 @@ meraki networks updateNetwork --networkId 'STRING' --kwargs '{"key1": "value1", 
 
 **Update the alert configuration for this network**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!update-network-alerts-settings" target="_blank">https://developer.cisco.com/meraki/api-v1/#!update-network-alerts-settings</a>
+[https://developer.cisco.com/meraki/api-v1/#!update-network-alerts-settings](https://developer.cisco.com/meraki/api-v1/#!update-network-alerts-settings){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 - `defaultDestinations` (object): The network-wide destinations for all alerts on the network.
@@ -3741,7 +3741,7 @@ meraki networks updateNetworkAlertsSettings --networkId 'STRING' --kwargs '{"key
 
 **Update the policy assigned to a client on the network**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!update-network-client-policy" target="_blank">https://developer.cisco.com/meraki/api-v1/#!update-network-client-policy</a>
+[https://developer.cisco.com/meraki/api-v1/#!update-network-client-policy](https://developer.cisco.com/meraki/api-v1/#!update-network-client-policy){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 - `clientId` (string): (required)
@@ -3766,7 +3766,7 @@ meraki networks updateNetworkClientPolicy --networkId 'STRING' --clientId 'STRIN
 
 **Update a client's splash authorization**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!update-network-client-splash-authorization-status" target="_blank">https://developer.cisco.com/meraki/api-v1/#!update-network-client-splash-authorization-status</a>
+[https://developer.cisco.com/meraki/api-v1/#!update-network-client-splash-authorization-status](https://developer.cisco.com/meraki/api-v1/#!update-network-client-splash-authorization-status){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 - `clientId` (string): (required)
@@ -3790,7 +3790,7 @@ meraki networks updateNetworkClientSplashAuthorizationStatus --networkId 'STRING
 
 **Update current maintenance window for a network**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!update-network-firmware-upgrades" target="_blank">https://developer.cisco.com/meraki/api-v1/#!update-network-firmware-upgrades</a>
+[https://developer.cisco.com/meraki/api-v1/#!update-network-firmware-upgrades](https://developer.cisco.com/meraki/api-v1/#!update-network-firmware-upgrades){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 - `upgradeWindow` (object): Upgrade window for devices in network
@@ -3813,7 +3813,7 @@ meraki networks updateNetworkFirmwareUpgrades --networkId 'STRING' --kwargs '{"k
 
 **Update a floor plan's geolocation and other meta data**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!update-network-floor-plan" target="_blank">https://developer.cisco.com/meraki/api-v1/#!update-network-floor-plan</a>
+[https://developer.cisco.com/meraki/api-v1/#!update-network-floor-plan](https://developer.cisco.com/meraki/api-v1/#!update-network-floor-plan){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 - `floorPlanId` (string): (required)
@@ -3843,7 +3843,7 @@ meraki networks updateNetworkFloorPlan --networkId 'STRING' --floorPlanId 'STRIN
 
 **Update a group policy**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!update-network-group-policy" target="_blank">https://developer.cisco.com/meraki/api-v1/#!update-network-group-policy</a>
+[https://developer.cisco.com/meraki/api-v1/#!update-network-group-policy](https://developer.cisco.com/meraki/api-v1/#!update-network-group-policy){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 - `groupPolicyId` (string): (required)
@@ -3877,7 +3877,7 @@ meraki networks updateNetworkGroupPolicy --networkId 'STRING' --groupPolicyId 'S
 
 **Update a user configured with Meraki Authentication (currently, 802.1X RADIUS, splash guest, and client VPN users can be updated)**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!update-network-meraki-auth-user" target="_blank">https://developer.cisco.com/meraki/api-v1/#!update-network-meraki-auth-user</a>
+[https://developer.cisco.com/meraki/api-v1/#!update-network-meraki-auth-user](https://developer.cisco.com/meraki/api-v1/#!update-network-meraki-auth-user){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 - `merakiAuthUserId` (string): (required)
@@ -3904,7 +3904,7 @@ meraki networks updateNetworkMerakiAuthUser --networkId 'STRING' --merakiAuthUse
 
 **Update an MQTT broker**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!update-network-mqtt-broker" target="_blank">https://developer.cisco.com/meraki/api-v1/#!update-network-mqtt-broker</a>
+[https://developer.cisco.com/meraki/api-v1/#!update-network-mqtt-broker](https://developer.cisco.com/meraki/api-v1/#!update-network-mqtt-broker){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 - `mqttBrokerId` (string): (required)
@@ -3930,7 +3930,7 @@ meraki networks updateNetworkMqttBroker --networkId 'STRING' --mqttBrokerId 'STR
 
 **Update the NetFlow traffic reporting settings for a network**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!update-network-netflow" target="_blank">https://developer.cisco.com/meraki/api-v1/#!update-network-netflow</a>
+[https://developer.cisco.com/meraki/api-v1/#!update-network-netflow](https://developer.cisco.com/meraki/api-v1/#!update-network-netflow){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 - `reportingEnabled` (boolean): Boolean indicating whether NetFlow traffic reporting is enabled (true) or disabled (false).
@@ -3955,7 +3955,7 @@ meraki networks updateNetworkNetflow --networkId 'STRING' --kwargs '{"key1": "va
 
 **Update the settings for a network**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!update-network-settings" target="_blank">https://developer.cisco.com/meraki/api-v1/#!update-network-settings</a>
+[https://developer.cisco.com/meraki/api-v1/#!update-network-settings](https://developer.cisco.com/meraki/api-v1/#!update-network-settings){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 - `localStatusPageEnabled` (boolean): Enables / disables the local device status pages (<a target='_blank' href='http://my.meraki.com/'>my.meraki.com, </a><a target='_blank' href='http://ap.meraki.com/'>ap.meraki.com, </a><a target='_blank' href='http://switch.meraki.com/'>switch.meraki.com, </a><a target='_blank' href='http://wired.meraki.com/'>wired.meraki.com</a>). Optional (defaults to false)
@@ -3980,7 +3980,7 @@ meraki networks updateNetworkSettings --networkId 'STRING' --kwargs '{"key1": "v
 
 **Update the SNMP settings for a network**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!update-network-snmp" target="_blank">https://developer.cisco.com/meraki/api-v1/#!update-network-snmp</a>
+[https://developer.cisco.com/meraki/api-v1/#!update-network-snmp](https://developer.cisco.com/meraki/api-v1/#!update-network-snmp){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 - `access` (string): The type of SNMP access. Can be one of 'none' (disabled), 'community' (V1/V2c), or 'users' (V3).
@@ -4005,7 +4005,7 @@ meraki networks updateNetworkSnmp --networkId 'STRING' --kwargs '{"key1": "value
 
 **Update the syslog servers for a network**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!update-network-syslog-servers" target="_blank">https://developer.cisco.com/meraki/api-v1/#!update-network-syslog-servers</a>
+[https://developer.cisco.com/meraki/api-v1/#!update-network-syslog-servers](https://developer.cisco.com/meraki/api-v1/#!update-network-syslog-servers){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 - `servers` (array): A list of the syslog servers for this network
@@ -4028,7 +4028,7 @@ meraki networks updateNetworkSyslogServers --networkId 'STRING' --servers ITEM
 
 **Update the traffic analysis settings for a network**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!update-network-traffic-analysis" target="_blank">https://developer.cisco.com/meraki/api-v1/#!update-network-traffic-analysis</a>
+[https://developer.cisco.com/meraki/api-v1/#!update-network-traffic-analysis](https://developer.cisco.com/meraki/api-v1/#!update-network-traffic-analysis){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 - `mode` (string):     The traffic analysis mode for the network. Can be one of 'disabled' (do not collect traffic types),
@@ -4054,7 +4054,7 @@ meraki networks updateNetworkTrafficAnalysis --networkId 'STRING' --kwargs '{"ke
 
 **Update an HTTP server**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!update-network-webhooks-http-server" target="_blank">https://developer.cisco.com/meraki/api-v1/#!update-network-webhooks-http-server</a>
+[https://developer.cisco.com/meraki/api-v1/#!update-network-webhooks-http-server](https://developer.cisco.com/meraki/api-v1/#!update-network-webhooks-http-server){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 - `httpServerId` (string): (required)
@@ -4086,7 +4086,7 @@ meraki networks updateNetworkWebhooksHttpServer --networkId 'STRING' --httpServe
 
 **Blink the LEDs on a device**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!blink-device-leds" target="_blank">https://developer.cisco.com/meraki/api-v1/#!blink-device-leds</a>
+[https://developer.cisco.com/meraki/api-v1/#!blink-device-leds](https://developer.cisco.com/meraki/api-v1/#!blink-device-leds){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `serial` (string): (required)
 - `duration` (integer): The duration in seconds. Must be between 5 and 120. Default is 20 seconds
@@ -4111,7 +4111,7 @@ meraki devices blinkDeviceLeds --serial 'STRING' --kwargs '{"key1": "value1", "k
 
 **Return a single device**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!get-device" target="_blank">https://developer.cisco.com/meraki/api-v1/#!get-device</a>
+[https://developer.cisco.com/meraki/api-v1/#!get-device](https://developer.cisco.com/meraki/api-v1/#!get-device){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `serial` (string): (required)
 
@@ -4133,7 +4133,7 @@ meraki devices getDevice --serial 'STRING'
 
 **List the clients of a device, up to a maximum of a month ago**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!get-device-clients" target="_blank">https://developer.cisco.com/meraki/api-v1/#!get-device-clients</a>
+[https://developer.cisco.com/meraki/api-v1/#!get-device-clients](https://developer.cisco.com/meraki/api-v1/#!get-device-clients){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `serial` (string): (required)
 - `t0` (string): The beginning of the timespan for the data. The maximum lookback period is 31 days from today.
@@ -4157,7 +4157,7 @@ meraki devices getDeviceClients --serial 'STRING' --kwargs '{"key1": "value1", "
 
 **List LLDP and CDP information for a device**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!get-device-lldp-cdp" target="_blank">https://developer.cisco.com/meraki/api-v1/#!get-device-lldp-cdp</a>
+[https://developer.cisco.com/meraki/api-v1/#!get-device-lldp-cdp](https://developer.cisco.com/meraki/api-v1/#!get-device-lldp-cdp){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `serial` (string): (required)
 
@@ -4179,7 +4179,7 @@ meraki devices getDeviceLldpCdp --serial 'STRING'
 
 **Get the uplink loss percentage and latency in milliseconds for a wired network device.**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!get-device-loss-and-latency-history" target="_blank">https://developer.cisco.com/meraki/api-v1/#!get-device-loss-and-latency-history</a>
+[https://developer.cisco.com/meraki/api-v1/#!get-device-loss-and-latency-history](https://developer.cisco.com/meraki/api-v1/#!get-device-loss-and-latency-history){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `serial` (string): (required)
 - `ip` (string): The destination IP used to obtain the requested stats. This is required.
@@ -4207,7 +4207,7 @@ meraki devices getDeviceLossAndLatencyHistory --serial 'STRING' --ip 'STRING' --
 
 **Return the management interface settings for a device**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!get-device-management-interface" target="_blank">https://developer.cisco.com/meraki/api-v1/#!get-device-management-interface</a>
+[https://developer.cisco.com/meraki/api-v1/#!get-device-management-interface](https://developer.cisco.com/meraki/api-v1/#!get-device-management-interface){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `serial` (string): (required)
 
@@ -4229,7 +4229,7 @@ meraki devices getDeviceManagementInterface --serial 'STRING'
 
 **Reboot a device**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!reboot-device" target="_blank">https://developer.cisco.com/meraki/api-v1/#!reboot-device</a>
+[https://developer.cisco.com/meraki/api-v1/#!reboot-device](https://developer.cisco.com/meraki/api-v1/#!reboot-device){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `serial` (string): (required)
 
@@ -4251,7 +4251,7 @@ meraki devices rebootDevice --serial 'STRING'
 
 **Update the attributes of a device**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!update-device" target="_blank">https://developer.cisco.com/meraki/api-v1/#!update-device</a>
+[https://developer.cisco.com/meraki/api-v1/#!update-device](https://developer.cisco.com/meraki/api-v1/#!update-device){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `serial` (string): (required)
 - `name` (string): The name of a device
@@ -4282,7 +4282,7 @@ meraki devices updateDevice --serial 'STRING' --kwargs '{"key1": "value1", "key2
 
 **Update the management interface settings for a device**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!update-device-management-interface" target="_blank">https://developer.cisco.com/meraki/api-v1/#!update-device-management-interface</a>
+[https://developer.cisco.com/meraki/api-v1/#!update-device-management-interface](https://developer.cisco.com/meraki/api-v1/#!update-device-management-interface){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `serial` (string): (required)
 - `wan1` (object): WAN 1 settings
@@ -4312,7 +4312,7 @@ meraki devices updateDeviceManagementInterface --serial 'STRING' --kwargs '{"key
 
 **Add a static route for an MX or teleworker network**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!create-network-appliance-static-route" target="_blank">https://developer.cisco.com/meraki/api-v1/#!create-network-appliance-static-route</a>
+[https://developer.cisco.com/meraki/api-v1/#!create-network-appliance-static-route](https://developer.cisco.com/meraki/api-v1/#!create-network-appliance-static-route){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 - `name` (string): The name of the new static route
@@ -4337,7 +4337,7 @@ meraki appliance createNetworkApplianceStaticRoute --networkId 'STRING' --name '
 
 **Add a custom performance class for an MX network**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!create-network-appliance-traffic-shaping-custom-performance-class" target="_blank">https://developer.cisco.com/meraki/api-v1/#!create-network-appliance-traffic-shaping-custom-performance-class</a>
+[https://developer.cisco.com/meraki/api-v1/#!create-network-appliance-traffic-shaping-custom-performance-class](https://developer.cisco.com/meraki/api-v1/#!create-network-appliance-traffic-shaping-custom-performance-class){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 - `name` (string): Name of the custom performance class
@@ -4363,7 +4363,7 @@ meraki appliance createNetworkApplianceTrafficShapingCustomPerformanceClass --ne
 
 **Add a VLAN**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!create-network-appliance-vlan" target="_blank">https://developer.cisco.com/meraki/api-v1/#!create-network-appliance-vlan</a>
+[https://developer.cisco.com/meraki/api-v1/#!create-network-appliance-vlan](https://developer.cisco.com/meraki/api-v1/#!create-network-appliance-vlan){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 - `id` (string): The VLAN ID of the new VLAN (must be between 1 and 4094)
@@ -4390,7 +4390,7 @@ meraki appliance createNetworkApplianceVlan --networkId 'STRING' --id 'STRING' -
 
 **Delete a static route from an MX or teleworker network**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!delete-network-appliance-static-route" target="_blank">https://developer.cisco.com/meraki/api-v1/#!delete-network-appliance-static-route</a>
+[https://developer.cisco.com/meraki/api-v1/#!delete-network-appliance-static-route](https://developer.cisco.com/meraki/api-v1/#!delete-network-appliance-static-route){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 - `staticRouteId` (string): (required)
@@ -4413,7 +4413,7 @@ meraki appliance deleteNetworkApplianceStaticRoute --networkId 'STRING' --static
 
 **Delete a custom performance class from an MX network**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!delete-network-appliance-traffic-shaping-custom-performance-class" target="_blank">https://developer.cisco.com/meraki/api-v1/#!delete-network-appliance-traffic-shaping-custom-performance-class</a>
+[https://developer.cisco.com/meraki/api-v1/#!delete-network-appliance-traffic-shaping-custom-performance-class](https://developer.cisco.com/meraki/api-v1/#!delete-network-appliance-traffic-shaping-custom-performance-class){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 - `customPerformanceClassId` (string): (required)
@@ -4436,7 +4436,7 @@ meraki appliance deleteNetworkApplianceTrafficShapingCustomPerformanceClass --ne
 
 **Delete a VLAN from a network**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!delete-network-appliance-vlan" target="_blank">https://developer.cisco.com/meraki/api-v1/#!delete-network-appliance-vlan</a>
+[https://developer.cisco.com/meraki/api-v1/#!delete-network-appliance-vlan](https://developer.cisco.com/meraki/api-v1/#!delete-network-appliance-vlan){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 - `vlanId` (string): (required)
@@ -4459,7 +4459,7 @@ meraki appliance deleteNetworkApplianceVlan --networkId 'STRING' --vlanId 'STRIN
 
 **Return the DHCP subnet information for an appliance**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!get-device-appliance-dhcp-subnets" target="_blank">https://developer.cisco.com/meraki/api-v1/#!get-device-appliance-dhcp-subnets</a>
+[https://developer.cisco.com/meraki/api-v1/#!get-device-appliance-dhcp-subnets](https://developer.cisco.com/meraki/api-v1/#!get-device-appliance-dhcp-subnets){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `serial` (string): (required)
 
@@ -4481,7 +4481,7 @@ meraki appliance getDeviceApplianceDhcpSubnets --serial 'STRING'
 
 **Return the performance score for a single MX**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!get-device-appliance-performance" target="_blank">https://developer.cisco.com/meraki/api-v1/#!get-device-appliance-performance</a>
+[https://developer.cisco.com/meraki/api-v1/#!get-device-appliance-performance](https://developer.cisco.com/meraki/api-v1/#!get-device-appliance-performance){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `serial` (string): (required)
 
@@ -4503,7 +4503,7 @@ meraki appliance getDeviceAppliancePerformance --serial 'STRING'
 
 **List the security events for a client**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!get-network-appliance-client-security-events" target="_blank">https://developer.cisco.com/meraki/api-v1/#!get-network-appliance-client-security-events</a>
+[https://developer.cisco.com/meraki/api-v1/#!get-network-appliance-client-security-events](https://developer.cisco.com/meraki/api-v1/#!get-network-appliance-client-security-events){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 - `clientId` (string): (required)
@@ -4535,7 +4535,7 @@ meraki appliance getNetworkApplianceClientSecurityEvents --networkId 'STRING' --
 
 **Return the connectivity testing destinations for an MX network**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!get-network-appliance-connectivity-monitoring-destinations" target="_blank">https://developer.cisco.com/meraki/api-v1/#!get-network-appliance-connectivity-monitoring-destinations</a>
+[https://developer.cisco.com/meraki/api-v1/#!get-network-appliance-connectivity-monitoring-destinations](https://developer.cisco.com/meraki/api-v1/#!get-network-appliance-connectivity-monitoring-destinations){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 
@@ -4557,7 +4557,7 @@ meraki appliance getNetworkApplianceConnectivityMonitoringDestinations --network
 
 **Return the content filtering settings for an MX network**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!get-network-appliance-content-filtering" target="_blank">https://developer.cisco.com/meraki/api-v1/#!get-network-appliance-content-filtering</a>
+[https://developer.cisco.com/meraki/api-v1/#!get-network-appliance-content-filtering](https://developer.cisco.com/meraki/api-v1/#!get-network-appliance-content-filtering){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 
@@ -4579,7 +4579,7 @@ meraki appliance getNetworkApplianceContentFiltering --networkId 'STRING'
 
 **List all available content filtering categories for an MX network**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!get-network-appliance-content-filtering-categories" target="_blank">https://developer.cisco.com/meraki/api-v1/#!get-network-appliance-content-filtering-categories</a>
+[https://developer.cisco.com/meraki/api-v1/#!get-network-appliance-content-filtering-categories](https://developer.cisco.com/meraki/api-v1/#!get-network-appliance-content-filtering-categories){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 
@@ -4601,7 +4601,7 @@ meraki appliance getNetworkApplianceContentFilteringCategories --networkId 'STRI
 
 **Return the cellular firewall rules for an MX network**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!get-network-appliance-firewall-cellular-firewall-rules" target="_blank">https://developer.cisco.com/meraki/api-v1/#!get-network-appliance-firewall-cellular-firewall-rules</a>
+[https://developer.cisco.com/meraki/api-v1/#!get-network-appliance-firewall-cellular-firewall-rules](https://developer.cisco.com/meraki/api-v1/#!get-network-appliance-firewall-cellular-firewall-rules){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 
@@ -4623,7 +4623,7 @@ meraki appliance getNetworkApplianceFirewallCellularFirewallRules --networkId 'S
 
 **Return the accessibility settings of the given service ('ICMP', 'web', or 'SNMP')**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!get-network-appliance-firewall-firewalled-service" target="_blank">https://developer.cisco.com/meraki/api-v1/#!get-network-appliance-firewall-firewalled-service</a>
+[https://developer.cisco.com/meraki/api-v1/#!get-network-appliance-firewall-firewalled-service](https://developer.cisco.com/meraki/api-v1/#!get-network-appliance-firewall-firewalled-service){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 - `service` (string): (required)
@@ -4646,7 +4646,7 @@ meraki appliance getNetworkApplianceFirewallFirewalledService --networkId 'STRIN
 
 **List the appliance services and their accessibility rules**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!get-network-appliance-firewall-firewalled-services" target="_blank">https://developer.cisco.com/meraki/api-v1/#!get-network-appliance-firewall-firewalled-services</a>
+[https://developer.cisco.com/meraki/api-v1/#!get-network-appliance-firewall-firewalled-services](https://developer.cisco.com/meraki/api-v1/#!get-network-appliance-firewall-firewalled-services){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 
@@ -4668,7 +4668,7 @@ meraki appliance getNetworkApplianceFirewallFirewalledServices --networkId 'STRI
 
 **Return the inbound firewall rules for an MX network**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!get-network-appliance-firewall-inbound-firewall-rules" target="_blank">https://developer.cisco.com/meraki/api-v1/#!get-network-appliance-firewall-inbound-firewall-rules</a>
+[https://developer.cisco.com/meraki/api-v1/#!get-network-appliance-firewall-inbound-firewall-rules](https://developer.cisco.com/meraki/api-v1/#!get-network-appliance-firewall-inbound-firewall-rules){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 
@@ -4690,7 +4690,7 @@ meraki appliance getNetworkApplianceFirewallInboundFirewallRules --networkId 'ST
 
 **Return the L3 firewall rules for an MX network**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!get-network-appliance-firewall-l-3-firewall-rules" target="_blank">https://developer.cisco.com/meraki/api-v1/#!get-network-appliance-firewall-l-3-firewall-rules</a>
+[https://developer.cisco.com/meraki/api-v1/#!get-network-appliance-firewall-l-3-firewall-rules](https://developer.cisco.com/meraki/api-v1/#!get-network-appliance-firewall-l-3-firewall-rules){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 
@@ -4712,7 +4712,7 @@ meraki appliance getNetworkApplianceFirewallL3FirewallRules --networkId 'STRING'
 
 **List the MX L7 firewall rules for an MX network**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!get-network-appliance-firewall-l-7-firewall-rules" target="_blank">https://developer.cisco.com/meraki/api-v1/#!get-network-appliance-firewall-l-7-firewall-rules</a>
+[https://developer.cisco.com/meraki/api-v1/#!get-network-appliance-firewall-l-7-firewall-rules](https://developer.cisco.com/meraki/api-v1/#!get-network-appliance-firewall-l-7-firewall-rules){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 
@@ -4734,7 +4734,7 @@ meraki appliance getNetworkApplianceFirewallL7FirewallRules --networkId 'STRING'
 
 **Return the L7 firewall application categories and their associated applications for an MX network**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!get-network-appliance-firewall-l-7-firewall-rules-application-categories" target="_blank">https://developer.cisco.com/meraki/api-v1/#!get-network-appliance-firewall-l-7-firewall-rules-application-categories</a>
+[https://developer.cisco.com/meraki/api-v1/#!get-network-appliance-firewall-l-7-firewall-rules-application-categories](https://developer.cisco.com/meraki/api-v1/#!get-network-appliance-firewall-l-7-firewall-rules-application-categories){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 
@@ -4756,7 +4756,7 @@ meraki appliance getNetworkApplianceFirewallL7FirewallRulesApplicationCategories
 
 **Return the 1:Many NAT mapping rules for an MX network**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!get-network-appliance-firewall-one-to-many-nat-rules" target="_blank">https://developer.cisco.com/meraki/api-v1/#!get-network-appliance-firewall-one-to-many-nat-rules</a>
+[https://developer.cisco.com/meraki/api-v1/#!get-network-appliance-firewall-one-to-many-nat-rules](https://developer.cisco.com/meraki/api-v1/#!get-network-appliance-firewall-one-to-many-nat-rules){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 
@@ -4778,7 +4778,7 @@ meraki appliance getNetworkApplianceFirewallOneToManyNatRules --networkId 'STRIN
 
 **Return the 1:1 NAT mapping rules for an MX network**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!get-network-appliance-firewall-one-to-one-nat-rules" target="_blank">https://developer.cisco.com/meraki/api-v1/#!get-network-appliance-firewall-one-to-one-nat-rules</a>
+[https://developer.cisco.com/meraki/api-v1/#!get-network-appliance-firewall-one-to-one-nat-rules](https://developer.cisco.com/meraki/api-v1/#!get-network-appliance-firewall-one-to-one-nat-rules){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 
@@ -4800,7 +4800,7 @@ meraki appliance getNetworkApplianceFirewallOneToOneNatRules --networkId 'STRING
 
 **Return the port forwarding rules for an MX network**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!get-network-appliance-firewall-port-forwarding-rules" target="_blank">https://developer.cisco.com/meraki/api-v1/#!get-network-appliance-firewall-port-forwarding-rules</a>
+[https://developer.cisco.com/meraki/api-v1/#!get-network-appliance-firewall-port-forwarding-rules](https://developer.cisco.com/meraki/api-v1/#!get-network-appliance-firewall-port-forwarding-rules){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 
@@ -4822,7 +4822,7 @@ meraki appliance getNetworkApplianceFirewallPortForwardingRules --networkId 'STR
 
 **Return per-port VLAN settings for a single MX port.**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!get-network-appliance-port" target="_blank">https://developer.cisco.com/meraki/api-v1/#!get-network-appliance-port</a>
+[https://developer.cisco.com/meraki/api-v1/#!get-network-appliance-port](https://developer.cisco.com/meraki/api-v1/#!get-network-appliance-port){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 - `portId` (string): (required)
@@ -4845,7 +4845,7 @@ meraki appliance getNetworkAppliancePort --networkId 'STRING' --portId 'STRING'
 
 **List per-port VLAN settings for all ports of a MX.**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!get-network-appliance-ports" target="_blank">https://developer.cisco.com/meraki/api-v1/#!get-network-appliance-ports</a>
+[https://developer.cisco.com/meraki/api-v1/#!get-network-appliance-ports](https://developer.cisco.com/meraki/api-v1/#!get-network-appliance-ports){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 
@@ -4867,7 +4867,7 @@ meraki appliance getNetworkAppliancePorts --networkId 'STRING'
 
 **List the security events for a network**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!get-network-appliance-security-events" target="_blank">https://developer.cisco.com/meraki/api-v1/#!get-network-appliance-security-events</a>
+[https://developer.cisco.com/meraki/api-v1/#!get-network-appliance-security-events](https://developer.cisco.com/meraki/api-v1/#!get-network-appliance-security-events){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 - `total_pages` (integer or string): use with perPage to get total results up to total_pages*perPage; -1 or "all" for all pages
@@ -4898,7 +4898,7 @@ meraki appliance getNetworkApplianceSecurityEvents --networkId 'STRING' --kwargs
 
 **Returns all supported intrusion settings for an MX network**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!get-network-appliance-security-intrusion" target="_blank">https://developer.cisco.com/meraki/api-v1/#!get-network-appliance-security-intrusion</a>
+[https://developer.cisco.com/meraki/api-v1/#!get-network-appliance-security-intrusion](https://developer.cisco.com/meraki/api-v1/#!get-network-appliance-security-intrusion){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 
@@ -4920,7 +4920,7 @@ meraki appliance getNetworkApplianceSecurityIntrusion --networkId 'STRING'
 
 **Returns all supported malware settings for an MX network**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!get-network-appliance-security-malware" target="_blank">https://developer.cisco.com/meraki/api-v1/#!get-network-appliance-security-malware</a>
+[https://developer.cisco.com/meraki/api-v1/#!get-network-appliance-security-malware](https://developer.cisco.com/meraki/api-v1/#!get-network-appliance-security-malware){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 
@@ -4942,7 +4942,7 @@ meraki appliance getNetworkApplianceSecurityMalware --networkId 'STRING'
 
 **Return the appliance settings for a network**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!get-network-appliance-settings" target="_blank">https://developer.cisco.com/meraki/api-v1/#!get-network-appliance-settings</a>
+[https://developer.cisco.com/meraki/api-v1/#!get-network-appliance-settings](https://developer.cisco.com/meraki/api-v1/#!get-network-appliance-settings){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 
@@ -4964,7 +4964,7 @@ meraki appliance getNetworkApplianceSettings --networkId 'STRING'
 
 **Return single LAN configuration**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!get-network-appliance-single-lan" target="_blank">https://developer.cisco.com/meraki/api-v1/#!get-network-appliance-single-lan</a>
+[https://developer.cisco.com/meraki/api-v1/#!get-network-appliance-single-lan](https://developer.cisco.com/meraki/api-v1/#!get-network-appliance-single-lan){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 
@@ -4986,7 +4986,7 @@ meraki appliance getNetworkApplianceSingleLan --networkId 'STRING'
 
 **Return a static route for an MX or teleworker network**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!get-network-appliance-static-route" target="_blank">https://developer.cisco.com/meraki/api-v1/#!get-network-appliance-static-route</a>
+[https://developer.cisco.com/meraki/api-v1/#!get-network-appliance-static-route](https://developer.cisco.com/meraki/api-v1/#!get-network-appliance-static-route){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 - `staticRouteId` (string): (required)
@@ -5009,7 +5009,7 @@ meraki appliance getNetworkApplianceStaticRoute --networkId 'STRING' --staticRou
 
 **List the static routes for an MX or teleworker network**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!get-network-appliance-static-routes" target="_blank">https://developer.cisco.com/meraki/api-v1/#!get-network-appliance-static-routes</a>
+[https://developer.cisco.com/meraki/api-v1/#!get-network-appliance-static-routes](https://developer.cisco.com/meraki/api-v1/#!get-network-appliance-static-routes){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 
@@ -5031,7 +5031,7 @@ meraki appliance getNetworkApplianceStaticRoutes --networkId 'STRING'
 
 **Display the traffic shaping settings for an MX network**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!get-network-appliance-traffic-shaping" target="_blank">https://developer.cisco.com/meraki/api-v1/#!get-network-appliance-traffic-shaping</a>
+[https://developer.cisco.com/meraki/api-v1/#!get-network-appliance-traffic-shaping](https://developer.cisco.com/meraki/api-v1/#!get-network-appliance-traffic-shaping){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 
@@ -5053,7 +5053,7 @@ meraki appliance getNetworkApplianceTrafficShaping --networkId 'STRING'
 
 **Return a custom performance class for an MX network**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!get-network-appliance-traffic-shaping-custom-performance-class" target="_blank">https://developer.cisco.com/meraki/api-v1/#!get-network-appliance-traffic-shaping-custom-performance-class</a>
+[https://developer.cisco.com/meraki/api-v1/#!get-network-appliance-traffic-shaping-custom-performance-class](https://developer.cisco.com/meraki/api-v1/#!get-network-appliance-traffic-shaping-custom-performance-class){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 - `customPerformanceClassId` (string): (required)
@@ -5076,7 +5076,7 @@ meraki appliance getNetworkApplianceTrafficShapingCustomPerformanceClass --netwo
 
 **List all custom performance classes for an MX network**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!get-network-appliance-traffic-shaping-custom-performance-classes" target="_blank">https://developer.cisco.com/meraki/api-v1/#!get-network-appliance-traffic-shaping-custom-performance-classes</a>
+[https://developer.cisco.com/meraki/api-v1/#!get-network-appliance-traffic-shaping-custom-performance-classes](https://developer.cisco.com/meraki/api-v1/#!get-network-appliance-traffic-shaping-custom-performance-classes){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 
@@ -5098,7 +5098,7 @@ meraki appliance getNetworkApplianceTrafficShapingCustomPerformanceClasses --net
 
 **Display the traffic shaping settings rules for an MX network**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!get-network-appliance-traffic-shaping-rules" target="_blank">https://developer.cisco.com/meraki/api-v1/#!get-network-appliance-traffic-shaping-rules</a>
+[https://developer.cisco.com/meraki/api-v1/#!get-network-appliance-traffic-shaping-rules](https://developer.cisco.com/meraki/api-v1/#!get-network-appliance-traffic-shaping-rules){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 
@@ -5120,7 +5120,7 @@ meraki appliance getNetworkApplianceTrafficShapingRules --networkId 'STRING'
 
 **Returns the uplink bandwidth settings for your MX network.**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!get-network-appliance-traffic-shaping-uplink-bandwidth" target="_blank">https://developer.cisco.com/meraki/api-v1/#!get-network-appliance-traffic-shaping-uplink-bandwidth</a>
+[https://developer.cisco.com/meraki/api-v1/#!get-network-appliance-traffic-shaping-uplink-bandwidth](https://developer.cisco.com/meraki/api-v1/#!get-network-appliance-traffic-shaping-uplink-bandwidth){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 
@@ -5142,7 +5142,7 @@ meraki appliance getNetworkApplianceTrafficShapingUplinkBandwidth --networkId 'S
 
 **Show uplink selection settings for an MX network**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!get-network-appliance-traffic-shaping-uplink-selection" target="_blank">https://developer.cisco.com/meraki/api-v1/#!get-network-appliance-traffic-shaping-uplink-selection</a>
+[https://developer.cisco.com/meraki/api-v1/#!get-network-appliance-traffic-shaping-uplink-selection](https://developer.cisco.com/meraki/api-v1/#!get-network-appliance-traffic-shaping-uplink-selection){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 
@@ -5164,7 +5164,7 @@ meraki appliance getNetworkApplianceTrafficShapingUplinkSelection --networkId 'S
 
 **Return a VLAN**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!get-network-appliance-vlan" target="_blank">https://developer.cisco.com/meraki/api-v1/#!get-network-appliance-vlan</a>
+[https://developer.cisco.com/meraki/api-v1/#!get-network-appliance-vlan](https://developer.cisco.com/meraki/api-v1/#!get-network-appliance-vlan){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 - `vlanId` (string): (required)
@@ -5187,7 +5187,7 @@ meraki appliance getNetworkApplianceVlan --networkId 'STRING' --vlanId 'STRING'
 
 **List the VLANs for an MX network**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!get-network-appliance-vlans" target="_blank">https://developer.cisco.com/meraki/api-v1/#!get-network-appliance-vlans</a>
+[https://developer.cisco.com/meraki/api-v1/#!get-network-appliance-vlans](https://developer.cisco.com/meraki/api-v1/#!get-network-appliance-vlans){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 
@@ -5209,7 +5209,7 @@ meraki appliance getNetworkApplianceVlans --networkId 'STRING'
 
 **Returns the enabled status of VLANs for the network**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!get-network-appliance-vlans-settings" target="_blank">https://developer.cisco.com/meraki/api-v1/#!get-network-appliance-vlans-settings</a>
+[https://developer.cisco.com/meraki/api-v1/#!get-network-appliance-vlans-settings](https://developer.cisco.com/meraki/api-v1/#!get-network-appliance-vlans-settings){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 
@@ -5231,7 +5231,7 @@ meraki appliance getNetworkApplianceVlansSettings --networkId 'STRING'
 
 **Return a Hub BGP Configuration**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!get-network-appliance-vpn-bgp" target="_blank">https://developer.cisco.com/meraki/api-v1/#!get-network-appliance-vpn-bgp</a>
+[https://developer.cisco.com/meraki/api-v1/#!get-network-appliance-vpn-bgp](https://developer.cisco.com/meraki/api-v1/#!get-network-appliance-vpn-bgp){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 
@@ -5253,7 +5253,7 @@ meraki appliance getNetworkApplianceVpnBgp --networkId 'STRING'
 
 **Return the site-to-site VPN settings of a network**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!get-network-appliance-vpn-site-to-site-vpn" target="_blank">https://developer.cisco.com/meraki/api-v1/#!get-network-appliance-vpn-site-to-site-vpn</a>
+[https://developer.cisco.com/meraki/api-v1/#!get-network-appliance-vpn-site-to-site-vpn](https://developer.cisco.com/meraki/api-v1/#!get-network-appliance-vpn-site-to-site-vpn){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 
@@ -5275,7 +5275,7 @@ meraki appliance getNetworkApplianceVpnSiteToSiteVpn --networkId 'STRING'
 
 **Return MX warm spare settings**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!get-network-appliance-warm-spare" target="_blank">https://developer.cisco.com/meraki/api-v1/#!get-network-appliance-warm-spare</a>
+[https://developer.cisco.com/meraki/api-v1/#!get-network-appliance-warm-spare](https://developer.cisco.com/meraki/api-v1/#!get-network-appliance-warm-spare){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 
@@ -5297,7 +5297,7 @@ meraki appliance getNetworkApplianceWarmSpare --networkId 'STRING'
 
 **List the security events for an organization**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!get-organization-appliance-security-events" target="_blank">https://developer.cisco.com/meraki/api-v1/#!get-organization-appliance-security-events</a>
+[https://developer.cisco.com/meraki/api-v1/#!get-organization-appliance-security-events](https://developer.cisco.com/meraki/api-v1/#!get-organization-appliance-security-events){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `organizationId` (string): (required)
 - `total_pages` (integer or string): use with perPage to get total results up to total_pages*perPage; -1 or "all" for all pages
@@ -5328,7 +5328,7 @@ meraki appliance getOrganizationApplianceSecurityEvents --organizationId 'STRING
 
 **Returns all supported intrusion settings for an organization**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!get-organization-appliance-security-intrusion" target="_blank">https://developer.cisco.com/meraki/api-v1/#!get-organization-appliance-security-intrusion</a>
+[https://developer.cisco.com/meraki/api-v1/#!get-organization-appliance-security-intrusion](https://developer.cisco.com/meraki/api-v1/#!get-organization-appliance-security-intrusion){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `organizationId` (string): (required)
 
@@ -5350,7 +5350,7 @@ meraki appliance getOrganizationApplianceSecurityIntrusion --organizationId 'STR
 
 **List the uplink status of every Meraki MX and Z series appliances in the organization**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!get-organization-appliance-uplink-statuses" target="_blank">https://developer.cisco.com/meraki/api-v1/#!get-organization-appliance-uplink-statuses</a>
+[https://developer.cisco.com/meraki/api-v1/#!get-organization-appliance-uplink-statuses](https://developer.cisco.com/meraki/api-v1/#!get-organization-appliance-uplink-statuses){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `organizationId` (string): (required)
 - `total_pages` (integer or string): use with perPage to get total results up to total_pages*perPage; -1 or "all" for all pages
@@ -5380,7 +5380,7 @@ meraki appliance getOrganizationApplianceUplinkStatuses --organizationId 'STRING
 
 **Show VPN history stat for networks in an organization**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!get-organization-appliance-vpn-stats" target="_blank">https://developer.cisco.com/meraki/api-v1/#!get-organization-appliance-vpn-stats</a>
+[https://developer.cisco.com/meraki/api-v1/#!get-organization-appliance-vpn-stats](https://developer.cisco.com/meraki/api-v1/#!get-organization-appliance-vpn-stats){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `organizationId` (string): (required)
 - `total_pages` (integer or string): use with perPage to get total results up to total_pages*perPage; -1 or "all" for all pages
@@ -5411,7 +5411,7 @@ meraki appliance getOrganizationApplianceVpnStats --organizationId 'STRING' --kw
 
 **Show VPN status for networks in an organization**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!get-organization-appliance-vpn-statuses" target="_blank">https://developer.cisco.com/meraki/api-v1/#!get-organization-appliance-vpn-statuses</a>
+[https://developer.cisco.com/meraki/api-v1/#!get-organization-appliance-vpn-statuses](https://developer.cisco.com/meraki/api-v1/#!get-organization-appliance-vpn-statuses){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `organizationId` (string): (required)
 - `total_pages` (integer or string): use with perPage to get total results up to total_pages*perPage; -1 or "all" for all pages
@@ -5439,7 +5439,7 @@ meraki appliance getOrganizationApplianceVpnStatuses --organizationId 'STRING' -
 
 **Return the third party VPN peers for an organization**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!get-organization-appliance-vpn-third-party-v-p-n-peers" target="_blank">https://developer.cisco.com/meraki/api-v1/#!get-organization-appliance-vpn-third-party-v-p-n-peers</a>
+[https://developer.cisco.com/meraki/api-v1/#!get-organization-appliance-vpn-third-party-v-p-n-peers](https://developer.cisco.com/meraki/api-v1/#!get-organization-appliance-vpn-third-party-v-p-n-peers){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `organizationId` (string): (required)
 
@@ -5461,7 +5461,7 @@ meraki appliance getOrganizationApplianceVpnThirdPartyVPNPeers --organizationId 
 
 **Return the firewall rules for an organization's site-to-site VPN**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!get-organization-appliance-vpn-vpn-firewall-rules" target="_blank">https://developer.cisco.com/meraki/api-v1/#!get-organization-appliance-vpn-vpn-firewall-rules</a>
+[https://developer.cisco.com/meraki/api-v1/#!get-organization-appliance-vpn-vpn-firewall-rules](https://developer.cisco.com/meraki/api-v1/#!get-organization-appliance-vpn-vpn-firewall-rules){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `organizationId` (string): (required)
 
@@ -5483,7 +5483,7 @@ meraki appliance getOrganizationApplianceVpnVpnFirewallRules --organizationId 'S
 
 **Swap MX primary and warm spare appliances**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!swap-network-appliance-warm-spare" target="_blank">https://developer.cisco.com/meraki/api-v1/#!swap-network-appliance-warm-spare</a>
+[https://developer.cisco.com/meraki/api-v1/#!swap-network-appliance-warm-spare](https://developer.cisco.com/meraki/api-v1/#!swap-network-appliance-warm-spare){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 
@@ -5505,7 +5505,7 @@ meraki appliance swapNetworkApplianceWarmSpare --networkId 'STRING'
 
 **Update the connectivity testing destinations for an MX network**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!update-network-appliance-connectivity-monitoring-destinations" target="_blank">https://developer.cisco.com/meraki/api-v1/#!update-network-appliance-connectivity-monitoring-destinations</a>
+[https://developer.cisco.com/meraki/api-v1/#!update-network-appliance-connectivity-monitoring-destinations](https://developer.cisco.com/meraki/api-v1/#!update-network-appliance-connectivity-monitoring-destinations){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 - `destinations` (array): The list of connectivity monitoring destinations
@@ -5528,7 +5528,7 @@ meraki appliance updateNetworkApplianceConnectivityMonitoringDestinations --netw
 
 **Update the content filtering settings for an MX network**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!update-network-appliance-content-filtering" target="_blank">https://developer.cisco.com/meraki/api-v1/#!update-network-appliance-content-filtering</a>
+[https://developer.cisco.com/meraki/api-v1/#!update-network-appliance-content-filtering](https://developer.cisco.com/meraki/api-v1/#!update-network-appliance-content-filtering){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 - `allowedUrlPatterns` (array): A list of URL patterns that are allowed
@@ -5554,7 +5554,7 @@ meraki appliance updateNetworkApplianceContentFiltering --networkId 'STRING' --k
 
 **Update the cellular firewall rules of an MX network**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!update-network-appliance-firewall-cellular-firewall-rules" target="_blank">https://developer.cisco.com/meraki/api-v1/#!update-network-appliance-firewall-cellular-firewall-rules</a>
+[https://developer.cisco.com/meraki/api-v1/#!update-network-appliance-firewall-cellular-firewall-rules](https://developer.cisco.com/meraki/api-v1/#!update-network-appliance-firewall-cellular-firewall-rules){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 - `rules` (array): An ordered array of the firewall rules (not including the default rule)
@@ -5577,7 +5577,7 @@ meraki appliance updateNetworkApplianceFirewallCellularFirewallRules --networkId
 
 **Updates the accessibility settings for the given service ('ICMP', 'web', or 'SNMP')**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!update-network-appliance-firewall-firewalled-service" target="_blank">https://developer.cisco.com/meraki/api-v1/#!update-network-appliance-firewall-firewalled-service</a>
+[https://developer.cisco.com/meraki/api-v1/#!update-network-appliance-firewall-firewalled-service](https://developer.cisco.com/meraki/api-v1/#!update-network-appliance-firewall-firewalled-service){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 - `service` (string): (required)
@@ -5602,7 +5602,7 @@ meraki appliance updateNetworkApplianceFirewallFirewalledService --networkId 'ST
 
 **Update the inbound firewall rules of an MX network**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!update-network-appliance-firewall-inbound-firewall-rules" target="_blank">https://developer.cisco.com/meraki/api-v1/#!update-network-appliance-firewall-inbound-firewall-rules</a>
+[https://developer.cisco.com/meraki/api-v1/#!update-network-appliance-firewall-inbound-firewall-rules](https://developer.cisco.com/meraki/api-v1/#!update-network-appliance-firewall-inbound-firewall-rules){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 - `rules` (array): An ordered array of the firewall rules (not including the default rule)
@@ -5626,7 +5626,7 @@ meraki appliance updateNetworkApplianceFirewallInboundFirewallRules --networkId 
 
 **Update the L3 firewall rules of an MX network**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!update-network-appliance-firewall-l-3-firewall-rules" target="_blank">https://developer.cisco.com/meraki/api-v1/#!update-network-appliance-firewall-l-3-firewall-rules</a>
+[https://developer.cisco.com/meraki/api-v1/#!update-network-appliance-firewall-l-3-firewall-rules](https://developer.cisco.com/meraki/api-v1/#!update-network-appliance-firewall-l-3-firewall-rules){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 - `rules` (array): An ordered array of the firewall rules (not including the default rule)
@@ -5650,7 +5650,7 @@ meraki appliance updateNetworkApplianceFirewallL3FirewallRules --networkId 'STRI
 
 **Update the MX L7 firewall rules for an MX network**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!update-network-appliance-firewall-l-7-firewall-rules" target="_blank">https://developer.cisco.com/meraki/api-v1/#!update-network-appliance-firewall-l-7-firewall-rules</a>
+[https://developer.cisco.com/meraki/api-v1/#!update-network-appliance-firewall-l-7-firewall-rules](https://developer.cisco.com/meraki/api-v1/#!update-network-appliance-firewall-l-7-firewall-rules){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 - `rules` (array): An ordered array of the MX L7 firewall rules
@@ -5673,7 +5673,7 @@ meraki appliance updateNetworkApplianceFirewallL7FirewallRules --networkId 'STRI
 
 **Set the 1:Many NAT mapping rules for an MX network**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!update-network-appliance-firewall-one-to-many-nat-rules" target="_blank">https://developer.cisco.com/meraki/api-v1/#!update-network-appliance-firewall-one-to-many-nat-rules</a>
+[https://developer.cisco.com/meraki/api-v1/#!update-network-appliance-firewall-one-to-many-nat-rules](https://developer.cisco.com/meraki/api-v1/#!update-network-appliance-firewall-one-to-many-nat-rules){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 - `rules` (array): An array of 1:Many nat rules
@@ -5696,7 +5696,7 @@ meraki appliance updateNetworkApplianceFirewallOneToManyNatRules --networkId 'ST
 
 **Set the 1:1 NAT mapping rules for an MX network**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!update-network-appliance-firewall-one-to-one-nat-rules" target="_blank">https://developer.cisco.com/meraki/api-v1/#!update-network-appliance-firewall-one-to-one-nat-rules</a>
+[https://developer.cisco.com/meraki/api-v1/#!update-network-appliance-firewall-one-to-one-nat-rules](https://developer.cisco.com/meraki/api-v1/#!update-network-appliance-firewall-one-to-one-nat-rules){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 - `rules` (array): An array of 1:1 nat rules
@@ -5719,7 +5719,7 @@ meraki appliance updateNetworkApplianceFirewallOneToOneNatRules --networkId 'STR
 
 **Update the port forwarding rules for an MX network**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!update-network-appliance-firewall-port-forwarding-rules" target="_blank">https://developer.cisco.com/meraki/api-v1/#!update-network-appliance-firewall-port-forwarding-rules</a>
+[https://developer.cisco.com/meraki/api-v1/#!update-network-appliance-firewall-port-forwarding-rules](https://developer.cisco.com/meraki/api-v1/#!update-network-appliance-firewall-port-forwarding-rules){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 - `rules` (array): An array of port forwarding params
@@ -5742,7 +5742,7 @@ meraki appliance updateNetworkApplianceFirewallPortForwardingRules --networkId '
 
 **Update the per-port VLAN settings for a single MX port.**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!update-network-appliance-port" target="_blank">https://developer.cisco.com/meraki/api-v1/#!update-network-appliance-port</a>
+[https://developer.cisco.com/meraki/api-v1/#!update-network-appliance-port](https://developer.cisco.com/meraki/api-v1/#!update-network-appliance-port){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 - `portId` (string): (required)
@@ -5771,7 +5771,7 @@ meraki appliance updateNetworkAppliancePort --networkId 'STRING' --portId 'STRIN
 
 **Set the supported intrusion settings for an MX network**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!update-network-appliance-security-intrusion" target="_blank">https://developer.cisco.com/meraki/api-v1/#!update-network-appliance-security-intrusion</a>
+[https://developer.cisco.com/meraki/api-v1/#!update-network-appliance-security-intrusion](https://developer.cisco.com/meraki/api-v1/#!update-network-appliance-security-intrusion){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 - `mode` (string): Set mode to 'disabled'/'detection'/'prevention' (optional - `omitting` will leave current config unchanged)
@@ -5796,7 +5796,7 @@ meraki appliance updateNetworkApplianceSecurityIntrusion --networkId 'STRING' --
 
 **Set the supported malware settings for an MX network**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!update-network-appliance-security-malware" target="_blank">https://developer.cisco.com/meraki/api-v1/#!update-network-appliance-security-malware</a>
+[https://developer.cisco.com/meraki/api-v1/#!update-network-appliance-security-malware](https://developer.cisco.com/meraki/api-v1/#!update-network-appliance-security-malware){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 - `mode` (string): Set mode to 'enabled' to enable malware prevention, otherwise 'disabled'
@@ -5821,7 +5821,7 @@ meraki appliance updateNetworkApplianceSecurityMalware --networkId 'STRING' --mo
 
 **Update single LAN configuration**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!update-network-appliance-single-lan" target="_blank">https://developer.cisco.com/meraki/api-v1/#!update-network-appliance-single-lan</a>
+[https://developer.cisco.com/meraki/api-v1/#!update-network-appliance-single-lan](https://developer.cisco.com/meraki/api-v1/#!update-network-appliance-single-lan){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 - `subnet` (string): The subnet of the single LAN configuration
@@ -5845,7 +5845,7 @@ meraki appliance updateNetworkApplianceSingleLan --networkId 'STRING' --kwargs '
 
 **Update a static route for an MX or teleworker network**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!update-network-appliance-static-route" target="_blank">https://developer.cisco.com/meraki/api-v1/#!update-network-appliance-static-route</a>
+[https://developer.cisco.com/meraki/api-v1/#!update-network-appliance-static-route](https://developer.cisco.com/meraki/api-v1/#!update-network-appliance-static-route){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 - `staticRouteId` (string): (required)
@@ -5874,7 +5874,7 @@ meraki appliance updateNetworkApplianceStaticRoute --networkId 'STRING' --static
 
 **Update the traffic shaping settings for an MX network**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!update-network-appliance-traffic-shaping" target="_blank">https://developer.cisco.com/meraki/api-v1/#!update-network-appliance-traffic-shaping</a>
+[https://developer.cisco.com/meraki/api-v1/#!update-network-appliance-traffic-shaping](https://developer.cisco.com/meraki/api-v1/#!update-network-appliance-traffic-shaping){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 - `globalBandwidthLimits` (object): Global per-client bandwidth limit
@@ -5897,7 +5897,7 @@ meraki appliance updateNetworkApplianceTrafficShaping --networkId 'STRING' --kwa
 
 **Update a custom performance class for an MX network**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!update-network-appliance-traffic-shaping-custom-performance-class" target="_blank">https://developer.cisco.com/meraki/api-v1/#!update-network-appliance-traffic-shaping-custom-performance-class</a>
+[https://developer.cisco.com/meraki/api-v1/#!update-network-appliance-traffic-shaping-custom-performance-class](https://developer.cisco.com/meraki/api-v1/#!update-network-appliance-traffic-shaping-custom-performance-class){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 - `customPerformanceClassId` (string): (required)
@@ -5924,7 +5924,7 @@ meraki appliance updateNetworkApplianceTrafficShapingCustomPerformanceClass --ne
 
 **Update the traffic shaping settings rules for an MX network**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!update-network-appliance-traffic-shaping-rules" target="_blank">https://developer.cisco.com/meraki/api-v1/#!update-network-appliance-traffic-shaping-rules</a>
+[https://developer.cisco.com/meraki/api-v1/#!update-network-appliance-traffic-shaping-rules](https://developer.cisco.com/meraki/api-v1/#!update-network-appliance-traffic-shaping-rules){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 - `defaultRulesEnabled` (boolean): Whether default traffic shaping rules are enabled (true) or disabled (false). There are 4 default rules, which can be seen on your network's traffic shaping page. Note that default rules count against the rule limit of 8.
@@ -5951,7 +5951,7 @@ meraki appliance updateNetworkApplianceTrafficShapingRules --networkId 'STRING' 
 
 **Updates the uplink bandwidth settings for your MX network.**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!update-network-appliance-traffic-shaping-uplink-bandwidth" target="_blank">https://developer.cisco.com/meraki/api-v1/#!update-network-appliance-traffic-shaping-uplink-bandwidth</a>
+[https://developer.cisco.com/meraki/api-v1/#!update-network-appliance-traffic-shaping-uplink-bandwidth](https://developer.cisco.com/meraki/api-v1/#!update-network-appliance-traffic-shaping-uplink-bandwidth){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 - `bandwidthLimits` (object): A mapping of uplinks to their bandwidth settings (be sure to check which uplinks are supported for your network)
@@ -5974,7 +5974,7 @@ meraki appliance updateNetworkApplianceTrafficShapingUplinkBandwidth --networkId
 
 **Update uplink selection settings for an MX network**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!update-network-appliance-traffic-shaping-uplink-selection" target="_blank">https://developer.cisco.com/meraki/api-v1/#!update-network-appliance-traffic-shaping-uplink-selection</a>
+[https://developer.cisco.com/meraki/api-v1/#!update-network-appliance-traffic-shaping-uplink-selection](https://developer.cisco.com/meraki/api-v1/#!update-network-appliance-traffic-shaping-uplink-selection){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 - `activeActiveAutoVpnEnabled` (boolean): Toggle for enabling or disabling active-active AutoVPN
@@ -6001,7 +6001,7 @@ meraki appliance updateNetworkApplianceTrafficShapingUplinkSelection --networkId
 
 **Update a VLAN**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!update-network-appliance-vlan" target="_blank">https://developer.cisco.com/meraki/api-v1/#!update-network-appliance-vlan</a>
+[https://developer.cisco.com/meraki/api-v1/#!update-network-appliance-vlan](https://developer.cisco.com/meraki/api-v1/#!update-network-appliance-vlan){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 - `vlanId` (string): (required)
@@ -6039,7 +6039,7 @@ meraki appliance updateNetworkApplianceVlan --networkId 'STRING' --vlanId 'STRIN
 
 **Enable/Disable VLANs for the given network**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!update-network-appliance-vlans-settings" target="_blank">https://developer.cisco.com/meraki/api-v1/#!update-network-appliance-vlans-settings</a>
+[https://developer.cisco.com/meraki/api-v1/#!update-network-appliance-vlans-settings](https://developer.cisco.com/meraki/api-v1/#!update-network-appliance-vlans-settings){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 - `vlansEnabled` (boolean): Boolean indicating whether to enable (true) or disable (false) VLANs for the network
@@ -6062,7 +6062,7 @@ meraki appliance updateNetworkApplianceVlansSettings --networkId 'STRING' --kwar
 
 **Update a Hub BGP Configuration**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!update-network-appliance-vpn-bgp" target="_blank">https://developer.cisco.com/meraki/api-v1/#!update-network-appliance-vpn-bgp</a>
+[https://developer.cisco.com/meraki/api-v1/#!update-network-appliance-vpn-bgp](https://developer.cisco.com/meraki/api-v1/#!update-network-appliance-vpn-bgp){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 - `enabled` (boolean): Boolean value to enable or disable the BGP configuration. When BGP is enabled, the asNumber (ASN) will be autopopulated with the preconfigured ASN at other Hubs or a default value if there is no ASN configured.
@@ -6088,7 +6088,7 @@ meraki appliance updateNetworkApplianceVpnBgp --networkId 'STRING' --enabled --k
 
 **Update the site-to-site VPN settings of a network**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!update-network-appliance-vpn-site-to-site-vpn" target="_blank">https://developer.cisco.com/meraki/api-v1/#!update-network-appliance-vpn-site-to-site-vpn</a>
+[https://developer.cisco.com/meraki/api-v1/#!update-network-appliance-vpn-site-to-site-vpn](https://developer.cisco.com/meraki/api-v1/#!update-network-appliance-vpn-site-to-site-vpn){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 - `mode` (string): The site-to-site VPN mode. Can be one of 'none', 'spoke' or 'hub'
@@ -6113,7 +6113,7 @@ meraki appliance updateNetworkApplianceVpnSiteToSiteVpn --networkId 'STRING' --m
 
 **Update MX warm spare settings**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!update-network-appliance-warm-spare" target="_blank">https://developer.cisco.com/meraki/api-v1/#!update-network-appliance-warm-spare</a>
+[https://developer.cisco.com/meraki/api-v1/#!update-network-appliance-warm-spare](https://developer.cisco.com/meraki/api-v1/#!update-network-appliance-warm-spare){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 - `enabled` (boolean): Enable warm spare
@@ -6140,7 +6140,7 @@ meraki appliance updateNetworkApplianceWarmSpare --networkId 'STRING' --enabled 
 
 **Sets supported intrusion settings for an organization**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!update-organization-appliance-security-intrusion" target="_blank">https://developer.cisco.com/meraki/api-v1/#!update-organization-appliance-security-intrusion</a>
+[https://developer.cisco.com/meraki/api-v1/#!update-organization-appliance-security-intrusion](https://developer.cisco.com/meraki/api-v1/#!update-organization-appliance-security-intrusion){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `organizationId` (string): (required)
 - `allowedRules` (array): Sets a list of specific SNORT signatures to allow
@@ -6163,7 +6163,7 @@ meraki appliance updateOrganizationApplianceSecurityIntrusion --organizationId '
 
 **Update the third party VPN peers for an organization**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!update-organization-appliance-vpn-third-party-v-p-n-peers" target="_blank">https://developer.cisco.com/meraki/api-v1/#!update-organization-appliance-vpn-third-party-v-p-n-peers</a>
+[https://developer.cisco.com/meraki/api-v1/#!update-organization-appliance-vpn-third-party-v-p-n-peers](https://developer.cisco.com/meraki/api-v1/#!update-organization-appliance-vpn-third-party-v-p-n-peers){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `organizationId` (string): (required)
 - `peers` (array): The list of VPN peers
@@ -6186,7 +6186,7 @@ meraki appliance updateOrganizationApplianceVpnThirdPartyVPNPeers --organization
 
 **Update the firewall rules of an organization's site-to-site VPN**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!update-organization-appliance-vpn-vpn-firewall-rules" target="_blank">https://developer.cisco.com/meraki/api-v1/#!update-organization-appliance-vpn-vpn-firewall-rules</a>
+[https://developer.cisco.com/meraki/api-v1/#!update-organization-appliance-vpn-vpn-firewall-rules](https://developer.cisco.com/meraki/api-v1/#!update-organization-appliance-vpn-vpn-firewall-rules){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `organizationId` (string): (required)
 - `rules` (array): An ordered array of the firewall rules (not including the default rule)
@@ -6216,7 +6216,7 @@ meraki appliance updateOrganizationApplianceVpnVpnFirewallRules --organizationId
 
 **Creates new quality retention profile for this network.**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!create-network-camera-quality-retention-profile" target="_blank">https://developer.cisco.com/meraki/api-v1/#!create-network-camera-quality-retention-profile</a>
+[https://developer.cisco.com/meraki/api-v1/#!create-network-camera-quality-retention-profile](https://developer.cisco.com/meraki/api-v1/#!create-network-camera-quality-retention-profile){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 - `name` (string): The name of the new profile. Must be unique. This parameter is required.
@@ -6247,7 +6247,7 @@ meraki camera createNetworkCameraQualityRetentionProfile --networkId 'STRING' --
 
 **Delete an existing quality retention profile for this network.**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!delete-network-camera-quality-retention-profile" target="_blank">https://developer.cisco.com/meraki/api-v1/#!delete-network-camera-quality-retention-profile</a>
+[https://developer.cisco.com/meraki/api-v1/#!delete-network-camera-quality-retention-profile](https://developer.cisco.com/meraki/api-v1/#!delete-network-camera-quality-retention-profile){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 - `qualityRetentionProfileId` (string): (required)
@@ -6270,7 +6270,7 @@ meraki camera deleteNetworkCameraQualityRetentionProfile --networkId 'STRING' --
 
 **Generate a snapshot of what the camera sees at the specified time and return a link to that image.**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!generate-device-camera-snapshot" target="_blank">https://developer.cisco.com/meraki/api-v1/#!generate-device-camera-snapshot</a>
+[https://developer.cisco.com/meraki/api-v1/#!generate-device-camera-snapshot](https://developer.cisco.com/meraki/api-v1/#!generate-device-camera-snapshot){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `serial` (string): (required)
 - `timestamp` (string): [optional] The snapshot will be taken from this time on the camera. The timestamp is expected to be in ISO 8601 format. If no timestamp is specified, we will assume current time.
@@ -6294,7 +6294,7 @@ meraki camera generateDeviceCameraSnapshot --serial 'STRING' --kwargs '{"key1": 
 
 **Returns live state from camera of analytics zones**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!get-device-camera-analytics-live" target="_blank">https://developer.cisco.com/meraki/api-v1/#!get-device-camera-analytics-live</a>
+[https://developer.cisco.com/meraki/api-v1/#!get-device-camera-analytics-live](https://developer.cisco.com/meraki/api-v1/#!get-device-camera-analytics-live){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `serial` (string): (required)
 
@@ -6316,7 +6316,7 @@ meraki camera getDeviceCameraAnalyticsLive --serial 'STRING'
 
 **Returns an overview of aggregate analytics data for a timespan**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!get-device-camera-analytics-overview" target="_blank">https://developer.cisco.com/meraki/api-v1/#!get-device-camera-analytics-overview</a>
+[https://developer.cisco.com/meraki/api-v1/#!get-device-camera-analytics-overview](https://developer.cisco.com/meraki/api-v1/#!get-device-camera-analytics-overview){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `serial` (string): (required)
 - `t0` (string): The beginning of the timespan for the data. The maximum lookback period is 365 days from today.
@@ -6342,7 +6342,7 @@ meraki camera getDeviceCameraAnalyticsOverview --serial 'STRING' --kwargs '{"key
 
 **Returns most recent record for analytics zones**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!get-device-camera-analytics-recent" target="_blank">https://developer.cisco.com/meraki/api-v1/#!get-device-camera-analytics-recent</a>
+[https://developer.cisco.com/meraki/api-v1/#!get-device-camera-analytics-recent](https://developer.cisco.com/meraki/api-v1/#!get-device-camera-analytics-recent){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `serial` (string): (required)
 - `objectType` (string): [optional] The object type for which analytics will be retrieved. The default object type is person. The available types are [person, vehicle].
@@ -6365,7 +6365,7 @@ meraki camera getDeviceCameraAnalyticsRecent --serial 'STRING' --kwargs '{"key1"
 
 **Return historical records for analytic zones**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!get-device-camera-analytics-zone-history" target="_blank">https://developer.cisco.com/meraki/api-v1/#!get-device-camera-analytics-zone-history</a>
+[https://developer.cisco.com/meraki/api-v1/#!get-device-camera-analytics-zone-history](https://developer.cisco.com/meraki/api-v1/#!get-device-camera-analytics-zone-history){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `serial` (string): (required)
 - `zoneId` (string): (required)
@@ -6393,7 +6393,7 @@ meraki camera getDeviceCameraAnalyticsZoneHistory --serial 'STRING' --zoneId 'ST
 
 **Returns all configured analytic zones for this camera**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!get-device-camera-analytics-zones" target="_blank">https://developer.cisco.com/meraki/api-v1/#!get-device-camera-analytics-zones</a>
+[https://developer.cisco.com/meraki/api-v1/#!get-device-camera-analytics-zones](https://developer.cisco.com/meraki/api-v1/#!get-device-camera-analytics-zones){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `serial` (string): (required)
 
@@ -6415,7 +6415,7 @@ meraki camera getDeviceCameraAnalyticsZones --serial 'STRING'
 
 **Returns quality and retention settings for the given camera**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!get-device-camera-quality-and-retention" target="_blank">https://developer.cisco.com/meraki/api-v1/#!get-device-camera-quality-and-retention</a>
+[https://developer.cisco.com/meraki/api-v1/#!get-device-camera-quality-and-retention](https://developer.cisco.com/meraki/api-v1/#!get-device-camera-quality-and-retention){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `serial` (string): (required)
 
@@ -6437,7 +6437,7 @@ meraki camera getDeviceCameraQualityAndRetention --serial 'STRING'
 
 **Returns sense settings for a given camera**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!get-device-camera-sense" target="_blank">https://developer.cisco.com/meraki/api-v1/#!get-device-camera-sense</a>
+[https://developer.cisco.com/meraki/api-v1/#!get-device-camera-sense](https://developer.cisco.com/meraki/api-v1/#!get-device-camera-sense){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `serial` (string): (required)
 
@@ -6459,7 +6459,7 @@ meraki camera getDeviceCameraSense --serial 'STRING'
 
 **Returns the MV Sense object detection model list for the given camera**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!get-device-camera-sense-object-detection-models" target="_blank">https://developer.cisco.com/meraki/api-v1/#!get-device-camera-sense-object-detection-models</a>
+[https://developer.cisco.com/meraki/api-v1/#!get-device-camera-sense-object-detection-models](https://developer.cisco.com/meraki/api-v1/#!get-device-camera-sense-object-detection-models){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `serial` (string): (required)
 
@@ -6481,7 +6481,7 @@ meraki camera getDeviceCameraSenseObjectDetectionModels --serial 'STRING'
 
 **Returns video link to the specified camera**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!get-device-camera-video-link" target="_blank">https://developer.cisco.com/meraki/api-v1/#!get-device-camera-video-link</a>
+[https://developer.cisco.com/meraki/api-v1/#!get-device-camera-video-link](https://developer.cisco.com/meraki/api-v1/#!get-device-camera-video-link){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `serial` (string): (required)
 - `timestamp` (string): [optional] The video link will start at this time. The timestamp should be a string in ISO8601 format. If no timestamp is specified, we will assume current time.
@@ -6504,7 +6504,7 @@ meraki camera getDeviceCameraVideoLink --serial 'STRING' --kwargs '{"key1": "val
 
 **Returns video settings for the given camera**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!get-device-camera-video-settings" target="_blank">https://developer.cisco.com/meraki/api-v1/#!get-device-camera-video-settings</a>
+[https://developer.cisco.com/meraki/api-v1/#!get-device-camera-video-settings](https://developer.cisco.com/meraki/api-v1/#!get-device-camera-video-settings){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `serial` (string): (required)
 
@@ -6526,7 +6526,7 @@ meraki camera getDeviceCameraVideoSettings --serial 'STRING'
 
 **Retrieve a single quality retention profile**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!get-network-camera-quality-retention-profile" target="_blank">https://developer.cisco.com/meraki/api-v1/#!get-network-camera-quality-retention-profile</a>
+[https://developer.cisco.com/meraki/api-v1/#!get-network-camera-quality-retention-profile](https://developer.cisco.com/meraki/api-v1/#!get-network-camera-quality-retention-profile){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 - `qualityRetentionProfileId` (string): (required)
@@ -6549,7 +6549,7 @@ meraki camera getNetworkCameraQualityRetentionProfile --networkId 'STRING' --qua
 
 **List the quality retention profiles for this network**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!get-network-camera-quality-retention-profiles" target="_blank">https://developer.cisco.com/meraki/api-v1/#!get-network-camera-quality-retention-profiles</a>
+[https://developer.cisco.com/meraki/api-v1/#!get-network-camera-quality-retention-profiles](https://developer.cisco.com/meraki/api-v1/#!get-network-camera-quality-retention-profiles){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 
@@ -6571,7 +6571,7 @@ meraki camera getNetworkCameraQualityRetentionProfiles --networkId 'STRING'
 
 **Returns a list of all camera recording schedules.**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!get-network-camera-schedules" target="_blank">https://developer.cisco.com/meraki/api-v1/#!get-network-camera-schedules</a>
+[https://developer.cisco.com/meraki/api-v1/#!get-network-camera-schedules](https://developer.cisco.com/meraki/api-v1/#!get-network-camera-schedules){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 
@@ -6593,7 +6593,7 @@ meraki camera getNetworkCameraSchedules --networkId 'STRING'
 
 **Update quality and retention settings for the given camera**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!update-device-camera-quality-and-retention" target="_blank">https://developer.cisco.com/meraki/api-v1/#!update-device-camera-quality-and-retention</a>
+[https://developer.cisco.com/meraki/api-v1/#!update-device-camera-quality-and-retention](https://developer.cisco.com/meraki/api-v1/#!update-device-camera-quality-and-retention){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `serial` (string): (required)
 - `profileId` (string): The ID of a quality and retention profile to assign to the camera. The profile's settings will override all of the per-camera quality and retention settings. If the value of this parameter is null, any existing profile will be unassigned from the camera.
@@ -6622,7 +6622,7 @@ meraki camera updateDeviceCameraQualityAndRetention --serial 'STRING' --kwargs '
 
 **Update sense settings for the given camera**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!update-device-camera-sense" target="_blank">https://developer.cisco.com/meraki/api-v1/#!update-device-camera-sense</a>
+[https://developer.cisco.com/meraki/api-v1/#!update-device-camera-sense](https://developer.cisco.com/meraki/api-v1/#!update-device-camera-sense){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `serial` (string): (required)
 - `senseEnabled` (boolean): Boolean indicating if sense(license) is enabled(true) or disabled(false) on the camera
@@ -6647,7 +6647,7 @@ meraki camera updateDeviceCameraSense --serial 'STRING' --kwargs '{"key1": "valu
 
 **Update video settings for the given camera**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!update-device-camera-video-settings" target="_blank">https://developer.cisco.com/meraki/api-v1/#!update-device-camera-video-settings</a>
+[https://developer.cisco.com/meraki/api-v1/#!update-device-camera-video-settings](https://developer.cisco.com/meraki/api-v1/#!update-device-camera-video-settings){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `serial` (string): (required)
 - `externalRtspEnabled` (boolean): Boolean indicating if external rtsp stream is exposed
@@ -6670,7 +6670,7 @@ meraki camera updateDeviceCameraVideoSettings --serial 'STRING' --kwargs '{"key1
 
 **Update an existing quality retention profile for this network.**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!update-network-camera-quality-retention-profile" target="_blank">https://developer.cisco.com/meraki/api-v1/#!update-network-camera-quality-retention-profile</a>
+[https://developer.cisco.com/meraki/api-v1/#!update-network-camera-quality-retention-profile](https://developer.cisco.com/meraki/api-v1/#!update-network-camera-quality-retention-profile){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 - `qualityRetentionProfileId` (string): (required)
@@ -6708,7 +6708,7 @@ meraki camera updateNetworkCameraQualityRetentionProfile --networkId 'STRING' --
 
 **Show the LAN Settings of a MG**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!get-device-cellular-gateway-lan" target="_blank">https://developer.cisco.com/meraki/api-v1/#!get-device-cellular-gateway-lan</a>
+[https://developer.cisco.com/meraki/api-v1/#!get-device-cellular-gateway-lan](https://developer.cisco.com/meraki/api-v1/#!get-device-cellular-gateway-lan){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `serial` (string): (required)
 
@@ -6730,7 +6730,7 @@ meraki cellularGateway getDeviceCellularGatewayLan --serial 'STRING'
 
 **Returns the port forwarding rules for a single MG.**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!get-device-cellular-gateway-port-forwarding-rules" target="_blank">https://developer.cisco.com/meraki/api-v1/#!get-device-cellular-gateway-port-forwarding-rules</a>
+[https://developer.cisco.com/meraki/api-v1/#!get-device-cellular-gateway-port-forwarding-rules](https://developer.cisco.com/meraki/api-v1/#!get-device-cellular-gateway-port-forwarding-rules){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `serial` (string): (required)
 
@@ -6752,7 +6752,7 @@ meraki cellularGateway getDeviceCellularGatewayPortForwardingRules --serial 'STR
 
 **Return the connectivity testing destinations for an MG network**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!get-network-cellular-gateway-connectivity-monitoring-destinations" target="_blank">https://developer.cisco.com/meraki/api-v1/#!get-network-cellular-gateway-connectivity-monitoring-destinations</a>
+[https://developer.cisco.com/meraki/api-v1/#!get-network-cellular-gateway-connectivity-monitoring-destinations](https://developer.cisco.com/meraki/api-v1/#!get-network-cellular-gateway-connectivity-monitoring-destinations){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 
@@ -6774,7 +6774,7 @@ meraki cellularGateway getNetworkCellularGatewayConnectivityMonitoringDestinatio
 
 **List common DHCP settings of MGs**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!get-network-cellular-gateway-dhcp" target="_blank">https://developer.cisco.com/meraki/api-v1/#!get-network-cellular-gateway-dhcp</a>
+[https://developer.cisco.com/meraki/api-v1/#!get-network-cellular-gateway-dhcp](https://developer.cisco.com/meraki/api-v1/#!get-network-cellular-gateway-dhcp){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 
@@ -6796,7 +6796,7 @@ meraki cellularGateway getNetworkCellularGatewayDhcp --networkId 'STRING'
 
 **Return the subnet pool and mask configured for MGs in the network.**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!get-network-cellular-gateway-subnet-pool" target="_blank">https://developer.cisco.com/meraki/api-v1/#!get-network-cellular-gateway-subnet-pool</a>
+[https://developer.cisco.com/meraki/api-v1/#!get-network-cellular-gateway-subnet-pool](https://developer.cisco.com/meraki/api-v1/#!get-network-cellular-gateway-subnet-pool){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 
@@ -6818,7 +6818,7 @@ meraki cellularGateway getNetworkCellularGatewaySubnetPool --networkId 'STRING'
 
 **Returns the uplink settings for your MG network.**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!get-network-cellular-gateway-uplink" target="_blank">https://developer.cisco.com/meraki/api-v1/#!get-network-cellular-gateway-uplink</a>
+[https://developer.cisco.com/meraki/api-v1/#!get-network-cellular-gateway-uplink](https://developer.cisco.com/meraki/api-v1/#!get-network-cellular-gateway-uplink){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 
@@ -6840,7 +6840,7 @@ meraki cellularGateway getNetworkCellularGatewayUplink --networkId 'STRING'
 
 **List the uplink status of every Meraki MG cellular gateway in the organization**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!get-organization-cellular-gateway-uplink-statuses" target="_blank">https://developer.cisco.com/meraki/api-v1/#!get-organization-cellular-gateway-uplink-statuses</a>
+[https://developer.cisco.com/meraki/api-v1/#!get-organization-cellular-gateway-uplink-statuses](https://developer.cisco.com/meraki/api-v1/#!get-organization-cellular-gateway-uplink-statuses){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `organizationId` (string): (required)
 - `total_pages` (integer or string): use with perPage to get total results up to total_pages*perPage; -1 or "all" for all pages
@@ -6870,7 +6870,7 @@ meraki cellularGateway getOrganizationCellularGatewayUplinkStatuses --organizati
 
 **Update the LAN Settings for a single MG.**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!update-device-cellular-gateway-lan" target="_blank">https://developer.cisco.com/meraki/api-v1/#!update-device-cellular-gateway-lan</a>
+[https://developer.cisco.com/meraki/api-v1/#!update-device-cellular-gateway-lan](https://developer.cisco.com/meraki/api-v1/#!update-device-cellular-gateway-lan){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `serial` (string): (required)
 - `reservedIpRanges` (array): list of all reserved IP ranges for a single MG
@@ -6894,7 +6894,7 @@ meraki cellularGateway updateDeviceCellularGatewayLan --serial 'STRING' --kwargs
 
 **Updates the port forwarding rules for a single MG.**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!update-device-cellular-gateway-port-forwarding-rules" target="_blank">https://developer.cisco.com/meraki/api-v1/#!update-device-cellular-gateway-port-forwarding-rules</a>
+[https://developer.cisco.com/meraki/api-v1/#!update-device-cellular-gateway-port-forwarding-rules](https://developer.cisco.com/meraki/api-v1/#!update-device-cellular-gateway-port-forwarding-rules){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `serial` (string): (required)
 - `rules` (array): An array of port forwarding params
@@ -6917,7 +6917,7 @@ meraki cellularGateway updateDeviceCellularGatewayPortForwardingRules --serial '
 
 **Update the connectivity testing destinations for an MG network**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!update-network-cellular-gateway-connectivity-monitoring-destinations" target="_blank">https://developer.cisco.com/meraki/api-v1/#!update-network-cellular-gateway-connectivity-monitoring-destinations</a>
+[https://developer.cisco.com/meraki/api-v1/#!update-network-cellular-gateway-connectivity-monitoring-destinations](https://developer.cisco.com/meraki/api-v1/#!update-network-cellular-gateway-connectivity-monitoring-destinations){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 - `destinations` (array): The list of connectivity monitoring destinations
@@ -6940,7 +6940,7 @@ meraki cellularGateway updateNetworkCellularGatewayConnectivityMonitoringDestina
 
 **Update common DHCP settings of MGs**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!update-network-cellular-gateway-dhcp" target="_blank">https://developer.cisco.com/meraki/api-v1/#!update-network-cellular-gateway-dhcp</a>
+[https://developer.cisco.com/meraki/api-v1/#!update-network-cellular-gateway-dhcp](https://developer.cisco.com/meraki/api-v1/#!update-network-cellular-gateway-dhcp){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 - `dhcpLeaseTime` (string): DHCP Lease time for all MG of the network. It can be '30 minutes', '1 hour', '4 hours', '12 hours', '1 day' or '1 week'.
@@ -6965,7 +6965,7 @@ meraki cellularGateway updateNetworkCellularGatewayDhcp --networkId 'STRING' --k
 
 **Update the subnet pool and mask configuration for MGs in the network.**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!update-network-cellular-gateway-subnet-pool" target="_blank">https://developer.cisco.com/meraki/api-v1/#!update-network-cellular-gateway-subnet-pool</a>
+[https://developer.cisco.com/meraki/api-v1/#!update-network-cellular-gateway-subnet-pool](https://developer.cisco.com/meraki/api-v1/#!update-network-cellular-gateway-subnet-pool){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 - `mask` (integer): Mask used for the subnet of all MGs in  this network.
@@ -6989,7 +6989,7 @@ meraki cellularGateway updateNetworkCellularGatewaySubnetPool --networkId 'STRIN
 
 **Updates the uplink settings for your MG network.**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!update-network-cellular-gateway-uplink" target="_blank">https://developer.cisco.com/meraki/api-v1/#!update-network-cellular-gateway-uplink</a>
+[https://developer.cisco.com/meraki/api-v1/#!update-network-cellular-gateway-uplink](https://developer.cisco.com/meraki/api-v1/#!update-network-cellular-gateway-uplink){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 - `bandwidthLimits` (object): The bandwidth settings for the 'cellular' uplink
@@ -7018,7 +7018,7 @@ meraki cellularGateway updateNetworkCellularGatewayUplink --networkId 'STRING' -
 
 **Add a media server to be monitored for this organization**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!create-organization-insight-monitored-media-server" target="_blank">https://developer.cisco.com/meraki/api-v1/#!create-organization-insight-monitored-media-server</a>
+[https://developer.cisco.com/meraki/api-v1/#!create-organization-insight-monitored-media-server](https://developer.cisco.com/meraki/api-v1/#!create-organization-insight-monitored-media-server){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `organizationId` (string): (required)
 - `name` (string): The name of the VoIP provider
@@ -7043,7 +7043,7 @@ meraki insight createOrganizationInsightMonitoredMediaServer --organizationId 'S
 
 **Delete a monitored media server from this organization**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!delete-organization-insight-monitored-media-server" target="_blank">https://developer.cisco.com/meraki/api-v1/#!delete-organization-insight-monitored-media-server</a>
+[https://developer.cisco.com/meraki/api-v1/#!delete-organization-insight-monitored-media-server](https://developer.cisco.com/meraki/api-v1/#!delete-organization-insight-monitored-media-server){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `organizationId` (string): (required)
 - `monitoredMediaServerId` (string): (required)
@@ -7066,7 +7066,7 @@ meraki insight deleteOrganizationInsightMonitoredMediaServer --organizationId 'S
 
 **Return a monitored media server for this organization**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!get-organization-insight-monitored-media-server" target="_blank">https://developer.cisco.com/meraki/api-v1/#!get-organization-insight-monitored-media-server</a>
+[https://developer.cisco.com/meraki/api-v1/#!get-organization-insight-monitored-media-server](https://developer.cisco.com/meraki/api-v1/#!get-organization-insight-monitored-media-server){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `organizationId` (string): (required)
 - `monitoredMediaServerId` (string): (required)
@@ -7089,7 +7089,7 @@ meraki insight getOrganizationInsightMonitoredMediaServer --organizationId 'STRI
 
 **List the monitored media servers for this organization**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!get-organization-insight-monitored-media-servers" target="_blank">https://developer.cisco.com/meraki/api-v1/#!get-organization-insight-monitored-media-servers</a>
+[https://developer.cisco.com/meraki/api-v1/#!get-organization-insight-monitored-media-servers](https://developer.cisco.com/meraki/api-v1/#!get-organization-insight-monitored-media-servers){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `organizationId` (string): (required)
 
@@ -7111,7 +7111,7 @@ meraki insight getOrganizationInsightMonitoredMediaServers --organizationId 'STR
 
 **Update a monitored media server for this organization**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!update-organization-insight-monitored-media-server" target="_blank">https://developer.cisco.com/meraki/api-v1/#!update-organization-insight-monitored-media-server</a>
+[https://developer.cisco.com/meraki/api-v1/#!update-organization-insight-monitored-media-server](https://developer.cisco.com/meraki/api-v1/#!update-organization-insight-monitored-media-server){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `organizationId` (string): (required)
 - `monitoredMediaServerId` (string): (required)
@@ -7143,7 +7143,7 @@ meraki insight updateOrganizationInsightMonitoredMediaServer --organizationId 'S
 
 **Force check-in a set of devices**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!checkin-network-sm-devices" target="_blank">https://developer.cisco.com/meraki/api-v1/#!checkin-network-sm-devices</a>
+[https://developer.cisco.com/meraki/api-v1/#!checkin-network-sm-devices](https://developer.cisco.com/meraki/api-v1/#!checkin-network-sm-devices){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 - `wifiMacs` (array): The wifiMacs of the devices to be checked-in.
@@ -7169,7 +7169,7 @@ meraki sm checkinNetworkSmDevices --networkId 'STRING' --kwargs '{"key1": "value
 
 **Bypass activation lock attempt**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!create-network-sm-bypass-activation-lock-attempt" target="_blank">https://developer.cisco.com/meraki/api-v1/#!create-network-sm-bypass-activation-lock-attempt</a>
+[https://developer.cisco.com/meraki/api-v1/#!create-network-sm-bypass-activation-lock-attempt](https://developer.cisco.com/meraki/api-v1/#!create-network-sm-bypass-activation-lock-attempt){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 - `ids` (array): The ids of the devices to attempt activation lock bypass.
@@ -7192,7 +7192,7 @@ meraki sm createNetworkSmBypassActivationLockAttempt --networkId 'STRING' --ids 
 
 **Add a target group**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!create-network-sm-target-group" target="_blank">https://developer.cisco.com/meraki/api-v1/#!create-network-sm-target-group</a>
+[https://developer.cisco.com/meraki/api-v1/#!create-network-sm-target-group](https://developer.cisco.com/meraki/api-v1/#!create-network-sm-target-group){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 - `name` (string): The name of this target group
@@ -7216,7 +7216,7 @@ meraki sm createNetworkSmTargetGroup --networkId 'STRING' --kwargs '{"key1": "va
 
 **Delete a target group from a network**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!delete-network-sm-target-group" target="_blank">https://developer.cisco.com/meraki/api-v1/#!delete-network-sm-target-group</a>
+[https://developer.cisco.com/meraki/api-v1/#!delete-network-sm-target-group](https://developer.cisco.com/meraki/api-v1/#!delete-network-sm-target-group){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 - `targetGroupId` (string): (required)
@@ -7239,7 +7239,7 @@ meraki sm deleteNetworkSmTargetGroup --networkId 'STRING' --targetGroupId 'STRIN
 
 **Delete a User Access Device**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!delete-network-sm-user-access-device" target="_blank">https://developer.cisco.com/meraki/api-v1/#!delete-network-sm-user-access-device</a>
+[https://developer.cisco.com/meraki/api-v1/#!delete-network-sm-user-access-device](https://developer.cisco.com/meraki/api-v1/#!delete-network-sm-user-access-device){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 - `userAccessDeviceId` (string): (required)
@@ -7262,7 +7262,7 @@ meraki sm deleteNetworkSmUserAccessDevice --networkId 'STRING' --userAccessDevic
 
 **Bypass activation lock attempt status**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!get-network-sm-bypass-activation-lock-attempt" target="_blank">https://developer.cisco.com/meraki/api-v1/#!get-network-sm-bypass-activation-lock-attempt</a>
+[https://developer.cisco.com/meraki/api-v1/#!get-network-sm-bypass-activation-lock-attempt](https://developer.cisco.com/meraki/api-v1/#!get-network-sm-bypass-activation-lock-attempt){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 - `attemptId` (string): (required)
@@ -7285,7 +7285,7 @@ meraki sm getNetworkSmBypassActivationLockAttempt --networkId 'STRING' --attempt
 
 **Return the client's daily cellular data usage history**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!get-network-sm-device-cellular-usage-history" target="_blank">https://developer.cisco.com/meraki/api-v1/#!get-network-sm-device-cellular-usage-history</a>
+[https://developer.cisco.com/meraki/api-v1/#!get-network-sm-device-cellular-usage-history](https://developer.cisco.com/meraki/api-v1/#!get-network-sm-device-cellular-usage-history){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 - `deviceId` (string): (required)
@@ -7308,7 +7308,7 @@ meraki sm getNetworkSmDeviceCellularUsageHistory --networkId 'STRING' --deviceId
 
 **List the certs on a device**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!get-network-sm-device-certs" target="_blank">https://developer.cisco.com/meraki/api-v1/#!get-network-sm-device-certs</a>
+[https://developer.cisco.com/meraki/api-v1/#!get-network-sm-device-certs](https://developer.cisco.com/meraki/api-v1/#!get-network-sm-device-certs){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 - `deviceId` (string): (required)
@@ -7331,7 +7331,7 @@ meraki sm getNetworkSmDeviceCerts --networkId 'STRING' --deviceId 'STRING'
 
 **Returns historical connectivity data (whether a device is regularly checking in to Dashboard).**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!get-network-sm-device-connectivity" target="_blank">https://developer.cisco.com/meraki/api-v1/#!get-network-sm-device-connectivity</a>
+[https://developer.cisco.com/meraki/api-v1/#!get-network-sm-device-connectivity](https://developer.cisco.com/meraki/api-v1/#!get-network-sm-device-connectivity){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 - `deviceId` (string): (required)
@@ -7359,7 +7359,7 @@ meraki sm getNetworkSmDeviceConnectivity --networkId 'STRING' --deviceId 'STRING
 
 **Return historical records of various Systems Manager network connection details for desktop devices.**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!get-network-sm-device-desktop-logs" target="_blank">https://developer.cisco.com/meraki/api-v1/#!get-network-sm-device-desktop-logs</a>
+[https://developer.cisco.com/meraki/api-v1/#!get-network-sm-device-desktop-logs](https://developer.cisco.com/meraki/api-v1/#!get-network-sm-device-desktop-logs){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 - `deviceId` (string): (required)
@@ -7387,7 +7387,7 @@ meraki sm getNetworkSmDeviceDesktopLogs --networkId 'STRING' --deviceId 'STRING'
 
 **Return historical records of commands sent to Systems Manager devices**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!get-network-sm-device-device-command-logs" target="_blank">https://developer.cisco.com/meraki/api-v1/#!get-network-sm-device-device-command-logs</a>
+[https://developer.cisco.com/meraki/api-v1/#!get-network-sm-device-device-command-logs](https://developer.cisco.com/meraki/api-v1/#!get-network-sm-device-device-command-logs){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 - `deviceId` (string): (required)
@@ -7415,7 +7415,7 @@ meraki sm getNetworkSmDeviceDeviceCommandLogs --networkId 'STRING' --deviceId 'S
 
 **Get the profiles associated with a device**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!get-network-sm-device-device-profiles" target="_blank">https://developer.cisco.com/meraki/api-v1/#!get-network-sm-device-device-profiles</a>
+[https://developer.cisco.com/meraki/api-v1/#!get-network-sm-device-device-profiles](https://developer.cisco.com/meraki/api-v1/#!get-network-sm-device-device-profiles){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 - `deviceId` (string): (required)
@@ -7438,7 +7438,7 @@ meraki sm getNetworkSmDeviceDeviceProfiles --networkId 'STRING' --deviceId 'STRI
 
 **List the network adapters of a device**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!get-network-sm-device-network-adapters" target="_blank">https://developer.cisco.com/meraki/api-v1/#!get-network-sm-device-network-adapters</a>
+[https://developer.cisco.com/meraki/api-v1/#!get-network-sm-device-network-adapters](https://developer.cisco.com/meraki/api-v1/#!get-network-sm-device-network-adapters){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 - `deviceId` (string): (required)
@@ -7461,7 +7461,7 @@ meraki sm getNetworkSmDeviceNetworkAdapters --networkId 'STRING' --deviceId 'STR
 
 **Return historical records of various Systems Manager client metrics for desktop devices.**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!get-network-sm-device-performance-history" target="_blank">https://developer.cisco.com/meraki/api-v1/#!get-network-sm-device-performance-history</a>
+[https://developer.cisco.com/meraki/api-v1/#!get-network-sm-device-performance-history](https://developer.cisco.com/meraki/api-v1/#!get-network-sm-device-performance-history){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 - `deviceId` (string): (required)
@@ -7489,7 +7489,7 @@ meraki sm getNetworkSmDevicePerformanceHistory --networkId 'STRING' --deviceId '
 
 **List the restrictions on a device**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!get-network-sm-device-restrictions" target="_blank">https://developer.cisco.com/meraki/api-v1/#!get-network-sm-device-restrictions</a>
+[https://developer.cisco.com/meraki/api-v1/#!get-network-sm-device-restrictions](https://developer.cisco.com/meraki/api-v1/#!get-network-sm-device-restrictions){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 - `deviceId` (string): (required)
@@ -7512,7 +7512,7 @@ meraki sm getNetworkSmDeviceRestrictions --networkId 'STRING' --deviceId 'STRING
 
 **List the security centers on a device**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!get-network-sm-device-security-centers" target="_blank">https://developer.cisco.com/meraki/api-v1/#!get-network-sm-device-security-centers</a>
+[https://developer.cisco.com/meraki/api-v1/#!get-network-sm-device-security-centers](https://developer.cisco.com/meraki/api-v1/#!get-network-sm-device-security-centers){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 - `deviceId` (string): (required)
@@ -7535,7 +7535,7 @@ meraki sm getNetworkSmDeviceSecurityCenters --networkId 'STRING' --deviceId 'STR
 
 **Get a list of softwares associated with a device**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!get-network-sm-device-softwares" target="_blank">https://developer.cisco.com/meraki/api-v1/#!get-network-sm-device-softwares</a>
+[https://developer.cisco.com/meraki/api-v1/#!get-network-sm-device-softwares](https://developer.cisco.com/meraki/api-v1/#!get-network-sm-device-softwares){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 - `deviceId` (string): (required)
@@ -7558,7 +7558,7 @@ meraki sm getNetworkSmDeviceSoftwares --networkId 'STRING' --deviceId 'STRING'
 
 **List the saved SSID names on a device**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!get-network-sm-device-wlan-lists" target="_blank">https://developer.cisco.com/meraki/api-v1/#!get-network-sm-device-wlan-lists</a>
+[https://developer.cisco.com/meraki/api-v1/#!get-network-sm-device-wlan-lists](https://developer.cisco.com/meraki/api-v1/#!get-network-sm-device-wlan-lists){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 - `deviceId` (string): (required)
@@ -7581,7 +7581,7 @@ meraki sm getNetworkSmDeviceWlanLists --networkId 'STRING' --deviceId 'STRING'
 
 **List the devices enrolled in an SM network with various specified fields and filters**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!get-network-sm-devices" target="_blank">https://developer.cisco.com/meraki/api-v1/#!get-network-sm-devices</a>
+[https://developer.cisco.com/meraki/api-v1/#!get-network-sm-devices](https://developer.cisco.com/meraki/api-v1/#!get-network-sm-devices){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 - `total_pages` (integer or string): use with perPage to get total results up to total_pages*perPage; -1 or "all" for all pages
@@ -7619,7 +7619,7 @@ meraki sm getNetworkSmDevices --networkId 'STRING' --kwargs '{"key1": "value1", 
 
 **List all profiles in a network**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!get-network-sm-profiles" target="_blank">https://developer.cisco.com/meraki/api-v1/#!get-network-sm-profiles</a>
+[https://developer.cisco.com/meraki/api-v1/#!get-network-sm-profiles](https://developer.cisco.com/meraki/api-v1/#!get-network-sm-profiles){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 
@@ -7641,7 +7641,7 @@ meraki sm getNetworkSmProfiles --networkId 'STRING'
 
 **Return a target group**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!get-network-sm-target-group" target="_blank">https://developer.cisco.com/meraki/api-v1/#!get-network-sm-target-group</a>
+[https://developer.cisco.com/meraki/api-v1/#!get-network-sm-target-group](https://developer.cisco.com/meraki/api-v1/#!get-network-sm-target-group){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 - `targetGroupId` (string): (required)
@@ -7665,7 +7665,7 @@ meraki sm getNetworkSmTargetGroup --networkId 'STRING' --targetGroupId 'STRING' 
 
 **List the target groups in this network**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!get-network-sm-target-groups" target="_blank">https://developer.cisco.com/meraki/api-v1/#!get-network-sm-target-groups</a>
+[https://developer.cisco.com/meraki/api-v1/#!get-network-sm-target-groups](https://developer.cisco.com/meraki/api-v1/#!get-network-sm-target-groups){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 - `withDetails` (boolean): Boolean indicating if the the ids of the devices or users scoped by the target group should be included in the response
@@ -7688,7 +7688,7 @@ meraki sm getNetworkSmTargetGroups --networkId 'STRING' --kwargs '{"key1": "valu
 
 **List User Access Devices and its Trusted Access Connections**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!get-network-sm-user-access-devices" target="_blank">https://developer.cisco.com/meraki/api-v1/#!get-network-sm-user-access-devices</a>
+[https://developer.cisco.com/meraki/api-v1/#!get-network-sm-user-access-devices](https://developer.cisco.com/meraki/api-v1/#!get-network-sm-user-access-devices){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 - `total_pages` (integer or string): use with perPage to get total results up to total_pages*perPage; -1 or "all" for all pages
@@ -7715,7 +7715,7 @@ meraki sm getNetworkSmUserAccessDevices --networkId 'STRING' --kwargs '{"key1": 
 
 **Get the profiles associated with a user**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!get-network-sm-user-device-profiles" target="_blank">https://developer.cisco.com/meraki/api-v1/#!get-network-sm-user-device-profiles</a>
+[https://developer.cisco.com/meraki/api-v1/#!get-network-sm-user-device-profiles](https://developer.cisco.com/meraki/api-v1/#!get-network-sm-user-device-profiles){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 - `userId` (string): (required)
@@ -7738,7 +7738,7 @@ meraki sm getNetworkSmUserDeviceProfiles --networkId 'STRING' --userId 'STRING'
 
 **Get a list of softwares associated with a user**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!get-network-sm-user-softwares" target="_blank">https://developer.cisco.com/meraki/api-v1/#!get-network-sm-user-softwares</a>
+[https://developer.cisco.com/meraki/api-v1/#!get-network-sm-user-softwares](https://developer.cisco.com/meraki/api-v1/#!get-network-sm-user-softwares){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 - `userId` (string): (required)
@@ -7761,7 +7761,7 @@ meraki sm getNetworkSmUserSoftwares --networkId 'STRING' --userId 'STRING'
 
 **List the owners in an SM network with various specified fields and filters**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!get-network-sm-users" target="_blank">https://developer.cisco.com/meraki/api-v1/#!get-network-sm-users</a>
+[https://developer.cisco.com/meraki/api-v1/#!get-network-sm-users](https://developer.cisco.com/meraki/api-v1/#!get-network-sm-users){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 - `ids` (array): Filter users by id(s).
@@ -7787,7 +7787,7 @@ meraki sm getNetworkSmUsers --networkId 'STRING' --kwargs '{"key1": "value1", "k
 
 **Get the organization's APNS certificate**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!get-organization-sm-apns-cert" target="_blank">https://developer.cisco.com/meraki/api-v1/#!get-organization-sm-apns-cert</a>
+[https://developer.cisco.com/meraki/api-v1/#!get-organization-sm-apns-cert](https://developer.cisco.com/meraki/api-v1/#!get-organization-sm-apns-cert){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `organizationId` (string): (required)
 
@@ -7809,7 +7809,7 @@ meraki sm getOrganizationSmApnsCert --organizationId 'STRING'
 
 **Get a hash containing the unparsed token of the VPP account with the given ID**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!get-organization-sm-vpp-account" target="_blank">https://developer.cisco.com/meraki/api-v1/#!get-organization-sm-vpp-account</a>
+[https://developer.cisco.com/meraki/api-v1/#!get-organization-sm-vpp-account](https://developer.cisco.com/meraki/api-v1/#!get-organization-sm-vpp-account){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `organizationId` (string): (required)
 - `vppAccountId` (string): (required)
@@ -7832,7 +7832,7 @@ meraki sm getOrganizationSmVppAccount --organizationId 'STRING' --vppAccountId '
 
 **List the VPP accounts in the organization**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!get-organization-sm-vpp-accounts" target="_blank">https://developer.cisco.com/meraki/api-v1/#!get-organization-sm-vpp-accounts</a>
+[https://developer.cisco.com/meraki/api-v1/#!get-organization-sm-vpp-accounts](https://developer.cisco.com/meraki/api-v1/#!get-organization-sm-vpp-accounts){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `organizationId` (string): (required)
 
@@ -7854,7 +7854,7 @@ meraki sm getOrganizationSmVppAccounts --organizationId 'STRING'
 
 **Lock a set of devices**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!lock-network-sm-devices" target="_blank">https://developer.cisco.com/meraki/api-v1/#!lock-network-sm-devices</a>
+[https://developer.cisco.com/meraki/api-v1/#!lock-network-sm-devices](https://developer.cisco.com/meraki/api-v1/#!lock-network-sm-devices){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 - `wifiMacs` (array): The wifiMacs of the devices to be locked.
@@ -7881,7 +7881,7 @@ meraki sm lockNetworkSmDevices --networkId 'STRING' --kwargs '{"key1": "value1",
 
 **Add, delete, or update the tags of a set of devices**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!modify-network-sm-devices-tags" target="_blank">https://developer.cisco.com/meraki/api-v1/#!modify-network-sm-devices-tags</a>
+[https://developer.cisco.com/meraki/api-v1/#!modify-network-sm-devices-tags](https://developer.cisco.com/meraki/api-v1/#!modify-network-sm-devices-tags){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 - `tags` (array): The tags to be added, deleted, or updated.
@@ -7909,7 +7909,7 @@ meraki sm modifyNetworkSmDevicesTags --networkId 'STRING' --tags ITEM --updateAc
 
 **Move a set of devices to a new network**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!move-network-sm-devices" target="_blank">https://developer.cisco.com/meraki/api-v1/#!move-network-sm-devices</a>
+[https://developer.cisco.com/meraki/api-v1/#!move-network-sm-devices](https://developer.cisco.com/meraki/api-v1/#!move-network-sm-devices){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 - `newNetwork` (string): The new network to which the devices will be moved.
@@ -7936,7 +7936,7 @@ meraki sm moveNetworkSmDevices --networkId 'STRING' --newNetwork 'STRING' --kwar
 
 **Refresh the details of a device**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!refresh-network-sm-device-details" target="_blank">https://developer.cisco.com/meraki/api-v1/#!refresh-network-sm-device-details</a>
+[https://developer.cisco.com/meraki/api-v1/#!refresh-network-sm-device-details](https://developer.cisco.com/meraki/api-v1/#!refresh-network-sm-device-details){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 - `deviceId` (string): (required)
@@ -7959,7 +7959,7 @@ meraki sm refreshNetworkSmDeviceDetails --networkId 'STRING' --deviceId 'STRING'
 
 **Unenroll a device**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!unenroll-network-sm-device" target="_blank">https://developer.cisco.com/meraki/api-v1/#!unenroll-network-sm-device</a>
+[https://developer.cisco.com/meraki/api-v1/#!unenroll-network-sm-device](https://developer.cisco.com/meraki/api-v1/#!unenroll-network-sm-device){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 - `deviceId` (string): (required)
@@ -7982,7 +7982,7 @@ meraki sm unenrollNetworkSmDevice --networkId 'STRING' --deviceId 'STRING'
 
 **Modify the fields of a device**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!update-network-sm-devices-fields" target="_blank">https://developer.cisco.com/meraki/api-v1/#!update-network-sm-devices-fields</a>
+[https://developer.cisco.com/meraki/api-v1/#!update-network-sm-devices-fields](https://developer.cisco.com/meraki/api-v1/#!update-network-sm-devices-fields){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 - `deviceFields` (object): The new fields of the device. Each field of this object is optional.
@@ -8008,7 +8008,7 @@ meraki sm updateNetworkSmDevicesFields --networkId 'STRING' --deviceFields JSON_
 
 **Update a target group**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!update-network-sm-target-group" target="_blank">https://developer.cisco.com/meraki/api-v1/#!update-network-sm-target-group</a>
+[https://developer.cisco.com/meraki/api-v1/#!update-network-sm-target-group](https://developer.cisco.com/meraki/api-v1/#!update-network-sm-target-group){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 - `targetGroupId` (string): (required)
@@ -8033,7 +8033,7 @@ meraki sm updateNetworkSmTargetGroup --networkId 'STRING' --targetGroupId 'STRIN
 
 **Wipe a device**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!wipe-network-sm-devices" target="_blank">https://developer.cisco.com/meraki/api-v1/#!wipe-network-sm-devices</a>
+[https://developer.cisco.com/meraki/api-v1/#!wipe-network-sm-devices](https://developer.cisco.com/meraki/api-v1/#!wipe-network-sm-devices){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 - `wifiMac` (string): The wifiMac of the device to be wiped.
@@ -8065,7 +8065,7 @@ meraki sm wipeNetworkSmDevices --networkId 'STRING' --kwargs '{"key1": "value1",
 
 **Add a switch to a stack**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!add-network-switch-stack" target="_blank">https://developer.cisco.com/meraki/api-v1/#!add-network-switch-stack</a>
+[https://developer.cisco.com/meraki/api-v1/#!add-network-switch-stack](https://developer.cisco.com/meraki/api-v1/#!add-network-switch-stack){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 - `switchStackId` (string): (required)
@@ -8089,7 +8089,7 @@ meraki switch addNetworkSwitchStack --networkId 'STRING' --switchStackId 'STRING
 
 **Clone port-level and some switch-level configuration settings from a source switch to one or more target switches**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!clone-organization-switch-devices" target="_blank">https://developer.cisco.com/meraki/api-v1/#!clone-organization-switch-devices</a>
+[https://developer.cisco.com/meraki/api-v1/#!clone-organization-switch-devices](https://developer.cisco.com/meraki/api-v1/#!clone-organization-switch-devices){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `organizationId` (string): (required)
 - `sourceSerial` (string): Serial number of the source switch (must be on a network not bound to a template)
@@ -8113,7 +8113,7 @@ meraki switch cloneOrganizationSwitchDevices --organizationId 'STRING' --sourceS
 
 **Create a layer 3 interface for a switch**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!create-device-switch-routing-interface" target="_blank">https://developer.cisco.com/meraki/api-v1/#!create-device-switch-routing-interface</a>
+[https://developer.cisco.com/meraki/api-v1/#!create-device-switch-routing-interface](https://developer.cisco.com/meraki/api-v1/#!create-device-switch-routing-interface){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `serial` (string): (required)
 - `name` (string): A friendly name or description for the interface or VLAN.
@@ -8142,7 +8142,7 @@ meraki switch createDeviceSwitchRoutingInterface --serial 'STRING' --name 'STRIN
 
 **Create a layer 3 static route for a switch**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!create-device-switch-routing-static-route" target="_blank">https://developer.cisco.com/meraki/api-v1/#!create-device-switch-routing-static-route</a>
+[https://developer.cisco.com/meraki/api-v1/#!create-device-switch-routing-static-route](https://developer.cisco.com/meraki/api-v1/#!create-device-switch-routing-static-route){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `serial` (string): (required)
 - `subnet` (string): The subnet which is routed via this static route and should be specified in CIDR notation (ex. 1.2.3.0/24)
@@ -8169,7 +8169,7 @@ meraki switch createDeviceSwitchRoutingStaticRoute --serial 'STRING' --subnet 'S
 
 **Create an access policy for a switch network**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!create-network-switch-access-policy" target="_blank">https://developer.cisco.com/meraki/api-v1/#!create-network-switch-access-policy</a>
+[https://developer.cisco.com/meraki/api-v1/#!create-network-switch-access-policy](https://developer.cisco.com/meraki/api-v1/#!create-network-switch-access-policy){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 - `name` (string): Name of the access policy
@@ -8205,7 +8205,7 @@ meraki switch createNetworkSwitchAccessPolicy --networkId 'STRING' --name 'STRIN
 
 **Create a link aggregation group**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!create-network-switch-link-aggregation" target="_blank">https://developer.cisco.com/meraki/api-v1/#!create-network-switch-link-aggregation</a>
+[https://developer.cisco.com/meraki/api-v1/#!create-network-switch-link-aggregation](https://developer.cisco.com/meraki/api-v1/#!create-network-switch-link-aggregation){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 - `switchPorts` (array): Array of switch or stack ports for creating aggregation group. Minimum 2 and maximum 8 ports are supported.
@@ -8229,7 +8229,7 @@ meraki switch createNetworkSwitchLinkAggregation --networkId 'STRING' --kwargs '
 
 **Add a switch port schedule**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!create-network-switch-port-schedule" target="_blank">https://developer.cisco.com/meraki/api-v1/#!create-network-switch-port-schedule</a>
+[https://developer.cisco.com/meraki/api-v1/#!create-network-switch-port-schedule](https://developer.cisco.com/meraki/api-v1/#!create-network-switch-port-schedule){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 - `name` (string): The name for your port schedule. Required
@@ -8256,7 +8256,7 @@ meraki switch createNetworkSwitchPortSchedule --networkId 'STRING' --name 'STRIN
 
 **Add a quality of service rule**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!create-network-switch-qos-rule" target="_blank">https://developer.cisco.com/meraki/api-v1/#!create-network-switch-qos-rule</a>
+[https://developer.cisco.com/meraki/api-v1/#!create-network-switch-qos-rule](https://developer.cisco.com/meraki/api-v1/#!create-network-switch-qos-rule){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 - `vlan` (integer): The VLAN of the incoming packet. A null value will match any VLAN.
@@ -8285,7 +8285,7 @@ meraki switch createNetworkSwitchQosRule --networkId 'STRING' --vlan INT --kwarg
 
 **Create a multicast rendezvous point**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!create-network-switch-routing-multicast-rendezvous-point" target="_blank">https://developer.cisco.com/meraki/api-v1/#!create-network-switch-routing-multicast-rendezvous-point</a>
+[https://developer.cisco.com/meraki/api-v1/#!create-network-switch-routing-multicast-rendezvous-point](https://developer.cisco.com/meraki/api-v1/#!create-network-switch-routing-multicast-rendezvous-point){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 - `interfaceIp` (string): The IP address of the interface where the RP needs to be created.
@@ -8309,7 +8309,7 @@ meraki switch createNetworkSwitchRoutingMulticastRendezvousPoint --networkId 'ST
 
 **Create a stack**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!create-network-switch-stack" target="_blank">https://developer.cisco.com/meraki/api-v1/#!create-network-switch-stack</a>
+[https://developer.cisco.com/meraki/api-v1/#!create-network-switch-stack](https://developer.cisco.com/meraki/api-v1/#!create-network-switch-stack){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 - `name` (string): The name of the new stack
@@ -8333,7 +8333,7 @@ meraki switch createNetworkSwitchStack --networkId 'STRING' --name 'STRING' --se
 
 **Create a layer 3 interface for a switch stack**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!create-network-switch-stack-routing-interface" target="_blank">https://developer.cisco.com/meraki/api-v1/#!create-network-switch-stack-routing-interface</a>
+[https://developer.cisco.com/meraki/api-v1/#!create-network-switch-stack-routing-interface](https://developer.cisco.com/meraki/api-v1/#!create-network-switch-stack-routing-interface){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 - `switchStackId` (string): (required)
@@ -8363,7 +8363,7 @@ meraki switch createNetworkSwitchStackRoutingInterface --networkId 'STRING' --sw
 
 **Create a layer 3 static route for a switch stack**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!create-network-switch-stack-routing-static-route" target="_blank">https://developer.cisco.com/meraki/api-v1/#!create-network-switch-stack-routing-static-route</a>
+[https://developer.cisco.com/meraki/api-v1/#!create-network-switch-stack-routing-static-route](https://developer.cisco.com/meraki/api-v1/#!create-network-switch-stack-routing-static-route){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 - `switchStackId` (string): (required)
@@ -8391,7 +8391,7 @@ meraki switch createNetworkSwitchStackRoutingStaticRoute --networkId 'STRING' --
 
 **Cycle a set of switch ports**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!cycle-device-switch-ports" target="_blank">https://developer.cisco.com/meraki/api-v1/#!cycle-device-switch-ports</a>
+[https://developer.cisco.com/meraki/api-v1/#!cycle-device-switch-ports](https://developer.cisco.com/meraki/api-v1/#!cycle-device-switch-ports){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `serial` (string): (required)
 - `ports` (array): List of switch ports. Example: [1, 2-5, 1_MA-MOD-8X10G_1, 1_MA-MOD-8X10G_2-1_MA-MOD-8X10G_8]
@@ -8414,7 +8414,7 @@ meraki switch cycleDeviceSwitchPorts --serial 'STRING' --ports ITEM
 
 **Delete a layer 3 interface from the switch**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!delete-device-switch-routing-interface" target="_blank">https://developer.cisco.com/meraki/api-v1/#!delete-device-switch-routing-interface</a>
+[https://developer.cisco.com/meraki/api-v1/#!delete-device-switch-routing-interface](https://developer.cisco.com/meraki/api-v1/#!delete-device-switch-routing-interface){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `serial` (string): (required)
 - `interfaceId` (string): (required)
@@ -8437,7 +8437,7 @@ meraki switch deleteDeviceSwitchRoutingInterface --serial 'STRING' --interfaceId
 
 **Delete a layer 3 static route for a switch**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!delete-device-switch-routing-static-route" target="_blank">https://developer.cisco.com/meraki/api-v1/#!delete-device-switch-routing-static-route</a>
+[https://developer.cisco.com/meraki/api-v1/#!delete-device-switch-routing-static-route](https://developer.cisco.com/meraki/api-v1/#!delete-device-switch-routing-static-route){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `serial` (string): (required)
 - `staticRouteId` (string): (required)
@@ -8460,7 +8460,7 @@ meraki switch deleteDeviceSwitchRoutingStaticRoute --serial 'STRING' --staticRou
 
 **Delete an access policy for a switch network**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!delete-network-switch-access-policy" target="_blank">https://developer.cisco.com/meraki/api-v1/#!delete-network-switch-access-policy</a>
+[https://developer.cisco.com/meraki/api-v1/#!delete-network-switch-access-policy](https://developer.cisco.com/meraki/api-v1/#!delete-network-switch-access-policy){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 - `accessPolicyNumber` (string): (required)
@@ -8483,7 +8483,7 @@ meraki switch deleteNetworkSwitchAccessPolicy --networkId 'STRING' --accessPolic
 
 **Split a link aggregation group into separate ports**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!delete-network-switch-link-aggregation" target="_blank">https://developer.cisco.com/meraki/api-v1/#!delete-network-switch-link-aggregation</a>
+[https://developer.cisco.com/meraki/api-v1/#!delete-network-switch-link-aggregation](https://developer.cisco.com/meraki/api-v1/#!delete-network-switch-link-aggregation){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 - `linkAggregationId` (string): (required)
@@ -8506,7 +8506,7 @@ meraki switch deleteNetworkSwitchLinkAggregation --networkId 'STRING' --linkAggr
 
 **Delete a switch port schedule**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!delete-network-switch-port-schedule" target="_blank">https://developer.cisco.com/meraki/api-v1/#!delete-network-switch-port-schedule</a>
+[https://developer.cisco.com/meraki/api-v1/#!delete-network-switch-port-schedule](https://developer.cisco.com/meraki/api-v1/#!delete-network-switch-port-schedule){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 - `portScheduleId` (string): (required)
@@ -8529,7 +8529,7 @@ meraki switch deleteNetworkSwitchPortSchedule --networkId 'STRING' --portSchedul
 
 **Delete a quality of service rule**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!delete-network-switch-qos-rule" target="_blank">https://developer.cisco.com/meraki/api-v1/#!delete-network-switch-qos-rule</a>
+[https://developer.cisco.com/meraki/api-v1/#!delete-network-switch-qos-rule](https://developer.cisco.com/meraki/api-v1/#!delete-network-switch-qos-rule){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 - `qosRuleId` (string): (required)
@@ -8552,7 +8552,7 @@ meraki switch deleteNetworkSwitchQosRule --networkId 'STRING' --qosRuleId 'STRIN
 
 **Delete a multicast rendezvous point**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!delete-network-switch-routing-multicast-rendezvous-point" target="_blank">https://developer.cisco.com/meraki/api-v1/#!delete-network-switch-routing-multicast-rendezvous-point</a>
+[https://developer.cisco.com/meraki/api-v1/#!delete-network-switch-routing-multicast-rendezvous-point](https://developer.cisco.com/meraki/api-v1/#!delete-network-switch-routing-multicast-rendezvous-point){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 - `rendezvousPointId` (string): (required)
@@ -8575,7 +8575,7 @@ meraki switch deleteNetworkSwitchRoutingMulticastRendezvousPoint --networkId 'ST
 
 **Delete a stack**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!delete-network-switch-stack" target="_blank">https://developer.cisco.com/meraki/api-v1/#!delete-network-switch-stack</a>
+[https://developer.cisco.com/meraki/api-v1/#!delete-network-switch-stack](https://developer.cisco.com/meraki/api-v1/#!delete-network-switch-stack){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 - `switchStackId` (string): (required)
@@ -8598,7 +8598,7 @@ meraki switch deleteNetworkSwitchStack --networkId 'STRING' --switchStackId 'STR
 
 **Delete a layer 3 interface from a switch stack**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!delete-network-switch-stack-routing-interface" target="_blank">https://developer.cisco.com/meraki/api-v1/#!delete-network-switch-stack-routing-interface</a>
+[https://developer.cisco.com/meraki/api-v1/#!delete-network-switch-stack-routing-interface](https://developer.cisco.com/meraki/api-v1/#!delete-network-switch-stack-routing-interface){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 - `switchStackId` (string): (required)
@@ -8622,7 +8622,7 @@ meraki switch deleteNetworkSwitchStackRoutingInterface --networkId 'STRING' --sw
 
 **Delete a layer 3 static route for a switch stack**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!delete-network-switch-stack-routing-static-route" target="_blank">https://developer.cisco.com/meraki/api-v1/#!delete-network-switch-stack-routing-static-route</a>
+[https://developer.cisco.com/meraki/api-v1/#!delete-network-switch-stack-routing-static-route](https://developer.cisco.com/meraki/api-v1/#!delete-network-switch-stack-routing-static-route){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 - `switchStackId` (string): (required)
@@ -8646,7 +8646,7 @@ meraki switch deleteNetworkSwitchStackRoutingStaticRoute --networkId 'STRING' --
 
 **Return a switch port**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!get-device-switch-port" target="_blank">https://developer.cisco.com/meraki/api-v1/#!get-device-switch-port</a>
+[https://developer.cisco.com/meraki/api-v1/#!get-device-switch-port](https://developer.cisco.com/meraki/api-v1/#!get-device-switch-port){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `serial` (string): (required)
 - `portId` (string): (required)
@@ -8669,7 +8669,7 @@ meraki switch getDeviceSwitchPort --serial 'STRING' --portId 'STRING'
 
 **List the switch ports for a switch**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!get-device-switch-ports" target="_blank">https://developer.cisco.com/meraki/api-v1/#!get-device-switch-ports</a>
+[https://developer.cisco.com/meraki/api-v1/#!get-device-switch-ports](https://developer.cisco.com/meraki/api-v1/#!get-device-switch-ports){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `serial` (string): (required)
 
@@ -8691,7 +8691,7 @@ meraki switch getDeviceSwitchPorts --serial 'STRING'
 
 **Return the status for all the ports of a switch**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!get-device-switch-ports-statuses" target="_blank">https://developer.cisco.com/meraki/api-v1/#!get-device-switch-ports-statuses</a>
+[https://developer.cisco.com/meraki/api-v1/#!get-device-switch-ports-statuses](https://developer.cisco.com/meraki/api-v1/#!get-device-switch-ports-statuses){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `serial` (string): (required)
 - `t0` (string): The beginning of the timespan for the data. The maximum lookback period is 31 days from today.
@@ -8715,7 +8715,7 @@ meraki switch getDeviceSwitchPortsStatuses --serial 'STRING' --kwargs '{"key1": 
 
 **Return the packet counters for all the ports of a switch**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!get-device-switch-ports-statuses-packets" target="_blank">https://developer.cisco.com/meraki/api-v1/#!get-device-switch-ports-statuses-packets</a>
+[https://developer.cisco.com/meraki/api-v1/#!get-device-switch-ports-statuses-packets](https://developer.cisco.com/meraki/api-v1/#!get-device-switch-ports-statuses-packets){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `serial` (string): (required)
 - `t0` (string): The beginning of the timespan for the data. The maximum lookback period is 1 day from today.
@@ -8739,7 +8739,7 @@ meraki switch getDeviceSwitchPortsStatusesPackets --serial 'STRING' --kwargs '{"
 
 **Return a layer 3 interface for a switch**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!get-device-switch-routing-interface" target="_blank">https://developer.cisco.com/meraki/api-v1/#!get-device-switch-routing-interface</a>
+[https://developer.cisco.com/meraki/api-v1/#!get-device-switch-routing-interface](https://developer.cisco.com/meraki/api-v1/#!get-device-switch-routing-interface){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `serial` (string): (required)
 - `interfaceId` (string): (required)
@@ -8762,7 +8762,7 @@ meraki switch getDeviceSwitchRoutingInterface --serial 'STRING' --interfaceId 'S
 
 **Return a layer 3 interface DHCP configuration for a switch**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!get-device-switch-routing-interface-dhcp" target="_blank">https://developer.cisco.com/meraki/api-v1/#!get-device-switch-routing-interface-dhcp</a>
+[https://developer.cisco.com/meraki/api-v1/#!get-device-switch-routing-interface-dhcp](https://developer.cisco.com/meraki/api-v1/#!get-device-switch-routing-interface-dhcp){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `serial` (string): (required)
 - `interfaceId` (string): (required)
@@ -8785,7 +8785,7 @@ meraki switch getDeviceSwitchRoutingInterfaceDhcp --serial 'STRING' --interfaceI
 
 **List layer 3 interfaces for a switch**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!get-device-switch-routing-interfaces" target="_blank">https://developer.cisco.com/meraki/api-v1/#!get-device-switch-routing-interfaces</a>
+[https://developer.cisco.com/meraki/api-v1/#!get-device-switch-routing-interfaces](https://developer.cisco.com/meraki/api-v1/#!get-device-switch-routing-interfaces){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `serial` (string): (required)
 
@@ -8807,7 +8807,7 @@ meraki switch getDeviceSwitchRoutingInterfaces --serial 'STRING'
 
 **Return a layer 3 static route for a switch**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!get-device-switch-routing-static-route" target="_blank">https://developer.cisco.com/meraki/api-v1/#!get-device-switch-routing-static-route</a>
+[https://developer.cisco.com/meraki/api-v1/#!get-device-switch-routing-static-route](https://developer.cisco.com/meraki/api-v1/#!get-device-switch-routing-static-route){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `serial` (string): (required)
 - `staticRouteId` (string): (required)
@@ -8830,7 +8830,7 @@ meraki switch getDeviceSwitchRoutingStaticRoute --serial 'STRING' --staticRouteI
 
 **List layer 3 static routes for a switch**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!get-device-switch-routing-static-routes" target="_blank">https://developer.cisco.com/meraki/api-v1/#!get-device-switch-routing-static-routes</a>
+[https://developer.cisco.com/meraki/api-v1/#!get-device-switch-routing-static-routes](https://developer.cisco.com/meraki/api-v1/#!get-device-switch-routing-static-routes){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `serial` (string): (required)
 
@@ -8852,7 +8852,7 @@ meraki switch getDeviceSwitchRoutingStaticRoutes --serial 'STRING'
 
 **Return warm spare configuration for a switch**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!get-device-switch-warm-spare" target="_blank">https://developer.cisco.com/meraki/api-v1/#!get-device-switch-warm-spare</a>
+[https://developer.cisco.com/meraki/api-v1/#!get-device-switch-warm-spare](https://developer.cisco.com/meraki/api-v1/#!get-device-switch-warm-spare){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `serial` (string): (required)
 
@@ -8874,7 +8874,7 @@ meraki switch getDeviceSwitchWarmSpare --serial 'STRING'
 
 **Return the access control lists for a MS network**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!get-network-switch-access-control-lists" target="_blank">https://developer.cisco.com/meraki/api-v1/#!get-network-switch-access-control-lists</a>
+[https://developer.cisco.com/meraki/api-v1/#!get-network-switch-access-control-lists](https://developer.cisco.com/meraki/api-v1/#!get-network-switch-access-control-lists){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 
@@ -8896,7 +8896,7 @@ meraki switch getNetworkSwitchAccessControlLists --networkId 'STRING'
 
 **List the access policies for a switch network**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!get-network-switch-access-policies" target="_blank">https://developer.cisco.com/meraki/api-v1/#!get-network-switch-access-policies</a>
+[https://developer.cisco.com/meraki/api-v1/#!get-network-switch-access-policies](https://developer.cisco.com/meraki/api-v1/#!get-network-switch-access-policies){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 
@@ -8918,7 +8918,7 @@ meraki switch getNetworkSwitchAccessPolicies --networkId 'STRING'
 
 **Return a specific access policy for a switch network**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!get-network-switch-access-policy" target="_blank">https://developer.cisco.com/meraki/api-v1/#!get-network-switch-access-policy</a>
+[https://developer.cisco.com/meraki/api-v1/#!get-network-switch-access-policy](https://developer.cisco.com/meraki/api-v1/#!get-network-switch-access-policy){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 - `accessPolicyNumber` (string): (required)
@@ -8941,7 +8941,7 @@ meraki switch getNetworkSwitchAccessPolicy --networkId 'STRING' --accessPolicyNu
 
 **Return the switch alternate management interface for the network**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!get-network-switch-alternate-management-interface" target="_blank">https://developer.cisco.com/meraki/api-v1/#!get-network-switch-alternate-management-interface</a>
+[https://developer.cisco.com/meraki/api-v1/#!get-network-switch-alternate-management-interface](https://developer.cisco.com/meraki/api-v1/#!get-network-switch-alternate-management-interface){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 
@@ -8963,7 +8963,7 @@ meraki switch getNetworkSwitchAlternateManagementInterface --networkId 'STRING'
 
 **Return the DHCP server policy**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!get-network-switch-dhcp-server-policy" target="_blank">https://developer.cisco.com/meraki/api-v1/#!get-network-switch-dhcp-server-policy</a>
+[https://developer.cisco.com/meraki/api-v1/#!get-network-switch-dhcp-server-policy](https://developer.cisco.com/meraki/api-v1/#!get-network-switch-dhcp-server-policy){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 
@@ -8985,7 +8985,7 @@ meraki switch getNetworkSwitchDhcpServerPolicy --networkId 'STRING'
 
 **Return the DSCP to CoS mappings**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!get-network-switch-dscp-to-cos-mappings" target="_blank">https://developer.cisco.com/meraki/api-v1/#!get-network-switch-dscp-to-cos-mappings</a>
+[https://developer.cisco.com/meraki/api-v1/#!get-network-switch-dscp-to-cos-mappings](https://developer.cisco.com/meraki/api-v1/#!get-network-switch-dscp-to-cos-mappings){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 
@@ -9007,7 +9007,7 @@ meraki switch getNetworkSwitchDscpToCosMappings --networkId 'STRING'
 
 **List link aggregation groups**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!get-network-switch-link-aggregations" target="_blank">https://developer.cisco.com/meraki/api-v1/#!get-network-switch-link-aggregations</a>
+[https://developer.cisco.com/meraki/api-v1/#!get-network-switch-link-aggregations](https://developer.cisco.com/meraki/api-v1/#!get-network-switch-link-aggregations){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 
@@ -9029,7 +9029,7 @@ meraki switch getNetworkSwitchLinkAggregations --networkId 'STRING'
 
 **Return the MTU configuration**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!get-network-switch-mtu" target="_blank">https://developer.cisco.com/meraki/api-v1/#!get-network-switch-mtu</a>
+[https://developer.cisco.com/meraki/api-v1/#!get-network-switch-mtu](https://developer.cisco.com/meraki/api-v1/#!get-network-switch-mtu){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 
@@ -9051,7 +9051,7 @@ meraki switch getNetworkSwitchMtu --networkId 'STRING'
 
 **List switch port schedules**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!get-network-switch-port-schedules" target="_blank">https://developer.cisco.com/meraki/api-v1/#!get-network-switch-port-schedules</a>
+[https://developer.cisco.com/meraki/api-v1/#!get-network-switch-port-schedules](https://developer.cisco.com/meraki/api-v1/#!get-network-switch-port-schedules){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 
@@ -9073,7 +9073,7 @@ meraki switch getNetworkSwitchPortSchedules --networkId 'STRING'
 
 **Return a quality of service rule**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!get-network-switch-qos-rule" target="_blank">https://developer.cisco.com/meraki/api-v1/#!get-network-switch-qos-rule</a>
+[https://developer.cisco.com/meraki/api-v1/#!get-network-switch-qos-rule](https://developer.cisco.com/meraki/api-v1/#!get-network-switch-qos-rule){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 - `qosRuleId` (string): (required)
@@ -9096,7 +9096,7 @@ meraki switch getNetworkSwitchQosRule --networkId 'STRING' --qosRuleId 'STRING'
 
 **List quality of service rules**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!get-network-switch-qos-rules" target="_blank">https://developer.cisco.com/meraki/api-v1/#!get-network-switch-qos-rules</a>
+[https://developer.cisco.com/meraki/api-v1/#!get-network-switch-qos-rules](https://developer.cisco.com/meraki/api-v1/#!get-network-switch-qos-rules){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 
@@ -9118,7 +9118,7 @@ meraki switch getNetworkSwitchQosRules --networkId 'STRING'
 
 **Return the quality of service rule IDs by order in which they will be processed by the switch**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!get-network-switch-qos-rules-order" target="_blank">https://developer.cisco.com/meraki/api-v1/#!get-network-switch-qos-rules-order</a>
+[https://developer.cisco.com/meraki/api-v1/#!get-network-switch-qos-rules-order](https://developer.cisco.com/meraki/api-v1/#!get-network-switch-qos-rules-order){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 
@@ -9140,7 +9140,7 @@ meraki switch getNetworkSwitchQosRulesOrder --networkId 'STRING'
 
 **Return multicast settings for a network**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!get-network-switch-routing-multicast" target="_blank">https://developer.cisco.com/meraki/api-v1/#!get-network-switch-routing-multicast</a>
+[https://developer.cisco.com/meraki/api-v1/#!get-network-switch-routing-multicast](https://developer.cisco.com/meraki/api-v1/#!get-network-switch-routing-multicast){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 
@@ -9162,7 +9162,7 @@ meraki switch getNetworkSwitchRoutingMulticast --networkId 'STRING'
 
 **Return a multicast rendezvous point**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!get-network-switch-routing-multicast-rendezvous-point" target="_blank">https://developer.cisco.com/meraki/api-v1/#!get-network-switch-routing-multicast-rendezvous-point</a>
+[https://developer.cisco.com/meraki/api-v1/#!get-network-switch-routing-multicast-rendezvous-point](https://developer.cisco.com/meraki/api-v1/#!get-network-switch-routing-multicast-rendezvous-point){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 - `rendezvousPointId` (string): (required)
@@ -9185,7 +9185,7 @@ meraki switch getNetworkSwitchRoutingMulticastRendezvousPoint --networkId 'STRIN
 
 **List multicast rendezvous points**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!get-network-switch-routing-multicast-rendezvous-points" target="_blank">https://developer.cisco.com/meraki/api-v1/#!get-network-switch-routing-multicast-rendezvous-points</a>
+[https://developer.cisco.com/meraki/api-v1/#!get-network-switch-routing-multicast-rendezvous-points](https://developer.cisco.com/meraki/api-v1/#!get-network-switch-routing-multicast-rendezvous-points){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 
@@ -9207,7 +9207,7 @@ meraki switch getNetworkSwitchRoutingMulticastRendezvousPoints --networkId 'STRI
 
 **Return layer 3 OSPF routing configuration**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!get-network-switch-routing-ospf" target="_blank">https://developer.cisco.com/meraki/api-v1/#!get-network-switch-routing-ospf</a>
+[https://developer.cisco.com/meraki/api-v1/#!get-network-switch-routing-ospf](https://developer.cisco.com/meraki/api-v1/#!get-network-switch-routing-ospf){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 
@@ -9229,7 +9229,7 @@ meraki switch getNetworkSwitchRoutingOspf --networkId 'STRING'
 
 **Returns the switch network settings**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!get-network-switch-settings" target="_blank">https://developer.cisco.com/meraki/api-v1/#!get-network-switch-settings</a>
+[https://developer.cisco.com/meraki/api-v1/#!get-network-switch-settings](https://developer.cisco.com/meraki/api-v1/#!get-network-switch-settings){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 
@@ -9251,7 +9251,7 @@ meraki switch getNetworkSwitchSettings --networkId 'STRING'
 
 **Show a switch stack**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!get-network-switch-stack" target="_blank">https://developer.cisco.com/meraki/api-v1/#!get-network-switch-stack</a>
+[https://developer.cisco.com/meraki/api-v1/#!get-network-switch-stack](https://developer.cisco.com/meraki/api-v1/#!get-network-switch-stack){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 - `switchStackId` (string): (required)
@@ -9274,7 +9274,7 @@ meraki switch getNetworkSwitchStack --networkId 'STRING' --switchStackId 'STRING
 
 **Return a layer 3 interface from a switch stack**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!get-network-switch-stack-routing-interface" target="_blank">https://developer.cisco.com/meraki/api-v1/#!get-network-switch-stack-routing-interface</a>
+[https://developer.cisco.com/meraki/api-v1/#!get-network-switch-stack-routing-interface](https://developer.cisco.com/meraki/api-v1/#!get-network-switch-stack-routing-interface){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 - `switchStackId` (string): (required)
@@ -9298,7 +9298,7 @@ meraki switch getNetworkSwitchStackRoutingInterface --networkId 'STRING' --switc
 
 **Return a layer 3 interface DHCP configuration for a switch stack**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!get-network-switch-stack-routing-interface-dhcp" target="_blank">https://developer.cisco.com/meraki/api-v1/#!get-network-switch-stack-routing-interface-dhcp</a>
+[https://developer.cisco.com/meraki/api-v1/#!get-network-switch-stack-routing-interface-dhcp](https://developer.cisco.com/meraki/api-v1/#!get-network-switch-stack-routing-interface-dhcp){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 - `switchStackId` (string): (required)
@@ -9322,7 +9322,7 @@ meraki switch getNetworkSwitchStackRoutingInterfaceDhcp --networkId 'STRING' --s
 
 **List layer 3 interfaces for a switch stack**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!get-network-switch-stack-routing-interfaces" target="_blank">https://developer.cisco.com/meraki/api-v1/#!get-network-switch-stack-routing-interfaces</a>
+[https://developer.cisco.com/meraki/api-v1/#!get-network-switch-stack-routing-interfaces](https://developer.cisco.com/meraki/api-v1/#!get-network-switch-stack-routing-interfaces){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 - `switchStackId` (string): (required)
@@ -9345,7 +9345,7 @@ meraki switch getNetworkSwitchStackRoutingInterfaces --networkId 'STRING' --swit
 
 **Return a layer 3 static route for a switch stack**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!get-network-switch-stack-routing-static-route" target="_blank">https://developer.cisco.com/meraki/api-v1/#!get-network-switch-stack-routing-static-route</a>
+[https://developer.cisco.com/meraki/api-v1/#!get-network-switch-stack-routing-static-route](https://developer.cisco.com/meraki/api-v1/#!get-network-switch-stack-routing-static-route){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 - `switchStackId` (string): (required)
@@ -9369,7 +9369,7 @@ meraki switch getNetworkSwitchStackRoutingStaticRoute --networkId 'STRING' --swi
 
 **List layer 3 static routes for a switch stack**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!get-network-switch-stack-routing-static-routes" target="_blank">https://developer.cisco.com/meraki/api-v1/#!get-network-switch-stack-routing-static-routes</a>
+[https://developer.cisco.com/meraki/api-v1/#!get-network-switch-stack-routing-static-routes](https://developer.cisco.com/meraki/api-v1/#!get-network-switch-stack-routing-static-routes){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 - `switchStackId` (string): (required)
@@ -9392,7 +9392,7 @@ meraki switch getNetworkSwitchStackRoutingStaticRoutes --networkId 'STRING' --sw
 
 **List the switch stacks in a network**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!get-network-switch-stacks" target="_blank">https://developer.cisco.com/meraki/api-v1/#!get-network-switch-stacks</a>
+[https://developer.cisco.com/meraki/api-v1/#!get-network-switch-stacks](https://developer.cisco.com/meraki/api-v1/#!get-network-switch-stacks){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 
@@ -9414,7 +9414,7 @@ meraki switch getNetworkSwitchStacks --networkId 'STRING'
 
 **Return the storm control configuration for a switch network**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!get-network-switch-storm-control" target="_blank">https://developer.cisco.com/meraki/api-v1/#!get-network-switch-storm-control</a>
+[https://developer.cisco.com/meraki/api-v1/#!get-network-switch-storm-control](https://developer.cisco.com/meraki/api-v1/#!get-network-switch-storm-control){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 
@@ -9436,7 +9436,7 @@ meraki switch getNetworkSwitchStormControl --networkId 'STRING'
 
 **Returns STP settings**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!get-network-switch-stp" target="_blank">https://developer.cisco.com/meraki/api-v1/#!get-network-switch-stp</a>
+[https://developer.cisco.com/meraki/api-v1/#!get-network-switch-stp](https://developer.cisco.com/meraki/api-v1/#!get-network-switch-stp){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 
@@ -9458,7 +9458,7 @@ meraki switch getNetworkSwitchStp --networkId 'STRING'
 
 **Return a switch profile port**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!get-organization-config-template-switch-profile-port" target="_blank">https://developer.cisco.com/meraki/api-v1/#!get-organization-config-template-switch-profile-port</a>
+[https://developer.cisco.com/meraki/api-v1/#!get-organization-config-template-switch-profile-port](https://developer.cisco.com/meraki/api-v1/#!get-organization-config-template-switch-profile-port){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `organizationId` (string): (required)
 - `configTemplateId` (string): (required)
@@ -9483,7 +9483,7 @@ meraki switch getOrganizationConfigTemplateSwitchProfilePort --organizationId 'S
 
 **Return all the ports of a switch profile**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!get-organization-config-template-switch-profile-ports" target="_blank">https://developer.cisco.com/meraki/api-v1/#!get-organization-config-template-switch-profile-ports</a>
+[https://developer.cisco.com/meraki/api-v1/#!get-organization-config-template-switch-profile-ports](https://developer.cisco.com/meraki/api-v1/#!get-organization-config-template-switch-profile-ports){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `organizationId` (string): (required)
 - `configTemplateId` (string): (required)
@@ -9507,7 +9507,7 @@ meraki switch getOrganizationConfigTemplateSwitchProfilePorts --organizationId '
 
 **List the switch profiles for your switch template configuration**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!get-organization-config-template-switch-profiles" target="_blank">https://developer.cisco.com/meraki/api-v1/#!get-organization-config-template-switch-profiles</a>
+[https://developer.cisco.com/meraki/api-v1/#!get-organization-config-template-switch-profiles](https://developer.cisco.com/meraki/api-v1/#!get-organization-config-template-switch-profiles){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `organizationId` (string): (required)
 - `configTemplateId` (string): (required)
@@ -9530,7 +9530,7 @@ meraki switch getOrganizationConfigTemplateSwitchProfiles --organizationId 'STRI
 
 **Remove a switch from a stack**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!remove-network-switch-stack" target="_blank">https://developer.cisco.com/meraki/api-v1/#!remove-network-switch-stack</a>
+[https://developer.cisco.com/meraki/api-v1/#!remove-network-switch-stack](https://developer.cisco.com/meraki/api-v1/#!remove-network-switch-stack){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 - `switchStackId` (string): (required)
@@ -9554,7 +9554,7 @@ meraki switch removeNetworkSwitchStack --networkId 'STRING' --switchStackId 'STR
 
 **Update a switch port**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!update-device-switch-port" target="_blank">https://developer.cisco.com/meraki/api-v1/#!update-device-switch-port</a>
+[https://developer.cisco.com/meraki/api-v1/#!update-device-switch-port](https://developer.cisco.com/meraki/api-v1/#!update-device-switch-port){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `serial` (string): (required)
 - `portId` (string): (required)
@@ -9598,7 +9598,7 @@ meraki switch updateDeviceSwitchPort --serial 'STRING' --portId 'STRING' --kwarg
 
 **Update a layer 3 interface for a switch**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!update-device-switch-routing-interface" target="_blank">https://developer.cisco.com/meraki/api-v1/#!update-device-switch-routing-interface</a>
+[https://developer.cisco.com/meraki/api-v1/#!update-device-switch-routing-interface](https://developer.cisco.com/meraki/api-v1/#!update-device-switch-routing-interface){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `serial` (string): (required)
 - `interfaceId` (string): (required)
@@ -9627,7 +9627,7 @@ meraki switch updateDeviceSwitchRoutingInterface --serial 'STRING' --interfaceId
 
 **Update a layer 3 interface DHCP configuration for a switch**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!update-device-switch-routing-interface-dhcp" target="_blank">https://developer.cisco.com/meraki/api-v1/#!update-device-switch-routing-interface-dhcp</a>
+[https://developer.cisco.com/meraki/api-v1/#!update-device-switch-routing-interface-dhcp](https://developer.cisco.com/meraki/api-v1/#!update-device-switch-routing-interface-dhcp){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `serial` (string): (required)
 - `interfaceId` (string): (required)
@@ -9661,7 +9661,7 @@ meraki switch updateDeviceSwitchRoutingInterfaceDhcp --serial 'STRING' --interfa
 
 **Update a layer 3 static route for a switch**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!update-device-switch-routing-static-route" target="_blank">https://developer.cisco.com/meraki/api-v1/#!update-device-switch-routing-static-route</a>
+[https://developer.cisco.com/meraki/api-v1/#!update-device-switch-routing-static-route](https://developer.cisco.com/meraki/api-v1/#!update-device-switch-routing-static-route){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `serial` (string): (required)
 - `staticRouteId` (string): (required)
@@ -9689,7 +9689,7 @@ meraki switch updateDeviceSwitchRoutingStaticRoute --serial 'STRING' --staticRou
 
 **Update warm spare configuration for a switch**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!update-device-switch-warm-spare" target="_blank">https://developer.cisco.com/meraki/api-v1/#!update-device-switch-warm-spare</a>
+[https://developer.cisco.com/meraki/api-v1/#!update-device-switch-warm-spare](https://developer.cisco.com/meraki/api-v1/#!update-device-switch-warm-spare){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `serial` (string): (required)
 - `enabled` (boolean): Enable or disable warm spare for a switch
@@ -9713,7 +9713,7 @@ meraki switch updateDeviceSwitchWarmSpare --serial 'STRING' --enabled --kwargs '
 
 **Update the access control lists for a MS network**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!update-network-switch-access-control-lists" target="_blank">https://developer.cisco.com/meraki/api-v1/#!update-network-switch-access-control-lists</a>
+[https://developer.cisco.com/meraki/api-v1/#!update-network-switch-access-control-lists](https://developer.cisco.com/meraki/api-v1/#!update-network-switch-access-control-lists){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 - `rules` (array): An ordered array of the access control list rules (not including the default rule). An empty array will clear the rules.
@@ -9736,7 +9736,7 @@ meraki switch updateNetworkSwitchAccessControlLists --networkId 'STRING' --rules
 
 **Update an access policy for a switch network**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!update-network-switch-access-policy" target="_blank">https://developer.cisco.com/meraki/api-v1/#!update-network-switch-access-policy</a>
+[https://developer.cisco.com/meraki/api-v1/#!update-network-switch-access-policy](https://developer.cisco.com/meraki/api-v1/#!update-network-switch-access-policy){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 - `accessPolicyNumber` (string): (required)
@@ -9773,7 +9773,7 @@ meraki switch updateNetworkSwitchAccessPolicy --networkId 'STRING' --accessPolic
 
 **Update the switch alternate management interface for the network**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!update-network-switch-alternate-management-interface" target="_blank">https://developer.cisco.com/meraki/api-v1/#!update-network-switch-alternate-management-interface</a>
+[https://developer.cisco.com/meraki/api-v1/#!update-network-switch-alternate-management-interface](https://developer.cisco.com/meraki/api-v1/#!update-network-switch-alternate-management-interface){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 - `enabled` (boolean): Boolean value to enable or disable AMI configuration. If enabled, VLAN and protocols must be set
@@ -9799,7 +9799,7 @@ meraki switch updateNetworkSwitchAlternateManagementInterface --networkId 'STRIN
 
 **Update the DHCP server policy**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!update-network-switch-dhcp-server-policy" target="_blank">https://developer.cisco.com/meraki/api-v1/#!update-network-switch-dhcp-server-policy</a>
+[https://developer.cisco.com/meraki/api-v1/#!update-network-switch-dhcp-server-policy](https://developer.cisco.com/meraki/api-v1/#!update-network-switch-dhcp-server-policy){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 - `defaultPolicy` (string): 'allow' or 'block' new DHCP servers. Default value is 'allow'.
@@ -9824,7 +9824,7 @@ meraki switch updateNetworkSwitchDhcpServerPolicy --networkId 'STRING' --kwargs 
 
 **Update the DSCP to CoS mappings**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!update-network-switch-dscp-to-cos-mappings" target="_blank">https://developer.cisco.com/meraki/api-v1/#!update-network-switch-dscp-to-cos-mappings</a>
+[https://developer.cisco.com/meraki/api-v1/#!update-network-switch-dscp-to-cos-mappings](https://developer.cisco.com/meraki/api-v1/#!update-network-switch-dscp-to-cos-mappings){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 - `mappings` (array): An array of DSCP to CoS mappings. An empty array will reset the mappings to default.
@@ -9847,7 +9847,7 @@ meraki switch updateNetworkSwitchDscpToCosMappings --networkId 'STRING' --mappin
 
 **Update a link aggregation group**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!update-network-switch-link-aggregation" target="_blank">https://developer.cisco.com/meraki/api-v1/#!update-network-switch-link-aggregation</a>
+[https://developer.cisco.com/meraki/api-v1/#!update-network-switch-link-aggregation](https://developer.cisco.com/meraki/api-v1/#!update-network-switch-link-aggregation){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 - `linkAggregationId` (string): (required)
@@ -9872,7 +9872,7 @@ meraki switch updateNetworkSwitchLinkAggregation --networkId 'STRING' --linkAggr
 
 **Update the MTU configuration**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!update-network-switch-mtu" target="_blank">https://developer.cisco.com/meraki/api-v1/#!update-network-switch-mtu</a>
+[https://developer.cisco.com/meraki/api-v1/#!update-network-switch-mtu](https://developer.cisco.com/meraki/api-v1/#!update-network-switch-mtu){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 - `defaultMtuSize` (integer): MTU size for the entire network. Default value is 9578.
@@ -9896,7 +9896,7 @@ meraki switch updateNetworkSwitchMtu --networkId 'STRING' --kwargs '{"key1": "va
 
 **Update a switch port schedule**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!update-network-switch-port-schedule" target="_blank">https://developer.cisco.com/meraki/api-v1/#!update-network-switch-port-schedule</a>
+[https://developer.cisco.com/meraki/api-v1/#!update-network-switch-port-schedule](https://developer.cisco.com/meraki/api-v1/#!update-network-switch-port-schedule){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 - `portScheduleId` (string): (required)
@@ -9924,7 +9924,7 @@ meraki switch updateNetworkSwitchPortSchedule --networkId 'STRING' --portSchedul
 
 **Update a quality of service rule**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!update-network-switch-qos-rule" target="_blank">https://developer.cisco.com/meraki/api-v1/#!update-network-switch-qos-rule</a>
+[https://developer.cisco.com/meraki/api-v1/#!update-network-switch-qos-rule](https://developer.cisco.com/meraki/api-v1/#!update-network-switch-qos-rule){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 - `qosRuleId` (string): (required)
@@ -9954,7 +9954,7 @@ meraki switch updateNetworkSwitchQosRule --networkId 'STRING' --qosRuleId 'STRIN
 
 **Update the order in which the rules should be processed by the switch**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!update-network-switch-qos-rules-order" target="_blank">https://developer.cisco.com/meraki/api-v1/#!update-network-switch-qos-rules-order</a>
+[https://developer.cisco.com/meraki/api-v1/#!update-network-switch-qos-rules-order](https://developer.cisco.com/meraki/api-v1/#!update-network-switch-qos-rules-order){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 - `ruleIds` (array): A list of quality of service rule IDs arranged in order in which they should be processed by the switch.
@@ -9977,7 +9977,7 @@ meraki switch updateNetworkSwitchQosRulesOrder --networkId 'STRING' --ruleIds IT
 
 **Update multicast settings for a network**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!update-network-switch-routing-multicast" target="_blank">https://developer.cisco.com/meraki/api-v1/#!update-network-switch-routing-multicast</a>
+[https://developer.cisco.com/meraki/api-v1/#!update-network-switch-routing-multicast](https://developer.cisco.com/meraki/api-v1/#!update-network-switch-routing-multicast){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 - `defaultSettings` (object): Default multicast setting for entire network. IGMP snooping and Flood unknown multicast traffic settings are enabled by default.
@@ -10001,7 +10001,7 @@ meraki switch updateNetworkSwitchRoutingMulticast --networkId 'STRING' --kwargs 
 
 **Update a multicast rendezvous point**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!update-network-switch-routing-multicast-rendezvous-point" target="_blank">https://developer.cisco.com/meraki/api-v1/#!update-network-switch-routing-multicast-rendezvous-point</a>
+[https://developer.cisco.com/meraki/api-v1/#!update-network-switch-routing-multicast-rendezvous-point](https://developer.cisco.com/meraki/api-v1/#!update-network-switch-routing-multicast-rendezvous-point){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 - `rendezvousPointId` (string): (required)
@@ -10026,7 +10026,7 @@ meraki switch updateNetworkSwitchRoutingMulticastRendezvousPoint --networkId 'ST
 
 **Update layer 3 OSPF routing configuration**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!update-network-switch-routing-ospf" target="_blank">https://developer.cisco.com/meraki/api-v1/#!update-network-switch-routing-ospf</a>
+[https://developer.cisco.com/meraki/api-v1/#!update-network-switch-routing-ospf](https://developer.cisco.com/meraki/api-v1/#!update-network-switch-routing-ospf){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 - `enabled` (boolean): Boolean value to enable or disable OSPF routing. OSPF routing is disabled by default.
@@ -10054,7 +10054,7 @@ meraki switch updateNetworkSwitchRoutingOspf --networkId 'STRING' --kwargs '{"ke
 
 **Update switch network settings**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!update-network-switch-settings" target="_blank">https://developer.cisco.com/meraki/api-v1/#!update-network-switch-settings</a>
+[https://developer.cisco.com/meraki/api-v1/#!update-network-switch-settings](https://developer.cisco.com/meraki/api-v1/#!update-network-switch-settings){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 - `vlan` (integer): Management VLAN
@@ -10079,7 +10079,7 @@ meraki switch updateNetworkSwitchSettings --networkId 'STRING' --kwargs '{"key1"
 
 **Update a layer 3 interface for a switch stack**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!update-network-switch-stack-routing-interface" target="_blank">https://developer.cisco.com/meraki/api-v1/#!update-network-switch-stack-routing-interface</a>
+[https://developer.cisco.com/meraki/api-v1/#!update-network-switch-stack-routing-interface](https://developer.cisco.com/meraki/api-v1/#!update-network-switch-stack-routing-interface){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 - `switchStackId` (string): (required)
@@ -10109,7 +10109,7 @@ meraki switch updateNetworkSwitchStackRoutingInterface --networkId 'STRING' --sw
 
 **Update a layer 3 interface DHCP configuration for a switch stack**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!update-network-switch-stack-routing-interface-dhcp" target="_blank">https://developer.cisco.com/meraki/api-v1/#!update-network-switch-stack-routing-interface-dhcp</a>
+[https://developer.cisco.com/meraki/api-v1/#!update-network-switch-stack-routing-interface-dhcp](https://developer.cisco.com/meraki/api-v1/#!update-network-switch-stack-routing-interface-dhcp){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 - `switchStackId` (string): (required)
@@ -10144,7 +10144,7 @@ meraki switch updateNetworkSwitchStackRoutingInterfaceDhcp --networkId 'STRING' 
 
 **Update a layer 3 static route for a switch stack**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!update-network-switch-stack-routing-static-route" target="_blank">https://developer.cisco.com/meraki/api-v1/#!update-network-switch-stack-routing-static-route</a>
+[https://developer.cisco.com/meraki/api-v1/#!update-network-switch-stack-routing-static-route](https://developer.cisco.com/meraki/api-v1/#!update-network-switch-stack-routing-static-route){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 - `switchStackId` (string): (required)
@@ -10173,7 +10173,7 @@ meraki switch updateNetworkSwitchStackRoutingStaticRoute --networkId 'STRING' --
 
 **Update the storm control configuration for a switch network**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!update-network-switch-storm-control" target="_blank">https://developer.cisco.com/meraki/api-v1/#!update-network-switch-storm-control</a>
+[https://developer.cisco.com/meraki/api-v1/#!update-network-switch-storm-control](https://developer.cisco.com/meraki/api-v1/#!update-network-switch-storm-control){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 - `broadcastThreshold` (integer): Percentage (1 to 99) of total available port bandwidth for broadcast traffic type. Default value 100 percent rate is to clear the configuration.
@@ -10198,7 +10198,7 @@ meraki switch updateNetworkSwitchStormControl --networkId 'STRING' --kwargs '{"k
 
 **Updates STP settings**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!update-network-switch-stp" target="_blank">https://developer.cisco.com/meraki/api-v1/#!update-network-switch-stp</a>
+[https://developer.cisco.com/meraki/api-v1/#!update-network-switch-stp](https://developer.cisco.com/meraki/api-v1/#!update-network-switch-stp){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 - `rstpEnabled` (boolean): The spanning tree protocol status in network
@@ -10222,7 +10222,7 @@ meraki switch updateNetworkSwitchStp --networkId 'STRING' --kwargs '{"key1": "va
 
 **Update a switch profile port**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!update-organization-config-template-switch-profile-port" target="_blank">https://developer.cisco.com/meraki/api-v1/#!update-organization-config-template-switch-profile-port</a>
+[https://developer.cisco.com/meraki/api-v1/#!update-organization-config-template-switch-profile-port](https://developer.cisco.com/meraki/api-v1/#!update-organization-config-template-switch-profile-port){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `organizationId` (string): (required)
 - `configTemplateId` (string): (required)
@@ -10274,7 +10274,7 @@ meraki switch updateOrganizationConfigTemplateSwitchProfilePort --organizationId
 
 **Creates new RF profile for this network**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!create-network-wireless-rf-profile" target="_blank">https://developer.cisco.com/meraki/api-v1/#!create-network-wireless-rf-profile</a>
+[https://developer.cisco.com/meraki/api-v1/#!create-network-wireless-rf-profile](https://developer.cisco.com/meraki/api-v1/#!create-network-wireless-rf-profile){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 - `name` (string): The name of the new profile. Must be unique. This param is required on creation.
@@ -10303,7 +10303,7 @@ meraki wireless createNetworkWirelessRfProfile --networkId 'STRING' --name 'STRI
 
 **Create an Identity PSK**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!create-network-wireless-ssid-identity-psk" target="_blank">https://developer.cisco.com/meraki/api-v1/#!create-network-wireless-ssid-identity-psk</a>
+[https://developer.cisco.com/meraki/api-v1/#!create-network-wireless-ssid-identity-psk](https://developer.cisco.com/meraki/api-v1/#!create-network-wireless-ssid-identity-psk){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 - `number` (string): (required)
@@ -10329,7 +10329,7 @@ meraki wireless createNetworkWirelessSsidIdentityPsk --networkId 'STRING' --numb
 
 **Delete a RF Profile**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!delete-network-wireless-rf-profile" target="_blank">https://developer.cisco.com/meraki/api-v1/#!delete-network-wireless-rf-profile</a>
+[https://developer.cisco.com/meraki/api-v1/#!delete-network-wireless-rf-profile](https://developer.cisco.com/meraki/api-v1/#!delete-network-wireless-rf-profile){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 - `rfProfileId` (string): (required)
@@ -10352,7 +10352,7 @@ meraki wireless deleteNetworkWirelessRfProfile --networkId 'STRING' --rfProfileI
 
 **Delete an Identity PSK**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!delete-network-wireless-ssid-identity-psk" target="_blank">https://developer.cisco.com/meraki/api-v1/#!delete-network-wireless-ssid-identity-psk</a>
+[https://developer.cisco.com/meraki/api-v1/#!delete-network-wireless-ssid-identity-psk](https://developer.cisco.com/meraki/api-v1/#!delete-network-wireless-ssid-identity-psk){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 - `number` (string): (required)
@@ -10376,7 +10376,7 @@ meraki wireless deleteNetworkWirelessSsidIdentityPsk --networkId 'STRING' --numb
 
 **Return the bluetooth settings for a wireless device**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!get-device-wireless-bluetooth-settings" target="_blank">https://developer.cisco.com/meraki/api-v1/#!get-device-wireless-bluetooth-settings</a>
+[https://developer.cisco.com/meraki/api-v1/#!get-device-wireless-bluetooth-settings](https://developer.cisco.com/meraki/api-v1/#!get-device-wireless-bluetooth-settings){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `serial` (string): (required)
 
@@ -10398,7 +10398,7 @@ meraki wireless getDeviceWirelessBluetoothSettings --serial 'STRING'
 
 **Aggregated connectivity info for a given AP on this network**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!get-device-wireless-connection-stats" target="_blank">https://developer.cisco.com/meraki/api-v1/#!get-device-wireless-connection-stats</a>
+[https://developer.cisco.com/meraki/api-v1/#!get-device-wireless-connection-stats](https://developer.cisco.com/meraki/api-v1/#!get-device-wireless-connection-stats){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `serial` (string): (required)
 - `t0` (string): The beginning of the timespan for the data. The maximum lookback period is 180 days from today.
@@ -10427,7 +10427,7 @@ meraki wireless getDeviceWirelessConnectionStats --serial 'STRING' --kwargs '{"k
 
 **Aggregated latency info for a given AP on this network**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!get-device-wireless-latency-stats" target="_blank">https://developer.cisco.com/meraki/api-v1/#!get-device-wireless-latency-stats</a>
+[https://developer.cisco.com/meraki/api-v1/#!get-device-wireless-latency-stats](https://developer.cisco.com/meraki/api-v1/#!get-device-wireless-latency-stats){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `serial` (string): (required)
 - `t0` (string): The beginning of the timespan for the data. The maximum lookback period is 180 days from today.
@@ -10457,7 +10457,7 @@ meraki wireless getDeviceWirelessLatencyStats --serial 'STRING' --kwargs '{"key1
 
 **Return the radio settings of a device**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!get-device-wireless-radio-settings" target="_blank">https://developer.cisco.com/meraki/api-v1/#!get-device-wireless-radio-settings</a>
+[https://developer.cisco.com/meraki/api-v1/#!get-device-wireless-radio-settings](https://developer.cisco.com/meraki/api-v1/#!get-device-wireless-radio-settings){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `serial` (string): (required)
 
@@ -10479,7 +10479,7 @@ meraki wireless getDeviceWirelessRadioSettings --serial 'STRING'
 
 **Return the SSID statuses of an access point**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!get-device-wireless-status" target="_blank">https://developer.cisco.com/meraki/api-v1/#!get-device-wireless-status</a>
+[https://developer.cisco.com/meraki/api-v1/#!get-device-wireless-status](https://developer.cisco.com/meraki/api-v1/#!get-device-wireless-status){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `serial` (string): (required)
 
@@ -10501,7 +10501,7 @@ meraki wireless getDeviceWirelessStatus --serial 'STRING'
 
 **List Air Marshal scan results from a network**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!get-network-wireless-air-marshal" target="_blank">https://developer.cisco.com/meraki/api-v1/#!get-network-wireless-air-marshal</a>
+[https://developer.cisco.com/meraki/api-v1/#!get-network-wireless-air-marshal](https://developer.cisco.com/meraki/api-v1/#!get-network-wireless-air-marshal){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 - `t0` (string): The beginning of the timespan for the data. The maximum lookback period is 31 days from today.
@@ -10525,7 +10525,7 @@ meraki wireless getNetworkWirelessAirMarshal --networkId 'STRING' --kwargs '{"ke
 
 **Return alternate management interface and devices with IP assigned**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!get-network-wireless-alternate-management-interface" target="_blank">https://developer.cisco.com/meraki/api-v1/#!get-network-wireless-alternate-management-interface</a>
+[https://developer.cisco.com/meraki/api-v1/#!get-network-wireless-alternate-management-interface](https://developer.cisco.com/meraki/api-v1/#!get-network-wireless-alternate-management-interface){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 
@@ -10547,7 +10547,7 @@ meraki wireless getNetworkWirelessAlternateManagementInterface --networkId 'STRI
 
 **Return the billing settings of this network**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!get-network-wireless-billing" target="_blank">https://developer.cisco.com/meraki/api-v1/#!get-network-wireless-billing</a>
+[https://developer.cisco.com/meraki/api-v1/#!get-network-wireless-billing](https://developer.cisco.com/meraki/api-v1/#!get-network-wireless-billing){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 
@@ -10567,9 +10567,9 @@ meraki wireless getNetworkWirelessBilling --networkId 'STRING'
 ## Get Network Wireless Bluetooth Settings
 
 
-**Return the Bluetooth settings for a network. <a href="<a href="https://documentation.meraki.com/MR/Bluetooth/Bluetooth_Low_Energy_(BLE)">Bluetooth settings</a> must be enabled on the network.**" target="_blank">https://documentation.meraki.com/MR/Bluetooth/Bluetooth_Low_Energy_(BLE)">Bluetooth settings</a> must be enabled on the network.**</a>
+**Return the Bluetooth settings for a network. <a href="[https://documentation.meraki.com/MR/Bluetooth/Bluetooth_Low_Energy_(BLE)">Bluetooth settings</a> must be enabled on the network.**](https://documentation.meraki.com/MR/Bluetooth/Bluetooth_Low_Energy_(BLE)">Bluetooth settings</a> must be enabled on the network.**){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!get-network-wireless-bluetooth-settings" target="_blank">https://developer.cisco.com/meraki/api-v1/#!get-network-wireless-bluetooth-settings</a>
+[https://developer.cisco.com/meraki/api-v1/#!get-network-wireless-bluetooth-settings](https://developer.cisco.com/meraki/api-v1/#!get-network-wireless-bluetooth-settings){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 
@@ -10591,7 +10591,7 @@ meraki wireless getNetworkWirelessBluetoothSettings --networkId 'STRING'
 
 **Return AP channel utilization over time for a device or network client**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!get-network-wireless-channel-utilization-history" target="_blank">https://developer.cisco.com/meraki/api-v1/#!get-network-wireless-channel-utilization-history</a>
+[https://developer.cisco.com/meraki/api-v1/#!get-network-wireless-channel-utilization-history](https://developer.cisco.com/meraki/api-v1/#!get-network-wireless-channel-utilization-history){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 - `t0` (string): The beginning of the timespan for the data. The maximum lookback period is 31 days from today.
@@ -10622,7 +10622,7 @@ meraki wireless getNetworkWirelessChannelUtilizationHistory --networkId 'STRING'
 
 **Aggregated connectivity info for a given client on this network**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!get-network-wireless-client-connection-stats" target="_blank">https://developer.cisco.com/meraki/api-v1/#!get-network-wireless-client-connection-stats</a>
+[https://developer.cisco.com/meraki/api-v1/#!get-network-wireless-client-connection-stats](https://developer.cisco.com/meraki/api-v1/#!get-network-wireless-client-connection-stats){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 - `clientId` (string): (required)
@@ -10652,7 +10652,7 @@ meraki wireless getNetworkWirelessClientConnectionStats --networkId 'STRING' --c
 
 **List the wireless connectivity events for a client within a network in the timespan.**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!get-network-wireless-client-connectivity-events" target="_blank">https://developer.cisco.com/meraki/api-v1/#!get-network-wireless-client-connectivity-events</a>
+[https://developer.cisco.com/meraki/api-v1/#!get-network-wireless-client-connectivity-events](https://developer.cisco.com/meraki/api-v1/#!get-network-wireless-client-connectivity-events){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 - `clientId` (string): (required)
@@ -10688,7 +10688,7 @@ meraki wireless getNetworkWirelessClientConnectivityEvents --networkId 'STRING' 
 
 **Return wireless client counts over time for a network, device, or network client**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!get-network-wireless-client-count-history" target="_blank">https://developer.cisco.com/meraki/api-v1/#!get-network-wireless-client-count-history</a>
+[https://developer.cisco.com/meraki/api-v1/#!get-network-wireless-client-count-history](https://developer.cisco.com/meraki/api-v1/#!get-network-wireless-client-count-history){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 - `t0` (string): The beginning of the timespan for the data. The maximum lookback period is 31 days from today.
@@ -10720,7 +10720,7 @@ meraki wireless getNetworkWirelessClientCountHistory --networkId 'STRING' --kwar
 
 **Return the latency history for a client**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!get-network-wireless-client-latency-history" target="_blank">https://developer.cisco.com/meraki/api-v1/#!get-network-wireless-client-latency-history</a>
+[https://developer.cisco.com/meraki/api-v1/#!get-network-wireless-client-latency-history](https://developer.cisco.com/meraki/api-v1/#!get-network-wireless-client-latency-history){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 - `clientId` (string): (required)
@@ -10747,7 +10747,7 @@ meraki wireless getNetworkWirelessClientLatencyHistory --networkId 'STRING' --cl
 
 **Aggregated latency info for a given client on this network**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!get-network-wireless-client-latency-stats" target="_blank">https://developer.cisco.com/meraki/api-v1/#!get-network-wireless-client-latency-stats</a>
+[https://developer.cisco.com/meraki/api-v1/#!get-network-wireless-client-latency-stats](https://developer.cisco.com/meraki/api-v1/#!get-network-wireless-client-latency-stats){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 - `clientId` (string): (required)
@@ -10778,7 +10778,7 @@ meraki wireless getNetworkWirelessClientLatencyStats --networkId 'STRING' --clie
 
 **Aggregated connectivity info for this network, grouped by clients**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!get-network-wireless-clients-connection-stats" target="_blank">https://developer.cisco.com/meraki/api-v1/#!get-network-wireless-clients-connection-stats</a>
+[https://developer.cisco.com/meraki/api-v1/#!get-network-wireless-clients-connection-stats](https://developer.cisco.com/meraki/api-v1/#!get-network-wireless-clients-connection-stats){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 - `t0` (string): The beginning of the timespan for the data. The maximum lookback period is 180 days from today.
@@ -10807,7 +10807,7 @@ meraki wireless getNetworkWirelessClientsConnectionStats --networkId 'STRING' --
 
 **Aggregated latency info for this network, grouped by clients**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!get-network-wireless-clients-latency-stats" target="_blank">https://developer.cisco.com/meraki/api-v1/#!get-network-wireless-clients-latency-stats</a>
+[https://developer.cisco.com/meraki/api-v1/#!get-network-wireless-clients-latency-stats](https://developer.cisco.com/meraki/api-v1/#!get-network-wireless-clients-latency-stats){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 - `t0` (string): The beginning of the timespan for the data. The maximum lookback period is 180 days from today.
@@ -10837,7 +10837,7 @@ meraki wireless getNetworkWirelessClientsLatencyStats --networkId 'STRING' --kwa
 
 **Aggregated connectivity info for this network**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!get-network-wireless-connection-stats" target="_blank">https://developer.cisco.com/meraki/api-v1/#!get-network-wireless-connection-stats</a>
+[https://developer.cisco.com/meraki/api-v1/#!get-network-wireless-connection-stats](https://developer.cisco.com/meraki/api-v1/#!get-network-wireless-connection-stats){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 - `t0` (string): The beginning of the timespan for the data. The maximum lookback period is 180 days from today.
@@ -10866,7 +10866,7 @@ meraki wireless getNetworkWirelessConnectionStats --networkId 'STRING' --kwargs 
 
 **Return PHY data rates over time for a network, device, or network client**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!get-network-wireless-data-rate-history" target="_blank">https://developer.cisco.com/meraki/api-v1/#!get-network-wireless-data-rate-history</a>
+[https://developer.cisco.com/meraki/api-v1/#!get-network-wireless-data-rate-history](https://developer.cisco.com/meraki/api-v1/#!get-network-wireless-data-rate-history){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 - `t0` (string): The beginning of the timespan for the data. The maximum lookback period is 31 days from today.
@@ -10898,7 +10898,7 @@ meraki wireless getNetworkWirelessDataRateHistory --networkId 'STRING' --kwargs 
 
 **Aggregated connectivity info for this network, grouped by node**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!get-network-wireless-devices-connection-stats" target="_blank">https://developer.cisco.com/meraki/api-v1/#!get-network-wireless-devices-connection-stats</a>
+[https://developer.cisco.com/meraki/api-v1/#!get-network-wireless-devices-connection-stats](https://developer.cisco.com/meraki/api-v1/#!get-network-wireless-devices-connection-stats){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 - `t0` (string): The beginning of the timespan for the data. The maximum lookback period is 180 days from today.
@@ -10927,7 +10927,7 @@ meraki wireless getNetworkWirelessDevicesConnectionStats --networkId 'STRING' --
 
 **Aggregated latency info for this network, grouped by node**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!get-network-wireless-devices-latency-stats" target="_blank">https://developer.cisco.com/meraki/api-v1/#!get-network-wireless-devices-latency-stats</a>
+[https://developer.cisco.com/meraki/api-v1/#!get-network-wireless-devices-latency-stats](https://developer.cisco.com/meraki/api-v1/#!get-network-wireless-devices-latency-stats){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 - `t0` (string): The beginning of the timespan for the data. The maximum lookback period is 180 days from today.
@@ -10957,7 +10957,7 @@ meraki wireless getNetworkWirelessDevicesLatencyStats --networkId 'STRING' --kwa
 
 **List of all failed client connection events on this network in a given time range**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!get-network-wireless-failed-connections" target="_blank">https://developer.cisco.com/meraki/api-v1/#!get-network-wireless-failed-connections</a>
+[https://developer.cisco.com/meraki/api-v1/#!get-network-wireless-failed-connections](https://developer.cisco.com/meraki/api-v1/#!get-network-wireless-failed-connections){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 - `t0` (string): The beginning of the timespan for the data. The maximum lookback period is 180 days from today.
@@ -10988,7 +10988,7 @@ meraki wireless getNetworkWirelessFailedConnections --networkId 'STRING' --kwarg
 
 **Return average wireless latency over time for a network, device, or network client**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!get-network-wireless-latency-history" target="_blank">https://developer.cisco.com/meraki/api-v1/#!get-network-wireless-latency-history</a>
+[https://developer.cisco.com/meraki/api-v1/#!get-network-wireless-latency-history](https://developer.cisco.com/meraki/api-v1/#!get-network-wireless-latency-history){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 - `t0` (string): The beginning of the timespan for the data. The maximum lookback period is 31 days from today.
@@ -11021,7 +11021,7 @@ meraki wireless getNetworkWirelessLatencyHistory --networkId 'STRING' --kwargs '
 
 **Aggregated latency info for this network**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!get-network-wireless-latency-stats" target="_blank">https://developer.cisco.com/meraki/api-v1/#!get-network-wireless-latency-stats</a>
+[https://developer.cisco.com/meraki/api-v1/#!get-network-wireless-latency-stats](https://developer.cisco.com/meraki/api-v1/#!get-network-wireless-latency-stats){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 - `t0` (string): The beginning of the timespan for the data. The maximum lookback period is 180 days from today.
@@ -11051,7 +11051,7 @@ meraki wireless getNetworkWirelessLatencyStats --networkId 'STRING' --kwargs '{"
 
 **List wireless mesh statuses for repeaters**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!get-network-wireless-mesh-statuses" target="_blank">https://developer.cisco.com/meraki/api-v1/#!get-network-wireless-mesh-statuses</a>
+[https://developer.cisco.com/meraki/api-v1/#!get-network-wireless-mesh-statuses](https://developer.cisco.com/meraki/api-v1/#!get-network-wireless-mesh-statuses){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 - `total_pages` (integer or string): use with perPage to get total results up to total_pages*perPage; -1 or "all" for all pages
@@ -11078,7 +11078,7 @@ meraki wireless getNetworkWirelessMeshStatuses --networkId 'STRING' --kwargs '{"
 
 **Return a RF profile**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!get-network-wireless-rf-profile" target="_blank">https://developer.cisco.com/meraki/api-v1/#!get-network-wireless-rf-profile</a>
+[https://developer.cisco.com/meraki/api-v1/#!get-network-wireless-rf-profile](https://developer.cisco.com/meraki/api-v1/#!get-network-wireless-rf-profile){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 - `rfProfileId` (string): (required)
@@ -11101,7 +11101,7 @@ meraki wireless getNetworkWirelessRfProfile --networkId 'STRING' --rfProfileId '
 
 **List the non-basic RF profiles for this network**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!get-network-wireless-rf-profiles" target="_blank">https://developer.cisco.com/meraki/api-v1/#!get-network-wireless-rf-profiles</a>
+[https://developer.cisco.com/meraki/api-v1/#!get-network-wireless-rf-profiles](https://developer.cisco.com/meraki/api-v1/#!get-network-wireless-rf-profiles){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 - `includeTemplateProfiles` (boolean): If the network is bound to a template, this parameter controls whether or not the non-basic RF profiles defined on the template should be included in the response alongside the non-basic profiles defined on the bound network. Defaults to false.
@@ -11124,7 +11124,7 @@ meraki wireless getNetworkWirelessRfProfiles --networkId 'STRING' --kwargs '{"ke
 
 **Return the wireless settings for a network**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!get-network-wireless-settings" target="_blank">https://developer.cisco.com/meraki/api-v1/#!get-network-wireless-settings</a>
+[https://developer.cisco.com/meraki/api-v1/#!get-network-wireless-settings](https://developer.cisco.com/meraki/api-v1/#!get-network-wireless-settings){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 
@@ -11146,7 +11146,7 @@ meraki wireless getNetworkWirelessSettings --networkId 'STRING'
 
 **Return signal quality (SNR/RSSI) over time for a device or network client**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!get-network-wireless-signal-quality-history" target="_blank">https://developer.cisco.com/meraki/api-v1/#!get-network-wireless-signal-quality-history</a>
+[https://developer.cisco.com/meraki/api-v1/#!get-network-wireless-signal-quality-history](https://developer.cisco.com/meraki/api-v1/#!get-network-wireless-signal-quality-history){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 - `t0` (string): The beginning of the timespan for the data. The maximum lookback period is 31 days from today.
@@ -11178,7 +11178,7 @@ meraki wireless getNetworkWirelessSignalQualityHistory --networkId 'STRING' --kw
 
 **Return a single MR SSID**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!get-network-wireless-ssid" target="_blank">https://developer.cisco.com/meraki/api-v1/#!get-network-wireless-ssid</a>
+[https://developer.cisco.com/meraki/api-v1/#!get-network-wireless-ssid](https://developer.cisco.com/meraki/api-v1/#!get-network-wireless-ssid){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 - `number` (string): (required)
@@ -11201,7 +11201,7 @@ meraki wireless getNetworkWirelessSsid --networkId 'STRING' --number 'STRING'
 
 **List the device type group policies for the SSID**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!get-network-wireless-ssid-device-type-group-policies" target="_blank">https://developer.cisco.com/meraki/api-v1/#!get-network-wireless-ssid-device-type-group-policies</a>
+[https://developer.cisco.com/meraki/api-v1/#!get-network-wireless-ssid-device-type-group-policies](https://developer.cisco.com/meraki/api-v1/#!get-network-wireless-ssid-device-type-group-policies){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 - `number` (string): (required)
@@ -11224,7 +11224,7 @@ meraki wireless getNetworkWirelessSsidDeviceTypeGroupPolicies --networkId 'STRIN
 
 **Return the L3 firewall rules for an SSID on an MR network**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!get-network-wireless-ssid-firewall-l-3-firewall-rules" target="_blank">https://developer.cisco.com/meraki/api-v1/#!get-network-wireless-ssid-firewall-l-3-firewall-rules</a>
+[https://developer.cisco.com/meraki/api-v1/#!get-network-wireless-ssid-firewall-l-3-firewall-rules](https://developer.cisco.com/meraki/api-v1/#!get-network-wireless-ssid-firewall-l-3-firewall-rules){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 - `number` (string): (required)
@@ -11247,7 +11247,7 @@ meraki wireless getNetworkWirelessSsidFirewallL3FirewallRules --networkId 'STRIN
 
 **Return the L7 firewall rules for an SSID on an MR network**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!get-network-wireless-ssid-firewall-l-7-firewall-rules" target="_blank">https://developer.cisco.com/meraki/api-v1/#!get-network-wireless-ssid-firewall-l-7-firewall-rules</a>
+[https://developer.cisco.com/meraki/api-v1/#!get-network-wireless-ssid-firewall-l-7-firewall-rules](https://developer.cisco.com/meraki/api-v1/#!get-network-wireless-ssid-firewall-l-7-firewall-rules){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 - `number` (string): (required)
@@ -11270,7 +11270,7 @@ meraki wireless getNetworkWirelessSsidFirewallL7FirewallRules --networkId 'STRIN
 
 **Return an Identity PSK**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!get-network-wireless-ssid-identity-psk" target="_blank">https://developer.cisco.com/meraki/api-v1/#!get-network-wireless-ssid-identity-psk</a>
+[https://developer.cisco.com/meraki/api-v1/#!get-network-wireless-ssid-identity-psk](https://developer.cisco.com/meraki/api-v1/#!get-network-wireless-ssid-identity-psk){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 - `number` (string): (required)
@@ -11294,7 +11294,7 @@ meraki wireless getNetworkWirelessSsidIdentityPsk --networkId 'STRING' --number 
 
 **List all Identity PSKs in a wireless network**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!get-network-wireless-ssid-identity-psks" target="_blank">https://developer.cisco.com/meraki/api-v1/#!get-network-wireless-ssid-identity-psks</a>
+[https://developer.cisco.com/meraki/api-v1/#!get-network-wireless-ssid-identity-psks](https://developer.cisco.com/meraki/api-v1/#!get-network-wireless-ssid-identity-psks){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 - `number` (string): (required)
@@ -11317,7 +11317,7 @@ meraki wireless getNetworkWirelessSsidIdentityPsks --networkId 'STRING' --number
 
 **Display the splash page settings for the given SSID**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!get-network-wireless-ssid-splash-settings" target="_blank">https://developer.cisco.com/meraki/api-v1/#!get-network-wireless-ssid-splash-settings</a>
+[https://developer.cisco.com/meraki/api-v1/#!get-network-wireless-ssid-splash-settings](https://developer.cisco.com/meraki/api-v1/#!get-network-wireless-ssid-splash-settings){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 - `number` (string): (required)
@@ -11340,7 +11340,7 @@ meraki wireless getNetworkWirelessSsidSplashSettings --networkId 'STRING' --numb
 
 **Display the traffic shaping settings for a SSID on an MR network**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!get-network-wireless-ssid-traffic-shaping-rules" target="_blank">https://developer.cisco.com/meraki/api-v1/#!get-network-wireless-ssid-traffic-shaping-rules</a>
+[https://developer.cisco.com/meraki/api-v1/#!get-network-wireless-ssid-traffic-shaping-rules](https://developer.cisco.com/meraki/api-v1/#!get-network-wireless-ssid-traffic-shaping-rules){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 - `number` (string): (required)
@@ -11363,7 +11363,7 @@ meraki wireless getNetworkWirelessSsidTrafficShapingRules --networkId 'STRING' -
 
 **List the MR SSIDs in a network**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!get-network-wireless-ssids" target="_blank">https://developer.cisco.com/meraki/api-v1/#!get-network-wireless-ssids</a>
+[https://developer.cisco.com/meraki/api-v1/#!get-network-wireless-ssids](https://developer.cisco.com/meraki/api-v1/#!get-network-wireless-ssids){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 
@@ -11385,7 +11385,7 @@ meraki wireless getNetworkWirelessSsids --networkId 'STRING'
 
 **Return AP usage over time for a device or network client**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!get-network-wireless-usage-history" target="_blank">https://developer.cisco.com/meraki/api-v1/#!get-network-wireless-usage-history</a>
+[https://developer.cisco.com/meraki/api-v1/#!get-network-wireless-usage-history](https://developer.cisco.com/meraki/api-v1/#!get-network-wireless-usage-history){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 - `t0` (string): The beginning of the timespan for the data. The maximum lookback period is 31 days from today.
@@ -11417,7 +11417,7 @@ meraki wireless getNetworkWirelessUsageHistory --networkId 'STRING' --kwargs '{"
 
 **Update the bluetooth settings for a wireless device**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!update-device-wireless-bluetooth-settings" target="_blank">https://developer.cisco.com/meraki/api-v1/#!update-device-wireless-bluetooth-settings</a>
+[https://developer.cisco.com/meraki/api-v1/#!update-device-wireless-bluetooth-settings](https://developer.cisco.com/meraki/api-v1/#!update-device-wireless-bluetooth-settings){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `serial` (string): (required)
 - `uuid` (string): Desired UUID of the beacon. If the value is set to null it will reset to Dashboard's automatically generated value.
@@ -11442,7 +11442,7 @@ meraki wireless updateDeviceWirelessBluetoothSettings --serial 'STRING' --kwargs
 
 **Update the radio settings of a device**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!update-device-wireless-radio-settings" target="_blank">https://developer.cisco.com/meraki/api-v1/#!update-device-wireless-radio-settings</a>
+[https://developer.cisco.com/meraki/api-v1/#!update-device-wireless-radio-settings](https://developer.cisco.com/meraki/api-v1/#!update-device-wireless-radio-settings){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `serial` (string): (required)
 - `rfProfileId` (integer): The ID of an RF profile to assign to the device. If the value of this parameter is null, the appropriate basic RF profile (indoor or outdoor) will be assigned to the device. Assigning an RF profile will clear ALL manually configured overrides on the device (channel width, channel, power).
@@ -11467,7 +11467,7 @@ meraki wireless updateDeviceWirelessRadioSettings --serial 'STRING' --kwargs '{"
 
 **Update alternate management interface and device static IP**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!update-network-wireless-alternate-management-interface" target="_blank">https://developer.cisco.com/meraki/api-v1/#!update-network-wireless-alternate-management-interface</a>
+[https://developer.cisco.com/meraki/api-v1/#!update-network-wireless-alternate-management-interface](https://developer.cisco.com/meraki/api-v1/#!update-network-wireless-alternate-management-interface){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 - `enabled` (boolean): Boolean value to enable or disable alternate management interface
@@ -11493,7 +11493,7 @@ meraki wireless updateNetworkWirelessAlternateManagementInterface --networkId 'S
 
 **Update the billing settings**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!update-network-wireless-billing" target="_blank">https://developer.cisco.com/meraki/api-v1/#!update-network-wireless-billing</a>
+[https://developer.cisco.com/meraki/api-v1/#!update-network-wireless-billing](https://developer.cisco.com/meraki/api-v1/#!update-network-wireless-billing){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 - `currency` (string): The currency code of this node group's billing plans
@@ -11517,7 +11517,7 @@ meraki wireless updateNetworkWirelessBilling --networkId 'STRING' --kwargs '{"ke
 
 **Update the Bluetooth settings for a network**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!update-network-wireless-bluetooth-settings" target="_blank">https://developer.cisco.com/meraki/api-v1/#!update-network-wireless-bluetooth-settings</a>
+[https://developer.cisco.com/meraki/api-v1/#!update-network-wireless-bluetooth-settings](https://developer.cisco.com/meraki/api-v1/#!update-network-wireless-bluetooth-settings){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 - `scanningEnabled` (boolean): Whether APs will scan for Bluetooth enabled clients. (true, false)
@@ -11545,7 +11545,7 @@ meraki wireless updateNetworkWirelessBluetoothSettings --networkId 'STRING' --kw
 
 **Updates specified RF profile for this network**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!update-network-wireless-rf-profile" target="_blank">https://developer.cisco.com/meraki/api-v1/#!update-network-wireless-rf-profile</a>
+[https://developer.cisco.com/meraki/api-v1/#!update-network-wireless-rf-profile](https://developer.cisco.com/meraki/api-v1/#!update-network-wireless-rf-profile){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 - `rfProfileId` (string): (required)
@@ -11575,7 +11575,7 @@ meraki wireless updateNetworkWirelessRfProfile --networkId 'STRING' --rfProfileI
 
 **Update the wireless settings for a network**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!update-network-wireless-settings" target="_blank">https://developer.cisco.com/meraki/api-v1/#!update-network-wireless-settings</a>
+[https://developer.cisco.com/meraki/api-v1/#!update-network-wireless-settings](https://developer.cisco.com/meraki/api-v1/#!update-network-wireless-settings){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 - `meshingEnabled` (boolean): Toggle for enabling or disabling meshing in a network
@@ -11602,7 +11602,7 @@ meraki wireless updateNetworkWirelessSettings --networkId 'STRING' --kwargs '{"k
 
 **Update the attributes of an MR SSID**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!update-network-wireless-ssid" target="_blank">https://developer.cisco.com/meraki/api-v1/#!update-network-wireless-ssid</a>
+[https://developer.cisco.com/meraki/api-v1/#!update-network-wireless-ssid](https://developer.cisco.com/meraki/api-v1/#!update-network-wireless-ssid){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 - `number` (string): (required)
@@ -11676,7 +11676,7 @@ meraki wireless updateNetworkWirelessSsid --networkId 'STRING' --number 'STRING'
 
 **Update the device type group policies for the SSID**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!update-network-wireless-ssid-device-type-group-policies" target="_blank">https://developer.cisco.com/meraki/api-v1/#!update-network-wireless-ssid-device-type-group-policies</a>
+[https://developer.cisco.com/meraki/api-v1/#!update-network-wireless-ssid-device-type-group-policies](https://developer.cisco.com/meraki/api-v1/#!update-network-wireless-ssid-device-type-group-policies){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 - `number` (string): (required)
@@ -11701,7 +11701,7 @@ meraki wireless updateNetworkWirelessSsidDeviceTypeGroupPolicies --networkId 'ST
 
 **Update the L3 firewall rules of an SSID on an MR network**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!update-network-wireless-ssid-firewall-l-3-firewall-rules" target="_blank">https://developer.cisco.com/meraki/api-v1/#!update-network-wireless-ssid-firewall-l-3-firewall-rules</a>
+[https://developer.cisco.com/meraki/api-v1/#!update-network-wireless-ssid-firewall-l-3-firewall-rules](https://developer.cisco.com/meraki/api-v1/#!update-network-wireless-ssid-firewall-l-3-firewall-rules){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 - `number` (string): (required)
@@ -11726,7 +11726,7 @@ meraki wireless updateNetworkWirelessSsidFirewallL3FirewallRules --networkId 'ST
 
 **Update the L7 firewall rules of an SSID on an MR network**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!update-network-wireless-ssid-firewall-l-7-firewall-rules" target="_blank">https://developer.cisco.com/meraki/api-v1/#!update-network-wireless-ssid-firewall-l-7-firewall-rules</a>
+[https://developer.cisco.com/meraki/api-v1/#!update-network-wireless-ssid-firewall-l-7-firewall-rules](https://developer.cisco.com/meraki/api-v1/#!update-network-wireless-ssid-firewall-l-7-firewall-rules){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 - `number` (string): (required)
@@ -11750,7 +11750,7 @@ meraki wireless updateNetworkWirelessSsidFirewallL7FirewallRules --networkId 'ST
 
 **Update an Identity PSK**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!update-network-wireless-ssid-identity-psk" target="_blank">https://developer.cisco.com/meraki/api-v1/#!update-network-wireless-ssid-identity-psk</a>
+[https://developer.cisco.com/meraki/api-v1/#!update-network-wireless-ssid-identity-psk](https://developer.cisco.com/meraki/api-v1/#!update-network-wireless-ssid-identity-psk){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 - `number` (string): (required)
@@ -11777,7 +11777,7 @@ meraki wireless updateNetworkWirelessSsidIdentityPsk --networkId 'STRING' --numb
 
 **Modify the splash page settings for the given SSID**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!update-network-wireless-ssid-splash-settings" target="_blank">https://developer.cisco.com/meraki/api-v1/#!update-network-wireless-ssid-splash-settings</a>
+[https://developer.cisco.com/meraki/api-v1/#!update-network-wireless-ssid-splash-settings](https://developer.cisco.com/meraki/api-v1/#!update-network-wireless-ssid-splash-settings){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 - `number` (string): (required)
@@ -11814,7 +11814,7 @@ meraki wireless updateNetworkWirelessSsidSplashSettings --networkId 'STRING' --n
 
 **Update the traffic shaping settings for an SSID on an MR network**
 
-<a href="https://developer.cisco.com/meraki/api-v1/#!update-network-wireless-ssid-traffic-shaping-rules" target="_blank">https://developer.cisco.com/meraki/api-v1/#!update-network-wireless-ssid-traffic-shaping-rules</a>
+[https://developer.cisco.com/meraki/api-v1/#!update-network-wireless-ssid-traffic-shaping-rules](https://developer.cisco.com/meraki/api-v1/#!update-network-wireless-ssid-traffic-shaping-rules){:title="Open the Meraki API Description Page"}{:target="_blank"}
 
 - `networkId` (string): (required)
 - `number` (string): (required)
