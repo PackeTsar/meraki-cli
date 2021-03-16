@@ -9,6 +9,7 @@ Documented below is a history of Meraki-CLI versions and a log of changes to eac
 # Table of Contents
 - [v1.0.5 -> v1.0.6](#v106)
 - [v1.0.6 -> v1.1.0](#v110)
+- [v1.1.0 -> v1.2.0](#v120)
 
 
 # Versions
