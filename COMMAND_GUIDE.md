@@ -528,10 +528,10 @@ https://developer.cisco.com/meraki/api-v1/#!claim-into-organization
 
 ##### Example:
 ```
-meraki organizations claimIntoOrganization --organizationId 'STRING' --optionalArg1 'optionalarg1value' --optionalArg2 'optionalarg2value'
+meraki organizations claimIntoOrganization --organizationId 'STRING' --optionalArg1 "optionalarg1value" --optionalArg2 "optionalarg2value"
 ````
 
-##### Example using `--kwargs`:
+##### Example using `--kwargs` (Advanced):
 ```
 meraki organizations claimIntoOrganization --organizationId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
@@ -583,10 +583,10 @@ https://developer.cisco.com/meraki/api-v1/#!combine-organization-networks
 
 ##### Example:
 ```
-meraki organizations combineOrganizationNetworks --organizationId 'STRING' --name 'STRING' --networkIds ITEM --optionalArg1 'optionalarg1value' --optionalArg2 'optionalarg2value'
+meraki organizations combineOrganizationNetworks --organizationId 'STRING' --name 'STRING' --networkIds ITEM --optionalArg1 "optionalarg1value" --optionalArg2 "optionalarg2value"
 ````
 
-##### Example using `--kwargs`:
+##### Example using `--kwargs` (Advanced):
 ```
 meraki organizations combineOrganizationNetworks --organizationId 'STRING' --name 'STRING' --networkIds ITEM --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
@@ -637,10 +637,10 @@ https://developer.cisco.com/meraki/api-v1/#!create-organization-action-batch
 
 ##### Example:
 ```
-meraki organizations createOrganizationActionBatch --organizationId 'STRING' --actions ITEM --optionalArg1 'optionalarg1value' --optionalArg2 'optionalarg2value'
+meraki organizations createOrganizationActionBatch --organizationId 'STRING' --actions ITEM --optionalArg1 "optionalarg1value" --optionalArg2 "optionalarg2value"
 ````
 
-##### Example using `--kwargs`:
+##### Example using `--kwargs` (Advanced):
 ```
 meraki organizations createOrganizationActionBatch --organizationId 'STRING' --actions ITEM --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
@@ -671,10 +671,10 @@ https://developer.cisco.com/meraki/api-v1/#!create-organization-admin
 
 ##### Example:
 ```
-meraki organizations createOrganizationAdmin --organizationId 'STRING' --email 'STRING' --name 'STRING' --orgAccess 'STRING' --optionalArg1 'optionalarg1value' --optionalArg2 'optionalarg2value'
+meraki organizations createOrganizationAdmin --organizationId 'STRING' --email 'STRING' --name 'STRING' --orgAccess 'STRING' --optionalArg1 "optionalarg1value" --optionalArg2 "optionalarg2value"
 ````
 
-##### Example using `--kwargs`:
+##### Example using `--kwargs` (Advanced):
 ```
 meraki organizations createOrganizationAdmin --organizationId 'STRING' --email 'STRING' --name 'STRING' --orgAccess 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
@@ -707,10 +707,10 @@ Each property defaults to 'default or inherit' when not provided.
 
 ##### Example:
 ```
-meraki organizations createOrganizationBrandingPolicy --organizationId 'STRING' --name 'STRING' --enabled --adminSettings JSON_STRING --optionalArg1 'optionalarg1value' --optionalArg2 'optionalarg2value'
+meraki organizations createOrganizationBrandingPolicy --organizationId 'STRING' --name 'STRING' --enabled --adminSettings JSON_STRING --optionalArg1 "optionalarg1value" --optionalArg2 "optionalarg2value"
 ````
 
-##### Example using `--kwargs`:
+##### Example using `--kwargs` (Advanced):
 ```
 meraki organizations createOrganizationBrandingPolicy --organizationId 'STRING' --name 'STRING' --enabled --adminSettings JSON_STRING --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
@@ -738,10 +738,10 @@ https://developer.cisco.com/meraki/api-v1/#!create-organization-config-template
 
 ##### Example:
 ```
-meraki organizations createOrganizationConfigTemplate --organizationId 'STRING' --name 'STRING' --optionalArg1 'optionalarg1value' --optionalArg2 'optionalarg2value'
+meraki organizations createOrganizationConfigTemplate --organizationId 'STRING' --name 'STRING' --optionalArg1 "optionalarg1value" --optionalArg2 "optionalarg2value"
 ````
 
-##### Example using `--kwargs`:
+##### Example using `--kwargs` (Advanced):
 ```
 meraki organizations createOrganizationConfigTemplate --organizationId 'STRING' --name 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
@@ -772,10 +772,10 @@ https://developer.cisco.com/meraki/api-v1/#!create-organization-network
 
 ##### Example:
 ```
-meraki organizations createOrganizationNetwork --organizationId 'STRING' --name 'STRING' --productTypes ITEM --optionalArg1 'optionalarg1value' --optionalArg2 'optionalarg2value'
+meraki organizations createOrganizationNetwork --organizationId 'STRING' --name 'STRING' --productTypes ITEM --optionalArg1 "optionalarg1value" --optionalArg2 "optionalarg2value"
 ````
 
-##### Example using `--kwargs`:
+##### Example using `--kwargs` (Advanced):
 ```
 meraki organizations createOrganizationNetwork --organizationId 'STRING' --name 'STRING' --productTypes ITEM --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
@@ -802,10 +802,10 @@ https://developer.cisco.com/meraki/api-v1/#!create-organization-saml-idp
 
 ##### Example:
 ```
-meraki organizations createOrganizationSamlIdp --organizationId 'STRING' --x509certSha1Fingerprint 'STRING' --optionalArg1 'optionalarg1value' --optionalArg2 'optionalarg2value'
+meraki organizations createOrganizationSamlIdp --organizationId 'STRING' --x509certSha1Fingerprint 'STRING' --optionalArg1 "optionalarg1value" --optionalArg2 "optionalarg2value"
 ````
 
-##### Example using `--kwargs`:
+##### Example using `--kwargs` (Advanced):
 ```
 meraki organizations createOrganizationSamlIdp --organizationId 'STRING' --x509certSha1Fingerprint 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
@@ -834,10 +834,10 @@ https://developer.cisco.com/meraki/api-v1/#!create-organization-saml-role
 
 ##### Example:
 ```
-meraki organizations createOrganizationSamlRole --organizationId 'STRING' --role 'STRING' --orgAccess 'STRING' --optionalArg1 'optionalarg1value' --optionalArg2 'optionalarg2value'
+meraki organizations createOrganizationSamlRole --organizationId 'STRING' --role 'STRING' --orgAccess 'STRING' --optionalArg1 "optionalarg1value" --optionalArg2 "optionalarg2value"
 ````
 
-##### Example using `--kwargs`:
+##### Example using `--kwargs` (Advanced):
 ```
 meraki organizations createOrganizationSamlRole --organizationId 'STRING' --role 'STRING' --orgAccess 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
@@ -1077,10 +1077,10 @@ https://developer.cisco.com/meraki/api-v1/#!get-organization-action-batches
 
 ##### Example:
 ```
-meraki organizations getOrganizationActionBatches --organizationId 'STRING' --optionalArg1 'optionalarg1value' --optionalArg2 'optionalarg2value'
+meraki organizations getOrganizationActionBatches --organizationId 'STRING' --optionalArg1 "optionalarg1value" --optionalArg2 "optionalarg2value"
 ````
 
-##### Example using `--kwargs`:
+##### Example using `--kwargs` (Advanced):
 ```
 meraki organizations getOrganizationActionBatches --organizationId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
@@ -1141,10 +1141,10 @@ https://developer.cisco.com/meraki/api-v1/#!get-organization-api-requests
 
 ##### Example:
 ```
-meraki organizations getOrganizationApiRequests --organizationId 'STRING' --optionalArg1 'optionalarg1value' --optionalArg2 'optionalarg2value'
+meraki organizations getOrganizationApiRequests --organizationId 'STRING' --optionalArg1 "optionalarg1value" --optionalArg2 "optionalarg2value"
 ````
 
-##### Example using `--kwargs`:
+##### Example using `--kwargs` (Advanced):
 ```
 meraki organizations getOrganizationApiRequests --organizationId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
@@ -1172,10 +1172,10 @@ https://developer.cisco.com/meraki/api-v1/#!get-organization-api-requests-overvi
 
 ##### Example:
 ```
-meraki organizations getOrganizationApiRequestsOverview --organizationId 'STRING' --optionalArg1 'optionalarg1value' --optionalArg2 'optionalarg2value'
+meraki organizations getOrganizationApiRequestsOverview --organizationId 'STRING' --optionalArg1 "optionalarg1value" --optionalArg2 "optionalarg2value"
 ````
 
-##### Example using `--kwargs`:
+##### Example using `--kwargs` (Advanced):
 ```
 meraki organizations getOrganizationApiRequestsOverview --organizationId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
@@ -1327,10 +1327,10 @@ https://developer.cisco.com/meraki/api-v1/#!get-organization-configuration-chang
 
 ##### Example:
 ```
-meraki organizations getOrganizationConfigurationChanges --organizationId 'STRING' --optionalArg1 'optionalarg1value' --optionalArg2 'optionalarg2value'
+meraki organizations getOrganizationConfigurationChanges --organizationId 'STRING' --optionalArg1 "optionalarg1value" --optionalArg2 "optionalarg2value"
 ````
 
-##### Example using `--kwargs`:
+##### Example using `--kwargs` (Advanced):
 ```
 meraki organizations getOrganizationConfigurationChanges --organizationId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
@@ -1361,10 +1361,10 @@ https://developer.cisco.com/meraki/api-v1/#!get-organization-devices
 
 ##### Example:
 ```
-meraki organizations getOrganizationDevices --organizationId 'STRING' --optionalArg1 'optionalarg1value' --optionalArg2 'optionalarg2value'
+meraki organizations getOrganizationDevices --organizationId 'STRING' --optionalArg1 "optionalarg1value" --optionalArg2 "optionalarg2value"
 ````
 
-##### Example using `--kwargs`:
+##### Example using `--kwargs` (Advanced):
 ```
 meraki organizations getOrganizationDevices --organizationId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
@@ -1394,10 +1394,10 @@ https://developer.cisco.com/meraki/api-v1/#!get-organization-devices-statuses
 
 ##### Example:
 ```
-meraki organizations getOrganizationDevicesStatuses --organizationId 'STRING' --optionalArg1 'optionalarg1value' --optionalArg2 'optionalarg2value'
+meraki organizations getOrganizationDevicesStatuses --organizationId 'STRING' --optionalArg1 "optionalarg1value" --optionalArg2 "optionalarg2value"
 ````
 
-##### Example using `--kwargs`:
+##### Example using `--kwargs` (Advanced):
 ```
 meraki organizations getOrganizationDevicesStatuses --organizationId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
@@ -1427,10 +1427,10 @@ https://developer.cisco.com/meraki/api-v1/#!get-organization-devices-uplinks-los
 
 ##### Example:
 ```
-meraki organizations getOrganizationDevicesUplinksLossAndLatency --organizationId 'STRING' --optionalArg1 'optionalarg1value' --optionalArg2 'optionalarg2value'
+meraki organizations getOrganizationDevicesUplinksLossAndLatency --organizationId 'STRING' --optionalArg1 "optionalarg1value" --optionalArg2 "optionalarg2value"
 ````
 
-##### Example using `--kwargs`:
+##### Example using `--kwargs` (Advanced):
 ```
 meraki organizations getOrganizationDevicesUplinksLossAndLatency --organizationId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
@@ -1486,10 +1486,10 @@ https://developer.cisco.com/meraki/api-v1/#!get-organization-inventory-devices
 
 ##### Example:
 ```
-meraki organizations getOrganizationInventoryDevices --organizationId 'STRING' --optionalArg1 'optionalarg1value' --optionalArg2 'optionalarg2value'
+meraki organizations getOrganizationInventoryDevices --organizationId 'STRING' --optionalArg1 "optionalarg1value" --optionalArg2 "optionalarg2value"
 ````
 
-##### Example using `--kwargs`:
+##### Example using `--kwargs` (Advanced):
 ```
 meraki organizations getOrganizationInventoryDevices --organizationId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
@@ -1546,10 +1546,10 @@ https://developer.cisco.com/meraki/api-v1/#!get-organization-licenses
 
 ##### Example:
 ```
-meraki organizations getOrganizationLicenses --organizationId 'STRING' --optionalArg1 'optionalarg1value' --optionalArg2 'optionalarg2value'
+meraki organizations getOrganizationLicenses --organizationId 'STRING' --optionalArg1 "optionalarg1value" --optionalArg2 "optionalarg2value"
 ````
 
-##### Example using `--kwargs`:
+##### Example using `--kwargs` (Advanced):
 ```
 meraki organizations getOrganizationLicenses --organizationId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
@@ -1628,10 +1628,10 @@ https://developer.cisco.com/meraki/api-v1/#!get-organization-networks
 
 ##### Example:
 ```
-meraki organizations getOrganizationNetworks --organizationId 'STRING' --optionalArg1 'optionalarg1value' --optionalArg2 'optionalarg2value'
+meraki organizations getOrganizationNetworks --organizationId 'STRING' --optionalArg1 "optionalarg1value" --optionalArg2 "optionalarg2value"
 ````
 
-##### Example using `--kwargs`:
+##### Example using `--kwargs` (Advanced):
 ```
 meraki organizations getOrganizationNetworks --organizationId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
@@ -1827,10 +1827,10 @@ https://developer.cisco.com/meraki/api-v1/#!get-organization-uplinks-statuses
 
 ##### Example:
 ```
-meraki organizations getOrganizationUplinksStatuses --organizationId 'STRING' --optionalArg1 'optionalarg1value' --optionalArg2 'optionalarg2value'
+meraki organizations getOrganizationUplinksStatuses --organizationId 'STRING' --optionalArg1 "optionalarg1value" --optionalArg2 "optionalarg2value"
 ````
 
-##### Example using `--kwargs`:
+##### Example using `--kwargs` (Advanced):
 ```
 meraki organizations getOrganizationUplinksStatuses --organizationId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
@@ -1887,10 +1887,10 @@ https://developer.cisco.com/meraki/api-v1/#!get-organization-webhooks-logs
 
 ##### Example:
 ```
-meraki organizations getOrganizationWebhooksLogs --organizationId 'STRING' --optionalArg1 'optionalarg1value' --optionalArg2 'optionalarg2value'
+meraki organizations getOrganizationWebhooksLogs --organizationId 'STRING' --optionalArg1 "optionalarg1value" --optionalArg2 "optionalarg2value"
 ````
 
-##### Example using `--kwargs`:
+##### Example using `--kwargs` (Advanced):
 ```
 meraki organizations getOrganizationWebhooksLogs --organizationId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
@@ -2014,10 +2014,10 @@ https://developer.cisco.com/meraki/api-v1/#!update-organization
 
 ##### Example:
 ```
-meraki organizations updateOrganization --organizationId 'STRING' --optionalArg1 'optionalarg1value' --optionalArg2 'optionalarg2value'
+meraki organizations updateOrganization --organizationId 'STRING' --optionalArg1 "optionalarg1value" --optionalArg2 "optionalarg2value"
 ````
 
-##### Example using `--kwargs`:
+##### Example using `--kwargs` (Advanced):
 ```
 meraki organizations updateOrganization --organizationId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
@@ -2045,10 +2045,10 @@ https://developer.cisco.com/meraki/api-v1/#!update-organization-action-batch
 
 ##### Example:
 ```
-meraki organizations updateOrganizationActionBatch --organizationId 'STRING' --actionBatchId 'STRING' --optionalArg1 'optionalarg1value' --optionalArg2 'optionalarg2value'
+meraki organizations updateOrganizationActionBatch --organizationId 'STRING' --actionBatchId 'STRING' --optionalArg1 "optionalarg1value" --optionalArg2 "optionalarg2value"
 ````
 
-##### Example using `--kwargs`:
+##### Example using `--kwargs` (Advanced):
 ```
 meraki organizations updateOrganizationActionBatch --organizationId 'STRING' --actionBatchId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
@@ -2078,10 +2078,10 @@ https://developer.cisco.com/meraki/api-v1/#!update-organization-admin
 
 ##### Example:
 ```
-meraki organizations updateOrganizationAdmin --organizationId 'STRING' --adminId 'STRING' --optionalArg1 'optionalarg1value' --optionalArg2 'optionalarg2value'
+meraki organizations updateOrganizationAdmin --organizationId 'STRING' --adminId 'STRING' --optionalArg1 "optionalarg1value" --optionalArg2 "optionalarg2value"
 ````
 
-##### Example using `--kwargs`:
+##### Example using `--kwargs` (Advanced):
 ```
 meraki organizations updateOrganizationAdmin --organizationId 'STRING' --adminId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
@@ -2139,10 +2139,10 @@ Dashboard; see the documentation for each property to see the allowed values.
 
 ##### Example:
 ```
-meraki organizations updateOrganizationBrandingPolicy --organizationId 'STRING' --brandingPolicyId 'STRING' --optionalArg1 'optionalarg1value' --optionalArg2 'optionalarg2value'
+meraki organizations updateOrganizationBrandingPolicy --organizationId 'STRING' --brandingPolicyId 'STRING' --optionalArg1 "optionalarg1value" --optionalArg2 "optionalarg2value"
 ````
 
-##### Example using `--kwargs`:
+##### Example using `--kwargs` (Advanced):
 ```
 meraki organizations updateOrganizationBrandingPolicy --organizationId 'STRING' --brandingPolicyId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
@@ -2170,10 +2170,10 @@ https://developer.cisco.com/meraki/api-v1/#!update-organization-config-template
 
 ##### Example:
 ```
-meraki organizations updateOrganizationConfigTemplate --organizationId 'STRING' --configTemplateId 'STRING' --optionalArg1 'optionalarg1value' --optionalArg2 'optionalarg2value'
+meraki organizations updateOrganizationConfigTemplate --organizationId 'STRING' --configTemplateId 'STRING' --optionalArg1 "optionalarg1value" --optionalArg2 "optionalarg2value"
 ````
 
-##### Example using `--kwargs`:
+##### Example using `--kwargs` (Advanced):
 ```
 meraki organizations updateOrganizationConfigTemplate --organizationId 'STRING' --configTemplateId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
@@ -2200,10 +2200,10 @@ https://developer.cisco.com/meraki/api-v1/#!update-organization-license
 
 ##### Example:
 ```
-meraki organizations updateOrganizationLicense --organizationId 'STRING' --licenseId 'STRING' --optionalArg1 'optionalarg1value' --optionalArg2 'optionalarg2value'
+meraki organizations updateOrganizationLicense --organizationId 'STRING' --licenseId 'STRING' --optionalArg1 "optionalarg1value" --optionalArg2 "optionalarg2value"
 ````
 
-##### Example using `--kwargs`:
+##### Example using `--kwargs` (Advanced):
 ```
 meraki organizations updateOrganizationLicense --organizationId 'STRING' --licenseId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
@@ -2240,10 +2240,10 @@ https://developer.cisco.com/meraki/api-v1/#!update-organization-login-security
 
 ##### Example:
 ```
-meraki organizations updateOrganizationLoginSecurity --organizationId 'STRING' --optionalArg1 'optionalarg1value' --optionalArg2 'optionalarg2value'
+meraki organizations updateOrganizationLoginSecurity --organizationId 'STRING' --optionalArg1 "optionalarg1value" --optionalArg2 "optionalarg2value"
 ````
 
-##### Example using `--kwargs`:
+##### Example using `--kwargs` (Advanced):
 ```
 meraki organizations updateOrganizationLoginSecurity --organizationId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
@@ -2269,10 +2269,10 @@ https://developer.cisco.com/meraki/api-v1/#!update-organization-saml
 
 ##### Example:
 ```
-meraki organizations updateOrganizationSaml --organizationId 'STRING' --optionalArg1 'optionalarg1value' --optionalArg2 'optionalarg2value'
+meraki organizations updateOrganizationSaml --organizationId 'STRING' --optionalArg1 "optionalarg1value" --optionalArg2 "optionalarg2value"
 ````
 
-##### Example using `--kwargs`:
+##### Example using `--kwargs` (Advanced):
 ```
 meraki organizations updateOrganizationSaml --organizationId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
@@ -2300,10 +2300,10 @@ https://developer.cisco.com/meraki/api-v1/#!update-organization-saml-idp
 
 ##### Example:
 ```
-meraki organizations updateOrganizationSamlIdp --organizationId 'STRING' --idpId 'STRING' --optionalArg1 'optionalarg1value' --optionalArg2 'optionalarg2value'
+meraki organizations updateOrganizationSamlIdp --organizationId 'STRING' --idpId 'STRING' --optionalArg1 "optionalarg1value" --optionalArg2 "optionalarg2value"
 ````
 
-##### Example using `--kwargs`:
+##### Example using `--kwargs` (Advanced):
 ```
 meraki organizations updateOrganizationSamlIdp --organizationId 'STRING' --idpId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
@@ -2333,10 +2333,10 @@ https://developer.cisco.com/meraki/api-v1/#!update-organization-saml-role
 
 ##### Example:
 ```
-meraki organizations updateOrganizationSamlRole --organizationId 'STRING' --samlRoleId 'STRING' --optionalArg1 'optionalarg1value' --optionalArg2 'optionalarg2value'
+meraki organizations updateOrganizationSamlRole --organizationId 'STRING' --samlRoleId 'STRING' --optionalArg1 "optionalarg1value" --optionalArg2 "optionalarg2value"
 ````
 
-##### Example using `--kwargs`:
+##### Example using `--kwargs` (Advanced):
 ```
 meraki organizations updateOrganizationSamlRole --organizationId 'STRING' --samlRoleId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
@@ -2368,10 +2368,10 @@ https://developer.cisco.com/meraki/api-v1/#!update-organization-snmp
 
 ##### Example:
 ```
-meraki organizations updateOrganizationSnmp --organizationId 'STRING' --optionalArg1 'optionalarg1value' --optionalArg2 'optionalarg2value'
+meraki organizations updateOrganizationSnmp --organizationId 'STRING' --optionalArg1 "optionalarg1value" --optionalArg2 "optionalarg2value"
 ````
 
-##### Example using `--kwargs`:
+##### Example using `--kwargs` (Advanced):
 ```
 meraki organizations updateOrganizationSnmp --organizationId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
@@ -2404,10 +2404,10 @@ https://developer.cisco.com/meraki/api-v1/#!bind-network
 
 ##### Example:
 ```
-meraki networks bindNetwork --networkId 'STRING' --configTemplateId 'STRING' --optionalArg1 'optionalarg1value' --optionalArg2 'optionalarg2value'
+meraki networks bindNetwork --networkId 'STRING' --configTemplateId 'STRING' --optionalArg1 "optionalarg1value" --optionalArg2 "optionalarg2value"
 ````
 
-##### Example using `--kwargs`:
+##### Example using `--kwargs` (Advanced):
 ```
 meraki networks bindNetwork --networkId 'STRING' --configTemplateId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
@@ -2463,10 +2463,10 @@ https://developer.cisco.com/meraki/api-v1/#!create-network-floor-plan
 
 ##### Example:
 ```
-meraki networks createNetworkFloorPlan --networkId 'STRING' --name 'STRING' --imageContents 'STRING' --optionalArg1 'optionalarg1value' --optionalArg2 'optionalarg2value'
+meraki networks createNetworkFloorPlan --networkId 'STRING' --name 'STRING' --imageContents 'STRING' --optionalArg1 "optionalarg1value" --optionalArg2 "optionalarg2value"
 ````
 
-##### Example using `--kwargs`:
+##### Example using `--kwargs` (Advanced):
 ```
 meraki networks createNetworkFloorPlan --networkId 'STRING' --name 'STRING' --imageContents 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
@@ -2502,10 +2502,10 @@ https://developer.cisco.com/meraki/api-v1/#!create-network-group-policy
 
 ##### Example:
 ```
-meraki networks createNetworkGroupPolicy --networkId 'STRING' --name 'STRING' --optionalArg1 'optionalarg1value' --optionalArg2 'optionalarg2value'
+meraki networks createNetworkGroupPolicy --networkId 'STRING' --name 'STRING' --optionalArg1 "optionalarg1value" --optionalArg2 "optionalarg2value"
 ````
 
-##### Example using `--kwargs`:
+##### Example using `--kwargs` (Advanced):
 ```
 meraki networks createNetworkGroupPolicy --networkId 'STRING' --name 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
@@ -2536,10 +2536,10 @@ https://developer.cisco.com/meraki/api-v1/#!create-network-meraki-auth-user
 
 ##### Example:
 ```
-meraki networks createNetworkMerakiAuthUser --networkId 'STRING' --email 'STRING' --name 'STRING' --password 'STRING' --authorizations ITEM --optionalArg1 'optionalarg1value' --optionalArg2 'optionalarg2value'
+meraki networks createNetworkMerakiAuthUser --networkId 'STRING' --email 'STRING' --name 'STRING' --password 'STRING' --authorizations ITEM --optionalArg1 "optionalarg1value" --optionalArg2 "optionalarg2value"
 ````
 
-##### Example using `--kwargs`:
+##### Example using `--kwargs` (Advanced):
 ```
 meraki networks createNetworkMerakiAuthUser --networkId 'STRING' --email 'STRING' --name 'STRING' --password 'STRING' --authorizations ITEM --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
@@ -2597,10 +2597,10 @@ https://developer.cisco.com/meraki/api-v1/#!create-network-pii-request
 
 ##### Example:
 ```
-meraki networks createNetworkPiiRequest --networkId 'STRING' --optionalArg1 'optionalarg1value' --optionalArg2 'optionalarg2value'
+meraki networks createNetworkPiiRequest --networkId 'STRING' --optionalArg1 "optionalarg1value" --optionalArg2 "optionalarg2value"
 ````
 
-##### Example using `--kwargs`:
+##### Example using `--kwargs` (Advanced):
 ```
 meraki networks createNetworkPiiRequest --networkId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
@@ -2628,10 +2628,10 @@ https://developer.cisco.com/meraki/api-v1/#!create-network-webhooks-http-server
 
 ##### Example:
 ```
-meraki networks createNetworkWebhooksHttpServer --networkId 'STRING' --name 'STRING' --url 'STRING' --optionalArg1 'optionalarg1value' --optionalArg2 'optionalarg2value'
+meraki networks createNetworkWebhooksHttpServer --networkId 'STRING' --name 'STRING' --url 'STRING' --optionalArg1 "optionalarg1value" --optionalArg2 "optionalarg2value"
 ````
 
-##### Example using `--kwargs`:
+##### Example using `--kwargs` (Advanced):
 ```
 meraki networks createNetworkWebhooksHttpServer --networkId 'STRING' --name 'STRING' --url 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
@@ -2658,10 +2658,10 @@ https://developer.cisco.com/meraki/api-v1/#!create-network-webhooks-webhook-test
 
 ##### Example:
 ```
-meraki networks createNetworkWebhooksWebhookTest --networkId 'STRING' --url 'STRING' --optionalArg1 'optionalarg1value' --optionalArg2 'optionalarg2value'
+meraki networks createNetworkWebhooksWebhookTest --networkId 'STRING' --url 'STRING' --optionalArg1 "optionalarg1value" --optionalArg2 "optionalarg2value"
 ````
 
-##### Example using `--kwargs`:
+##### Example using `--kwargs` (Advanced):
 ```
 meraki networks createNetworkWebhooksWebhookTest --networkId 'STRING' --url 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
@@ -2902,10 +2902,10 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-bluetooth-client
 
 ##### Example:
 ```
-meraki networks getNetworkBluetoothClient --networkId 'STRING' --bluetoothClientId 'STRING' --optionalArg1 'optionalarg1value' --optionalArg2 'optionalarg2value'
+meraki networks getNetworkBluetoothClient --networkId 'STRING' --bluetoothClientId 'STRING' --optionalArg1 "optionalarg1value" --optionalArg2 "optionalarg2value"
 ````
 
-##### Example using `--kwargs`:
+##### Example using `--kwargs` (Advanced):
 ```
 meraki networks getNetworkBluetoothClient --networkId 'STRING' --bluetoothClientId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
@@ -2938,10 +2938,10 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-bluetooth-clients
 
 ##### Example:
 ```
-meraki networks getNetworkBluetoothClients --networkId 'STRING' --optionalArg1 'optionalarg1value' --optionalArg2 'optionalarg2value'
+meraki networks getNetworkBluetoothClients --networkId 'STRING' --optionalArg1 "optionalarg1value" --optionalArg2 "optionalarg2value"
 ````
 
-##### Example using `--kwargs`:
+##### Example using `--kwargs` (Advanced):
 ```
 meraki networks getNetworkBluetoothClients --networkId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
@@ -3044,10 +3044,10 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-client-traffic-history
 
 ##### Example:
 ```
-meraki networks getNetworkClientTrafficHistory --networkId 'STRING' --clientId 'STRING' --optionalArg1 'optionalarg1value' --optionalArg2 'optionalarg2value'
+meraki networks getNetworkClientTrafficHistory --networkId 'STRING' --clientId 'STRING' --optionalArg1 "optionalarg1value" --optionalArg2 "optionalarg2value"
 ````
 
-##### Example using `--kwargs`:
+##### Example using `--kwargs` (Advanced):
 ```
 meraki networks getNetworkClientTrafficHistory --networkId 'STRING' --clientId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
@@ -3103,10 +3103,10 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-clients
 
 ##### Example:
 ```
-meraki networks getNetworkClients --networkId 'STRING' --optionalArg1 'optionalarg1value' --optionalArg2 'optionalarg2value'
+meraki networks getNetworkClients --networkId 'STRING' --optionalArg1 "optionalarg1value" --optionalArg2 "optionalarg2value"
 ````
 
-##### Example using `--kwargs`:
+##### Example using `--kwargs` (Advanced):
 ```
 meraki networks getNetworkClients --networkId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
@@ -3141,10 +3141,10 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-clients-application-usag
 
 ##### Example:
 ```
-meraki networks getNetworkClientsApplicationUsage --networkId 'STRING' --clients 'STRING' --optionalArg1 'optionalarg1value' --optionalArg2 'optionalarg2value'
+meraki networks getNetworkClientsApplicationUsage --networkId 'STRING' --clients 'STRING' --optionalArg1 "optionalarg1value" --optionalArg2 "optionalarg2value"
 ````
 
-##### Example using `--kwargs`:
+##### Example using `--kwargs` (Advanced):
 ```
 meraki networks getNetworkClientsApplicationUsage --networkId 'STRING' --clients 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
@@ -3179,10 +3179,10 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-clients-usage-histories
 
 ##### Example:
 ```
-meraki networks getNetworkClientsUsageHistories --networkId 'STRING' --clients 'STRING' --optionalArg1 'optionalarg1value' --optionalArg2 'optionalarg2value'
+meraki networks getNetworkClientsUsageHistories --networkId 'STRING' --clients 'STRING' --optionalArg1 "optionalarg1value" --optionalArg2 "optionalarg2value"
 ````
 
-##### Example using `--kwargs`:
+##### Example using `--kwargs` (Advanced):
 ```
 meraki networks getNetworkClientsUsageHistories --networkId 'STRING' --clients 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
@@ -3247,10 +3247,10 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-events
 
 ##### Example:
 ```
-meraki networks getNetworkEvents --networkId 'STRING' --optionalArg1 'optionalarg1value' --optionalArg2 'optionalarg2value'
+meraki networks getNetworkEvents --networkId 'STRING' --optionalArg1 "optionalarg1value" --optionalArg2 "optionalarg2value"
 ````
 
-##### Example using `--kwargs`:
+##### Example using `--kwargs` (Advanced):
 ```
 meraki networks getNetworkEvents --networkId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
@@ -3541,10 +3541,10 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-network-health-channel-u
 
 ##### Example:
 ```
-meraki networks getNetworkNetworkHealthChannelUtilization --networkId 'STRING' --optionalArg1 'optionalarg1value' --optionalArg2 'optionalarg2value'
+meraki networks getNetworkNetworkHealthChannelUtilization --networkId 'STRING' --optionalArg1 "optionalarg1value" --optionalArg2 "optionalarg2value"
 ````
 
-##### Example using `--kwargs`:
+##### Example using `--kwargs` (Advanced):
 ```
 meraki networks getNetworkNetworkHealthChannelUtilization --networkId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
@@ -3575,10 +3575,10 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-pii-pii-keys
 
 ##### Example:
 ```
-meraki networks getNetworkPiiPiiKeys --networkId 'STRING' --optionalArg1 'optionalarg1value' --optionalArg2 'optionalarg2value'
+meraki networks getNetworkPiiPiiKeys --networkId 'STRING' --optionalArg1 "optionalarg1value" --optionalArg2 "optionalarg2value"
 ````
 
-##### Example using `--kwargs`:
+##### Example using `--kwargs` (Advanced):
 ```
 meraki networks getNetworkPiiPiiKeys --networkId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
@@ -3656,10 +3656,10 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-pii-sm-devices-for-key
 
 ##### Example:
 ```
-meraki networks getNetworkPiiSmDevicesForKey --networkId 'STRING' --optionalArg1 'optionalarg1value' --optionalArg2 'optionalarg2value'
+meraki networks getNetworkPiiSmDevicesForKey --networkId 'STRING' --optionalArg1 "optionalarg1value" --optionalArg2 "optionalarg2value"
 ````
 
-##### Example using `--kwargs`:
+##### Example using `--kwargs` (Advanced):
 ```
 meraki networks getNetworkPiiSmDevicesForKey --networkId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
@@ -3690,10 +3690,10 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-pii-sm-owners-for-key
 
 ##### Example:
 ```
-meraki networks getNetworkPiiSmOwnersForKey --networkId 'STRING' --optionalArg1 'optionalarg1value' --optionalArg2 'optionalarg2value'
+meraki networks getNetworkPiiSmOwnersForKey --networkId 'STRING' --optionalArg1 "optionalarg1value" --optionalArg2 "optionalarg2value"
 ````
 
-##### Example using `--kwargs`:
+##### Example using `--kwargs` (Advanced):
 ```
 meraki networks getNetworkPiiSmOwnersForKey --networkId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
@@ -3767,10 +3767,10 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-splash-login-attempts
 
 ##### Example:
 ```
-meraki networks getNetworkSplashLoginAttempts --networkId 'STRING' --optionalArg1 'optionalarg1value' --optionalArg2 'optionalarg2value'
+meraki networks getNetworkSplashLoginAttempts --networkId 'STRING' --optionalArg1 "optionalarg1value" --optionalArg2 "optionalarg2value"
 ````
 
-##### Example using `--kwargs`:
+##### Example using `--kwargs` (Advanced):
 ```
 meraki networks getNetworkSplashLoginAttempts --networkId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
@@ -3821,10 +3821,10 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-traffic
 
 ##### Example:
 ```
-meraki networks getNetworkTraffic --networkId 'STRING' --optionalArg1 'optionalarg1value' --optionalArg2 'optionalarg2value'
+meraki networks getNetworkTraffic --networkId 'STRING' --optionalArg1 "optionalarg1value" --optionalArg2 "optionalarg2value"
 ````
 
-##### Example using `--kwargs`:
+##### Example using `--kwargs` (Advanced):
 ```
 meraki networks getNetworkTraffic --networkId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
@@ -3994,10 +3994,10 @@ https://developer.cisco.com/meraki/api-v1/#!provision-network-clients
 
 ##### Example:
 ```
-meraki networks provisionNetworkClients --networkId 'STRING' --clients ITEM --devicePolicy 'STRING' --optionalArg1 'optionalarg1value' --optionalArg2 'optionalarg2value'
+meraki networks provisionNetworkClients --networkId 'STRING' --clients ITEM --devicePolicy 'STRING' --optionalArg1 "optionalarg1value" --optionalArg2 "optionalarg2value"
 ````
 
-##### Example using `--kwargs`:
+##### Example using `--kwargs` (Advanced):
 ```
 meraki networks provisionNetworkClients --networkId 'STRING' --clients ITEM --devicePolicy 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
@@ -4097,10 +4097,10 @@ https://developer.cisco.com/meraki/api-v1/#!update-network
 
 ##### Example:
 ```
-meraki networks updateNetwork --networkId 'STRING' --optionalArg1 'optionalarg1value' --optionalArg2 'optionalarg2value'
+meraki networks updateNetwork --networkId 'STRING' --optionalArg1 "optionalarg1value" --optionalArg2 "optionalarg2value"
 ````
 
-##### Example using `--kwargs`:
+##### Example using `--kwargs` (Advanced):
 ```
 meraki networks updateNetwork --networkId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
@@ -4127,10 +4127,10 @@ https://developer.cisco.com/meraki/api-v1/#!update-network-alerts-settings
 
 ##### Example:
 ```
-meraki networks updateNetworkAlertsSettings --networkId 'STRING' --optionalArg1 'optionalarg1value' --optionalArg2 'optionalarg2value'
+meraki networks updateNetworkAlertsSettings --networkId 'STRING' --optionalArg1 "optionalarg1value" --optionalArg2 "optionalarg2value"
 ````
 
-##### Example using `--kwargs`:
+##### Example using `--kwargs` (Advanced):
 ```
 meraki networks updateNetworkAlertsSettings --networkId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
@@ -4158,10 +4158,10 @@ https://developer.cisco.com/meraki/api-v1/#!update-network-client-policy
 
 ##### Example:
 ```
-meraki networks updateNetworkClientPolicy --networkId 'STRING' --clientId 'STRING' --devicePolicy 'STRING' --optionalArg1 'optionalarg1value' --optionalArg2 'optionalarg2value'
+meraki networks updateNetworkClientPolicy --networkId 'STRING' --clientId 'STRING' --devicePolicy 'STRING' --optionalArg1 "optionalarg1value" --optionalArg2 "optionalarg2value"
 ````
 
-##### Example using `--kwargs`:
+##### Example using `--kwargs` (Advanced):
 ```
 meraki networks updateNetworkClientPolicy --networkId 'STRING' --clientId 'STRING' --devicePolicy 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
@@ -4212,10 +4212,10 @@ https://developer.cisco.com/meraki/api-v1/#!update-network-firmware-upgrades
 
 ##### Example:
 ```
-meraki networks updateNetworkFirmwareUpgrades --networkId 'STRING' --optionalArg1 'optionalarg1value' --optionalArg2 'optionalarg2value'
+meraki networks updateNetworkFirmwareUpgrades --networkId 'STRING' --optionalArg1 "optionalarg1value" --optionalArg2 "optionalarg2value"
 ````
 
-##### Example using `--kwargs`:
+##### Example using `--kwargs` (Advanced):
 ```
 meraki networks updateNetworkFirmwareUpgrades --networkId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
@@ -4248,10 +4248,10 @@ https://developer.cisco.com/meraki/api-v1/#!update-network-floor-plan
 
 ##### Example:
 ```
-meraki networks updateNetworkFloorPlan --networkId 'STRING' --floorPlanId 'STRING' --optionalArg1 'optionalarg1value' --optionalArg2 'optionalarg2value'
+meraki networks updateNetworkFloorPlan --networkId 'STRING' --floorPlanId 'STRING' --optionalArg1 "optionalarg1value" --optionalArg2 "optionalarg2value"
 ````
 
-##### Example using `--kwargs`:
+##### Example using `--kwargs` (Advanced):
 ```
 meraki networks updateNetworkFloorPlan --networkId 'STRING' --floorPlanId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
@@ -4288,10 +4288,10 @@ https://developer.cisco.com/meraki/api-v1/#!update-network-group-policy
 
 ##### Example:
 ```
-meraki networks updateNetworkGroupPolicy --networkId 'STRING' --groupPolicyId 'STRING' --optionalArg1 'optionalarg1value' --optionalArg2 'optionalarg2value'
+meraki networks updateNetworkGroupPolicy --networkId 'STRING' --groupPolicyId 'STRING' --optionalArg1 "optionalarg1value" --optionalArg2 "optionalarg2value"
 ````
 
-##### Example using `--kwargs`:
+##### Example using `--kwargs` (Advanced):
 ```
 meraki networks updateNetworkGroupPolicy --networkId 'STRING' --groupPolicyId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
@@ -4321,10 +4321,10 @@ https://developer.cisco.com/meraki/api-v1/#!update-network-meraki-auth-user
 
 ##### Example:
 ```
-meraki networks updateNetworkMerakiAuthUser --networkId 'STRING' --merakiAuthUserId 'STRING' --optionalArg1 'optionalarg1value' --optionalArg2 'optionalarg2value'
+meraki networks updateNetworkMerakiAuthUser --networkId 'STRING' --merakiAuthUserId 'STRING' --optionalArg1 "optionalarg1value" --optionalArg2 "optionalarg2value"
 ````
 
-##### Example using `--kwargs`:
+##### Example using `--kwargs` (Advanced):
 ```
 meraki networks updateNetworkMerakiAuthUser --networkId 'STRING' --merakiAuthUserId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
@@ -4353,10 +4353,10 @@ https://developer.cisco.com/meraki/api-v1/#!update-network-mqtt-broker
 
 ##### Example:
 ```
-meraki networks updateNetworkMqttBroker --networkId 'STRING' --mqttBrokerId 'STRING' --optionalArg1 'optionalarg1value' --optionalArg2 'optionalarg2value'
+meraki networks updateNetworkMqttBroker --networkId 'STRING' --mqttBrokerId 'STRING' --optionalArg1 "optionalarg1value" --optionalArg2 "optionalarg2value"
 ````
 
-##### Example using `--kwargs`:
+##### Example using `--kwargs` (Advanced):
 ```
 meraki networks updateNetworkMqttBroker --networkId 'STRING' --mqttBrokerId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
@@ -4384,10 +4384,10 @@ https://developer.cisco.com/meraki/api-v1/#!update-network-netflow
 
 ##### Example:
 ```
-meraki networks updateNetworkNetflow --networkId 'STRING' --optionalArg1 'optionalarg1value' --optionalArg2 'optionalarg2value'
+meraki networks updateNetworkNetflow --networkId 'STRING' --optionalArg1 "optionalarg1value" --optionalArg2 "optionalarg2value"
 ````
 
-##### Example using `--kwargs`:
+##### Example using `--kwargs` (Advanced):
 ```
 meraki networks updateNetworkNetflow --networkId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
@@ -4415,10 +4415,10 @@ https://developer.cisco.com/meraki/api-v1/#!update-network-settings
 
 ##### Example:
 ```
-meraki networks updateNetworkSettings --networkId 'STRING' --optionalArg1 'optionalarg1value' --optionalArg2 'optionalarg2value'
+meraki networks updateNetworkSettings --networkId 'STRING' --optionalArg1 "optionalarg1value" --optionalArg2 "optionalarg2value"
 ````
 
-##### Example using `--kwargs`:
+##### Example using `--kwargs` (Advanced):
 ```
 meraki networks updateNetworkSettings --networkId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
@@ -4446,10 +4446,10 @@ https://developer.cisco.com/meraki/api-v1/#!update-network-snmp
 
 ##### Example:
 ```
-meraki networks updateNetworkSnmp --networkId 'STRING' --optionalArg1 'optionalarg1value' --optionalArg2 'optionalarg2value'
+meraki networks updateNetworkSnmp --networkId 'STRING' --optionalArg1 "optionalarg1value" --optionalArg2 "optionalarg2value"
 ````
 
-##### Example using `--kwargs`:
+##### Example using `--kwargs` (Advanced):
 ```
 meraki networks updateNetworkSnmp --networkId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
@@ -4502,10 +4502,10 @@ https://developer.cisco.com/meraki/api-v1/#!update-network-traffic-analysis
 
 ##### Example:
 ```
-meraki networks updateNetworkTrafficAnalysis --networkId 'STRING' --optionalArg1 'optionalarg1value' --optionalArg2 'optionalarg2value'
+meraki networks updateNetworkTrafficAnalysis --networkId 'STRING' --optionalArg1 "optionalarg1value" --optionalArg2 "optionalarg2value"
 ````
 
-##### Example using `--kwargs`:
+##### Example using `--kwargs` (Advanced):
 ```
 meraki networks updateNetworkTrafficAnalysis --networkId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
@@ -4534,10 +4534,10 @@ https://developer.cisco.com/meraki/api-v1/#!update-network-webhooks-http-server
 
 ##### Example:
 ```
-meraki networks updateNetworkWebhooksHttpServer --networkId 'STRING' --httpServerId 'STRING' --optionalArg1 'optionalarg1value' --optionalArg2 'optionalarg2value'
+meraki networks updateNetworkWebhooksHttpServer --networkId 'STRING' --httpServerId 'STRING' --optionalArg1 "optionalarg1value" --optionalArg2 "optionalarg2value"
 ````
 
-##### Example using `--kwargs`:
+##### Example using `--kwargs` (Advanced):
 ```
 meraki networks updateNetworkWebhooksHttpServer --networkId 'STRING' --httpServerId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
@@ -4571,10 +4571,10 @@ https://developer.cisco.com/meraki/api-v1/#!blink-device-leds
 
 ##### Example:
 ```
-meraki devices blinkDeviceLeds --serial 'STRING' --optionalArg1 'optionalarg1value' --optionalArg2 'optionalarg2value'
+meraki devices blinkDeviceLeds --serial 'STRING' --optionalArg1 "optionalarg1value" --optionalArg2 "optionalarg2value"
 ````
 
-##### Example using `--kwargs`:
+##### Example using `--kwargs` (Advanced):
 ```
 meraki devices blinkDeviceLeds --serial 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
@@ -4624,10 +4624,10 @@ https://developer.cisco.com/meraki/api-v1/#!get-device-clients
 
 ##### Example:
 ```
-meraki devices getDeviceClients --serial 'STRING' --optionalArg1 'optionalarg1value' --optionalArg2 'optionalarg2value'
+meraki devices getDeviceClients --serial 'STRING' --optionalArg1 "optionalarg1value" --optionalArg2 "optionalarg2value"
 ````
 
-##### Example using `--kwargs`:
+##### Example using `--kwargs` (Advanced):
 ```
 meraki devices getDeviceClients --serial 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
@@ -4681,10 +4681,10 @@ https://developer.cisco.com/meraki/api-v1/#!get-device-loss-and-latency-history
 
 ##### Example:
 ```
-meraki devices getDeviceLossAndLatencyHistory --serial 'STRING' --ip 'STRING' --optionalArg1 'optionalarg1value' --optionalArg2 'optionalarg2value'
+meraki devices getDeviceLossAndLatencyHistory --serial 'STRING' --ip 'STRING' --optionalArg1 "optionalarg1value" --optionalArg2 "optionalarg2value"
 ````
 
-##### Example using `--kwargs`:
+##### Example using `--kwargs` (Advanced):
 ```
 meraki devices getDeviceLossAndLatencyHistory --serial 'STRING' --ip 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
@@ -4764,10 +4764,10 @@ https://developer.cisco.com/meraki/api-v1/#!update-device
 
 ##### Example:
 ```
-meraki devices updateDevice --serial 'STRING' --optionalArg1 'optionalarg1value' --optionalArg2 'optionalarg2value'
+meraki devices updateDevice --serial 'STRING' --optionalArg1 "optionalarg1value" --optionalArg2 "optionalarg2value"
 ````
 
-##### Example using `--kwargs`:
+##### Example using `--kwargs` (Advanced):
 ```
 meraki devices updateDevice --serial 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
@@ -4794,10 +4794,10 @@ https://developer.cisco.com/meraki/api-v1/#!update-device-management-interface
 
 ##### Example:
 ```
-meraki devices updateDeviceManagementInterface --serial 'STRING' --optionalArg1 'optionalarg1value' --optionalArg2 'optionalarg2value'
+meraki devices updateDeviceManagementInterface --serial 'STRING' --optionalArg1 "optionalarg1value" --optionalArg2 "optionalarg2value"
 ````
 
-##### Example using `--kwargs`:
+##### Example using `--kwargs` (Advanced):
 ```
 meraki devices updateDeviceManagementInterface --serial 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
@@ -4858,10 +4858,10 @@ https://developer.cisco.com/meraki/api-v1/#!create-network-appliance-traffic-sha
 
 ##### Example:
 ```
-meraki appliance createNetworkApplianceTrafficShapingCustomPerformanceClass --networkId 'STRING' --name 'STRING' --optionalArg1 'optionalarg1value' --optionalArg2 'optionalarg2value'
+meraki appliance createNetworkApplianceTrafficShapingCustomPerformanceClass --networkId 'STRING' --name 'STRING' --optionalArg1 "optionalarg1value" --optionalArg2 "optionalarg2value"
 ````
 
-##### Example using `--kwargs`:
+##### Example using `--kwargs` (Advanced):
 ```
 meraki appliance createNetworkApplianceTrafficShapingCustomPerformanceClass --networkId 'STRING' --name 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
@@ -4891,10 +4891,10 @@ https://developer.cisco.com/meraki/api-v1/#!create-network-appliance-vlan
 
 ##### Example:
 ```
-meraki appliance createNetworkApplianceVlan --networkId 'STRING' --id 'STRING' --name 'STRING' --optionalArg1 'optionalarg1value' --optionalArg2 'optionalarg2value'
+meraki appliance createNetworkApplianceVlan --networkId 'STRING' --id 'STRING' --name 'STRING' --optionalArg1 "optionalarg1value" --optionalArg2 "optionalarg2value"
 ````
 
-##### Example using `--kwargs`:
+##### Example using `--kwargs` (Advanced):
 ```
 meraki appliance createNetworkApplianceVlan --networkId 'STRING' --id 'STRING' --name 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
@@ -5047,10 +5047,10 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-appliance-client-securit
 
 ##### Example:
 ```
-meraki appliance getNetworkApplianceClientSecurityEvents --networkId 'STRING' --clientId 'STRING' --optionalArg1 'optionalarg1value' --optionalArg2 'optionalarg2value'
+meraki appliance getNetworkApplianceClientSecurityEvents --networkId 'STRING' --clientId 'STRING' --optionalArg1 "optionalarg1value" --optionalArg2 "optionalarg2value"
 ````
 
-##### Example using `--kwargs`:
+##### Example using `--kwargs` (Advanced):
 ```
 meraki appliance getNetworkApplianceClientSecurityEvents --networkId 'STRING' --clientId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
@@ -5431,10 +5431,10 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-appliance-security-event
 
 ##### Example:
 ```
-meraki appliance getNetworkApplianceSecurityEvents --networkId 'STRING' --optionalArg1 'optionalarg1value' --optionalArg2 'optionalarg2value'
+meraki appliance getNetworkApplianceSecurityEvents --networkId 'STRING' --optionalArg1 "optionalarg1value" --optionalArg2 "optionalarg2value"
 ````
 
-##### Example using `--kwargs`:
+##### Example using `--kwargs` (Advanced):
 ```
 meraki appliance getNetworkApplianceSecurityEvents --networkId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
@@ -5885,10 +5885,10 @@ https://developer.cisco.com/meraki/api-v1/#!get-organization-appliance-security-
 
 ##### Example:
 ```
-meraki appliance getOrganizationApplianceSecurityEvents --organizationId 'STRING' --optionalArg1 'optionalarg1value' --optionalArg2 'optionalarg2value'
+meraki appliance getOrganizationApplianceSecurityEvents --organizationId 'STRING' --optionalArg1 "optionalarg1value" --optionalArg2 "optionalarg2value"
 ````
 
-##### Example using `--kwargs`:
+##### Example using `--kwargs` (Advanced):
 ```
 meraki appliance getOrganizationApplianceSecurityEvents --organizationId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
@@ -5944,10 +5944,10 @@ https://developer.cisco.com/meraki/api-v1/#!get-organization-appliance-uplink-st
 
 ##### Example:
 ```
-meraki appliance getOrganizationApplianceUplinkStatuses --organizationId 'STRING' --optionalArg1 'optionalarg1value' --optionalArg2 'optionalarg2value'
+meraki appliance getOrganizationApplianceUplinkStatuses --organizationId 'STRING' --optionalArg1 "optionalarg1value" --optionalArg2 "optionalarg2value"
 ````
 
-##### Example using `--kwargs`:
+##### Example using `--kwargs` (Advanced):
 ```
 meraki appliance getOrganizationApplianceUplinkStatuses --organizationId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
@@ -5981,10 +5981,10 @@ https://developer.cisco.com/meraki/api-v1/#!get-organization-appliance-vpn-stats
 
 ##### Example:
 ```
-meraki appliance getOrganizationApplianceVpnStats --organizationId 'STRING' --optionalArg1 'optionalarg1value' --optionalArg2 'optionalarg2value'
+meraki appliance getOrganizationApplianceVpnStats --organizationId 'STRING' --optionalArg1 "optionalarg1value" --optionalArg2 "optionalarg2value"
 ````
 
-##### Example using `--kwargs`:
+##### Example using `--kwargs` (Advanced):
 ```
 meraki appliance getOrganizationApplianceVpnStats --organizationId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
@@ -6015,10 +6015,10 @@ https://developer.cisco.com/meraki/api-v1/#!get-organization-appliance-vpn-statu
 
 ##### Example:
 ```
-meraki appliance getOrganizationApplianceVpnStatuses --organizationId 'STRING' --optionalArg1 'optionalarg1value' --optionalArg2 'optionalarg2value'
+meraki appliance getOrganizationApplianceVpnStatuses --organizationId 'STRING' --optionalArg1 "optionalarg1value" --optionalArg2 "optionalarg2value"
 ````
 
-##### Example using `--kwargs`:
+##### Example using `--kwargs` (Advanced):
 ```
 meraki appliance getOrganizationApplianceVpnStatuses --organizationId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
@@ -6113,10 +6113,10 @@ https://developer.cisco.com/meraki/api-v1/#!update-network-appliance-connectivit
 
 ##### Example:
 ```
-meraki appliance updateNetworkApplianceConnectivityMonitoringDestinations --networkId 'STRING' --optionalArg1 'optionalarg1value' --optionalArg2 'optionalarg2value'
+meraki appliance updateNetworkApplianceConnectivityMonitoringDestinations --networkId 'STRING' --optionalArg1 "optionalarg1value" --optionalArg2 "optionalarg2value"
 ````
 
-##### Example using `--kwargs`:
+##### Example using `--kwargs` (Advanced):
 ```
 meraki appliance updateNetworkApplianceConnectivityMonitoringDestinations --networkId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
@@ -6145,10 +6145,10 @@ https://developer.cisco.com/meraki/api-v1/#!update-network-appliance-content-fil
 
 ##### Example:
 ```
-meraki appliance updateNetworkApplianceContentFiltering --networkId 'STRING' --optionalArg1 'optionalarg1value' --optionalArg2 'optionalarg2value'
+meraki appliance updateNetworkApplianceContentFiltering --networkId 'STRING' --optionalArg1 "optionalarg1value" --optionalArg2 "optionalarg2value"
 ````
 
-##### Example using `--kwargs`:
+##### Example using `--kwargs` (Advanced):
 ```
 meraki appliance updateNetworkApplianceContentFiltering --networkId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
@@ -6174,10 +6174,10 @@ https://developer.cisco.com/meraki/api-v1/#!update-network-appliance-firewall-ce
 
 ##### Example:
 ```
-meraki appliance updateNetworkApplianceFirewallCellularFirewallRules --networkId 'STRING' --optionalArg1 'optionalarg1value' --optionalArg2 'optionalarg2value'
+meraki appliance updateNetworkApplianceFirewallCellularFirewallRules --networkId 'STRING' --optionalArg1 "optionalarg1value" --optionalArg2 "optionalarg2value"
 ````
 
-##### Example using `--kwargs`:
+##### Example using `--kwargs` (Advanced):
 ```
 meraki appliance updateNetworkApplianceFirewallCellularFirewallRules --networkId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
@@ -6205,10 +6205,10 @@ https://developer.cisco.com/meraki/api-v1/#!update-network-appliance-firewall-fi
 
 ##### Example:
 ```
-meraki appliance updateNetworkApplianceFirewallFirewalledService --networkId 'STRING' --service 'STRING' --access 'STRING' --optionalArg1 'optionalarg1value' --optionalArg2 'optionalarg2value'
+meraki appliance updateNetworkApplianceFirewallFirewalledService --networkId 'STRING' --service 'STRING' --access 'STRING' --optionalArg1 "optionalarg1value" --optionalArg2 "optionalarg2value"
 ````
 
-##### Example using `--kwargs`:
+##### Example using `--kwargs` (Advanced):
 ```
 meraki appliance updateNetworkApplianceFirewallFirewalledService --networkId 'STRING' --service 'STRING' --access 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
@@ -6235,10 +6235,10 @@ https://developer.cisco.com/meraki/api-v1/#!update-network-appliance-firewall-in
 
 ##### Example:
 ```
-meraki appliance updateNetworkApplianceFirewallInboundFirewallRules --networkId 'STRING' --optionalArg1 'optionalarg1value' --optionalArg2 'optionalarg2value'
+meraki appliance updateNetworkApplianceFirewallInboundFirewallRules --networkId 'STRING' --optionalArg1 "optionalarg1value" --optionalArg2 "optionalarg2value"
 ````
 
-##### Example using `--kwargs`:
+##### Example using `--kwargs` (Advanced):
 ```
 meraki appliance updateNetworkApplianceFirewallInboundFirewallRules --networkId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
@@ -6265,10 +6265,10 @@ https://developer.cisco.com/meraki/api-v1/#!update-network-appliance-firewall-l-
 
 ##### Example:
 ```
-meraki appliance updateNetworkApplianceFirewallL3FirewallRules --networkId 'STRING' --optionalArg1 'optionalarg1value' --optionalArg2 'optionalarg2value'
+meraki appliance updateNetworkApplianceFirewallL3FirewallRules --networkId 'STRING' --optionalArg1 "optionalarg1value" --optionalArg2 "optionalarg2value"
 ````
 
-##### Example using `--kwargs`:
+##### Example using `--kwargs` (Advanced):
 ```
 meraki appliance updateNetworkApplianceFirewallL3FirewallRules --networkId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
@@ -6294,10 +6294,10 @@ https://developer.cisco.com/meraki/api-v1/#!update-network-appliance-firewall-l-
 
 ##### Example:
 ```
-meraki appliance updateNetworkApplianceFirewallL7FirewallRules --networkId 'STRING' --optionalArg1 'optionalarg1value' --optionalArg2 'optionalarg2value'
+meraki appliance updateNetworkApplianceFirewallL7FirewallRules --networkId 'STRING' --optionalArg1 "optionalarg1value" --optionalArg2 "optionalarg2value"
 ````
 
-##### Example using `--kwargs`:
+##### Example using `--kwargs` (Advanced):
 ```
 meraki appliance updateNetworkApplianceFirewallL7FirewallRules --networkId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
@@ -6401,10 +6401,10 @@ https://developer.cisco.com/meraki/api-v1/#!update-network-appliance-port
 
 ##### Example:
 ```
-meraki appliance updateNetworkAppliancePort --networkId 'STRING' --portId 'STRING' --optionalArg1 'optionalarg1value' --optionalArg2 'optionalarg2value'
+meraki appliance updateNetworkAppliancePort --networkId 'STRING' --portId 'STRING' --optionalArg1 "optionalarg1value" --optionalArg2 "optionalarg2value"
 ````
 
-##### Example using `--kwargs`:
+##### Example using `--kwargs` (Advanced):
 ```
 meraki appliance updateNetworkAppliancePort --networkId 'STRING' --portId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
@@ -6432,10 +6432,10 @@ https://developer.cisco.com/meraki/api-v1/#!update-network-appliance-security-in
 
 ##### Example:
 ```
-meraki appliance updateNetworkApplianceSecurityIntrusion --networkId 'STRING' --optionalArg1 'optionalarg1value' --optionalArg2 'optionalarg2value'
+meraki appliance updateNetworkApplianceSecurityIntrusion --networkId 'STRING' --optionalArg1 "optionalarg1value" --optionalArg2 "optionalarg2value"
 ````
 
-##### Example using `--kwargs`:
+##### Example using `--kwargs` (Advanced):
 ```
 meraki appliance updateNetworkApplianceSecurityIntrusion --networkId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
@@ -6463,10 +6463,10 @@ https://developer.cisco.com/meraki/api-v1/#!update-network-appliance-security-ma
 
 ##### Example:
 ```
-meraki appliance updateNetworkApplianceSecurityMalware --networkId 'STRING' --mode 'STRING' --optionalArg1 'optionalarg1value' --optionalArg2 'optionalarg2value'
+meraki appliance updateNetworkApplianceSecurityMalware --networkId 'STRING' --mode 'STRING' --optionalArg1 "optionalarg1value" --optionalArg2 "optionalarg2value"
 ````
 
-##### Example using `--kwargs`:
+##### Example using `--kwargs` (Advanced):
 ```
 meraki appliance updateNetworkApplianceSecurityMalware --networkId 'STRING' --mode 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
@@ -6493,10 +6493,10 @@ https://developer.cisco.com/meraki/api-v1/#!update-network-appliance-single-lan
 
 ##### Example:
 ```
-meraki appliance updateNetworkApplianceSingleLan --networkId 'STRING' --optionalArg1 'optionalarg1value' --optionalArg2 'optionalarg2value'
+meraki appliance updateNetworkApplianceSingleLan --networkId 'STRING' --optionalArg1 "optionalarg1value" --optionalArg2 "optionalarg2value"
 ````
 
-##### Example using `--kwargs`:
+##### Example using `--kwargs` (Advanced):
 ```
 meraki appliance updateNetworkApplianceSingleLan --networkId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
@@ -6528,10 +6528,10 @@ https://developer.cisco.com/meraki/api-v1/#!update-network-appliance-static-rout
 
 ##### Example:
 ```
-meraki appliance updateNetworkApplianceStaticRoute --networkId 'STRING' --staticRouteId 'STRING' --optionalArg1 'optionalarg1value' --optionalArg2 'optionalarg2value'
+meraki appliance updateNetworkApplianceStaticRoute --networkId 'STRING' --staticRouteId 'STRING' --optionalArg1 "optionalarg1value" --optionalArg2 "optionalarg2value"
 ````
 
-##### Example using `--kwargs`:
+##### Example using `--kwargs` (Advanced):
 ```
 meraki appliance updateNetworkApplianceStaticRoute --networkId 'STRING' --staticRouteId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
@@ -6557,10 +6557,10 @@ https://developer.cisco.com/meraki/api-v1/#!update-network-appliance-traffic-sha
 
 ##### Example:
 ```
-meraki appliance updateNetworkApplianceTrafficShaping --networkId 'STRING' --optionalArg1 'optionalarg1value' --optionalArg2 'optionalarg2value'
+meraki appliance updateNetworkApplianceTrafficShaping --networkId 'STRING' --optionalArg1 "optionalarg1value" --optionalArg2 "optionalarg2value"
 ````
 
-##### Example using `--kwargs`:
+##### Example using `--kwargs` (Advanced):
 ```
 meraki appliance updateNetworkApplianceTrafficShaping --networkId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
@@ -6590,10 +6590,10 @@ https://developer.cisco.com/meraki/api-v1/#!update-network-appliance-traffic-sha
 
 ##### Example:
 ```
-meraki appliance updateNetworkApplianceTrafficShapingCustomPerformanceClass --networkId 'STRING' --customPerformanceClassId 'STRING' --optionalArg1 'optionalarg1value' --optionalArg2 'optionalarg2value'
+meraki appliance updateNetworkApplianceTrafficShapingCustomPerformanceClass --networkId 'STRING' --customPerformanceClassId 'STRING' --optionalArg1 "optionalarg1value" --optionalArg2 "optionalarg2value"
 ````
 
-##### Example using `--kwargs`:
+##### Example using `--kwargs` (Advanced):
 ```
 meraki appliance updateNetworkApplianceTrafficShapingCustomPerformanceClass --networkId 'STRING' --customPerformanceClassId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
@@ -6623,10 +6623,10 @@ you are allowed a maximum of 8 rules.
 
 ##### Example:
 ```
-meraki appliance updateNetworkApplianceTrafficShapingRules --networkId 'STRING' --optionalArg1 'optionalarg1value' --optionalArg2 'optionalarg2value'
+meraki appliance updateNetworkApplianceTrafficShapingRules --networkId 'STRING' --optionalArg1 "optionalarg1value" --optionalArg2 "optionalarg2value"
 ````
 
-##### Example using `--kwargs`:
+##### Example using `--kwargs` (Advanced):
 ```
 meraki appliance updateNetworkApplianceTrafficShapingRules --networkId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
@@ -6652,10 +6652,10 @@ https://developer.cisco.com/meraki/api-v1/#!update-network-appliance-traffic-sha
 
 ##### Example:
 ```
-meraki appliance updateNetworkApplianceTrafficShapingUplinkBandwidth --networkId 'STRING' --optionalArg1 'optionalarg1value' --optionalArg2 'optionalarg2value'
+meraki appliance updateNetworkApplianceTrafficShapingUplinkBandwidth --networkId 'STRING' --optionalArg1 "optionalarg1value" --optionalArg2 "optionalarg2value"
 ````
 
-##### Example using `--kwargs`:
+##### Example using `--kwargs` (Advanced):
 ```
 meraki appliance updateNetworkApplianceTrafficShapingUplinkBandwidth --networkId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
@@ -6685,10 +6685,10 @@ https://developer.cisco.com/meraki/api-v1/#!update-network-appliance-traffic-sha
 
 ##### Example:
 ```
-meraki appliance updateNetworkApplianceTrafficShapingUplinkSelection --networkId 'STRING' --optionalArg1 'optionalarg1value' --optionalArg2 'optionalarg2value'
+meraki appliance updateNetworkApplianceTrafficShapingUplinkSelection --networkId 'STRING' --optionalArg1 "optionalarg1value" --optionalArg2 "optionalarg2value"
 ````
 
-##### Example using `--kwargs`:
+##### Example using `--kwargs` (Advanced):
 ```
 meraki appliance updateNetworkApplianceTrafficShapingUplinkSelection --networkId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
@@ -6729,10 +6729,10 @@ https://developer.cisco.com/meraki/api-v1/#!update-network-appliance-vlan
 
 ##### Example:
 ```
-meraki appliance updateNetworkApplianceVlan --networkId 'STRING' --vlanId 'STRING' --optionalArg1 'optionalarg1value' --optionalArg2 'optionalarg2value'
+meraki appliance updateNetworkApplianceVlan --networkId 'STRING' --vlanId 'STRING' --optionalArg1 "optionalarg1value" --optionalArg2 "optionalarg2value"
 ````
 
-##### Example using `--kwargs`:
+##### Example using `--kwargs` (Advanced):
 ```
 meraki appliance updateNetworkApplianceVlan --networkId 'STRING' --vlanId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
@@ -6758,10 +6758,10 @@ https://developer.cisco.com/meraki/api-v1/#!update-network-appliance-vlans-setti
 
 ##### Example:
 ```
-meraki appliance updateNetworkApplianceVlansSettings --networkId 'STRING' --optionalArg1 'optionalarg1value' --optionalArg2 'optionalarg2value'
+meraki appliance updateNetworkApplianceVlansSettings --networkId 'STRING' --optionalArg1 "optionalarg1value" --optionalArg2 "optionalarg2value"
 ````
 
-##### Example using `--kwargs`:
+##### Example using `--kwargs` (Advanced):
 ```
 meraki appliance updateNetworkApplianceVlansSettings --networkId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
@@ -6790,10 +6790,10 @@ https://developer.cisco.com/meraki/api-v1/#!update-network-appliance-vpn-bgp
 
 ##### Example:
 ```
-meraki appliance updateNetworkApplianceVpnBgp --networkId 'STRING' --enabled --optionalArg1 'optionalarg1value' --optionalArg2 'optionalarg2value'
+meraki appliance updateNetworkApplianceVpnBgp --networkId 'STRING' --enabled --optionalArg1 "optionalarg1value" --optionalArg2 "optionalarg2value"
 ````
 
-##### Example using `--kwargs`:
+##### Example using `--kwargs` (Advanced):
 ```
 meraki appliance updateNetworkApplianceVpnBgp --networkId 'STRING' --enabled --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
@@ -6821,10 +6821,10 @@ https://developer.cisco.com/meraki/api-v1/#!update-network-appliance-vpn-site-to
 
 ##### Example:
 ```
-meraki appliance updateNetworkApplianceVpnSiteToSiteVpn --networkId 'STRING' --mode 'STRING' --optionalArg1 'optionalarg1value' --optionalArg2 'optionalarg2value'
+meraki appliance updateNetworkApplianceVpnSiteToSiteVpn --networkId 'STRING' --mode 'STRING' --optionalArg1 "optionalarg1value" --optionalArg2 "optionalarg2value"
 ````
 
-##### Example using `--kwargs`:
+##### Example using `--kwargs` (Advanced):
 ```
 meraki appliance updateNetworkApplianceVpnSiteToSiteVpn --networkId 'STRING' --mode 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
@@ -6854,10 +6854,10 @@ https://developer.cisco.com/meraki/api-v1/#!update-network-appliance-warm-spare
 
 ##### Example:
 ```
-meraki appliance updateNetworkApplianceWarmSpare --networkId 'STRING' --enabled --optionalArg1 'optionalarg1value' --optionalArg2 'optionalarg2value'
+meraki appliance updateNetworkApplianceWarmSpare --networkId 'STRING' --enabled --optionalArg1 "optionalarg1value" --optionalArg2 "optionalarg2value"
 ````
 
-##### Example using `--kwargs`:
+##### Example using `--kwargs` (Advanced):
 ```
 meraki appliance updateNetworkApplianceWarmSpare --networkId 'STRING' --enabled --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
@@ -6932,10 +6932,10 @@ https://developer.cisco.com/meraki/api-v1/#!update-organization-appliance-vpn-vp
 
 ##### Example:
 ```
-meraki appliance updateOrganizationApplianceVpnVpnFirewallRules --organizationId 'STRING' --optionalArg1 'optionalarg1value' --optionalArg2 'optionalarg2value'
+meraki appliance updateOrganizationApplianceVpnVpnFirewallRules --organizationId 'STRING' --optionalArg1 "optionalarg1value" --optionalArg2 "optionalarg2value"
 ````
 
-##### Example using `--kwargs`:
+##### Example using `--kwargs` (Advanced):
 ```
 meraki appliance updateOrganizationApplianceVpnVpnFirewallRules --organizationId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
@@ -6975,10 +6975,10 @@ https://developer.cisco.com/meraki/api-v1/#!create-network-camera-quality-retent
 
 ##### Example:
 ```
-meraki camera createNetworkCameraQualityRetentionProfile --networkId 'STRING' --name 'STRING' --optionalArg1 'optionalarg1value' --optionalArg2 'optionalarg2value'
+meraki camera createNetworkCameraQualityRetentionProfile --networkId 'STRING' --name 'STRING' --optionalArg1 "optionalarg1value" --optionalArg2 "optionalarg2value"
 ````
 
-##### Example using `--kwargs`:
+##### Example using `--kwargs` (Advanced):
 ```
 meraki camera createNetworkCameraQualityRetentionProfile --networkId 'STRING' --name 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
@@ -7029,10 +7029,10 @@ https://developer.cisco.com/meraki/api-v1/#!generate-device-camera-snapshot
 
 ##### Example:
 ```
-meraki camera generateDeviceCameraSnapshot --serial 'STRING' --optionalArg1 'optionalarg1value' --optionalArg2 'optionalarg2value'
+meraki camera generateDeviceCameraSnapshot --serial 'STRING' --optionalArg1 "optionalarg1value" --optionalArg2 "optionalarg2value"
 ````
 
-##### Example using `--kwargs`:
+##### Example using `--kwargs` (Advanced):
 ```
 meraki camera generateDeviceCameraSnapshot --serial 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
@@ -7084,10 +7084,10 @@ https://developer.cisco.com/meraki/api-v1/#!get-device-camera-analytics-overview
 
 ##### Example:
 ```
-meraki camera getDeviceCameraAnalyticsOverview --serial 'STRING' --optionalArg1 'optionalarg1value' --optionalArg2 'optionalarg2value'
+meraki camera getDeviceCameraAnalyticsOverview --serial 'STRING' --optionalArg1 "optionalarg1value" --optionalArg2 "optionalarg2value"
 ````
 
-##### Example using `--kwargs`:
+##### Example using `--kwargs` (Advanced):
 ```
 meraki camera getDeviceCameraAnalyticsOverview --serial 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
@@ -7113,10 +7113,10 @@ https://developer.cisco.com/meraki/api-v1/#!get-device-camera-analytics-recent
 
 ##### Example:
 ```
-meraki camera getDeviceCameraAnalyticsRecent --serial 'STRING' --optionalArg1 'optionalarg1value' --optionalArg2 'optionalarg2value'
+meraki camera getDeviceCameraAnalyticsRecent --serial 'STRING' --optionalArg1 "optionalarg1value" --optionalArg2 "optionalarg2value"
 ````
 
-##### Example using `--kwargs`:
+##### Example using `--kwargs` (Advanced):
 ```
 meraki camera getDeviceCameraAnalyticsRecent --serial 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
@@ -7147,10 +7147,10 @@ https://developer.cisco.com/meraki/api-v1/#!get-device-camera-analytics-zone-his
 
 ##### Example:
 ```
-meraki camera getDeviceCameraAnalyticsZoneHistory --serial 'STRING' --zoneId 'STRING' --optionalArg1 'optionalarg1value' --optionalArg2 'optionalarg2value'
+meraki camera getDeviceCameraAnalyticsZoneHistory --serial 'STRING' --zoneId 'STRING' --optionalArg1 "optionalarg1value" --optionalArg2 "optionalarg2value"
 ````
 
-##### Example using `--kwargs`:
+##### Example using `--kwargs` (Advanced):
 ```
 meraki camera getDeviceCameraAnalyticsZoneHistory --serial 'STRING' --zoneId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
@@ -7268,10 +7268,10 @@ https://developer.cisco.com/meraki/api-v1/#!get-device-camera-video-link
 
 ##### Example:
 ```
-meraki camera getDeviceCameraVideoLink --serial 'STRING' --optionalArg1 'optionalarg1value' --optionalArg2 'optionalarg2value'
+meraki camera getDeviceCameraVideoLink --serial 'STRING' --optionalArg1 "optionalarg1value" --optionalArg2 "optionalarg2value"
 ````
 
-##### Example using `--kwargs`:
+##### Example using `--kwargs` (Advanced):
 ```
 meraki camera getDeviceCameraVideoLink --serial 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
@@ -7396,10 +7396,10 @@ https://developer.cisco.com/meraki/api-v1/#!update-device-camera-quality-and-ret
 
 ##### Example:
 ```
-meraki camera updateDeviceCameraQualityAndRetention --serial 'STRING' --optionalArg1 'optionalarg1value' --optionalArg2 'optionalarg2value'
+meraki camera updateDeviceCameraQualityAndRetention --serial 'STRING' --optionalArg1 "optionalarg1value" --optionalArg2 "optionalarg2value"
 ````
 
-##### Example using `--kwargs`:
+##### Example using `--kwargs` (Advanced):
 ```
 meraki camera updateDeviceCameraQualityAndRetention --serial 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
@@ -7427,10 +7427,10 @@ https://developer.cisco.com/meraki/api-v1/#!update-device-camera-sense
 
 ##### Example:
 ```
-meraki camera updateDeviceCameraSense --serial 'STRING' --optionalArg1 'optionalarg1value' --optionalArg2 'optionalarg2value'
+meraki camera updateDeviceCameraSense --serial 'STRING' --optionalArg1 "optionalarg1value" --optionalArg2 "optionalarg2value"
 ````
 
-##### Example using `--kwargs`:
+##### Example using `--kwargs` (Advanced):
 ```
 meraki camera updateDeviceCameraSense --serial 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
@@ -7456,10 +7456,10 @@ https://developer.cisco.com/meraki/api-v1/#!update-device-camera-video-settings
 
 ##### Example:
 ```
-meraki camera updateDeviceCameraVideoSettings --serial 'STRING' --optionalArg1 'optionalarg1value' --optionalArg2 'optionalarg2value'
+meraki camera updateDeviceCameraVideoSettings --serial 'STRING' --optionalArg1 "optionalarg1value" --optionalArg2 "optionalarg2value"
 ````
 
-##### Example using `--kwargs`:
+##### Example using `--kwargs` (Advanced):
 ```
 meraki camera updateDeviceCameraVideoSettings --serial 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
@@ -7494,10 +7494,10 @@ https://developer.cisco.com/meraki/api-v1/#!update-network-camera-quality-retent
 
 ##### Example:
 ```
-meraki camera updateNetworkCameraQualityRetentionProfile --networkId 'STRING' --qualityRetentionProfileId 'STRING' --optionalArg1 'optionalarg1value' --optionalArg2 'optionalarg2value'
+meraki camera updateNetworkCameraQualityRetentionProfile --networkId 'STRING' --qualityRetentionProfileId 'STRING' --optionalArg1 "optionalarg1value" --optionalArg2 "optionalarg2value"
 ````
 
-##### Example using `--kwargs`:
+##### Example using `--kwargs` (Advanced):
 ```
 meraki camera updateNetworkCameraQualityRetentionProfile --networkId 'STRING' --qualityRetentionProfileId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
@@ -7674,10 +7674,10 @@ https://developer.cisco.com/meraki/api-v1/#!get-organization-cellular-gateway-up
 
 ##### Example:
 ```
-meraki cellularGateway getOrganizationCellularGatewayUplinkStatuses --organizationId 'STRING' --optionalArg1 'optionalarg1value' --optionalArg2 'optionalarg2value'
+meraki cellularGateway getOrganizationCellularGatewayUplinkStatuses --organizationId 'STRING' --optionalArg1 "optionalarg1value" --optionalArg2 "optionalarg2value"
 ````
 
-##### Example using `--kwargs`:
+##### Example using `--kwargs` (Advanced):
 ```
 meraki cellularGateway getOrganizationCellularGatewayUplinkStatuses --organizationId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
@@ -7704,10 +7704,10 @@ https://developer.cisco.com/meraki/api-v1/#!update-device-cellular-gateway-lan
 
 ##### Example:
 ```
-meraki cellularGateway updateDeviceCellularGatewayLan --serial 'STRING' --optionalArg1 'optionalarg1value' --optionalArg2 'optionalarg2value'
+meraki cellularGateway updateDeviceCellularGatewayLan --serial 'STRING' --optionalArg1 "optionalarg1value" --optionalArg2 "optionalarg2value"
 ````
 
-##### Example using `--kwargs`:
+##### Example using `--kwargs` (Advanced):
 ```
 meraki cellularGateway updateDeviceCellularGatewayLan --serial 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
@@ -7733,10 +7733,10 @@ https://developer.cisco.com/meraki/api-v1/#!update-device-cellular-gateway-port-
 
 ##### Example:
 ```
-meraki cellularGateway updateDeviceCellularGatewayPortForwardingRules --serial 'STRING' --optionalArg1 'optionalarg1value' --optionalArg2 'optionalarg2value'
+meraki cellularGateway updateDeviceCellularGatewayPortForwardingRules --serial 'STRING' --optionalArg1 "optionalarg1value" --optionalArg2 "optionalarg2value"
 ````
 
-##### Example using `--kwargs`:
+##### Example using `--kwargs` (Advanced):
 ```
 meraki cellularGateway updateDeviceCellularGatewayPortForwardingRules --serial 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
@@ -7762,10 +7762,10 @@ https://developer.cisco.com/meraki/api-v1/#!update-network-cellular-gateway-conn
 
 ##### Example:
 ```
-meraki cellularGateway updateNetworkCellularGatewayConnectivityMonitoringDestinations --networkId 'STRING' --optionalArg1 'optionalarg1value' --optionalArg2 'optionalarg2value'
+meraki cellularGateway updateNetworkCellularGatewayConnectivityMonitoringDestinations --networkId 'STRING' --optionalArg1 "optionalarg1value" --optionalArg2 "optionalarg2value"
 ````
 
-##### Example using `--kwargs`:
+##### Example using `--kwargs` (Advanced):
 ```
 meraki cellularGateway updateNetworkCellularGatewayConnectivityMonitoringDestinations --networkId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
@@ -7793,10 +7793,10 @@ https://developer.cisco.com/meraki/api-v1/#!update-network-cellular-gateway-dhcp
 
 ##### Example:
 ```
-meraki cellularGateway updateNetworkCellularGatewayDhcp --networkId 'STRING' --optionalArg1 'optionalarg1value' --optionalArg2 'optionalarg2value'
+meraki cellularGateway updateNetworkCellularGatewayDhcp --networkId 'STRING' --optionalArg1 "optionalarg1value" --optionalArg2 "optionalarg2value"
 ````
 
-##### Example using `--kwargs`:
+##### Example using `--kwargs` (Advanced):
 ```
 meraki cellularGateway updateNetworkCellularGatewayDhcp --networkId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
@@ -7823,10 +7823,10 @@ https://developer.cisco.com/meraki/api-v1/#!update-network-cellular-gateway-subn
 
 ##### Example:
 ```
-meraki cellularGateway updateNetworkCellularGatewaySubnetPool --networkId 'STRING' --optionalArg1 'optionalarg1value' --optionalArg2 'optionalarg2value'
+meraki cellularGateway updateNetworkCellularGatewaySubnetPool --networkId 'STRING' --optionalArg1 "optionalarg1value" --optionalArg2 "optionalarg2value"
 ````
 
-##### Example using `--kwargs`:
+##### Example using `--kwargs` (Advanced):
 ```
 meraki cellularGateway updateNetworkCellularGatewaySubnetPool --networkId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
@@ -7852,10 +7852,10 @@ https://developer.cisco.com/meraki/api-v1/#!update-network-cellular-gateway-upli
 
 ##### Example:
 ```
-meraki cellularGateway updateNetworkCellularGatewayUplink --networkId 'STRING' --optionalArg1 'optionalarg1value' --optionalArg2 'optionalarg2value'
+meraki cellularGateway updateNetworkCellularGatewayUplink --networkId 'STRING' --optionalArg1 "optionalarg1value" --optionalArg2 "optionalarg2value"
 ````
 
-##### Example using `--kwargs`:
+##### Example using `--kwargs` (Advanced):
 ```
 meraki cellularGateway updateNetworkCellularGatewayUplink --networkId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
@@ -7889,10 +7889,10 @@ https://developer.cisco.com/meraki/api-v1/#!create-organization-insight-monitore
 
 ##### Example:
 ```
-meraki insight createOrganizationInsightMonitoredMediaServer --organizationId 'STRING' --name 'STRING' --address 'STRING' --optionalArg1 'optionalarg1value' --optionalArg2 'optionalarg2value'
+meraki insight createOrganizationInsightMonitoredMediaServer --organizationId 'STRING' --name 'STRING' --address 'STRING' --optionalArg1 "optionalarg1value" --optionalArg2 "optionalarg2value"
 ````
 
-##### Example using `--kwargs`:
+##### Example using `--kwargs` (Advanced):
 ```
 meraki insight createOrganizationInsightMonitoredMediaServer --organizationId 'STRING' --name 'STRING' --address 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
@@ -7992,10 +7992,10 @@ https://developer.cisco.com/meraki/api-v1/#!update-organization-insight-monitore
 
 ##### Example:
 ```
-meraki insight updateOrganizationInsightMonitoredMediaServer --organizationId 'STRING' --monitoredMediaServerId 'STRING' --optionalArg1 'optionalarg1value' --optionalArg2 'optionalarg2value'
+meraki insight updateOrganizationInsightMonitoredMediaServer --organizationId 'STRING' --monitoredMediaServerId 'STRING' --optionalArg1 "optionalarg1value" --optionalArg2 "optionalarg2value"
 ````
 
-##### Example using `--kwargs`:
+##### Example using `--kwargs` (Advanced):
 ```
 meraki insight updateOrganizationInsightMonitoredMediaServer --organizationId 'STRING' --monitoredMediaServerId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
@@ -8030,10 +8030,10 @@ https://developer.cisco.com/meraki/api-v1/#!checkin-network-sm-devices
 
 ##### Example:
 ```
-meraki sm checkinNetworkSmDevices --networkId 'STRING' --optionalArg1 'optionalarg1value' --optionalArg2 'optionalarg2value'
+meraki sm checkinNetworkSmDevices --networkId 'STRING' --optionalArg1 "optionalarg1value" --optionalArg2 "optionalarg2value"
 ````
 
-##### Example using `--kwargs`:
+##### Example using `--kwargs` (Advanced):
 ```
 meraki sm checkinNetworkSmDevices --networkId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
@@ -8084,10 +8084,10 @@ https://developer.cisco.com/meraki/api-v1/#!create-network-sm-target-group
 
 ##### Example:
 ```
-meraki sm createNetworkSmTargetGroup --networkId 'STRING' --optionalArg1 'optionalarg1value' --optionalArg2 'optionalarg2value'
+meraki sm createNetworkSmTargetGroup --networkId 'STRING' --optionalArg1 "optionalarg1value" --optionalArg2 "optionalarg2value"
 ````
 
-##### Example using `--kwargs`:
+##### Example using `--kwargs` (Advanced):
 ```
 meraki sm createNetworkSmTargetGroup --networkId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
@@ -8238,10 +8238,10 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-sm-device-connectivity
 
 ##### Example:
 ```
-meraki sm getNetworkSmDeviceConnectivity --networkId 'STRING' --deviceId 'STRING' --optionalArg1 'optionalarg1value' --optionalArg2 'optionalarg2value'
+meraki sm getNetworkSmDeviceConnectivity --networkId 'STRING' --deviceId 'STRING' --optionalArg1 "optionalarg1value" --optionalArg2 "optionalarg2value"
 ````
 
-##### Example using `--kwargs`:
+##### Example using `--kwargs` (Advanced):
 ```
 meraki sm getNetworkSmDeviceConnectivity --networkId 'STRING' --deviceId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
@@ -8272,10 +8272,10 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-sm-device-desktop-logs
 
 ##### Example:
 ```
-meraki sm getNetworkSmDeviceDesktopLogs --networkId 'STRING' --deviceId 'STRING' --optionalArg1 'optionalarg1value' --optionalArg2 'optionalarg2value'
+meraki sm getNetworkSmDeviceDesktopLogs --networkId 'STRING' --deviceId 'STRING' --optionalArg1 "optionalarg1value" --optionalArg2 "optionalarg2value"
 ````
 
-##### Example using `--kwargs`:
+##### Example using `--kwargs` (Advanced):
 ```
 meraki sm getNetworkSmDeviceDesktopLogs --networkId 'STRING' --deviceId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
@@ -8306,10 +8306,10 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-sm-device-device-command
 
 ##### Example:
 ```
-meraki sm getNetworkSmDeviceDeviceCommandLogs --networkId 'STRING' --deviceId 'STRING' --optionalArg1 'optionalarg1value' --optionalArg2 'optionalarg2value'
+meraki sm getNetworkSmDeviceDeviceCommandLogs --networkId 'STRING' --deviceId 'STRING' --optionalArg1 "optionalarg1value" --optionalArg2 "optionalarg2value"
 ````
 
-##### Example using `--kwargs`:
+##### Example using `--kwargs` (Advanced):
 ```
 meraki sm getNetworkSmDeviceDeviceCommandLogs --networkId 'STRING' --deviceId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
@@ -8388,10 +8388,10 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-sm-device-performance-hi
 
 ##### Example:
 ```
-meraki sm getNetworkSmDevicePerformanceHistory --networkId 'STRING' --deviceId 'STRING' --optionalArg1 'optionalarg1value' --optionalArg2 'optionalarg2value'
+meraki sm getNetworkSmDevicePerformanceHistory --networkId 'STRING' --deviceId 'STRING' --optionalArg1 "optionalarg1value" --optionalArg2 "optionalarg2value"
 ````
 
-##### Example using `--kwargs`:
+##### Example using `--kwargs` (Advanced):
 ```
 meraki sm getNetworkSmDevicePerformanceHistory --networkId 'STRING' --deviceId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
@@ -8528,10 +8528,10 @@ hardwareEncryptionCaps, passCodeLock, usesHardwareKeystore, and androidSecurityP
 
 ##### Example:
 ```
-meraki sm getNetworkSmDevices --networkId 'STRING' --optionalArg1 'optionalarg1value' --optionalArg2 'optionalarg2value'
+meraki sm getNetworkSmDevices --networkId 'STRING' --optionalArg1 "optionalarg1value" --optionalArg2 "optionalarg2value"
 ````
 
-##### Example using `--kwargs`:
+##### Example using `--kwargs` (Advanced):
 ```
 meraki sm getNetworkSmDevices --networkId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
@@ -8581,10 +8581,10 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-sm-target-group
 
 ##### Example:
 ```
-meraki sm getNetworkSmTargetGroup --networkId 'STRING' --targetGroupId 'STRING' --optionalArg1 'optionalarg1value' --optionalArg2 'optionalarg2value'
+meraki sm getNetworkSmTargetGroup --networkId 'STRING' --targetGroupId 'STRING' --optionalArg1 "optionalarg1value" --optionalArg2 "optionalarg2value"
 ````
 
-##### Example using `--kwargs`:
+##### Example using `--kwargs` (Advanced):
 ```
 meraki sm getNetworkSmTargetGroup --networkId 'STRING' --targetGroupId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
@@ -8610,10 +8610,10 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-sm-target-groups
 
 ##### Example:
 ```
-meraki sm getNetworkSmTargetGroups --networkId 'STRING' --optionalArg1 'optionalarg1value' --optionalArg2 'optionalarg2value'
+meraki sm getNetworkSmTargetGroups --networkId 'STRING' --optionalArg1 "optionalarg1value" --optionalArg2 "optionalarg2value"
 ````
 
-##### Example using `--kwargs`:
+##### Example using `--kwargs` (Advanced):
 ```
 meraki sm getNetworkSmTargetGroups --networkId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
@@ -8643,10 +8643,10 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-sm-user-access-devices
 
 ##### Example:
 ```
-meraki sm getNetworkSmUserAccessDevices --networkId 'STRING' --optionalArg1 'optionalarg1value' --optionalArg2 'optionalarg2value'
+meraki sm getNetworkSmUserAccessDevices --networkId 'STRING' --optionalArg1 "optionalarg1value" --optionalArg2 "optionalarg2value"
 ````
 
-##### Example using `--kwargs`:
+##### Example using `--kwargs` (Advanced):
 ```
 meraki sm getNetworkSmUserAccessDevices --networkId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
@@ -8723,10 +8723,10 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-sm-users
 
 ##### Example:
 ```
-meraki sm getNetworkSmUsers --networkId 'STRING' --optionalArg1 'optionalarg1value' --optionalArg2 'optionalarg2value'
+meraki sm getNetworkSmUsers --networkId 'STRING' --optionalArg1 "optionalarg1value" --optionalArg2 "optionalarg2value"
 ````
 
-##### Example using `--kwargs`:
+##### Example using `--kwargs` (Advanced):
 ```
 meraki sm getNetworkSmUsers --networkId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
@@ -8826,10 +8826,10 @@ https://developer.cisco.com/meraki/api-v1/#!lock-network-sm-devices
 
 ##### Example:
 ```
-meraki sm lockNetworkSmDevices --networkId 'STRING' --optionalArg1 'optionalarg1value' --optionalArg2 'optionalarg2value'
+meraki sm lockNetworkSmDevices --networkId 'STRING' --optionalArg1 "optionalarg1value" --optionalArg2 "optionalarg2value"
 ````
 
-##### Example using `--kwargs`:
+##### Example using `--kwargs` (Advanced):
 ```
 meraki sm lockNetworkSmDevices --networkId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
@@ -8860,10 +8860,10 @@ https://developer.cisco.com/meraki/api-v1/#!modify-network-sm-devices-tags
 
 ##### Example:
 ```
-meraki sm modifyNetworkSmDevicesTags --networkId 'STRING' --tags ITEM --updateAction 'STRING' --optionalArg1 'optionalarg1value' --optionalArg2 'optionalarg2value'
+meraki sm modifyNetworkSmDevicesTags --networkId 'STRING' --tags ITEM --updateAction 'STRING' --optionalArg1 "optionalarg1value" --optionalArg2 "optionalarg2value"
 ````
 
-##### Example using `--kwargs`:
+##### Example using `--kwargs` (Advanced):
 ```
 meraki sm modifyNetworkSmDevicesTags --networkId 'STRING' --tags ITEM --updateAction 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
@@ -8893,10 +8893,10 @@ https://developer.cisco.com/meraki/api-v1/#!move-network-sm-devices
 
 ##### Example:
 ```
-meraki sm moveNetworkSmDevices --networkId 'STRING' --newNetwork 'STRING' --optionalArg1 'optionalarg1value' --optionalArg2 'optionalarg2value'
+meraki sm moveNetworkSmDevices --networkId 'STRING' --newNetwork 'STRING' --optionalArg1 "optionalarg1value" --optionalArg2 "optionalarg2value"
 ````
 
-##### Example using `--kwargs`:
+##### Example using `--kwargs` (Advanced):
 ```
 meraki sm moveNetworkSmDevices --networkId 'STRING' --newNetwork 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
@@ -8973,10 +8973,10 @@ https://developer.cisco.com/meraki/api-v1/#!update-network-sm-devices-fields
 
 ##### Example:
 ```
-meraki sm updateNetworkSmDevicesFields --networkId 'STRING' --deviceFields JSON_STRING --optionalArg1 'optionalarg1value' --optionalArg2 'optionalarg2value'
+meraki sm updateNetworkSmDevicesFields --networkId 'STRING' --deviceFields JSON_STRING --optionalArg1 "optionalarg1value" --optionalArg2 "optionalarg2value"
 ````
 
-##### Example using `--kwargs`:
+##### Example using `--kwargs` (Advanced):
 ```
 meraki sm updateNetworkSmDevicesFields --networkId 'STRING' --deviceFields JSON_STRING --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
@@ -9004,10 +9004,10 @@ https://developer.cisco.com/meraki/api-v1/#!update-network-sm-target-group
 
 ##### Example:
 ```
-meraki sm updateNetworkSmTargetGroup --networkId 'STRING' --targetGroupId 'STRING' --optionalArg1 'optionalarg1value' --optionalArg2 'optionalarg2value'
+meraki sm updateNetworkSmTargetGroup --networkId 'STRING' --targetGroupId 'STRING' --optionalArg1 "optionalarg1value" --optionalArg2 "optionalarg2value"
 ````
 
-##### Example using `--kwargs`:
+##### Example using `--kwargs` (Advanced):
 ```
 meraki sm updateNetworkSmTargetGroup --networkId 'STRING' --targetGroupId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
@@ -9036,10 +9036,10 @@ https://developer.cisco.com/meraki/api-v1/#!wipe-network-sm-devices
 
 ##### Example:
 ```
-meraki sm wipeNetworkSmDevices --networkId 'STRING' --optionalArg1 'optionalarg1value' --optionalArg2 'optionalarg2value'
+meraki sm wipeNetworkSmDevices --networkId 'STRING' --optionalArg1 "optionalarg1value" --optionalArg2 "optionalarg2value"
 ````
 
-##### Example using `--kwargs`:
+##### Example using `--kwargs` (Advanced):
 ```
 meraki sm wipeNetworkSmDevices --networkId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
@@ -9127,10 +9127,10 @@ https://developer.cisco.com/meraki/api-v1/#!create-device-switch-routing-interfa
 
 ##### Example:
 ```
-meraki switch createDeviceSwitchRoutingInterface --serial 'STRING' --name 'STRING' --interfaceIp 'STRING' --vlanId INT --optionalArg1 'optionalarg1value' --optionalArg2 'optionalarg2value'
+meraki switch createDeviceSwitchRoutingInterface --serial 'STRING' --name 'STRING' --interfaceIp 'STRING' --vlanId INT --optionalArg1 "optionalarg1value" --optionalArg2 "optionalarg2value"
 ````
 
-##### Example using `--kwargs`:
+##### Example using `--kwargs` (Advanced):
 ```
 meraki switch createDeviceSwitchRoutingInterface --serial 'STRING' --name 'STRING' --interfaceIp 'STRING' --vlanId INT --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
@@ -9160,10 +9160,10 @@ https://developer.cisco.com/meraki/api-v1/#!create-device-switch-routing-static-
 
 ##### Example:
 ```
-meraki switch createDeviceSwitchRoutingStaticRoute --serial 'STRING' --subnet 'STRING' --nextHopIp 'STRING' --optionalArg1 'optionalarg1value' --optionalArg2 'optionalarg2value'
+meraki switch createDeviceSwitchRoutingStaticRoute --serial 'STRING' --subnet 'STRING' --nextHopIp 'STRING' --optionalArg1 "optionalarg1value" --optionalArg2 "optionalarg2value"
 ````
 
-##### Example using `--kwargs`:
+##### Example using `--kwargs` (Advanced):
 ```
 meraki switch createDeviceSwitchRoutingStaticRoute --serial 'STRING' --subnet 'STRING' --nextHopIp 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
@@ -9202,10 +9202,10 @@ https://developer.cisco.com/meraki/api-v1/#!create-network-switch-access-policy
 
 ##### Example:
 ```
-meraki switch createNetworkSwitchAccessPolicy --networkId 'STRING' --name 'STRING' --radiusServers ITEM --radiusTestingEnabled --radiusCoaSupportEnabled --radiusAccountingEnabled --hostMode 'STRING' --urlRedirectWalledGardenEnabled --optionalArg1 'optionalarg1value' --optionalArg2 'optionalarg2value'
+meraki switch createNetworkSwitchAccessPolicy --networkId 'STRING' --name 'STRING' --radiusServers ITEM --radiusTestingEnabled --radiusCoaSupportEnabled --radiusAccountingEnabled --hostMode 'STRING' --urlRedirectWalledGardenEnabled --optionalArg1 "optionalarg1value" --optionalArg2 "optionalarg2value"
 ````
 
-##### Example using `--kwargs`:
+##### Example using `--kwargs` (Advanced):
 ```
 meraki switch createNetworkSwitchAccessPolicy --networkId 'STRING' --name 'STRING' --radiusServers ITEM --radiusTestingEnabled --radiusCoaSupportEnabled --radiusAccountingEnabled --hostMode 'STRING' --urlRedirectWalledGardenEnabled --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
@@ -9232,10 +9232,10 @@ https://developer.cisco.com/meraki/api-v1/#!create-network-switch-link-aggregati
 
 ##### Example:
 ```
-meraki switch createNetworkSwitchLinkAggregation --networkId 'STRING' --optionalArg1 'optionalarg1value' --optionalArg2 'optionalarg2value'
+meraki switch createNetworkSwitchLinkAggregation --networkId 'STRING' --optionalArg1 "optionalarg1value" --optionalArg2 "optionalarg2value"
 ````
 
-##### Example using `--kwargs`:
+##### Example using `--kwargs` (Advanced):
 ```
 meraki switch createNetworkSwitchLinkAggregation --networkId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
@@ -9265,10 +9265,10 @@ Any unspecified day in the schedule is added as a default schedule configuration
 
 ##### Example:
 ```
-meraki switch createNetworkSwitchPortSchedule --networkId 'STRING' --name 'STRING' --optionalArg1 'optionalarg1value' --optionalArg2 'optionalarg2value'
+meraki switch createNetworkSwitchPortSchedule --networkId 'STRING' --name 'STRING' --optionalArg1 "optionalarg1value" --optionalArg2 "optionalarg2value"
 ````
 
-##### Example using `--kwargs`:
+##### Example using `--kwargs` (Advanced):
 ```
 meraki switch createNetworkSwitchPortSchedule --networkId 'STRING' --name 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
@@ -9300,10 +9300,10 @@ https://developer.cisco.com/meraki/api-v1/#!create-network-switch-qos-rule
 
 ##### Example:
 ```
-meraki switch createNetworkSwitchQosRule --networkId 'STRING' --vlan INT --optionalArg1 'optionalarg1value' --optionalArg2 'optionalarg2value'
+meraki switch createNetworkSwitchQosRule --networkId 'STRING' --vlan INT --optionalArg1 "optionalarg1value" --optionalArg2 "optionalarg2value"
 ````
 
-##### Example using `--kwargs`:
+##### Example using `--kwargs` (Advanced):
 ```
 meraki switch createNetworkSwitchQosRule --networkId 'STRING' --vlan INT --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
@@ -9386,10 +9386,10 @@ https://developer.cisco.com/meraki/api-v1/#!create-network-switch-stack-routing-
 
 ##### Example:
 ```
-meraki switch createNetworkSwitchStackRoutingInterface --networkId 'STRING' --switchStackId 'STRING' --name 'STRING' --subnet 'STRING' --interfaceIp 'STRING' --vlanId INT --optionalArg1 'optionalarg1value' --optionalArg2 'optionalarg2value'
+meraki switch createNetworkSwitchStackRoutingInterface --networkId 'STRING' --switchStackId 'STRING' --name 'STRING' --subnet 'STRING' --interfaceIp 'STRING' --vlanId INT --optionalArg1 "optionalarg1value" --optionalArg2 "optionalarg2value"
 ````
 
-##### Example using `--kwargs`:
+##### Example using `--kwargs` (Advanced):
 ```
 meraki switch createNetworkSwitchStackRoutingInterface --networkId 'STRING' --switchStackId 'STRING' --name 'STRING' --subnet 'STRING' --interfaceIp 'STRING' --vlanId INT --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
@@ -9420,10 +9420,10 @@ https://developer.cisco.com/meraki/api-v1/#!create-network-switch-stack-routing-
 
 ##### Example:
 ```
-meraki switch createNetworkSwitchStackRoutingStaticRoute --networkId 'STRING' --switchStackId 'STRING' --subnet 'STRING' --nextHopIp 'STRING' --optionalArg1 'optionalarg1value' --optionalArg2 'optionalarg2value'
+meraki switch createNetworkSwitchStackRoutingStaticRoute --networkId 'STRING' --switchStackId 'STRING' --subnet 'STRING' --nextHopIp 'STRING' --optionalArg1 "optionalarg1value" --optionalArg2 "optionalarg2value"
 ````
 
-##### Example using `--kwargs`:
+##### Example using `--kwargs` (Advanced):
 ```
 meraki switch createNetworkSwitchStackRoutingStaticRoute --networkId 'STRING' --switchStackId 'STRING' --subnet 'STRING' --nextHopIp 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
@@ -9763,10 +9763,10 @@ https://developer.cisco.com/meraki/api-v1/#!get-device-switch-ports-statuses
 
 ##### Example:
 ```
-meraki switch getDeviceSwitchPortsStatuses --serial 'STRING' --optionalArg1 'optionalarg1value' --optionalArg2 'optionalarg2value'
+meraki switch getDeviceSwitchPortsStatuses --serial 'STRING' --optionalArg1 "optionalarg1value" --optionalArg2 "optionalarg2value"
 ````
 
-##### Example using `--kwargs`:
+##### Example using `--kwargs` (Advanced):
 ```
 meraki switch getDeviceSwitchPortsStatuses --serial 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
@@ -9793,10 +9793,10 @@ https://developer.cisco.com/meraki/api-v1/#!get-device-switch-ports-statuses-pac
 
 ##### Example:
 ```
-meraki switch getDeviceSwitchPortsStatusesPackets --serial 'STRING' --optionalArg1 'optionalarg1value' --optionalArg2 'optionalarg2value'
+meraki switch getDeviceSwitchPortsStatusesPackets --serial 'STRING' --optionalArg1 "optionalarg1value" --optionalArg2 "optionalarg2value"
 ````
 
-##### Example using `--kwargs`:
+##### Example using `--kwargs` (Advanced):
 ```
 meraki switch getDeviceSwitchPortsStatusesPackets --serial 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
@@ -10694,10 +10694,10 @@ https://developer.cisco.com/meraki/api-v1/#!update-device-switch-port
 
 ##### Example:
 ```
-meraki switch updateDeviceSwitchPort --serial 'STRING' --portId 'STRING' --optionalArg1 'optionalarg1value' --optionalArg2 'optionalarg2value'
+meraki switch updateDeviceSwitchPort --serial 'STRING' --portId 'STRING' --optionalArg1 "optionalarg1value" --optionalArg2 "optionalarg2value"
 ````
 
-##### Example using `--kwargs`:
+##### Example using `--kwargs` (Advanced):
 ```
 meraki switch updateDeviceSwitchPort --serial 'STRING' --portId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
@@ -10729,10 +10729,10 @@ https://developer.cisco.com/meraki/api-v1/#!update-device-switch-routing-interfa
 
 ##### Example:
 ```
-meraki switch updateDeviceSwitchRoutingInterface --serial 'STRING' --interfaceId 'STRING' --optionalArg1 'optionalarg1value' --optionalArg2 'optionalarg2value'
+meraki switch updateDeviceSwitchRoutingInterface --serial 'STRING' --interfaceId 'STRING' --optionalArg1 "optionalarg1value" --optionalArg2 "optionalarg2value"
 ````
 
-##### Example using `--kwargs`:
+##### Example using `--kwargs` (Advanced):
 ```
 meraki switch updateDeviceSwitchRoutingInterface --serial 'STRING' --interfaceId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
@@ -10769,10 +10769,10 @@ https://developer.cisco.com/meraki/api-v1/#!update-device-switch-routing-interfa
 
 ##### Example:
 ```
-meraki switch updateDeviceSwitchRoutingInterfaceDhcp --serial 'STRING' --interfaceId 'STRING' --optionalArg1 'optionalarg1value' --optionalArg2 'optionalarg2value'
+meraki switch updateDeviceSwitchRoutingInterfaceDhcp --serial 'STRING' --interfaceId 'STRING' --optionalArg1 "optionalarg1value" --optionalArg2 "optionalarg2value"
 ````
 
-##### Example using `--kwargs`:
+##### Example using `--kwargs` (Advanced):
 ```
 meraki switch updateDeviceSwitchRoutingInterfaceDhcp --serial 'STRING' --interfaceId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
@@ -10803,10 +10803,10 @@ https://developer.cisco.com/meraki/api-v1/#!update-device-switch-routing-static-
 
 ##### Example:
 ```
-meraki switch updateDeviceSwitchRoutingStaticRoute --serial 'STRING' --staticRouteId 'STRING' --optionalArg1 'optionalarg1value' --optionalArg2 'optionalarg2value'
+meraki switch updateDeviceSwitchRoutingStaticRoute --serial 'STRING' --staticRouteId 'STRING' --optionalArg1 "optionalarg1value" --optionalArg2 "optionalarg2value"
 ````
 
-##### Example using `--kwargs`:
+##### Example using `--kwargs` (Advanced):
 ```
 meraki switch updateDeviceSwitchRoutingStaticRoute --serial 'STRING' --staticRouteId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
@@ -10833,10 +10833,10 @@ https://developer.cisco.com/meraki/api-v1/#!update-device-switch-warm-spare
 
 ##### Example:
 ```
-meraki switch updateDeviceSwitchWarmSpare --serial 'STRING' --enabled --optionalArg1 'optionalarg1value' --optionalArg2 'optionalarg2value'
+meraki switch updateDeviceSwitchWarmSpare --serial 'STRING' --enabled --optionalArg1 "optionalarg1value" --optionalArg2 "optionalarg2value"
 ````
 
-##### Example using `--kwargs`:
+##### Example using `--kwargs` (Advanced):
 ```
 meraki switch updateDeviceSwitchWarmSpare --serial 'STRING' --enabled --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
@@ -10900,10 +10900,10 @@ https://developer.cisco.com/meraki/api-v1/#!update-network-switch-access-policy
 
 ##### Example:
 ```
-meraki switch updateNetworkSwitchAccessPolicy --networkId 'STRING' --accessPolicyNumber 'STRING' --optionalArg1 'optionalarg1value' --optionalArg2 'optionalarg2value'
+meraki switch updateNetworkSwitchAccessPolicy --networkId 'STRING' --accessPolicyNumber 'STRING' --optionalArg1 "optionalarg1value" --optionalArg2 "optionalarg2value"
 ````
 
-##### Example using `--kwargs`:
+##### Example using `--kwargs` (Advanced):
 ```
 meraki switch updateNetworkSwitchAccessPolicy --networkId 'STRING' --accessPolicyNumber 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
@@ -10932,10 +10932,10 @@ https://developer.cisco.com/meraki/api-v1/#!update-network-switch-alternate-mana
 
 ##### Example:
 ```
-meraki switch updateNetworkSwitchAlternateManagementInterface --networkId 'STRING' --optionalArg1 'optionalarg1value' --optionalArg2 'optionalarg2value'
+meraki switch updateNetworkSwitchAlternateManagementInterface --networkId 'STRING' --optionalArg1 "optionalarg1value" --optionalArg2 "optionalarg2value"
 ````
 
-##### Example using `--kwargs`:
+##### Example using `--kwargs` (Advanced):
 ```
 meraki switch updateNetworkSwitchAlternateManagementInterface --networkId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
@@ -10963,10 +10963,10 @@ https://developer.cisco.com/meraki/api-v1/#!update-network-switch-dhcp-server-po
 
 ##### Example:
 ```
-meraki switch updateNetworkSwitchDhcpServerPolicy --networkId 'STRING' --optionalArg1 'optionalarg1value' --optionalArg2 'optionalarg2value'
+meraki switch updateNetworkSwitchDhcpServerPolicy --networkId 'STRING' --optionalArg1 "optionalarg1value" --optionalArg2 "optionalarg2value"
 ````
 
-##### Example using `--kwargs`:
+##### Example using `--kwargs` (Advanced):
 ```
 meraki switch updateNetworkSwitchDhcpServerPolicy --networkId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
@@ -11018,10 +11018,10 @@ https://developer.cisco.com/meraki/api-v1/#!update-network-switch-link-aggregati
 
 ##### Example:
 ```
-meraki switch updateNetworkSwitchLinkAggregation --networkId 'STRING' --linkAggregationId 'STRING' --optionalArg1 'optionalarg1value' --optionalArg2 'optionalarg2value'
+meraki switch updateNetworkSwitchLinkAggregation --networkId 'STRING' --linkAggregationId 'STRING' --optionalArg1 "optionalarg1value" --optionalArg2 "optionalarg2value"
 ````
 
-##### Example using `--kwargs`:
+##### Example using `--kwargs` (Advanced):
 ```
 meraki switch updateNetworkSwitchLinkAggregation --networkId 'STRING' --linkAggregationId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
@@ -11048,10 +11048,10 @@ https://developer.cisco.com/meraki/api-v1/#!update-network-switch-mtu
 
 ##### Example:
 ```
-meraki switch updateNetworkSwitchMtu --networkId 'STRING' --optionalArg1 'optionalarg1value' --optionalArg2 'optionalarg2value'
+meraki switch updateNetworkSwitchMtu --networkId 'STRING' --optionalArg1 "optionalarg1value" --optionalArg2 "optionalarg2value"
 ````
 
-##### Example using `--kwargs`:
+##### Example using `--kwargs` (Advanced):
 ```
 meraki switch updateNetworkSwitchMtu --networkId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
@@ -11082,10 +11082,10 @@ Any unspecified day in the schedule is added as a default schedule configuration
 
 ##### Example:
 ```
-meraki switch updateNetworkSwitchPortSchedule --networkId 'STRING' --portScheduleId 'STRING' --optionalArg1 'optionalarg1value' --optionalArg2 'optionalarg2value'
+meraki switch updateNetworkSwitchPortSchedule --networkId 'STRING' --portScheduleId 'STRING' --optionalArg1 "optionalarg1value" --optionalArg2 "optionalarg2value"
 ````
 
-##### Example using `--kwargs`:
+##### Example using `--kwargs` (Advanced):
 ```
 meraki switch updateNetworkSwitchPortSchedule --networkId 'STRING' --portScheduleId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
@@ -11118,10 +11118,10 @@ https://developer.cisco.com/meraki/api-v1/#!update-network-switch-qos-rule
 
 ##### Example:
 ```
-meraki switch updateNetworkSwitchQosRule --networkId 'STRING' --qosRuleId 'STRING' --optionalArg1 'optionalarg1value' --optionalArg2 'optionalarg2value'
+meraki switch updateNetworkSwitchQosRule --networkId 'STRING' --qosRuleId 'STRING' --optionalArg1 "optionalarg1value" --optionalArg2 "optionalarg2value"
 ````
 
-##### Example using `--kwargs`:
+##### Example using `--kwargs` (Advanced):
 ```
 meraki switch updateNetworkSwitchQosRule --networkId 'STRING' --qosRuleId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
@@ -11172,10 +11172,10 @@ https://developer.cisco.com/meraki/api-v1/#!update-network-switch-routing-multic
 
 ##### Example:
 ```
-meraki switch updateNetworkSwitchRoutingMulticast --networkId 'STRING' --optionalArg1 'optionalarg1value' --optionalArg2 'optionalarg2value'
+meraki switch updateNetworkSwitchRoutingMulticast --networkId 'STRING' --optionalArg1 "optionalarg1value" --optionalArg2 "optionalarg2value"
 ````
 
-##### Example using `--kwargs`:
+##### Example using `--kwargs` (Advanced):
 ```
 meraki switch updateNetworkSwitchRoutingMulticast --networkId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
@@ -11232,10 +11232,10 @@ https://developer.cisco.com/meraki/api-v1/#!update-network-switch-routing-ospf
 
 ##### Example:
 ```
-meraki switch updateNetworkSwitchRoutingOspf --networkId 'STRING' --optionalArg1 'optionalarg1value' --optionalArg2 'optionalarg2value'
+meraki switch updateNetworkSwitchRoutingOspf --networkId 'STRING' --optionalArg1 "optionalarg1value" --optionalArg2 "optionalarg2value"
 ````
 
-##### Example using `--kwargs`:
+##### Example using `--kwargs` (Advanced):
 ```
 meraki switch updateNetworkSwitchRoutingOspf --networkId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
@@ -11263,10 +11263,10 @@ https://developer.cisco.com/meraki/api-v1/#!update-network-switch-settings
 
 ##### Example:
 ```
-meraki switch updateNetworkSwitchSettings --networkId 'STRING' --optionalArg1 'optionalarg1value' --optionalArg2 'optionalarg2value'
+meraki switch updateNetworkSwitchSettings --networkId 'STRING' --optionalArg1 "optionalarg1value" --optionalArg2 "optionalarg2value"
 ````
 
-##### Example using `--kwargs`:
+##### Example using `--kwargs` (Advanced):
 ```
 meraki switch updateNetworkSwitchSettings --networkId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
@@ -11299,10 +11299,10 @@ https://developer.cisco.com/meraki/api-v1/#!update-network-switch-stack-routing-
 
 ##### Example:
 ```
-meraki switch updateNetworkSwitchStackRoutingInterface --networkId 'STRING' --switchStackId 'STRING' --interfaceId 'STRING' --optionalArg1 'optionalarg1value' --optionalArg2 'optionalarg2value'
+meraki switch updateNetworkSwitchStackRoutingInterface --networkId 'STRING' --switchStackId 'STRING' --interfaceId 'STRING' --optionalArg1 "optionalarg1value" --optionalArg2 "optionalarg2value"
 ````
 
-##### Example using `--kwargs`:
+##### Example using `--kwargs` (Advanced):
 ```
 meraki switch updateNetworkSwitchStackRoutingInterface --networkId 'STRING' --switchStackId 'STRING' --interfaceId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
@@ -11340,10 +11340,10 @@ https://developer.cisco.com/meraki/api-v1/#!update-network-switch-stack-routing-
 
 ##### Example:
 ```
-meraki switch updateNetworkSwitchStackRoutingInterfaceDhcp --networkId 'STRING' --switchStackId 'STRING' --interfaceId 'STRING' --optionalArg1 'optionalarg1value' --optionalArg2 'optionalarg2value'
+meraki switch updateNetworkSwitchStackRoutingInterfaceDhcp --networkId 'STRING' --switchStackId 'STRING' --interfaceId 'STRING' --optionalArg1 "optionalarg1value" --optionalArg2 "optionalarg2value"
 ````
 
-##### Example using `--kwargs`:
+##### Example using `--kwargs` (Advanced):
 ```
 meraki switch updateNetworkSwitchStackRoutingInterfaceDhcp --networkId 'STRING' --switchStackId 'STRING' --interfaceId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
@@ -11375,10 +11375,10 @@ https://developer.cisco.com/meraki/api-v1/#!update-network-switch-stack-routing-
 
 ##### Example:
 ```
-meraki switch updateNetworkSwitchStackRoutingStaticRoute --networkId 'STRING' --switchStackId 'STRING' --staticRouteId 'STRING' --optionalArg1 'optionalarg1value' --optionalArg2 'optionalarg2value'
+meraki switch updateNetworkSwitchStackRoutingStaticRoute --networkId 'STRING' --switchStackId 'STRING' --staticRouteId 'STRING' --optionalArg1 "optionalarg1value" --optionalArg2 "optionalarg2value"
 ````
 
-##### Example using `--kwargs`:
+##### Example using `--kwargs` (Advanced):
 ```
 meraki switch updateNetworkSwitchStackRoutingStaticRoute --networkId 'STRING' --switchStackId 'STRING' --staticRouteId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
@@ -11406,10 +11406,10 @@ https://developer.cisco.com/meraki/api-v1/#!update-network-switch-storm-control
 
 ##### Example:
 ```
-meraki switch updateNetworkSwitchStormControl --networkId 'STRING' --optionalArg1 'optionalarg1value' --optionalArg2 'optionalarg2value'
+meraki switch updateNetworkSwitchStormControl --networkId 'STRING' --optionalArg1 "optionalarg1value" --optionalArg2 "optionalarg2value"
 ````
 
-##### Example using `--kwargs`:
+##### Example using `--kwargs` (Advanced):
 ```
 meraki switch updateNetworkSwitchStormControl --networkId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
@@ -11436,10 +11436,10 @@ https://developer.cisco.com/meraki/api-v1/#!update-network-switch-stp
 
 ##### Example:
 ```
-meraki switch updateNetworkSwitchStp --networkId 'STRING' --optionalArg1 'optionalarg1value' --optionalArg2 'optionalarg2value'
+meraki switch updateNetworkSwitchStp --networkId 'STRING' --optionalArg1 "optionalarg1value" --optionalArg2 "optionalarg2value"
 ````
 
-##### Example using `--kwargs`:
+##### Example using `--kwargs` (Advanced):
 ```
 meraki switch updateNetworkSwitchStp --networkId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
@@ -11488,10 +11488,10 @@ https://developer.cisco.com/meraki/api-v1/#!update-organization-config-template-
 
 ##### Example:
 ```
-meraki switch updateOrganizationConfigTemplateSwitchProfilePort --organizationId 'STRING' --configTemplateId 'STRING' --profileId 'STRING' --portId 'STRING' --optionalArg1 'optionalarg1value' --optionalArg2 'optionalarg2value'
+meraki switch updateOrganizationConfigTemplateSwitchProfilePort --organizationId 'STRING' --configTemplateId 'STRING' --profileId 'STRING' --portId 'STRING' --optionalArg1 "optionalarg1value" --optionalArg2 "optionalarg2value"
 ````
 
-##### Example using `--kwargs`:
+##### Example using `--kwargs` (Advanced):
 ```
 meraki switch updateOrganizationConfigTemplateSwitchProfilePort --organizationId 'STRING' --configTemplateId 'STRING' --profileId 'STRING' --portId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
@@ -11529,10 +11529,10 @@ https://developer.cisco.com/meraki/api-v1/#!create-network-wireless-rf-profile
 
 ##### Example:
 ```
-meraki wireless createNetworkWirelessRfProfile --networkId 'STRING' --name 'STRING' --bandSelectionType 'STRING' --optionalArg1 'optionalarg1value' --optionalArg2 'optionalarg2value'
+meraki wireless createNetworkWirelessRfProfile --networkId 'STRING' --name 'STRING' --bandSelectionType 'STRING' --optionalArg1 "optionalarg1value" --optionalArg2 "optionalarg2value"
 ````
 
-##### Example using `--kwargs`:
+##### Example using `--kwargs` (Advanced):
 ```
 meraki wireless createNetworkWirelessRfProfile --networkId 'STRING' --name 'STRING' --bandSelectionType 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
@@ -11663,10 +11663,10 @@ https://developer.cisco.com/meraki/api-v1/#!get-device-wireless-connection-stats
 
 ##### Example:
 ```
-meraki wireless getDeviceWirelessConnectionStats --serial 'STRING' --optionalArg1 'optionalarg1value' --optionalArg2 'optionalarg2value'
+meraki wireless getDeviceWirelessConnectionStats --serial 'STRING' --optionalArg1 "optionalarg1value" --optionalArg2 "optionalarg2value"
 ````
 
-##### Example using `--kwargs`:
+##### Example using `--kwargs` (Advanced):
 ```
 meraki wireless getDeviceWirelessConnectionStats --serial 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
@@ -11699,10 +11699,10 @@ https://developer.cisco.com/meraki/api-v1/#!get-device-wireless-latency-stats
 
 ##### Example:
 ```
-meraki wireless getDeviceWirelessLatencyStats --serial 'STRING' --optionalArg1 'optionalarg1value' --optionalArg2 'optionalarg2value'
+meraki wireless getDeviceWirelessLatencyStats --serial 'STRING' --optionalArg1 "optionalarg1value" --optionalArg2 "optionalarg2value"
 ````
 
-##### Example using `--kwargs`:
+##### Example using `--kwargs` (Advanced):
 ```
 meraki wireless getDeviceWirelessLatencyStats --serial 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
@@ -11775,10 +11775,10 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-wireless-air-marshal
 
 ##### Example:
 ```
-meraki wireless getNetworkWirelessAirMarshal --networkId 'STRING' --optionalArg1 'optionalarg1value' --optionalArg2 'optionalarg2value'
+meraki wireless getNetworkWirelessAirMarshal --networkId 'STRING' --optionalArg1 "optionalarg1value" --optionalArg2 "optionalarg2value"
 ````
 
-##### Example using `--kwargs`:
+##### Example using `--kwargs` (Advanced):
 ```
 meraki wireless getNetworkWirelessAirMarshal --networkId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
@@ -11881,10 +11881,10 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-wireless-channel-utiliza
 
 ##### Example:
 ```
-meraki wireless getNetworkWirelessChannelUtilizationHistory --networkId 'STRING' --optionalArg1 'optionalarg1value' --optionalArg2 'optionalarg2value'
+meraki wireless getNetworkWirelessChannelUtilizationHistory --networkId 'STRING' --optionalArg1 "optionalarg1value" --optionalArg2 "optionalarg2value"
 ````
 
-##### Example using `--kwargs`:
+##### Example using `--kwargs` (Advanced):
 ```
 meraki wireless getNetworkWirelessChannelUtilizationHistory --networkId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
@@ -11917,10 +11917,10 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-wireless-client-connecti
 
 ##### Example:
 ```
-meraki wireless getNetworkWirelessClientConnectionStats --networkId 'STRING' --clientId 'STRING' --optionalArg1 'optionalarg1value' --optionalArg2 'optionalarg2value'
+meraki wireless getNetworkWirelessClientConnectionStats --networkId 'STRING' --clientId 'STRING' --optionalArg1 "optionalarg1value" --optionalArg2 "optionalarg2value"
 ````
 
-##### Example using `--kwargs`:
+##### Example using `--kwargs` (Advanced):
 ```
 meraki wireless getNetworkWirelessClientConnectionStats --networkId 'STRING' --clientId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
@@ -11959,10 +11959,10 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-wireless-client-connecti
 
 ##### Example:
 ```
-meraki wireless getNetworkWirelessClientConnectivityEvents --networkId 'STRING' --clientId 'STRING' --optionalArg1 'optionalarg1value' --optionalArg2 'optionalarg2value'
+meraki wireless getNetworkWirelessClientConnectivityEvents --networkId 'STRING' --clientId 'STRING' --optionalArg1 "optionalarg1value" --optionalArg2 "optionalarg2value"
 ````
 
-##### Example using `--kwargs`:
+##### Example using `--kwargs` (Advanced):
 ```
 meraki wireless getNetworkWirelessClientConnectivityEvents --networkId 'STRING' --clientId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
@@ -11997,10 +11997,10 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-wireless-client-count-hi
 
 ##### Example:
 ```
-meraki wireless getNetworkWirelessClientCountHistory --networkId 'STRING' --optionalArg1 'optionalarg1value' --optionalArg2 'optionalarg2value'
+meraki wireless getNetworkWirelessClientCountHistory --networkId 'STRING' --optionalArg1 "optionalarg1value" --optionalArg2 "optionalarg2value"
 ````
 
-##### Example using `--kwargs`:
+##### Example using `--kwargs` (Advanced):
 ```
 meraki wireless getNetworkWirelessClientCountHistory --networkId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
@@ -12030,10 +12030,10 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-wireless-client-latency-
 
 ##### Example:
 ```
-meraki wireless getNetworkWirelessClientLatencyHistory --networkId 'STRING' --clientId 'STRING' --optionalArg1 'optionalarg1value' --optionalArg2 'optionalarg2value'
+meraki wireless getNetworkWirelessClientLatencyHistory --networkId 'STRING' --clientId 'STRING' --optionalArg1 "optionalarg1value" --optionalArg2 "optionalarg2value"
 ````
 
-##### Example using `--kwargs`:
+##### Example using `--kwargs` (Advanced):
 ```
 meraki wireless getNetworkWirelessClientLatencyHistory --networkId 'STRING' --clientId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
@@ -12067,10 +12067,10 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-wireless-client-latency-
 
 ##### Example:
 ```
-meraki wireless getNetworkWirelessClientLatencyStats --networkId 'STRING' --clientId 'STRING' --optionalArg1 'optionalarg1value' --optionalArg2 'optionalarg2value'
+meraki wireless getNetworkWirelessClientLatencyStats --networkId 'STRING' --clientId 'STRING' --optionalArg1 "optionalarg1value" --optionalArg2 "optionalarg2value"
 ````
 
-##### Example using `--kwargs`:
+##### Example using `--kwargs` (Advanced):
 ```
 meraki wireless getNetworkWirelessClientLatencyStats --networkId 'STRING' --clientId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
@@ -12102,10 +12102,10 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-wireless-clients-connect
 
 ##### Example:
 ```
-meraki wireless getNetworkWirelessClientsConnectionStats --networkId 'STRING' --optionalArg1 'optionalarg1value' --optionalArg2 'optionalarg2value'
+meraki wireless getNetworkWirelessClientsConnectionStats --networkId 'STRING' --optionalArg1 "optionalarg1value" --optionalArg2 "optionalarg2value"
 ````
 
-##### Example using `--kwargs`:
+##### Example using `--kwargs` (Advanced):
 ```
 meraki wireless getNetworkWirelessClientsConnectionStats --networkId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
@@ -12138,10 +12138,10 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-wireless-clients-latency
 
 ##### Example:
 ```
-meraki wireless getNetworkWirelessClientsLatencyStats --networkId 'STRING' --optionalArg1 'optionalarg1value' --optionalArg2 'optionalarg2value'
+meraki wireless getNetworkWirelessClientsLatencyStats --networkId 'STRING' --optionalArg1 "optionalarg1value" --optionalArg2 "optionalarg2value"
 ````
 
-##### Example using `--kwargs`:
+##### Example using `--kwargs` (Advanced):
 ```
 meraki wireless getNetworkWirelessClientsLatencyStats --networkId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
@@ -12173,10 +12173,10 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-wireless-connection-stat
 
 ##### Example:
 ```
-meraki wireless getNetworkWirelessConnectionStats --networkId 'STRING' --optionalArg1 'optionalarg1value' --optionalArg2 'optionalarg2value'
+meraki wireless getNetworkWirelessConnectionStats --networkId 'STRING' --optionalArg1 "optionalarg1value" --optionalArg2 "optionalarg2value"
 ````
 
-##### Example using `--kwargs`:
+##### Example using `--kwargs` (Advanced):
 ```
 meraki wireless getNetworkWirelessConnectionStats --networkId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
@@ -12211,10 +12211,10 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-wireless-data-rate-histo
 
 ##### Example:
 ```
-meraki wireless getNetworkWirelessDataRateHistory --networkId 'STRING' --optionalArg1 'optionalarg1value' --optionalArg2 'optionalarg2value'
+meraki wireless getNetworkWirelessDataRateHistory --networkId 'STRING' --optionalArg1 "optionalarg1value" --optionalArg2 "optionalarg2value"
 ````
 
-##### Example using `--kwargs`:
+##### Example using `--kwargs` (Advanced):
 ```
 meraki wireless getNetworkWirelessDataRateHistory --networkId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
@@ -12246,10 +12246,10 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-wireless-devices-connect
 
 ##### Example:
 ```
-meraki wireless getNetworkWirelessDevicesConnectionStats --networkId 'STRING' --optionalArg1 'optionalarg1value' --optionalArg2 'optionalarg2value'
+meraki wireless getNetworkWirelessDevicesConnectionStats --networkId 'STRING' --optionalArg1 "optionalarg1value" --optionalArg2 "optionalarg2value"
 ````
 
-##### Example using `--kwargs`:
+##### Example using `--kwargs` (Advanced):
 ```
 meraki wireless getNetworkWirelessDevicesConnectionStats --networkId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
@@ -12282,10 +12282,10 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-wireless-devices-latency
 
 ##### Example:
 ```
-meraki wireless getNetworkWirelessDevicesLatencyStats --networkId 'STRING' --optionalArg1 'optionalarg1value' --optionalArg2 'optionalarg2value'
+meraki wireless getNetworkWirelessDevicesLatencyStats --networkId 'STRING' --optionalArg1 "optionalarg1value" --optionalArg2 "optionalarg2value"
 ````
 
-##### Example using `--kwargs`:
+##### Example using `--kwargs` (Advanced):
 ```
 meraki wireless getNetworkWirelessDevicesLatencyStats --networkId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
@@ -12319,10 +12319,10 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-wireless-failed-connecti
 
 ##### Example:
 ```
-meraki wireless getNetworkWirelessFailedConnections --networkId 'STRING' --optionalArg1 'optionalarg1value' --optionalArg2 'optionalarg2value'
+meraki wireless getNetworkWirelessFailedConnections --networkId 'STRING' --optionalArg1 "optionalarg1value" --optionalArg2 "optionalarg2value"
 ````
 
-##### Example using `--kwargs`:
+##### Example using `--kwargs` (Advanced):
 ```
 meraki wireless getNetworkWirelessFailedConnections --networkId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
@@ -12358,10 +12358,10 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-wireless-latency-history
 
 ##### Example:
 ```
-meraki wireless getNetworkWirelessLatencyHistory --networkId 'STRING' --optionalArg1 'optionalarg1value' --optionalArg2 'optionalarg2value'
+meraki wireless getNetworkWirelessLatencyHistory --networkId 'STRING' --optionalArg1 "optionalarg1value" --optionalArg2 "optionalarg2value"
 ````
 
-##### Example using `--kwargs`:
+##### Example using `--kwargs` (Advanced):
 ```
 meraki wireless getNetworkWirelessLatencyHistory --networkId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
@@ -12394,10 +12394,10 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-wireless-latency-stats
 
 ##### Example:
 ```
-meraki wireless getNetworkWirelessLatencyStats --networkId 'STRING' --optionalArg1 'optionalarg1value' --optionalArg2 'optionalarg2value'
+meraki wireless getNetworkWirelessLatencyStats --networkId 'STRING' --optionalArg1 "optionalarg1value" --optionalArg2 "optionalarg2value"
 ````
 
-##### Example using `--kwargs`:
+##### Example using `--kwargs` (Advanced):
 ```
 meraki wireless getNetworkWirelessLatencyStats --networkId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
@@ -12427,10 +12427,10 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-wireless-mesh-statuses
 
 ##### Example:
 ```
-meraki wireless getNetworkWirelessMeshStatuses --networkId 'STRING' --optionalArg1 'optionalarg1value' --optionalArg2 'optionalarg2value'
+meraki wireless getNetworkWirelessMeshStatuses --networkId 'STRING' --optionalArg1 "optionalarg1value" --optionalArg2 "optionalarg2value"
 ````
 
-##### Example using `--kwargs`:
+##### Example using `--kwargs` (Advanced):
 ```
 meraki wireless getNetworkWirelessMeshStatuses --networkId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
@@ -12480,10 +12480,10 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-wireless-rf-profiles
 
 ##### Example:
 ```
-meraki wireless getNetworkWirelessRfProfiles --networkId 'STRING' --optionalArg1 'optionalarg1value' --optionalArg2 'optionalarg2value'
+meraki wireless getNetworkWirelessRfProfiles --networkId 'STRING' --optionalArg1 "optionalarg1value" --optionalArg2 "optionalarg2value"
 ````
 
-##### Example using `--kwargs`:
+##### Example using `--kwargs` (Advanced):
 ```
 meraki wireless getNetworkWirelessRfProfiles --networkId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
@@ -12541,10 +12541,10 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-wireless-signal-quality-
 
 ##### Example:
 ```
-meraki wireless getNetworkWirelessSignalQualityHistory --networkId 'STRING' --optionalArg1 'optionalarg1value' --optionalArg2 'optionalarg2value'
+meraki wireless getNetworkWirelessSignalQualityHistory --networkId 'STRING' --optionalArg1 "optionalarg1value" --optionalArg2 "optionalarg2value"
 ````
 
-##### Example using `--kwargs`:
+##### Example using `--kwargs` (Advanced):
 ```
 meraki wireless getNetworkWirelessSignalQualityHistory --networkId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
@@ -12795,10 +12795,10 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-wireless-usage-history
 
 ##### Example:
 ```
-meraki wireless getNetworkWirelessUsageHistory --networkId 'STRING' --optionalArg1 'optionalarg1value' --optionalArg2 'optionalarg2value'
+meraki wireless getNetworkWirelessUsageHistory --networkId 'STRING' --optionalArg1 "optionalarg1value" --optionalArg2 "optionalarg2value"
 ````
 
-##### Example using `--kwargs`:
+##### Example using `--kwargs` (Advanced):
 ```
 meraki wireless getNetworkWirelessUsageHistory --networkId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
@@ -12826,10 +12826,10 @@ https://developer.cisco.com/meraki/api-v1/#!update-device-wireless-bluetooth-set
 
 ##### Example:
 ```
-meraki wireless updateDeviceWirelessBluetoothSettings --serial 'STRING' --optionalArg1 'optionalarg1value' --optionalArg2 'optionalarg2value'
+meraki wireless updateDeviceWirelessBluetoothSettings --serial 'STRING' --optionalArg1 "optionalarg1value" --optionalArg2 "optionalarg2value"
 ````
 
-##### Example using `--kwargs`:
+##### Example using `--kwargs` (Advanced):
 ```
 meraki wireless updateDeviceWirelessBluetoothSettings --serial 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
@@ -12857,10 +12857,10 @@ https://developer.cisco.com/meraki/api-v1/#!update-device-wireless-radio-setting
 
 ##### Example:
 ```
-meraki wireless updateDeviceWirelessRadioSettings --serial 'STRING' --optionalArg1 'optionalarg1value' --optionalArg2 'optionalarg2value'
+meraki wireless updateDeviceWirelessRadioSettings --serial 'STRING' --optionalArg1 "optionalarg1value" --optionalArg2 "optionalarg2value"
 ````
 
-##### Example using `--kwargs`:
+##### Example using `--kwargs` (Advanced):
 ```
 meraki wireless updateDeviceWirelessRadioSettings --serial 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
@@ -12889,10 +12889,10 @@ https://developer.cisco.com/meraki/api-v1/#!update-network-wireless-alternate-ma
 
 ##### Example:
 ```
-meraki wireless updateNetworkWirelessAlternateManagementInterface --networkId 'STRING' --optionalArg1 'optionalarg1value' --optionalArg2 'optionalarg2value'
+meraki wireless updateNetworkWirelessAlternateManagementInterface --networkId 'STRING' --optionalArg1 "optionalarg1value" --optionalArg2 "optionalarg2value"
 ````
 
-##### Example using `--kwargs`:
+##### Example using `--kwargs` (Advanced):
 ```
 meraki wireless updateNetworkWirelessAlternateManagementInterface --networkId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
@@ -12919,10 +12919,10 @@ https://developer.cisco.com/meraki/api-v1/#!update-network-wireless-billing
 
 ##### Example:
 ```
-meraki wireless updateNetworkWirelessBilling --networkId 'STRING' --optionalArg1 'optionalarg1value' --optionalArg2 'optionalarg2value'
+meraki wireless updateNetworkWirelessBilling --networkId 'STRING' --optionalArg1 "optionalarg1value" --optionalArg2 "optionalarg2value"
 ````
 
-##### Example using `--kwargs`:
+##### Example using `--kwargs` (Advanced):
 ```
 meraki wireless updateNetworkWirelessBilling --networkId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
@@ -12953,10 +12953,10 @@ https://developer.cisco.com/meraki/api-v1/#!update-network-wireless-bluetooth-se
 
 ##### Example:
 ```
-meraki wireless updateNetworkWirelessBluetoothSettings --networkId 'STRING' --optionalArg1 'optionalarg1value' --optionalArg2 'optionalarg2value'
+meraki wireless updateNetworkWirelessBluetoothSettings --networkId 'STRING' --optionalArg1 "optionalarg1value" --optionalArg2 "optionalarg2value"
 ````
 
-##### Example using `--kwargs`:
+##### Example using `--kwargs` (Advanced):
 ```
 meraki wireless updateNetworkWirelessBluetoothSettings --networkId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
@@ -12989,10 +12989,10 @@ https://developer.cisco.com/meraki/api-v1/#!update-network-wireless-rf-profile
 
 ##### Example:
 ```
-meraki wireless updateNetworkWirelessRfProfile --networkId 'STRING' --rfProfileId 'STRING' --optionalArg1 'optionalarg1value' --optionalArg2 'optionalarg2value'
+meraki wireless updateNetworkWirelessRfProfile --networkId 'STRING' --rfProfileId 'STRING' --optionalArg1 "optionalarg1value" --optionalArg2 "optionalarg2value"
 ````
 
-##### Example using `--kwargs`:
+##### Example using `--kwargs` (Advanced):
 ```
 meraki wireless updateNetworkWirelessRfProfile --networkId 'STRING' --rfProfileId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
@@ -13022,10 +13022,10 @@ https://developer.cisco.com/meraki/api-v1/#!update-network-wireless-settings
 
 ##### Example:
 ```
-meraki wireless updateNetworkWirelessSettings --networkId 'STRING' --optionalArg1 'optionalarg1value' --optionalArg2 'optionalarg2value'
+meraki wireless updateNetworkWirelessSettings --networkId 'STRING' --optionalArg1 "optionalarg1value" --optionalArg2 "optionalarg2value"
 ````
 
-##### Example using `--kwargs`:
+##### Example using `--kwargs` (Advanced):
 ```
 meraki wireless updateNetworkWirelessSettings --networkId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
@@ -13102,10 +13102,10 @@ https://developer.cisco.com/meraki/api-v1/#!update-network-wireless-ssid
 
 ##### Example:
 ```
-meraki wireless updateNetworkWirelessSsid --networkId 'STRING' --number 'STRING' --optionalArg1 'optionalarg1value' --optionalArg2 'optionalarg2value'
+meraki wireless updateNetworkWirelessSsid --networkId 'STRING' --number 'STRING' --optionalArg1 "optionalarg1value" --optionalArg2 "optionalarg2value"
 ````
 
-##### Example using `--kwargs`:
+##### Example using `--kwargs` (Advanced):
 ```
 meraki wireless updateNetworkWirelessSsid --networkId 'STRING' --number 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
@@ -13133,10 +13133,10 @@ https://developer.cisco.com/meraki/api-v1/#!update-network-wireless-ssid-device-
 
 ##### Example:
 ```
-meraki wireless updateNetworkWirelessSsidDeviceTypeGroupPolicies --networkId 'STRING' --number 'STRING' --optionalArg1 'optionalarg1value' --optionalArg2 'optionalarg2value'
+meraki wireless updateNetworkWirelessSsidDeviceTypeGroupPolicies --networkId 'STRING' --number 'STRING' --optionalArg1 "optionalarg1value" --optionalArg2 "optionalarg2value"
 ````
 
-##### Example using `--kwargs`:
+##### Example using `--kwargs` (Advanced):
 ```
 meraki wireless updateNetworkWirelessSsidDeviceTypeGroupPolicies --networkId 'STRING' --number 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
@@ -13164,10 +13164,10 @@ https://developer.cisco.com/meraki/api-v1/#!update-network-wireless-ssid-firewal
 
 ##### Example:
 ```
-meraki wireless updateNetworkWirelessSsidFirewallL3FirewallRules --networkId 'STRING' --number 'STRING' --optionalArg1 'optionalarg1value' --optionalArg2 'optionalarg2value'
+meraki wireless updateNetworkWirelessSsidFirewallL3FirewallRules --networkId 'STRING' --number 'STRING' --optionalArg1 "optionalarg1value" --optionalArg2 "optionalarg2value"
 ````
 
-##### Example using `--kwargs`:
+##### Example using `--kwargs` (Advanced):
 ```
 meraki wireless updateNetworkWirelessSsidFirewallL3FirewallRules --networkId 'STRING' --number 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
@@ -13194,10 +13194,10 @@ https://developer.cisco.com/meraki/api-v1/#!update-network-wireless-ssid-firewal
 
 ##### Example:
 ```
-meraki wireless updateNetworkWirelessSsidFirewallL7FirewallRules --networkId 'STRING' --number 'STRING' --optionalArg1 'optionalarg1value' --optionalArg2 'optionalarg2value'
+meraki wireless updateNetworkWirelessSsidFirewallL7FirewallRules --networkId 'STRING' --number 'STRING' --optionalArg1 "optionalarg1value" --optionalArg2 "optionalarg2value"
 ````
 
-##### Example using `--kwargs`:
+##### Example using `--kwargs` (Advanced):
 ```
 meraki wireless updateNetworkWirelessSsidFirewallL7FirewallRules --networkId 'STRING' --number 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
@@ -13227,10 +13227,10 @@ https://developer.cisco.com/meraki/api-v1/#!update-network-wireless-ssid-identit
 
 ##### Example:
 ```
-meraki wireless updateNetworkWirelessSsidIdentityPsk --networkId 'STRING' --number 'STRING' --identityPskId 'STRING' --optionalArg1 'optionalarg1value' --optionalArg2 'optionalarg2value'
+meraki wireless updateNetworkWirelessSsidIdentityPsk --networkId 'STRING' --number 'STRING' --identityPskId 'STRING' --optionalArg1 "optionalarg1value" --optionalArg2 "optionalarg2value"
 ````
 
-##### Example using `--kwargs`:
+##### Example using `--kwargs` (Advanced):
 ```
 meraki wireless updateNetworkWirelessSsidIdentityPsk --networkId 'STRING' --number 'STRING' --identityPskId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
@@ -13270,10 +13270,10 @@ https://developer.cisco.com/meraki/api-v1/#!update-network-wireless-ssid-splash-
 
 ##### Example:
 ```
-meraki wireless updateNetworkWirelessSsidSplashSettings --networkId 'STRING' --number 'STRING' --optionalArg1 'optionalarg1value' --optionalArg2 'optionalarg2value'
+meraki wireless updateNetworkWirelessSsidSplashSettings --networkId 'STRING' --number 'STRING' --optionalArg1 "optionalarg1value" --optionalArg2 "optionalarg2value"
 ````
 
-##### Example using `--kwargs`:
+##### Example using `--kwargs` (Advanced):
 ```
 meraki wireless updateNetworkWirelessSsidSplashSettings --networkId 'STRING' --number 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
@@ -13305,10 +13305,10 @@ you are allowed a maximum of 8 rules.
 
 ##### Example:
 ```
-meraki wireless updateNetworkWirelessSsidTrafficShapingRules --networkId 'STRING' --number 'STRING' --optionalArg1 'optionalarg1value' --optionalArg2 'optionalarg2value'
+meraki wireless updateNetworkWirelessSsidTrafficShapingRules --networkId 'STRING' --number 'STRING' --optionalArg1 "optionalarg1value" --optionalArg2 "optionalarg2value"
 ````
 
-##### Example using `--kwargs`:
+##### Example using `--kwargs` (Advanced):
 ```
 meraki wireless updateNetworkWirelessSsidTrafficShapingRules --networkId 'STRING' --number 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
