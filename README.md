@@ -96,9 +96,14 @@ In order to operate the CLI you need to input your Meraki API key using one of t
 2. Save your API key to a config file. See the "[Using a Config File](#using-a-config-file)" section for more info on how to do this.
 3. Use the `-k <api_key>` or `--apiKey <api_key>` argument at the top level of the command like `meraki -k <api_key>`
 
-You can obtain a Meraki API key by logging into the Meraki dashboard, clicking your user name in the top right corner, browsing to **My profile**, and then view the 'API Access' section near the bottom of the page. Click on the '**Generate new API key**' button and copy down your new API key before saving. It will be a long hexadecimal string.
+You can obtain a Meraki API key by:
+- Logging into the Meraki Dashboard
+- Clicking your user name in the top right corner
+- Browsing to **My profile**
+- View the 'API Access' section near the bottom of the page
+- Click on the '**Generate new API key**' button and copy down your new API key before saving. It will be a long hexadecimal string.
 
-> Note: The API key seen above is a public one Meraki provides for testing against their sandbox networks. All the output examples shown below use that key.
+> Note: The API key seen in the examples above is a public one Meraki provides for testing against their sandbox networks. Feel free to use it for testing things out, but sometimes it gets overused and is throttled by Meraki. All the output examples shown below use that key.
 
 
 ## A Few Starting Commands
@@ -144,7 +149,7 @@ If the change succeeds, you will often see the newly updated item echoed back li
 ~$
 ```
 
-Many commands which make changes to the dashboard (like `updateDeviceSwitchPort` above) have optional arguments which are used to send those changes. See the below help page for the `updateDeviceSwitchPort` command:
+Many commands which make changes to the dashboard (like `updateDeviceSwitchPort` above) have optional arguments (like `--vlan` and `--name`) which are used to send those changes. See the below help page for the `updateDeviceSwitchPort` command:
 
 ```
 ~$
@@ -201,11 +206,11 @@ Simple value types like string, integer, and boolean are pretty straightforward.
 - `--vlan 100` (integer)
 - `--enabled true` (boolean)
 
-Sometimes it is necessary to provide more complex values in certain arguments. An example of this is the `--tags` argument in this command. The `--tags` argument requires a list (array) of items. You can provide this list of items at the CLI using JSON formatting.
+Sometimes it is necessary to provide more complex values in certain arguments. An example from the `updateDeviceSwitchPort` command is the `--tags` argument. The `--tags` argument requires a list (array) of items. You can provide this list of items at the CLI using JSON formatting.
 
 This will look like `--tags '["tag1", "tag2"]'` on a Unix shell or `--tags "[""tag1"", ""tag2""]"` on Windows. This formatting provides a JSON-parsable structure to the CLI tool which is turned into native data and sent over the API to the dashboard. If you want to dive deeper into how to provide JSON data at the CLI, check out the [Using --kwargs](#using---kwargs) and [Dealing with --kwargs on Windows](#dealing-with---kwargs-on-windows) sections.
 
-> Note: Advanced users can use the `--kwargs` option to input all optional parameters as raw JSON data. If needed, check out the [Using --kwargs](#using---kwargs) section for information on how to do that.
+> Note: Advanced users can use the `--kwargs` option to input all optional parameters as raw JSON data. Check out the [Using --kwargs](#using---kwargs) section for information on how to do that.
 
 
 ## Using a Config File
@@ -343,9 +348,9 @@ When arguments are not listed in the "Required Arguments" or "Misc Arguments" se
 Optional Arguments can be provided in one of two ways:
 1. Using regular CLI arguments like `--name "Test Name"` and `--vlan 100`
 2. Nested as JSON data inside the `--kwargs` argument like `--kwargs '{"name": "Test Name", "vlan": "100"}'`
-   - On Windows CLI, this would need to use double-double quotes inside the data like `--kwargs "{""name"": ""Test Name"", ""vlan"": ""100""}"`
+   - On Windows CLI, you have to use double-double quotes inside the data like `--kwargs "{""name"": ""Test Name"", ""vlan"": ""100""}"`
 
-When Optional Arguments are provided at the command-line (in either of the two ways), they are parsed into native data types and are included as **kwargs** to the underlying target method when it is called.
+When Optional Arguments are provided at the command-line (in either of the two ways), they are parsed into native data types and are included as `**kwargs` to the underlying target method when it is called.
 
 Some arguments cannot be simple data types, for example the `--tags` argument from the `updateDeviceSwitchPort` command. The `--tags` argument must be an array, not a simple string or integer. Again there are two ways you can provide this value:
 1. Use the `--tags` option and provide a JSON-parsable array like: `--tags '["first_tag", "second_tag"]'`
@@ -356,9 +361,9 @@ Both of these options will result in the same data being sent to the underlying 
 
 #### Dealing with --kwargs on Windows
 
-The `--kwargs` data passed into Meraki-CLI is a JSON string and the JSON standard requires double-quotes in the data for quoting, it does not allow single-quotes. This becomes challenging on a standard Windows command prompt because Windows usually wants double-quotes used to encapsulate a string on the CLI; how do you use double quotes in the data and to encapsulate it?
+The `--kwargs` data passed into Meraki-CLI is a JSON string and the JSON standard requires double-quotes in the data for quoting, it does not allow single-quotes. This becomes challenging on a standard Windows command prompt because Windows usually wants double-quotes used to encapsulate a string on the CLI.. So how do you use double quotes in the data and to encapsulate it?
 
-To do this, you use regular double-quotes in front of and behind the string to encapsulate it, and you use double-double-quotes in the actual data. That means replacing all uses of a double-quote character in the data with two double-quotes. Your argument ends up looking like this: `--kwargs "{""name"": ""Data Port"", ""vlan"": ""100""}"`. It is probably easiest to use find/replace in a text editor to do this for you.
+To do this, use regular double-quotes in front of and behind the string to encapsulate it, and you use double-double-quotes in the actual data. That means replacing all uses of a double-quote characters in the data with two double-quotes. Your argument ends up looking like this: `--kwargs "{""name"": ""Data Port"", ""vlan"": ""100""}"`. It is probably easiest to use find/replace in a text editor to do this for you.
 
 You can also structure the JSON data and your command a bit if you want to make your command more readable. In Windows, you can do this by ending each line with a carat (`^`) which will allow the command to continue on the next line. Your command in this example will look like:
 
