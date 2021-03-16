@@ -30,7 +30,7 @@ Meraki-CLI is a wrapper around the official [Meraki Dashboard API Python SDK](ht
 - List your associated organizations: `meraki organizations getOrganizations`
 - List the Meraki networks within an organization: `meraki organizations getOrganizationNetworks --organizationId 123456`
 - List the MX VLANs on a network: `meraki appliance getNetworkApplianceVlans --networkId N_12345`
-- Add a new MX VLAN to a network: `meraki appliance createNetworkApplianceVlan --networkId 'N_12345' --id '100' --name 'My New VLAN' --applianceIp '10.0.0.1' --subnet '10.0.0.0/24'`
+- Add a new MX VLAN to a network: `meraki appliance createNetworkApplianceVlan --networkId N_12345 --id 100 --name "My New VLAN" --applianceIp "10.0.0.1" --subnet "10.0.0.0/24"`
 
 ### Capabilities
 
@@ -48,16 +48,17 @@ Since the Meraki-CLI tool builds its arguments directly off of Meraki's SDK, it'
     - [Getting and Using your API Key](#getting-and-using-your-api-key)
     - [A Few Starting Commands](#a-few-starting-commands)
     - [Making Some Changes](#making-some-changes)
-2. [Using --kwargs](#using---kwargs)
-    - [Dealing with --kwargs on Windows](#dealing-with---kwargs-on-windows)
-3. [Using a Config File](#using-a-config-file)
-4. [Debugging and Logging](#debugging-and-logging)
-5. [Filtering](#filtering)
-6. [Pipelining](#pipelining)
+2. [Using a Config File](#using-a-config-file)
+3. [Debugging and Logging](#debugging-and-logging)
+4. [Filtering](#filtering)
+5. [Pipelining](#pipelining)
     - [Overriding Values](#overriding-values)
     - [Translations](#translations)
     - [Outputting Commands](#outputting-commands)
     - [How the Pipelining Works](#how-the-pipelining-works)
+6. [Advanced Usage](#advanced-usage)
+    - [Using --kwargs](#using---kwargs)
+        - [Dealing with --kwargs on Windows](#dealing-with---kwargs-on-windows)
 7. [Contributing](#contributing)
 
 
@@ -95,26 +96,27 @@ In order to operate the CLI you need to input your Meraki API key using one of t
 2. Save your API key to a config file. See the "[Using a Config File](#using-a-config-file)" section for more info on how to do this.
 3. Use the `-k <api_key>` or `--apiKey <api_key>` argument at the top level of the command like `meraki -k <api_key>`
 
-You can obtain a Meraki API key by logging into the Meraki dashboard and clicking your user name in the top right corner and browsing to **My profile** then view the 'API Access' section near the bottom of the page. Then click on the '**Generate new API key**' button and copy down your new API key before saving. It will be a long hexadecimal string.
+You can obtain a Meraki API key by logging into the Meraki dashboard, clicking your user name in the top right corner, browsing to **My profile**, and then view the 'API Access' section near the bottom of the page. Click on the '**Generate new API key**' button and copy down your new API key before saving. It will be a long hexadecimal string.
 
 > Note: The API key seen above is a public one Meraki provides for testing against their sandbox networks. All the output examples shown below use that key.
 
 
 ## A Few Starting Commands
 
-Once you have your new key, try printing out your organizations with the command `meraki -k API_KEY_HERE organizations getOrganizations`, substituting in your API key. This will print out a formatted table of your organizations. If you saved your API key as an environment variable, you can exclude the `-k` argument and simply issue `meraki organizations getOrganizations`.
+Once you have your new key saved, try listing out your organizations with the command `meraki -k API_KEY_HERE organizations getOrganizations`, substituting in your API key. This will print out a formatted table of your organizations. If you saved your API key as an environment variable, you can exclude the `-k` argument and simply issue `meraki organizations getOrganizations`.
 
 Take one of your organization ID numbers and look at the networks in it with `meraki organizations getOrganizationNetworks --organizationId 123456`
 
 You can reformat any of this data into JSON output by adding the `-j` switch (before the command) to look something like `meraki -j organizations getOrganizations`
-- It is important to note that the columns included in a table often do not include all of the data returned from the API. If you need to see all the data returned, then use the `-j` switch and allow the tool to print out JSON data.
+
+> It is important to note that the columns included in a table often do not include all of the data returned from the API. If you need to see all the data returned, then use the `-j` switch and allow the tool to print out JSON data.
 
 You can also change the table data which is output by filtering and ordering table columns. To do this, use the `-c` argument and provide a comma-seperated list of columns to display. Example: `meraki -c id,name,description`
 
 To see any help menu, use the `-h` option at any command level:
 - `meraki -h` or just `meraki` will show you the top level options and arguments
 - `meraki appliance -h` or just `meraki appliance` will show you all the appliance-related commands
-- `meraki appliance createNetworkApplianceVlan -h` will show you an instruction page with all the arguments and options available for creating a new network appliance VLAN
+- `meraki appliance createNetworkApplianceVlan -h` or just `meraki appliance createNetworkApplianceVlan` will show you an instruction page with all the arguments and options available for creating a new network appliance VLAN.
 
 
 If you have any Meraki MS switches available, try viewing the port configurations with `meraki switch getDeviceSwitchPorts --serial 1234-ABCD-5678` or you can view the operational port stats by using `meraki switch getDeviceSwitchPortsStatuses --serial 1234-ABCD-5678`
@@ -124,17 +126,15 @@ If you have any Meraki MS switches available, try viewing the port configuration
 
 Pushing changes into Meraki is done by running the correct command and passing in the necessary arguments.
 
-> Note: Sometimes you will need to use the `--kwargs` option when making more advanced changes. If needed, check out the [Using --kwargs](#using---kwargs) section below for information on how to do that.
+For example, if we want to change the VLAN ID and name of a MS switch port, we would use:
 
-For example, if we want to change the VLAN ID on a MS switch port, we would use:
-
-`meraki switch updateDeviceSwitchPort --serial 1234-ABCD-5678 --portId 24 --vlan 100`
+`meraki switch updateDeviceSwitchPort --serial 1234-ABCD-5678 --portId 1 --vlan 100 --name "Data Port"`
 
 If the change succeeds, you will often see the newly updated item echoed back like this:
 
 ```
 ~$
-~$ meraki switch updateDeviceSwitchPort --serial Q2HP-F5K5-R88R --portId 1 --vlan 100 --name 'Data Port'
+~$ meraki switch updateDeviceSwitchPort --serial Q2HP-F5K5-R88R --portId 1 --vlan 100 --name "Data Port"
 ┏━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━┳━━━━━━━━━━━━┳━━━━━━━┳━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━┳━━━━━━━━━━┳━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━┓
 ┃ portId ┃ name      ┃ enabled ┃ poeEnabled ┃ type  ┃ vlan ┃ voiceVlan ┃ allowedVlans ┃ isolationEnabled ┃ rstpEnabled ┃ stpGuard ┃ linkNegotiation ┃ portScheduleId ┃ udld       ┃
 ┡━━━━━━━━╇━━━━━━━━━━━╇━━━━━━━━━╇━━━━━━━━━━━━╇━━━━━━━╇━━━━━━╇━━━━━━━━━━━╇━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━╇━━━━━━━━━━╇━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━┩
@@ -144,10 +144,7 @@ If the change succeeds, you will often see the newly updated item echoed back li
 ~$
 ```
 
-
-## Using --kwargs
-
-Some Meraki-CLI commands require arguments to be provided which are not explicitly defined in the underlying function, but are documented in the command help page. To see an example of this, run the command `meraki switch updateDeviceSwitchPort -h`. The example is shown below:
+Many commands which make changes to the dashboard (like `updateDeviceSwitchPort` above) have optional arguments which are used to send those changes. See the below help page for the `updateDeviceSwitchPort` command:
 
 ```
 ~$
@@ -197,34 +194,18 @@ Misc Arguments:
 ~$
 ```
 
-In the command help page above you will see many argument options under the "All Arguments" section, but only two of them are listed in the "Required Arguments" section: `serial` and `portId`. Some of the other arguments in the documentation are things like `name`, `tags`, `enabled`, etc.
+For the `updateDeviceSwitchPort` command, you can see from the help page above that there are two required arguments: `--serial` and `--portId`. There are also many optional arguments like `--name`, `--tags`, `--enabled`, `--vlan`, etc. Each of the arguments has its value type listed in the help page.
 
-When arguments are not listed in the "Required Arguments" or "Misc Arguments" sections of the command help page, they are considered to be Optional Arguments.When Optional Arguments are provided at the command-line, they are parsed into native data types and are included as **kwargs** when the command is executed.
+Simple value types like string, integer, and boolean are pretty straightforward. The can be provided like:
+- `--name "Some Descriptive Name"` (string)
+- `--vlan 100` (integer)
+- `--enabled true` (boolean)
 
-This extra-command parsing is included to make it easy to include simple data types in the command without having to use the `--kwargs` argument. The example `--name "My Test Name" --enabled "true"` arguments are exactly equivalent to the alternative `--kwargs '{"name": "My Test Name", "enabled": true}'`.
+Sometimes it is necessary to provide more complex values in certain arguments. An example of this is the `--tags` argument in this command. The `--tags` argument requires a list (array) of items. You can provide this list of items at the CLI using JSON formatting.
 
-Some arguments cannot be simple data types, for example the `tags` argument from above. The `tags` argument must be an array, not a simple string or integer. You have two options for providing this value:
-1. Use the `--tags` option and provide a JSON-parsable array like: `--tags '["first_tag", "second_tag"]'`
-2. Use the `--kwargs` option to provide the higher-level JSON parsable data like `--kwargs '{"tags": ["first_tag", "second_tag"]}'`
+This will look like `--tags '["tag1", "tag2"]'` on a Unix shell or `--tags "[""tag1"", ""tag2""]"` on Windows. This formatting provides a JSON-parsable structure to the CLI tool which is turned into native data and sent over the API to the dashboard. If you want to dive deeper into how to provide JSON data at the CLI, check out the [Using --kwargs](#using---kwargs) and [Dealing with --kwargs on Windows](#dealing-with---kwargs-on-windows) sections.
 
-Both of these options will result in the same data being sent in the command.
-
-
-### Dealing with --kwargs on Windows
-
-The `--kwargs` data passed into Meraki-CLI is a JSON string and the JSON standard requires double-quotes in the data for quoting, it does not allow single-quotes. This becomes challenging on a standard Windows command prompt because Windows usually wants double-quotes used to encapsulate a string on the CLI; how do you use double quotes in the data and to encapsulate it?
-
-To do this, you use regular double-quotes in front of and behind the string to encapsulate it, and you use double-double-quotes in the actual data. That means replacing all uses of a double-quote character in the data with two double-quotes. Your argument ends up looking like this: `--kwargs "{""name"": ""Data Port"", ""vlan"": ""100""}"`. It is probably easiest to use find/replace in a text editor to do this for you.
-
-You can also structure the JSON data and your command a bit if you want to make your command more readable. In Windows, you can do this by ending each line with a carat (`^`) which will allow the command to continue on the next line. Your command in this example will look like:
-
-```
-meraki switch updateDeviceSwitchPort --serial 1234-ABCD-5678 --portId 24 --kwargs ^
-"{ ^
-    ""name"": ""Data Port"", ^
-    ""vlan"": ""100"", ^
-}"
-```
+> Note: Advanced users can use the `--kwargs` option to input all optional parameters as raw JSON data. If needed, check out the [Using --kwargs](#using---kwargs) section for information on how to do that.
 
 
 ## Using a Config File
@@ -346,6 +327,48 @@ The pipelining feature of the Meraki-CLI utility works by writing standard JSON 
 When the program starts, it checks for a leading pipe (ie: `| meraki ...`): the existence of which would indicate that it needs to process STDIN data, which it then does.
 
 When the program processes results to be printed to the screen, it checks for a trailing pipe (ie: `meraki ... |`): the existence of which would indicate that its output will feed another program instance. When this is detected it automatically switches to JSON output and writes it to STDOUT.
+
+
+## ADVANCED USAGE
+
+
+### Using --kwargs
+
+Some Meraki-CLI commands require arguments to be provided which are not explicitly defined in the underlying function, but are documented in the command help page. An example of this is the `updateDeviceSwitchPort` command. You can see an example of this command's help page in the [Making Some Changes](#making-some-changes) section.
+
+In the command help page you will see many argument options under the "All Arguments" section, but only two of them are listed in the "Required Arguments" section: `serial` and `portId`. Some of the other arguments in the documentation are things like `name`, `tags`, `enabled`, etc.
+
+When arguments are not listed in the "Required Arguments" or "Misc Arguments" sections of the command help page, they are considered to be Optional Arguments.
+
+Optional Arguments can be provided in one of two ways:
+1. Using regular CLI arguments like `--name "Test Name"` and `--vlan 100`
+2. Nested as JSON data inside the `--kwargs` argument like `--kwargs '{"name": "Test Name", "vlan": "100"}'`
+   - On Windows CLI, this would need to use double-double quotes inside the data like `--kwargs "{""name"": ""Test Name"", ""vlan"": ""100""}"`
+
+When Optional Arguments are provided at the command-line (in either of the two ways), they are parsed into native data types and are included as **kwargs** to the underlying target method when it is called.
+
+Some arguments cannot be simple data types, for example the `--tags` argument from the `updateDeviceSwitchPort` command. The `--tags` argument must be an array, not a simple string or integer. Again there are two ways you can provide this value:
+1. Use the `--tags` option and provide a JSON-parsable array like: `--tags '["first_tag", "second_tag"]'`
+2. Use the `--kwargs` option to provide the nested JSON data like `--kwargs '{"tags": ["first_tag", "second_tag"]}'`
+
+Both of these options will result in the same data being sent to the underlying target method.
+
+
+#### Dealing with --kwargs on Windows
+
+The `--kwargs` data passed into Meraki-CLI is a JSON string and the JSON standard requires double-quotes in the data for quoting, it does not allow single-quotes. This becomes challenging on a standard Windows command prompt because Windows usually wants double-quotes used to encapsulate a string on the CLI; how do you use double quotes in the data and to encapsulate it?
+
+To do this, you use regular double-quotes in front of and behind the string to encapsulate it, and you use double-double-quotes in the actual data. That means replacing all uses of a double-quote character in the data with two double-quotes. Your argument ends up looking like this: `--kwargs "{""name"": ""Data Port"", ""vlan"": ""100""}"`. It is probably easiest to use find/replace in a text editor to do this for you.
+
+You can also structure the JSON data and your command a bit if you want to make your command more readable. In Windows, you can do this by ending each line with a carat (`^`) which will allow the command to continue on the next line. Your command in this example will look like:
+
+```
+meraki switch updateDeviceSwitchPort --serial 1234-ABCD-5678 --portId 24 --kwargs ^
+"{ ^
+    ""name"": ""Data Port"", ^
+    ""vlan"": ""100"", ^
+}"
+```
 
 -----------------------------------------
 ## CONTRIBUTING
