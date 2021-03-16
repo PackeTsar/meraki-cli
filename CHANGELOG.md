@@ -36,3 +36,23 @@ Documented below is a history of Meraki-CLI versions and a log of changes to eac
 - **Tabulation problems with nested data**
     - ISSUE: The `getNetworkApplianceFirewallL3FirewallRules` function returns a list of rules nested in a dict like `{"rules": [ruledict1, ruledict2]}` which breaks the tabulated output. Need to parse appropriately.
     - FIXES: Added logic to `_table_ready_dicts` to look over returned data to try to find "tabulatable" data.
+
+## v1.2.0
+
+### New Features
+
+- **Easy --kwargs from extra arguments**
+    - Previous versions of Meraki-CLI required you to provide optional arguments at the command line as JSON-parsable data using the `--kwargs` argument. This would look something like `meraki appliance createNetworkApplianceVlan --networkId N_12345 --id 100 --name "My New VLAN" --kwargs '{"applianceIp": "10.0.0.1", "subnet": "10.0.0.0/24"}'`
+        - On Windows it would have to look like `meraki appliance createNetworkApplianceVlan --networkId N_12345 --id 100 --name "My New VLAN" --kwargs "{""applianceIp"": ""10.0.0.1"", ""subnet"": ""10.0.0.0/24""}"`
+    - This `--kwargs` format is difficult to use and prone to error
+    - The new functionality will read through extra commands provided by the user at the CLI and will parse them appropriately. This allows a simpler command to be used instead of the one above: `meraki appliance createNetworkApplianceVlan --networkId N_12345 --id 100 --name "My New VLAN" --applianceIp "10.0.0.1" --subnet "10.0.0.0/24"` where the `--applianceIp` and `--subnet` arguments are broken out on their own; removing the need for the curly-braces, formatting, and double-double quotes on Windows platforms
+
+### Bug Fixes
+
+- **Changed config file name and searched locations**
+    - ISSUE: The config file feature released in v1.1.0 used `meraki` directory names and the `meraki.conf` filename for config files. This might conflict with official Meraki directory and file names in the future and needed to be changed to something unlikely to conflict.
+    - FIXES: The directories now use the name `meraki-cli` and the standard config filename is `meraki-cli.conf`. The searched parent directories remain the same as in v1.1.0.
+
+- **Removed Meraki SDK version lock**
+    - ISSUE: The Official Meraki SDK which existed at the time of the release of Meraki-CLI v1.1.0 had a major bug which prevented it from being usable. To prevent users from installing it and being unable to use Meraki-CLI, a version lock was imposed on the dependency; forcing installation of v1.4.3 of the official Meraki SDK.
+    - FIXES: Meraki has since fixed these issues and the version lock has been lifted.
