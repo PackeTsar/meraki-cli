@@ -959,8 +959,8 @@ def main(argstring=None) -> None:
             if arg_obj.varkw:
                 msc_group.add_argument(f'--{arg_obj.varkw.name}',
                                        dest=arg_obj.varkw.name,
-                                       help='(Optional arguments '
-                                            'in JSON format)',
+                                       help='(Advanced Users) Optional '
+                                            'arguments in JSON format ',
                                        metavar='JSON_STRING',)
     # If an argstring was passed in, we are probably being tested
     if argstring:
