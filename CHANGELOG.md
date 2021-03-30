@@ -10,6 +10,7 @@ Documented below is a history of Meraki-CLI versions and a log of changes to eac
 - [v1.0.5 -> v1.0.6](#v106)
 - [v1.0.6 -> v1.1.0](#v110)
 - [v1.1.0 -> v1.2.0](#v120)
+- [v1.2.0 -> v1.2.1](#v121)
 
 
 # Versions
@@ -58,3 +59,11 @@ Documented below is a history of Meraki-CLI versions and a log of changes to eac
 - **Removed Meraki SDK version lock**
     - ISSUE: The Official Meraki SDK which existed at the time of the release of Meraki-CLI v1.1.0 had a major bug which prevented it from being usable. To prevent users from installing it and being unable to use Meraki-CLI, a version lock was imposed on the dependency; forcing installation of v1.4.3 of the official Meraki SDK.
     - FIXES: Meraki has since fixed these issues and the version lock has been lifted.
+
+## v1.2.1
+
+### Bug Fixes
+
+- **Meraki SDK v1.7.0+ Errors (#3)**
+    - ISSUE: The Meraki SDK introduced a 'batch' directory which contains special classes and methods within those classes. This nested structure breaks how Meraki-CLI parses the SDK to build its parser and documentation due to it expecting a flat predictable structure (classes in the API object, methods in those classes).
+    - FIXES: v1.2.1 locks the Meraki SDK dependency to v1.6.2. Currently in the process of converting all of Meraki-CLI's parsing to recursive to better handle changing structures like this. A proper recursive version will be released soon in v1.3.0. v1.2.1 is a simple quick patch for this issue.

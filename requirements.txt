@@ -1,3 +1,3 @@
-meraki>=1.4.3
+meraki==1.6.2
 rich
 argcomplete
