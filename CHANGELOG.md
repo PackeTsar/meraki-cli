@@ -11,6 +11,7 @@ Documented below is a history of Meraki-CLI versions and a log of changes to eac
 - [v1.0.6 -> v1.1.0](#v110)
 - [v1.1.0 -> v1.2.0](#v120)
 - [v1.2.0 -> v1.2.1](#v121)
+- [v1.2.1 -> v1.3.0](#v130)
 
 
 # Versions
@@ -67,3 +68,15 @@ Documented below is a history of Meraki-CLI versions and a log of changes to eac
 - **Meraki SDK v1.7.0+ Errors (#3)**
     - ISSUE: The Meraki SDK introduced a 'batch' directory which contains special classes and methods within those classes. This nested structure breaks how Meraki-CLI parses the SDK to build its parser and documentation due to it expecting a flat predictable structure (classes in the API object, methods in those classes).
     - FIXES: v1.2.1 locks the Meraki SDK dependency to v1.6.2. Currently in the process of converting all of Meraki-CLI's parsing to recursive to better handle changing structures like this. A proper recursive version will be released soon in v1.3.0. v1.2.1 is a simple quick patch for this issue.
+
+## v1.3.0
+
+### Bug Fixes
+
+- **Recursive Parsing of Meraki SDK (#3)**
+    - ISSUE: See the bug referenced in [v1.2.1](#v121). This version (v1.3.0) implements a permanent fix for the issue described here.
+    - FIXES: v1.3.0 converts the static, nested, for-loops previously used to iterate through Meraki' library (to build the parser and documentation) into a recursive loop which iterates down to an unspecified depth in order to build the parser and documentation system. This functionality provides much better adaptation to future changes by Meraki to their library structure.
+
+- **Daily Testing**
+    - ISSUE: Meraki-CLI v1.2.1 was released on 2021-03-29 in response to a change in Meraki's library (which broke Meraki-CLI) which occurred on 2021-03-16. From 2021-03-16 to 2021-03-29 any installation of Meraki-CLI was inherently broken due to this incompatibility. No system was present to report issues with the Meraki-CLI library. The problem was reported via an opened Github issue as well as comments on a social media platform. It is unacceptable to allow this library to remain inherently broken for that long with no attention.
+    - FIXES: The incompatibility problem is easily caught by the CI system used for Meraki-CLI testing. However, because the testing only executes when commits are made to the repo, it was not caught during the 13 days it was broken. To remedy this, daily testing has been scheduled in the CI system which will run the full Meraki-CLI test suite and send out notifications if any tests fail.
