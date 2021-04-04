@@ -75,8 +75,10 @@ import os
 import re
 import sys
 import json
+import types
 import inspect
 import logging
+import operator
 import argparse
 
 # Installed libraries
@@ -330,7 +332,7 @@ def _log_exception(exception, exit=False) -> None:
     - exception: Exception object which was caught in caller
     - exit: Boolean of whether or not to exit the program
     """
-    if log.level >= logging.INFO:  # If we are debugging at all
+    if log.level >= logging.DEBUG:  # If we are debugging at all
         log.warning('An exception was thrown and is logged below')
         log.exception(exception)
     if exit:
@@ -815,6 +817,108 @@ def _output(parsed_args: argparse.Namespace, result: list) -> None:
         _nice_table(tabledicts)  # Output our nice table to the CLI
 
 
+def _build_parser(subparser: argparse.ArgumentParser, obj: object) -> None:
+    """
+    Recursive function which analyzes a meraki.DashboardAPI instance and builds
+        its structure into an argparse parser. Function follows non-private
+        classes down through their nested levels until it finds callable
+        methods. It then analyzes the methods (creating an Args class
+        instance) and builds the parser.
+
+    - subparser: The current argparse.ArgumentParser subparser object for this
+        level of the recursive loop.
+    - obj: The current object to analyze for this level of the recursive
+        loop. It could be the meraki.DashboardAPI instance, a class inside
+        that instance, or a callable method from a class inside it.
+    """
+    # If the provided obj is a callable method (and not a container class)
+    if isinstance(obj, types.MethodType):
+        # Instantiate an Args object to parse the parameters required by
+        #     the method and make them easy to access.
+        arg_obj = Args(obj)
+        # Add a command endpoint for this method to contain the argument
+        #     options
+        cmd = subparser.add_parser(
+            arg_obj.name,  # Use the method name for the command endpoint
+            add_help=False,  # Disable auto help since we add it manually
+            help=_cmd_title(arg_obj.name),  # Grab the help section (title)
+            description=_cmd_help(arg_obj),  # Grab the help section
+            # Use a raw formatter to allow the help docstring to maintain
+            #     it's multi-line format
+            formatter_class=argparse.RawTextHelpFormatter)
+        # A group for required (positional) arguments
+        req_group = cmd.add_argument_group('Required Arguments')
+        # A group for known optional (kwargs, help) arguments
+        msc_group = cmd.add_argument_group('Misc Arguments')
+        # Add help manually
+        msc_group.add_argument('-h', '--help',
+                               help='Show help for this command',
+                               action='help')
+        # Add a hidden argument which will pass along the arg_obj object and
+        #     put it into the output of .parse_args()
+        cmd.add_argument('--method',
+                         dest='method',
+                         const=arg_obj, default=arg_obj,
+                         action='store_const',
+                         help=argparse.SUPPRESS)
+        for arg in arg_obj.positionals:
+            req_group.add_argument(f'--{arg.name}',
+                                   dest=arg.name,
+                                   help='(required)',
+                                   # Don't require the arg if we are
+                                   #     parsing the STDIN data
+                                   required=NO_STDIN,
+                                   # Use the annotation map to pass
+                                   #     additional params to the
+                                   #     argument option to make it
+                                   #     easier to use and read
+                                   **ANNOTATION_MAP[arg.annotation])
+            # Add the parameter name to the positionals list in the map
+        for arg in arg_obj.keywords:
+            msc_group.add_argument(f'--{arg.name}',
+                                   dest=arg.name,
+                                   default=arg.default,
+                                   # NOTE: These are never required.
+                                   help=f'(default = {arg.default})',
+                                   **ANNOTATION_MAP[type(arg.default)])
+        if arg_obj.varkw:
+            msc_group.add_argument(f'--{arg_obj.varkw.name}',
+                                   dest=arg_obj.varkw.name,
+                                   help='(Advanced Users) Optional '
+                                        'arguments in JSON format ',
+                                   metavar='JSON_STRING',)
+    else:  # If obj is not a callable method, but is a class instance instead
+        # Iterate class strings and classes in the fake API instance
+        for objstr in dir(obj):
+            if objstr[0] == "_":  # If this is a private attribute
+                continue  # Don't add it to the argument parser
+            # Grab the attribute object for this loop
+            subobj = getattr(obj, objstr)
+            # If this attribute is not a callable method, but is a class
+            #     instance instead
+            if not isinstance(subobj, types.MethodType):
+                # Add the type command for this class
+                tparser = subparser.add_parser(
+                    objstr, help=f'{objstr} commands')
+                # Add a hidden argument which will pass along the tparser
+                #     object and put it into the output of .parse_args()
+                tparser.add_argument('--parser',
+                                     dest='parser',
+                                     const=tparser, default=tparser,
+                                     action='store_const',
+                                     help=argparse.SUPPRESS)
+                # Add a container for target method commands within this type
+                tsub = tparser.add_subparsers(dest='command', title='Commands')
+                # Recurse using the attribute class instance and the subparser
+                #     we just built
+                _build_parser(tsub, subobj)
+            # If this attribute is a callable method (and not a class instance)
+            else:
+                # Recurse using the current subparser and the attribute class
+                #     instance
+                _build_parser(subparser, subobj)
+
+
 def main(argstring=None) -> None:
     """
     Primary function called from native script. Allow an argument string to
@@ -825,6 +929,11 @@ def main(argstring=None) -> None:
     api = meraki.DashboardAPI('fake_key', suppress_logging=True)
     # Start our arg parser instance
     parser = Parser(add_help=False)
+    parser.add_argument('--parser',
+                        dest='parser',
+                        const=parser, default=parser,
+                        action='store_const',
+                        help=argparse.SUPPRESS)
     argcomplete.autocomplete(parser)
     # Structure top level arguments into groups to make them easier to read.
     #     Any arguments added here need to also be listed in the _clean_args
@@ -889,79 +998,9 @@ def main(argstring=None) -> None:
                             'executing actions.',
                             dest='output_commands',
                             action='store_true')
-    # Start a dict map of the argument structure. We will use this once the
-    #     CLI args have been parsed to look back and see what parameters are
-    #     required by the target method. This is necessary because it doesn't
-    #     seem possible to navigate the result argparse object to find this
-    #     information.
-    parser_map = {}
     # This will contain the command types like "networks" or "switch"
     subparser = parser.add_subparsers(dest='type', title='Command Types')
-    # Iterate class strings and classes in the fake API instance
-    for clsstr, cls in api.__dict__.items():
-        if clsstr[0] == "_":  # If this is a private attribute
-            continue  # Don't add it to the argument parser
-        # Add the type command for this class
-        tparser = subparser.add_parser(clsstr, help=f'{clsstr} commands')
-        # Add a container for target method commands within this type
-        tsub = tparser.add_subparsers(dest='command', title='Commands')
-        # Add the type command to the map. Will use this later to print the
-        #     help section of the command type
-        parser_map[clsstr] = {'_parser': tparser}
-        # For method string in the class
-        for mtdstr in dir(cls):
-            if mtdstr[0] == "_":  # Skip if private
-                continue
-            # Instantiate an Args object to parse the parameters required by
-            #     the method and make them easy to access.
-            arg_obj = Args(getattr(cls, mtdstr))
-            # Add a command endpoint for this method to contain the argument
-            #     options
-            cmd = tsub.add_parser(
-                mtdstr,  # Use the method name for the command endpoint
-                add_help=False,  # Disable auto help since we add it manually
-                help=_cmd_title(mtdstr),  # Grab the help section (title)
-                description=_cmd_help(arg_obj),  # Grab the help section
-                # Use a raw formatter to allow the help docstring to maintain
-                #     it's multi-line format
-                formatter_class=argparse.RawTextHelpFormatter)
-            # A nice group for required (positional) arguments
-            req_group = cmd.add_argument_group('Required Arguments')
-            # A nice group for known optional (kwargs, help) arguments
-            msc_group = cmd.add_argument_group('Misc Arguments')
-            # Add help manually
-            msc_group.add_argument('-h', '--help',
-                                   help='Show help for this command',
-                                   action='help')
-            # Add the method parameter info into the map
-            parser_map[clsstr][mtdstr] = arg_obj
-            # Iterate the positionals and create argument options for each
-            for arg in arg_obj.positionals:
-                req_group.add_argument(f'--{arg.name}',
-                                       dest=arg.name,
-                                       help='(required)',
-                                       # Don't require the arg if we are
-                                       #     parsing the STDIN data
-                                       required=NO_STDIN,
-                                       # Use the annotation map to pass
-                                       #     additional params to the
-                                       #     argument option to make it
-                                       #     easier to use and read
-                                       **ANNOTATION_MAP[arg.annotation])
-                # Add the parameter name to the positionals list in the map
-            for arg in arg_obj.keywords:
-                msc_group.add_argument(f'--{arg.name}',
-                                       dest=arg.name,
-                                       default=arg.default,
-                                       # NOTE: These are never required.
-                                       help=f'(default = {arg.default})',
-                                       **ANNOTATION_MAP[type(arg.default)])
-            if arg_obj.varkw:
-                msc_group.add_argument(f'--{arg_obj.varkw.name}',
-                                       dest=arg_obj.varkw.name,
-                                       help='(Advanced Users) Optional '
-                                            'arguments in JSON format ',
-                                       metavar='JSON_STRING',)
+    _build_parser(subparser, api)  # Build the parser using the API
     # If an argstring was passed in, we are probably being tested
     if argstring:
         # Split up the args and pass them in as a list to be parsed
@@ -974,14 +1013,18 @@ def main(argstring=None) -> None:
     _args_from_file(args)  # Process any arguments from a file
     # Pull in the two logging systems
     log, meraki_log = _configure_logging(args)
-    log.debug(f'Argument Settings: \n{json.dumps(args.__dict__, indent=4)}')
-    if not args.type:  # If a type (networks, switch, etc) wasn't specified
-        parser.print_help()  # Print help so the user can see options
+    # If an endpoint command (method) was not specified
+    if not hasattr(args, 'method'):
+        # Print help for the command type specified in the CLI
+        args.parser.print_help()
         sys.exit()  # And exit the program
-    if not args.command:  # If a command wasn't provided but a type was
-        # Print the specific help for that command type
-        parser_map[args.type]['_parser'].print_help()
-        sys.exit()
+    else:  # If an endpoint command (method) was specified
+        arg_obj = args.method  # Grab it for later
+        selected_parser = args.parser
+        del args.method  # Delete it so it doesn't break things
+        del args.parser  # Delete the selected parser so it does break things
+    # Log the JSON-parsed args here since we can't parse the delete objs above
+    log.debug(f'Argument Settings: \n{json.dumps(args.__dict__, indent=4)}')
     try:  # Catch an exception where the API key has not been provided at all
         if args.apiKey:
             log.debug('Instantiating Meraki API with defined API key')
@@ -997,9 +1040,12 @@ def main(argstring=None) -> None:
         sys.exit()
     # Set all of the logger objects inside the API to the one we built
     api._logger = api._session.logger = api._session._logger = meraki_log
-    # Grab the target method we intend to call
-    target_method = getattr(getattr(api, args.type), args.command)
-    log.info(f'Target method is {target_method}')
+    path = selected_parser.prog.split()[1:]  # Grab method path list
+    path.append(arg_obj.name)  # Add the target method to the list
+    path = '.'.join(path)  # Make a fully-qualified (dot-seperated) path str
+    # Re-instantiate the arg_obj using the new API instance (with a good key)
+    arg_obj = Args(operator.attrgetter(path)(api))
+    log.info(f'Target method is {arg_obj.method}')
     if NO_STDIN:  # If not in front of a pipe (not being fed by STDIN)
         log.info('No STDIN detected. No pipe behind this instance.')
         # Remove the static args and get a clean dict back only containing
@@ -1012,15 +1058,14 @@ def main(argstring=None) -> None:
         #     of dict of keyword args in [1]
         # _get_method_params returns a single tuple, but we loop through them
         #      below so we manually put that tuple in a list here.
-        argtups = [_get_method_params(args, arg_dict,
-                                      parser_map[args.type][args.command])]
+        argtups = [_get_method_params(args, arg_dict, arg_obj)]
     else:  # If we are being fed by STDIN through a pipeline
         log.info('STDIN detected. Pipe exists behind this instance.')
         # Pull a list of tuples, each containing the parameters tailored for a
         #     call against the target method.
         # Tuple should have a list of positional arguments in [0] and a dict
         #     of dict of keyword args in [1]
-        argtups = _get_stdin_args(args, parser_map[args.type][args.command])
+        argtups = _get_stdin_args(args, arg_obj)
         log.debug(f'Arguments generated from STDIN: \n'
                   f'{json.dumps(argtups, indent=4)}')
     # If the user threw the switch to output commands instead of execute
@@ -1029,7 +1074,7 @@ def main(argstring=None) -> None:
         log.debug('Outputting piped args as commands and cancelling '
                   'execution.')
         # Print the commands to STDOUT and exit the program
-        _print_commands(args, argtups, parser_map[args.type][args.command])
+        _print_commands(args, argtups, arg_obj)
         sys.exit()
     # Iterate through the argument tuples in this list. If the data came from
     #     STDIN, then we may have multiple argument sets to execute. If the
@@ -1037,7 +1082,7 @@ def main(argstring=None) -> None:
     for argtup in argtups:
         # Extract the positional and keyword args from the data
         positionals = argtup[0]
-        if parser_map[args.type][args.command].varkw:
+        if arg_obj.varkw:
             arg_dict = argtup[1]
         else:
             arg_dict = {}
@@ -1048,7 +1093,7 @@ def main(argstring=None) -> None:
         log.info(f'    **Named/Kwargs: {arg_dict}')
         try:  # Catch exceptions in method call
             # Call the target method to execute the command
-            result = target_method(*positionals, **arg_dict)
+            result = arg_obj.method(*positionals, **arg_dict)
         except Exception as e:
             if NO_STDIN:  # If not in front of a pipe (not being fed by STDIN)
                 log.critical('An error occured in command execution, enable '

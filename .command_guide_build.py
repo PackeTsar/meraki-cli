@@ -7,6 +7,7 @@ Script to automatically build the command guide by parsing the SDK.
 
 # Built-in libraries
 import re
+import types
 
 # Installed libraries
 import meraki
@@ -17,31 +18,49 @@ from meraki_cli.__main__ import Args
 from meraki_cli import __main__ as climain
 
 
-def _get_structure() -> {}:
+def _get_structure(result=None, obj=None, path=[]) -> dict:
     """
-    Build a dict structure of the parsable CLI arguments. This will be passed
-        into the J2 template and iterated to build the command guide.
-    FIXME: This code also exists in climain, need to find a way to DRY it
-        up.
+    Recursive function to build a dict structure of the parsable CLI
+        arguments. This will be passed into the J2 template and iterated to
+        build the command guide.
     """
-    # Instantiate a fake instance of the API so we can parse it and build the
-    #     argparse structure from it
-    api = meraki.DashboardAPI('fake_key', suppress_logging=True)
-    result = {}
-    # Iterate class strings and classes in the fake API instance
-    for clsstr, cls in api.__dict__.items():
-        if clsstr[0] == "_":  # If this is a private attribute
-            continue  # Don't add it to the argument parser
-        clsmtds = {}
-        result[clsstr] = clsmtds
-        # For method string in the class
-        for mtdstr in dir(cls):
-            if mtdstr[0] == "_":  # Skip if private
+    if not obj:  # If _get_structure() was called without arguments passed
+        # Instantiate an API instance we can parse
+        obj = meraki.DashboardAPI('fake_key', suppress_logging=True)
+        result = {}  # Start with an empty dict as our result value
+    if isinstance(obj, types.MethodType):  # If obj is a callable method
+        arg_obj = Args(obj)  # Instantiate an Args() instance with it
+        # Add its CLI path info as a string (command-path used to run it)
+        arg_obj.path = ' '.join(path)
+        return arg_obj  # And return it to be added to the result
+    else:  # If obj is NOT a callable method
+        # Iterate each attribute inside of it (as a string)
+        for subobjstr in dir(obj):
+            if subobjstr[0] == "_":  # If this is a private attribute
+                # Skip this loop and don't add it to the argument parser
                 continue
-            # Instantiate an Args object to parse the parameters required by
-            #     the method and make them easy to access.
-            clsmtds[mtdstr] = Args(getattr(cls, mtdstr))
-    return result
+            # If it was not a private attribute
+            path.append(subobjstr)  # Add the string to the command-path list
+            # Grab the attribute object for this loop
+            subobj = getattr(obj, subobjstr)
+            if len(path) > 1:  # If out command-path is more than one command
+                # Set the subobjstr to the full command path. This is used in
+                #     the documentation in the section headers. It turns
+                #     something like 'CreateNetworkApplianceStaticRoute' into
+                #     'ApplianceCreateNetworkApplianceStaticRoute'. This helps
+                #     prevent duplicate headers under the 'batch' command-path
+                subobjstr = ' '.join(path)
+            # Set a new key in the result to the output of a recursed
+            #     iteration of this function. The output will be an Arg()
+            #     instance if subobj is a callable method. Or it will be
+            #     another dict if subobj is a class instance.
+            result[subobjstr] = _get_structure(result={},
+                                               obj=subobj,
+                                               path=path)
+            # Pop the last entry off of the path since we are ending a loop
+            path.pop()
+        # Return the result dict which was populated during the for loop
+        return result
 
 
 def _uri_name(name: str) -> str:
