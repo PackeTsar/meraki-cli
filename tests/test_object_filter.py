@@ -55,3 +55,7 @@ class TestObjectFilter(unittest.TestCase):
         output = _object_filter(LISTOFDICTS,
                                 ['name:THING', 'id:...'], and_logic=True)
         assert output == LISTOFDICTS[2:4]
+
+    def testObjectFilterEmptyList(self):
+        output = _object_filter([], ['name:THING'])
+        assert output == []

@@ -650,6 +650,8 @@ def _object_filter(listofdicts: list, filter_strs: list,
     if type(listofdicts) is not list:
         log.error(f'Cannot filter non-list. Returning data: {listofdicts}')
         return listofdicts
+    if not listofdicts:  # If list is empty
+        return listofdicts  # Return it back since it can't be filtered
     filters = []  # Build list of dicts for filter definitions.
     for filter_str in filter_strs:  # Iterate user provided strings to parse
         # Extract the key name up to the colon
@@ -1102,6 +1104,9 @@ def main(argstring=None) -> None:
             else:  # If we are in front of a pipe
                 # Log the exception but don't exit the program
                 _log_exception(e)
+                # Set empty result so we don't reuse previous result or
+                #     error out
+                result = []
         log.debug(f'Target method result: \n{json.dumps(result, indent=4)}')
         if args.filters:  # If we are supposed to filter result objects
             # Run the results through the filter
