@@ -10,7 +10,7 @@ This documentation is built automatically by parsing the [Meraki Dashboard API P
 
 ## Version
 
-This command guide is based on version **v1.7.1** of the [Meraki Dashboard API Python SDK](https://github.com/meraki/dashboard-api-python). If you want to see the version of the SDK you have installed, issue the command `meraki -v`.
+This command guide is based on version **v1.7.2** of the [Meraki Dashboard API Python SDK](https://github.com/meraki/dashboard-api-python). If you want to see the version of the SDK you have installed, issue the command `meraki -v`.
 
 
 # TABLE OF CONTENTS
@@ -135,6 +135,7 @@ This command guide is based on version **v1.7.1** of the [Meraki Dashboard API P
     - [Batch Networks](#batch-networks)
         - [Batch Networks Bind Network](#batch-networks-bind-network)
         - [Batch Networks Claim Network Devices](#batch-networks-claim-network-devices)
+        - [Batch Networks Create Network Firmware Upgrades Rollback](#batch-networks-create-network-firmware-upgrades-rollback)
         - [Batch Networks Create Network Group Policy](#batch-networks-create-network-group-policy)
         - [Batch Networks Create Network Meraki Auth User](#batch-networks-create-network-meraki-auth-user)
         - [Batch Networks Create Network Mqtt Broker](#batch-networks-create-network-mqtt-broker)
@@ -223,11 +224,13 @@ This command guide is based on version **v1.7.1** of the [Meraki Dashboard API P
         - [Batch Wireless Update Network Wireless Rf Profile](#batch-wireless-update-network-wireless-rf-profile)
         - [Batch Wireless Update Network Wireless Settings](#batch-wireless-update-network-wireless-settings)
         - [Batch Wireless Update Network Wireless Ssid](#batch-wireless-update-network-wireless-ssid)
+        - [Batch Wireless Update Network Wireless Ssid Bonjour Forwarding](#batch-wireless-update-network-wireless-ssid-bonjour-forwarding)
         - [Batch Wireless Update Network Wireless Ssid Device Type Group Policies](#batch-wireless-update-network-wireless-ssid-device-type-group-policies)
         - [Batch Wireless Update Network Wireless Ssid Firewall L7 Firewall Rules](#batch-wireless-update-network-wireless-ssid-firewall-l7-firewall-rules)
         - [Batch Wireless Update Network Wireless Ssid Identity Psk](#batch-wireless-update-network-wireless-ssid-identity-psk)
         - [Batch Wireless Update Network Wireless Ssid Splash Settings](#batch-wireless-update-network-wireless-ssid-splash-settings)
         - [Batch Wireless Update Network Wireless Ssid Traffic Shaping Rules](#batch-wireless-update-network-wireless-ssid-traffic-shaping-rules)
+        - [Batch Wireless Update Network Wireless Ssid Vpn](#batch-wireless-update-network-wireless-ssid-vpn)
 - [Camera](#camera)
     - [Camera Create Network Camera Quality Retention Profile](#camera-create-network-camera-quality-retention-profile)
     - [Camera Delete Network Camera Quality Retention Profile](#camera-delete-network-camera-quality-retention-profile)
@@ -282,6 +285,7 @@ This command guide is based on version **v1.7.1** of the [Meraki Dashboard API P
 - [Networks](#networks)
     - [Networks Bind Network](#networks-bind-network)
     - [Networks Claim Network Devices](#networks-claim-network-devices)
+    - [Networks Create Network Firmware Upgrades Rollback](#networks-create-network-firmware-upgrades-rollback)
     - [Networks Create Network Floor Plan](#networks-create-network-floor-plan)
     - [Networks Create Network Group Policy](#networks-create-network-group-policy)
     - [Networks Create Network Meraki Auth User](#networks-create-network-meraki-auth-user)
@@ -587,6 +591,7 @@ This command guide is based on version **v1.7.1** of the [Meraki Dashboard API P
     - [Wireless Get Network Wireless Settings](#wireless-get-network-wireless-settings)
     - [Wireless Get Network Wireless Signal Quality History](#wireless-get-network-wireless-signal-quality-history)
     - [Wireless Get Network Wireless Ssid](#wireless-get-network-wireless-ssid)
+    - [Wireless Get Network Wireless Ssid Bonjour Forwarding](#wireless-get-network-wireless-ssid-bonjour-forwarding)
     - [Wireless Get Network Wireless Ssid Device Type Group Policies](#wireless-get-network-wireless-ssid-device-type-group-policies)
     - [Wireless Get Network Wireless Ssid Firewall L3 Firewall Rules](#wireless-get-network-wireless-ssid-firewall-l3-firewall-rules)
     - [Wireless Get Network Wireless Ssid Firewall L7 Firewall Rules](#wireless-get-network-wireless-ssid-firewall-l7-firewall-rules)
@@ -594,6 +599,7 @@ This command guide is based on version **v1.7.1** of the [Meraki Dashboard API P
     - [Wireless Get Network Wireless Ssid Identity Psks](#wireless-get-network-wireless-ssid-identity-psks)
     - [Wireless Get Network Wireless Ssid Splash Settings](#wireless-get-network-wireless-ssid-splash-settings)
     - [Wireless Get Network Wireless Ssid Traffic Shaping Rules](#wireless-get-network-wireless-ssid-traffic-shaping-rules)
+    - [Wireless Get Network Wireless Ssid Vpn](#wireless-get-network-wireless-ssid-vpn)
     - [Wireless Get Network Wireless Ssids](#wireless-get-network-wireless-ssids)
     - [Wireless Get Network Wireless Usage History](#wireless-get-network-wireless-usage-history)
     - [Wireless Update Device Wireless Bluetooth Settings](#wireless-update-device-wireless-bluetooth-settings)
@@ -604,12 +610,14 @@ This command guide is based on version **v1.7.1** of the [Meraki Dashboard API P
     - [Wireless Update Network Wireless Rf Profile](#wireless-update-network-wireless-rf-profile)
     - [Wireless Update Network Wireless Settings](#wireless-update-network-wireless-settings)
     - [Wireless Update Network Wireless Ssid](#wireless-update-network-wireless-ssid)
+    - [Wireless Update Network Wireless Ssid Bonjour Forwarding](#wireless-update-network-wireless-ssid-bonjour-forwarding)
     - [Wireless Update Network Wireless Ssid Device Type Group Policies](#wireless-update-network-wireless-ssid-device-type-group-policies)
     - [Wireless Update Network Wireless Ssid Firewall L3 Firewall Rules](#wireless-update-network-wireless-ssid-firewall-l3-firewall-rules)
     - [Wireless Update Network Wireless Ssid Firewall L7 Firewall Rules](#wireless-update-network-wireless-ssid-firewall-l7-firewall-rules)
     - [Wireless Update Network Wireless Ssid Identity Psk](#wireless-update-network-wireless-ssid-identity-psk)
     - [Wireless Update Network Wireless Ssid Splash Settings](#wireless-update-network-wireless-ssid-splash-settings)
     - [Wireless Update Network Wireless Ssid Traffic Shaping Rules](#wireless-update-network-wireless-ssid-traffic-shaping-rules)
+    - [Wireless Update Network Wireless Ssid Vpn](#wireless-update-network-wireless-ssid-vpn)
 
 
 
@@ -4019,6 +4027,40 @@ def claimNetworkDevices(networkId: str, serials: list):
 
 
 ----------------------------------------
+## Batch Networks Create Network Firmware Upgrades Rollback
+
+
+**Rollback a Firmware Upgrade For A Network**
+
+https://developer.cisco.com/meraki/api-v1/#!create-network-firmware-upgrades-rollback
+
+##### Arguments
+- `--networkId` (string): (required)
+- `--reasons` (array): Reasons for the rollback
+- `--product` (string): Product type to rollback (if the network is a combined network)
+- `--time` (string): Scheduled time for the rollback
+- `--toVersion` (object): Version to downgrade to (if the network has firmware flexibility)
+
+
+##### Example:
+```
+meraki batch networks createNetworkFirmwareUpgradesRollback --networkId 'STRING' --reasons ITEM --optionalArg1 "optionalarg1value" --optionalArg2 "optionalarg2value"
+````
+
+##### Example using `--kwargs` (Advanced):
+```
+meraki batch networks createNetworkFirmwareUpgradesRollback --networkId 'STRING' --reasons ITEM --kwargs '{"key1": "value1", "key2": "value2"}'
+````
+
+##### Method Code:
+```python
+def createNetworkFirmwareUpgradesRollback(networkId: str, reasons: list, **kwargs):
+    # Code
+````
+
+
+
+----------------------------------------
 ## Batch Networks Create Network Group Policy
 
 
@@ -4377,13 +4419,15 @@ def updateNetwork(networkId: str, **kwargs):
 ## Batch Networks Update Network Firmware Upgrades
 
 
-**Update current maintenance window for a network**
+**Update firmware upgrade information for a network**
 
 https://developer.cisco.com/meraki/api-v1/#!update-network-firmware-upgrades
 
 ##### Arguments
 - `--networkId` (string): (required)
 - `--upgradeWindow` (object): Upgrade window for devices in network
+- `--timezone` (string): The timezone for the network
+- `--products` (object): Contains information about the network to update
 
 
 ##### Example:
@@ -6754,8 +6798,10 @@ https://developer.cisco.com/meraki/api-v1/#!update-network-wireless-ssid
 - `--wpaEncryptionMode` (string): The types of WPA encryption. ('WPA1 only', 'WPA1 and WPA2', 'WPA2 only', 'WPA3 Transition Mode' or 'WPA3 only')
 - `--dot11w` (object): The current setting for Protected Management Frames (802.11w).
 - `--dot11r` (object): The current setting for 802.11r
-- `--splashPage` (string): The type of splash page for the SSID ('None', 'Click-through splash page', 'Billing', 'Password-protected with Meraki RADIUS', 'Password-protected with custom RADIUS', 'Password-protected with Active Directory', 'Password-protected with LDAP', 'SMS authentication', 'Systems Manager Sentry', 'Facebook Wi-Fi', 'Google OAuth', 'Sponsored guest' or 'Cisco ISE'). This attribute is not supported for template children.
+- `--splashPage` (string): The type of splash page for the SSID ('None', 'Click-through splash page', 'Billing', 'Password-protected with Meraki RADIUS', 'Password-protected with custom RADIUS', 'Password-protected with Active Directory', 'Password-protected with LDAP', 'SMS authentication', 'Systems Manager Sentry', 'Facebook Wi-Fi', 'Google OAuth', 'Sponsored guest', 'Cisco ISE' or 'Google Apps domain'). This attribute is not supported for template children.
 - `--splashGuestSponsorDomains` (array): Array of valid sponsor email domains for sponsored guest splash type.
+- `--oauth` (object): The OAuth settings of this SSID. Only valid if splashPage is 'Google OAuth'.
+- `--localRadius` (object): The current setting for Local Authentication, a built-in RADIUS server on the access point. Only valid if authMode is '8021x-localradius'.
 - `--ldap` (object): The current setting for LDAP. Only valid if splashPage is 'Password-protected with LDAP'.
 - `--activeDirectory` (object): The current setting for Active Directory. Only valid if splashPage is 'Password-protected with Active Directory'
 - `--radiusServers` (array): The RADIUS 802.1X servers to be used for authentication. This param is only valid if the authMode is 'open-with-radius', '8021x-radius' or 'ipsk-with-radius'
@@ -6794,9 +6840,9 @@ https://developer.cisco.com/meraki/api-v1/#!update-network-wireless-ssid
 - `--visible` (boolean): Boolean indicating whether APs should advertise or hide this SSID. APs will only broadcast this SSID if set to true
 - `--availableOnAllAps` (boolean): Boolean indicating whether all APs should broadcast the SSID or if it should be restricted to APs matching any availability tags. Can only be false if the SSID has availability tags.
 - `--availabilityTags` (array): Accepts a list of tags for this SSID. If availableOnAllAps is false, then the SSID will only be broadcast by APs with tags matching any of the tags in this list.
-- `--adaptivePolicyGroupId` (string): Adaptive policy group ID this SSID is assigned to.
 - `--mandatoryDhcpEnabled` (boolean): If true, Mandatory DHCP will enforce that clients connecting to this SSID must use the IP address assigned by the DHCP server. Clients who use a static IP address won't be able to associate.
 - `--adultContentFilteringEnabled` (boolean): Boolean indicating whether or not adult content will be blocked
+- `--dnsRewrite` (object): DNS servers rewrite settings
 
 
 ##### Example:
@@ -6812,6 +6858,39 @@ meraki batch wireless updateNetworkWirelessSsid --networkId 'STRING' --number 'S
 ##### Method Code:
 ```python
 def updateNetworkWirelessSsid(networkId: str, number: str, **kwargs):
+    # Code
+````
+
+
+
+----------------------------------------
+## Batch Wireless Update Network Wireless Ssid Bonjour Forwarding
+
+
+**Update the bonjour forwarding setting and rules for the SSID**
+
+https://developer.cisco.com/meraki/api-v1/#!update-network-wireless-ssid-bonjour-forwarding
+
+##### Arguments
+- `--networkId` (string): (required)
+- `--number` (string): (required)
+- `--enabled` (boolean): If true, Bonjour forwarding is enabled on this SSID.
+- `--rules` (array): List of bonjour forwarding rules.
+
+
+##### Example:
+```
+meraki batch wireless updateNetworkWirelessSsidBonjourForwarding --networkId 'STRING' --number 'STRING' --optionalArg1 "optionalarg1value" --optionalArg2 "optionalarg2value"
+````
+
+##### Example using `--kwargs` (Advanced):
+```
+meraki batch wireless updateNetworkWirelessSsidBonjourForwarding --networkId 'STRING' --number 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
+````
+
+##### Method Code:
+```python
+def updateNetworkWirelessSsidBonjourForwarding(networkId: str, number: str, **kwargs):
     # Code
 ````
 
@@ -6994,6 +7073,38 @@ meraki batch wireless updateNetworkWirelessSsidTrafficShapingRules --networkId '
 ##### Method Code:
 ```python
 def updateNetworkWirelessSsidTrafficShapingRules(networkId: str, number: str, **kwargs):
+    # Code
+````
+
+
+
+----------------------------------------
+## Batch Wireless Update Network Wireless Ssid Vpn
+
+
+**Update the VPN settings for the SSID**
+
+https://developer.cisco.com/meraki/api-v1/#!update-network-wireless-ssid-vpn
+
+##### Arguments
+- `--networkId` (string): (required)
+- `--number` (string): (required)
+- `--splitTunnel` (object): The VPN split tunnel settings for this SSID.
+
+
+##### Example:
+```
+meraki batch wireless updateNetworkWirelessSsidVpn --networkId 'STRING' --number 'STRING' --optionalArg1 "optionalarg1value" --optionalArg2 "optionalarg2value"
+````
+
+##### Example using `--kwargs` (Advanced):
+```
+meraki batch wireless updateNetworkWirelessSsidVpn --networkId 'STRING' --number 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
+````
+
+##### Method Code:
+```python
+def updateNetworkWirelessSsidVpn(networkId: str, number: str, **kwargs):
     # Code
 ````
 
@@ -8453,6 +8564,40 @@ def claimNetworkDevices(networkId: str, serials: list):
 
 
 ----------------------------------------
+## Networks Create Network Firmware Upgrades Rollback
+
+
+**Rollback a Firmware Upgrade For A Network**
+
+https://developer.cisco.com/meraki/api-v1/#!create-network-firmware-upgrades-rollback
+
+##### Arguments
+- `--networkId` (string): (required)
+- `--reasons` (array): Reasons for the rollback
+- `--product` (string): Product type to rollback (if the network is a combined network)
+- `--time` (string): Scheduled time for the rollback
+- `--toVersion` (object): Version to downgrade to (if the network has firmware flexibility)
+
+
+##### Example:
+```
+meraki networks createNetworkFirmwareUpgradesRollback --networkId 'STRING' --reasons ITEM --optionalArg1 "optionalarg1value" --optionalArg2 "optionalarg2value"
+````
+
+##### Example using `--kwargs` (Advanced):
+```
+meraki networks createNetworkFirmwareUpgradesRollback --networkId 'STRING' --reasons ITEM --kwargs '{"key1": "value1", "key2": "value2"}'
+````
+
+##### Method Code:
+```python
+def createNetworkFirmwareUpgradesRollback(networkId: str, reasons: list, **kwargs):
+    # Code
+````
+
+
+
+----------------------------------------
 ## Networks Create Network Floor Plan
 
 
@@ -9356,7 +9501,7 @@ def getNetworkEventsEventTypes(networkId: str):
 ## Networks Get Network Firmware Upgrades
 
 
-**Get current maintenance window for a network**
+**Get firmware upgrade information for a network**
 
 https://developer.cisco.com/meraki/api-v1/#!get-network-firmware-upgrades
 
@@ -10339,13 +10484,15 @@ def updateNetworkClientSplashAuthorizationStatus(networkId: str, clientId: str, 
 ## Networks Update Network Firmware Upgrades
 
 
-**Update current maintenance window for a network**
+**Update firmware upgrade information for a network**
 
 https://developer.cisco.com/meraki/api-v1/#!update-network-firmware-upgrades
 
 ##### Arguments
 - `--networkId` (string): (required)
 - `--upgradeWindow` (object): Upgrade window for devices in network
+- `--timezone` (string): The timezone for the network
+- `--products` (object): Contains information about the network to update
 
 
 ##### Example:
@@ -17617,6 +17764,32 @@ def getNetworkWirelessSsid(networkId: str, number: str):
 
 
 ----------------------------------------
+## Wireless Get Network Wireless Ssid Bonjour Forwarding
+
+
+**List the Bonjour forwarding setting and rules for the SSID**
+
+https://developer.cisco.com/meraki/api-v1/#!get-network-wireless-ssid-bonjour-forwarding
+
+##### Arguments
+- `--networkId` (string): (required)
+- `--number` (string): (required)
+
+
+##### Example:
+```
+meraki wireless getNetworkWirelessSsidBonjourForwarding --networkId 'STRING' --number 'STRING'
+````
+
+##### Method Code:
+```python
+def getNetworkWirelessSsidBonjourForwarding(networkId: str, number: str):
+    # Code
+````
+
+
+
+----------------------------------------
 ## Wireless Get Network Wireless Ssid Device Type Group Policies
 
 
@@ -17794,6 +17967,32 @@ meraki wireless getNetworkWirelessSsidTrafficShapingRules --networkId 'STRING' -
 ##### Method Code:
 ```python
 def getNetworkWirelessSsidTrafficShapingRules(networkId: str, number: str):
+    # Code
+````
+
+
+
+----------------------------------------
+## Wireless Get Network Wireless Ssid Vpn
+
+
+**List the VPN settings for the SSID.**
+
+https://developer.cisco.com/meraki/api-v1/#!get-network-wireless-ssid-vpn
+
+##### Arguments
+- `--networkId` (string): (required)
+- `--number` (string): (required)
+
+
+##### Example:
+```
+meraki wireless getNetworkWirelessSsidVpn --networkId 'STRING' --number 'STRING'
+````
+
+##### Method Code:
+```python
+def getNetworkWirelessSsidVpn(networkId: str, number: str):
     # Code
 ````
 
@@ -18125,8 +18324,10 @@ https://developer.cisco.com/meraki/api-v1/#!update-network-wireless-ssid
 - `--wpaEncryptionMode` (string): The types of WPA encryption. ('WPA1 only', 'WPA1 and WPA2', 'WPA2 only', 'WPA3 Transition Mode' or 'WPA3 only')
 - `--dot11w` (object): The current setting for Protected Management Frames (802.11w).
 - `--dot11r` (object): The current setting for 802.11r
-- `--splashPage` (string): The type of splash page for the SSID ('None', 'Click-through splash page', 'Billing', 'Password-protected with Meraki RADIUS', 'Password-protected with custom RADIUS', 'Password-protected with Active Directory', 'Password-protected with LDAP', 'SMS authentication', 'Systems Manager Sentry', 'Facebook Wi-Fi', 'Google OAuth', 'Sponsored guest' or 'Cisco ISE'). This attribute is not supported for template children.
+- `--splashPage` (string): The type of splash page for the SSID ('None', 'Click-through splash page', 'Billing', 'Password-protected with Meraki RADIUS', 'Password-protected with custom RADIUS', 'Password-protected with Active Directory', 'Password-protected with LDAP', 'SMS authentication', 'Systems Manager Sentry', 'Facebook Wi-Fi', 'Google OAuth', 'Sponsored guest', 'Cisco ISE' or 'Google Apps domain'). This attribute is not supported for template children.
 - `--splashGuestSponsorDomains` (array): Array of valid sponsor email domains for sponsored guest splash type.
+- `--oauth` (object): The OAuth settings of this SSID. Only valid if splashPage is 'Google OAuth'.
+- `--localRadius` (object): The current setting for Local Authentication, a built-in RADIUS server on the access point. Only valid if authMode is '8021x-localradius'.
 - `--ldap` (object): The current setting for LDAP. Only valid if splashPage is 'Password-protected with LDAP'.
 - `--activeDirectory` (object): The current setting for Active Directory. Only valid if splashPage is 'Password-protected with Active Directory'
 - `--radiusServers` (array): The RADIUS 802.1X servers to be used for authentication. This param is only valid if the authMode is 'open-with-radius', '8021x-radius' or 'ipsk-with-radius'
@@ -18165,9 +18366,9 @@ https://developer.cisco.com/meraki/api-v1/#!update-network-wireless-ssid
 - `--visible` (boolean): Boolean indicating whether APs should advertise or hide this SSID. APs will only broadcast this SSID if set to true
 - `--availableOnAllAps` (boolean): Boolean indicating whether all APs should broadcast the SSID or if it should be restricted to APs matching any availability tags. Can only be false if the SSID has availability tags.
 - `--availabilityTags` (array): Accepts a list of tags for this SSID. If availableOnAllAps is false, then the SSID will only be broadcast by APs with tags matching any of the tags in this list.
-- `--adaptivePolicyGroupId` (string): Adaptive policy group ID this SSID is assigned to.
 - `--mandatoryDhcpEnabled` (boolean): If true, Mandatory DHCP will enforce that clients connecting to this SSID must use the IP address assigned by the DHCP server. Clients who use a static IP address won't be able to associate.
 - `--adultContentFilteringEnabled` (boolean): Boolean indicating whether or not adult content will be blocked
+- `--dnsRewrite` (object): DNS servers rewrite settings
 
 
 ##### Example:
@@ -18183,6 +18384,39 @@ meraki wireless updateNetworkWirelessSsid --networkId 'STRING' --number 'STRING'
 ##### Method Code:
 ```python
 def updateNetworkWirelessSsid(networkId: str, number: str, **kwargs):
+    # Code
+````
+
+
+
+----------------------------------------
+## Wireless Update Network Wireless Ssid Bonjour Forwarding
+
+
+**Update the bonjour forwarding setting and rules for the SSID**
+
+https://developer.cisco.com/meraki/api-v1/#!update-network-wireless-ssid-bonjour-forwarding
+
+##### Arguments
+- `--networkId` (string): (required)
+- `--number` (string): (required)
+- `--enabled` (boolean): If true, Bonjour forwarding is enabled on this SSID.
+- `--rules` (array): List of bonjour forwarding rules.
+
+
+##### Example:
+```
+meraki wireless updateNetworkWirelessSsidBonjourForwarding --networkId 'STRING' --number 'STRING' --optionalArg1 "optionalarg1value" --optionalArg2 "optionalarg2value"
+````
+
+##### Example using `--kwargs` (Advanced):
+```
+meraki wireless updateNetworkWirelessSsidBonjourForwarding --networkId 'STRING' --number 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
+````
+
+##### Method Code:
+```python
+def updateNetworkWirelessSsidBonjourForwarding(networkId: str, number: str, **kwargs):
     # Code
 ````
 
@@ -18398,5 +18632,37 @@ meraki wireless updateNetworkWirelessSsidTrafficShapingRules --networkId 'STRING
 ##### Method Code:
 ```python
 def updateNetworkWirelessSsidTrafficShapingRules(networkId: str, number: str, **kwargs):
+    # Code
+````
+
+
+
+----------------------------------------
+## Wireless Update Network Wireless Ssid Vpn
+
+
+**Update the VPN settings for the SSID**
+
+https://developer.cisco.com/meraki/api-v1/#!update-network-wireless-ssid-vpn
+
+##### Arguments
+- `--networkId` (string): (required)
+- `--number` (string): (required)
+- `--splitTunnel` (object): The VPN split tunnel settings for this SSID.
+
+
+##### Example:
+```
+meraki wireless updateNetworkWirelessSsidVpn --networkId 'STRING' --number 'STRING' --optionalArg1 "optionalarg1value" --optionalArg2 "optionalarg2value"
+````
+
+##### Example using `--kwargs` (Advanced):
+```
+meraki wireless updateNetworkWirelessSsidVpn --networkId 'STRING' --number 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
+````
+
+##### Method Code:
+```python
+def updateNetworkWirelessSsidVpn(networkId: str, number: str, **kwargs):
     # Code
 ````
