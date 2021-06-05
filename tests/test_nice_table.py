@@ -4,10 +4,21 @@ from io import StringIO
 from meraki_cli.__main__ import _nice_table
 
 
-LISTOFDICTS = [{
+LISTOFDICTS = [
+    {
         'key1': '1',
         'key2': '1',
-    }
+     }
+]
+
+INCOMPLETELISTOFDICTS = [
+    {
+        'key1': '1',
+        'key2': '1',
+     },
+    {
+        'key3': '3',
+     }
 ]
 
 
@@ -22,3 +33,8 @@ class TestNiceTable(unittest.TestCase):
         with patch('sys.stdout', new=StringIO()) as fake_out:
             _nice_table(LISTOFDICTS)
             self.assertIn('key1', fake_out.getvalue())
+
+    def testNiceTableIncomplete(self):
+        with patch('sys.stdout', new=StringIO()) as fake_out:
+            _nice_table(INCOMPLETELISTOFDICTS)
+            self.assertIn('key3', fake_out.getvalue())

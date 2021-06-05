@@ -767,6 +767,47 @@ def _column_filter(listofdicts: list, columns_str: str) -> []:
     return result
 
 
+def _normalize_listofdicts(listofdicts: list) -> []:
+    """
+    Prepare a list of dicts for tabulation by normalizing the dicts: make
+        sure each dict in the list has the same keys present. This will turn:
+        [{'key1': 'val1'}, {'key2': 'val2'}]
+        into:
+        [{'key1': 'val1', 'key2': ''}, {'key1': '', 'key2': 'val2'}]
+        which will allow proper tabulation to happen.
+
+    - listofdicts: List of dict objects. Posibly where the dicts do not have
+        the samek set of keys Example:
+        [{'id': '1', 'name': 'THING1'}, {'id': '2', 'name': 'THING2'}]
+    """
+    if not listofdicts:  # If it's empty or None
+        log.info('Input is empty or None. Returning it.')
+        return listofdicts  # Don't modify it, just return it
+    if type(listofdicts) is not list:  # If it's not a list
+        log.info('Input is not a list. Returning it.')
+        return listofdicts
+    if type(listofdicts[0]) is not dict:  # If the list doesn't contain dicts
+        log.info('Input\'s first entry is not a dict. Returning list.')
+        return listofdicts
+    keylist = []  # List of all keys which appear across all dicts
+    for d in listofdicts:  # For each dict in this list
+        for key in d:  # For each key in this dict
+            # Add the key to the list if not there already
+            if key not in keylist:
+                keylist.append(key)
+    result = []  # Result list of dicts to be output
+    for d in listofdicts:  # Iterate the original list of dicts
+        # Start the new dict which will be added to the result list
+        newdict = {}
+        for key in keylist:  # Iterate the full list of keys
+            if key in d:  # If this key is already in the source dict
+                newdict[key] = d[key]  # Then add the key and value
+            else:  # If this key is not already in the source dict
+                newdict[key] = ''  # Then add an empty value
+        result.append(newdict)  # Add the replacement dict to the result list
+    return result
+
+
 def _nice_table(listofdicts: list) -> None:
     """
     Print out a nicely formatted table from a list of dicts.
@@ -781,10 +822,11 @@ def _nice_table(listofdicts: list) -> None:
     console = Console()  # Instantiate the Rich console
     # Instantiate the table object with header settings
     table = Table(show_header=True, header_style="bold magenta")
+    normalizedlist = _normalize_listofdicts(listofdicts)
     # For each header column name in the first dict in the list
-    for head in listofdicts[0]:
+    for head in normalizedlist[0]:
         table.add_column(head)  # Add that header column name
-    for d in listofdicts:
+    for d in normalizedlist:
         # Add the dict values as args to table.add_row
         table.add_row(*list(d.values()))
     console.print(table)  # Print out the table
