@@ -55,6 +55,16 @@ class TestReconcileArgs(unittest.TestCase):
         _reconcile_args(parsed_args, file.name)
         assert parsed_args.apiKey == "6789"
 
+    def testReconcileDebugCheckWarning(self):
+        """
+        Check that a warning message is thrown if we are debugging. Doing
+            this check just to get full testing coverage
+        """
+        parsed_args, file = self._getArgsAndFile('{"apiKey": "6789"}')
+        parsed_args.debug = 1
+        with self.assertLogs(level='WARNING'):
+            _reconcile_args(parsed_args, file.name)
+
     def testReconcileArgsSuccess(self):
         parsed_args, file = self._getArgsAndFile('{"jsonOutput": true}')
         _reconcile_args(parsed_args, file.name)
