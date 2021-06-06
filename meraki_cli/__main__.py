@@ -360,20 +360,23 @@ def _cmd_help(arg_obj: Args) -> str:
 
     - mtdstr: String name of the method (ie: 'getOrganizations')
     """
-    result = arg_obj.method.__doc__  # Start with the doc string
+    result = ''  # Start with an empty result
+    #  Iterate the docstring lines
+    for line in arg_obj.method.__doc__.splitlines():
+        result += f'\n{line.lstrip()}'  # And strip the leading whitespace
     # Set the docstring header (wrapped in asterisks) to uppercase
     result = re.sub(r'\*\*(.*)\*\*', lambda ele: ele.group(0).upper(), result)
-    # Remove leading tabs from header and add en extra line break
-    result = re.sub(r'\t\t\*\*(.*)\*\*', r'\1\n', result)
-    # Remove leading tabs from link
-    result = re.sub(r'\t\t(https://.*)\n', r'\1', result)
+    # Remove leading whitespace from header
+    result = re.sub(r'[\s]+\*\*(.*)\*\*', r'\1', result)
+    # Remove leading whitespace from link and space it below the header
+    result = re.sub(r'[\s]+(https://.*)\n', r'\n\n\1', result)
     if arg_obj.positionals:  # If there are positional (required) arguments
         # Add an "All Arguments" line below http for the argument entries
         result = re.sub(r'(https://.*)\n', r'\1\n\nAll Arguments:\n', result)
     # Remove leading tabs from argument entries and append double-hypen
-    result = re.sub(r'\t\t- ([a-zA-Z0-9_]+) ', r'  --\1 ', result)
+    result = re.sub(r'- ([a-zA-Z0-9_]+) ', r'  --\1 ', result)
     # Add the signature at the bottom of the help.
-    result += '\nFunction Signature:\n\t'\
+    result += '\nFunction Signature:\n  '\
               f'>>> def {arg_obj.name}{arg_obj.signature}:'
     return result
 
