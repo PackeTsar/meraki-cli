@@ -90,8 +90,8 @@ Meraki-CLI is command-line driven and once installed can be run with the command
 In order to operate the CLI you need to input your Meraki API key using one of three methods:
 
 1. Saving your API key as an environment variable (recommended):
-    - **Windows**: `set MERAKI_DASHBOARD_API_KEY=093b24e85df15a3e66f1fc359f4c48493eaa1b73`
-    - **MacOS/Linux**: `export MERAKI_DASHBOARD_API_KEY=093b24e85df15a3e66f1fc359f4c48493eaa1b73`
+    - **Windows**: `set MERAKI_DASHBOARD_API_KEY=6bec40cf957de430a6f1f2baa056b99a4fac9ea0`
+    - **MacOS/Linux**: `export MERAKI_DASHBOARD_API_KEY=6bec40cf957de430a6f1f2baa056b99a4fac9ea0`
     - Once saved as an environment variable, you don't need to use the `-k` option when running commands
 2. Save your API key to a config file. See the "[Using a Config File](#using-a-config-file)" section for more info on how to do this.
 3. Use the `-k <api_key>` or `--apiKey <api_key>` argument at the top level of the command like `meraki -k <api_key>`
@@ -103,7 +103,7 @@ You can obtain a Meraki API key by:
 - View the 'API Access' section near the bottom of the page
 - Click on the '**Generate new API key**' button and copy down your new API key before saving. It will be a long hexadecimal string.
 
-> Note: The API key seen in the examples above is a public one Meraki provides for testing against their sandbox networks. Feel free to use it for testing things out, but sometimes it gets overused and is throttled by Meraki. All the output examples shown below use that key.
+> Note: The API key seen in the examples above is a public one Meraki provides for testing against their sandbox networks. Feel free to use it for testing things out, but sometimes it gets overused and is throttled by Meraki. Meraki also may change it in the future, so use your own if you can. All the output examples shown below use that key.
 
 
 ## A Few Starting Commands
@@ -134,6 +134,18 @@ Pushing changes into Meraki is done by running the correct command and passing i
 For example, to rename a device, we just run the `devices updateDevice` command with the proper arguments included:
 
 `meraki devices updateDevice --serial 1234-ABCD-5678 --name NEW_DEVICE_NAME`
+
+```
+~$
+~$ meraki devices updateDevice --serial Q2HP-F5K5-R88R --name NEW_DEVICE_NAME
+┏━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━┳━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━┳━━━━━━━━━━┳━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━┓
+┃ lat              ┃ lng               ┃ address ┃ serial         ┃ mac               ┃ lanIp         ┃ url              ┃ networkId            ┃ name            ┃ model    ┃ switchProfileId ┃ firmware       ┃ floorPlanId ┃
+┡━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━╇━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━╇━━━━━━━━━━╇━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━┩
+│ 37.4180951010362 │ -122.098531723022 │         │ Q2HP-F5K5-R88R │ 88:15:44:df:f3:af │ 10.10.10.131  │ https://n149.me… │ L_646829496481105433 │ NEW_DEVICE_NAME │ MS220-8P │ None            │ switch-11-31   │ None        │
+└──────────────────┴───────────────────┴─────────┴────────────────┴───────────────────┴───────────────┴──────────────────┴──────────────────────┴─────────────────┴──────────┴─────────────────┴────────────────┴─────────────┘
+~$
+~$
+```
 
 Or if we want to change the VLAN ID and name of a MS switch port, we can use:
 
@@ -248,7 +260,7 @@ The config file can be obtained by the program by either explicitly defining its
 #### Example `meraki-cli.conf` Config File
 ```
 {
-    "apiKey": "093b24e85df15a3e66f1fc359f4c48493eaa1b73",
+    "apiKey": "6bec40cf957de430a6f1f2baa056b99a4fac9ea0",
     "debug": 1,
     "logfile": "meraki.log"
 }
