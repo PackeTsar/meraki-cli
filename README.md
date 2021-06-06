@@ -131,7 +131,11 @@ If you have any Meraki MS switches available, try viewing the port configuration
 
 Pushing changes into Meraki is done by running the correct command and passing in the necessary arguments.
 
-For example, if we want to change the VLAN ID and name of a MS switch port, we would use:
+For example, to rename a device, we just run the `devices updateDevice` command with the proper arguments included:
+
+`meraki devices updateDevice --serial 1234-ABCD-5678 --name NEW_DEVICE_NAME`
+
+Or if we want to change the VLAN ID and name of a MS switch port, we can use:
 
 `meraki switch updateDeviceSwitchPort --serial 1234-ABCD-5678 --portId 1 --vlan 100 --name "Data Port"`
 
@@ -154,11 +158,11 @@ Many commands which make changes to the dashboard (like `updateDeviceSwitchPort`
 ```
 ~$
 ~$ meraki switch updateDeviceSwitchPort -h
-usage: meraki switch updateDeviceSwitchPort [-h] --serial STRING --portId STRING [--kwargs JSON_STRING]
+usage: meraki-cli.py switch updateDeviceSwitchPort [-h] --serial STRING --portId STRING [--kwargs JSON_STRING]
 
 UPDATE A SWITCH PORT
 
-https://developer.cisco.com/meraki/api-v1/#!update-device-switch-port		
+https://developer.cisco.com/meraki/api-v1/#!update-device-switch-port
 
 All Arguments:
   --serial (string): (required)
@@ -186,7 +190,7 @@ All Arguments:
   --flexibleStackingEnabled (boolean): For supported switches (e.g. MS420/MS425), whether or not the port has flexible stacking enabled.
 
 Function Signature:
-	>>> def updateDeviceSwitchPort(serial: str, portId: str, **kwargs):
+  >>> def updateDeviceSwitchPort(serial: str, portId: str, **kwargs):
 
 Required Arguments:
   --serial STRING       (required)
@@ -194,7 +198,7 @@ Required Arguments:
 
 Misc Arguments:
   -h, --help            Show help for this command
-  --kwargs JSON_STRING  (Optional arguments in JSON format)
+  --kwargs JSON_STRING  (Advanced Users) Optional arguments in JSON format
 ~$
 ~$
 ```
