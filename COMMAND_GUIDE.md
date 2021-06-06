@@ -10,7 +10,7 @@ This documentation is built automatically by parsing the [Meraki Dashboard API P
 
 ## Version
 
-This command guide is based on version **v1.7.2** of the [Meraki Dashboard API Python SDK](https://github.com/meraki/dashboard-api-python). If you want to see the version of the SDK you have installed, issue the command `meraki -v`.
+This command guide is based on version **v1.10.0** of the [Meraki Dashboard API Python SDK](https://github.com/meraki/dashboard-api-python). If you want to see the version of the SDK you have installed, issue the command `meraki -v`.
 
 
 # TABLE OF CONTENTS
@@ -118,6 +118,7 @@ This command guide is based on version **v1.7.2** of the [Meraki Dashboard API P
         - [Batch Camera Update Device Camera Quality And Retention](#batch-camera-update-device-camera-quality-and-retention)
         - [Batch Camera Update Device Camera Sense](#batch-camera-update-device-camera-sense)
         - [Batch Camera Update Device Camera Video Settings](#batch-camera-update-device-camera-video-settings)
+        - [Batch Camera Update Device Camera Wireless Profiles](#batch-camera-update-device-camera-wireless-profiles)
     - [Batch Cellular Gateway](#batch-cellular-gateway)
         - [Batch Cellular Gateway Update Device Cellular Gateway Lan](#batch-cellular-gateway-update-device-cellular-gateway-lan)
         - [Batch Cellular Gateway Update Device Cellular Gateway Port Forwarding Rules](#batch-cellular-gateway-update-device-cellular-gateway-port-forwarding-rules)
@@ -147,6 +148,7 @@ This command guide is based on version **v1.7.2** of the [Meraki Dashboard API P
         - [Batch Networks Provision Network Clients](#batch-networks-provision-network-clients)
         - [Batch Networks Remove Network Devices](#batch-networks-remove-network-devices)
         - [Batch Networks Split Network](#batch-networks-split-network)
+        - [Batch Networks Unbind Network](#batch-networks-unbind-network)
         - [Batch Networks Update Network](#batch-networks-update-network)
         - [Batch Networks Update Network Firmware Upgrades](#batch-networks-update-network-firmware-upgrades)
         - [Batch Networks Update Network Floor Plan](#batch-networks-update-network-floor-plan)
@@ -228,12 +230,15 @@ This command guide is based on version **v1.7.2** of the [Meraki Dashboard API P
         - [Batch Wireless Update Network Wireless Ssid Device Type Group Policies](#batch-wireless-update-network-wireless-ssid-device-type-group-policies)
         - [Batch Wireless Update Network Wireless Ssid Firewall L7 Firewall Rules](#batch-wireless-update-network-wireless-ssid-firewall-l7-firewall-rules)
         - [Batch Wireless Update Network Wireless Ssid Identity Psk](#batch-wireless-update-network-wireless-ssid-identity-psk)
+        - [Batch Wireless Update Network Wireless Ssid Schedules](#batch-wireless-update-network-wireless-ssid-schedules)
         - [Batch Wireless Update Network Wireless Ssid Splash Settings](#batch-wireless-update-network-wireless-ssid-splash-settings)
         - [Batch Wireless Update Network Wireless Ssid Traffic Shaping Rules](#batch-wireless-update-network-wireless-ssid-traffic-shaping-rules)
         - [Batch Wireless Update Network Wireless Ssid Vpn](#batch-wireless-update-network-wireless-ssid-vpn)
 - [Camera](#camera)
     - [Camera Create Network Camera Quality Retention Profile](#camera-create-network-camera-quality-retention-profile)
+    - [Camera Create Network Camera Wireless Profile](#camera-create-network-camera-wireless-profile)
     - [Camera Delete Network Camera Quality Retention Profile](#camera-delete-network-camera-quality-retention-profile)
+    - [Camera Delete Network Camera Wireless Profile](#camera-delete-network-camera-wireless-profile)
     - [Camera Generate Device Camera Snapshot](#camera-generate-device-camera-snapshot)
     - [Camera Get Device Camera Analytics Live](#camera-get-device-camera-analytics-live)
     - [Camera Get Device Camera Analytics Overview](#camera-get-device-camera-analytics-overview)
@@ -245,13 +250,20 @@ This command guide is based on version **v1.7.2** of the [Meraki Dashboard API P
     - [Camera Get Device Camera Sense Object Detection Models](#camera-get-device-camera-sense-object-detection-models)
     - [Camera Get Device Camera Video Link](#camera-get-device-camera-video-link)
     - [Camera Get Device Camera Video Settings](#camera-get-device-camera-video-settings)
+    - [Camera Get Device Camera Wireless Profiles](#camera-get-device-camera-wireless-profiles)
     - [Camera Get Network Camera Quality Retention Profile](#camera-get-network-camera-quality-retention-profile)
     - [Camera Get Network Camera Quality Retention Profiles](#camera-get-network-camera-quality-retention-profiles)
     - [Camera Get Network Camera Schedules](#camera-get-network-camera-schedules)
+    - [Camera Get Network Camera Wireless Profile](#camera-get-network-camera-wireless-profile)
+    - [Camera Get Network Camera Wireless Profiles](#camera-get-network-camera-wireless-profiles)
+    - [Camera Get Organization Camera Onboarding Statuses](#camera-get-organization-camera-onboarding-statuses)
     - [Camera Update Device Camera Quality And Retention](#camera-update-device-camera-quality-and-retention)
     - [Camera Update Device Camera Sense](#camera-update-device-camera-sense)
     - [Camera Update Device Camera Video Settings](#camera-update-device-camera-video-settings)
+    - [Camera Update Device Camera Wireless Profiles](#camera-update-device-camera-wireless-profiles)
     - [Camera Update Network Camera Quality Retention Profile](#camera-update-network-camera-quality-retention-profile)
+    - [Camera Update Network Camera Wireless Profile](#camera-update-network-camera-wireless-profile)
+    - [Camera Update Organization Camera Onboarding Statuses](#camera-update-organization-camera-onboarding-statuses)
 - [Cellular Gateway](#cellular-gateway)
     - [Cellular Gateway Get Device Cellular Gateway Lan](#cellular-gateway-get-device-cellular-gateway-lan)
     - [Cellular Gateway Get Device Cellular Gateway Port Forwarding Rules](#cellular-gateway-get-device-cellular-gateway-port-forwarding-rules)
@@ -279,6 +291,8 @@ This command guide is based on version **v1.7.2** of the [Meraki Dashboard API P
 - [Insight](#insight)
     - [Insight Create Organization Insight Monitored Media Server](#insight-create-organization-insight-monitored-media-server)
     - [Insight Delete Organization Insight Monitored Media Server](#insight-delete-organization-insight-monitored-media-server)
+    - [Insight Get Network Insight Application Health By Time](#insight-get-network-insight-application-health-by-time)
+    - [Insight Get Organization Insight Applications](#insight-get-organization-insight-applications)
     - [Insight Get Organization Insight Monitored Media Server](#insight-get-organization-insight-monitored-media-server)
     - [Insight Get Organization Insight Monitored Media Servers](#insight-get-organization-insight-monitored-media-servers)
     - [Insight Update Organization Insight Monitored Media Server](#insight-update-organization-insight-monitored-media-server)
@@ -311,6 +325,7 @@ This command guide is based on version **v1.7.2** of the [Meraki Dashboard API P
     - [Networks Get Network Client Usage History](#networks-get-network-client-usage-history)
     - [Networks Get Network Clients](#networks-get-network-clients)
     - [Networks Get Network Clients Application Usage](#networks-get-network-clients-application-usage)
+    - [Networks Get Network Clients Overview](#networks-get-network-clients-overview)
     - [Networks Get Network Clients Usage Histories](#networks-get-network-clients-usage-histories)
     - [Networks Get Network Devices](#networks-get-network-devices)
     - [Networks Get Network Events](#networks-get-network-events)
@@ -597,6 +612,7 @@ This command guide is based on version **v1.7.2** of the [Meraki Dashboard API P
     - [Wireless Get Network Wireless Ssid Firewall L7 Firewall Rules](#wireless-get-network-wireless-ssid-firewall-l7-firewall-rules)
     - [Wireless Get Network Wireless Ssid Identity Psk](#wireless-get-network-wireless-ssid-identity-psk)
     - [Wireless Get Network Wireless Ssid Identity Psks](#wireless-get-network-wireless-ssid-identity-psks)
+    - [Wireless Get Network Wireless Ssid Schedules](#wireless-get-network-wireless-ssid-schedules)
     - [Wireless Get Network Wireless Ssid Splash Settings](#wireless-get-network-wireless-ssid-splash-settings)
     - [Wireless Get Network Wireless Ssid Traffic Shaping Rules](#wireless-get-network-wireless-ssid-traffic-shaping-rules)
     - [Wireless Get Network Wireless Ssid Vpn](#wireless-get-network-wireless-ssid-vpn)
@@ -615,6 +631,7 @@ This command guide is based on version **v1.7.2** of the [Meraki Dashboard API P
     - [Wireless Update Network Wireless Ssid Firewall L3 Firewall Rules](#wireless-update-network-wireless-ssid-firewall-l3-firewall-rules)
     - [Wireless Update Network Wireless Ssid Firewall L7 Firewall Rules](#wireless-update-network-wireless-ssid-firewall-l7-firewall-rules)
     - [Wireless Update Network Wireless Ssid Identity Psk](#wireless-update-network-wireless-ssid-identity-psk)
+    - [Wireless Update Network Wireless Ssid Schedules](#wireless-update-network-wireless-ssid-schedules)
     - [Wireless Update Network Wireless Ssid Splash Settings](#wireless-update-network-wireless-ssid-splash-settings)
     - [Wireless Update Network Wireless Ssid Traffic Shaping Rules](#wireless-update-network-wireless-ssid-traffic-shaping-rules)
     - [Wireless Update Network Wireless Ssid Vpn](#wireless-update-network-wireless-ssid-vpn)
@@ -3558,6 +3575,7 @@ https://developer.cisco.com/meraki/api-v1/#!update-device-camera-sense
 - `--serial` (string): (required)
 - `--senseEnabled` (boolean): Boolean indicating if sense(license) is enabled(true) or disabled(false) on the camera
 - `--mqttBrokerId` (string): The ID of the MQTT broker to be enabled on the camera. A value of null will disable MQTT on the camera
+- `--audioDetection` (object): The details of the audio detection config.
 - `--detectionModelId` (string): The ID of the object detection model
 
 
@@ -3605,6 +3623,32 @@ meraki batch camera updateDeviceCameraVideoSettings --serial 'STRING' --kwargs '
 ##### Method Code:
 ```python
 def updateDeviceCameraVideoSettings(serial: str, **kwargs):
+    # Code
+````
+
+
+
+----------------------------------------
+## Batch Camera Update Device Camera Wireless Profiles
+
+
+**Assign wireless profiles to the given camera**
+
+https://developer.cisco.com/meraki/api-v1/#!update-device-camera-wireless-profiles
+
+##### Arguments
+- `--serial` (string): (required)
+- `--ids` (object): The ids of the wireless profile to assign to the given camera
+
+
+##### Example:
+```
+meraki batch camera updateDeviceCameraWirelessProfiles --serial 'STRING' --ids JSON_STRING
+````
+
+##### Method Code:
+```python
+def updateDeviceCameraWirelessProfiles(serial: str, ids: dict):
     # Code
 ````
 
@@ -4375,6 +4419,31 @@ meraki batch networks splitNetwork --networkId 'STRING'
 ##### Method Code:
 ```python
 def splitNetwork(networkId: str):
+    # Code
+````
+
+
+
+----------------------------------------
+## Batch Networks Unbind Network
+
+
+**Unbind a network from a template.**
+
+https://developer.cisco.com/meraki/api-v1/#!unbind-network
+
+##### Arguments
+- `--networkId` (string): (required)
+
+
+##### Example:
+```
+meraki batch networks unbindNetwork --networkId 'STRING'
+````
+
+##### Method Code:
+```python
+def unbindNetwork(networkId: str):
     # Code
 ````
 
@@ -6503,18 +6572,23 @@ https://developer.cisco.com/meraki/api-v1/#!create-network-wireless-ssid-identit
 - `--networkId` (string): (required)
 - `--number` (string): (required)
 - `--name` (string): The name of the Identity PSK
-- `--passphrase` (string): The passphrase for client authentication
 - `--groupPolicyId` (string): The group policy to be applied to clients
+- `--passphrase` (string): The passphrase for client authentication. If left blank, one will be auto-generated.
 
 
 ##### Example:
 ```
-meraki batch wireless createNetworkWirelessSsidIdentityPsk --networkId 'STRING' --number 'STRING' --name 'STRING' --passphrase 'STRING' --groupPolicyId 'STRING'
+meraki batch wireless createNetworkWirelessSsidIdentityPsk --networkId 'STRING' --number 'STRING' --name 'STRING' --groupPolicyId 'STRING' --optionalArg1 "optionalarg1value" --optionalArg2 "optionalarg2value"
+````
+
+##### Example using `--kwargs` (Advanced):
+```
+meraki batch wireless createNetworkWirelessSsidIdentityPsk --networkId 'STRING' --number 'STRING' --name 'STRING' --groupPolicyId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
 ##### Method Code:
 ```python
-def createNetworkWirelessSsidIdentityPsk(networkId: str, number: str, name: str, passphrase: str, groupPolicyId: str):
+def createNetworkWirelessSsidIdentityPsk(networkId: str, number: str, name: str, groupPolicyId: str, **kwargs):
     # Code
 ````
 
@@ -6997,6 +7071,40 @@ def updateNetworkWirelessSsidIdentityPsk(networkId: str, number: str, identityPs
 
 
 ----------------------------------------
+## Batch Wireless Update Network Wireless Ssid Schedules
+
+
+**Update the outage schedule for the SSID**
+
+https://developer.cisco.com/meraki/api-v1/#!update-network-wireless-ssid-schedules
+
+##### Arguments
+- `--networkId` (string): (required)
+- `--number` (string): (required)
+- `--enabled` (boolean): If true, the SSID outage schedule is enabled.
+- `--ranges` (array): List of outage ranges. Has a start date and time, and end date and time. If this parameter is passed in along with rangesInSeconds parameter, this will take precedence.
+- `--rangesInSeconds` (array): List of outage ranges in seconds since Sunday at Midnight. Has a start and end. If this parameter is passed in along with the ranges parameter, ranges will take precedence.
+
+
+##### Example:
+```
+meraki batch wireless updateNetworkWirelessSsidSchedules --networkId 'STRING' --number 'STRING' --optionalArg1 "optionalarg1value" --optionalArg2 "optionalarg2value"
+````
+
+##### Example using `--kwargs` (Advanced):
+```
+meraki batch wireless updateNetworkWirelessSsidSchedules --networkId 'STRING' --number 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
+````
+
+##### Method Code:
+```python
+def updateNetworkWirelessSsidSchedules(networkId: str, number: str, **kwargs):
+    # Code
+````
+
+
+
+----------------------------------------
 ## Batch Wireless Update Network Wireless Ssid Splash Settings
 
 
@@ -7128,7 +7236,7 @@ https://developer.cisco.com/meraki/api-v1/#!create-network-camera-quality-retent
 - `--cloudArchiveEnabled` (boolean): Create redundant video backup using Cloud Archive. Can be either true or false. Defaults to false.
 - `--motionDetectorVersion` (integer): The version of the motion detector that will be used by the camera. Only applies to Gen 2 cameras. Defaults to v2.
 - `--scheduleId` (string): Schedule for which this camera will record video, or 'null' to always record.
-- `--maxRetentionDays` (integer): The maximum number of days for which the data will be stored, or 'null' to keep data until storage space runs out. If the former, it can be one of [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 14, 30, 60, 90] days
+- `--maxRetentionDays` (integer): The maximum number of days for which the data will be stored, or 'null' to keep data until storage space runs out. If the former, it can be one of [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 14, 30, 60, 90] days.
 - `--videoSettings` (object): Video quality and resolution settings for all the camera models.
 
 
@@ -7145,6 +7253,39 @@ meraki camera createNetworkCameraQualityRetentionProfile --networkId 'STRING' --
 ##### Method Code:
 ```python
 def createNetworkCameraQualityRetentionProfile(networkId: str, name: str, **kwargs):
+    # Code
+````
+
+
+
+----------------------------------------
+## Camera Create Network Camera Wireless Profile
+
+
+**Creates a new camera wireless profile for this network.**
+
+https://developer.cisco.com/meraki/api-v1/#!create-network-camera-wireless-profile
+
+##### Arguments
+- `--networkId` (string): (required)
+- `--name` (string): The name of the camera wireless profile. This parameter is required.
+- `--ssid` (object): The details of the SSID config.
+- `--identity` (object): The identity of the wireless profile. Required for creating wireless profiles in 8021x-radius auth mode.
+
+
+##### Example:
+```
+meraki camera createNetworkCameraWirelessProfile --networkId 'STRING' --name 'STRING' --ssid JSON_STRING --optionalArg1 "optionalarg1value" --optionalArg2 "optionalarg2value"
+````
+
+##### Example using `--kwargs` (Advanced):
+```
+meraki camera createNetworkCameraWirelessProfile --networkId 'STRING' --name 'STRING' --ssid JSON_STRING --kwargs '{"key1": "value1", "key2": "value2"}'
+````
+
+##### Method Code:
+```python
+def createNetworkCameraWirelessProfile(networkId: str, name: str, ssid: dict, **kwargs):
     # Code
 ````
 
@@ -7171,6 +7312,32 @@ meraki camera deleteNetworkCameraQualityRetentionProfile --networkId 'STRING' --
 ##### Method Code:
 ```python
 def deleteNetworkCameraQualityRetentionProfile(networkId: str, qualityRetentionProfileId: str):
+    # Code
+````
+
+
+
+----------------------------------------
+## Camera Delete Network Camera Wireless Profile
+
+
+**Delete an existing camera wireless profile for this network.**
+
+https://developer.cisco.com/meraki/api-v1/#!delete-network-camera-wireless-profile
+
+##### Arguments
+- `--networkId` (string): (required)
+- `--wirelessProfileId` (string): (required)
+
+
+##### Example:
+```
+meraki camera deleteNetworkCameraWirelessProfile --networkId 'STRING' --wirelessProfileId 'STRING'
+````
+
+##### Method Code:
+```python
+def deleteNetworkCameraWirelessProfile(networkId: str, wirelessProfileId: str):
     # Code
 ````
 
@@ -7491,6 +7658,31 @@ def getDeviceCameraVideoSettings(serial: str):
 
 
 ----------------------------------------
+## Camera Get Device Camera Wireless Profiles
+
+
+**Returns wireless profile assigned to the given camera**
+
+https://developer.cisco.com/meraki/api-v1/#!get-device-camera-wireless-profiles
+
+##### Arguments
+- `--serial` (string): (required)
+
+
+##### Example:
+```
+meraki camera getDeviceCameraWirelessProfiles --serial 'STRING'
+````
+
+##### Method Code:
+```python
+def getDeviceCameraWirelessProfiles(serial: str):
+    # Code
+````
+
+
+
+----------------------------------------
 ## Camera Get Network Camera Quality Retention Profile
 
 
@@ -7567,6 +7759,89 @@ def getNetworkCameraSchedules(networkId: str):
 
 
 ----------------------------------------
+## Camera Get Network Camera Wireless Profile
+
+
+**Retrieve a single camera wireless profile.**
+
+https://developer.cisco.com/meraki/api-v1/#!get-network-camera-wireless-profile
+
+##### Arguments
+- `--networkId` (string): (required)
+- `--wirelessProfileId` (string): (required)
+
+
+##### Example:
+```
+meraki camera getNetworkCameraWirelessProfile --networkId 'STRING' --wirelessProfileId 'STRING'
+````
+
+##### Method Code:
+```python
+def getNetworkCameraWirelessProfile(networkId: str, wirelessProfileId: str):
+    # Code
+````
+
+
+
+----------------------------------------
+## Camera Get Network Camera Wireless Profiles
+
+
+**List the camera wireless profiles for this network.**
+
+https://developer.cisco.com/meraki/api-v1/#!get-network-camera-wireless-profiles
+
+##### Arguments
+- `--networkId` (string): (required)
+
+
+##### Example:
+```
+meraki camera getNetworkCameraWirelessProfiles --networkId 'STRING'
+````
+
+##### Method Code:
+```python
+def getNetworkCameraWirelessProfiles(networkId: str):
+    # Code
+````
+
+
+
+----------------------------------------
+## Camera Get Organization Camera Onboarding Statuses
+
+
+**Fetch onboarding status of cameras**
+
+https://developer.cisco.com/meraki/api-v1/#!get-organization-camera-onboarding-statuses
+
+##### Arguments
+- `--organizationId` (string): (required)
+- `--serials` (array): A list of serial numbers. The returned cameras will be filtered to only include these serials.
+- `--networkIds` (array): A list of network IDs. The returned cameras will be filtered to only include these networks.
+
+
+##### Example:
+```
+meraki camera getOrganizationCameraOnboardingStatuses --organizationId 'STRING' --optionalArg1 "optionalarg1value" --optionalArg2 "optionalarg2value"
+````
+
+##### Example using `--kwargs` (Advanced):
+```
+meraki camera getOrganizationCameraOnboardingStatuses --organizationId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
+````
+
+##### Method Code:
+```python
+def getOrganizationCameraOnboardingStatuses(organizationId: str, **kwargs):
+    # Code
+````
+
+
+
+----------------------------------------
 ## Camera Update Device Camera Quality And Retention
 
 
@@ -7615,6 +7890,7 @@ https://developer.cisco.com/meraki/api-v1/#!update-device-camera-sense
 - `--serial` (string): (required)
 - `--senseEnabled` (boolean): Boolean indicating if sense(license) is enabled(true) or disabled(false) on the camera
 - `--mqttBrokerId` (string): The ID of the MQTT broker to be enabled on the camera. A value of null will disable MQTT on the camera
+- `--audioDetection` (object): The details of the audio detection config.
 - `--detectionModelId` (string): The ID of the object detection model
 
 
@@ -7668,6 +7944,32 @@ def updateDeviceCameraVideoSettings(serial: str, **kwargs):
 
 
 ----------------------------------------
+## Camera Update Device Camera Wireless Profiles
+
+
+**Assign wireless profiles to the given camera**
+
+https://developer.cisco.com/meraki/api-v1/#!update-device-camera-wireless-profiles
+
+##### Arguments
+- `--serial` (string): (required)
+- `--ids` (object): The ids of the wireless profile to assign to the given camera
+
+
+##### Example:
+```
+meraki camera updateDeviceCameraWirelessProfiles --serial 'STRING' --ids JSON_STRING
+````
+
+##### Method Code:
+```python
+def updateDeviceCameraWirelessProfiles(serial: str, ids: dict):
+    # Code
+````
+
+
+
+----------------------------------------
 ## Camera Update Network Camera Quality Retention Profile
 
 
@@ -7685,7 +7987,7 @@ https://developer.cisco.com/meraki/api-v1/#!update-network-camera-quality-retent
 - `--cloudArchiveEnabled` (boolean): Create redundant video backup using Cloud Archive. Can be either true or false. Defaults to false.
 - `--motionDetectorVersion` (integer): The version of the motion detector that will be used by the camera. Only applies to Gen 2 cameras. Defaults to v2.
 - `--scheduleId` (string): Schedule for which this camera will record video, or 'null' to always record.
-- `--maxRetentionDays` (integer): The maximum number of days for which the data will be stored, or 'null' to keep data until storage space runs out. If the former, it can be one of [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 14, 30, 60, 90] days
+- `--maxRetentionDays` (integer): The maximum number of days for which the data will be stored, or 'null' to keep data until storage space runs out. If the former, it can be one of [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 14, 30, 60, 90] days.
 - `--videoSettings` (object): Video quality and resolution settings for all the camera models.
 
 
@@ -7702,6 +8004,72 @@ meraki camera updateNetworkCameraQualityRetentionProfile --networkId 'STRING' --
 ##### Method Code:
 ```python
 def updateNetworkCameraQualityRetentionProfile(networkId: str, qualityRetentionProfileId: str, **kwargs):
+    # Code
+````
+
+
+
+----------------------------------------
+## Camera Update Network Camera Wireless Profile
+
+
+**Update an existing camera wireless profile in this network.**
+
+https://developer.cisco.com/meraki/api-v1/#!update-network-camera-wireless-profile
+
+##### Arguments
+- `--networkId` (string): (required)
+- `--wirelessProfileId` (string): (required)
+- `--name` (string): The name of the camera wireless profile.
+- `--ssid` (object): The details of the SSID config.
+- `--identity` (object): The identity of the wireless profile. Required for creating wireless profiles in 8021x-radius auth mode.
+
+
+##### Example:
+```
+meraki camera updateNetworkCameraWirelessProfile --networkId 'STRING' --wirelessProfileId 'STRING' --optionalArg1 "optionalarg1value" --optionalArg2 "optionalarg2value"
+````
+
+##### Example using `--kwargs` (Advanced):
+```
+meraki camera updateNetworkCameraWirelessProfile --networkId 'STRING' --wirelessProfileId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
+````
+
+##### Method Code:
+```python
+def updateNetworkCameraWirelessProfile(networkId: str, wirelessProfileId: str, **kwargs):
+    # Code
+````
+
+
+
+----------------------------------------
+## Camera Update Organization Camera Onboarding Statuses
+
+
+**Notify that credential handoff to camera has completed**
+
+https://developer.cisco.com/meraki/api-v1/#!update-organization-camera-onboarding-statuses
+
+##### Arguments
+- `--organizationId` (string): (required)
+- `--serial` (string): Serial of camera
+- `--wirelessCredentialsSent` (boolean): Note whether credentials were sent successfully
+
+
+##### Example:
+```
+meraki camera updateOrganizationCameraOnboardingStatuses --organizationId 'STRING' --optionalArg1 "optionalarg1value" --optionalArg2 "optionalarg2value"
+````
+
+##### Example using `--kwargs` (Advanced):
+```
+meraki camera updateOrganizationCameraOnboardingStatuses --organizationId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
+````
+
+##### Method Code:
+```python
+def updateOrganizationCameraOnboardingStatuses(organizationId: str, **kwargs):
     # Code
 ````
 
@@ -8414,6 +8782,66 @@ meraki insight deleteOrganizationInsightMonitoredMediaServer --organizationId 'S
 ##### Method Code:
 ```python
 def deleteOrganizationInsightMonitoredMediaServer(organizationId: str, monitoredMediaServerId: str):
+    # Code
+````
+
+
+
+----------------------------------------
+## Insight Get Network Insight Application Health By Time
+
+
+**Get application health by time**
+
+https://developer.cisco.com/meraki/api-v1/#!get-network-insight-application-health-by-time
+
+##### Arguments
+- `--network_id` (string): (required)
+- `--application_id` (string): (required)
+- `--t0` (string): The beginning of the timespan for the data. The maximum lookback period is 7 days from today.
+- `--t1` (string): The end of the timespan for the data. t1 can be a maximum of 7 days after t0.
+- `--timespan` (number): The timespan for which the information will be fetched. If specifying timespan, do not specify parameters t0 and t1. The value must be in seconds and be less than or equal to 7 days. The default is 2 hours.
+- `--resolution` (integer): The time resolution in seconds for returned data. The valid resolutions are: 60, 300, 3600, 86400. The default is 300.
+
+
+##### Example:
+```
+meraki insight getNetworkInsightApplicationHealthByTime --network_id 'STRING' --application_id 'STRING' --optionalArg1 "optionalarg1value" --optionalArg2 "optionalarg2value"
+````
+
+##### Example using `--kwargs` (Advanced):
+```
+meraki insight getNetworkInsightApplicationHealthByTime --network_id 'STRING' --application_id 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
+````
+
+##### Method Code:
+```python
+def getNetworkInsightApplicationHealthByTime(network_id: str, application_id: str, **kwargs):
+    # Code
+````
+
+
+
+----------------------------------------
+## Insight Get Organization Insight Applications
+
+
+**List all Insight tracked applications**
+
+https://developer.cisco.com/meraki/api-v1/#!get-organization-insight-applications
+
+##### Arguments
+- `--organization_id` (string): (required)
+
+
+##### Example:
+```
+meraki insight getOrganizationInsightApplications --organization_id 'STRING'
+````
+
+##### Method Code:
+```python
+def getOrganizationInsightApplications(organization_id: str):
     # Code
 ````
 
@@ -9355,6 +9783,40 @@ meraki networks getNetworkClientsApplicationUsage --networkId 'STRING' --clients
 ##### Method Code:
 ```python
 def getNetworkClientsApplicationUsage(networkId: str, clients: str, total_pages=1, direction='next', **kwargs):
+    # Code
+````
+
+
+
+----------------------------------------
+## Networks Get Network Clients Overview
+
+
+**Return overview statistics for network clients**
+
+https://developer.cisco.com/meraki/api-v1/#!get-network-clients-overview
+
+##### Arguments
+- `--networkId` (string): (required)
+- `--t0` (string): The beginning of the timespan for the data. The maximum lookback period is 31 days from today.
+- `--t1` (string): The end of the timespan for the data. t1 can be a maximum of 31 days after t0.
+- `--timespan` (number): The timespan for which the information will be fetched. If specifying timespan, do not specify parameters t0 and t1. The value must be in seconds and be less than or equal to 31 days. The default is 1 day.
+- `--resolution` (integer): The time resolution in seconds for returned data. The valid resolutions are: 7200, 86400, 604800, 2592000. The default is 604800.
+
+
+##### Example:
+```
+meraki networks getNetworkClientsOverview --networkId 'STRING' --optionalArg1 "optionalarg1value" --optionalArg2 "optionalarg2value"
+````
+
+##### Example using `--kwargs` (Advanced):
+```
+meraki networks getNetworkClientsOverview --networkId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
+````
+
+##### Method Code:
+```python
+def getNetworkClientsOverview(networkId: str, **kwargs):
     # Code
 ````
 
@@ -16673,18 +17135,23 @@ https://developer.cisco.com/meraki/api-v1/#!create-network-wireless-ssid-identit
 - `--networkId` (string): (required)
 - `--number` (string): (required)
 - `--name` (string): The name of the Identity PSK
-- `--passphrase` (string): The passphrase for client authentication
 - `--groupPolicyId` (string): The group policy to be applied to clients
+- `--passphrase` (string): The passphrase for client authentication. If left blank, one will be auto-generated.
 
 
 ##### Example:
 ```
-meraki wireless createNetworkWirelessSsidIdentityPsk --networkId 'STRING' --number 'STRING' --name 'STRING' --passphrase 'STRING' --groupPolicyId 'STRING'
+meraki wireless createNetworkWirelessSsidIdentityPsk --networkId 'STRING' --number 'STRING' --name 'STRING' --groupPolicyId 'STRING' --optionalArg1 "optionalarg1value" --optionalArg2 "optionalarg2value"
+````
+
+##### Example using `--kwargs` (Advanced):
+```
+meraki wireless createNetworkWirelessSsidIdentityPsk --networkId 'STRING' --number 'STRING' --name 'STRING' --groupPolicyId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
 ##### Method Code:
 ```python
-def createNetworkWirelessSsidIdentityPsk(networkId: str, number: str, name: str, passphrase: str, groupPolicyId: str):
+def createNetworkWirelessSsidIdentityPsk(networkId: str, number: str, name: str, groupPolicyId: str, **kwargs):
     # Code
 ````
 
@@ -17921,6 +18388,32 @@ def getNetworkWirelessSsidIdentityPsks(networkId: str, number: str):
 
 
 ----------------------------------------
+## Wireless Get Network Wireless Ssid Schedules
+
+
+**List the outage schedule for the SSID**
+
+https://developer.cisco.com/meraki/api-v1/#!get-network-wireless-ssid-schedules
+
+##### Arguments
+- `--networkId` (string): (required)
+- `--number` (string): (required)
+
+
+##### Example:
+```
+meraki wireless getNetworkWirelessSsidSchedules --networkId 'STRING' --number 'STRING'
+````
+
+##### Method Code:
+```python
+def getNetworkWirelessSsidSchedules(networkId: str, number: str):
+    # Code
+````
+
+
+
+----------------------------------------
 ## Wireless Get Network Wireless Ssid Splash Settings
 
 
@@ -18550,6 +19043,40 @@ meraki wireless updateNetworkWirelessSsidIdentityPsk --networkId 'STRING' --numb
 ##### Method Code:
 ```python
 def updateNetworkWirelessSsidIdentityPsk(networkId: str, number: str, identityPskId: str, **kwargs):
+    # Code
+````
+
+
+
+----------------------------------------
+## Wireless Update Network Wireless Ssid Schedules
+
+
+**Update the outage schedule for the SSID**
+
+https://developer.cisco.com/meraki/api-v1/#!update-network-wireless-ssid-schedules
+
+##### Arguments
+- `--networkId` (string): (required)
+- `--number` (string): (required)
+- `--enabled` (boolean): If true, the SSID outage schedule is enabled.
+- `--ranges` (array): List of outage ranges. Has a start date and time, and end date and time. If this parameter is passed in along with rangesInSeconds parameter, this will take precedence.
+- `--rangesInSeconds` (array): List of outage ranges in seconds since Sunday at Midnight. Has a start and end. If this parameter is passed in along with the ranges parameter, ranges will take precedence.
+
+
+##### Example:
+```
+meraki wireless updateNetworkWirelessSsidSchedules --networkId 'STRING' --number 'STRING' --optionalArg1 "optionalarg1value" --optionalArg2 "optionalarg2value"
+````
+
+##### Example using `--kwargs` (Advanced):
+```
+meraki wireless updateNetworkWirelessSsidSchedules --networkId 'STRING' --number 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
+````
+
+##### Method Code:
+```python
+def updateNetworkWirelessSsidSchedules(networkId: str, number: str, **kwargs):
     # Code
 ````
 
