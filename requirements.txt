@@ -1,3 +1,4 @@
 meraki>=1.4.3
 rich
 argcomplete
+jinja2
