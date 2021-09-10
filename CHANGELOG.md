@@ -12,7 +12,8 @@ Documented below is a history of Meraki-CLI versions and a log of changes to eac
 - [v1.1.0 -> v1.2.0](#v120)
 - [v1.2.0 -> v1.2.1](#v121)
 - [v1.2.1 -> v1.3.0](#v130)
-- [v1.3.0 -> v1.3.1](#v130)
+- [v1.3.0 -> v1.3.1](#v131)
+- [v1.3.1 -> v1.3.5](#v135)
 
 
 # Versions
@@ -92,3 +93,11 @@ Documented below is a history of Meraki-CLI versions and a log of changes to eac
 
 - **New recursive parser builder function not explicitly tested**
     - ISSUE: v1.3.0 moved the recursive analysis of the Meraki SDK and the building of the parser into its own function. An explicit test for this new function was not also created in the process. A new test has now been created to test this function.
+
+## v1.3.5
+
+### Bug Fixes
+
+- **Positional arguments were not being parsed as JSON**
+    - ISSUE: Positional arguments which had annotated types of list or dict would be be parsed as JSON. See #9. For example `createNetworkSwitchStack` used with `--serials '["1111-1111-1111", "2222-2222-2222"]'` would not interpret the JSON data into a Python list before passing it to the method. This could be worked around by using `--serials 1111-1111-1111 --serials 2222-2222-2222`, but having JSON decoding would be nice.
+    - FIXES: Added tests to detect this issue  and heavily modified `_get_method_params()` to parse as JSON only when the proper annotations existed in the method params.
