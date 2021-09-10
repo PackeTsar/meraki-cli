@@ -10,7 +10,7 @@ This documentation is built automatically by parsing the [Meraki Dashboard API P
 
 ## Version
 
-This command guide is based on version **v1.10.0** of the [Meraki Dashboard API Python SDK](https://github.com/meraki/dashboard-api-python). If you want to see the version of the SDK you have installed, issue the command `meraki -v`.
+This command guide is based on version **v1.12.0** of the [Meraki Dashboard API Python SDK](https://github.com/meraki/dashboard-api-python). If you want to see the version of the SDK you have installed, issue the command `meraki -v`.
 
 
 # TABLE OF CONTENTS
@@ -52,6 +52,7 @@ This command guide is based on version **v1.10.0** of the [Meraki Dashboard API 
     - [Appliance Get Network Appliance Traffic Shaping Rules](#appliance-get-network-appliance-traffic-shaping-rules)
     - [Appliance Get Network Appliance Traffic Shaping Uplink Bandwidth](#appliance-get-network-appliance-traffic-shaping-uplink-bandwidth)
     - [Appliance Get Network Appliance Traffic Shaping Uplink Selection](#appliance-get-network-appliance-traffic-shaping-uplink-selection)
+    - [Appliance Get Network Appliance Uplinks Usage History](#appliance-get-network-appliance-uplinks-usage-history)
     - [Appliance Get Network Appliance Vlan](#appliance-get-network-appliance-vlan)
     - [Appliance Get Network Appliance Vlans](#appliance-get-network-appliance-vlans)
     - [Appliance Get Network Appliance Vlans Settings](#appliance-get-network-appliance-vlans-settings)
@@ -159,13 +160,17 @@ This command guide is based on version **v1.10.0** of the [Meraki Dashboard API 
     - [Batch Organizations](#batch-organizations)
         - [Batch Organizations Assign Organization Licenses Seats](#batch-organizations-assign-organization-licenses-seats)
         - [Batch Organizations Combine Organization Networks](#batch-organizations-combine-organization-networks)
+        - [Batch Organizations Create Organization Adaptive Policy Acl](#batch-organizations-create-organization-adaptive-policy-acl)
         - [Batch Organizations Create Organization Config Template](#batch-organizations-create-organization-config-template)
         - [Batch Organizations Create Organization Network](#batch-organizations-create-organization-network)
         - [Batch Organizations Create Organization Saml Idp](#batch-organizations-create-organization-saml-idp)
+        - [Batch Organizations Delete Organization Adaptive Policy Acl](#batch-organizations-delete-organization-adaptive-policy-acl)
         - [Batch Organizations Delete Organization Saml Idp](#batch-organizations-delete-organization-saml-idp)
         - [Batch Organizations Move Organization Licenses](#batch-organizations-move-organization-licenses)
         - [Batch Organizations Move Organization Licenses Seats](#batch-organizations-move-organization-licenses-seats)
         - [Batch Organizations Renew Organization Licenses Seats](#batch-organizations-renew-organization-licenses-seats)
+        - [Batch Organizations Update Organization Adaptive Policy Acl](#batch-organizations-update-organization-adaptive-policy-acl)
+        - [Batch Organizations Update Organization Adaptive Policy Settings](#batch-organizations-update-organization-adaptive-policy-settings)
         - [Batch Organizations Update Organization Config Template](#batch-organizations-update-organization-config-template)
         - [Batch Organizations Update Organization License](#batch-organizations-update-organization-license)
         - [Batch Organizations Update Organization Login Security](#batch-organizations-update-organization-login-security)
@@ -228,7 +233,9 @@ This command guide is based on version **v1.10.0** of the [Meraki Dashboard API 
         - [Batch Wireless Update Network Wireless Ssid](#batch-wireless-update-network-wireless-ssid)
         - [Batch Wireless Update Network Wireless Ssid Bonjour Forwarding](#batch-wireless-update-network-wireless-ssid-bonjour-forwarding)
         - [Batch Wireless Update Network Wireless Ssid Device Type Group Policies](#batch-wireless-update-network-wireless-ssid-device-type-group-policies)
+        - [Batch Wireless Update Network Wireless Ssid Eap Override](#batch-wireless-update-network-wireless-ssid-eap-override)
         - [Batch Wireless Update Network Wireless Ssid Firewall L7 Firewall Rules](#batch-wireless-update-network-wireless-ssid-firewall-l7-firewall-rules)
+        - [Batch Wireless Update Network Wireless Ssid Hotspot20](#batch-wireless-update-network-wireless-ssid-hotspot20)
         - [Batch Wireless Update Network Wireless Ssid Identity Psk](#batch-wireless-update-network-wireless-ssid-identity-psk)
         - [Batch Wireless Update Network Wireless Ssid Schedules](#batch-wireless-update-network-wireless-ssid-schedules)
         - [Batch Wireless Update Network Wireless Ssid Splash Settings](#batch-wireless-update-network-wireless-ssid-splash-settings)
@@ -383,6 +390,7 @@ This command guide is based on version **v1.10.0** of the [Meraki Dashboard API 
     - [Organizations Combine Organization Networks](#organizations-combine-organization-networks)
     - [Organizations Create Organization](#organizations-create-organization)
     - [Organizations Create Organization Action Batch](#organizations-create-organization-action-batch)
+    - [Organizations Create Organization Adaptive Policy Acl](#organizations-create-organization-adaptive-policy-acl)
     - [Organizations Create Organization Admin](#organizations-create-organization-admin)
     - [Organizations Create Organization Branding Policy](#organizations-create-organization-branding-policy)
     - [Organizations Create Organization Config Template](#organizations-create-organization-config-template)
@@ -391,6 +399,7 @@ This command guide is based on version **v1.10.0** of the [Meraki Dashboard API 
     - [Organizations Create Organization Saml Role](#organizations-create-organization-saml-role)
     - [Organizations Delete Organization](#organizations-delete-organization)
     - [Organizations Delete Organization Action Batch](#organizations-delete-organization-action-batch)
+    - [Organizations Delete Organization Adaptive Policy Acl](#organizations-delete-organization-adaptive-policy-acl)
     - [Organizations Delete Organization Admin](#organizations-delete-organization-admin)
     - [Organizations Delete Organization Branding Policy](#organizations-delete-organization-branding-policy)
     - [Organizations Delete Organization Config Template](#organizations-delete-organization-config-template)
@@ -399,6 +408,9 @@ This command guide is based on version **v1.10.0** of the [Meraki Dashboard API 
     - [Organizations Get Organization](#organizations-get-organization)
     - [Organizations Get Organization Action Batch](#organizations-get-organization-action-batch)
     - [Organizations Get Organization Action Batches](#organizations-get-organization-action-batches)
+    - [Organizations Get Organization Adaptive Policy Acl](#organizations-get-organization-adaptive-policy-acl)
+    - [Organizations Get Organization Adaptive Policy Acls](#organizations-get-organization-adaptive-policy-acls)
+    - [Organizations Get Organization Adaptive Policy Settings](#organizations-get-organization-adaptive-policy-settings)
     - [Organizations Get Organization Admins](#organizations-get-organization-admins)
     - [Organizations Get Organization Api Requests](#organizations-get-organization-api-requests)
     - [Organizations Get Organization Api Requests Overview](#organizations-get-organization-api-requests-overview)
@@ -434,6 +446,8 @@ This command guide is based on version **v1.10.0** of the [Meraki Dashboard API 
     - [Organizations Renew Organization Licenses Seats](#organizations-renew-organization-licenses-seats)
     - [Organizations Update Organization](#organizations-update-organization)
     - [Organizations Update Organization Action Batch](#organizations-update-organization-action-batch)
+    - [Organizations Update Organization Adaptive Policy Acl](#organizations-update-organization-adaptive-policy-acl)
+    - [Organizations Update Organization Adaptive Policy Settings](#organizations-update-organization-adaptive-policy-settings)
     - [Organizations Update Organization Admin](#organizations-update-organization-admin)
     - [Organizations Update Organization Branding Policies Priorities](#organizations-update-organization-branding-policies-priorities)
     - [Organizations Update Organization Branding Policy](#organizations-update-organization-branding-policy)
@@ -608,8 +622,10 @@ This command guide is based on version **v1.10.0** of the [Meraki Dashboard API 
     - [Wireless Get Network Wireless Ssid](#wireless-get-network-wireless-ssid)
     - [Wireless Get Network Wireless Ssid Bonjour Forwarding](#wireless-get-network-wireless-ssid-bonjour-forwarding)
     - [Wireless Get Network Wireless Ssid Device Type Group Policies](#wireless-get-network-wireless-ssid-device-type-group-policies)
+    - [Wireless Get Network Wireless Ssid Eap Override](#wireless-get-network-wireless-ssid-eap-override)
     - [Wireless Get Network Wireless Ssid Firewall L3 Firewall Rules](#wireless-get-network-wireless-ssid-firewall-l3-firewall-rules)
     - [Wireless Get Network Wireless Ssid Firewall L7 Firewall Rules](#wireless-get-network-wireless-ssid-firewall-l7-firewall-rules)
+    - [Wireless Get Network Wireless Ssid Hotspot20](#wireless-get-network-wireless-ssid-hotspot20)
     - [Wireless Get Network Wireless Ssid Identity Psk](#wireless-get-network-wireless-ssid-identity-psk)
     - [Wireless Get Network Wireless Ssid Identity Psks](#wireless-get-network-wireless-ssid-identity-psks)
     - [Wireless Get Network Wireless Ssid Schedules](#wireless-get-network-wireless-ssid-schedules)
@@ -628,8 +644,10 @@ This command guide is based on version **v1.10.0** of the [Meraki Dashboard API 
     - [Wireless Update Network Wireless Ssid](#wireless-update-network-wireless-ssid)
     - [Wireless Update Network Wireless Ssid Bonjour Forwarding](#wireless-update-network-wireless-ssid-bonjour-forwarding)
     - [Wireless Update Network Wireless Ssid Device Type Group Policies](#wireless-update-network-wireless-ssid-device-type-group-policies)
+    - [Wireless Update Network Wireless Ssid Eap Override](#wireless-update-network-wireless-ssid-eap-override)
     - [Wireless Update Network Wireless Ssid Firewall L3 Firewall Rules](#wireless-update-network-wireless-ssid-firewall-l3-firewall-rules)
     - [Wireless Update Network Wireless Ssid Firewall L7 Firewall Rules](#wireless-update-network-wireless-ssid-firewall-l7-firewall-rules)
+    - [Wireless Update Network Wireless Ssid Hotspot20](#wireless-update-network-wireless-ssid-hotspot20)
     - [Wireless Update Network Wireless Ssid Identity Psk](#wireless-update-network-wireless-ssid-identity-psk)
     - [Wireless Update Network Wireless Ssid Schedules](#wireless-update-network-wireless-ssid-schedules)
     - [Wireless Update Network Wireless Ssid Splash Settings](#wireless-update-network-wireless-ssid-splash-settings)
@@ -1619,6 +1637,40 @@ meraki appliance getNetworkApplianceTrafficShapingUplinkSelection --networkId 'S
 ##### Method Code:
 ```python
 def getNetworkApplianceTrafficShapingUplinkSelection(networkId: str):
+    # Code
+````
+
+
+
+----------------------------------------
+## Appliance Get Network Appliance Uplinks Usage History
+
+
+**Get the sent and received bytes for each uplink of a network.**
+
+https://developer.cisco.com/meraki/api-v1/#!get-network-appliance-uplinks-usage-history
+
+##### Arguments
+- `--networkId` (string): (required)
+- `--t0` (string): The beginning of the timespan for the data. The maximum lookback period is 365 days from today.
+- `--t1` (string): The end of the timespan for the data. t1 can be a maximum of 14 days after t0.
+- `--timespan` (number): The timespan for which the information will be fetched. If specifying timespan, do not specify parameters t0 and t1. The value must be in seconds and be less than or equal to 14 days. The default is 10 minutes.
+- `--resolution` (integer): The time resolution in seconds for returned data. The valid resolutions are: 60, 300, 600, 1800, 3600, 86400. The default is 60.
+
+
+##### Example:
+```
+meraki appliance getNetworkApplianceUplinksUsageHistory --networkId 'STRING' --optionalArg1 "optionalarg1value" --optionalArg2 "optionalarg2value"
+````
+
+##### Example using `--kwargs` (Advanced):
+```
+meraki appliance getNetworkApplianceUplinksUsageHistory --networkId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
+````
+
+##### Method Code:
+```python
+def getNetworkApplianceUplinksUsageHistory(networkId: str, **kwargs):
     # Code
 ````
 
@@ -3539,7 +3591,7 @@ https://developer.cisco.com/meraki/api-v1/#!update-device-camera-quality-and-ret
 - `--profileId` (string): The ID of a quality and retention profile to assign to the camera. The profile's settings will override all of the per-camera quality and retention settings. If the value of this parameter is null, any existing profile will be unassigned from the camera.
 - `--motionBasedRetentionEnabled` (boolean): Boolean indicating if motion-based retention is enabled(true) or disabled(false) on the camera.
 - `--audioRecordingEnabled` (boolean): Boolean indicating if audio recording is enabled(true) or disabled(false) on the camera
-- `--restrictedBandwidthModeEnabled` (boolean): Boolean indicating if restricted bandwidth is enabled(true) or disabled(false) on the camera
+- `--restrictedBandwidthModeEnabled` (boolean): Boolean indicating if restricted bandwidth is enabled(true) or disabled(false) on the camera. This setting does not apply to MV2 cameras.
 - `--quality` (string): Quality of the camera. Can be one of 'Standard', 'High' or 'Enhanced'. Not all qualities are supported by every camera model.
 - `--resolution` (string): Resolution of the camera. Can be one of '1280x720', '1920x1080', '1080x1080' or '2058x2058'. Not all resolutions are supported by every camera model.
 - `--motionDetectorVersion` (integer): The version of the motion detector that will be used by the camera. Only applies to Gen 2 cameras. Defaults to v2.
@@ -4762,6 +4814,40 @@ def combineOrganizationNetworks(organizationId: str, name: str, networkIds: list
 
 
 ----------------------------------------
+## Batch Organizations Create Organization Adaptive Policy Acl
+
+
+**Creates new adaptive policy ACL**
+
+https://developer.cisco.com/meraki/api-v1/#!create-organization-adaptive-policy-acl
+
+##### Arguments
+- `--organizationId` (string): (required)
+- `--name` (string): Name of the adaptive policy ACL
+- `--rules` (array): An ordered array of the adaptive policy ACL rules.
+- `--ipVersion` (string): IP version of adpative policy ACL. One of: 'any', 'ipv4' or 'ipv6'
+- `--description` (string): Description of the adaptive policy ACL
+
+
+##### Example:
+```
+meraki batch organizations createOrganizationAdaptivePolicyAcl --organizationId 'STRING' --name 'STRING' --rules ITEM --ipVersion 'STRING' --optionalArg1 "optionalarg1value" --optionalArg2 "optionalarg2value"
+````
+
+##### Example using `--kwargs` (Advanced):
+```
+meraki batch organizations createOrganizationAdaptivePolicyAcl --organizationId 'STRING' --name 'STRING' --rules ITEM --ipVersion 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
+````
+
+##### Method Code:
+```python
+def createOrganizationAdaptivePolicyAcl(organizationId: str, name: str, rules: list, ipVersion: str, **kwargs):
+    # Code
+````
+
+
+
+----------------------------------------
 ## Batch Organizations Create Organization Config Template
 
 
@@ -4805,7 +4891,7 @@ https://developer.cisco.com/meraki/api-v1/#!create-organization-network
 ##### Arguments
 - `--organizationId` (string): (required)
 - `--name` (string): The name of the new network
-- `--productTypes` (array): The product type(s) of the new network. Valid types are wireless, appliance, switch, systemsManager, camera, cellularGateway, environmental. If more than one type is included, the network will be a combined network.
+- `--productTypes` (array): The product type(s) of the new network. Valid types are wireless, appliance, switch, systemsManager, camera, cellularGateway, sensor, environmental. If more than one type is included, the network will be a combined network.
 - `--tags` (array): A list of tags to be applied to the network
 - `--timeZone` (string): The timezone of the network. For a list of allowed timezones, please see the 'TZ' column in the table in <a target='_blank' href='https://en.wikipedia.org/wiki/List_of_tz_database_time_zones'>this article.</a>
 - `--copyFromNetworkId` (string): The ID of the network to copy configuration from. Other provided parameters will override the copied configuration, except type which must match this network's type exactly.
@@ -4857,6 +4943,32 @@ meraki batch organizations createOrganizationSamlIdp --organizationId 'STRING' -
 ##### Method Code:
 ```python
 def createOrganizationSamlIdp(organizationId: str, x509certSha1Fingerprint: str, **kwargs):
+    # Code
+````
+
+
+
+----------------------------------------
+## Batch Organizations Delete Organization Adaptive Policy Acl
+
+
+**Deletes the specified adaptive policy ACL**
+
+https://developer.cisco.com/meraki/api-v1/#!delete-organization-adaptive-policy-acl
+
+##### Arguments
+- `--organizationId` (string): (required)
+- `--id` (string): (required)
+
+
+##### Example:
+```
+meraki batch organizations deleteOrganizationAdaptivePolicyAcl --organizationId 'STRING' --id 'STRING'
+````
+
+##### Method Code:
+```python
+def deleteOrganizationAdaptivePolicyAcl(organizationId: str, id: str):
     # Code
 ````
 
@@ -4965,6 +5077,72 @@ meraki batch organizations renewOrganizationLicensesSeats --organizationId 'STRI
 ##### Method Code:
 ```python
 def renewOrganizationLicensesSeats(organizationId: str, licenseIdToRenew: str, unusedLicenseId: str):
+    # Code
+````
+
+
+
+----------------------------------------
+## Batch Organizations Update Organization Adaptive Policy Acl
+
+
+**Updates an adaptive policy ACL**
+
+https://developer.cisco.com/meraki/api-v1/#!update-organization-adaptive-policy-acl
+
+##### Arguments
+- `--organizationId` (string): (required)
+- `--id` (string): (required)
+- `--name` (string): Name of the adaptive policy ACL
+- `--description` (string): Description of the adaptive policy ACL
+- `--rules` (array): An ordered array of the adaptive policy ACL rules. An empty array will clear the rules.
+- `--ipVersion` (string): IP version of adpative policy ACL. One of: 'any', 'ipv4' or 'ipv6'
+
+
+##### Example:
+```
+meraki batch organizations updateOrganizationAdaptivePolicyAcl --organizationId 'STRING' --id 'STRING' --optionalArg1 "optionalarg1value" --optionalArg2 "optionalarg2value"
+````
+
+##### Example using `--kwargs` (Advanced):
+```
+meraki batch organizations updateOrganizationAdaptivePolicyAcl --organizationId 'STRING' --id 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
+````
+
+##### Method Code:
+```python
+def updateOrganizationAdaptivePolicyAcl(organizationId: str, id: str, **kwargs):
+    # Code
+````
+
+
+
+----------------------------------------
+## Batch Organizations Update Organization Adaptive Policy Settings
+
+
+**Update global adaptive policy settings**
+
+https://developer.cisco.com/meraki/api-v1/#!update-organization-adaptive-policy-settings
+
+##### Arguments
+- `--organizationId` (string): (required)
+- `--enabledNetworks` (array): List of network IDs with adaptive policy enabled
+
+
+##### Example:
+```
+meraki batch organizations updateOrganizationAdaptivePolicySettings --organizationId 'STRING' --optionalArg1 "optionalarg1value" --optionalArg2 "optionalarg2value"
+````
+
+##### Example using `--kwargs` (Advanced):
+```
+meraki batch organizations updateOrganizationAdaptivePolicySettings --organizationId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
+````
+
+##### Method Code:
+```python
+def updateOrganizationAdaptivePolicySettings(organizationId: str, **kwargs):
     # Code
 ````
 
@@ -5254,6 +5432,7 @@ https://developer.cisco.com/meraki/api-v1/#!create-network-switch-access-policy
 - `--radiusAccountingEnabled` (boolean): Enable to send start, interim-update and stop messages to a configured RADIUS accounting server for tracking connected clients
 - `--hostMode` (string): Choose the Host Mode for the access policy.
 - `--urlRedirectWalledGardenEnabled` (boolean): Enable to restrict access for clients to a specific set of IP addresses or hostnames prior to authentication
+- `--radius` (object): Object for RADIUS Settings
 - `--radiusAccountingServers` (array): List of RADIUS accounting servers to require connecting devices to authenticate against before granting network access
 - `--radiusGroupAttribute` (string): Acceptable values are `""` for None, or `"11"` for Group Policies ACL
 - `--accessPolicyType` (string): Access Type of the policy. Automatically 'Hybrid authentication' when hostMode is 'Multi-Domain'.
@@ -5899,6 +6078,7 @@ https://developer.cisco.com/meraki/api-v1/#!update-network-switch-access-policy
 - `--accessPolicyNumber` (string): (required)
 - `--name` (string): Name of the access policy
 - `--radiusServers` (array): List of RADIUS servers to require connecting devices to authenticate against before granting network access
+- `--radius` (object): Object for RADIUS Settings
 - `--radiusTestingEnabled` (boolean): If enabled, Meraki devices will periodically send access-request messages to these RADIUS servers
 - `--radiusCoaSupportEnabled` (boolean): Change of authentication for RADIUS re-authentication and disconnection
 - `--radiusAccountingEnabled` (boolean): Enable to send start, interim-update and stop messages to a configured RADIUS accounting server for tracking connected clients
@@ -7004,6 +7184,41 @@ def updateNetworkWirelessSsidDeviceTypeGroupPolicies(networkId: str, number: str
 
 
 ----------------------------------------
+## Batch Wireless Update Network Wireless Ssid Eap Override
+
+
+**Update the EAP overridden parameters for an SSID.**
+
+https://developer.cisco.com/meraki/api-v1/#!update-network-wireless-ssid-eap-override
+
+##### Arguments
+- `--networkId` (string): (required)
+- `--number` (string): (required)
+- `--timeout` (integer): General EAP timeout in seconds.
+- `--identity` (object): EAP settings for identity requests.
+- `--maxRetries` (integer): Maximum number of general EAP retries.
+- `--eapolKey` (object): EAPOL Key settings.
+
+
+##### Example:
+```
+meraki batch wireless updateNetworkWirelessSsidEapOverride --networkId 'STRING' --number 'STRING' --optionalArg1 "optionalarg1value" --optionalArg2 "optionalarg2value"
+````
+
+##### Example using `--kwargs` (Advanced):
+```
+meraki batch wireless updateNetworkWirelessSsidEapOverride --networkId 'STRING' --number 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
+````
+
+##### Method Code:
+```python
+def updateNetworkWirelessSsidEapOverride(networkId: str, number: str, **kwargs):
+    # Code
+````
+
+
+
+----------------------------------------
 ## Batch Wireless Update Network Wireless Ssid Firewall L7 Firewall Rules
 
 
@@ -7030,6 +7245,45 @@ meraki batch wireless updateNetworkWirelessSsidFirewallL7FirewallRules --network
 ##### Method Code:
 ```python
 def updateNetworkWirelessSsidFirewallL7FirewallRules(networkId: str, number: str, **kwargs):
+    # Code
+````
+
+
+
+----------------------------------------
+## Batch Wireless Update Network Wireless Ssid Hotspot20
+
+
+**Update the Hotspot 2.0 settings of an SSID**
+
+https://developer.cisco.com/meraki/api-v1/#!update-network-wireless-ssid-hotspot-2-0
+
+##### Arguments
+- `--networkId` (string): (required)
+- `--number` (string): (required)
+- `--enabled` (boolean): Whether or not Hotspot 2.0 for this SSID is enabled
+- `--operator` (object): Operator settings for this SSID
+- `--venue` (object): Venue settings for this SSID
+- `--networkAccessType` (string): The network type of this SSID ('Private network', 'Private network with guest access', 'Chargeable public network', 'Free public network', 'Personal device network', 'Emergency services only network', 'Test or experimental', 'Wildcard')
+- `--domains` (array): An array of domain names
+- `--roamConsortOis` (array): An array of roaming consortium OIs (hexadecimal number 3-5 octets in length)
+- `--mccMncs` (array): An array of MCC/MNC pairs
+- `--naiRealms` (array): An array of NAI realms
+
+
+##### Example:
+```
+meraki batch wireless updateNetworkWirelessSsidHotspot20 --networkId 'STRING' --number 'STRING' --optionalArg1 "optionalarg1value" --optionalArg2 "optionalarg2value"
+````
+
+##### Example using `--kwargs` (Advanced):
+```
+meraki batch wireless updateNetworkWirelessSsidHotspot20 --networkId 'STRING' --number 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
+````
+
+##### Method Code:
+```python
+def updateNetworkWirelessSsidHotspot20(networkId: str, number: str, **kwargs):
     # Code
 ````
 
@@ -7129,6 +7383,7 @@ https://developer.cisco.com/meraki/api-v1/#!update-network-wireless-ssid-splash-
 - `--allowSimultaneousLogins` (boolean): Whether or not to allow simultaneous logins from different devices.
 - `--guestSponsorship` (object): Details associated with guest sponsored splash.
 - `--billing` (object): Details associated with billing splash.
+- `--sentryEnrollment` (object): Systems Manager sentry enrollment splash settings.
 
 
 ##### Example:
@@ -7230,8 +7485,8 @@ https://developer.cisco.com/meraki/api-v1/#!create-network-camera-quality-retent
 ##### Arguments
 - `--networkId` (string): (required)
 - `--name` (string): The name of the new profile. Must be unique. This parameter is required.
-- `--motionBasedRetentionEnabled` (boolean): Deletes footage older than 3 days in which no motion was detected. Can be either true or false. Defaults to false.
-- `--restrictedBandwidthModeEnabled` (boolean): Disable features that require additional bandwidth such as Motion Recap. Can be either true or false. Defaults to false.
+- `--motionBasedRetentionEnabled` (boolean): Deletes footage older than 3 days in which no motion was detected. Can be either true or false. Defaults to false. This setting does not apply to MV2 cameras.
+- `--restrictedBandwidthModeEnabled` (boolean): Disable features that require additional bandwidth such as Motion Recap. Can be either true or false. Defaults to false. This setting does not apply to MV2 cameras.
 - `--audioRecordingEnabled` (boolean): Whether or not to record audio. Can be either true or false. Defaults to false.
 - `--cloudArchiveEnabled` (boolean): Create redundant video backup using Cloud Archive. Can be either true or false. Defaults to false.
 - `--motionDetectorVersion` (integer): The version of the motion detector that will be used by the camera. Only applies to Gen 2 cameras. Defaults to v2.
@@ -7854,7 +8109,7 @@ https://developer.cisco.com/meraki/api-v1/#!update-device-camera-quality-and-ret
 - `--profileId` (string): The ID of a quality and retention profile to assign to the camera. The profile's settings will override all of the per-camera quality and retention settings. If the value of this parameter is null, any existing profile will be unassigned from the camera.
 - `--motionBasedRetentionEnabled` (boolean): Boolean indicating if motion-based retention is enabled(true) or disabled(false) on the camera.
 - `--audioRecordingEnabled` (boolean): Boolean indicating if audio recording is enabled(true) or disabled(false) on the camera
-- `--restrictedBandwidthModeEnabled` (boolean): Boolean indicating if restricted bandwidth is enabled(true) or disabled(false) on the camera
+- `--restrictedBandwidthModeEnabled` (boolean): Boolean indicating if restricted bandwidth is enabled(true) or disabled(false) on the camera. This setting does not apply to MV2 cameras.
 - `--quality` (string): Quality of the camera. Can be one of 'Standard', 'High' or 'Enhanced'. Not all qualities are supported by every camera model.
 - `--resolution` (string): Resolution of the camera. Can be one of '1280x720', '1920x1080', '1080x1080' or '2058x2058'. Not all resolutions are supported by every camera model.
 - `--motionDetectorVersion` (integer): The version of the motion detector that will be used by the camera. Only applies to Gen 2 cameras. Defaults to v2.
@@ -7981,8 +8236,8 @@ https://developer.cisco.com/meraki/api-v1/#!update-network-camera-quality-retent
 - `--networkId` (string): (required)
 - `--qualityRetentionProfileId` (string): (required)
 - `--name` (string): The name of the new profile. Must be unique.
-- `--motionBasedRetentionEnabled` (boolean): Deletes footage older than 3 days in which no motion was detected. Can be either true or false. Defaults to false.
-- `--restrictedBandwidthModeEnabled` (boolean): Disable features that require additional bandwidth such as Motion Recap. Can be either true or false. Defaults to false.
+- `--motionBasedRetentionEnabled` (boolean): Deletes footage older than 3 days in which no motion was detected. Can be either true or false. Defaults to false. This setting does not apply to MV2 cameras.
+- `--restrictedBandwidthModeEnabled` (boolean): Disable features that require additional bandwidth such as Motion Recap. Can be either true or false. Defaults to false. This setting does not apply to MV2 cameras.
 - `--audioRecordingEnabled` (boolean): Whether or not to record audio. Can be either true or false. Defaults to false.
 - `--cloudArchiveEnabled` (boolean): Create redundant video backup using Cloud Archive. Can be either true or false. Defaults to false.
 - `--motionDetectorVersion` (integer): The version of the motion detector that will be used by the camera. Only applies to Gen 2 cameras. Defaults to v2.
@@ -8796,8 +9051,8 @@ def deleteOrganizationInsightMonitoredMediaServer(organizationId: str, monitored
 https://developer.cisco.com/meraki/api-v1/#!get-network-insight-application-health-by-time
 
 ##### Arguments
-- `--network_id` (string): (required)
-- `--application_id` (string): (required)
+- `--networkId` (string): (required)
+- `--applicationId` (string): (required)
 - `--t0` (string): The beginning of the timespan for the data. The maximum lookback period is 7 days from today.
 - `--t1` (string): The end of the timespan for the data. t1 can be a maximum of 7 days after t0.
 - `--timespan` (number): The timespan for which the information will be fetched. If specifying timespan, do not specify parameters t0 and t1. The value must be in seconds and be less than or equal to 7 days. The default is 2 hours.
@@ -8806,17 +9061,17 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-insight-application-heal
 
 ##### Example:
 ```
-meraki insight getNetworkInsightApplicationHealthByTime --network_id 'STRING' --application_id 'STRING' --optionalArg1 "optionalarg1value" --optionalArg2 "optionalarg2value"
+meraki insight getNetworkInsightApplicationHealthByTime --networkId 'STRING' --applicationId 'STRING' --optionalArg1 "optionalarg1value" --optionalArg2 "optionalarg2value"
 ````
 
 ##### Example using `--kwargs` (Advanced):
 ```
-meraki insight getNetworkInsightApplicationHealthByTime --network_id 'STRING' --application_id 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
+meraki insight getNetworkInsightApplicationHealthByTime --networkId 'STRING' --applicationId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
 ##### Method Code:
 ```python
-def getNetworkInsightApplicationHealthByTime(network_id: str, application_id: str, **kwargs):
+def getNetworkInsightApplicationHealthByTime(networkId: str, applicationId: str, **kwargs):
     # Code
 ````
 
@@ -8831,17 +9086,17 @@ def getNetworkInsightApplicationHealthByTime(network_id: str, application_id: st
 https://developer.cisco.com/meraki/api-v1/#!get-organization-insight-applications
 
 ##### Arguments
-- `--organization_id` (string): (required)
+- `--organizationId` (string): (required)
 
 
 ##### Example:
 ```
-meraki insight getOrganizationInsightApplications --organization_id 'STRING'
+meraki insight getOrganizationInsightApplications --organizationId 'STRING'
 ````
 
 ##### Method Code:
 ```python
-def getOrganizationInsightApplications(organization_id: str):
+def getOrganizationInsightApplications(organizationId: str):
     # Code
 ````
 
@@ -9728,6 +9983,14 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-clients
 - `--perPage` (integer): The number of entries per page returned. Acceptable range is 3 - 1000. Default is 10.
 - `--startingAfter` (string): A token used by the server to indicate the start of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it.
 - `--endingBefore` (string): A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it.
+- `--statuses` (array): Filters clients based on status. Can be one of 'Online' or 'Offline'.
+- `--ip` (string): Filters clients based on a partial or full match for the ip address field.
+- `--ip6` (string): Filters clients based on a partial or full match for the ip6 address field.
+- `--ip6Local` (string): Filters clients based on a partial or full match for the ip6Local address field.
+- `--mac` (string): Filters clients based on a partial or full match for the mac address field.
+- `--os` (string): Filters clients based on a partial or full match for the os (operating system) field.
+- `--description` (string): Filters clients based on a partial or full match for the description field.
+- `--recentDeviceConnections` (array): Filters clients based on recent connection type. Can be one of 'Wired' or 'Wireless'.
 
 
 ##### Example:
@@ -9900,7 +10163,7 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-events
 - `--total_pages` (integer or string): use with perPage to get total results up to total_pages*perPage; -1 or "all" for all pages
 - `--direction` (string): direction to paginate, either "next" or "prev" (default) page
 - `--event_log_end_time` (string): ISO8601 Zulu/UTC time, to use in conjunction with startingAfter, to retrieve events within a time window
-- `--productType` (string): The product type to fetch events for. This parameter is required for networks with multiple device types. Valid types are wireless, appliance, switch, systemsManager, camera, cellularGateway, and environmental
+- `--productType` (string): The product type to fetch events for. This parameter is required for networks with multiple device types. Valid types are wireless, appliance, switch, systemsManager, camera, and cellularGateway
 - `--includedEventTypes` (array): A list of event types. The returned events will be filtered to only include events with these types.
 - `--excludedEventTypes` (array): A list of event types. The returned events will be filtered to exclude events with these types.
 - `--deviceMac` (string): The MAC address of the Meraki device which the list of events will be filtered with
@@ -11137,6 +11400,8 @@ https://developer.cisco.com/meraki/api-v1/#!update-network-netflow
 - `--reportingEnabled` (boolean): Boolean indicating whether NetFlow traffic reporting is enabled (true) or disabled (false).
 - `--collectorIp` (string): The IPv4 address of the NetFlow collector.
 - `--collectorPort` (integer): The port that the NetFlow collector will be listening on.
+- `--etaEnabled` (boolean): Boolean indicating whether Encrypted Traffic Analysis is enabled (true) or disabled (false).
+- `--etaDstPort` (integer): The port that the Encrypted Traffic Analysis collector will be listening on.
 
 
 ##### Example:
@@ -11497,6 +11762,40 @@ def createOrganizationActionBatch(organizationId: str, actions: list, **kwargs):
 
 
 ----------------------------------------
+## Organizations Create Organization Adaptive Policy Acl
+
+
+**Creates new adaptive policy ACL**
+
+https://developer.cisco.com/meraki/api-v1/#!create-organization-adaptive-policy-acl
+
+##### Arguments
+- `--organizationId` (string): (required)
+- `--name` (string): Name of the adaptive policy ACL
+- `--rules` (array): An ordered array of the adaptive policy ACL rules.
+- `--ipVersion` (string): IP version of adpative policy ACL. One of: 'any', 'ipv4' or 'ipv6'
+- `--description` (string): Description of the adaptive policy ACL
+
+
+##### Example:
+```
+meraki organizations createOrganizationAdaptivePolicyAcl --organizationId 'STRING' --name 'STRING' --rules ITEM --ipVersion 'STRING' --optionalArg1 "optionalarg1value" --optionalArg2 "optionalarg2value"
+````
+
+##### Example using `--kwargs` (Advanced):
+```
+meraki organizations createOrganizationAdaptivePolicyAcl --organizationId 'STRING' --name 'STRING' --rules ITEM --ipVersion 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
+````
+
+##### Method Code:
+```python
+def createOrganizationAdaptivePolicyAcl(organizationId: str, name: str, rules: list, ipVersion: str, **kwargs):
+    # Code
+````
+
+
+
+----------------------------------------
 ## Organizations Create Organization Admin
 
 
@@ -11614,7 +11913,7 @@ https://developer.cisco.com/meraki/api-v1/#!create-organization-network
 ##### Arguments
 - `--organizationId` (string): (required)
 - `--name` (string): The name of the new network
-- `--productTypes` (array): The product type(s) of the new network. Valid types are wireless, appliance, switch, systemsManager, camera, cellularGateway, environmental. If more than one type is included, the network will be a combined network.
+- `--productTypes` (array): The product type(s) of the new network. Valid types are wireless, appliance, switch, systemsManager, camera, cellularGateway, sensor, environmental. If more than one type is included, the network will be a combined network.
 - `--tags` (array): A list of tags to be applied to the network
 - `--timeZone` (string): The timezone of the network. For a list of allowed timezones, please see the 'TZ' column in the table in <a target='_blank' href='https://en.wikipedia.org/wiki/List_of_tz_database_time_zones'>this article.</a>
 - `--copyFromNetworkId` (string): The ID of the network to copy configuration from. Other provided parameters will override the copied configuration, except type which must match this network's type exactly.
@@ -11751,6 +12050,32 @@ meraki organizations deleteOrganizationActionBatch --organizationId 'STRING' --a
 ##### Method Code:
 ```python
 def deleteOrganizationActionBatch(organizationId: str, actionBatchId: str):
+    # Code
+````
+
+
+
+----------------------------------------
+## Organizations Delete Organization Adaptive Policy Acl
+
+
+**Deletes the specified adaptive policy ACL**
+
+https://developer.cisco.com/meraki/api-v1/#!delete-organization-adaptive-policy-acl
+
+##### Arguments
+- `--organizationId` (string): (required)
+- `--id` (string): (required)
+
+
+##### Example:
+```
+meraki organizations deleteOrganizationAdaptivePolicyAcl --organizationId 'STRING' --id 'STRING'
+````
+
+##### Method Code:
+```python
+def deleteOrganizationAdaptivePolicyAcl(organizationId: str, id: str):
     # Code
 ````
 
@@ -11963,6 +12288,82 @@ meraki organizations getOrganizationActionBatches --organizationId 'STRING' --kw
 ##### Method Code:
 ```python
 def getOrganizationActionBatches(organizationId: str, **kwargs):
+    # Code
+````
+
+
+
+----------------------------------------
+## Organizations Get Organization Adaptive Policy Acl
+
+
+**Returns the adaptive policy ACL information**
+
+https://developer.cisco.com/meraki/api-v1/#!get-organization-adaptive-policy-acl
+
+##### Arguments
+- `--organizationId` (string): (required)
+- `--id` (string): (required)
+
+
+##### Example:
+```
+meraki organizations getOrganizationAdaptivePolicyAcl --organizationId 'STRING' --id 'STRING'
+````
+
+##### Method Code:
+```python
+def getOrganizationAdaptivePolicyAcl(organizationId: str, id: str):
+    # Code
+````
+
+
+
+----------------------------------------
+## Organizations Get Organization Adaptive Policy Acls
+
+
+**List adaptive policy ACLs in a organization**
+
+https://developer.cisco.com/meraki/api-v1/#!get-organization-adaptive-policy-acls
+
+##### Arguments
+- `--organizationId` (string): (required)
+
+
+##### Example:
+```
+meraki organizations getOrganizationAdaptivePolicyAcls --organizationId 'STRING'
+````
+
+##### Method Code:
+```python
+def getOrganizationAdaptivePolicyAcls(organizationId: str):
+    # Code
+````
+
+
+
+----------------------------------------
+## Organizations Get Organization Adaptive Policy Settings
+
+
+**Returns global adaptive policy settings in an organization**
+
+https://developer.cisco.com/meraki/api-v1/#!get-organization-adaptive-policy-settings
+
+##### Arguments
+- `--organizationId` (string): (required)
+
+
+##### Example:
+```
+meraki organizations getOrganizationAdaptivePolicySettings --organizationId 'STRING'
+````
+
+##### Method Code:
+```python
+def getOrganizationAdaptivePolicySettings(organizationId: str):
     # Code
 ````
 
@@ -12287,6 +12688,7 @@ https://developer.cisco.com/meraki/api-v1/#!get-organization-devices-statuses
 - `--perPage` (integer): The number of entries per page returned. Acceptable range is 3 - 1000. Default is 1000.
 - `--startingAfter` (string): A token used by the server to indicate the start of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it.
 - `--endingBefore` (string): A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it.
+- `--components` (object): components
 
 
 ##### Example:
@@ -12953,6 +13355,7 @@ https://developer.cisco.com/meraki/api-v1/#!update-organization
 ##### Arguments
 - `--organizationId` (string): (required)
 - `--name` (string): The name of the organization
+- `--api` (object): API-specific settings
 
 
 ##### Example:
@@ -13001,6 +13404,72 @@ meraki organizations updateOrganizationActionBatch --organizationId 'STRING' --a
 ##### Method Code:
 ```python
 def updateOrganizationActionBatch(organizationId: str, actionBatchId: str, **kwargs):
+    # Code
+````
+
+
+
+----------------------------------------
+## Organizations Update Organization Adaptive Policy Acl
+
+
+**Updates an adaptive policy ACL**
+
+https://developer.cisco.com/meraki/api-v1/#!update-organization-adaptive-policy-acl
+
+##### Arguments
+- `--organizationId` (string): (required)
+- `--id` (string): (required)
+- `--name` (string): Name of the adaptive policy ACL
+- `--description` (string): Description of the adaptive policy ACL
+- `--rules` (array): An ordered array of the adaptive policy ACL rules. An empty array will clear the rules.
+- `--ipVersion` (string): IP version of adpative policy ACL. One of: 'any', 'ipv4' or 'ipv6'
+
+
+##### Example:
+```
+meraki organizations updateOrganizationAdaptivePolicyAcl --organizationId 'STRING' --id 'STRING' --optionalArg1 "optionalarg1value" --optionalArg2 "optionalarg2value"
+````
+
+##### Example using `--kwargs` (Advanced):
+```
+meraki organizations updateOrganizationAdaptivePolicyAcl --organizationId 'STRING' --id 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
+````
+
+##### Method Code:
+```python
+def updateOrganizationAdaptivePolicyAcl(organizationId: str, id: str, **kwargs):
+    # Code
+````
+
+
+
+----------------------------------------
+## Organizations Update Organization Adaptive Policy Settings
+
+
+**Update global adaptive policy settings**
+
+https://developer.cisco.com/meraki/api-v1/#!update-organization-adaptive-policy-settings
+
+##### Arguments
+- `--organizationId` (string): (required)
+- `--enabledNetworks` (array): List of network IDs with adaptive policy enabled
+
+
+##### Example:
+```
+meraki organizations updateOrganizationAdaptivePolicySettings --organizationId 'STRING' --optionalArg1 "optionalarg1value" --optionalArg2 "optionalarg2value"
+````
+
+##### Example using `--kwargs` (Advanced):
+```
+meraki organizations updateOrganizationAdaptivePolicySettings --organizationId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
+````
+
+##### Method Code:
+```python
+def updateOrganizationAdaptivePolicySettings(organizationId: str, **kwargs):
     # Code
 ````
 
@@ -14606,6 +15075,7 @@ https://developer.cisco.com/meraki/api-v1/#!create-network-switch-access-policy
 - `--radiusAccountingEnabled` (boolean): Enable to send start, interim-update and stop messages to a configured RADIUS accounting server for tracking connected clients
 - `--hostMode` (string): Choose the Host Mode for the access policy.
 - `--urlRedirectWalledGardenEnabled` (boolean): Enable to restrict access for clients to a specific set of IP addresses or hostnames prior to authentication
+- `--radius` (object): Object for RADIUS Settings
 - `--radiusAccountingServers` (array): List of RADIUS accounting servers to require connecting devices to authenticate against before granting network access
 - `--radiusGroupAttribute` (string): Acceptable values are `""` for None, or `"11"` for Group Policies ACL
 - `--accessPolicyType` (string): Access Type of the policy. Automatically 'Hybrid authentication' when hostMode is 'Multi-Domain'.
@@ -16429,6 +16899,7 @@ https://developer.cisco.com/meraki/api-v1/#!update-network-switch-access-policy
 - `--accessPolicyNumber` (string): (required)
 - `--name` (string): Name of the access policy
 - `--radiusServers` (array): List of RADIUS servers to require connecting devices to authenticate against before granting network access
+- `--radius` (object): Object for RADIUS Settings
 - `--radiusTestingEnabled` (boolean): If enabled, Meraki devices will periodically send access-request messages to these RADIUS servers
 - `--radiusCoaSupportEnabled` (boolean): Change of authentication for RADIUS re-authentication and disconnection
 - `--radiusAccountingEnabled` (boolean): Enable to send start, interim-update and stop messages to a configured RADIUS accounting server for tracking connected clients
@@ -18283,6 +18754,32 @@ def getNetworkWirelessSsidDeviceTypeGroupPolicies(networkId: str, number: str):
 
 
 ----------------------------------------
+## Wireless Get Network Wireless Ssid Eap Override
+
+
+**Return the EAP overridden parameters for an SSID**
+
+https://developer.cisco.com/meraki/api-v1/#!get-network-wireless-ssid-eap-override
+
+##### Arguments
+- `--networkId` (string): (required)
+- `--number` (string): (required)
+
+
+##### Example:
+```
+meraki wireless getNetworkWirelessSsidEapOverride --networkId 'STRING' --number 'STRING'
+````
+
+##### Method Code:
+```python
+def getNetworkWirelessSsidEapOverride(networkId: str, number: str):
+    # Code
+````
+
+
+
+----------------------------------------
 ## Wireless Get Network Wireless Ssid Firewall L3 Firewall Rules
 
 
@@ -18329,6 +18826,32 @@ meraki wireless getNetworkWirelessSsidFirewallL7FirewallRules --networkId 'STRIN
 ##### Method Code:
 ```python
 def getNetworkWirelessSsidFirewallL7FirewallRules(networkId: str, number: str):
+    # Code
+````
+
+
+
+----------------------------------------
+## Wireless Get Network Wireless Ssid Hotspot20
+
+
+**Return the Hotspot 2.0 settings for an SSID**
+
+https://developer.cisco.com/meraki/api-v1/#!get-network-wireless-ssid-hotspot-2-0
+
+##### Arguments
+- `--networkId` (string): (required)
+- `--number` (string): (required)
+
+
+##### Example:
+```
+meraki wireless getNetworkWirelessSsidHotspot20 --networkId 'STRING' --number 'STRING'
+````
+
+##### Method Code:
+```python
+def getNetworkWirelessSsidHotspot20(networkId: str, number: str):
     # Code
 ````
 
@@ -18949,6 +19472,41 @@ def updateNetworkWirelessSsidDeviceTypeGroupPolicies(networkId: str, number: str
 
 
 ----------------------------------------
+## Wireless Update Network Wireless Ssid Eap Override
+
+
+**Update the EAP overridden parameters for an SSID.**
+
+https://developer.cisco.com/meraki/api-v1/#!update-network-wireless-ssid-eap-override
+
+##### Arguments
+- `--networkId` (string): (required)
+- `--number` (string): (required)
+- `--timeout` (integer): General EAP timeout in seconds.
+- `--identity` (object): EAP settings for identity requests.
+- `--maxRetries` (integer): Maximum number of general EAP retries.
+- `--eapolKey` (object): EAPOL Key settings.
+
+
+##### Example:
+```
+meraki wireless updateNetworkWirelessSsidEapOverride --networkId 'STRING' --number 'STRING' --optionalArg1 "optionalarg1value" --optionalArg2 "optionalarg2value"
+````
+
+##### Example using `--kwargs` (Advanced):
+```
+meraki wireless updateNetworkWirelessSsidEapOverride --networkId 'STRING' --number 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
+````
+
+##### Method Code:
+```python
+def updateNetworkWirelessSsidEapOverride(networkId: str, number: str, **kwargs):
+    # Code
+````
+
+
+
+----------------------------------------
 ## Wireless Update Network Wireless Ssid Firewall L3 Firewall Rules
 
 
@@ -19008,6 +19566,45 @@ meraki wireless updateNetworkWirelessSsidFirewallL7FirewallRules --networkId 'ST
 ##### Method Code:
 ```python
 def updateNetworkWirelessSsidFirewallL7FirewallRules(networkId: str, number: str, **kwargs):
+    # Code
+````
+
+
+
+----------------------------------------
+## Wireless Update Network Wireless Ssid Hotspot20
+
+
+**Update the Hotspot 2.0 settings of an SSID**
+
+https://developer.cisco.com/meraki/api-v1/#!update-network-wireless-ssid-hotspot-2-0
+
+##### Arguments
+- `--networkId` (string): (required)
+- `--number` (string): (required)
+- `--enabled` (boolean): Whether or not Hotspot 2.0 for this SSID is enabled
+- `--operator` (object): Operator settings for this SSID
+- `--venue` (object): Venue settings for this SSID
+- `--networkAccessType` (string): The network type of this SSID ('Private network', 'Private network with guest access', 'Chargeable public network', 'Free public network', 'Personal device network', 'Emergency services only network', 'Test or experimental', 'Wildcard')
+- `--domains` (array): An array of domain names
+- `--roamConsortOis` (array): An array of roaming consortium OIs (hexadecimal number 3-5 octets in length)
+- `--mccMncs` (array): An array of MCC/MNC pairs
+- `--naiRealms` (array): An array of NAI realms
+
+
+##### Example:
+```
+meraki wireless updateNetworkWirelessSsidHotspot20 --networkId 'STRING' --number 'STRING' --optionalArg1 "optionalarg1value" --optionalArg2 "optionalarg2value"
+````
+
+##### Example using `--kwargs` (Advanced):
+```
+meraki wireless updateNetworkWirelessSsidHotspot20 --networkId 'STRING' --number 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
+````
+
+##### Method Code:
+```python
+def updateNetworkWirelessSsidHotspot20(networkId: str, number: str, **kwargs):
     # Code
 ````
 
@@ -19107,6 +19704,7 @@ https://developer.cisco.com/meraki/api-v1/#!update-network-wireless-ssid-splash-
 - `--allowSimultaneousLogins` (boolean): Whether or not to allow simultaneous logins from different devices.
 - `--guestSponsorship` (object): Details associated with guest sponsored splash.
 - `--billing` (object): Details associated with billing splash.
+- `--sentryEnrollment` (object): Systems Manager sentry enrollment splash settings.
 
 
 ##### Example:
