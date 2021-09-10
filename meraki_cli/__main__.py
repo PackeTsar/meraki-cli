@@ -401,6 +401,21 @@ def _clean_args(parsed_args: argparse.Namespace):
     return arg_dict
 
 
+def _is_json(value: str) -> bool:
+    """
+    Check if a string is valid JSON data.
+
+    - value: String which may be proper structured JSON, like '["1", "2"]'
+    """
+    if type(value) != str:
+        return False
+    try:
+        json.loads(value)
+        return True
+    except json.decoder.JSONDecodeError:
+        return False
+
+
 def _get_method_params(parsed_args: argparse.Namespace,
                        arg_dict: dict, arg_obj: Args) -> ():
     """
@@ -415,12 +430,27 @@ def _get_method_params(parsed_args: argparse.Namespace,
     """
     positionals = []  # Start with an empty list of positional parameter values
     for param in arg_obj.positionals:
-        try:
-            positionals.append(arg_dict[param.name])  # Add each needed value
-        except KeyError:  # If we are missing one
+        if param.name not in arg_dict:  # If the arg isn't there
             log.critical(f'ERROR. Cannot find "{param.name}". May need to be '
                          'translated from an input key with the "-t" argument')
-            sys.exit()
+            sys.exit(2)
+        value = arg_dict[param.name]
+        # If the value is supposed to be a list or a dict
+        if (param.annotation is list) or (param.annotation is dict):
+            if type(value) is str:
+                if _is_json(value):
+                    positionals.append(json.loads(value))
+                else:
+                    positionals.append(value)
+            elif type(value) is list and len(value) == 1:
+                if _is_json(value[0]):
+                    positionals.append(json.loads(value[0]))
+                else:
+                    positionals.append(value)
+            else:
+                positionals.append(value)
+        else:
+            positionals.append(value)
         # Remove from the arg_dict so it does not get passed in as keyword
         del arg_dict[param.name]
     # If variable keywords (**kwargs) are allowed by the method and we are

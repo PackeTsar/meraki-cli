@@ -10,3 +10,10 @@ def Function(pos1: str, pos2: int,
     Some function documentation here
     """
     pass
+
+
+def ListFunction(pos1: list, pos2: int):
+    """
+    Some function documentation here
+    """
+    pass
