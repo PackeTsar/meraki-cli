@@ -1022,7 +1022,12 @@ def main(argstring=None) -> None:
                              action='help')
     basic_group.add_argument('-v', '--version',
                              version=f'Meraki-CLI v{__version__} | '
-                             f'Meraki API Library v{meraki.__version__}',
+                             f'Meraki API Library v{meraki.__version__} | '
+                             'Python {}.{}.{}'.format(
+                                sys.version_info[0],
+                                sys.version_info[1],
+                                sys.version_info[2],
+                             ),
                              action="version")
     basic_group.add_argument('-k', '--apiKey',
                              help='Meraki API Access Key',
