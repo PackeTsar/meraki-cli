@@ -4,3 +4,5 @@ log.log
 htmlcov
 .coverage
 *.egg-info*
+.tox/
+dist/
