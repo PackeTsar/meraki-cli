@@ -681,7 +681,7 @@ meraki appliance createNetworkApplianceStaticRoute --networkId 'STRING' --name '
 
 ##### Method Code:
 ```python
-def createNetworkApplianceStaticRoute(networkId: str, name: str, subnet: str, gatewayIp: str):
+def createNetworkApplianceStaticRoute(networkId:str, name:str, subnet:str, gatewayIp:str):
     # Code
 ````
 
@@ -715,7 +715,7 @@ meraki appliance createNetworkApplianceTrafficShapingCustomPerformanceClass --ne
 
 ##### Method Code:
 ```python
-def createNetworkApplianceTrafficShapingCustomPerformanceClass(networkId: str, name: str, **kwargs):
+def createNetworkApplianceTrafficShapingCustomPerformanceClass(networkId:str, name:str, **kwargs):
     # Code
 ````
 
@@ -750,7 +750,7 @@ meraki appliance createNetworkApplianceVlan --networkId 'STRING' --id 'STRING' -
 
 ##### Method Code:
 ```python
-def createNetworkApplianceVlan(networkId: str, id: str, name: str, **kwargs):
+def createNetworkApplianceVlan(networkId:str, id:str, name:str, **kwargs):
     # Code
 ````
 
@@ -776,7 +776,7 @@ meraki appliance deleteNetworkApplianceStaticRoute --networkId 'STRING' --static
 
 ##### Method Code:
 ```python
-def deleteNetworkApplianceStaticRoute(networkId: str, staticRouteId: str):
+def deleteNetworkApplianceStaticRoute(networkId:str, staticRouteId:str):
     # Code
 ````
 
@@ -802,7 +802,7 @@ meraki appliance deleteNetworkApplianceTrafficShapingCustomPerformanceClass --ne
 
 ##### Method Code:
 ```python
-def deleteNetworkApplianceTrafficShapingCustomPerformanceClass(networkId: str, customPerformanceClassId: str):
+def deleteNetworkApplianceTrafficShapingCustomPerformanceClass(networkId:str, customPerformanceClassId:str):
     # Code
 ````
 
@@ -828,7 +828,7 @@ meraki appliance deleteNetworkApplianceVlan --networkId 'STRING' --vlanId 'STRIN
 
 ##### Method Code:
 ```python
-def deleteNetworkApplianceVlan(networkId: str, vlanId: str):
+def deleteNetworkApplianceVlan(networkId:str, vlanId:str):
     # Code
 ````
 
@@ -853,7 +853,7 @@ meraki appliance getDeviceApplianceDhcpSubnets --serial 'STRING'
 
 ##### Method Code:
 ```python
-def getDeviceApplianceDhcpSubnets(serial: str):
+def getDeviceApplianceDhcpSubnets(serial:str):
     # Code
 ````
 
@@ -878,7 +878,7 @@ meraki appliance getDeviceAppliancePerformance --serial 'STRING'
 
 ##### Method Code:
 ```python
-def getDeviceAppliancePerformance(serial: str):
+def getDeviceAppliancePerformance(serial:str):
     # Code
 ````
 
@@ -918,7 +918,7 @@ meraki appliance getNetworkApplianceClientSecurityEvents --networkId 'STRING' --
 
 ##### Method Code:
 ```python
-def getNetworkApplianceClientSecurityEvents(networkId: str, clientId: str, total_pages=1, direction='next', **kwargs):
+def getNetworkApplianceClientSecurityEvents(networkId:str, clientId:str, total_pages=1, direction='next', **kwargs):
     # Code
 ````
 
@@ -943,7 +943,7 @@ meraki appliance getNetworkApplianceConnectivityMonitoringDestinations --network
 
 ##### Method Code:
 ```python
-def getNetworkApplianceConnectivityMonitoringDestinations(networkId: str):
+def getNetworkApplianceConnectivityMonitoringDestinations(networkId:str):
     # Code
 ````
 
@@ -968,7 +968,7 @@ meraki appliance getNetworkApplianceContentFiltering --networkId 'STRING'
 
 ##### Method Code:
 ```python
-def getNetworkApplianceContentFiltering(networkId: str):
+def getNetworkApplianceContentFiltering(networkId:str):
     # Code
 ````
 
@@ -993,7 +993,7 @@ meraki appliance getNetworkApplianceContentFilteringCategories --networkId 'STRI
 
 ##### Method Code:
 ```python
-def getNetworkApplianceContentFilteringCategories(networkId: str):
+def getNetworkApplianceContentFilteringCategories(networkId:str):
     # Code
 ````
 
@@ -1018,7 +1018,7 @@ meraki appliance getNetworkApplianceFirewallCellularFirewallRules --networkId 'S
 
 ##### Method Code:
 ```python
-def getNetworkApplianceFirewallCellularFirewallRules(networkId: str):
+def getNetworkApplianceFirewallCellularFirewallRules(networkId:str):
     # Code
 ````
 
@@ -1044,7 +1044,7 @@ meraki appliance getNetworkApplianceFirewallFirewalledService --networkId 'STRIN
 
 ##### Method Code:
 ```python
-def getNetworkApplianceFirewallFirewalledService(networkId: str, service: str):
+def getNetworkApplianceFirewallFirewalledService(networkId:str, service:str):
     # Code
 ````
 
@@ -1069,7 +1069,7 @@ meraki appliance getNetworkApplianceFirewallFirewalledServices --networkId 'STRI
 
 ##### Method Code:
 ```python
-def getNetworkApplianceFirewallFirewalledServices(networkId: str):
+def getNetworkApplianceFirewallFirewalledServices(networkId:str):
     # Code
 ````
 
@@ -1094,7 +1094,7 @@ meraki appliance getNetworkApplianceFirewallInboundFirewallRules --networkId 'ST
 
 ##### Method Code:
 ```python
-def getNetworkApplianceFirewallInboundFirewallRules(networkId: str):
+def getNetworkApplianceFirewallInboundFirewallRules(networkId:str):
     # Code
 ````
 
@@ -1119,7 +1119,7 @@ meraki appliance getNetworkApplianceFirewallL3FirewallRules --networkId 'STRING'
 
 ##### Method Code:
 ```python
-def getNetworkApplianceFirewallL3FirewallRules(networkId: str):
+def getNetworkApplianceFirewallL3FirewallRules(networkId:str):
     # Code
 ````
 
@@ -1144,7 +1144,7 @@ meraki appliance getNetworkApplianceFirewallL7FirewallRules --networkId 'STRING'
 
 ##### Method Code:
 ```python
-def getNetworkApplianceFirewallL7FirewallRules(networkId: str):
+def getNetworkApplianceFirewallL7FirewallRules(networkId:str):
     # Code
 ````
 
@@ -1169,7 +1169,7 @@ meraki appliance getNetworkApplianceFirewallL7FirewallRulesApplicationCategories
 
 ##### Method Code:
 ```python
-def getNetworkApplianceFirewallL7FirewallRulesApplicationCategories(networkId: str):
+def getNetworkApplianceFirewallL7FirewallRulesApplicationCategories(networkId:str):
     # Code
 ````
 
@@ -1194,7 +1194,7 @@ meraki appliance getNetworkApplianceFirewallOneToManyNatRules --networkId 'STRIN
 
 ##### Method Code:
 ```python
-def getNetworkApplianceFirewallOneToManyNatRules(networkId: str):
+def getNetworkApplianceFirewallOneToManyNatRules(networkId:str):
     # Code
 ````
 
@@ -1219,7 +1219,7 @@ meraki appliance getNetworkApplianceFirewallOneToOneNatRules --networkId 'STRING
 
 ##### Method Code:
 ```python
-def getNetworkApplianceFirewallOneToOneNatRules(networkId: str):
+def getNetworkApplianceFirewallOneToOneNatRules(networkId:str):
     # Code
 ````
 
@@ -1244,7 +1244,7 @@ meraki appliance getNetworkApplianceFirewallPortForwardingRules --networkId 'STR
 
 ##### Method Code:
 ```python
-def getNetworkApplianceFirewallPortForwardingRules(networkId: str):
+def getNetworkApplianceFirewallPortForwardingRules(networkId:str):
     # Code
 ````
 
@@ -1270,7 +1270,7 @@ meraki appliance getNetworkAppliancePort --networkId 'STRING' --portId 'STRING'
 
 ##### Method Code:
 ```python
-def getNetworkAppliancePort(networkId: str, portId: str):
+def getNetworkAppliancePort(networkId:str, portId:str):
     # Code
 ````
 
@@ -1295,7 +1295,7 @@ meraki appliance getNetworkAppliancePorts --networkId 'STRING'
 
 ##### Method Code:
 ```python
-def getNetworkAppliancePorts(networkId: str):
+def getNetworkAppliancePorts(networkId:str):
     # Code
 ````
 
@@ -1334,7 +1334,7 @@ meraki appliance getNetworkApplianceSecurityEvents --networkId 'STRING' --kwargs
 
 ##### Method Code:
 ```python
-def getNetworkApplianceSecurityEvents(networkId: str, total_pages=1, direction='next', **kwargs):
+def getNetworkApplianceSecurityEvents(networkId:str, total_pages=1, direction='next', **kwargs):
     # Code
 ````
 
@@ -1359,7 +1359,7 @@ meraki appliance getNetworkApplianceSecurityIntrusion --networkId 'STRING'
 
 ##### Method Code:
 ```python
-def getNetworkApplianceSecurityIntrusion(networkId: str):
+def getNetworkApplianceSecurityIntrusion(networkId:str):
     # Code
 ````
 
@@ -1384,7 +1384,7 @@ meraki appliance getNetworkApplianceSecurityMalware --networkId 'STRING'
 
 ##### Method Code:
 ```python
-def getNetworkApplianceSecurityMalware(networkId: str):
+def getNetworkApplianceSecurityMalware(networkId:str):
     # Code
 ````
 
@@ -1409,7 +1409,7 @@ meraki appliance getNetworkApplianceSettings --networkId 'STRING'
 
 ##### Method Code:
 ```python
-def getNetworkApplianceSettings(networkId: str):
+def getNetworkApplianceSettings(networkId:str):
     # Code
 ````
 
@@ -1434,7 +1434,7 @@ meraki appliance getNetworkApplianceSingleLan --networkId 'STRING'
 
 ##### Method Code:
 ```python
-def getNetworkApplianceSingleLan(networkId: str):
+def getNetworkApplianceSingleLan(networkId:str):
     # Code
 ````
 
@@ -1460,7 +1460,7 @@ meraki appliance getNetworkApplianceStaticRoute --networkId 'STRING' --staticRou
 
 ##### Method Code:
 ```python
-def getNetworkApplianceStaticRoute(networkId: str, staticRouteId: str):
+def getNetworkApplianceStaticRoute(networkId:str, staticRouteId:str):
     # Code
 ````
 
@@ -1485,7 +1485,7 @@ meraki appliance getNetworkApplianceStaticRoutes --networkId 'STRING'
 
 ##### Method Code:
 ```python
-def getNetworkApplianceStaticRoutes(networkId: str):
+def getNetworkApplianceStaticRoutes(networkId:str):
     # Code
 ````
 
@@ -1510,7 +1510,7 @@ meraki appliance getNetworkApplianceTrafficShaping --networkId 'STRING'
 
 ##### Method Code:
 ```python
-def getNetworkApplianceTrafficShaping(networkId: str):
+def getNetworkApplianceTrafficShaping(networkId:str):
     # Code
 ````
 
@@ -1536,7 +1536,7 @@ meraki appliance getNetworkApplianceTrafficShapingCustomPerformanceClass --netwo
 
 ##### Method Code:
 ```python
-def getNetworkApplianceTrafficShapingCustomPerformanceClass(networkId: str, customPerformanceClassId: str):
+def getNetworkApplianceTrafficShapingCustomPerformanceClass(networkId:str, customPerformanceClassId:str):
     # Code
 ````
 
@@ -1561,7 +1561,7 @@ meraki appliance getNetworkApplianceTrafficShapingCustomPerformanceClasses --net
 
 ##### Method Code:
 ```python
-def getNetworkApplianceTrafficShapingCustomPerformanceClasses(networkId: str):
+def getNetworkApplianceTrafficShapingCustomPerformanceClasses(networkId:str):
     # Code
 ````
 
@@ -1586,7 +1586,7 @@ meraki appliance getNetworkApplianceTrafficShapingRules --networkId 'STRING'
 
 ##### Method Code:
 ```python
-def getNetworkApplianceTrafficShapingRules(networkId: str):
+def getNetworkApplianceTrafficShapingRules(networkId:str):
     # Code
 ````
 
@@ -1611,7 +1611,7 @@ meraki appliance getNetworkApplianceTrafficShapingUplinkBandwidth --networkId 'S
 
 ##### Method Code:
 ```python
-def getNetworkApplianceTrafficShapingUplinkBandwidth(networkId: str):
+def getNetworkApplianceTrafficShapingUplinkBandwidth(networkId:str):
     # Code
 ````
 
@@ -1636,7 +1636,7 @@ meraki appliance getNetworkApplianceTrafficShapingUplinkSelection --networkId 'S
 
 ##### Method Code:
 ```python
-def getNetworkApplianceTrafficShapingUplinkSelection(networkId: str):
+def getNetworkApplianceTrafficShapingUplinkSelection(networkId:str):
     # Code
 ````
 
@@ -1670,7 +1670,7 @@ meraki appliance getNetworkApplianceUplinksUsageHistory --networkId 'STRING' --k
 
 ##### Method Code:
 ```python
-def getNetworkApplianceUplinksUsageHistory(networkId: str, **kwargs):
+def getNetworkApplianceUplinksUsageHistory(networkId:str, **kwargs):
     # Code
 ````
 
@@ -1696,7 +1696,7 @@ meraki appliance getNetworkApplianceVlan --networkId 'STRING' --vlanId 'STRING'
 
 ##### Method Code:
 ```python
-def getNetworkApplianceVlan(networkId: str, vlanId: str):
+def getNetworkApplianceVlan(networkId:str, vlanId:str):
     # Code
 ````
 
@@ -1721,7 +1721,7 @@ meraki appliance getNetworkApplianceVlans --networkId 'STRING'
 
 ##### Method Code:
 ```python
-def getNetworkApplianceVlans(networkId: str):
+def getNetworkApplianceVlans(networkId:str):
     # Code
 ````
 
@@ -1746,7 +1746,7 @@ meraki appliance getNetworkApplianceVlansSettings --networkId 'STRING'
 
 ##### Method Code:
 ```python
-def getNetworkApplianceVlansSettings(networkId: str):
+def getNetworkApplianceVlansSettings(networkId:str):
     # Code
 ````
 
@@ -1771,7 +1771,7 @@ meraki appliance getNetworkApplianceVpnBgp --networkId 'STRING'
 
 ##### Method Code:
 ```python
-def getNetworkApplianceVpnBgp(networkId: str):
+def getNetworkApplianceVpnBgp(networkId:str):
     # Code
 ````
 
@@ -1796,7 +1796,7 @@ meraki appliance getNetworkApplianceVpnSiteToSiteVpn --networkId 'STRING'
 
 ##### Method Code:
 ```python
-def getNetworkApplianceVpnSiteToSiteVpn(networkId: str):
+def getNetworkApplianceVpnSiteToSiteVpn(networkId:str):
     # Code
 ````
 
@@ -1821,7 +1821,7 @@ meraki appliance getNetworkApplianceWarmSpare --networkId 'STRING'
 
 ##### Method Code:
 ```python
-def getNetworkApplianceWarmSpare(networkId: str):
+def getNetworkApplianceWarmSpare(networkId:str):
     # Code
 ````
 
@@ -1860,7 +1860,7 @@ meraki appliance getOrganizationApplianceSecurityEvents --organizationId 'STRING
 
 ##### Method Code:
 ```python
-def getOrganizationApplianceSecurityEvents(organizationId: str, total_pages=1, direction='next', **kwargs):
+def getOrganizationApplianceSecurityEvents(organizationId:str, total_pages=1, direction='next', **kwargs):
     # Code
 ````
 
@@ -1885,7 +1885,7 @@ meraki appliance getOrganizationApplianceSecurityIntrusion --organizationId 'STR
 
 ##### Method Code:
 ```python
-def getOrganizationApplianceSecurityIntrusion(organizationId: str):
+def getOrganizationApplianceSecurityIntrusion(organizationId:str):
     # Code
 ````
 
@@ -1923,7 +1923,7 @@ meraki appliance getOrganizationApplianceUplinkStatuses --organizationId 'STRING
 
 ##### Method Code:
 ```python
-def getOrganizationApplianceUplinkStatuses(organizationId: str, total_pages=1, direction='next', **kwargs):
+def getOrganizationApplianceUplinkStatuses(organizationId:str, total_pages=1, direction='next', **kwargs):
     # Code
 ````
 
@@ -1962,7 +1962,7 @@ meraki appliance getOrganizationApplianceVpnStats --organizationId 'STRING' --kw
 
 ##### Method Code:
 ```python
-def getOrganizationApplianceVpnStats(organizationId: str, total_pages=1, direction='next', **kwargs):
+def getOrganizationApplianceVpnStats(organizationId:str, total_pages=1, direction='next', **kwargs):
     # Code
 ````
 
@@ -1998,7 +1998,7 @@ meraki appliance getOrganizationApplianceVpnStatuses --organizationId 'STRING' -
 
 ##### Method Code:
 ```python
-def getOrganizationApplianceVpnStatuses(organizationId: str, total_pages=1, direction='next', **kwargs):
+def getOrganizationApplianceVpnStatuses(organizationId:str, total_pages=1, direction='next', **kwargs):
     # Code
 ````
 
@@ -2023,7 +2023,7 @@ meraki appliance getOrganizationApplianceVpnThirdPartyVPNPeers --organizationId 
 
 ##### Method Code:
 ```python
-def getOrganizationApplianceVpnThirdPartyVPNPeers(organizationId: str):
+def getOrganizationApplianceVpnThirdPartyVPNPeers(organizationId:str):
     # Code
 ````
 
@@ -2048,7 +2048,7 @@ meraki appliance getOrganizationApplianceVpnVpnFirewallRules --organizationId 'S
 
 ##### Method Code:
 ```python
-def getOrganizationApplianceVpnVpnFirewallRules(organizationId: str):
+def getOrganizationApplianceVpnVpnFirewallRules(organizationId:str):
     # Code
 ````
 
@@ -2073,7 +2073,7 @@ meraki appliance swapNetworkApplianceWarmSpare --networkId 'STRING'
 
 ##### Method Code:
 ```python
-def swapNetworkApplianceWarmSpare(networkId: str):
+def swapNetworkApplianceWarmSpare(networkId:str):
     # Code
 ````
 
@@ -2104,7 +2104,7 @@ meraki appliance updateNetworkApplianceConnectivityMonitoringDestinations --netw
 
 ##### Method Code:
 ```python
-def updateNetworkApplianceConnectivityMonitoringDestinations(networkId: str, **kwargs):
+def updateNetworkApplianceConnectivityMonitoringDestinations(networkId:str, **kwargs):
     # Code
 ````
 
@@ -2138,7 +2138,7 @@ meraki appliance updateNetworkApplianceContentFiltering --networkId 'STRING' --k
 
 ##### Method Code:
 ```python
-def updateNetworkApplianceContentFiltering(networkId: str, **kwargs):
+def updateNetworkApplianceContentFiltering(networkId:str, **kwargs):
     # Code
 ````
 
@@ -2169,7 +2169,7 @@ meraki appliance updateNetworkApplianceFirewallCellularFirewallRules --networkId
 
 ##### Method Code:
 ```python
-def updateNetworkApplianceFirewallCellularFirewallRules(networkId: str, **kwargs):
+def updateNetworkApplianceFirewallCellularFirewallRules(networkId:str, **kwargs):
     # Code
 ````
 
@@ -2202,7 +2202,7 @@ meraki appliance updateNetworkApplianceFirewallFirewalledService --networkId 'ST
 
 ##### Method Code:
 ```python
-def updateNetworkApplianceFirewallFirewalledService(networkId: str, service: str, access: str, **kwargs):
+def updateNetworkApplianceFirewallFirewalledService(networkId:str, service:str, access:str, **kwargs):
     # Code
 ````
 
@@ -2234,7 +2234,7 @@ meraki appliance updateNetworkApplianceFirewallInboundFirewallRules --networkId 
 
 ##### Method Code:
 ```python
-def updateNetworkApplianceFirewallInboundFirewallRules(networkId: str, **kwargs):
+def updateNetworkApplianceFirewallInboundFirewallRules(networkId:str, **kwargs):
     # Code
 ````
 
@@ -2266,7 +2266,7 @@ meraki appliance updateNetworkApplianceFirewallL3FirewallRules --networkId 'STRI
 
 ##### Method Code:
 ```python
-def updateNetworkApplianceFirewallL3FirewallRules(networkId: str, **kwargs):
+def updateNetworkApplianceFirewallL3FirewallRules(networkId:str, **kwargs):
     # Code
 ````
 
@@ -2297,7 +2297,7 @@ meraki appliance updateNetworkApplianceFirewallL7FirewallRules --networkId 'STRI
 
 ##### Method Code:
 ```python
-def updateNetworkApplianceFirewallL7FirewallRules(networkId: str, **kwargs):
+def updateNetworkApplianceFirewallL7FirewallRules(networkId:str, **kwargs):
     # Code
 ````
 
@@ -2323,7 +2323,7 @@ meraki appliance updateNetworkApplianceFirewallOneToManyNatRules --networkId 'ST
 
 ##### Method Code:
 ```python
-def updateNetworkApplianceFirewallOneToManyNatRules(networkId: str, rules: list):
+def updateNetworkApplianceFirewallOneToManyNatRules(networkId:str, rules:list):
     # Code
 ````
 
@@ -2349,7 +2349,7 @@ meraki appliance updateNetworkApplianceFirewallOneToOneNatRules --networkId 'STR
 
 ##### Method Code:
 ```python
-def updateNetworkApplianceFirewallOneToOneNatRules(networkId: str, rules: list):
+def updateNetworkApplianceFirewallOneToOneNatRules(networkId:str, rules:list):
     # Code
 ````
 
@@ -2375,7 +2375,7 @@ meraki appliance updateNetworkApplianceFirewallPortForwardingRules --networkId '
 
 ##### Method Code:
 ```python
-def updateNetworkApplianceFirewallPortForwardingRules(networkId: str, rules: list):
+def updateNetworkApplianceFirewallPortForwardingRules(networkId:str, rules:list):
     # Code
 ````
 
@@ -2412,7 +2412,7 @@ meraki appliance updateNetworkAppliancePort --networkId 'STRING' --portId 'STRIN
 
 ##### Method Code:
 ```python
-def updateNetworkAppliancePort(networkId: str, portId: str, **kwargs):
+def updateNetworkAppliancePort(networkId:str, portId:str, **kwargs):
     # Code
 ````
 
@@ -2445,7 +2445,7 @@ meraki appliance updateNetworkApplianceSecurityIntrusion --networkId 'STRING' --
 
 ##### Method Code:
 ```python
-def updateNetworkApplianceSecurityIntrusion(networkId: str, **kwargs):
+def updateNetworkApplianceSecurityIntrusion(networkId:str, **kwargs):
     # Code
 ````
 
@@ -2478,7 +2478,7 @@ meraki appliance updateNetworkApplianceSecurityMalware --networkId 'STRING' --mo
 
 ##### Method Code:
 ```python
-def updateNetworkApplianceSecurityMalware(networkId: str, mode: str, **kwargs):
+def updateNetworkApplianceSecurityMalware(networkId:str, mode:str, **kwargs):
     # Code
 ````
 
@@ -2510,7 +2510,7 @@ meraki appliance updateNetworkApplianceSingleLan --networkId 'STRING' --kwargs '
 
 ##### Method Code:
 ```python
-def updateNetworkApplianceSingleLan(networkId: str, **kwargs):
+def updateNetworkApplianceSingleLan(networkId:str, **kwargs):
     # Code
 ````
 
@@ -2547,7 +2547,7 @@ meraki appliance updateNetworkApplianceStaticRoute --networkId 'STRING' --static
 
 ##### Method Code:
 ```python
-def updateNetworkApplianceStaticRoute(networkId: str, staticRouteId: str, **kwargs):
+def updateNetworkApplianceStaticRoute(networkId:str, staticRouteId:str, **kwargs):
     # Code
 ````
 
@@ -2578,7 +2578,7 @@ meraki appliance updateNetworkApplianceTrafficShaping --networkId 'STRING' --kwa
 
 ##### Method Code:
 ```python
-def updateNetworkApplianceTrafficShaping(networkId: str, **kwargs):
+def updateNetworkApplianceTrafficShaping(networkId:str, **kwargs):
     # Code
 ````
 
@@ -2613,7 +2613,7 @@ meraki appliance updateNetworkApplianceTrafficShapingCustomPerformanceClass --ne
 
 ##### Method Code:
 ```python
-def updateNetworkApplianceTrafficShapingCustomPerformanceClass(networkId: str, customPerformanceClassId: str, **kwargs):
+def updateNetworkApplianceTrafficShapingCustomPerformanceClass(networkId:str, customPerformanceClassId:str, **kwargs):
     # Code
 ````
 
@@ -2648,7 +2648,7 @@ meraki appliance updateNetworkApplianceTrafficShapingRules --networkId 'STRING' 
 
 ##### Method Code:
 ```python
-def updateNetworkApplianceTrafficShapingRules(networkId: str, **kwargs):
+def updateNetworkApplianceTrafficShapingRules(networkId:str, **kwargs):
     # Code
 ````
 
@@ -2679,7 +2679,7 @@ meraki appliance updateNetworkApplianceTrafficShapingUplinkBandwidth --networkId
 
 ##### Method Code:
 ```python
-def updateNetworkApplianceTrafficShapingUplinkBandwidth(networkId: str, **kwargs):
+def updateNetworkApplianceTrafficShapingUplinkBandwidth(networkId:str, **kwargs):
     # Code
 ````
 
@@ -2714,7 +2714,7 @@ meraki appliance updateNetworkApplianceTrafficShapingUplinkSelection --networkId
 
 ##### Method Code:
 ```python
-def updateNetworkApplianceTrafficShapingUplinkSelection(networkId: str, **kwargs):
+def updateNetworkApplianceTrafficShapingUplinkSelection(networkId:str, **kwargs):
     # Code
 ````
 
@@ -2760,7 +2760,7 @@ meraki appliance updateNetworkApplianceVlan --networkId 'STRING' --vlanId 'STRIN
 
 ##### Method Code:
 ```python
-def updateNetworkApplianceVlan(networkId: str, vlanId: str, **kwargs):
+def updateNetworkApplianceVlan(networkId:str, vlanId:str, **kwargs):
     # Code
 ````
 
@@ -2791,7 +2791,7 @@ meraki appliance updateNetworkApplianceVlansSettings --networkId 'STRING' --kwar
 
 ##### Method Code:
 ```python
-def updateNetworkApplianceVlansSettings(networkId: str, **kwargs):
+def updateNetworkApplianceVlansSettings(networkId:str, **kwargs):
     # Code
 ````
 
@@ -2825,7 +2825,7 @@ meraki appliance updateNetworkApplianceVpnBgp --networkId 'STRING' --enabled --k
 
 ##### Method Code:
 ```python
-def updateNetworkApplianceVpnBgp(networkId: str, enabled: bool, **kwargs):
+def updateNetworkApplianceVpnBgp(networkId:str, enabled:bool, **kwargs):
     # Code
 ````
 
@@ -2858,7 +2858,7 @@ meraki appliance updateNetworkApplianceVpnSiteToSiteVpn --networkId 'STRING' --m
 
 ##### Method Code:
 ```python
-def updateNetworkApplianceVpnSiteToSiteVpn(networkId: str, mode: str, **kwargs):
+def updateNetworkApplianceVpnSiteToSiteVpn(networkId:str, mode:str, **kwargs):
     # Code
 ````
 
@@ -2893,7 +2893,7 @@ meraki appliance updateNetworkApplianceWarmSpare --networkId 'STRING' --enabled 
 
 ##### Method Code:
 ```python
-def updateNetworkApplianceWarmSpare(networkId: str, enabled: bool, **kwargs):
+def updateNetworkApplianceWarmSpare(networkId:str, enabled:bool, **kwargs):
     # Code
 ````
 
@@ -2919,7 +2919,7 @@ meraki appliance updateOrganizationApplianceSecurityIntrusion --organizationId '
 
 ##### Method Code:
 ```python
-def updateOrganizationApplianceSecurityIntrusion(organizationId: str, allowedRules: list):
+def updateOrganizationApplianceSecurityIntrusion(organizationId:str, allowedRules:list):
     # Code
 ````
 
@@ -2945,7 +2945,7 @@ meraki appliance updateOrganizationApplianceVpnThirdPartyVPNPeers --organization
 
 ##### Method Code:
 ```python
-def updateOrganizationApplianceVpnThirdPartyVPNPeers(organizationId: str, peers: list):
+def updateOrganizationApplianceVpnThirdPartyVPNPeers(organizationId:str, peers:list):
     # Code
 ````
 
@@ -2977,7 +2977,7 @@ meraki appliance updateOrganizationApplianceVpnVpnFirewallRules --organizationId
 
 ##### Method Code:
 ```python
-def updateOrganizationApplianceVpnVpnFirewallRules(organizationId: str, **kwargs):
+def updateOrganizationApplianceVpnVpnFirewallRules(organizationId:str, **kwargs):
     # Code
 ````
 
@@ -3013,7 +3013,7 @@ meraki batch appliance createNetworkApplianceTrafficShapingCustomPerformanceClas
 
 ##### Method Code:
 ```python
-def createNetworkApplianceTrafficShapingCustomPerformanceClass(networkId: str, name: str, **kwargs):
+def createNetworkApplianceTrafficShapingCustomPerformanceClass(networkId:str, name:str, **kwargs):
     # Code
 ````
 
@@ -3048,7 +3048,7 @@ meraki batch appliance createNetworkApplianceVlan --networkId 'STRING' --id 'STR
 
 ##### Method Code:
 ```python
-def createNetworkApplianceVlan(networkId: str, id: str, name: str, **kwargs):
+def createNetworkApplianceVlan(networkId:str, id:str, name:str, **kwargs):
     # Code
 ````
 
@@ -3074,7 +3074,7 @@ meraki batch appliance deleteNetworkApplianceTrafficShapingCustomPerformanceClas
 
 ##### Method Code:
 ```python
-def deleteNetworkApplianceTrafficShapingCustomPerformanceClass(networkId: str, customPerformanceClassId: str):
+def deleteNetworkApplianceTrafficShapingCustomPerformanceClass(networkId:str, customPerformanceClassId:str):
     # Code
 ````
 
@@ -3100,7 +3100,7 @@ meraki batch appliance deleteNetworkApplianceVlan --networkId 'STRING' --vlanId 
 
 ##### Method Code:
 ```python
-def deleteNetworkApplianceVlan(networkId: str, vlanId: str):
+def deleteNetworkApplianceVlan(networkId:str, vlanId:str):
     # Code
 ````
 
@@ -3125,7 +3125,7 @@ meraki batch appliance swapNetworkApplianceWarmSpare --networkId 'STRING'
 
 ##### Method Code:
 ```python
-def swapNetworkApplianceWarmSpare(networkId: str):
+def swapNetworkApplianceWarmSpare(networkId:str):
     # Code
 ````
 
@@ -3156,7 +3156,7 @@ meraki batch appliance updateNetworkApplianceConnectivityMonitoringDestinations 
 
 ##### Method Code:
 ```python
-def updateNetworkApplianceConnectivityMonitoringDestinations(networkId: str, **kwargs):
+def updateNetworkApplianceConnectivityMonitoringDestinations(networkId:str, **kwargs):
     # Code
 ````
 
@@ -3187,7 +3187,7 @@ meraki batch appliance updateNetworkApplianceFirewallL7FirewallRules --networkId
 
 ##### Method Code:
 ```python
-def updateNetworkApplianceFirewallL7FirewallRules(networkId: str, **kwargs):
+def updateNetworkApplianceFirewallL7FirewallRules(networkId:str, **kwargs):
     # Code
 ````
 
@@ -3224,7 +3224,7 @@ meraki batch appliance updateNetworkAppliancePort --networkId 'STRING' --portId 
 
 ##### Method Code:
 ```python
-def updateNetworkAppliancePort(networkId: str, portId: str, **kwargs):
+def updateNetworkAppliancePort(networkId:str, portId:str, **kwargs):
     # Code
 ````
 
@@ -3256,7 +3256,7 @@ meraki batch appliance updateNetworkApplianceSingleLan --networkId 'STRING' --kw
 
 ##### Method Code:
 ```python
-def updateNetworkApplianceSingleLan(networkId: str, **kwargs):
+def updateNetworkApplianceSingleLan(networkId:str, **kwargs):
     # Code
 ````
 
@@ -3291,7 +3291,7 @@ meraki batch appliance updateNetworkApplianceTrafficShapingCustomPerformanceClas
 
 ##### Method Code:
 ```python
-def updateNetworkApplianceTrafficShapingCustomPerformanceClass(networkId: str, customPerformanceClassId: str, **kwargs):
+def updateNetworkApplianceTrafficShapingCustomPerformanceClass(networkId:str, customPerformanceClassId:str, **kwargs):
     # Code
 ````
 
@@ -3326,7 +3326,7 @@ meraki batch appliance updateNetworkApplianceTrafficShapingRules --networkId 'ST
 
 ##### Method Code:
 ```python
-def updateNetworkApplianceTrafficShapingRules(networkId: str, **kwargs):
+def updateNetworkApplianceTrafficShapingRules(networkId:str, **kwargs):
     # Code
 ````
 
@@ -3357,7 +3357,7 @@ meraki batch appliance updateNetworkApplianceTrafficShapingUplinkBandwidth --net
 
 ##### Method Code:
 ```python
-def updateNetworkApplianceTrafficShapingUplinkBandwidth(networkId: str, **kwargs):
+def updateNetworkApplianceTrafficShapingUplinkBandwidth(networkId:str, **kwargs):
     # Code
 ````
 
@@ -3392,7 +3392,7 @@ meraki batch appliance updateNetworkApplianceTrafficShapingUplinkSelection --net
 
 ##### Method Code:
 ```python
-def updateNetworkApplianceTrafficShapingUplinkSelection(networkId: str, **kwargs):
+def updateNetworkApplianceTrafficShapingUplinkSelection(networkId:str, **kwargs):
     # Code
 ````
 
@@ -3438,7 +3438,7 @@ meraki batch appliance updateNetworkApplianceVlan --networkId 'STRING' --vlanId 
 
 ##### Method Code:
 ```python
-def updateNetworkApplianceVlan(networkId: str, vlanId: str, **kwargs):
+def updateNetworkApplianceVlan(networkId:str, vlanId:str, **kwargs):
     # Code
 ````
 
@@ -3469,7 +3469,7 @@ meraki batch appliance updateNetworkApplianceVlansSettings --networkId 'STRING' 
 
 ##### Method Code:
 ```python
-def updateNetworkApplianceVlansSettings(networkId: str, **kwargs):
+def updateNetworkApplianceVlansSettings(networkId:str, **kwargs):
     # Code
 ````
 
@@ -3503,7 +3503,7 @@ meraki batch appliance updateNetworkApplianceVpnBgp --networkId 'STRING' --enabl
 
 ##### Method Code:
 ```python
-def updateNetworkApplianceVpnBgp(networkId: str, enabled: bool, **kwargs):
+def updateNetworkApplianceVpnBgp(networkId:str, enabled:bool, **kwargs):
     # Code
 ````
 
@@ -3536,7 +3536,7 @@ meraki batch appliance updateNetworkApplianceVpnSiteToSiteVpn --networkId 'STRIN
 
 ##### Method Code:
 ```python
-def updateNetworkApplianceVpnSiteToSiteVpn(networkId: str, mode: str, **kwargs):
+def updateNetworkApplianceVpnSiteToSiteVpn(networkId:str, mode:str, **kwargs):
     # Code
 ````
 
@@ -3571,7 +3571,7 @@ meraki batch appliance updateNetworkApplianceWarmSpare --networkId 'STRING' --en
 
 ##### Method Code:
 ```python
-def updateNetworkApplianceWarmSpare(networkId: str, enabled: bool, **kwargs):
+def updateNetworkApplianceWarmSpare(networkId:str, enabled:bool, **kwargs):
     # Code
 ````
 
@@ -3609,7 +3609,7 @@ meraki batch camera updateDeviceCameraQualityAndRetention --serial 'STRING' --kw
 
 ##### Method Code:
 ```python
-def updateDeviceCameraQualityAndRetention(serial: str, **kwargs):
+def updateDeviceCameraQualityAndRetention(serial:str, **kwargs):
     # Code
 ````
 
@@ -3643,7 +3643,7 @@ meraki batch camera updateDeviceCameraSense --serial 'STRING' --kwargs '{"key1":
 
 ##### Method Code:
 ```python
-def updateDeviceCameraSense(serial: str, **kwargs):
+def updateDeviceCameraSense(serial:str, **kwargs):
     # Code
 ````
 
@@ -3674,7 +3674,7 @@ meraki batch camera updateDeviceCameraVideoSettings --serial 'STRING' --kwargs '
 
 ##### Method Code:
 ```python
-def updateDeviceCameraVideoSettings(serial: str, **kwargs):
+def updateDeviceCameraVideoSettings(serial:str, **kwargs):
     # Code
 ````
 
@@ -3700,7 +3700,7 @@ meraki batch camera updateDeviceCameraWirelessProfiles --serial 'STRING' --ids J
 
 ##### Method Code:
 ```python
-def updateDeviceCameraWirelessProfiles(serial: str, ids: dict):
+def updateDeviceCameraWirelessProfiles(serial:str, ids:dict):
     # Code
 ````
 
@@ -3733,7 +3733,7 @@ meraki batch cellularGateway updateDeviceCellularGatewayLan --serial 'STRING' --
 
 ##### Method Code:
 ```python
-def updateDeviceCellularGatewayLan(serial: str, **kwargs):
+def updateDeviceCellularGatewayLan(serial:str, **kwargs):
     # Code
 ````
 
@@ -3764,7 +3764,7 @@ meraki batch cellularGateway updateDeviceCellularGatewayPortForwardingRules --se
 
 ##### Method Code:
 ```python
-def updateDeviceCellularGatewayPortForwardingRules(serial: str, **kwargs):
+def updateDeviceCellularGatewayPortForwardingRules(serial:str, **kwargs):
     # Code
 ````
 
@@ -3795,7 +3795,7 @@ meraki batch cellularGateway updateNetworkCellularGatewayConnectivityMonitoringD
 
 ##### Method Code:
 ```python
-def updateNetworkCellularGatewayConnectivityMonitoringDestinations(networkId: str, **kwargs):
+def updateNetworkCellularGatewayConnectivityMonitoringDestinations(networkId:str, **kwargs):
     # Code
 ````
 
@@ -3828,7 +3828,7 @@ meraki batch cellularGateway updateNetworkCellularGatewayDhcp --networkId 'STRIN
 
 ##### Method Code:
 ```python
-def updateNetworkCellularGatewayDhcp(networkId: str, **kwargs):
+def updateNetworkCellularGatewayDhcp(networkId:str, **kwargs):
     # Code
 ````
 
@@ -3860,7 +3860,7 @@ meraki batch cellularGateway updateNetworkCellularGatewaySubnetPool --networkId 
 
 ##### Method Code:
 ```python
-def updateNetworkCellularGatewaySubnetPool(networkId: str, **kwargs):
+def updateNetworkCellularGatewaySubnetPool(networkId:str, **kwargs):
     # Code
 ````
 
@@ -3891,7 +3891,7 @@ meraki batch cellularGateway updateNetworkCellularGatewayUplink --networkId 'STR
 
 ##### Method Code:
 ```python
-def updateNetworkCellularGatewayUplink(networkId: str, **kwargs):
+def updateNetworkCellularGatewayUplink(networkId:str, **kwargs):
     # Code
 ````
 
@@ -3931,7 +3931,7 @@ meraki batch devices updateDevice --serial 'STRING' --kwargs '{"key1": "value1",
 
 ##### Method Code:
 ```python
-def updateDevice(serial: str, **kwargs):
+def updateDevice(serial:str, **kwargs):
     # Code
 ````
 
@@ -3963,7 +3963,7 @@ meraki batch devices updateDeviceManagementInterface --serial 'STRING' --kwargs 
 
 ##### Method Code:
 ```python
-def updateDeviceManagementInterface(serial: str, **kwargs):
+def updateDeviceManagementInterface(serial:str, **kwargs):
     # Code
 ````
 
@@ -3997,7 +3997,7 @@ meraki batch insight createOrganizationInsightMonitoredMediaServer --organizatio
 
 ##### Method Code:
 ```python
-def createOrganizationInsightMonitoredMediaServer(organizationId: str, name: str, address: str, **kwargs):
+def createOrganizationInsightMonitoredMediaServer(organizationId:str, name:str, address:str, **kwargs):
     # Code
 ````
 
@@ -4023,7 +4023,7 @@ meraki batch insight deleteOrganizationInsightMonitoredMediaServer --organizatio
 
 ##### Method Code:
 ```python
-def deleteOrganizationInsightMonitoredMediaServer(organizationId: str, monitoredMediaServerId: str):
+def deleteOrganizationInsightMonitoredMediaServer(organizationId:str, monitoredMediaServerId:str):
     # Code
 ````
 
@@ -4057,7 +4057,7 @@ meraki batch insight updateOrganizationInsightMonitoredMediaServer --organizatio
 
 ##### Method Code:
 ```python
-def updateOrganizationInsightMonitoredMediaServer(organizationId: str, monitoredMediaServerId: str, **kwargs):
+def updateOrganizationInsightMonitoredMediaServer(organizationId:str, monitoredMediaServerId:str, **kwargs):
     # Code
 ````
 
@@ -4090,7 +4090,7 @@ meraki batch networks bindNetwork --networkId 'STRING' --configTemplateId 'STRIN
 
 ##### Method Code:
 ```python
-def bindNetwork(networkId: str, configTemplateId: str, **kwargs):
+def bindNetwork(networkId:str, configTemplateId:str, **kwargs):
     # Code
 ````
 
@@ -4116,7 +4116,7 @@ meraki batch networks claimNetworkDevices --networkId 'STRING' --serials ITEM
 
 ##### Method Code:
 ```python
-def claimNetworkDevices(networkId: str, serials: list):
+def claimNetworkDevices(networkId:str, serials:list):
     # Code
 ````
 
@@ -4150,7 +4150,7 @@ meraki batch networks createNetworkFirmwareUpgradesRollback --networkId 'STRING'
 
 ##### Method Code:
 ```python
-def createNetworkFirmwareUpgradesRollback(networkId: str, reasons: list, **kwargs):
+def createNetworkFirmwareUpgradesRollback(networkId:str, reasons:list, **kwargs):
     # Code
 ````
 
@@ -4191,7 +4191,7 @@ meraki batch networks createNetworkGroupPolicy --networkId 'STRING' --name 'STRI
 
 ##### Method Code:
 ```python
-def createNetworkGroupPolicy(networkId: str, name: str, **kwargs):
+def createNetworkGroupPolicy(networkId:str, name:str, **kwargs):
     # Code
 ````
 
@@ -4227,7 +4227,7 @@ meraki batch networks createNetworkMerakiAuthUser --networkId 'STRING' --email '
 
 ##### Method Code:
 ```python
-def createNetworkMerakiAuthUser(networkId: str, email: str, name: str, password: str, authorizations: list, **kwargs):
+def createNetworkMerakiAuthUser(networkId:str, email:str, name:str, password:str, authorizations:list, **kwargs):
     # Code
 ````
 
@@ -4255,7 +4255,7 @@ meraki batch networks createNetworkMqttBroker --networkId 'STRING' --name 'STRIN
 
 ##### Method Code:
 ```python
-def createNetworkMqttBroker(networkId: str, name: str, host: str, port: int):
+def createNetworkMqttBroker(networkId:str, name:str, host:str, port:int):
     # Code
 ````
 
@@ -4280,7 +4280,7 @@ meraki batch networks deleteNetwork --networkId 'STRING'
 
 ##### Method Code:
 ```python
-def deleteNetwork(networkId: str):
+def deleteNetwork(networkId:str):
     # Code
 ````
 
@@ -4306,7 +4306,7 @@ meraki batch networks deleteNetworkFloorPlan --networkId 'STRING' --floorPlanId 
 
 ##### Method Code:
 ```python
-def deleteNetworkFloorPlan(networkId: str, floorPlanId: str):
+def deleteNetworkFloorPlan(networkId:str, floorPlanId:str):
     # Code
 ````
 
@@ -4332,7 +4332,7 @@ meraki batch networks deleteNetworkGroupPolicy --networkId 'STRING' --groupPolic
 
 ##### Method Code:
 ```python
-def deleteNetworkGroupPolicy(networkId: str, groupPolicyId: str):
+def deleteNetworkGroupPolicy(networkId:str, groupPolicyId:str):
     # Code
 ````
 
@@ -4358,7 +4358,7 @@ meraki batch networks deleteNetworkMerakiAuthUser --networkId 'STRING' --merakiA
 
 ##### Method Code:
 ```python
-def deleteNetworkMerakiAuthUser(networkId: str, merakiAuthUserId: str):
+def deleteNetworkMerakiAuthUser(networkId:str, merakiAuthUserId:str):
     # Code
 ````
 
@@ -4384,7 +4384,7 @@ meraki batch networks deleteNetworkMqttBroker --networkId 'STRING' --mqttBrokerI
 
 ##### Method Code:
 ```python
-def deleteNetworkMqttBroker(networkId: str, mqttBrokerId: str):
+def deleteNetworkMqttBroker(networkId:str, mqttBrokerId:str):
     # Code
 ````
 
@@ -4419,7 +4419,7 @@ meraki batch networks provisionNetworkClients --networkId 'STRING' --clients ITE
 
 ##### Method Code:
 ```python
-def provisionNetworkClients(networkId: str, clients: list, devicePolicy: str, **kwargs):
+def provisionNetworkClients(networkId:str, clients:list, devicePolicy:str, **kwargs):
     # Code
 ````
 
@@ -4445,7 +4445,7 @@ meraki batch networks removeNetworkDevices --networkId 'STRING' --serial 'STRING
 
 ##### Method Code:
 ```python
-def removeNetworkDevices(networkId: str, serial: str):
+def removeNetworkDevices(networkId:str, serial:str):
     # Code
 ````
 
@@ -4470,7 +4470,7 @@ meraki batch networks splitNetwork --networkId 'STRING'
 
 ##### Method Code:
 ```python
-def splitNetwork(networkId: str):
+def splitNetwork(networkId:str):
     # Code
 ````
 
@@ -4495,7 +4495,7 @@ meraki batch networks unbindNetwork --networkId 'STRING'
 
 ##### Method Code:
 ```python
-def unbindNetwork(networkId: str):
+def unbindNetwork(networkId:str):
     # Code
 ````
 
@@ -4530,7 +4530,7 @@ meraki batch networks updateNetwork --networkId 'STRING' --kwargs '{"key1": "val
 
 ##### Method Code:
 ```python
-def updateNetwork(networkId: str, **kwargs):
+def updateNetwork(networkId:str, **kwargs):
     # Code
 ````
 
@@ -4563,7 +4563,7 @@ meraki batch networks updateNetworkFirmwareUpgrades --networkId 'STRING' --kwarg
 
 ##### Method Code:
 ```python
-def updateNetworkFirmwareUpgrades(networkId: str, **kwargs):
+def updateNetworkFirmwareUpgrades(networkId:str, **kwargs):
     # Code
 ````
 
@@ -4601,7 +4601,7 @@ meraki batch networks updateNetworkFloorPlan --networkId 'STRING' --floorPlanId 
 
 ##### Method Code:
 ```python
-def updateNetworkFloorPlan(networkId: str, floorPlanId: str, **kwargs):
+def updateNetworkFloorPlan(networkId:str, floorPlanId:str, **kwargs):
     # Code
 ````
 
@@ -4643,7 +4643,7 @@ meraki batch networks updateNetworkGroupPolicy --networkId 'STRING' --groupPolic
 
 ##### Method Code:
 ```python
-def updateNetworkGroupPolicy(networkId: str, groupPolicyId: str, **kwargs):
+def updateNetworkGroupPolicy(networkId:str, groupPolicyId:str, **kwargs):
     # Code
 ````
 
@@ -4678,7 +4678,7 @@ meraki batch networks updateNetworkMerakiAuthUser --networkId 'STRING' --merakiA
 
 ##### Method Code:
 ```python
-def updateNetworkMerakiAuthUser(networkId: str, merakiAuthUserId: str, **kwargs):
+def updateNetworkMerakiAuthUser(networkId:str, merakiAuthUserId:str, **kwargs):
     # Code
 ````
 
@@ -4712,7 +4712,7 @@ meraki batch networks updateNetworkMqttBroker --networkId 'STRING' --mqttBrokerI
 
 ##### Method Code:
 ```python
-def updateNetworkMqttBroker(networkId: str, mqttBrokerId: str, **kwargs):
+def updateNetworkMqttBroker(networkId:str, mqttBrokerId:str, **kwargs):
     # Code
 ````
 
@@ -4745,7 +4745,7 @@ meraki batch networks updateNetworkSettings --networkId 'STRING' --kwargs '{"key
 
 ##### Method Code:
 ```python
-def updateNetworkSettings(networkId: str, **kwargs):
+def updateNetworkSettings(networkId:str, **kwargs):
     # Code
 ````
 
@@ -4774,7 +4774,7 @@ meraki batch organizations assignOrganizationLicensesSeats --organizationId 'STR
 
 ##### Method Code:
 ```python
-def assignOrganizationLicensesSeats(organizationId: str, licenseId: str, networkId: str, seatCount: int):
+def assignOrganizationLicensesSeats(organizationId:str, licenseId:str, networkId:str, seatCount:int):
     # Code
 ````
 
@@ -4807,7 +4807,7 @@ meraki batch organizations combineOrganizationNetworks --organizationId 'STRING'
 
 ##### Method Code:
 ```python
-def combineOrganizationNetworks(organizationId: str, name: str, networkIds: list, **kwargs):
+def combineOrganizationNetworks(organizationId:str, name:str, networkIds:list, **kwargs):
     # Code
 ````
 
@@ -4841,7 +4841,7 @@ meraki batch organizations createOrganizationAdaptivePolicyAcl --organizationId 
 
 ##### Method Code:
 ```python
-def createOrganizationAdaptivePolicyAcl(organizationId: str, name: str, rules: list, ipVersion: str, **kwargs):
+def createOrganizationAdaptivePolicyAcl(organizationId:str, name:str, rules:list, ipVersion:str, **kwargs):
     # Code
 ````
 
@@ -4874,7 +4874,7 @@ meraki batch organizations createOrganizationConfigTemplate --organizationId 'ST
 
 ##### Method Code:
 ```python
-def createOrganizationConfigTemplate(organizationId: str, name: str, **kwargs):
+def createOrganizationConfigTemplate(organizationId:str, name:str, **kwargs):
     # Code
 ````
 
@@ -4910,7 +4910,7 @@ meraki batch organizations createOrganizationNetwork --organizationId 'STRING' -
 
 ##### Method Code:
 ```python
-def createOrganizationNetwork(organizationId: str, name: str, productTypes: list, **kwargs):
+def createOrganizationNetwork(organizationId:str, name:str, productTypes:list, **kwargs):
     # Code
 ````
 
@@ -4942,7 +4942,7 @@ meraki batch organizations createOrganizationSamlIdp --organizationId 'STRING' -
 
 ##### Method Code:
 ```python
-def createOrganizationSamlIdp(organizationId: str, x509certSha1Fingerprint: str, **kwargs):
+def createOrganizationSamlIdp(organizationId:str, x509certSha1Fingerprint:str, **kwargs):
     # Code
 ````
 
@@ -4968,7 +4968,7 @@ meraki batch organizations deleteOrganizationAdaptivePolicyAcl --organizationId 
 
 ##### Method Code:
 ```python
-def deleteOrganizationAdaptivePolicyAcl(organizationId: str, id: str):
+def deleteOrganizationAdaptivePolicyAcl(organizationId:str, id:str):
     # Code
 ````
 
@@ -4994,7 +4994,7 @@ meraki batch organizations deleteOrganizationSamlIdp --organizationId 'STRING' -
 
 ##### Method Code:
 ```python
-def deleteOrganizationSamlIdp(organizationId: str, idpId: str):
+def deleteOrganizationSamlIdp(organizationId:str, idpId:str):
     # Code
 ````
 
@@ -5021,7 +5021,7 @@ meraki batch organizations moveOrganizationLicenses --organizationId 'STRING' --
 
 ##### Method Code:
 ```python
-def moveOrganizationLicenses(organizationId: str, destOrganizationId: str, licenseIds: list):
+def moveOrganizationLicenses(organizationId:str, destOrganizationId:str, licenseIds:list):
     # Code
 ````
 
@@ -5049,7 +5049,7 @@ meraki batch organizations moveOrganizationLicensesSeats --organizationId 'STRIN
 
 ##### Method Code:
 ```python
-def moveOrganizationLicensesSeats(organizationId: str, destOrganizationId: str, licenseId: str, seatCount: int):
+def moveOrganizationLicensesSeats(organizationId:str, destOrganizationId:str, licenseId:str, seatCount:int):
     # Code
 ````
 
@@ -5076,7 +5076,7 @@ meraki batch organizations renewOrganizationLicensesSeats --organizationId 'STRI
 
 ##### Method Code:
 ```python
-def renewOrganizationLicensesSeats(organizationId: str, licenseIdToRenew: str, unusedLicenseId: str):
+def renewOrganizationLicensesSeats(organizationId:str, licenseIdToRenew:str, unusedLicenseId:str):
     # Code
 ````
 
@@ -5111,7 +5111,7 @@ meraki batch organizations updateOrganizationAdaptivePolicyAcl --organizationId 
 
 ##### Method Code:
 ```python
-def updateOrganizationAdaptivePolicyAcl(organizationId: str, id: str, **kwargs):
+def updateOrganizationAdaptivePolicyAcl(organizationId:str, id:str, **kwargs):
     # Code
 ````
 
@@ -5142,7 +5142,7 @@ meraki batch organizations updateOrganizationAdaptivePolicySettings --organizati
 
 ##### Method Code:
 ```python
-def updateOrganizationAdaptivePolicySettings(organizationId: str, **kwargs):
+def updateOrganizationAdaptivePolicySettings(organizationId:str, **kwargs):
     # Code
 ````
 
@@ -5175,7 +5175,7 @@ meraki batch organizations updateOrganizationConfigTemplate --organizationId 'ST
 
 ##### Method Code:
 ```python
-def updateOrganizationConfigTemplate(organizationId: str, configTemplateId: str, **kwargs):
+def updateOrganizationConfigTemplate(organizationId:str, configTemplateId:str, **kwargs):
     # Code
 ````
 
@@ -5207,7 +5207,7 @@ meraki batch organizations updateOrganizationLicense --organizationId 'STRING' -
 
 ##### Method Code:
 ```python
-def updateOrganizationLicense(organizationId: str, licenseId: str, **kwargs):
+def updateOrganizationLicense(organizationId:str, licenseId:str, **kwargs):
     # Code
 ````
 
@@ -5249,7 +5249,7 @@ meraki batch organizations updateOrganizationLoginSecurity --organizationId 'STR
 
 ##### Method Code:
 ```python
-def updateOrganizationLoginSecurity(organizationId: str, **kwargs):
+def updateOrganizationLoginSecurity(organizationId:str, **kwargs):
     # Code
 ````
 
@@ -5282,7 +5282,7 @@ meraki batch organizations updateOrganizationSamlIdp --organizationId 'STRING' -
 
 ##### Method Code:
 ```python
-def updateOrganizationSamlIdp(organizationId: str, idpId: str, **kwargs):
+def updateOrganizationSamlIdp(organizationId:str, idpId:str, **kwargs):
     # Code
 ````
 
@@ -5309,7 +5309,7 @@ meraki batch sm deleteNetworkSmUserAccessDevice --networkId 'STRING' --userAcces
 
 ##### Method Code:
 ```python
-def deleteNetworkSmUserAccessDevice(networkId: str, userAccessDeviceId: str):
+def deleteNetworkSmUserAccessDevice(networkId:str, userAccessDeviceId:str):
     # Code
 ````
 
@@ -5337,7 +5337,7 @@ meraki batch switch cloneOrganizationSwitchDevices --organizationId 'STRING' --s
 
 ##### Method Code:
 ```python
-def cloneOrganizationSwitchDevices(organizationId: str, sourceSerial: str, targetSerials: list):
+def cloneOrganizationSwitchDevices(organizationId:str, sourceSerial:str, targetSerials:list):
     # Code
 ````
 
@@ -5374,7 +5374,7 @@ meraki batch switch createDeviceSwitchRoutingInterface --serial 'STRING' --name 
 
 ##### Method Code:
 ```python
-def createDeviceSwitchRoutingInterface(serial: str, name: str, interfaceIp: str, vlanId: int, **kwargs):
+def createDeviceSwitchRoutingInterface(serial:str, name:str, interfaceIp:str, vlanId:int, **kwargs):
     # Code
 ````
 
@@ -5409,7 +5409,7 @@ meraki batch switch createDeviceSwitchRoutingStaticRoute --serial 'STRING' --sub
 
 ##### Method Code:
 ```python
-def createDeviceSwitchRoutingStaticRoute(serial: str, subnet: str, nextHopIp: str, **kwargs):
+def createDeviceSwitchRoutingStaticRoute(serial:str, subnet:str, nextHopIp:str, **kwargs):
     # Code
 ````
 
@@ -5454,7 +5454,7 @@ meraki batch switch createNetworkSwitchAccessPolicy --networkId 'STRING' --name 
 
 ##### Method Code:
 ```python
-def createNetworkSwitchAccessPolicy(networkId: str, name: str, radiusServers: list, radiusTestingEnabled: bool, radiusCoaSupportEnabled: bool, radiusAccountingEnabled: bool, hostMode: str, urlRedirectWalledGardenEnabled: bool, **kwargs):
+def createNetworkSwitchAccessPolicy(networkId:str, name:str, radiusServers:list, radiusTestingEnabled:bool, radiusCoaSupportEnabled:bool, radiusAccountingEnabled:bool, hostMode:str, urlRedirectWalledGardenEnabled:bool, **kwargs):
     # Code
 ````
 
@@ -5486,7 +5486,7 @@ meraki batch switch createNetworkSwitchLinkAggregation --networkId 'STRING' --kw
 
 ##### Method Code:
 ```python
-def createNetworkSwitchLinkAggregation(networkId: str, **kwargs):
+def createNetworkSwitchLinkAggregation(networkId:str, **kwargs):
     # Code
 ````
 
@@ -5523,7 +5523,7 @@ meraki batch switch createNetworkSwitchQosRule --networkId 'STRING' --vlan INT -
 
 ##### Method Code:
 ```python
-def createNetworkSwitchQosRule(networkId: str, vlan: int, **kwargs):
+def createNetworkSwitchQosRule(networkId:str, vlan:int, **kwargs):
     # Code
 ````
 
@@ -5550,7 +5550,7 @@ meraki batch switch createNetworkSwitchRoutingMulticastRendezvousPoint --network
 
 ##### Method Code:
 ```python
-def createNetworkSwitchRoutingMulticastRendezvousPoint(networkId: str, interfaceIp: str, multicastGroup: str):
+def createNetworkSwitchRoutingMulticastRendezvousPoint(networkId:str, interfaceIp:str, multicastGroup:str):
     # Code
 ````
 
@@ -5588,7 +5588,7 @@ meraki batch switch createNetworkSwitchStackRoutingInterface --networkId 'STRING
 
 ##### Method Code:
 ```python
-def createNetworkSwitchStackRoutingInterface(networkId: str, switchStackId: str, name: str, subnet: str, interfaceIp: str, vlanId: int, **kwargs):
+def createNetworkSwitchStackRoutingInterface(networkId:str, switchStackId:str, name:str, subnet:str, interfaceIp:str, vlanId:int, **kwargs):
     # Code
 ````
 
@@ -5624,7 +5624,7 @@ meraki batch switch createNetworkSwitchStackRoutingStaticRoute --networkId 'STRI
 
 ##### Method Code:
 ```python
-def createNetworkSwitchStackRoutingStaticRoute(networkId: str, switchStackId: str, subnet: str, nextHopIp: str, **kwargs):
+def createNetworkSwitchStackRoutingStaticRoute(networkId:str, switchStackId:str, subnet:str, nextHopIp:str, **kwargs):
     # Code
 ````
 
@@ -5650,7 +5650,7 @@ meraki batch switch cycleDeviceSwitchPorts --serial 'STRING' --ports ITEM
 
 ##### Method Code:
 ```python
-def cycleDeviceSwitchPorts(serial: str, ports: list):
+def cycleDeviceSwitchPorts(serial:str, ports:list):
     # Code
 ````
 
@@ -5676,7 +5676,7 @@ meraki batch switch deleteDeviceSwitchRoutingInterface --serial 'STRING' --inter
 
 ##### Method Code:
 ```python
-def deleteDeviceSwitchRoutingInterface(serial: str, interfaceId: str):
+def deleteDeviceSwitchRoutingInterface(serial:str, interfaceId:str):
     # Code
 ````
 
@@ -5702,7 +5702,7 @@ meraki batch switch deleteDeviceSwitchRoutingStaticRoute --serial 'STRING' --sta
 
 ##### Method Code:
 ```python
-def deleteDeviceSwitchRoutingStaticRoute(serial: str, staticRouteId: str):
+def deleteDeviceSwitchRoutingStaticRoute(serial:str, staticRouteId:str):
     # Code
 ````
 
@@ -5728,7 +5728,7 @@ meraki batch switch deleteNetworkSwitchAccessPolicy --networkId 'STRING' --acces
 
 ##### Method Code:
 ```python
-def deleteNetworkSwitchAccessPolicy(networkId: str, accessPolicyNumber: str):
+def deleteNetworkSwitchAccessPolicy(networkId:str, accessPolicyNumber:str):
     # Code
 ````
 
@@ -5754,7 +5754,7 @@ meraki batch switch deleteNetworkSwitchLinkAggregation --networkId 'STRING' --li
 
 ##### Method Code:
 ```python
-def deleteNetworkSwitchLinkAggregation(networkId: str, linkAggregationId: str):
+def deleteNetworkSwitchLinkAggregation(networkId:str, linkAggregationId:str):
     # Code
 ````
 
@@ -5780,7 +5780,7 @@ meraki batch switch deleteNetworkSwitchQosRule --networkId 'STRING' --qosRuleId 
 
 ##### Method Code:
 ```python
-def deleteNetworkSwitchQosRule(networkId: str, qosRuleId: str):
+def deleteNetworkSwitchQosRule(networkId:str, qosRuleId:str):
     # Code
 ````
 
@@ -5806,7 +5806,7 @@ meraki batch switch deleteNetworkSwitchRoutingMulticastRendezvousPoint --network
 
 ##### Method Code:
 ```python
-def deleteNetworkSwitchRoutingMulticastRendezvousPoint(networkId: str, rendezvousPointId: str):
+def deleteNetworkSwitchRoutingMulticastRendezvousPoint(networkId:str, rendezvousPointId:str):
     # Code
 ````
 
@@ -5833,7 +5833,7 @@ meraki batch switch deleteNetworkSwitchStackRoutingInterface --networkId 'STRING
 
 ##### Method Code:
 ```python
-def deleteNetworkSwitchStackRoutingInterface(networkId: str, switchStackId: str, interfaceId: str):
+def deleteNetworkSwitchStackRoutingInterface(networkId:str, switchStackId:str, interfaceId:str):
     # Code
 ````
 
@@ -5860,7 +5860,7 @@ meraki batch switch deleteNetworkSwitchStackRoutingStaticRoute --networkId 'STRI
 
 ##### Method Code:
 ```python
-def deleteNetworkSwitchStackRoutingStaticRoute(networkId: str, switchStackId: str, staticRouteId: str):
+def deleteNetworkSwitchStackRoutingStaticRoute(networkId:str, switchStackId:str, staticRouteId:str):
     # Code
 ````
 
@@ -5912,7 +5912,7 @@ meraki batch switch updateDeviceSwitchPort --serial 'STRING' --portId 'STRING' -
 
 ##### Method Code:
 ```python
-def updateDeviceSwitchPort(serial: str, portId: str, **kwargs):
+def updateDeviceSwitchPort(serial:str, portId:str, **kwargs):
     # Code
 ````
 
@@ -5949,7 +5949,7 @@ meraki batch switch updateDeviceSwitchRoutingInterface --serial 'STRING' --inter
 
 ##### Method Code:
 ```python
-def updateDeviceSwitchRoutingInterface(serial: str, interfaceId: str, **kwargs):
+def updateDeviceSwitchRoutingInterface(serial:str, interfaceId:str, **kwargs):
     # Code
 ````
 
@@ -5991,7 +5991,7 @@ meraki batch switch updateDeviceSwitchRoutingInterfaceDhcp --serial 'STRING' --i
 
 ##### Method Code:
 ```python
-def updateDeviceSwitchRoutingInterfaceDhcp(serial: str, interfaceId: str, **kwargs):
+def updateDeviceSwitchRoutingInterfaceDhcp(serial:str, interfaceId:str, **kwargs):
     # Code
 ````
 
@@ -6027,7 +6027,7 @@ meraki batch switch updateDeviceSwitchRoutingStaticRoute --serial 'STRING' --sta
 
 ##### Method Code:
 ```python
-def updateDeviceSwitchRoutingStaticRoute(serial: str, staticRouteId: str, **kwargs):
+def updateDeviceSwitchRoutingStaticRoute(serial:str, staticRouteId:str, **kwargs):
     # Code
 ````
 
@@ -6059,7 +6059,7 @@ meraki batch switch updateDeviceSwitchWarmSpare --serial 'STRING' --enabled --kw
 
 ##### Method Code:
 ```python
-def updateDeviceSwitchWarmSpare(serial: str, enabled: bool, **kwargs):
+def updateDeviceSwitchWarmSpare(serial:str, enabled:bool, **kwargs):
     # Code
 ````
 
@@ -6105,7 +6105,7 @@ meraki batch switch updateNetworkSwitchAccessPolicy --networkId 'STRING' --acces
 
 ##### Method Code:
 ```python
-def updateNetworkSwitchAccessPolicy(networkId: str, accessPolicyNumber: str, **kwargs):
+def updateNetworkSwitchAccessPolicy(networkId:str, accessPolicyNumber:str, **kwargs):
     # Code
 ````
 
@@ -6139,7 +6139,7 @@ meraki batch switch updateNetworkSwitchAlternateManagementInterface --networkId 
 
 ##### Method Code:
 ```python
-def updateNetworkSwitchAlternateManagementInterface(networkId: str, **kwargs):
+def updateNetworkSwitchAlternateManagementInterface(networkId:str, **kwargs):
     # Code
 ````
 
@@ -6172,7 +6172,7 @@ meraki batch switch updateNetworkSwitchDhcpServerPolicy --networkId 'STRING' --k
 
 ##### Method Code:
 ```python
-def updateNetworkSwitchDhcpServerPolicy(networkId: str, **kwargs):
+def updateNetworkSwitchDhcpServerPolicy(networkId:str, **kwargs):
     # Code
 ````
 
@@ -6198,7 +6198,7 @@ meraki batch switch updateNetworkSwitchDscpToCosMappings --networkId 'STRING' --
 
 ##### Method Code:
 ```python
-def updateNetworkSwitchDscpToCosMappings(networkId: str, mappings: list):
+def updateNetworkSwitchDscpToCosMappings(networkId:str, mappings:list):
     # Code
 ````
 
@@ -6231,7 +6231,7 @@ meraki batch switch updateNetworkSwitchLinkAggregation --networkId 'STRING' --li
 
 ##### Method Code:
 ```python
-def updateNetworkSwitchLinkAggregation(networkId: str, linkAggregationId: str, **kwargs):
+def updateNetworkSwitchLinkAggregation(networkId:str, linkAggregationId:str, **kwargs):
     # Code
 ````
 
@@ -6263,7 +6263,7 @@ meraki batch switch updateNetworkSwitchMtu --networkId 'STRING' --kwargs '{"key1
 
 ##### Method Code:
 ```python
-def updateNetworkSwitchMtu(networkId: str, **kwargs):
+def updateNetworkSwitchMtu(networkId:str, **kwargs):
     # Code
 ````
 
@@ -6299,7 +6299,7 @@ meraki batch switch updateNetworkSwitchPortSchedule --networkId 'STRING' --portS
 
 ##### Method Code:
 ```python
-def updateNetworkSwitchPortSchedule(networkId: str, portScheduleId: str, **kwargs):
+def updateNetworkSwitchPortSchedule(networkId:str, portScheduleId:str, **kwargs):
     # Code
 ````
 
@@ -6337,7 +6337,7 @@ meraki batch switch updateNetworkSwitchQosRule --networkId 'STRING' --qosRuleId 
 
 ##### Method Code:
 ```python
-def updateNetworkSwitchQosRule(networkId: str, qosRuleId: str, **kwargs):
+def updateNetworkSwitchQosRule(networkId:str, qosRuleId:str, **kwargs):
     # Code
 ````
 
@@ -6363,7 +6363,7 @@ meraki batch switch updateNetworkSwitchQosRulesOrder --networkId 'STRING' --rule
 
 ##### Method Code:
 ```python
-def updateNetworkSwitchQosRulesOrder(networkId: str, ruleIds: list):
+def updateNetworkSwitchQosRulesOrder(networkId:str, ruleIds:list):
     # Code
 ````
 
@@ -6395,7 +6395,7 @@ meraki batch switch updateNetworkSwitchRoutingMulticast --networkId 'STRING' --k
 
 ##### Method Code:
 ```python
-def updateNetworkSwitchRoutingMulticast(networkId: str, **kwargs):
+def updateNetworkSwitchRoutingMulticast(networkId:str, **kwargs):
     # Code
 ````
 
@@ -6423,7 +6423,7 @@ meraki batch switch updateNetworkSwitchRoutingMulticastRendezvousPoint --network
 
 ##### Method Code:
 ```python
-def updateNetworkSwitchRoutingMulticastRendezvousPoint(networkId: str, rendezvousPointId: str, interfaceIp: str, multicastGroup: str):
+def updateNetworkSwitchRoutingMulticastRendezvousPoint(networkId:str, rendezvousPointId:str, interfaceIp:str, multicastGroup:str):
     # Code
 ````
 
@@ -6459,7 +6459,7 @@ meraki batch switch updateNetworkSwitchRoutingOspf --networkId 'STRING' --kwargs
 
 ##### Method Code:
 ```python
-def updateNetworkSwitchRoutingOspf(networkId: str, **kwargs):
+def updateNetworkSwitchRoutingOspf(networkId:str, **kwargs):
     # Code
 ````
 
@@ -6497,7 +6497,7 @@ meraki batch switch updateNetworkSwitchStackRoutingInterface --networkId 'STRING
 
 ##### Method Code:
 ```python
-def updateNetworkSwitchStackRoutingInterface(networkId: str, switchStackId: str, interfaceId: str, **kwargs):
+def updateNetworkSwitchStackRoutingInterface(networkId:str, switchStackId:str, interfaceId:str, **kwargs):
     # Code
 ````
 
@@ -6540,7 +6540,7 @@ meraki batch switch updateNetworkSwitchStackRoutingInterfaceDhcp --networkId 'ST
 
 ##### Method Code:
 ```python
-def updateNetworkSwitchStackRoutingInterfaceDhcp(networkId: str, switchStackId: str, interfaceId: str, **kwargs):
+def updateNetworkSwitchStackRoutingInterfaceDhcp(networkId:str, switchStackId:str, interfaceId:str, **kwargs):
     # Code
 ````
 
@@ -6577,7 +6577,7 @@ meraki batch switch updateNetworkSwitchStackRoutingStaticRoute --networkId 'STRI
 
 ##### Method Code:
 ```python
-def updateNetworkSwitchStackRoutingStaticRoute(networkId: str, switchStackId: str, staticRouteId: str, **kwargs):
+def updateNetworkSwitchStackRoutingStaticRoute(networkId:str, switchStackId:str, staticRouteId:str, **kwargs):
     # Code
 ````
 
@@ -6610,7 +6610,7 @@ meraki batch switch updateNetworkSwitchStormControl --networkId 'STRING' --kwarg
 
 ##### Method Code:
 ```python
-def updateNetworkSwitchStormControl(networkId: str, **kwargs):
+def updateNetworkSwitchStormControl(networkId:str, **kwargs):
     # Code
 ````
 
@@ -6642,7 +6642,7 @@ meraki batch switch updateNetworkSwitchStp --networkId 'STRING' --kwargs '{"key1
 
 ##### Method Code:
 ```python
-def updateNetworkSwitchStp(networkId: str, **kwargs):
+def updateNetworkSwitchStp(networkId:str, **kwargs):
     # Code
 ````
 
@@ -6696,7 +6696,7 @@ meraki batch switch updateOrganizationConfigTemplateSwitchProfilePort --organiza
 
 ##### Method Code:
 ```python
-def updateOrganizationConfigTemplateSwitchProfilePort(organizationId: str, configTemplateId: str, profileId: str, portId: str, **kwargs):
+def updateOrganizationConfigTemplateSwitchProfilePort(organizationId:str, configTemplateId:str, profileId:str, portId:str, **kwargs):
     # Code
 ````
 
@@ -6734,7 +6734,7 @@ meraki batch wireless createNetworkWirelessRfProfile --networkId 'STRING' --name
 
 ##### Method Code:
 ```python
-def createNetworkWirelessRfProfile(networkId: str, name: str, bandSelectionType: str, **kwargs):
+def createNetworkWirelessRfProfile(networkId:str, name:str, bandSelectionType:str, **kwargs):
     # Code
 ````
 
@@ -6768,7 +6768,7 @@ meraki batch wireless createNetworkWirelessSsidIdentityPsk --networkId 'STRING' 
 
 ##### Method Code:
 ```python
-def createNetworkWirelessSsidIdentityPsk(networkId: str, number: str, name: str, groupPolicyId: str, **kwargs):
+def createNetworkWirelessSsidIdentityPsk(networkId:str, number:str, name:str, groupPolicyId:str, **kwargs):
     # Code
 ````
 
@@ -6794,7 +6794,7 @@ meraki batch wireless deleteNetworkWirelessRfProfile --networkId 'STRING' --rfPr
 
 ##### Method Code:
 ```python
-def deleteNetworkWirelessRfProfile(networkId: str, rfProfileId: str):
+def deleteNetworkWirelessRfProfile(networkId:str, rfProfileId:str):
     # Code
 ````
 
@@ -6821,7 +6821,7 @@ meraki batch wireless deleteNetworkWirelessSsidIdentityPsk --networkId 'STRING' 
 
 ##### Method Code:
 ```python
-def deleteNetworkWirelessSsidIdentityPsk(networkId: str, number: str, identityPskId: str):
+def deleteNetworkWirelessSsidIdentityPsk(networkId:str, number:str, identityPskId:str):
     # Code
 ````
 
@@ -6854,7 +6854,7 @@ meraki batch wireless updateDeviceWirelessBluetoothSettings --serial 'STRING' --
 
 ##### Method Code:
 ```python
-def updateDeviceWirelessBluetoothSettings(serial: str, **kwargs):
+def updateDeviceWirelessBluetoothSettings(serial:str, **kwargs):
     # Code
 ````
 
@@ -6887,7 +6887,7 @@ meraki batch wireless updateDeviceWirelessRadioSettings --serial 'STRING' --kwar
 
 ##### Method Code:
 ```python
-def updateDeviceWirelessRadioSettings(serial: str, **kwargs):
+def updateDeviceWirelessRadioSettings(serial:str, **kwargs):
     # Code
 ````
 
@@ -6921,7 +6921,7 @@ meraki batch wireless updateNetworkWirelessAlternateManagementInterface --networ
 
 ##### Method Code:
 ```python
-def updateNetworkWirelessAlternateManagementInterface(networkId: str, **kwargs):
+def updateNetworkWirelessAlternateManagementInterface(networkId:str, **kwargs):
     # Code
 ````
 
@@ -6953,7 +6953,7 @@ meraki batch wireless updateNetworkWirelessBilling --networkId 'STRING' --kwargs
 
 ##### Method Code:
 ```python
-def updateNetworkWirelessBilling(networkId: str, **kwargs):
+def updateNetworkWirelessBilling(networkId:str, **kwargs):
     # Code
 ````
 
@@ -6991,7 +6991,7 @@ meraki batch wireless updateNetworkWirelessRfProfile --networkId 'STRING' --rfPr
 
 ##### Method Code:
 ```python
-def updateNetworkWirelessRfProfile(networkId: str, rfProfileId: str, **kwargs):
+def updateNetworkWirelessRfProfile(networkId:str, rfProfileId:str, **kwargs):
     # Code
 ````
 
@@ -7026,7 +7026,7 @@ meraki batch wireless updateNetworkWirelessSettings --networkId 'STRING' --kwarg
 
 ##### Method Code:
 ```python
-def updateNetworkWirelessSettings(networkId: str, **kwargs):
+def updateNetworkWirelessSettings(networkId:str, **kwargs):
     # Code
 ````
 
@@ -7111,7 +7111,7 @@ meraki batch wireless updateNetworkWirelessSsid --networkId 'STRING' --number 'S
 
 ##### Method Code:
 ```python
-def updateNetworkWirelessSsid(networkId: str, number: str, **kwargs):
+def updateNetworkWirelessSsid(networkId:str, number:str, **kwargs):
     # Code
 ````
 
@@ -7144,7 +7144,7 @@ meraki batch wireless updateNetworkWirelessSsidBonjourForwarding --networkId 'ST
 
 ##### Method Code:
 ```python
-def updateNetworkWirelessSsidBonjourForwarding(networkId: str, number: str, **kwargs):
+def updateNetworkWirelessSsidBonjourForwarding(networkId:str, number:str, **kwargs):
     # Code
 ````
 
@@ -7177,7 +7177,7 @@ meraki batch wireless updateNetworkWirelessSsidDeviceTypeGroupPolicies --network
 
 ##### Method Code:
 ```python
-def updateNetworkWirelessSsidDeviceTypeGroupPolicies(networkId: str, number: str, **kwargs):
+def updateNetworkWirelessSsidDeviceTypeGroupPolicies(networkId:str, number:str, **kwargs):
     # Code
 ````
 
@@ -7212,7 +7212,7 @@ meraki batch wireless updateNetworkWirelessSsidEapOverride --networkId 'STRING' 
 
 ##### Method Code:
 ```python
-def updateNetworkWirelessSsidEapOverride(networkId: str, number: str, **kwargs):
+def updateNetworkWirelessSsidEapOverride(networkId:str, number:str, **kwargs):
     # Code
 ````
 
@@ -7244,7 +7244,7 @@ meraki batch wireless updateNetworkWirelessSsidFirewallL7FirewallRules --network
 
 ##### Method Code:
 ```python
-def updateNetworkWirelessSsidFirewallL7FirewallRules(networkId: str, number: str, **kwargs):
+def updateNetworkWirelessSsidFirewallL7FirewallRules(networkId:str, number:str, **kwargs):
     # Code
 ````
 
@@ -7283,7 +7283,7 @@ meraki batch wireless updateNetworkWirelessSsidHotspot20 --networkId 'STRING' --
 
 ##### Method Code:
 ```python
-def updateNetworkWirelessSsidHotspot20(networkId: str, number: str, **kwargs):
+def updateNetworkWirelessSsidHotspot20(networkId:str, number:str, **kwargs):
     # Code
 ````
 
@@ -7318,7 +7318,7 @@ meraki batch wireless updateNetworkWirelessSsidIdentityPsk --networkId 'STRING' 
 
 ##### Method Code:
 ```python
-def updateNetworkWirelessSsidIdentityPsk(networkId: str, number: str, identityPskId: str, **kwargs):
+def updateNetworkWirelessSsidIdentityPsk(networkId:str, number:str, identityPskId:str, **kwargs):
     # Code
 ````
 
@@ -7352,7 +7352,7 @@ meraki batch wireless updateNetworkWirelessSsidSchedules --networkId 'STRING' --
 
 ##### Method Code:
 ```python
-def updateNetworkWirelessSsidSchedules(networkId: str, number: str, **kwargs):
+def updateNetworkWirelessSsidSchedules(networkId:str, number:str, **kwargs):
     # Code
 ````
 
@@ -7398,7 +7398,7 @@ meraki batch wireless updateNetworkWirelessSsidSplashSettings --networkId 'STRIN
 
 ##### Method Code:
 ```python
-def updateNetworkWirelessSsidSplashSettings(networkId: str, number: str, **kwargs):
+def updateNetworkWirelessSsidSplashSettings(networkId:str, number:str, **kwargs):
     # Code
 ````
 
@@ -7435,7 +7435,7 @@ meraki batch wireless updateNetworkWirelessSsidTrafficShapingRules --networkId '
 
 ##### Method Code:
 ```python
-def updateNetworkWirelessSsidTrafficShapingRules(networkId: str, number: str, **kwargs):
+def updateNetworkWirelessSsidTrafficShapingRules(networkId:str, number:str, **kwargs):
     # Code
 ````
 
@@ -7467,7 +7467,7 @@ meraki batch wireless updateNetworkWirelessSsidVpn --networkId 'STRING' --number
 
 ##### Method Code:
 ```python
-def updateNetworkWirelessSsidVpn(networkId: str, number: str, **kwargs):
+def updateNetworkWirelessSsidVpn(networkId:str, number:str, **kwargs):
     # Code
 ````
 
@@ -7507,7 +7507,7 @@ meraki camera createNetworkCameraQualityRetentionProfile --networkId 'STRING' --
 
 ##### Method Code:
 ```python
-def createNetworkCameraQualityRetentionProfile(networkId: str, name: str, **kwargs):
+def createNetworkCameraQualityRetentionProfile(networkId:str, name:str, **kwargs):
     # Code
 ````
 
@@ -7540,7 +7540,7 @@ meraki camera createNetworkCameraWirelessProfile --networkId 'STRING' --name 'ST
 
 ##### Method Code:
 ```python
-def createNetworkCameraWirelessProfile(networkId: str, name: str, ssid: dict, **kwargs):
+def createNetworkCameraWirelessProfile(networkId:str, name:str, ssid:dict, **kwargs):
     # Code
 ````
 
@@ -7566,7 +7566,7 @@ meraki camera deleteNetworkCameraQualityRetentionProfile --networkId 'STRING' --
 
 ##### Method Code:
 ```python
-def deleteNetworkCameraQualityRetentionProfile(networkId: str, qualityRetentionProfileId: str):
+def deleteNetworkCameraQualityRetentionProfile(networkId:str, qualityRetentionProfileId:str):
     # Code
 ````
 
@@ -7592,7 +7592,7 @@ meraki camera deleteNetworkCameraWirelessProfile --networkId 'STRING' --wireless
 
 ##### Method Code:
 ```python
-def deleteNetworkCameraWirelessProfile(networkId: str, wirelessProfileId: str):
+def deleteNetworkCameraWirelessProfile(networkId:str, wirelessProfileId:str):
     # Code
 ````
 
@@ -7624,7 +7624,7 @@ meraki camera generateDeviceCameraSnapshot --serial 'STRING' --kwargs '{"key1": 
 
 ##### Method Code:
 ```python
-def generateDeviceCameraSnapshot(serial: str, **kwargs):
+def generateDeviceCameraSnapshot(serial:str, **kwargs):
     # Code
 ````
 
@@ -7649,7 +7649,7 @@ meraki camera getDeviceCameraAnalyticsLive --serial 'STRING'
 
 ##### Method Code:
 ```python
-def getDeviceCameraAnalyticsLive(serial: str):
+def getDeviceCameraAnalyticsLive(serial:str):
     # Code
 ````
 
@@ -7683,7 +7683,7 @@ meraki camera getDeviceCameraAnalyticsOverview --serial 'STRING' --kwargs '{"key
 
 ##### Method Code:
 ```python
-def getDeviceCameraAnalyticsOverview(serial: str, **kwargs):
+def getDeviceCameraAnalyticsOverview(serial:str, **kwargs):
     # Code
 ````
 
@@ -7714,7 +7714,7 @@ meraki camera getDeviceCameraAnalyticsRecent --serial 'STRING' --kwargs '{"key1"
 
 ##### Method Code:
 ```python
-def getDeviceCameraAnalyticsRecent(serial: str, **kwargs):
+def getDeviceCameraAnalyticsRecent(serial:str, **kwargs):
     # Code
 ````
 
@@ -7750,7 +7750,7 @@ meraki camera getDeviceCameraAnalyticsZoneHistory --serial 'STRING' --zoneId 'ST
 
 ##### Method Code:
 ```python
-def getDeviceCameraAnalyticsZoneHistory(serial: str, zoneId: str, **kwargs):
+def getDeviceCameraAnalyticsZoneHistory(serial:str, zoneId:str, **kwargs):
     # Code
 ````
 
@@ -7775,7 +7775,7 @@ meraki camera getDeviceCameraAnalyticsZones --serial 'STRING'
 
 ##### Method Code:
 ```python
-def getDeviceCameraAnalyticsZones(serial: str):
+def getDeviceCameraAnalyticsZones(serial:str):
     # Code
 ````
 
@@ -7800,7 +7800,7 @@ meraki camera getDeviceCameraQualityAndRetention --serial 'STRING'
 
 ##### Method Code:
 ```python
-def getDeviceCameraQualityAndRetention(serial: str):
+def getDeviceCameraQualityAndRetention(serial:str):
     # Code
 ````
 
@@ -7825,7 +7825,7 @@ meraki camera getDeviceCameraSense --serial 'STRING'
 
 ##### Method Code:
 ```python
-def getDeviceCameraSense(serial: str):
+def getDeviceCameraSense(serial:str):
     # Code
 ````
 
@@ -7850,7 +7850,7 @@ meraki camera getDeviceCameraSenseObjectDetectionModels --serial 'STRING'
 
 ##### Method Code:
 ```python
-def getDeviceCameraSenseObjectDetectionModels(serial: str):
+def getDeviceCameraSenseObjectDetectionModels(serial:str):
     # Code
 ````
 
@@ -7881,7 +7881,7 @@ meraki camera getDeviceCameraVideoLink --serial 'STRING' --kwargs '{"key1": "val
 
 ##### Method Code:
 ```python
-def getDeviceCameraVideoLink(serial: str, **kwargs):
+def getDeviceCameraVideoLink(serial:str, **kwargs):
     # Code
 ````
 
@@ -7906,7 +7906,7 @@ meraki camera getDeviceCameraVideoSettings --serial 'STRING'
 
 ##### Method Code:
 ```python
-def getDeviceCameraVideoSettings(serial: str):
+def getDeviceCameraVideoSettings(serial:str):
     # Code
 ````
 
@@ -7931,7 +7931,7 @@ meraki camera getDeviceCameraWirelessProfiles --serial 'STRING'
 
 ##### Method Code:
 ```python
-def getDeviceCameraWirelessProfiles(serial: str):
+def getDeviceCameraWirelessProfiles(serial:str):
     # Code
 ````
 
@@ -7957,7 +7957,7 @@ meraki camera getNetworkCameraQualityRetentionProfile --networkId 'STRING' --qua
 
 ##### Method Code:
 ```python
-def getNetworkCameraQualityRetentionProfile(networkId: str, qualityRetentionProfileId: str):
+def getNetworkCameraQualityRetentionProfile(networkId:str, qualityRetentionProfileId:str):
     # Code
 ````
 
@@ -7982,7 +7982,7 @@ meraki camera getNetworkCameraQualityRetentionProfiles --networkId 'STRING'
 
 ##### Method Code:
 ```python
-def getNetworkCameraQualityRetentionProfiles(networkId: str):
+def getNetworkCameraQualityRetentionProfiles(networkId:str):
     # Code
 ````
 
@@ -8007,7 +8007,7 @@ meraki camera getNetworkCameraSchedules --networkId 'STRING'
 
 ##### Method Code:
 ```python
-def getNetworkCameraSchedules(networkId: str):
+def getNetworkCameraSchedules(networkId:str):
     # Code
 ````
 
@@ -8033,7 +8033,7 @@ meraki camera getNetworkCameraWirelessProfile --networkId 'STRING' --wirelessPro
 
 ##### Method Code:
 ```python
-def getNetworkCameraWirelessProfile(networkId: str, wirelessProfileId: str):
+def getNetworkCameraWirelessProfile(networkId:str, wirelessProfileId:str):
     # Code
 ````
 
@@ -8058,7 +8058,7 @@ meraki camera getNetworkCameraWirelessProfiles --networkId 'STRING'
 
 ##### Method Code:
 ```python
-def getNetworkCameraWirelessProfiles(networkId: str):
+def getNetworkCameraWirelessProfiles(networkId:str):
     # Code
 ````
 
@@ -8090,7 +8090,7 @@ meraki camera getOrganizationCameraOnboardingStatuses --organizationId 'STRING' 
 
 ##### Method Code:
 ```python
-def getOrganizationCameraOnboardingStatuses(organizationId: str, **kwargs):
+def getOrganizationCameraOnboardingStatuses(organizationId:str, **kwargs):
     # Code
 ````
 
@@ -8127,7 +8127,7 @@ meraki camera updateDeviceCameraQualityAndRetention --serial 'STRING' --kwargs '
 
 ##### Method Code:
 ```python
-def updateDeviceCameraQualityAndRetention(serial: str, **kwargs):
+def updateDeviceCameraQualityAndRetention(serial:str, **kwargs):
     # Code
 ````
 
@@ -8161,7 +8161,7 @@ meraki camera updateDeviceCameraSense --serial 'STRING' --kwargs '{"key1": "valu
 
 ##### Method Code:
 ```python
-def updateDeviceCameraSense(serial: str, **kwargs):
+def updateDeviceCameraSense(serial:str, **kwargs):
     # Code
 ````
 
@@ -8192,7 +8192,7 @@ meraki camera updateDeviceCameraVideoSettings --serial 'STRING' --kwargs '{"key1
 
 ##### Method Code:
 ```python
-def updateDeviceCameraVideoSettings(serial: str, **kwargs):
+def updateDeviceCameraVideoSettings(serial:str, **kwargs):
     # Code
 ````
 
@@ -8218,7 +8218,7 @@ meraki camera updateDeviceCameraWirelessProfiles --serial 'STRING' --ids JSON_ST
 
 ##### Method Code:
 ```python
-def updateDeviceCameraWirelessProfiles(serial: str, ids: dict):
+def updateDeviceCameraWirelessProfiles(serial:str, ids:dict):
     # Code
 ````
 
@@ -8258,7 +8258,7 @@ meraki camera updateNetworkCameraQualityRetentionProfile --networkId 'STRING' --
 
 ##### Method Code:
 ```python
-def updateNetworkCameraQualityRetentionProfile(networkId: str, qualityRetentionProfileId: str, **kwargs):
+def updateNetworkCameraQualityRetentionProfile(networkId:str, qualityRetentionProfileId:str, **kwargs):
     # Code
 ````
 
@@ -8292,7 +8292,7 @@ meraki camera updateNetworkCameraWirelessProfile --networkId 'STRING' --wireless
 
 ##### Method Code:
 ```python
-def updateNetworkCameraWirelessProfile(networkId: str, wirelessProfileId: str, **kwargs):
+def updateNetworkCameraWirelessProfile(networkId:str, wirelessProfileId:str, **kwargs):
     # Code
 ````
 
@@ -8324,7 +8324,7 @@ meraki camera updateOrganizationCameraOnboardingStatuses --organizationId 'STRIN
 
 ##### Method Code:
 ```python
-def updateOrganizationCameraOnboardingStatuses(organizationId: str, **kwargs):
+def updateOrganizationCameraOnboardingStatuses(organizationId:str, **kwargs):
     # Code
 ````
 
@@ -8350,7 +8350,7 @@ meraki cellularGateway getDeviceCellularGatewayLan --serial 'STRING'
 
 ##### Method Code:
 ```python
-def getDeviceCellularGatewayLan(serial: str):
+def getDeviceCellularGatewayLan(serial:str):
     # Code
 ````
 
@@ -8375,7 +8375,7 @@ meraki cellularGateway getDeviceCellularGatewayPortForwardingRules --serial 'STR
 
 ##### Method Code:
 ```python
-def getDeviceCellularGatewayPortForwardingRules(serial: str):
+def getDeviceCellularGatewayPortForwardingRules(serial:str):
     # Code
 ````
 
@@ -8400,7 +8400,7 @@ meraki cellularGateway getNetworkCellularGatewayConnectivityMonitoringDestinatio
 
 ##### Method Code:
 ```python
-def getNetworkCellularGatewayConnectivityMonitoringDestinations(networkId: str):
+def getNetworkCellularGatewayConnectivityMonitoringDestinations(networkId:str):
     # Code
 ````
 
@@ -8425,7 +8425,7 @@ meraki cellularGateway getNetworkCellularGatewayDhcp --networkId 'STRING'
 
 ##### Method Code:
 ```python
-def getNetworkCellularGatewayDhcp(networkId: str):
+def getNetworkCellularGatewayDhcp(networkId:str):
     # Code
 ````
 
@@ -8450,7 +8450,7 @@ meraki cellularGateway getNetworkCellularGatewaySubnetPool --networkId 'STRING'
 
 ##### Method Code:
 ```python
-def getNetworkCellularGatewaySubnetPool(networkId: str):
+def getNetworkCellularGatewaySubnetPool(networkId:str):
     # Code
 ````
 
@@ -8475,7 +8475,7 @@ meraki cellularGateway getNetworkCellularGatewayUplink --networkId 'STRING'
 
 ##### Method Code:
 ```python
-def getNetworkCellularGatewayUplink(networkId: str):
+def getNetworkCellularGatewayUplink(networkId:str):
     # Code
 ````
 
@@ -8513,7 +8513,7 @@ meraki cellularGateway getOrganizationCellularGatewayUplinkStatuses --organizati
 
 ##### Method Code:
 ```python
-def getOrganizationCellularGatewayUplinkStatuses(organizationId: str, total_pages=1, direction='next', **kwargs):
+def getOrganizationCellularGatewayUplinkStatuses(organizationId:str, total_pages=1, direction='next', **kwargs):
     # Code
 ````
 
@@ -8545,7 +8545,7 @@ meraki cellularGateway updateDeviceCellularGatewayLan --serial 'STRING' --kwargs
 
 ##### Method Code:
 ```python
-def updateDeviceCellularGatewayLan(serial: str, **kwargs):
+def updateDeviceCellularGatewayLan(serial:str, **kwargs):
     # Code
 ````
 
@@ -8576,7 +8576,7 @@ meraki cellularGateway updateDeviceCellularGatewayPortForwardingRules --serial '
 
 ##### Method Code:
 ```python
-def updateDeviceCellularGatewayPortForwardingRules(serial: str, **kwargs):
+def updateDeviceCellularGatewayPortForwardingRules(serial:str, **kwargs):
     # Code
 ````
 
@@ -8607,7 +8607,7 @@ meraki cellularGateway updateNetworkCellularGatewayConnectivityMonitoringDestina
 
 ##### Method Code:
 ```python
-def updateNetworkCellularGatewayConnectivityMonitoringDestinations(networkId: str, **kwargs):
+def updateNetworkCellularGatewayConnectivityMonitoringDestinations(networkId:str, **kwargs):
     # Code
 ````
 
@@ -8640,7 +8640,7 @@ meraki cellularGateway updateNetworkCellularGatewayDhcp --networkId 'STRING' --k
 
 ##### Method Code:
 ```python
-def updateNetworkCellularGatewayDhcp(networkId: str, **kwargs):
+def updateNetworkCellularGatewayDhcp(networkId:str, **kwargs):
     # Code
 ````
 
@@ -8672,7 +8672,7 @@ meraki cellularGateway updateNetworkCellularGatewaySubnetPool --networkId 'STRIN
 
 ##### Method Code:
 ```python
-def updateNetworkCellularGatewaySubnetPool(networkId: str, **kwargs):
+def updateNetworkCellularGatewaySubnetPool(networkId:str, **kwargs):
     # Code
 ````
 
@@ -8703,7 +8703,7 @@ meraki cellularGateway updateNetworkCellularGatewayUplink --networkId 'STRING' -
 
 ##### Method Code:
 ```python
-def updateNetworkCellularGatewayUplink(networkId: str, **kwargs):
+def updateNetworkCellularGatewayUplink(networkId:str, **kwargs):
     # Code
 ````
 
@@ -8737,7 +8737,7 @@ meraki devices blinkDeviceLeds --serial 'STRING' --kwargs '{"key1": "value1", "k
 
 ##### Method Code:
 ```python
-def blinkDeviceLeds(serial: str, **kwargs):
+def blinkDeviceLeds(serial:str, **kwargs):
     # Code
 ````
 
@@ -8762,7 +8762,7 @@ meraki devices getDevice --serial 'STRING'
 
 ##### Method Code:
 ```python
-def getDevice(serial: str):
+def getDevice(serial:str):
     # Code
 ````
 
@@ -8794,7 +8794,7 @@ meraki devices getDeviceClients --serial 'STRING' --kwargs '{"key1": "value1", "
 
 ##### Method Code:
 ```python
-def getDeviceClients(serial: str, **kwargs):
+def getDeviceClients(serial:str, **kwargs):
     # Code
 ````
 
@@ -8819,7 +8819,7 @@ meraki devices getDeviceLldpCdp --serial 'STRING'
 
 ##### Method Code:
 ```python
-def getDeviceLldpCdp(serial: str):
+def getDeviceLldpCdp(serial:str):
     # Code
 ````
 
@@ -8855,7 +8855,7 @@ meraki devices getDeviceLossAndLatencyHistory --serial 'STRING' --ip 'STRING' --
 
 ##### Method Code:
 ```python
-def getDeviceLossAndLatencyHistory(serial: str, ip: str, **kwargs):
+def getDeviceLossAndLatencyHistory(serial:str, ip:str, **kwargs):
     # Code
 ````
 
@@ -8880,7 +8880,7 @@ meraki devices getDeviceManagementInterface --serial 'STRING'
 
 ##### Method Code:
 ```python
-def getDeviceManagementInterface(serial: str):
+def getDeviceManagementInterface(serial:str):
     # Code
 ````
 
@@ -8905,7 +8905,7 @@ meraki devices rebootDevice --serial 'STRING'
 
 ##### Method Code:
 ```python
-def rebootDevice(serial: str):
+def rebootDevice(serial:str):
     # Code
 ````
 
@@ -8944,7 +8944,7 @@ meraki devices updateDevice --serial 'STRING' --kwargs '{"key1": "value1", "key2
 
 ##### Method Code:
 ```python
-def updateDevice(serial: str, **kwargs):
+def updateDevice(serial:str, **kwargs):
     # Code
 ````
 
@@ -8976,7 +8976,7 @@ meraki devices updateDeviceManagementInterface --serial 'STRING' --kwargs '{"key
 
 ##### Method Code:
 ```python
-def updateDeviceManagementInterface(serial: str, **kwargs):
+def updateDeviceManagementInterface(serial:str, **kwargs):
     # Code
 ````
 
@@ -9010,7 +9010,7 @@ meraki insight createOrganizationInsightMonitoredMediaServer --organizationId 'S
 
 ##### Method Code:
 ```python
-def createOrganizationInsightMonitoredMediaServer(organizationId: str, name: str, address: str, **kwargs):
+def createOrganizationInsightMonitoredMediaServer(organizationId:str, name:str, address:str, **kwargs):
     # Code
 ````
 
@@ -9036,7 +9036,7 @@ meraki insight deleteOrganizationInsightMonitoredMediaServer --organizationId 'S
 
 ##### Method Code:
 ```python
-def deleteOrganizationInsightMonitoredMediaServer(organizationId: str, monitoredMediaServerId: str):
+def deleteOrganizationInsightMonitoredMediaServer(organizationId:str, monitoredMediaServerId:str):
     # Code
 ````
 
@@ -9071,7 +9071,7 @@ meraki insight getNetworkInsightApplicationHealthByTime --networkId 'STRING' --a
 
 ##### Method Code:
 ```python
-def getNetworkInsightApplicationHealthByTime(networkId: str, applicationId: str, **kwargs):
+def getNetworkInsightApplicationHealthByTime(networkId:str, applicationId:str, **kwargs):
     # Code
 ````
 
@@ -9096,7 +9096,7 @@ meraki insight getOrganizationInsightApplications --organizationId 'STRING'
 
 ##### Method Code:
 ```python
-def getOrganizationInsightApplications(organizationId: str):
+def getOrganizationInsightApplications(organizationId:str):
     # Code
 ````
 
@@ -9122,7 +9122,7 @@ meraki insight getOrganizationInsightMonitoredMediaServer --organizationId 'STRI
 
 ##### Method Code:
 ```python
-def getOrganizationInsightMonitoredMediaServer(organizationId: str, monitoredMediaServerId: str):
+def getOrganizationInsightMonitoredMediaServer(organizationId:str, monitoredMediaServerId:str):
     # Code
 ````
 
@@ -9147,7 +9147,7 @@ meraki insight getOrganizationInsightMonitoredMediaServers --organizationId 'STR
 
 ##### Method Code:
 ```python
-def getOrganizationInsightMonitoredMediaServers(organizationId: str):
+def getOrganizationInsightMonitoredMediaServers(organizationId:str):
     # Code
 ````
 
@@ -9181,7 +9181,7 @@ meraki insight updateOrganizationInsightMonitoredMediaServer --organizationId 'S
 
 ##### Method Code:
 ```python
-def updateOrganizationInsightMonitoredMediaServer(organizationId: str, monitoredMediaServerId: str, **kwargs):
+def updateOrganizationInsightMonitoredMediaServer(organizationId:str, monitoredMediaServerId:str, **kwargs):
     # Code
 ````
 
@@ -9214,7 +9214,7 @@ meraki networks bindNetwork --networkId 'STRING' --configTemplateId 'STRING' --k
 
 ##### Method Code:
 ```python
-def bindNetwork(networkId: str, configTemplateId: str, **kwargs):
+def bindNetwork(networkId:str, configTemplateId:str, **kwargs):
     # Code
 ````
 
@@ -9240,7 +9240,7 @@ meraki networks claimNetworkDevices --networkId 'STRING' --serials ITEM
 
 ##### Method Code:
 ```python
-def claimNetworkDevices(networkId: str, serials: list):
+def claimNetworkDevices(networkId:str, serials:list):
     # Code
 ````
 
@@ -9274,7 +9274,7 @@ meraki networks createNetworkFirmwareUpgradesRollback --networkId 'STRING' --rea
 
 ##### Method Code:
 ```python
-def createNetworkFirmwareUpgradesRollback(networkId: str, reasons: list, **kwargs):
+def createNetworkFirmwareUpgradesRollback(networkId:str, reasons:list, **kwargs):
     # Code
 ````
 
@@ -9311,7 +9311,7 @@ meraki networks createNetworkFloorPlan --networkId 'STRING' --name 'STRING' --im
 
 ##### Method Code:
 ```python
-def createNetworkFloorPlan(networkId: str, name: str, imageContents: str, **kwargs):
+def createNetworkFloorPlan(networkId:str, name:str, imageContents:str, **kwargs):
     # Code
 ````
 
@@ -9352,7 +9352,7 @@ meraki networks createNetworkGroupPolicy --networkId 'STRING' --name 'STRING' --
 
 ##### Method Code:
 ```python
-def createNetworkGroupPolicy(networkId: str, name: str, **kwargs):
+def createNetworkGroupPolicy(networkId:str, name:str, **kwargs):
     # Code
 ````
 
@@ -9388,7 +9388,7 @@ meraki networks createNetworkMerakiAuthUser --networkId 'STRING' --email 'STRING
 
 ##### Method Code:
 ```python
-def createNetworkMerakiAuthUser(networkId: str, email: str, name: str, password: str, authorizations: list, **kwargs):
+def createNetworkMerakiAuthUser(networkId:str, email:str, name:str, password:str, authorizations:list, **kwargs):
     # Code
 ````
 
@@ -9416,7 +9416,7 @@ meraki networks createNetworkMqttBroker --networkId 'STRING' --name 'STRING' --h
 
 ##### Method Code:
 ```python
-def createNetworkMqttBroker(networkId: str, name: str, host: str, port: int):
+def createNetworkMqttBroker(networkId:str, name:str, host:str, port:int):
     # Code
 ````
 
@@ -9453,7 +9453,7 @@ meraki networks createNetworkPiiRequest --networkId 'STRING' --kwargs '{"key1": 
 
 ##### Method Code:
 ```python
-def createNetworkPiiRequest(networkId: str, **kwargs):
+def createNetworkPiiRequest(networkId:str, **kwargs):
     # Code
 ````
 
@@ -9486,7 +9486,7 @@ meraki networks createNetworkWebhooksHttpServer --networkId 'STRING' --name 'STR
 
 ##### Method Code:
 ```python
-def createNetworkWebhooksHttpServer(networkId: str, name: str, url: str, **kwargs):
+def createNetworkWebhooksHttpServer(networkId:str, name:str, url:str, **kwargs):
     # Code
 ````
 
@@ -9518,7 +9518,7 @@ meraki networks createNetworkWebhooksWebhookTest --networkId 'STRING' --url 'STR
 
 ##### Method Code:
 ```python
-def createNetworkWebhooksWebhookTest(networkId: str, url: str, **kwargs):
+def createNetworkWebhooksWebhookTest(networkId:str, url:str, **kwargs):
     # Code
 ````
 
@@ -9543,7 +9543,7 @@ meraki networks deleteNetwork --networkId 'STRING'
 
 ##### Method Code:
 ```python
-def deleteNetwork(networkId: str):
+def deleteNetwork(networkId:str):
     # Code
 ````
 
@@ -9569,7 +9569,7 @@ meraki networks deleteNetworkFloorPlan --networkId 'STRING' --floorPlanId 'STRIN
 
 ##### Method Code:
 ```python
-def deleteNetworkFloorPlan(networkId: str, floorPlanId: str):
+def deleteNetworkFloorPlan(networkId:str, floorPlanId:str):
     # Code
 ````
 
@@ -9595,7 +9595,7 @@ meraki networks deleteNetworkGroupPolicy --networkId 'STRING' --groupPolicyId 'S
 
 ##### Method Code:
 ```python
-def deleteNetworkGroupPolicy(networkId: str, groupPolicyId: str):
+def deleteNetworkGroupPolicy(networkId:str, groupPolicyId:str):
     # Code
 ````
 
@@ -9621,7 +9621,7 @@ meraki networks deleteNetworkMerakiAuthUser --networkId 'STRING' --merakiAuthUse
 
 ##### Method Code:
 ```python
-def deleteNetworkMerakiAuthUser(networkId: str, merakiAuthUserId: str):
+def deleteNetworkMerakiAuthUser(networkId:str, merakiAuthUserId:str):
     # Code
 ````
 
@@ -9647,7 +9647,7 @@ meraki networks deleteNetworkMqttBroker --networkId 'STRING' --mqttBrokerId 'STR
 
 ##### Method Code:
 ```python
-def deleteNetworkMqttBroker(networkId: str, mqttBrokerId: str):
+def deleteNetworkMqttBroker(networkId:str, mqttBrokerId:str):
     # Code
 ````
 
@@ -9673,7 +9673,7 @@ meraki networks deleteNetworkPiiRequest --networkId 'STRING' --requestId 'STRING
 
 ##### Method Code:
 ```python
-def deleteNetworkPiiRequest(networkId: str, requestId: str):
+def deleteNetworkPiiRequest(networkId:str, requestId:str):
     # Code
 ````
 
@@ -9699,7 +9699,7 @@ meraki networks deleteNetworkWebhooksHttpServer --networkId 'STRING' --httpServe
 
 ##### Method Code:
 ```python
-def deleteNetworkWebhooksHttpServer(networkId: str, httpServerId: str):
+def deleteNetworkWebhooksHttpServer(networkId:str, httpServerId:str):
     # Code
 ````
 
@@ -9724,7 +9724,7 @@ meraki networks getNetwork --networkId 'STRING'
 
 ##### Method Code:
 ```python
-def getNetwork(networkId: str):
+def getNetwork(networkId:str):
     # Code
 ````
 
@@ -9749,7 +9749,7 @@ meraki networks getNetworkAlertsSettings --networkId 'STRING'
 
 ##### Method Code:
 ```python
-def getNetworkAlertsSettings(networkId: str):
+def getNetworkAlertsSettings(networkId:str):
     # Code
 ````
 
@@ -9782,7 +9782,7 @@ meraki networks getNetworkBluetoothClient --networkId 'STRING' --bluetoothClient
 
 ##### Method Code:
 ```python
-def getNetworkBluetoothClient(networkId: str, bluetoothClientId: str, **kwargs):
+def getNetworkBluetoothClient(networkId:str, bluetoothClientId:str, **kwargs):
     # Code
 ````
 
@@ -9820,7 +9820,7 @@ meraki networks getNetworkBluetoothClients --networkId 'STRING' --kwargs '{"key1
 
 ##### Method Code:
 ```python
-def getNetworkBluetoothClients(networkId: str, total_pages=1, direction='next', **kwargs):
+def getNetworkBluetoothClients(networkId:str, total_pages=1, direction='next', **kwargs):
     # Code
 ````
 
@@ -9846,7 +9846,7 @@ meraki networks getNetworkClient --networkId 'STRING' --clientId 'STRING'
 
 ##### Method Code:
 ```python
-def getNetworkClient(networkId: str, clientId: str):
+def getNetworkClient(networkId:str, clientId:str):
     # Code
 ````
 
@@ -9872,7 +9872,7 @@ meraki networks getNetworkClientPolicy --networkId 'STRING' --clientId 'STRING'
 
 ##### Method Code:
 ```python
-def getNetworkClientPolicy(networkId: str, clientId: str):
+def getNetworkClientPolicy(networkId:str, clientId:str):
     # Code
 ````
 
@@ -9898,7 +9898,7 @@ meraki networks getNetworkClientSplashAuthorizationStatus --networkId 'STRING' -
 
 ##### Method Code:
 ```python
-def getNetworkClientSplashAuthorizationStatus(networkId: str, clientId: str):
+def getNetworkClientSplashAuthorizationStatus(networkId:str, clientId:str):
     # Code
 ````
 
@@ -9934,7 +9934,7 @@ meraki networks getNetworkClientTrafficHistory --networkId 'STRING' --clientId '
 
 ##### Method Code:
 ```python
-def getNetworkClientTrafficHistory(networkId: str, clientId: str, total_pages=1, direction='next', **kwargs):
+def getNetworkClientTrafficHistory(networkId:str, clientId:str, total_pages=1, direction='next', **kwargs):
     # Code
 ````
 
@@ -9960,7 +9960,7 @@ meraki networks getNetworkClientUsageHistory --networkId 'STRING' --clientId 'ST
 
 ##### Method Code:
 ```python
-def getNetworkClientUsageHistory(networkId: str, clientId: str):
+def getNetworkClientUsageHistory(networkId:str, clientId:str):
     # Code
 ````
 
@@ -10005,7 +10005,7 @@ meraki networks getNetworkClients --networkId 'STRING' --kwargs '{"key1": "value
 
 ##### Method Code:
 ```python
-def getNetworkClients(networkId: str, total_pages=1, direction='next', **kwargs):
+def getNetworkClients(networkId:str, total_pages=1, direction='next', **kwargs):
     # Code
 ````
 
@@ -10045,7 +10045,7 @@ meraki networks getNetworkClientsApplicationUsage --networkId 'STRING' --clients
 
 ##### Method Code:
 ```python
-def getNetworkClientsApplicationUsage(networkId: str, clients: str, total_pages=1, direction='next', **kwargs):
+def getNetworkClientsApplicationUsage(networkId:str, clients:str, total_pages=1, direction='next', **kwargs):
     # Code
 ````
 
@@ -10079,7 +10079,7 @@ meraki networks getNetworkClientsOverview --networkId 'STRING' --kwargs '{"key1"
 
 ##### Method Code:
 ```python
-def getNetworkClientsOverview(networkId: str, **kwargs):
+def getNetworkClientsOverview(networkId:str, **kwargs):
     # Code
 ````
 
@@ -10119,7 +10119,7 @@ meraki networks getNetworkClientsUsageHistories --networkId 'STRING' --clients '
 
 ##### Method Code:
 ```python
-def getNetworkClientsUsageHistories(networkId: str, clients: str, total_pages=1, direction='next', **kwargs):
+def getNetworkClientsUsageHistories(networkId:str, clients:str, total_pages=1, direction='next', **kwargs):
     # Code
 ````
 
@@ -10144,7 +10144,7 @@ meraki networks getNetworkDevices --networkId 'STRING'
 
 ##### Method Code:
 ```python
-def getNetworkDevices(networkId: str):
+def getNetworkDevices(networkId:str):
     # Code
 ````
 
@@ -10191,7 +10191,7 @@ meraki networks getNetworkEvents --networkId 'STRING' --kwargs '{"key1": "value1
 
 ##### Method Code:
 ```python
-def getNetworkEvents(networkId: str, total_pages=1, direction='prev', event_log_end_time=None, **kwargs):
+def getNetworkEvents(networkId:str, total_pages=1, direction='prev', event_log_end_time=None, **kwargs):
     # Code
 ````
 
@@ -10216,7 +10216,7 @@ meraki networks getNetworkEventsEventTypes --networkId 'STRING'
 
 ##### Method Code:
 ```python
-def getNetworkEventsEventTypes(networkId: str):
+def getNetworkEventsEventTypes(networkId:str):
     # Code
 ````
 
@@ -10241,7 +10241,7 @@ meraki networks getNetworkFirmwareUpgrades --networkId 'STRING'
 
 ##### Method Code:
 ```python
-def getNetworkFirmwareUpgrades(networkId: str):
+def getNetworkFirmwareUpgrades(networkId:str):
     # Code
 ````
 
@@ -10267,7 +10267,7 @@ meraki networks getNetworkFloorPlan --networkId 'STRING' --floorPlanId 'STRING'
 
 ##### Method Code:
 ```python
-def getNetworkFloorPlan(networkId: str, floorPlanId: str):
+def getNetworkFloorPlan(networkId:str, floorPlanId:str):
     # Code
 ````
 
@@ -10292,7 +10292,7 @@ meraki networks getNetworkFloorPlans --networkId 'STRING'
 
 ##### Method Code:
 ```python
-def getNetworkFloorPlans(networkId: str):
+def getNetworkFloorPlans(networkId:str):
     # Code
 ````
 
@@ -10317,7 +10317,7 @@ meraki networks getNetworkGroupPolicies --networkId 'STRING'
 
 ##### Method Code:
 ```python
-def getNetworkGroupPolicies(networkId: str):
+def getNetworkGroupPolicies(networkId:str):
     # Code
 ````
 
@@ -10343,7 +10343,7 @@ meraki networks getNetworkGroupPolicy --networkId 'STRING' --groupPolicyId 'STRI
 
 ##### Method Code:
 ```python
-def getNetworkGroupPolicy(networkId: str, groupPolicyId: str):
+def getNetworkGroupPolicy(networkId:str, groupPolicyId:str):
     # Code
 ````
 
@@ -10369,7 +10369,7 @@ meraki networks getNetworkMerakiAuthUser --networkId 'STRING' --merakiAuthUserId
 
 ##### Method Code:
 ```python
-def getNetworkMerakiAuthUser(networkId: str, merakiAuthUserId: str):
+def getNetworkMerakiAuthUser(networkId:str, merakiAuthUserId:str):
     # Code
 ````
 
@@ -10394,7 +10394,7 @@ meraki networks getNetworkMerakiAuthUsers --networkId 'STRING'
 
 ##### Method Code:
 ```python
-def getNetworkMerakiAuthUsers(networkId: str):
+def getNetworkMerakiAuthUsers(networkId:str):
     # Code
 ````
 
@@ -10420,7 +10420,7 @@ meraki networks getNetworkMqttBroker --networkId 'STRING' --mqttBrokerId 'STRING
 
 ##### Method Code:
 ```python
-def getNetworkMqttBroker(networkId: str, mqttBrokerId: str):
+def getNetworkMqttBroker(networkId:str, mqttBrokerId:str):
     # Code
 ````
 
@@ -10445,7 +10445,7 @@ meraki networks getNetworkMqttBrokers --networkId 'STRING'
 
 ##### Method Code:
 ```python
-def getNetworkMqttBrokers(networkId: str):
+def getNetworkMqttBrokers(networkId:str):
     # Code
 ````
 
@@ -10470,7 +10470,7 @@ meraki networks getNetworkNetflow --networkId 'STRING'
 
 ##### Method Code:
 ```python
-def getNetworkNetflow(networkId: str):
+def getNetworkNetflow(networkId:str):
     # Code
 ````
 
@@ -10509,7 +10509,7 @@ meraki networks getNetworkNetworkHealthChannelUtilization --networkId 'STRING' -
 
 ##### Method Code:
 ```python
-def getNetworkNetworkHealthChannelUtilization(networkId: str, total_pages=1, direction='next', **kwargs):
+def getNetworkNetworkHealthChannelUtilization(networkId:str, total_pages=1, direction='next', **kwargs):
     # Code
 ````
 
@@ -10545,7 +10545,7 @@ meraki networks getNetworkPiiPiiKeys --networkId 'STRING' --kwargs '{"key1": "va
 
 ##### Method Code:
 ```python
-def getNetworkPiiPiiKeys(networkId: str, **kwargs):
+def getNetworkPiiPiiKeys(networkId:str, **kwargs):
     # Code
 ````
 
@@ -10571,7 +10571,7 @@ meraki networks getNetworkPiiRequest --networkId 'STRING' --requestId 'STRING'
 
 ##### Method Code:
 ```python
-def getNetworkPiiRequest(networkId: str, requestId: str):
+def getNetworkPiiRequest(networkId:str, requestId:str):
     # Code
 ````
 
@@ -10596,7 +10596,7 @@ meraki networks getNetworkPiiRequests --networkId 'STRING'
 
 ##### Method Code:
 ```python
-def getNetworkPiiRequests(networkId: str):
+def getNetworkPiiRequests(networkId:str):
     # Code
 ````
 
@@ -10632,7 +10632,7 @@ meraki networks getNetworkPiiSmDevicesForKey --networkId 'STRING' --kwargs '{"ke
 
 ##### Method Code:
 ```python
-def getNetworkPiiSmDevicesForKey(networkId: str, **kwargs):
+def getNetworkPiiSmDevicesForKey(networkId:str, **kwargs):
     # Code
 ````
 
@@ -10668,7 +10668,7 @@ meraki networks getNetworkPiiSmOwnersForKey --networkId 'STRING' --kwargs '{"key
 
 ##### Method Code:
 ```python
-def getNetworkPiiSmOwnersForKey(networkId: str, **kwargs):
+def getNetworkPiiSmOwnersForKey(networkId:str, **kwargs):
     # Code
 ````
 
@@ -10693,7 +10693,7 @@ meraki networks getNetworkSettings --networkId 'STRING'
 
 ##### Method Code:
 ```python
-def getNetworkSettings(networkId: str):
+def getNetworkSettings(networkId:str):
     # Code
 ````
 
@@ -10718,7 +10718,7 @@ meraki networks getNetworkSnmp --networkId 'STRING'
 
 ##### Method Code:
 ```python
-def getNetworkSnmp(networkId: str):
+def getNetworkSnmp(networkId:str):
     # Code
 ````
 
@@ -10751,7 +10751,7 @@ meraki networks getNetworkSplashLoginAttempts --networkId 'STRING' --kwargs '{"k
 
 ##### Method Code:
 ```python
-def getNetworkSplashLoginAttempts(networkId: str, **kwargs):
+def getNetworkSplashLoginAttempts(networkId:str, **kwargs):
     # Code
 ````
 
@@ -10776,7 +10776,7 @@ meraki networks getNetworkSyslogServers --networkId 'STRING'
 
 ##### Method Code:
 ```python
-def getNetworkSyslogServers(networkId: str):
+def getNetworkSyslogServers(networkId:str):
     # Code
 ````
 
@@ -10809,7 +10809,7 @@ meraki networks getNetworkTraffic --networkId 'STRING' --kwargs '{"key1": "value
 
 ##### Method Code:
 ```python
-def getNetworkTraffic(networkId: str, **kwargs):
+def getNetworkTraffic(networkId:str, **kwargs):
     # Code
 ````
 
@@ -10834,7 +10834,7 @@ meraki networks getNetworkTrafficAnalysis --networkId 'STRING'
 
 ##### Method Code:
 ```python
-def getNetworkTrafficAnalysis(networkId: str):
+def getNetworkTrafficAnalysis(networkId:str):
     # Code
 ````
 
@@ -10859,7 +10859,7 @@ meraki networks getNetworkTrafficShapingApplicationCategories --networkId 'STRIN
 
 ##### Method Code:
 ```python
-def getNetworkTrafficShapingApplicationCategories(networkId: str):
+def getNetworkTrafficShapingApplicationCategories(networkId:str):
     # Code
 ````
 
@@ -10884,7 +10884,7 @@ meraki networks getNetworkTrafficShapingDscpTaggingOptions --networkId 'STRING'
 
 ##### Method Code:
 ```python
-def getNetworkTrafficShapingDscpTaggingOptions(networkId: str):
+def getNetworkTrafficShapingDscpTaggingOptions(networkId:str):
     # Code
 ````
 
@@ -10910,7 +10910,7 @@ meraki networks getNetworkWebhooksHttpServer --networkId 'STRING' --httpServerId
 
 ##### Method Code:
 ```python
-def getNetworkWebhooksHttpServer(networkId: str, httpServerId: str):
+def getNetworkWebhooksHttpServer(networkId:str, httpServerId:str):
     # Code
 ````
 
@@ -10935,7 +10935,7 @@ meraki networks getNetworkWebhooksHttpServers --networkId 'STRING'
 
 ##### Method Code:
 ```python
-def getNetworkWebhooksHttpServers(networkId: str):
+def getNetworkWebhooksHttpServers(networkId:str):
     # Code
 ````
 
@@ -10961,7 +10961,7 @@ meraki networks getNetworkWebhooksWebhookTest --networkId 'STRING' --webhookTest
 
 ##### Method Code:
 ```python
-def getNetworkWebhooksWebhookTest(networkId: str, webhookTestId: str):
+def getNetworkWebhooksWebhookTest(networkId:str, webhookTestId:str):
     # Code
 ````
 
@@ -10996,7 +10996,7 @@ meraki networks provisionNetworkClients --networkId 'STRING' --clients ITEM --de
 
 ##### Method Code:
 ```python
-def provisionNetworkClients(networkId: str, clients: list, devicePolicy: str, **kwargs):
+def provisionNetworkClients(networkId:str, clients:list, devicePolicy:str, **kwargs):
     # Code
 ````
 
@@ -11022,7 +11022,7 @@ meraki networks removeNetworkDevices --networkId 'STRING' --serial 'STRING'
 
 ##### Method Code:
 ```python
-def removeNetworkDevices(networkId: str, serial: str):
+def removeNetworkDevices(networkId:str, serial:str):
     # Code
 ````
 
@@ -11047,7 +11047,7 @@ meraki networks splitNetwork --networkId 'STRING'
 
 ##### Method Code:
 ```python
-def splitNetwork(networkId: str):
+def splitNetwork(networkId:str):
     # Code
 ````
 
@@ -11072,7 +11072,7 @@ meraki networks unbindNetwork --networkId 'STRING'
 
 ##### Method Code:
 ```python
-def unbindNetwork(networkId: str):
+def unbindNetwork(networkId:str):
     # Code
 ````
 
@@ -11107,7 +11107,7 @@ meraki networks updateNetwork --networkId 'STRING' --kwargs '{"key1": "value1", 
 
 ##### Method Code:
 ```python
-def updateNetwork(networkId: str, **kwargs):
+def updateNetwork(networkId:str, **kwargs):
     # Code
 ````
 
@@ -11139,7 +11139,7 @@ meraki networks updateNetworkAlertsSettings --networkId 'STRING' --kwargs '{"key
 
 ##### Method Code:
 ```python
-def updateNetworkAlertsSettings(networkId: str, **kwargs):
+def updateNetworkAlertsSettings(networkId:str, **kwargs):
     # Code
 ````
 
@@ -11172,7 +11172,7 @@ meraki networks updateNetworkClientPolicy --networkId 'STRING' --clientId 'STRIN
 
 ##### Method Code:
 ```python
-def updateNetworkClientPolicy(networkId: str, clientId: str, devicePolicy: str, **kwargs):
+def updateNetworkClientPolicy(networkId:str, clientId:str, devicePolicy:str, **kwargs):
     # Code
 ````
 
@@ -11199,7 +11199,7 @@ meraki networks updateNetworkClientSplashAuthorizationStatus --networkId 'STRING
 
 ##### Method Code:
 ```python
-def updateNetworkClientSplashAuthorizationStatus(networkId: str, clientId: str, ssids: dict):
+def updateNetworkClientSplashAuthorizationStatus(networkId:str, clientId:str, ssids:dict):
     # Code
 ````
 
@@ -11232,7 +11232,7 @@ meraki networks updateNetworkFirmwareUpgrades --networkId 'STRING' --kwargs '{"k
 
 ##### Method Code:
 ```python
-def updateNetworkFirmwareUpgrades(networkId: str, **kwargs):
+def updateNetworkFirmwareUpgrades(networkId:str, **kwargs):
     # Code
 ````
 
@@ -11270,7 +11270,7 @@ meraki networks updateNetworkFloorPlan --networkId 'STRING' --floorPlanId 'STRIN
 
 ##### Method Code:
 ```python
-def updateNetworkFloorPlan(networkId: str, floorPlanId: str, **kwargs):
+def updateNetworkFloorPlan(networkId:str, floorPlanId:str, **kwargs):
     # Code
 ````
 
@@ -11312,7 +11312,7 @@ meraki networks updateNetworkGroupPolicy --networkId 'STRING' --groupPolicyId 'S
 
 ##### Method Code:
 ```python
-def updateNetworkGroupPolicy(networkId: str, groupPolicyId: str, **kwargs):
+def updateNetworkGroupPolicy(networkId:str, groupPolicyId:str, **kwargs):
     # Code
 ````
 
@@ -11347,7 +11347,7 @@ meraki networks updateNetworkMerakiAuthUser --networkId 'STRING' --merakiAuthUse
 
 ##### Method Code:
 ```python
-def updateNetworkMerakiAuthUser(networkId: str, merakiAuthUserId: str, **kwargs):
+def updateNetworkMerakiAuthUser(networkId:str, merakiAuthUserId:str, **kwargs):
     # Code
 ````
 
@@ -11381,7 +11381,7 @@ meraki networks updateNetworkMqttBroker --networkId 'STRING' --mqttBrokerId 'STR
 
 ##### Method Code:
 ```python
-def updateNetworkMqttBroker(networkId: str, mqttBrokerId: str, **kwargs):
+def updateNetworkMqttBroker(networkId:str, mqttBrokerId:str, **kwargs):
     # Code
 ````
 
@@ -11416,7 +11416,7 @@ meraki networks updateNetworkNetflow --networkId 'STRING' --kwargs '{"key1": "va
 
 ##### Method Code:
 ```python
-def updateNetworkNetflow(networkId: str, **kwargs):
+def updateNetworkNetflow(networkId:str, **kwargs):
     # Code
 ````
 
@@ -11449,7 +11449,7 @@ meraki networks updateNetworkSettings --networkId 'STRING' --kwargs '{"key1": "v
 
 ##### Method Code:
 ```python
-def updateNetworkSettings(networkId: str, **kwargs):
+def updateNetworkSettings(networkId:str, **kwargs):
     # Code
 ````
 
@@ -11482,7 +11482,7 @@ meraki networks updateNetworkSnmp --networkId 'STRING' --kwargs '{"key1": "value
 
 ##### Method Code:
 ```python
-def updateNetworkSnmp(networkId: str, **kwargs):
+def updateNetworkSnmp(networkId:str, **kwargs):
     # Code
 ````
 
@@ -11508,7 +11508,7 @@ meraki networks updateNetworkSyslogServers --networkId 'STRING' --servers ITEM
 
 ##### Method Code:
 ```python
-def updateNetworkSyslogServers(networkId: str, servers: list):
+def updateNetworkSyslogServers(networkId:str, servers:list):
     # Code
 ````
 
@@ -11542,7 +11542,7 @@ meraki networks updateNetworkTrafficAnalysis --networkId 'STRING' --kwargs '{"ke
 
 ##### Method Code:
 ```python
-def updateNetworkTrafficAnalysis(networkId: str, **kwargs):
+def updateNetworkTrafficAnalysis(networkId:str, **kwargs):
     # Code
 ````
 
@@ -11576,7 +11576,7 @@ meraki networks updateNetworkWebhooksHttpServer --networkId 'STRING' --httpServe
 
 ##### Method Code:
 ```python
-def updateNetworkWebhooksHttpServer(networkId: str, httpServerId: str, **kwargs):
+def updateNetworkWebhooksHttpServer(networkId:str, httpServerId:str, **kwargs):
     # Code
 ````
 
@@ -11605,7 +11605,7 @@ meraki organizations assignOrganizationLicensesSeats --organizationId 'STRING' -
 
 ##### Method Code:
 ```python
-def assignOrganizationLicensesSeats(organizationId: str, licenseId: str, networkId: str, seatCount: int):
+def assignOrganizationLicensesSeats(organizationId:str, licenseId:str, networkId:str, seatCount:int):
     # Code
 ````
 
@@ -11638,7 +11638,7 @@ meraki organizations claimIntoOrganization --organizationId 'STRING' --kwargs '{
 
 ##### Method Code:
 ```python
-def claimIntoOrganization(organizationId: str, **kwargs):
+def claimIntoOrganization(organizationId:str, **kwargs):
     # Code
 ````
 
@@ -11664,7 +11664,7 @@ meraki organizations cloneOrganization --organizationId 'STRING' --name 'STRING'
 
 ##### Method Code:
 ```python
-def cloneOrganization(organizationId: str, name: str):
+def cloneOrganization(organizationId:str, name:str):
     # Code
 ````
 
@@ -11697,7 +11697,7 @@ meraki organizations combineOrganizationNetworks --organizationId 'STRING' --nam
 
 ##### Method Code:
 ```python
-def combineOrganizationNetworks(organizationId: str, name: str, networkIds: list, **kwargs):
+def combineOrganizationNetworks(organizationId:str, name:str, networkIds:list, **kwargs):
     # Code
 ````
 
@@ -11722,7 +11722,7 @@ meraki organizations createOrganization --name 'STRING'
 
 ##### Method Code:
 ```python
-def createOrganization(name: str):
+def createOrganization(name:str):
     # Code
 ````
 
@@ -11755,7 +11755,7 @@ meraki organizations createOrganizationActionBatch --organizationId 'STRING' --a
 
 ##### Method Code:
 ```python
-def createOrganizationActionBatch(organizationId: str, actions: list, **kwargs):
+def createOrganizationActionBatch(organizationId:str, actions:list, **kwargs):
     # Code
 ````
 
@@ -11789,7 +11789,7 @@ meraki organizations createOrganizationAdaptivePolicyAcl --organizationId 'STRIN
 
 ##### Method Code:
 ```python
-def createOrganizationAdaptivePolicyAcl(organizationId: str, name: str, rules: list, ipVersion: str, **kwargs):
+def createOrganizationAdaptivePolicyAcl(organizationId:str, name:str, rules:list, ipVersion:str, **kwargs):
     # Code
 ````
 
@@ -11825,7 +11825,7 @@ meraki organizations createOrganizationAdmin --organizationId 'STRING' --email '
 
 ##### Method Code:
 ```python
-def createOrganizationAdmin(organizationId: str, email: str, name: str, orgAccess: str, **kwargs):
+def createOrganizationAdmin(organizationId:str, email:str, name:str, orgAccess:str, **kwargs):
     # Code
 ````
 
@@ -11863,7 +11863,7 @@ meraki organizations createOrganizationBrandingPolicy --organizationId 'STRING' 
 
 ##### Method Code:
 ```python
-def createOrganizationBrandingPolicy(organizationId: str, name: str, enabled: bool, adminSettings: dict, **kwargs):
+def createOrganizationBrandingPolicy(organizationId:str, name:str, enabled:bool, adminSettings:dict, **kwargs):
     # Code
 ````
 
@@ -11896,7 +11896,7 @@ meraki organizations createOrganizationConfigTemplate --organizationId 'STRING' 
 
 ##### Method Code:
 ```python
-def createOrganizationConfigTemplate(organizationId: str, name: str, **kwargs):
+def createOrganizationConfigTemplate(organizationId:str, name:str, **kwargs):
     # Code
 ````
 
@@ -11932,7 +11932,7 @@ meraki organizations createOrganizationNetwork --organizationId 'STRING' --name 
 
 ##### Method Code:
 ```python
-def createOrganizationNetwork(organizationId: str, name: str, productTypes: list, **kwargs):
+def createOrganizationNetwork(organizationId:str, name:str, productTypes:list, **kwargs):
     # Code
 ````
 
@@ -11964,7 +11964,7 @@ meraki organizations createOrganizationSamlIdp --organizationId 'STRING' --x509c
 
 ##### Method Code:
 ```python
-def createOrganizationSamlIdp(organizationId: str, x509certSha1Fingerprint: str, **kwargs):
+def createOrganizationSamlIdp(organizationId:str, x509certSha1Fingerprint:str, **kwargs):
     # Code
 ````
 
@@ -11998,7 +11998,7 @@ meraki organizations createOrganizationSamlRole --organizationId 'STRING' --role
 
 ##### Method Code:
 ```python
-def createOrganizationSamlRole(organizationId: str, role: str, orgAccess: str, **kwargs):
+def createOrganizationSamlRole(organizationId:str, role:str, orgAccess:str, **kwargs):
     # Code
 ````
 
@@ -12023,7 +12023,7 @@ meraki organizations deleteOrganization --organizationId 'STRING'
 
 ##### Method Code:
 ```python
-def deleteOrganization(organizationId: str):
+def deleteOrganization(organizationId:str):
     # Code
 ````
 
@@ -12049,7 +12049,7 @@ meraki organizations deleteOrganizationActionBatch --organizationId 'STRING' --a
 
 ##### Method Code:
 ```python
-def deleteOrganizationActionBatch(organizationId: str, actionBatchId: str):
+def deleteOrganizationActionBatch(organizationId:str, actionBatchId:str):
     # Code
 ````
 
@@ -12075,7 +12075,7 @@ meraki organizations deleteOrganizationAdaptivePolicyAcl --organizationId 'STRIN
 
 ##### Method Code:
 ```python
-def deleteOrganizationAdaptivePolicyAcl(organizationId: str, id: str):
+def deleteOrganizationAdaptivePolicyAcl(organizationId:str, id:str):
     # Code
 ````
 
@@ -12101,7 +12101,7 @@ meraki organizations deleteOrganizationAdmin --organizationId 'STRING' --adminId
 
 ##### Method Code:
 ```python
-def deleteOrganizationAdmin(organizationId: str, adminId: str):
+def deleteOrganizationAdmin(organizationId:str, adminId:str):
     # Code
 ````
 
@@ -12127,7 +12127,7 @@ meraki organizations deleteOrganizationBrandingPolicy --organizationId 'STRING' 
 
 ##### Method Code:
 ```python
-def deleteOrganizationBrandingPolicy(organizationId: str, brandingPolicyId: str):
+def deleteOrganizationBrandingPolicy(organizationId:str, brandingPolicyId:str):
     # Code
 ````
 
@@ -12153,7 +12153,7 @@ meraki organizations deleteOrganizationConfigTemplate --organizationId 'STRING' 
 
 ##### Method Code:
 ```python
-def deleteOrganizationConfigTemplate(organizationId: str, configTemplateId: str):
+def deleteOrganizationConfigTemplate(organizationId:str, configTemplateId:str):
     # Code
 ````
 
@@ -12179,7 +12179,7 @@ meraki organizations deleteOrganizationSamlIdp --organizationId 'STRING' --idpId
 
 ##### Method Code:
 ```python
-def deleteOrganizationSamlIdp(organizationId: str, idpId: str):
+def deleteOrganizationSamlIdp(organizationId:str, idpId:str):
     # Code
 ````
 
@@ -12205,7 +12205,7 @@ meraki organizations deleteOrganizationSamlRole --organizationId 'STRING' --saml
 
 ##### Method Code:
 ```python
-def deleteOrganizationSamlRole(organizationId: str, samlRoleId: str):
+def deleteOrganizationSamlRole(organizationId:str, samlRoleId:str):
     # Code
 ````
 
@@ -12230,7 +12230,7 @@ meraki organizations getOrganization --organizationId 'STRING'
 
 ##### Method Code:
 ```python
-def getOrganization(organizationId: str):
+def getOrganization(organizationId:str):
     # Code
 ````
 
@@ -12256,7 +12256,7 @@ meraki organizations getOrganizationActionBatch --organizationId 'STRING' --acti
 
 ##### Method Code:
 ```python
-def getOrganizationActionBatch(organizationId: str, actionBatchId: str):
+def getOrganizationActionBatch(organizationId:str, actionBatchId:str):
     # Code
 ````
 
@@ -12287,7 +12287,7 @@ meraki organizations getOrganizationActionBatches --organizationId 'STRING' --kw
 
 ##### Method Code:
 ```python
-def getOrganizationActionBatches(organizationId: str, **kwargs):
+def getOrganizationActionBatches(organizationId:str, **kwargs):
     # Code
 ````
 
@@ -12313,7 +12313,7 @@ meraki organizations getOrganizationAdaptivePolicyAcl --organizationId 'STRING' 
 
 ##### Method Code:
 ```python
-def getOrganizationAdaptivePolicyAcl(organizationId: str, id: str):
+def getOrganizationAdaptivePolicyAcl(organizationId:str, id:str):
     # Code
 ````
 
@@ -12338,7 +12338,7 @@ meraki organizations getOrganizationAdaptivePolicyAcls --organizationId 'STRING'
 
 ##### Method Code:
 ```python
-def getOrganizationAdaptivePolicyAcls(organizationId: str):
+def getOrganizationAdaptivePolicyAcls(organizationId:str):
     # Code
 ````
 
@@ -12363,7 +12363,7 @@ meraki organizations getOrganizationAdaptivePolicySettings --organizationId 'STR
 
 ##### Method Code:
 ```python
-def getOrganizationAdaptivePolicySettings(organizationId: str):
+def getOrganizationAdaptivePolicySettings(organizationId:str):
     # Code
 ````
 
@@ -12388,7 +12388,7 @@ meraki organizations getOrganizationAdmins --organizationId 'STRING'
 
 ##### Method Code:
 ```python
-def getOrganizationAdmins(organizationId: str):
+def getOrganizationAdmins(organizationId:str):
     # Code
 ````
 
@@ -12431,7 +12431,7 @@ meraki organizations getOrganizationApiRequests --organizationId 'STRING' --kwar
 
 ##### Method Code:
 ```python
-def getOrganizationApiRequests(organizationId: str, total_pages=1, direction='next', **kwargs):
+def getOrganizationApiRequests(organizationId:str, total_pages=1, direction='next', **kwargs):
     # Code
 ````
 
@@ -12464,7 +12464,7 @@ meraki organizations getOrganizationApiRequestsOverview --organizationId 'STRING
 
 ##### Method Code:
 ```python
-def getOrganizationApiRequestsOverview(organizationId: str, **kwargs):
+def getOrganizationApiRequestsOverview(organizationId:str, **kwargs):
     # Code
 ````
 
@@ -12489,7 +12489,7 @@ meraki organizations getOrganizationBrandingPolicies --organizationId 'STRING'
 
 ##### Method Code:
 ```python
-def getOrganizationBrandingPolicies(organizationId: str):
+def getOrganizationBrandingPolicies(organizationId:str):
     # Code
 ````
 
@@ -12514,7 +12514,7 @@ meraki organizations getOrganizationBrandingPoliciesPriorities --organizationId 
 
 ##### Method Code:
 ```python
-def getOrganizationBrandingPoliciesPriorities(organizationId: str):
+def getOrganizationBrandingPoliciesPriorities(organizationId:str):
     # Code
 ````
 
@@ -12540,7 +12540,7 @@ meraki organizations getOrganizationBrandingPolicy --organizationId 'STRING' --b
 
 ##### Method Code:
 ```python
-def getOrganizationBrandingPolicy(organizationId: str, brandingPolicyId: str):
+def getOrganizationBrandingPolicy(organizationId:str, brandingPolicyId:str):
     # Code
 ````
 
@@ -12566,7 +12566,7 @@ meraki organizations getOrganizationConfigTemplate --organizationId 'STRING' --c
 
 ##### Method Code:
 ```python
-def getOrganizationConfigTemplate(organizationId: str, configTemplateId: str):
+def getOrganizationConfigTemplate(organizationId:str, configTemplateId:str):
     # Code
 ````
 
@@ -12591,7 +12591,7 @@ meraki organizations getOrganizationConfigTemplates --organizationId 'STRING'
 
 ##### Method Code:
 ```python
-def getOrganizationConfigTemplates(organizationId: str):
+def getOrganizationConfigTemplates(organizationId:str):
     # Code
 ````
 
@@ -12631,7 +12631,7 @@ meraki organizations getOrganizationConfigurationChanges --organizationId 'STRIN
 
 ##### Method Code:
 ```python
-def getOrganizationConfigurationChanges(organizationId: str, total_pages=1, direction='prev', **kwargs):
+def getOrganizationConfigurationChanges(organizationId:str, total_pages=1, direction='prev', **kwargs):
     # Code
 ````
 
@@ -12667,7 +12667,7 @@ meraki organizations getOrganizationDevices --organizationId 'STRING' --kwargs '
 
 ##### Method Code:
 ```python
-def getOrganizationDevices(organizationId: str, total_pages=1, direction='next', **kwargs):
+def getOrganizationDevices(organizationId:str, total_pages=1, direction='next', **kwargs):
     # Code
 ````
 
@@ -12703,7 +12703,7 @@ meraki organizations getOrganizationDevicesStatuses --organizationId 'STRING' --
 
 ##### Method Code:
 ```python
-def getOrganizationDevicesStatuses(organizationId: str, total_pages=1, direction='next', **kwargs):
+def getOrganizationDevicesStatuses(organizationId:str, total_pages=1, direction='next', **kwargs):
     # Code
 ````
 
@@ -12738,7 +12738,7 @@ meraki organizations getOrganizationDevicesUplinksLossAndLatency --organizationI
 
 ##### Method Code:
 ```python
-def getOrganizationDevicesUplinksLossAndLatency(organizationId: str, **kwargs):
+def getOrganizationDevicesUplinksLossAndLatency(organizationId:str, **kwargs):
     # Code
 ````
 
@@ -12764,7 +12764,7 @@ meraki organizations getOrganizationInventoryDevice --organizationId 'STRING' --
 
 ##### Method Code:
 ```python
-def getOrganizationInventoryDevice(organizationId: str, serial: str):
+def getOrganizationInventoryDevice(organizationId:str, serial:str):
     # Code
 ````
 
@@ -12801,7 +12801,7 @@ meraki organizations getOrganizationInventoryDevices --organizationId 'STRING' -
 
 ##### Method Code:
 ```python
-def getOrganizationInventoryDevices(organizationId: str, total_pages=1, direction='next', **kwargs):
+def getOrganizationInventoryDevices(organizationId:str, total_pages=1, direction='next', **kwargs):
     # Code
 ````
 
@@ -12827,7 +12827,7 @@ meraki organizations getOrganizationLicense --organizationId 'STRING' --licenseI
 
 ##### Method Code:
 ```python
-def getOrganizationLicense(organizationId: str, licenseId: str):
+def getOrganizationLicense(organizationId:str, licenseId:str):
     # Code
 ````
 
@@ -12865,7 +12865,7 @@ meraki organizations getOrganizationLicenses --organizationId 'STRING' --kwargs 
 
 ##### Method Code:
 ```python
-def getOrganizationLicenses(organizationId: str, total_pages=1, direction='next', **kwargs):
+def getOrganizationLicenses(organizationId:str, total_pages=1, direction='next', **kwargs):
     # Code
 ````
 
@@ -12890,7 +12890,7 @@ meraki organizations getOrganizationLicensesOverview --organizationId 'STRING'
 
 ##### Method Code:
 ```python
-def getOrganizationLicensesOverview(organizationId: str):
+def getOrganizationLicensesOverview(organizationId:str):
     # Code
 ````
 
@@ -12915,7 +12915,7 @@ meraki organizations getOrganizationLoginSecurity --organizationId 'STRING'
 
 ##### Method Code:
 ```python
-def getOrganizationLoginSecurity(organizationId: str):
+def getOrganizationLoginSecurity(organizationId:str):
     # Code
 ````
 
@@ -12953,7 +12953,7 @@ meraki organizations getOrganizationNetworks --organizationId 'STRING' --kwargs 
 
 ##### Method Code:
 ```python
-def getOrganizationNetworks(organizationId: str, total_pages=1, direction='next', **kwargs):
+def getOrganizationNetworks(organizationId:str, total_pages=1, direction='next', **kwargs):
     # Code
 ````
 
@@ -12978,7 +12978,7 @@ meraki organizations getOrganizationOpenapiSpec --organizationId 'STRING'
 
 ##### Method Code:
 ```python
-def getOrganizationOpenapiSpec(organizationId: str):
+def getOrganizationOpenapiSpec(organizationId:str):
     # Code
 ````
 
@@ -13003,7 +13003,7 @@ meraki organizations getOrganizationSaml --organizationId 'STRING'
 
 ##### Method Code:
 ```python
-def getOrganizationSaml(organizationId: str):
+def getOrganizationSaml(organizationId:str):
     # Code
 ````
 
@@ -13029,7 +13029,7 @@ meraki organizations getOrganizationSamlIdp --organizationId 'STRING' --idpId 'S
 
 ##### Method Code:
 ```python
-def getOrganizationSamlIdp(organizationId: str, idpId: str):
+def getOrganizationSamlIdp(organizationId:str, idpId:str):
     # Code
 ````
 
@@ -13054,7 +13054,7 @@ meraki organizations getOrganizationSamlIdps --organizationId 'STRING'
 
 ##### Method Code:
 ```python
-def getOrganizationSamlIdps(organizationId: str):
+def getOrganizationSamlIdps(organizationId:str):
     # Code
 ````
 
@@ -13080,7 +13080,7 @@ meraki organizations getOrganizationSamlRole --organizationId 'STRING' --samlRol
 
 ##### Method Code:
 ```python
-def getOrganizationSamlRole(organizationId: str, samlRoleId: str):
+def getOrganizationSamlRole(organizationId:str, samlRoleId:str):
     # Code
 ````
 
@@ -13105,7 +13105,7 @@ meraki organizations getOrganizationSamlRoles --organizationId 'STRING'
 
 ##### Method Code:
 ```python
-def getOrganizationSamlRoles(organizationId: str):
+def getOrganizationSamlRoles(organizationId:str):
     # Code
 ````
 
@@ -13130,7 +13130,7 @@ meraki organizations getOrganizationSnmp --organizationId 'STRING'
 
 ##### Method Code:
 ```python
-def getOrganizationSnmp(organizationId: str):
+def getOrganizationSnmp(organizationId:str):
     # Code
 ````
 
@@ -13168,7 +13168,7 @@ meraki organizations getOrganizationUplinksStatuses --organizationId 'STRING' --
 
 ##### Method Code:
 ```python
-def getOrganizationUplinksStatuses(organizationId: str, total_pages=1, direction='next', **kwargs):
+def getOrganizationUplinksStatuses(organizationId:str, total_pages=1, direction='next', **kwargs):
     # Code
 ````
 
@@ -13193,7 +13193,7 @@ meraki organizations getOrganizationWebhooksAlertTypes --organizationId 'STRING'
 
 ##### Method Code:
 ```python
-def getOrganizationWebhooksAlertTypes(organizationId: str):
+def getOrganizationWebhooksAlertTypes(organizationId:str):
     # Code
 ````
 
@@ -13232,7 +13232,7 @@ meraki organizations getOrganizationWebhooksLogs --organizationId 'STRING' --kwa
 
 ##### Method Code:
 ```python
-def getOrganizationWebhooksLogs(organizationId: str, total_pages=1, direction='next', **kwargs):
+def getOrganizationWebhooksLogs(organizationId:str, total_pages=1, direction='next', **kwargs):
     # Code
 ````
 
@@ -13283,7 +13283,7 @@ meraki organizations moveOrganizationLicenses --organizationId 'STRING' --destOr
 
 ##### Method Code:
 ```python
-def moveOrganizationLicenses(organizationId: str, destOrganizationId: str, licenseIds: list):
+def moveOrganizationLicenses(organizationId:str, destOrganizationId:str, licenseIds:list):
     # Code
 ````
 
@@ -13311,7 +13311,7 @@ meraki organizations moveOrganizationLicensesSeats --organizationId 'STRING' --d
 
 ##### Method Code:
 ```python
-def moveOrganizationLicensesSeats(organizationId: str, destOrganizationId: str, licenseId: str, seatCount: int):
+def moveOrganizationLicensesSeats(organizationId:str, destOrganizationId:str, licenseId:str, seatCount:int):
     # Code
 ````
 
@@ -13338,7 +13338,7 @@ meraki organizations renewOrganizationLicensesSeats --organizationId 'STRING' --
 
 ##### Method Code:
 ```python
-def renewOrganizationLicensesSeats(organizationId: str, licenseIdToRenew: str, unusedLicenseId: str):
+def renewOrganizationLicensesSeats(organizationId:str, licenseIdToRenew:str, unusedLicenseId:str):
     # Code
 ````
 
@@ -13370,7 +13370,7 @@ meraki organizations updateOrganization --organizationId 'STRING' --kwargs '{"ke
 
 ##### Method Code:
 ```python
-def updateOrganization(organizationId: str, **kwargs):
+def updateOrganization(organizationId:str, **kwargs):
     # Code
 ````
 
@@ -13403,7 +13403,7 @@ meraki organizations updateOrganizationActionBatch --organizationId 'STRING' --a
 
 ##### Method Code:
 ```python
-def updateOrganizationActionBatch(organizationId: str, actionBatchId: str, **kwargs):
+def updateOrganizationActionBatch(organizationId:str, actionBatchId:str, **kwargs):
     # Code
 ````
 
@@ -13438,7 +13438,7 @@ meraki organizations updateOrganizationAdaptivePolicyAcl --organizationId 'STRIN
 
 ##### Method Code:
 ```python
-def updateOrganizationAdaptivePolicyAcl(organizationId: str, id: str, **kwargs):
+def updateOrganizationAdaptivePolicyAcl(organizationId:str, id:str, **kwargs):
     # Code
 ````
 
@@ -13469,7 +13469,7 @@ meraki organizations updateOrganizationAdaptivePolicySettings --organizationId '
 
 ##### Method Code:
 ```python
-def updateOrganizationAdaptivePolicySettings(organizationId: str, **kwargs):
+def updateOrganizationAdaptivePolicySettings(organizationId:str, **kwargs):
     # Code
 ````
 
@@ -13504,7 +13504,7 @@ meraki organizations updateOrganizationAdmin --organizationId 'STRING' --adminId
 
 ##### Method Code:
 ```python
-def updateOrganizationAdmin(organizationId: str, adminId: str, **kwargs):
+def updateOrganizationAdmin(organizationId:str, adminId:str, **kwargs):
     # Code
 ````
 
@@ -13530,7 +13530,7 @@ meraki organizations updateOrganizationBrandingPoliciesPriorities --organization
 
 ##### Method Code:
 ```python
-def updateOrganizationBrandingPoliciesPriorities(organizationId: str, brandingPolicyIds: list):
+def updateOrganizationBrandingPoliciesPriorities(organizationId:str, brandingPolicyIds:list):
     # Code
 ````
 
@@ -13569,7 +13569,7 @@ meraki organizations updateOrganizationBrandingPolicy --organizationId 'STRING' 
 
 ##### Method Code:
 ```python
-def updateOrganizationBrandingPolicy(organizationId: str, brandingPolicyId: str, **kwargs):
+def updateOrganizationBrandingPolicy(organizationId:str, brandingPolicyId:str, **kwargs):
     # Code
 ````
 
@@ -13602,7 +13602,7 @@ meraki organizations updateOrganizationConfigTemplate --organizationId 'STRING' 
 
 ##### Method Code:
 ```python
-def updateOrganizationConfigTemplate(organizationId: str, configTemplateId: str, **kwargs):
+def updateOrganizationConfigTemplate(organizationId:str, configTemplateId:str, **kwargs):
     # Code
 ````
 
@@ -13634,7 +13634,7 @@ meraki organizations updateOrganizationLicense --organizationId 'STRING' --licen
 
 ##### Method Code:
 ```python
-def updateOrganizationLicense(organizationId: str, licenseId: str, **kwargs):
+def updateOrganizationLicense(organizationId:str, licenseId:str, **kwargs):
     # Code
 ````
 
@@ -13676,7 +13676,7 @@ meraki organizations updateOrganizationLoginSecurity --organizationId 'STRING' -
 
 ##### Method Code:
 ```python
-def updateOrganizationLoginSecurity(organizationId: str, **kwargs):
+def updateOrganizationLoginSecurity(organizationId:str, **kwargs):
     # Code
 ````
 
@@ -13707,7 +13707,7 @@ meraki organizations updateOrganizationSaml --organizationId 'STRING' --kwargs '
 
 ##### Method Code:
 ```python
-def updateOrganizationSaml(organizationId: str, **kwargs):
+def updateOrganizationSaml(organizationId:str, **kwargs):
     # Code
 ````
 
@@ -13740,7 +13740,7 @@ meraki organizations updateOrganizationSamlIdp --organizationId 'STRING' --idpId
 
 ##### Method Code:
 ```python
-def updateOrganizationSamlIdp(organizationId: str, idpId: str, **kwargs):
+def updateOrganizationSamlIdp(organizationId:str, idpId:str, **kwargs):
     # Code
 ````
 
@@ -13775,7 +13775,7 @@ meraki organizations updateOrganizationSamlRole --organizationId 'STRING' --saml
 
 ##### Method Code:
 ```python
-def updateOrganizationSamlRole(organizationId: str, samlRoleId: str, **kwargs):
+def updateOrganizationSamlRole(organizationId:str, samlRoleId:str, **kwargs):
     # Code
 ````
 
@@ -13812,7 +13812,7 @@ meraki organizations updateOrganizationSnmp --organizationId 'STRING' --kwargs '
 
 ##### Method Code:
 ```python
-def updateOrganizationSnmp(organizationId: str, **kwargs):
+def updateOrganizationSnmp(organizationId:str, **kwargs):
     # Code
 ````
 
@@ -13847,7 +13847,7 @@ meraki sm checkinNetworkSmDevices --networkId 'STRING' --kwargs '{"key1": "value
 
 ##### Method Code:
 ```python
-def checkinNetworkSmDevices(networkId: str, **kwargs):
+def checkinNetworkSmDevices(networkId:str, **kwargs):
     # Code
 ````
 
@@ -13873,7 +13873,7 @@ meraki sm createNetworkSmBypassActivationLockAttempt --networkId 'STRING' --ids 
 
 ##### Method Code:
 ```python
-def createNetworkSmBypassActivationLockAttempt(networkId: str, ids: list):
+def createNetworkSmBypassActivationLockAttempt(networkId:str, ids:list):
     # Code
 ````
 
@@ -13905,7 +13905,7 @@ meraki sm createNetworkSmTargetGroup --networkId 'STRING' --kwargs '{"key1": "va
 
 ##### Method Code:
 ```python
-def createNetworkSmTargetGroup(networkId: str, **kwargs):
+def createNetworkSmTargetGroup(networkId:str, **kwargs):
     # Code
 ````
 
@@ -13931,7 +13931,7 @@ meraki sm deleteNetworkSmTargetGroup --networkId 'STRING' --targetGroupId 'STRIN
 
 ##### Method Code:
 ```python
-def deleteNetworkSmTargetGroup(networkId: str, targetGroupId: str):
+def deleteNetworkSmTargetGroup(networkId:str, targetGroupId:str):
     # Code
 ````
 
@@ -13957,7 +13957,7 @@ meraki sm deleteNetworkSmUserAccessDevice --networkId 'STRING' --userAccessDevic
 
 ##### Method Code:
 ```python
-def deleteNetworkSmUserAccessDevice(networkId: str, userAccessDeviceId: str):
+def deleteNetworkSmUserAccessDevice(networkId:str, userAccessDeviceId:str):
     # Code
 ````
 
@@ -13983,7 +13983,7 @@ meraki sm getNetworkSmBypassActivationLockAttempt --networkId 'STRING' --attempt
 
 ##### Method Code:
 ```python
-def getNetworkSmBypassActivationLockAttempt(networkId: str, attemptId: str):
+def getNetworkSmBypassActivationLockAttempt(networkId:str, attemptId:str):
     # Code
 ````
 
@@ -14009,7 +14009,7 @@ meraki sm getNetworkSmDeviceCellularUsageHistory --networkId 'STRING' --deviceId
 
 ##### Method Code:
 ```python
-def getNetworkSmDeviceCellularUsageHistory(networkId: str, deviceId: str):
+def getNetworkSmDeviceCellularUsageHistory(networkId:str, deviceId:str):
     # Code
 ````
 
@@ -14035,7 +14035,7 @@ meraki sm getNetworkSmDeviceCerts --networkId 'STRING' --deviceId 'STRING'
 
 ##### Method Code:
 ```python
-def getNetworkSmDeviceCerts(networkId: str, deviceId: str):
+def getNetworkSmDeviceCerts(networkId:str, deviceId:str):
     # Code
 ````
 
@@ -14071,7 +14071,7 @@ meraki sm getNetworkSmDeviceConnectivity --networkId 'STRING' --deviceId 'STRING
 
 ##### Method Code:
 ```python
-def getNetworkSmDeviceConnectivity(networkId: str, deviceId: str, total_pages=1, direction='next', **kwargs):
+def getNetworkSmDeviceConnectivity(networkId:str, deviceId:str, total_pages=1, direction='next', **kwargs):
     # Code
 ````
 
@@ -14107,7 +14107,7 @@ meraki sm getNetworkSmDeviceDesktopLogs --networkId 'STRING' --deviceId 'STRING'
 
 ##### Method Code:
 ```python
-def getNetworkSmDeviceDesktopLogs(networkId: str, deviceId: str, total_pages=1, direction='next', **kwargs):
+def getNetworkSmDeviceDesktopLogs(networkId:str, deviceId:str, total_pages=1, direction='next', **kwargs):
     # Code
 ````
 
@@ -14143,7 +14143,7 @@ meraki sm getNetworkSmDeviceDeviceCommandLogs --networkId 'STRING' --deviceId 'S
 
 ##### Method Code:
 ```python
-def getNetworkSmDeviceDeviceCommandLogs(networkId: str, deviceId: str, total_pages=1, direction='next', **kwargs):
+def getNetworkSmDeviceDeviceCommandLogs(networkId:str, deviceId:str, total_pages=1, direction='next', **kwargs):
     # Code
 ````
 
@@ -14169,7 +14169,7 @@ meraki sm getNetworkSmDeviceDeviceProfiles --networkId 'STRING' --deviceId 'STRI
 
 ##### Method Code:
 ```python
-def getNetworkSmDeviceDeviceProfiles(networkId: str, deviceId: str):
+def getNetworkSmDeviceDeviceProfiles(networkId:str, deviceId:str):
     # Code
 ````
 
@@ -14195,7 +14195,7 @@ meraki sm getNetworkSmDeviceNetworkAdapters --networkId 'STRING' --deviceId 'STR
 
 ##### Method Code:
 ```python
-def getNetworkSmDeviceNetworkAdapters(networkId: str, deviceId: str):
+def getNetworkSmDeviceNetworkAdapters(networkId:str, deviceId:str):
     # Code
 ````
 
@@ -14231,7 +14231,7 @@ meraki sm getNetworkSmDevicePerformanceHistory --networkId 'STRING' --deviceId '
 
 ##### Method Code:
 ```python
-def getNetworkSmDevicePerformanceHistory(networkId: str, deviceId: str, total_pages=1, direction='next', **kwargs):
+def getNetworkSmDevicePerformanceHistory(networkId:str, deviceId:str, total_pages=1, direction='next', **kwargs):
     # Code
 ````
 
@@ -14257,7 +14257,7 @@ meraki sm getNetworkSmDeviceRestrictions --networkId 'STRING' --deviceId 'STRING
 
 ##### Method Code:
 ```python
-def getNetworkSmDeviceRestrictions(networkId: str, deviceId: str):
+def getNetworkSmDeviceRestrictions(networkId:str, deviceId:str):
     # Code
 ````
 
@@ -14283,7 +14283,7 @@ meraki sm getNetworkSmDeviceSecurityCenters --networkId 'STRING' --deviceId 'STR
 
 ##### Method Code:
 ```python
-def getNetworkSmDeviceSecurityCenters(networkId: str, deviceId: str):
+def getNetworkSmDeviceSecurityCenters(networkId:str, deviceId:str):
     # Code
 ````
 
@@ -14309,7 +14309,7 @@ meraki sm getNetworkSmDeviceSoftwares --networkId 'STRING' --deviceId 'STRING'
 
 ##### Method Code:
 ```python
-def getNetworkSmDeviceSoftwares(networkId: str, deviceId: str):
+def getNetworkSmDeviceSoftwares(networkId:str, deviceId:str):
     # Code
 ````
 
@@ -14335,7 +14335,7 @@ meraki sm getNetworkSmDeviceWlanLists --networkId 'STRING' --deviceId 'STRING'
 
 ##### Method Code:
 ```python
-def getNetworkSmDeviceWlanLists(networkId: str, deviceId: str):
+def getNetworkSmDeviceWlanLists(networkId:str, deviceId:str):
     # Code
 ````
 
@@ -14381,7 +14381,7 @@ meraki sm getNetworkSmDevices --networkId 'STRING' --kwargs '{"key1": "value1", 
 
 ##### Method Code:
 ```python
-def getNetworkSmDevices(networkId: str, total_pages=1, direction='next', **kwargs):
+def getNetworkSmDevices(networkId:str, total_pages=1, direction='next', **kwargs):
     # Code
 ````
 
@@ -14406,7 +14406,7 @@ meraki sm getNetworkSmProfiles --networkId 'STRING'
 
 ##### Method Code:
 ```python
-def getNetworkSmProfiles(networkId: str):
+def getNetworkSmProfiles(networkId:str):
     # Code
 ````
 
@@ -14438,7 +14438,7 @@ meraki sm getNetworkSmTargetGroup --networkId 'STRING' --targetGroupId 'STRING' 
 
 ##### Method Code:
 ```python
-def getNetworkSmTargetGroup(networkId: str, targetGroupId: str, **kwargs):
+def getNetworkSmTargetGroup(networkId:str, targetGroupId:str, **kwargs):
     # Code
 ````
 
@@ -14469,7 +14469,7 @@ meraki sm getNetworkSmTargetGroups --networkId 'STRING' --kwargs '{"key1": "valu
 
 ##### Method Code:
 ```python
-def getNetworkSmTargetGroups(networkId: str, **kwargs):
+def getNetworkSmTargetGroups(networkId:str, **kwargs):
     # Code
 ````
 
@@ -14504,7 +14504,7 @@ meraki sm getNetworkSmUserAccessDevices --networkId 'STRING' --kwargs '{"key1": 
 
 ##### Method Code:
 ```python
-def getNetworkSmUserAccessDevices(networkId: str, total_pages=1, direction='next', **kwargs):
+def getNetworkSmUserAccessDevices(networkId:str, total_pages=1, direction='next', **kwargs):
     # Code
 ````
 
@@ -14530,7 +14530,7 @@ meraki sm getNetworkSmUserDeviceProfiles --networkId 'STRING' --userId 'STRING'
 
 ##### Method Code:
 ```python
-def getNetworkSmUserDeviceProfiles(networkId: str, userId: str):
+def getNetworkSmUserDeviceProfiles(networkId:str, userId:str):
     # Code
 ````
 
@@ -14556,7 +14556,7 @@ meraki sm getNetworkSmUserSoftwares --networkId 'STRING' --userId 'STRING'
 
 ##### Method Code:
 ```python
-def getNetworkSmUserSoftwares(networkId: str, userId: str):
+def getNetworkSmUserSoftwares(networkId:str, userId:str):
     # Code
 ````
 
@@ -14590,7 +14590,7 @@ meraki sm getNetworkSmUsers --networkId 'STRING' --kwargs '{"key1": "value1", "k
 
 ##### Method Code:
 ```python
-def getNetworkSmUsers(networkId: str, **kwargs):
+def getNetworkSmUsers(networkId:str, **kwargs):
     # Code
 ````
 
@@ -14615,7 +14615,7 @@ meraki sm getOrganizationSmApnsCert --organizationId 'STRING'
 
 ##### Method Code:
 ```python
-def getOrganizationSmApnsCert(organizationId: str):
+def getOrganizationSmApnsCert(organizationId:str):
     # Code
 ````
 
@@ -14641,7 +14641,7 @@ meraki sm getOrganizationSmVppAccount --organizationId 'STRING' --vppAccountId '
 
 ##### Method Code:
 ```python
-def getOrganizationSmVppAccount(organizationId: str, vppAccountId: str):
+def getOrganizationSmVppAccount(organizationId:str, vppAccountId:str):
     # Code
 ````
 
@@ -14666,7 +14666,7 @@ meraki sm getOrganizationSmVppAccounts --organizationId 'STRING'
 
 ##### Method Code:
 ```python
-def getOrganizationSmVppAccounts(organizationId: str):
+def getOrganizationSmVppAccounts(organizationId:str):
     # Code
 ````
 
@@ -14701,7 +14701,7 @@ meraki sm lockNetworkSmDevices --networkId 'STRING' --kwargs '{"key1": "value1",
 
 ##### Method Code:
 ```python
-def lockNetworkSmDevices(networkId: str, **kwargs):
+def lockNetworkSmDevices(networkId:str, **kwargs):
     # Code
 ````
 
@@ -14737,7 +14737,7 @@ meraki sm modifyNetworkSmDevicesTags --networkId 'STRING' --tags ITEM --updateAc
 
 ##### Method Code:
 ```python
-def modifyNetworkSmDevicesTags(networkId: str, tags: list, updateAction: str, **kwargs):
+def modifyNetworkSmDevicesTags(networkId:str, tags:list, updateAction:str, **kwargs):
     # Code
 ````
 
@@ -14772,7 +14772,7 @@ meraki sm moveNetworkSmDevices --networkId 'STRING' --newNetwork 'STRING' --kwar
 
 ##### Method Code:
 ```python
-def moveNetworkSmDevices(networkId: str, newNetwork: str, **kwargs):
+def moveNetworkSmDevices(networkId:str, newNetwork:str, **kwargs):
     # Code
 ````
 
@@ -14798,7 +14798,7 @@ meraki sm refreshNetworkSmDeviceDetails --networkId 'STRING' --deviceId 'STRING'
 
 ##### Method Code:
 ```python
-def refreshNetworkSmDeviceDetails(networkId: str, deviceId: str):
+def refreshNetworkSmDeviceDetails(networkId:str, deviceId:str):
     # Code
 ````
 
@@ -14824,7 +14824,7 @@ meraki sm unenrollNetworkSmDevice --networkId 'STRING' --deviceId 'STRING'
 
 ##### Method Code:
 ```python
-def unenrollNetworkSmDevice(networkId: str, deviceId: str):
+def unenrollNetworkSmDevice(networkId:str, deviceId:str):
     # Code
 ````
 
@@ -14858,7 +14858,7 @@ meraki sm updateNetworkSmDevicesFields --networkId 'STRING' --deviceFields JSON_
 
 ##### Method Code:
 ```python
-def updateNetworkSmDevicesFields(networkId: str, deviceFields: dict, **kwargs):
+def updateNetworkSmDevicesFields(networkId:str, deviceFields:dict, **kwargs):
     # Code
 ````
 
@@ -14891,7 +14891,7 @@ meraki sm updateNetworkSmTargetGroup --networkId 'STRING' --targetGroupId 'STRIN
 
 ##### Method Code:
 ```python
-def updateNetworkSmTargetGroup(networkId: str, targetGroupId: str, **kwargs):
+def updateNetworkSmTargetGroup(networkId:str, targetGroupId:str, **kwargs):
     # Code
 ````
 
@@ -14925,7 +14925,7 @@ meraki sm wipeNetworkSmDevices --networkId 'STRING' --kwargs '{"key1": "value1",
 
 ##### Method Code:
 ```python
-def wipeNetworkSmDevices(networkId: str, **kwargs):
+def wipeNetworkSmDevices(networkId:str, **kwargs):
     # Code
 ````
 
@@ -14953,7 +14953,7 @@ meraki switch addNetworkSwitchStack --networkId 'STRING' --switchStackId 'STRING
 
 ##### Method Code:
 ```python
-def addNetworkSwitchStack(networkId: str, switchStackId: str, serial: str):
+def addNetworkSwitchStack(networkId:str, switchStackId:str, serial:str):
     # Code
 ````
 
@@ -14980,7 +14980,7 @@ meraki switch cloneOrganizationSwitchDevices --organizationId 'STRING' --sourceS
 
 ##### Method Code:
 ```python
-def cloneOrganizationSwitchDevices(organizationId: str, sourceSerial: str, targetSerials: list):
+def cloneOrganizationSwitchDevices(organizationId:str, sourceSerial:str, targetSerials:list):
     # Code
 ````
 
@@ -15017,7 +15017,7 @@ meraki switch createDeviceSwitchRoutingInterface --serial 'STRING' --name 'STRIN
 
 ##### Method Code:
 ```python
-def createDeviceSwitchRoutingInterface(serial: str, name: str, interfaceIp: str, vlanId: int, **kwargs):
+def createDeviceSwitchRoutingInterface(serial:str, name:str, interfaceIp:str, vlanId:int, **kwargs):
     # Code
 ````
 
@@ -15052,7 +15052,7 @@ meraki switch createDeviceSwitchRoutingStaticRoute --serial 'STRING' --subnet 'S
 
 ##### Method Code:
 ```python
-def createDeviceSwitchRoutingStaticRoute(serial: str, subnet: str, nextHopIp: str, **kwargs):
+def createDeviceSwitchRoutingStaticRoute(serial:str, subnet:str, nextHopIp:str, **kwargs):
     # Code
 ````
 
@@ -15097,7 +15097,7 @@ meraki switch createNetworkSwitchAccessPolicy --networkId 'STRING' --name 'STRIN
 
 ##### Method Code:
 ```python
-def createNetworkSwitchAccessPolicy(networkId: str, name: str, radiusServers: list, radiusTestingEnabled: bool, radiusCoaSupportEnabled: bool, radiusAccountingEnabled: bool, hostMode: str, urlRedirectWalledGardenEnabled: bool, **kwargs):
+def createNetworkSwitchAccessPolicy(networkId:str, name:str, radiusServers:list, radiusTestingEnabled:bool, radiusCoaSupportEnabled:bool, radiusAccountingEnabled:bool, hostMode:str, urlRedirectWalledGardenEnabled:bool, **kwargs):
     # Code
 ````
 
@@ -15129,7 +15129,7 @@ meraki switch createNetworkSwitchLinkAggregation --networkId 'STRING' --kwargs '
 
 ##### Method Code:
 ```python
-def createNetworkSwitchLinkAggregation(networkId: str, **kwargs):
+def createNetworkSwitchLinkAggregation(networkId:str, **kwargs):
     # Code
 ````
 
@@ -15164,7 +15164,7 @@ meraki switch createNetworkSwitchPortSchedule --networkId 'STRING' --name 'STRIN
 
 ##### Method Code:
 ```python
-def createNetworkSwitchPortSchedule(networkId: str, name: str, **kwargs):
+def createNetworkSwitchPortSchedule(networkId:str, name:str, **kwargs):
     # Code
 ````
 
@@ -15201,7 +15201,7 @@ meraki switch createNetworkSwitchQosRule --networkId 'STRING' --vlan INT --kwarg
 
 ##### Method Code:
 ```python
-def createNetworkSwitchQosRule(networkId: str, vlan: int, **kwargs):
+def createNetworkSwitchQosRule(networkId:str, vlan:int, **kwargs):
     # Code
 ````
 
@@ -15228,7 +15228,7 @@ meraki switch createNetworkSwitchRoutingMulticastRendezvousPoint --networkId 'ST
 
 ##### Method Code:
 ```python
-def createNetworkSwitchRoutingMulticastRendezvousPoint(networkId: str, interfaceIp: str, multicastGroup: str):
+def createNetworkSwitchRoutingMulticastRendezvousPoint(networkId:str, interfaceIp:str, multicastGroup:str):
     # Code
 ````
 
@@ -15255,7 +15255,7 @@ meraki switch createNetworkSwitchStack --networkId 'STRING' --name 'STRING' --se
 
 ##### Method Code:
 ```python
-def createNetworkSwitchStack(networkId: str, name: str, serials: list):
+def createNetworkSwitchStack(networkId:str, name:str, serials:list):
     # Code
 ````
 
@@ -15293,7 +15293,7 @@ meraki switch createNetworkSwitchStackRoutingInterface --networkId 'STRING' --sw
 
 ##### Method Code:
 ```python
-def createNetworkSwitchStackRoutingInterface(networkId: str, switchStackId: str, name: str, subnet: str, interfaceIp: str, vlanId: int, **kwargs):
+def createNetworkSwitchStackRoutingInterface(networkId:str, switchStackId:str, name:str, subnet:str, interfaceIp:str, vlanId:int, **kwargs):
     # Code
 ````
 
@@ -15329,7 +15329,7 @@ meraki switch createNetworkSwitchStackRoutingStaticRoute --networkId 'STRING' --
 
 ##### Method Code:
 ```python
-def createNetworkSwitchStackRoutingStaticRoute(networkId: str, switchStackId: str, subnet: str, nextHopIp: str, **kwargs):
+def createNetworkSwitchStackRoutingStaticRoute(networkId:str, switchStackId:str, subnet:str, nextHopIp:str, **kwargs):
     # Code
 ````
 
@@ -15355,7 +15355,7 @@ meraki switch cycleDeviceSwitchPorts --serial 'STRING' --ports ITEM
 
 ##### Method Code:
 ```python
-def cycleDeviceSwitchPorts(serial: str, ports: list):
+def cycleDeviceSwitchPorts(serial:str, ports:list):
     # Code
 ````
 
@@ -15381,7 +15381,7 @@ meraki switch deleteDeviceSwitchRoutingInterface --serial 'STRING' --interfaceId
 
 ##### Method Code:
 ```python
-def deleteDeviceSwitchRoutingInterface(serial: str, interfaceId: str):
+def deleteDeviceSwitchRoutingInterface(serial:str, interfaceId:str):
     # Code
 ````
 
@@ -15407,7 +15407,7 @@ meraki switch deleteDeviceSwitchRoutingStaticRoute --serial 'STRING' --staticRou
 
 ##### Method Code:
 ```python
-def deleteDeviceSwitchRoutingStaticRoute(serial: str, staticRouteId: str):
+def deleteDeviceSwitchRoutingStaticRoute(serial:str, staticRouteId:str):
     # Code
 ````
 
@@ -15433,7 +15433,7 @@ meraki switch deleteNetworkSwitchAccessPolicy --networkId 'STRING' --accessPolic
 
 ##### Method Code:
 ```python
-def deleteNetworkSwitchAccessPolicy(networkId: str, accessPolicyNumber: str):
+def deleteNetworkSwitchAccessPolicy(networkId:str, accessPolicyNumber:str):
     # Code
 ````
 
@@ -15459,7 +15459,7 @@ meraki switch deleteNetworkSwitchLinkAggregation --networkId 'STRING' --linkAggr
 
 ##### Method Code:
 ```python
-def deleteNetworkSwitchLinkAggregation(networkId: str, linkAggregationId: str):
+def deleteNetworkSwitchLinkAggregation(networkId:str, linkAggregationId:str):
     # Code
 ````
 
@@ -15485,7 +15485,7 @@ meraki switch deleteNetworkSwitchPortSchedule --networkId 'STRING' --portSchedul
 
 ##### Method Code:
 ```python
-def deleteNetworkSwitchPortSchedule(networkId: str, portScheduleId: str):
+def deleteNetworkSwitchPortSchedule(networkId:str, portScheduleId:str):
     # Code
 ````
 
@@ -15511,7 +15511,7 @@ meraki switch deleteNetworkSwitchQosRule --networkId 'STRING' --qosRuleId 'STRIN
 
 ##### Method Code:
 ```python
-def deleteNetworkSwitchQosRule(networkId: str, qosRuleId: str):
+def deleteNetworkSwitchQosRule(networkId:str, qosRuleId:str):
     # Code
 ````
 
@@ -15537,7 +15537,7 @@ meraki switch deleteNetworkSwitchRoutingMulticastRendezvousPoint --networkId 'ST
 
 ##### Method Code:
 ```python
-def deleteNetworkSwitchRoutingMulticastRendezvousPoint(networkId: str, rendezvousPointId: str):
+def deleteNetworkSwitchRoutingMulticastRendezvousPoint(networkId:str, rendezvousPointId:str):
     # Code
 ````
 
@@ -15563,7 +15563,7 @@ meraki switch deleteNetworkSwitchStack --networkId 'STRING' --switchStackId 'STR
 
 ##### Method Code:
 ```python
-def deleteNetworkSwitchStack(networkId: str, switchStackId: str):
+def deleteNetworkSwitchStack(networkId:str, switchStackId:str):
     # Code
 ````
 
@@ -15590,7 +15590,7 @@ meraki switch deleteNetworkSwitchStackRoutingInterface --networkId 'STRING' --sw
 
 ##### Method Code:
 ```python
-def deleteNetworkSwitchStackRoutingInterface(networkId: str, switchStackId: str, interfaceId: str):
+def deleteNetworkSwitchStackRoutingInterface(networkId:str, switchStackId:str, interfaceId:str):
     # Code
 ````
 
@@ -15617,7 +15617,7 @@ meraki switch deleteNetworkSwitchStackRoutingStaticRoute --networkId 'STRING' --
 
 ##### Method Code:
 ```python
-def deleteNetworkSwitchStackRoutingStaticRoute(networkId: str, switchStackId: str, staticRouteId: str):
+def deleteNetworkSwitchStackRoutingStaticRoute(networkId:str, switchStackId:str, staticRouteId:str):
     # Code
 ````
 
@@ -15643,7 +15643,7 @@ meraki switch getDeviceSwitchPort --serial 'STRING' --portId 'STRING'
 
 ##### Method Code:
 ```python
-def getDeviceSwitchPort(serial: str, portId: str):
+def getDeviceSwitchPort(serial:str, portId:str):
     # Code
 ````
 
@@ -15668,7 +15668,7 @@ meraki switch getDeviceSwitchPorts --serial 'STRING'
 
 ##### Method Code:
 ```python
-def getDeviceSwitchPorts(serial: str):
+def getDeviceSwitchPorts(serial:str):
     # Code
 ````
 
@@ -15700,7 +15700,7 @@ meraki switch getDeviceSwitchPortsStatuses --serial 'STRING' --kwargs '{"key1": 
 
 ##### Method Code:
 ```python
-def getDeviceSwitchPortsStatuses(serial: str, **kwargs):
+def getDeviceSwitchPortsStatuses(serial:str, **kwargs):
     # Code
 ````
 
@@ -15732,7 +15732,7 @@ meraki switch getDeviceSwitchPortsStatusesPackets --serial 'STRING' --kwargs '{"
 
 ##### Method Code:
 ```python
-def getDeviceSwitchPortsStatusesPackets(serial: str, **kwargs):
+def getDeviceSwitchPortsStatusesPackets(serial:str, **kwargs):
     # Code
 ````
 
@@ -15758,7 +15758,7 @@ meraki switch getDeviceSwitchRoutingInterface --serial 'STRING' --interfaceId 'S
 
 ##### Method Code:
 ```python
-def getDeviceSwitchRoutingInterface(serial: str, interfaceId: str):
+def getDeviceSwitchRoutingInterface(serial:str, interfaceId:str):
     # Code
 ````
 
@@ -15784,7 +15784,7 @@ meraki switch getDeviceSwitchRoutingInterfaceDhcp --serial 'STRING' --interfaceI
 
 ##### Method Code:
 ```python
-def getDeviceSwitchRoutingInterfaceDhcp(serial: str, interfaceId: str):
+def getDeviceSwitchRoutingInterfaceDhcp(serial:str, interfaceId:str):
     # Code
 ````
 
@@ -15809,7 +15809,7 @@ meraki switch getDeviceSwitchRoutingInterfaces --serial 'STRING'
 
 ##### Method Code:
 ```python
-def getDeviceSwitchRoutingInterfaces(serial: str):
+def getDeviceSwitchRoutingInterfaces(serial:str):
     # Code
 ````
 
@@ -15835,7 +15835,7 @@ meraki switch getDeviceSwitchRoutingStaticRoute --serial 'STRING' --staticRouteI
 
 ##### Method Code:
 ```python
-def getDeviceSwitchRoutingStaticRoute(serial: str, staticRouteId: str):
+def getDeviceSwitchRoutingStaticRoute(serial:str, staticRouteId:str):
     # Code
 ````
 
@@ -15860,7 +15860,7 @@ meraki switch getDeviceSwitchRoutingStaticRoutes --serial 'STRING'
 
 ##### Method Code:
 ```python
-def getDeviceSwitchRoutingStaticRoutes(serial: str):
+def getDeviceSwitchRoutingStaticRoutes(serial:str):
     # Code
 ````
 
@@ -15885,7 +15885,7 @@ meraki switch getDeviceSwitchWarmSpare --serial 'STRING'
 
 ##### Method Code:
 ```python
-def getDeviceSwitchWarmSpare(serial: str):
+def getDeviceSwitchWarmSpare(serial:str):
     # Code
 ````
 
@@ -15910,7 +15910,7 @@ meraki switch getNetworkSwitchAccessControlLists --networkId 'STRING'
 
 ##### Method Code:
 ```python
-def getNetworkSwitchAccessControlLists(networkId: str):
+def getNetworkSwitchAccessControlLists(networkId:str):
     # Code
 ````
 
@@ -15935,7 +15935,7 @@ meraki switch getNetworkSwitchAccessPolicies --networkId 'STRING'
 
 ##### Method Code:
 ```python
-def getNetworkSwitchAccessPolicies(networkId: str):
+def getNetworkSwitchAccessPolicies(networkId:str):
     # Code
 ````
 
@@ -15961,7 +15961,7 @@ meraki switch getNetworkSwitchAccessPolicy --networkId 'STRING' --accessPolicyNu
 
 ##### Method Code:
 ```python
-def getNetworkSwitchAccessPolicy(networkId: str, accessPolicyNumber: str):
+def getNetworkSwitchAccessPolicy(networkId:str, accessPolicyNumber:str):
     # Code
 ````
 
@@ -15986,7 +15986,7 @@ meraki switch getNetworkSwitchAlternateManagementInterface --networkId 'STRING'
 
 ##### Method Code:
 ```python
-def getNetworkSwitchAlternateManagementInterface(networkId: str):
+def getNetworkSwitchAlternateManagementInterface(networkId:str):
     # Code
 ````
 
@@ -16011,7 +16011,7 @@ meraki switch getNetworkSwitchDhcpServerPolicy --networkId 'STRING'
 
 ##### Method Code:
 ```python
-def getNetworkSwitchDhcpServerPolicy(networkId: str):
+def getNetworkSwitchDhcpServerPolicy(networkId:str):
     # Code
 ````
 
@@ -16036,7 +16036,7 @@ meraki switch getNetworkSwitchDscpToCosMappings --networkId 'STRING'
 
 ##### Method Code:
 ```python
-def getNetworkSwitchDscpToCosMappings(networkId: str):
+def getNetworkSwitchDscpToCosMappings(networkId:str):
     # Code
 ````
 
@@ -16061,7 +16061,7 @@ meraki switch getNetworkSwitchLinkAggregations --networkId 'STRING'
 
 ##### Method Code:
 ```python
-def getNetworkSwitchLinkAggregations(networkId: str):
+def getNetworkSwitchLinkAggregations(networkId:str):
     # Code
 ````
 
@@ -16086,7 +16086,7 @@ meraki switch getNetworkSwitchMtu --networkId 'STRING'
 
 ##### Method Code:
 ```python
-def getNetworkSwitchMtu(networkId: str):
+def getNetworkSwitchMtu(networkId:str):
     # Code
 ````
 
@@ -16111,7 +16111,7 @@ meraki switch getNetworkSwitchPortSchedules --networkId 'STRING'
 
 ##### Method Code:
 ```python
-def getNetworkSwitchPortSchedules(networkId: str):
+def getNetworkSwitchPortSchedules(networkId:str):
     # Code
 ````
 
@@ -16137,7 +16137,7 @@ meraki switch getNetworkSwitchQosRule --networkId 'STRING' --qosRuleId 'STRING'
 
 ##### Method Code:
 ```python
-def getNetworkSwitchQosRule(networkId: str, qosRuleId: str):
+def getNetworkSwitchQosRule(networkId:str, qosRuleId:str):
     # Code
 ````
 
@@ -16162,7 +16162,7 @@ meraki switch getNetworkSwitchQosRules --networkId 'STRING'
 
 ##### Method Code:
 ```python
-def getNetworkSwitchQosRules(networkId: str):
+def getNetworkSwitchQosRules(networkId:str):
     # Code
 ````
 
@@ -16187,7 +16187,7 @@ meraki switch getNetworkSwitchQosRulesOrder --networkId 'STRING'
 
 ##### Method Code:
 ```python
-def getNetworkSwitchQosRulesOrder(networkId: str):
+def getNetworkSwitchQosRulesOrder(networkId:str):
     # Code
 ````
 
@@ -16212,7 +16212,7 @@ meraki switch getNetworkSwitchRoutingMulticast --networkId 'STRING'
 
 ##### Method Code:
 ```python
-def getNetworkSwitchRoutingMulticast(networkId: str):
+def getNetworkSwitchRoutingMulticast(networkId:str):
     # Code
 ````
 
@@ -16238,7 +16238,7 @@ meraki switch getNetworkSwitchRoutingMulticastRendezvousPoint --networkId 'STRIN
 
 ##### Method Code:
 ```python
-def getNetworkSwitchRoutingMulticastRendezvousPoint(networkId: str, rendezvousPointId: str):
+def getNetworkSwitchRoutingMulticastRendezvousPoint(networkId:str, rendezvousPointId:str):
     # Code
 ````
 
@@ -16263,7 +16263,7 @@ meraki switch getNetworkSwitchRoutingMulticastRendezvousPoints --networkId 'STRI
 
 ##### Method Code:
 ```python
-def getNetworkSwitchRoutingMulticastRendezvousPoints(networkId: str):
+def getNetworkSwitchRoutingMulticastRendezvousPoints(networkId:str):
     # Code
 ````
 
@@ -16288,7 +16288,7 @@ meraki switch getNetworkSwitchRoutingOspf --networkId 'STRING'
 
 ##### Method Code:
 ```python
-def getNetworkSwitchRoutingOspf(networkId: str):
+def getNetworkSwitchRoutingOspf(networkId:str):
     # Code
 ````
 
@@ -16313,7 +16313,7 @@ meraki switch getNetworkSwitchSettings --networkId 'STRING'
 
 ##### Method Code:
 ```python
-def getNetworkSwitchSettings(networkId: str):
+def getNetworkSwitchSettings(networkId:str):
     # Code
 ````
 
@@ -16339,7 +16339,7 @@ meraki switch getNetworkSwitchStack --networkId 'STRING' --switchStackId 'STRING
 
 ##### Method Code:
 ```python
-def getNetworkSwitchStack(networkId: str, switchStackId: str):
+def getNetworkSwitchStack(networkId:str, switchStackId:str):
     # Code
 ````
 
@@ -16366,7 +16366,7 @@ meraki switch getNetworkSwitchStackRoutingInterface --networkId 'STRING' --switc
 
 ##### Method Code:
 ```python
-def getNetworkSwitchStackRoutingInterface(networkId: str, switchStackId: str, interfaceId: str):
+def getNetworkSwitchStackRoutingInterface(networkId:str, switchStackId:str, interfaceId:str):
     # Code
 ````
 
@@ -16393,7 +16393,7 @@ meraki switch getNetworkSwitchStackRoutingInterfaceDhcp --networkId 'STRING' --s
 
 ##### Method Code:
 ```python
-def getNetworkSwitchStackRoutingInterfaceDhcp(networkId: str, switchStackId: str, interfaceId: str):
+def getNetworkSwitchStackRoutingInterfaceDhcp(networkId:str, switchStackId:str, interfaceId:str):
     # Code
 ````
 
@@ -16419,7 +16419,7 @@ meraki switch getNetworkSwitchStackRoutingInterfaces --networkId 'STRING' --swit
 
 ##### Method Code:
 ```python
-def getNetworkSwitchStackRoutingInterfaces(networkId: str, switchStackId: str):
+def getNetworkSwitchStackRoutingInterfaces(networkId:str, switchStackId:str):
     # Code
 ````
 
@@ -16446,7 +16446,7 @@ meraki switch getNetworkSwitchStackRoutingStaticRoute --networkId 'STRING' --swi
 
 ##### Method Code:
 ```python
-def getNetworkSwitchStackRoutingStaticRoute(networkId: str, switchStackId: str, staticRouteId: str):
+def getNetworkSwitchStackRoutingStaticRoute(networkId:str, switchStackId:str, staticRouteId:str):
     # Code
 ````
 
@@ -16472,7 +16472,7 @@ meraki switch getNetworkSwitchStackRoutingStaticRoutes --networkId 'STRING' --sw
 
 ##### Method Code:
 ```python
-def getNetworkSwitchStackRoutingStaticRoutes(networkId: str, switchStackId: str):
+def getNetworkSwitchStackRoutingStaticRoutes(networkId:str, switchStackId:str):
     # Code
 ````
 
@@ -16497,7 +16497,7 @@ meraki switch getNetworkSwitchStacks --networkId 'STRING'
 
 ##### Method Code:
 ```python
-def getNetworkSwitchStacks(networkId: str):
+def getNetworkSwitchStacks(networkId:str):
     # Code
 ````
 
@@ -16522,7 +16522,7 @@ meraki switch getNetworkSwitchStormControl --networkId 'STRING'
 
 ##### Method Code:
 ```python
-def getNetworkSwitchStormControl(networkId: str):
+def getNetworkSwitchStormControl(networkId:str):
     # Code
 ````
 
@@ -16547,7 +16547,7 @@ meraki switch getNetworkSwitchStp --networkId 'STRING'
 
 ##### Method Code:
 ```python
-def getNetworkSwitchStp(networkId: str):
+def getNetworkSwitchStp(networkId:str):
     # Code
 ````
 
@@ -16575,7 +16575,7 @@ meraki switch getOrganizationConfigTemplateSwitchProfilePort --organizationId 'S
 
 ##### Method Code:
 ```python
-def getOrganizationConfigTemplateSwitchProfilePort(organizationId: str, configTemplateId: str, profileId: str, portId: str):
+def getOrganizationConfigTemplateSwitchProfilePort(organizationId:str, configTemplateId:str, profileId:str, portId:str):
     # Code
 ````
 
@@ -16602,7 +16602,7 @@ meraki switch getOrganizationConfigTemplateSwitchProfilePorts --organizationId '
 
 ##### Method Code:
 ```python
-def getOrganizationConfigTemplateSwitchProfilePorts(organizationId: str, configTemplateId: str, profileId: str):
+def getOrganizationConfigTemplateSwitchProfilePorts(organizationId:str, configTemplateId:str, profileId:str):
     # Code
 ````
 
@@ -16628,7 +16628,7 @@ meraki switch getOrganizationConfigTemplateSwitchProfiles --organizationId 'STRI
 
 ##### Method Code:
 ```python
-def getOrganizationConfigTemplateSwitchProfiles(organizationId: str, configTemplateId: str):
+def getOrganizationConfigTemplateSwitchProfiles(organizationId:str, configTemplateId:str):
     # Code
 ````
 
@@ -16655,7 +16655,7 @@ meraki switch removeNetworkSwitchStack --networkId 'STRING' --switchStackId 'STR
 
 ##### Method Code:
 ```python
-def removeNetworkSwitchStack(networkId: str, switchStackId: str, serial: str):
+def removeNetworkSwitchStack(networkId:str, switchStackId:str, serial:str):
     # Code
 ````
 
@@ -16707,7 +16707,7 @@ meraki switch updateDeviceSwitchPort --serial 'STRING' --portId 'STRING' --kwarg
 
 ##### Method Code:
 ```python
-def updateDeviceSwitchPort(serial: str, portId: str, **kwargs):
+def updateDeviceSwitchPort(serial:str, portId:str, **kwargs):
     # Code
 ````
 
@@ -16744,7 +16744,7 @@ meraki switch updateDeviceSwitchRoutingInterface --serial 'STRING' --interfaceId
 
 ##### Method Code:
 ```python
-def updateDeviceSwitchRoutingInterface(serial: str, interfaceId: str, **kwargs):
+def updateDeviceSwitchRoutingInterface(serial:str, interfaceId:str, **kwargs):
     # Code
 ````
 
@@ -16786,7 +16786,7 @@ meraki switch updateDeviceSwitchRoutingInterfaceDhcp --serial 'STRING' --interfa
 
 ##### Method Code:
 ```python
-def updateDeviceSwitchRoutingInterfaceDhcp(serial: str, interfaceId: str, **kwargs):
+def updateDeviceSwitchRoutingInterfaceDhcp(serial:str, interfaceId:str, **kwargs):
     # Code
 ````
 
@@ -16822,7 +16822,7 @@ meraki switch updateDeviceSwitchRoutingStaticRoute --serial 'STRING' --staticRou
 
 ##### Method Code:
 ```python
-def updateDeviceSwitchRoutingStaticRoute(serial: str, staticRouteId: str, **kwargs):
+def updateDeviceSwitchRoutingStaticRoute(serial:str, staticRouteId:str, **kwargs):
     # Code
 ````
 
@@ -16854,7 +16854,7 @@ meraki switch updateDeviceSwitchWarmSpare --serial 'STRING' --enabled --kwargs '
 
 ##### Method Code:
 ```python
-def updateDeviceSwitchWarmSpare(serial: str, enabled: bool, **kwargs):
+def updateDeviceSwitchWarmSpare(serial:str, enabled:bool, **kwargs):
     # Code
 ````
 
@@ -16880,7 +16880,7 @@ meraki switch updateNetworkSwitchAccessControlLists --networkId 'STRING' --rules
 
 ##### Method Code:
 ```python
-def updateNetworkSwitchAccessControlLists(networkId: str, rules: list):
+def updateNetworkSwitchAccessControlLists(networkId:str, rules:list):
     # Code
 ````
 
@@ -16926,7 +16926,7 @@ meraki switch updateNetworkSwitchAccessPolicy --networkId 'STRING' --accessPolic
 
 ##### Method Code:
 ```python
-def updateNetworkSwitchAccessPolicy(networkId: str, accessPolicyNumber: str, **kwargs):
+def updateNetworkSwitchAccessPolicy(networkId:str, accessPolicyNumber:str, **kwargs):
     # Code
 ````
 
@@ -16960,7 +16960,7 @@ meraki switch updateNetworkSwitchAlternateManagementInterface --networkId 'STRIN
 
 ##### Method Code:
 ```python
-def updateNetworkSwitchAlternateManagementInterface(networkId: str, **kwargs):
+def updateNetworkSwitchAlternateManagementInterface(networkId:str, **kwargs):
     # Code
 ````
 
@@ -16993,7 +16993,7 @@ meraki switch updateNetworkSwitchDhcpServerPolicy --networkId 'STRING' --kwargs 
 
 ##### Method Code:
 ```python
-def updateNetworkSwitchDhcpServerPolicy(networkId: str, **kwargs):
+def updateNetworkSwitchDhcpServerPolicy(networkId:str, **kwargs):
     # Code
 ````
 
@@ -17019,7 +17019,7 @@ meraki switch updateNetworkSwitchDscpToCosMappings --networkId 'STRING' --mappin
 
 ##### Method Code:
 ```python
-def updateNetworkSwitchDscpToCosMappings(networkId: str, mappings: list):
+def updateNetworkSwitchDscpToCosMappings(networkId:str, mappings:list):
     # Code
 ````
 
@@ -17052,7 +17052,7 @@ meraki switch updateNetworkSwitchLinkAggregation --networkId 'STRING' --linkAggr
 
 ##### Method Code:
 ```python
-def updateNetworkSwitchLinkAggregation(networkId: str, linkAggregationId: str, **kwargs):
+def updateNetworkSwitchLinkAggregation(networkId:str, linkAggregationId:str, **kwargs):
     # Code
 ````
 
@@ -17084,7 +17084,7 @@ meraki switch updateNetworkSwitchMtu --networkId 'STRING' --kwargs '{"key1": "va
 
 ##### Method Code:
 ```python
-def updateNetworkSwitchMtu(networkId: str, **kwargs):
+def updateNetworkSwitchMtu(networkId:str, **kwargs):
     # Code
 ````
 
@@ -17120,7 +17120,7 @@ meraki switch updateNetworkSwitchPortSchedule --networkId 'STRING' --portSchedul
 
 ##### Method Code:
 ```python
-def updateNetworkSwitchPortSchedule(networkId: str, portScheduleId: str, **kwargs):
+def updateNetworkSwitchPortSchedule(networkId:str, portScheduleId:str, **kwargs):
     # Code
 ````
 
@@ -17158,7 +17158,7 @@ meraki switch updateNetworkSwitchQosRule --networkId 'STRING' --qosRuleId 'STRIN
 
 ##### Method Code:
 ```python
-def updateNetworkSwitchQosRule(networkId: str, qosRuleId: str, **kwargs):
+def updateNetworkSwitchQosRule(networkId:str, qosRuleId:str, **kwargs):
     # Code
 ````
 
@@ -17184,7 +17184,7 @@ meraki switch updateNetworkSwitchQosRulesOrder --networkId 'STRING' --ruleIds IT
 
 ##### Method Code:
 ```python
-def updateNetworkSwitchQosRulesOrder(networkId: str, ruleIds: list):
+def updateNetworkSwitchQosRulesOrder(networkId:str, ruleIds:list):
     # Code
 ````
 
@@ -17216,7 +17216,7 @@ meraki switch updateNetworkSwitchRoutingMulticast --networkId 'STRING' --kwargs 
 
 ##### Method Code:
 ```python
-def updateNetworkSwitchRoutingMulticast(networkId: str, **kwargs):
+def updateNetworkSwitchRoutingMulticast(networkId:str, **kwargs):
     # Code
 ````
 
@@ -17244,7 +17244,7 @@ meraki switch updateNetworkSwitchRoutingMulticastRendezvousPoint --networkId 'ST
 
 ##### Method Code:
 ```python
-def updateNetworkSwitchRoutingMulticastRendezvousPoint(networkId: str, rendezvousPointId: str, interfaceIp: str, multicastGroup: str):
+def updateNetworkSwitchRoutingMulticastRendezvousPoint(networkId:str, rendezvousPointId:str, interfaceIp:str, multicastGroup:str):
     # Code
 ````
 
@@ -17280,7 +17280,7 @@ meraki switch updateNetworkSwitchRoutingOspf --networkId 'STRING' --kwargs '{"ke
 
 ##### Method Code:
 ```python
-def updateNetworkSwitchRoutingOspf(networkId: str, **kwargs):
+def updateNetworkSwitchRoutingOspf(networkId:str, **kwargs):
     # Code
 ````
 
@@ -17313,7 +17313,7 @@ meraki switch updateNetworkSwitchSettings --networkId 'STRING' --kwargs '{"key1"
 
 ##### Method Code:
 ```python
-def updateNetworkSwitchSettings(networkId: str, **kwargs):
+def updateNetworkSwitchSettings(networkId:str, **kwargs):
     # Code
 ````
 
@@ -17351,7 +17351,7 @@ meraki switch updateNetworkSwitchStackRoutingInterface --networkId 'STRING' --sw
 
 ##### Method Code:
 ```python
-def updateNetworkSwitchStackRoutingInterface(networkId: str, switchStackId: str, interfaceId: str, **kwargs):
+def updateNetworkSwitchStackRoutingInterface(networkId:str, switchStackId:str, interfaceId:str, **kwargs):
     # Code
 ````
 
@@ -17394,7 +17394,7 @@ meraki switch updateNetworkSwitchStackRoutingInterfaceDhcp --networkId 'STRING' 
 
 ##### Method Code:
 ```python
-def updateNetworkSwitchStackRoutingInterfaceDhcp(networkId: str, switchStackId: str, interfaceId: str, **kwargs):
+def updateNetworkSwitchStackRoutingInterfaceDhcp(networkId:str, switchStackId:str, interfaceId:str, **kwargs):
     # Code
 ````
 
@@ -17431,7 +17431,7 @@ meraki switch updateNetworkSwitchStackRoutingStaticRoute --networkId 'STRING' --
 
 ##### Method Code:
 ```python
-def updateNetworkSwitchStackRoutingStaticRoute(networkId: str, switchStackId: str, staticRouteId: str, **kwargs):
+def updateNetworkSwitchStackRoutingStaticRoute(networkId:str, switchStackId:str, staticRouteId:str, **kwargs):
     # Code
 ````
 
@@ -17464,7 +17464,7 @@ meraki switch updateNetworkSwitchStormControl --networkId 'STRING' --kwargs '{"k
 
 ##### Method Code:
 ```python
-def updateNetworkSwitchStormControl(networkId: str, **kwargs):
+def updateNetworkSwitchStormControl(networkId:str, **kwargs):
     # Code
 ````
 
@@ -17496,7 +17496,7 @@ meraki switch updateNetworkSwitchStp --networkId 'STRING' --kwargs '{"key1": "va
 
 ##### Method Code:
 ```python
-def updateNetworkSwitchStp(networkId: str, **kwargs):
+def updateNetworkSwitchStp(networkId:str, **kwargs):
     # Code
 ````
 
@@ -17550,7 +17550,7 @@ meraki switch updateOrganizationConfigTemplateSwitchProfilePort --organizationId
 
 ##### Method Code:
 ```python
-def updateOrganizationConfigTemplateSwitchProfilePort(organizationId: str, configTemplateId: str, profileId: str, portId: str, **kwargs):
+def updateOrganizationConfigTemplateSwitchProfilePort(organizationId:str, configTemplateId:str, profileId:str, portId:str, **kwargs):
     # Code
 ````
 
@@ -17588,7 +17588,7 @@ meraki wireless createNetworkWirelessRfProfile --networkId 'STRING' --name 'STRI
 
 ##### Method Code:
 ```python
-def createNetworkWirelessRfProfile(networkId: str, name: str, bandSelectionType: str, **kwargs):
+def createNetworkWirelessRfProfile(networkId:str, name:str, bandSelectionType:str, **kwargs):
     # Code
 ````
 
@@ -17622,7 +17622,7 @@ meraki wireless createNetworkWirelessSsidIdentityPsk --networkId 'STRING' --numb
 
 ##### Method Code:
 ```python
-def createNetworkWirelessSsidIdentityPsk(networkId: str, number: str, name: str, groupPolicyId: str, **kwargs):
+def createNetworkWirelessSsidIdentityPsk(networkId:str, number:str, name:str, groupPolicyId:str, **kwargs):
     # Code
 ````
 
@@ -17648,7 +17648,7 @@ meraki wireless deleteNetworkWirelessRfProfile --networkId 'STRING' --rfProfileI
 
 ##### Method Code:
 ```python
-def deleteNetworkWirelessRfProfile(networkId: str, rfProfileId: str):
+def deleteNetworkWirelessRfProfile(networkId:str, rfProfileId:str):
     # Code
 ````
 
@@ -17675,7 +17675,7 @@ meraki wireless deleteNetworkWirelessSsidIdentityPsk --networkId 'STRING' --numb
 
 ##### Method Code:
 ```python
-def deleteNetworkWirelessSsidIdentityPsk(networkId: str, number: str, identityPskId: str):
+def deleteNetworkWirelessSsidIdentityPsk(networkId:str, number:str, identityPskId:str):
     # Code
 ````
 
@@ -17700,7 +17700,7 @@ meraki wireless getDeviceWirelessBluetoothSettings --serial 'STRING'
 
 ##### Method Code:
 ```python
-def getDeviceWirelessBluetoothSettings(serial: str):
+def getDeviceWirelessBluetoothSettings(serial:str):
     # Code
 ````
 
@@ -17737,7 +17737,7 @@ meraki wireless getDeviceWirelessConnectionStats --serial 'STRING' --kwargs '{"k
 
 ##### Method Code:
 ```python
-def getDeviceWirelessConnectionStats(serial: str, **kwargs):
+def getDeviceWirelessConnectionStats(serial:str, **kwargs):
     # Code
 ````
 
@@ -17775,7 +17775,7 @@ meraki wireless getDeviceWirelessLatencyStats --serial 'STRING' --kwargs '{"key1
 
 ##### Method Code:
 ```python
-def getDeviceWirelessLatencyStats(serial: str, **kwargs):
+def getDeviceWirelessLatencyStats(serial:str, **kwargs):
     # Code
 ````
 
@@ -17800,7 +17800,7 @@ meraki wireless getDeviceWirelessRadioSettings --serial 'STRING'
 
 ##### Method Code:
 ```python
-def getDeviceWirelessRadioSettings(serial: str):
+def getDeviceWirelessRadioSettings(serial:str):
     # Code
 ````
 
@@ -17825,7 +17825,7 @@ meraki wireless getDeviceWirelessStatus --serial 'STRING'
 
 ##### Method Code:
 ```python
-def getDeviceWirelessStatus(serial: str):
+def getDeviceWirelessStatus(serial:str):
     # Code
 ````
 
@@ -17857,7 +17857,7 @@ meraki wireless getNetworkWirelessAirMarshal --networkId 'STRING' --kwargs '{"ke
 
 ##### Method Code:
 ```python
-def getNetworkWirelessAirMarshal(networkId: str, **kwargs):
+def getNetworkWirelessAirMarshal(networkId:str, **kwargs):
     # Code
 ````
 
@@ -17882,7 +17882,7 @@ meraki wireless getNetworkWirelessAlternateManagementInterface --networkId 'STRI
 
 ##### Method Code:
 ```python
-def getNetworkWirelessAlternateManagementInterface(networkId: str):
+def getNetworkWirelessAlternateManagementInterface(networkId:str):
     # Code
 ````
 
@@ -17907,7 +17907,7 @@ meraki wireless getNetworkWirelessBilling --networkId 'STRING'
 
 ##### Method Code:
 ```python
-def getNetworkWirelessBilling(networkId: str):
+def getNetworkWirelessBilling(networkId:str):
     # Code
 ````
 
@@ -17932,7 +17932,7 @@ meraki wireless getNetworkWirelessBluetoothSettings --networkId 'STRING'
 
 ##### Method Code:
 ```python
-def getNetworkWirelessBluetoothSettings(networkId: str):
+def getNetworkWirelessBluetoothSettings(networkId:str):
     # Code
 ````
 
@@ -17971,7 +17971,7 @@ meraki wireless getNetworkWirelessChannelUtilizationHistory --networkId 'STRING'
 
 ##### Method Code:
 ```python
-def getNetworkWirelessChannelUtilizationHistory(networkId: str, **kwargs):
+def getNetworkWirelessChannelUtilizationHistory(networkId:str, **kwargs):
     # Code
 ````
 
@@ -18009,7 +18009,7 @@ meraki wireless getNetworkWirelessClientConnectionStats --networkId 'STRING' --c
 
 ##### Method Code:
 ```python
-def getNetworkWirelessClientConnectionStats(networkId: str, clientId: str, **kwargs):
+def getNetworkWirelessClientConnectionStats(networkId:str, clientId:str, **kwargs):
     # Code
 ````
 
@@ -18053,7 +18053,7 @@ meraki wireless getNetworkWirelessClientConnectivityEvents --networkId 'STRING' 
 
 ##### Method Code:
 ```python
-def getNetworkWirelessClientConnectivityEvents(networkId: str, clientId: str, total_pages=1, direction='next', **kwargs):
+def getNetworkWirelessClientConnectivityEvents(networkId:str, clientId:str, total_pages=1, direction='next', **kwargs):
     # Code
 ````
 
@@ -18093,7 +18093,7 @@ meraki wireless getNetworkWirelessClientCountHistory --networkId 'STRING' --kwar
 
 ##### Method Code:
 ```python
-def getNetworkWirelessClientCountHistory(networkId: str, **kwargs):
+def getNetworkWirelessClientCountHistory(networkId:str, **kwargs):
     # Code
 ````
 
@@ -18128,7 +18128,7 @@ meraki wireless getNetworkWirelessClientLatencyHistory --networkId 'STRING' --cl
 
 ##### Method Code:
 ```python
-def getNetworkWirelessClientLatencyHistory(networkId: str, clientId: str, **kwargs):
+def getNetworkWirelessClientLatencyHistory(networkId:str, clientId:str, **kwargs):
     # Code
 ````
 
@@ -18167,7 +18167,7 @@ meraki wireless getNetworkWirelessClientLatencyStats --networkId 'STRING' --clie
 
 ##### Method Code:
 ```python
-def getNetworkWirelessClientLatencyStats(networkId: str, clientId: str, **kwargs):
+def getNetworkWirelessClientLatencyStats(networkId:str, clientId:str, **kwargs):
     # Code
 ````
 
@@ -18204,7 +18204,7 @@ meraki wireless getNetworkWirelessClientsConnectionStats --networkId 'STRING' --
 
 ##### Method Code:
 ```python
-def getNetworkWirelessClientsConnectionStats(networkId: str, **kwargs):
+def getNetworkWirelessClientsConnectionStats(networkId:str, **kwargs):
     # Code
 ````
 
@@ -18242,7 +18242,7 @@ meraki wireless getNetworkWirelessClientsLatencyStats --networkId 'STRING' --kwa
 
 ##### Method Code:
 ```python
-def getNetworkWirelessClientsLatencyStats(networkId: str, **kwargs):
+def getNetworkWirelessClientsLatencyStats(networkId:str, **kwargs):
     # Code
 ````
 
@@ -18279,7 +18279,7 @@ meraki wireless getNetworkWirelessConnectionStats --networkId 'STRING' --kwargs 
 
 ##### Method Code:
 ```python
-def getNetworkWirelessConnectionStats(networkId: str, **kwargs):
+def getNetworkWirelessConnectionStats(networkId:str, **kwargs):
     # Code
 ````
 
@@ -18319,7 +18319,7 @@ meraki wireless getNetworkWirelessDataRateHistory --networkId 'STRING' --kwargs 
 
 ##### Method Code:
 ```python
-def getNetworkWirelessDataRateHistory(networkId: str, **kwargs):
+def getNetworkWirelessDataRateHistory(networkId:str, **kwargs):
     # Code
 ````
 
@@ -18356,7 +18356,7 @@ meraki wireless getNetworkWirelessDevicesConnectionStats --networkId 'STRING' --
 
 ##### Method Code:
 ```python
-def getNetworkWirelessDevicesConnectionStats(networkId: str, **kwargs):
+def getNetworkWirelessDevicesConnectionStats(networkId:str, **kwargs):
     # Code
 ````
 
@@ -18394,7 +18394,7 @@ meraki wireless getNetworkWirelessDevicesLatencyStats --networkId 'STRING' --kwa
 
 ##### Method Code:
 ```python
-def getNetworkWirelessDevicesLatencyStats(networkId: str, **kwargs):
+def getNetworkWirelessDevicesLatencyStats(networkId:str, **kwargs):
     # Code
 ````
 
@@ -18433,7 +18433,7 @@ meraki wireless getNetworkWirelessFailedConnections --networkId 'STRING' --kwarg
 
 ##### Method Code:
 ```python
-def getNetworkWirelessFailedConnections(networkId: str, **kwargs):
+def getNetworkWirelessFailedConnections(networkId:str, **kwargs):
     # Code
 ````
 
@@ -18474,7 +18474,7 @@ meraki wireless getNetworkWirelessLatencyHistory --networkId 'STRING' --kwargs '
 
 ##### Method Code:
 ```python
-def getNetworkWirelessLatencyHistory(networkId: str, **kwargs):
+def getNetworkWirelessLatencyHistory(networkId:str, **kwargs):
     # Code
 ````
 
@@ -18512,7 +18512,7 @@ meraki wireless getNetworkWirelessLatencyStats --networkId 'STRING' --kwargs '{"
 
 ##### Method Code:
 ```python
-def getNetworkWirelessLatencyStats(networkId: str, **kwargs):
+def getNetworkWirelessLatencyStats(networkId:str, **kwargs):
     # Code
 ````
 
@@ -18547,7 +18547,7 @@ meraki wireless getNetworkWirelessMeshStatuses --networkId 'STRING' --kwargs '{"
 
 ##### Method Code:
 ```python
-def getNetworkWirelessMeshStatuses(networkId: str, total_pages=1, direction='next', **kwargs):
+def getNetworkWirelessMeshStatuses(networkId:str, total_pages=1, direction='next', **kwargs):
     # Code
 ````
 
@@ -18573,7 +18573,7 @@ meraki wireless getNetworkWirelessRfProfile --networkId 'STRING' --rfProfileId '
 
 ##### Method Code:
 ```python
-def getNetworkWirelessRfProfile(networkId: str, rfProfileId: str):
+def getNetworkWirelessRfProfile(networkId:str, rfProfileId:str):
     # Code
 ````
 
@@ -18604,7 +18604,7 @@ meraki wireless getNetworkWirelessRfProfiles --networkId 'STRING' --kwargs '{"ke
 
 ##### Method Code:
 ```python
-def getNetworkWirelessRfProfiles(networkId: str, **kwargs):
+def getNetworkWirelessRfProfiles(networkId:str, **kwargs):
     # Code
 ````
 
@@ -18629,7 +18629,7 @@ meraki wireless getNetworkWirelessSettings --networkId 'STRING'
 
 ##### Method Code:
 ```python
-def getNetworkWirelessSettings(networkId: str):
+def getNetworkWirelessSettings(networkId:str):
     # Code
 ````
 
@@ -18669,7 +18669,7 @@ meraki wireless getNetworkWirelessSignalQualityHistory --networkId 'STRING' --kw
 
 ##### Method Code:
 ```python
-def getNetworkWirelessSignalQualityHistory(networkId: str, **kwargs):
+def getNetworkWirelessSignalQualityHistory(networkId:str, **kwargs):
     # Code
 ````
 
@@ -18695,7 +18695,7 @@ meraki wireless getNetworkWirelessSsid --networkId 'STRING' --number 'STRING'
 
 ##### Method Code:
 ```python
-def getNetworkWirelessSsid(networkId: str, number: str):
+def getNetworkWirelessSsid(networkId:str, number:str):
     # Code
 ````
 
@@ -18721,7 +18721,7 @@ meraki wireless getNetworkWirelessSsidBonjourForwarding --networkId 'STRING' --n
 
 ##### Method Code:
 ```python
-def getNetworkWirelessSsidBonjourForwarding(networkId: str, number: str):
+def getNetworkWirelessSsidBonjourForwarding(networkId:str, number:str):
     # Code
 ````
 
@@ -18747,7 +18747,7 @@ meraki wireless getNetworkWirelessSsidDeviceTypeGroupPolicies --networkId 'STRIN
 
 ##### Method Code:
 ```python
-def getNetworkWirelessSsidDeviceTypeGroupPolicies(networkId: str, number: str):
+def getNetworkWirelessSsidDeviceTypeGroupPolicies(networkId:str, number:str):
     # Code
 ````
 
@@ -18773,7 +18773,7 @@ meraki wireless getNetworkWirelessSsidEapOverride --networkId 'STRING' --number 
 
 ##### Method Code:
 ```python
-def getNetworkWirelessSsidEapOverride(networkId: str, number: str):
+def getNetworkWirelessSsidEapOverride(networkId:str, number:str):
     # Code
 ````
 
@@ -18799,7 +18799,7 @@ meraki wireless getNetworkWirelessSsidFirewallL3FirewallRules --networkId 'STRIN
 
 ##### Method Code:
 ```python
-def getNetworkWirelessSsidFirewallL3FirewallRules(networkId: str, number: str):
+def getNetworkWirelessSsidFirewallL3FirewallRules(networkId:str, number:str):
     # Code
 ````
 
@@ -18825,7 +18825,7 @@ meraki wireless getNetworkWirelessSsidFirewallL7FirewallRules --networkId 'STRIN
 
 ##### Method Code:
 ```python
-def getNetworkWirelessSsidFirewallL7FirewallRules(networkId: str, number: str):
+def getNetworkWirelessSsidFirewallL7FirewallRules(networkId:str, number:str):
     # Code
 ````
 
@@ -18851,7 +18851,7 @@ meraki wireless getNetworkWirelessSsidHotspot20 --networkId 'STRING' --number 'S
 
 ##### Method Code:
 ```python
-def getNetworkWirelessSsidHotspot20(networkId: str, number: str):
+def getNetworkWirelessSsidHotspot20(networkId:str, number:str):
     # Code
 ````
 
@@ -18878,7 +18878,7 @@ meraki wireless getNetworkWirelessSsidIdentityPsk --networkId 'STRING' --number 
 
 ##### Method Code:
 ```python
-def getNetworkWirelessSsidIdentityPsk(networkId: str, number: str, identityPskId: str):
+def getNetworkWirelessSsidIdentityPsk(networkId:str, number:str, identityPskId:str):
     # Code
 ````
 
@@ -18904,7 +18904,7 @@ meraki wireless getNetworkWirelessSsidIdentityPsks --networkId 'STRING' --number
 
 ##### Method Code:
 ```python
-def getNetworkWirelessSsidIdentityPsks(networkId: str, number: str):
+def getNetworkWirelessSsidIdentityPsks(networkId:str, number:str):
     # Code
 ````
 
@@ -18930,7 +18930,7 @@ meraki wireless getNetworkWirelessSsidSchedules --networkId 'STRING' --number 'S
 
 ##### Method Code:
 ```python
-def getNetworkWirelessSsidSchedules(networkId: str, number: str):
+def getNetworkWirelessSsidSchedules(networkId:str, number:str):
     # Code
 ````
 
@@ -18956,7 +18956,7 @@ meraki wireless getNetworkWirelessSsidSplashSettings --networkId 'STRING' --numb
 
 ##### Method Code:
 ```python
-def getNetworkWirelessSsidSplashSettings(networkId: str, number: str):
+def getNetworkWirelessSsidSplashSettings(networkId:str, number:str):
     # Code
 ````
 
@@ -18982,7 +18982,7 @@ meraki wireless getNetworkWirelessSsidTrafficShapingRules --networkId 'STRING' -
 
 ##### Method Code:
 ```python
-def getNetworkWirelessSsidTrafficShapingRules(networkId: str, number: str):
+def getNetworkWirelessSsidTrafficShapingRules(networkId:str, number:str):
     # Code
 ````
 
@@ -19008,7 +19008,7 @@ meraki wireless getNetworkWirelessSsidVpn --networkId 'STRING' --number 'STRING'
 
 ##### Method Code:
 ```python
-def getNetworkWirelessSsidVpn(networkId: str, number: str):
+def getNetworkWirelessSsidVpn(networkId:str, number:str):
     # Code
 ````
 
@@ -19033,7 +19033,7 @@ meraki wireless getNetworkWirelessSsids --networkId 'STRING'
 
 ##### Method Code:
 ```python
-def getNetworkWirelessSsids(networkId: str):
+def getNetworkWirelessSsids(networkId:str):
     # Code
 ````
 
@@ -19073,7 +19073,7 @@ meraki wireless getNetworkWirelessUsageHistory --networkId 'STRING' --kwargs '{"
 
 ##### Method Code:
 ```python
-def getNetworkWirelessUsageHistory(networkId: str, **kwargs):
+def getNetworkWirelessUsageHistory(networkId:str, **kwargs):
     # Code
 ````
 
@@ -19106,7 +19106,7 @@ meraki wireless updateDeviceWirelessBluetoothSettings --serial 'STRING' --kwargs
 
 ##### Method Code:
 ```python
-def updateDeviceWirelessBluetoothSettings(serial: str, **kwargs):
+def updateDeviceWirelessBluetoothSettings(serial:str, **kwargs):
     # Code
 ````
 
@@ -19139,7 +19139,7 @@ meraki wireless updateDeviceWirelessRadioSettings --serial 'STRING' --kwargs '{"
 
 ##### Method Code:
 ```python
-def updateDeviceWirelessRadioSettings(serial: str, **kwargs):
+def updateDeviceWirelessRadioSettings(serial:str, **kwargs):
     # Code
 ````
 
@@ -19173,7 +19173,7 @@ meraki wireless updateNetworkWirelessAlternateManagementInterface --networkId 'S
 
 ##### Method Code:
 ```python
-def updateNetworkWirelessAlternateManagementInterface(networkId: str, **kwargs):
+def updateNetworkWirelessAlternateManagementInterface(networkId:str, **kwargs):
     # Code
 ````
 
@@ -19205,7 +19205,7 @@ meraki wireless updateNetworkWirelessBilling --networkId 'STRING' --kwargs '{"ke
 
 ##### Method Code:
 ```python
-def updateNetworkWirelessBilling(networkId: str, **kwargs):
+def updateNetworkWirelessBilling(networkId:str, **kwargs):
     # Code
 ````
 
@@ -19241,7 +19241,7 @@ meraki wireless updateNetworkWirelessBluetoothSettings --networkId 'STRING' --kw
 
 ##### Method Code:
 ```python
-def updateNetworkWirelessBluetoothSettings(networkId: str, **kwargs):
+def updateNetworkWirelessBluetoothSettings(networkId:str, **kwargs):
     # Code
 ````
 
@@ -19279,7 +19279,7 @@ meraki wireless updateNetworkWirelessRfProfile --networkId 'STRING' --rfProfileI
 
 ##### Method Code:
 ```python
-def updateNetworkWirelessRfProfile(networkId: str, rfProfileId: str, **kwargs):
+def updateNetworkWirelessRfProfile(networkId:str, rfProfileId:str, **kwargs):
     # Code
 ````
 
@@ -19314,7 +19314,7 @@ meraki wireless updateNetworkWirelessSettings --networkId 'STRING' --kwargs '{"k
 
 ##### Method Code:
 ```python
-def updateNetworkWirelessSettings(networkId: str, **kwargs):
+def updateNetworkWirelessSettings(networkId:str, **kwargs):
     # Code
 ````
 
@@ -19399,7 +19399,7 @@ meraki wireless updateNetworkWirelessSsid --networkId 'STRING' --number 'STRING'
 
 ##### Method Code:
 ```python
-def updateNetworkWirelessSsid(networkId: str, number: str, **kwargs):
+def updateNetworkWirelessSsid(networkId:str, number:str, **kwargs):
     # Code
 ````
 
@@ -19432,7 +19432,7 @@ meraki wireless updateNetworkWirelessSsidBonjourForwarding --networkId 'STRING' 
 
 ##### Method Code:
 ```python
-def updateNetworkWirelessSsidBonjourForwarding(networkId: str, number: str, **kwargs):
+def updateNetworkWirelessSsidBonjourForwarding(networkId:str, number:str, **kwargs):
     # Code
 ````
 
@@ -19465,7 +19465,7 @@ meraki wireless updateNetworkWirelessSsidDeviceTypeGroupPolicies --networkId 'ST
 
 ##### Method Code:
 ```python
-def updateNetworkWirelessSsidDeviceTypeGroupPolicies(networkId: str, number: str, **kwargs):
+def updateNetworkWirelessSsidDeviceTypeGroupPolicies(networkId:str, number:str, **kwargs):
     # Code
 ````
 
@@ -19500,7 +19500,7 @@ meraki wireless updateNetworkWirelessSsidEapOverride --networkId 'STRING' --numb
 
 ##### Method Code:
 ```python
-def updateNetworkWirelessSsidEapOverride(networkId: str, number: str, **kwargs):
+def updateNetworkWirelessSsidEapOverride(networkId:str, number:str, **kwargs):
     # Code
 ````
 
@@ -19533,7 +19533,7 @@ meraki wireless updateNetworkWirelessSsidFirewallL3FirewallRules --networkId 'ST
 
 ##### Method Code:
 ```python
-def updateNetworkWirelessSsidFirewallL3FirewallRules(networkId: str, number: str, **kwargs):
+def updateNetworkWirelessSsidFirewallL3FirewallRules(networkId:str, number:str, **kwargs):
     # Code
 ````
 
@@ -19565,7 +19565,7 @@ meraki wireless updateNetworkWirelessSsidFirewallL7FirewallRules --networkId 'ST
 
 ##### Method Code:
 ```python
-def updateNetworkWirelessSsidFirewallL7FirewallRules(networkId: str, number: str, **kwargs):
+def updateNetworkWirelessSsidFirewallL7FirewallRules(networkId:str, number:str, **kwargs):
     # Code
 ````
 
@@ -19604,7 +19604,7 @@ meraki wireless updateNetworkWirelessSsidHotspot20 --networkId 'STRING' --number
 
 ##### Method Code:
 ```python
-def updateNetworkWirelessSsidHotspot20(networkId: str, number: str, **kwargs):
+def updateNetworkWirelessSsidHotspot20(networkId:str, number:str, **kwargs):
     # Code
 ````
 
@@ -19639,7 +19639,7 @@ meraki wireless updateNetworkWirelessSsidIdentityPsk --networkId 'STRING' --numb
 
 ##### Method Code:
 ```python
-def updateNetworkWirelessSsidIdentityPsk(networkId: str, number: str, identityPskId: str, **kwargs):
+def updateNetworkWirelessSsidIdentityPsk(networkId:str, number:str, identityPskId:str, **kwargs):
     # Code
 ````
 
@@ -19673,7 +19673,7 @@ meraki wireless updateNetworkWirelessSsidSchedules --networkId 'STRING' --number
 
 ##### Method Code:
 ```python
-def updateNetworkWirelessSsidSchedules(networkId: str, number: str, **kwargs):
+def updateNetworkWirelessSsidSchedules(networkId:str, number:str, **kwargs):
     # Code
 ````
 
@@ -19719,7 +19719,7 @@ meraki wireless updateNetworkWirelessSsidSplashSettings --networkId 'STRING' --n
 
 ##### Method Code:
 ```python
-def updateNetworkWirelessSsidSplashSettings(networkId: str, number: str, **kwargs):
+def updateNetworkWirelessSsidSplashSettings(networkId:str, number:str, **kwargs):
     # Code
 ````
 
@@ -19756,7 +19756,7 @@ meraki wireless updateNetworkWirelessSsidTrafficShapingRules --networkId 'STRING
 
 ##### Method Code:
 ```python
-def updateNetworkWirelessSsidTrafficShapingRules(networkId: str, number: str, **kwargs):
+def updateNetworkWirelessSsidTrafficShapingRules(networkId:str, number:str, **kwargs):
     # Code
 ````
 
@@ -19788,6 +19788,6 @@ meraki wireless updateNetworkWirelessSsidVpn --networkId 'STRING' --number 'STRI
 
 ##### Method Code:
 ```python
-def updateNetworkWirelessSsidVpn(networkId: str, number: str, **kwargs):
+def updateNetworkWirelessSsidVpn(networkId:str, number:str, **kwargs):
     # Code
 ````

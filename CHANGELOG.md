@@ -14,6 +14,7 @@ Documented below is a history of Meraki-CLI versions and a log of changes to eac
 - [v1.2.1 -> v1.3.0](#v130)
 - [v1.3.0 -> v1.3.1](#v131)
 - [v1.3.1 -> v1.3.5](#v135)
+- [v1.3.5 -> v1.3.6](#v136)
 
 
 # Versions
@@ -101,3 +102,21 @@ Documented below is a history of Meraki-CLI versions and a log of changes to eac
 - **Positional arguments were not being parsed as JSON**
     - ISSUE: Positional arguments which had annotated types of list or dict would be be parsed as JSON. See #9. For example `createNetworkSwitchStack` used with `--serials '["1111-1111-1111", "2222-2222-2222"]'` would not interpret the JSON data into a Python list before passing it to the method. This could be worked around by using `--serials 1111-1111-1111 --serials 2222-2222-2222`, but having JSON decoding would be nice.
     - FIXES: Added tests to detect this issue  and heavily modified `_get_method_params()` to parse as JSON only when the proper annotations existed in the method params.
+
+## v1.3.6
+
+### Misc
+- **Python 3.10 Support**
+    - Full testing against Python 3.10 versions has been added.
+
+- **Python Version in `-v` switch**
+    - The `meraki -v` command will now include the current Python interpreter version.
+
+- **Local version testing with Tox**
+    - Config files and instructions have been added to streamline testing against multiple Python versions locally.
+
+### Bug Fixes
+
+- **Exception logging**
+    - ISSUE: Some logging testing was malfunctioning but was not throwing errors until tested in 3.10.
+    - FIXES: The logging has been fixed to meet the test criteria.
