@@ -56,4 +56,4 @@ From current directory
 - Add the new version notes to `CHANGELOG.md`
 - `deactivate`
 - `bash commit.sh`
-- Update DevNet by pulling changes
+- Update DevNet by pulling changes (https://developer.cisco.com/codeexchange/github/repo/PackeTsar/meraki-cli#edit)
