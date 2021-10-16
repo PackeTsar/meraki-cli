@@ -333,7 +333,7 @@ def _log_exception(exception, exit=False) -> None:
     - exit: Boolean of whether or not to exit the program
     """
     if log.level >= logging.DEBUG:  # If we are debugging at all
-        log.warning('An exception was thrown and is logged below')
+        log.critical('An exception was thrown and is logged below')
         log.exception(exception)
     if exit:
         sys.exit()
