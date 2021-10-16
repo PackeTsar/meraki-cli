@@ -6,3 +6,4 @@ htmlcov
 *.egg-info*
 .tox/
 dist/
+.python-version
