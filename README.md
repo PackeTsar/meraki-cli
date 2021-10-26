@@ -11,7 +11,9 @@ A simple CLI tool to automate and control your Cisco Meraki Dashboard!
 
 Quick Install: `pip3 install meraki-cli`
 
-Command List: **[Meraki-CLI Command Guide](COMMAND_GUIDE.md)**
+Quick Command Cheat Sheet: **[Meraki-CLI Cheat Sheet](CHEATSHEET.md)**
+
+Full Command Guide: **[Meraki-CLI Command Guide](COMMAND_GUIDE.md)**
 
 
 -----------------------------------------
