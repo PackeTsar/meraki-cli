@@ -663,6 +663,28 @@ def _print_commands(parsed_args: argparse.Namespace,
         print()
 
 
+def _check_for_key(listofdicts: list, key: str) -> bool:
+    """
+    Check for the existance of a key in a list of dicts. Throw a warning (once)
+        if it doesn't exist at all.
+    Used by _object_filter to check if filter keys exist if data to be
+        filtered.
+
+    - listofdicts: List of dictionary objects where each dictionary is a series
+        of attributes which can be matched against and filtered. Example:
+        [{'id': '1', 'name': 'THING1'}, {'id': '2', 'name': 'THING2'}]
+
+    - key: String of the dict key we are searching for.
+    """
+    if type(key) is not str:
+        raise Exception(f'Key ({key}) is not a string.')
+    for d in listofdicts:
+        if key in d:
+            return True
+    log.warning(f'Key {key} does not exist in data. Possible typo.')
+    return False
+
+
 def _object_filter(listofdicts: list, filter_strs: list,
                    and_logic=False) -> []:
     """
@@ -674,9 +696,8 @@ def _object_filter(listofdicts: list, filter_strs: list,
         [{'id': '1', 'name': 'THING1'}, {'id': '2', 'name': 'THING2'}]
     - filter_strs: List of strings which are filter definitions. Example:
         ['name:^m...$', 'id:10...']
-    - and_logic: Boolean of whether or not to use "AND" between filters or to
-        use "OR" as is default.
-
+    - and_logic: Boolean of whether or not to use "AND" between filters.
+         Using "OR" is the default.
     """
     log.debug(f'Starting item filter. Using "AND" logic: {and_logic}')
     # Return the data if it is not a list. We can't filter just one.
