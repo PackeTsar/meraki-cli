@@ -713,11 +713,18 @@ def _object_filter(listofdicts: list, filter_strs: list,
         # Grab the remaining string for the regex
         regex = filter_str[len(key):]
         key = key.replace(':', '')
-        # If the provided filter key is not in the object attributes
-        if key not in listofdicts[0]:
-            raise KeyError(f'Filter key "{key}" does not exist in data')
         filters.append({'key': key, 'regex': regex})
     log.debug(f'Built regex filters:\n{json.dumps(filters, indent=4)}')
+    key_checks = []  # List of checks we can use for an AND-logic check
+    for fdict in filters:
+        # Run the check and add the result to the key_checks list
+        key_checks.append(_check_for_key(listofdicts, fdict['key']))
+    # If we are using AND logic and there was a single key check failure
+    if and_logic and False in key_checks:
+        # Throw a warning and return an empty result
+        log.warning(
+            'Detected missing filter keys, returning empty object list')
+        return []
     result = []
     # Perform the actual filtering now. The 'fdict' variable will be a filter
     #     definition in dict form. Example:
@@ -726,6 +733,10 @@ def _object_filter(listofdicts: list, filter_strs: list,
         # Use enumerate and an index so we can track how many of the filters
         #     have passed so far. This is used for the "AND" logic filtering
         for index, fdict in enumerate(filters):
+            # If the filter key is not in the object to be filtered
+            if fdict['key'] not in item:
+                # Don't even perform the check, just fail the object
+                break
             # If our regex generates a match with the value of the attribute
             if re.search(fdict['regex'], str(item[fdict['key']])):
                 if and_logic:  # If we are using "AND" filter logic

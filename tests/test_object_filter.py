@@ -18,11 +18,6 @@ class TestObjectFilter(unittest.TestCase):
         with self.assertLogs(level='ERROR'):
             _object_filter(LISTOFDICTS[0], ['goingToErorAnyways'])
 
-    def testObjectFilterKeyMissingError(self):
-        # Should throw a KeyError since we provided a bad key for the filter
-        with self.assertRaises(KeyError):
-            _object_filter(LISTOFDICTS, ['badkey:something'])
-
     def testObjectFilterNonFilter(self):
         # Should return nothing if filter list is empty
         output = _object_filter(LISTOFDICTS, [])
@@ -59,3 +54,51 @@ class TestObjectFilter(unittest.TestCase):
     def testObjectFilterEmptyList(self):
         output = _object_filter([], ['name:THING'])
         assert output == []
+
+    def testObjectFilterKeyMissingWarning(self):
+        # Should throw a warning since this key does not exist in any of
+        #     the data
+        with self.assertLogs(level='WARNING'):
+            _object_filter(LISTOFDICTS, ['missing:key'])
+        # Test with multiple filter keys, one of which is good. Make sure
+        #     the warning still fires.
+        with self.assertLogs(level='WARNING'):
+            _object_filter(LISTOFDICTS, ['name:THING.', 'missing:key'])
+        # Test with AND logic and make sure warning fires
+        with self.assertLogs(level='WARNING'):
+            _object_filter(LISTOFDICTS, ['name:THING.', 'missing:key'],
+                           and_logic=True)
+
+    def testObjectFilterKeyMissingReturn(self):
+        # Should return an empty list since this key does not exist in any
+        #     of the data.
+        output = _object_filter(LISTOFDICTS, ['missing:key'])
+        assert output == []
+        # Test with multiple keys. Should return objects (using "OR" logic)
+        output = _object_filter(LISTOFDICTS, ['name:THING.', 'missing:key'])
+        assert output == LISTOFDICTS[0:2]
+        # Test with multiple keys. Should return nothing (using "AND" logic)
+        output = _object_filter(LISTOFDICTS, ['name:THING.', 'missing:key'],
+                                and_logic=True)
+        assert output == []
+
+    def testObjectFilterKeyInconsistentData(self):
+        # Create a listofdicts with inconsistent keys
+        data = [
+            {'k2': 'v2'},
+            {'k1': 'v1', 'k2': 'v2'},
+            {'k3': 'v3', 'k4': 'v4'},
+        ]
+        # Should return no warnings
+        assert _object_filter(data, ['k1:v.']) == [data[1]]
+        assert _object_filter(data, ['k1:v.'], and_logic=True) == []
+
+    def testObjectFilterComplexData(self):
+        # Test filtering complex values (dict). Should be flattened to str
+        #     before filtering happens
+        data = [
+            {'k': {'test1': 'test1'}},
+            {'k': {'test2': 'test2'}},
+            {'k': {'test3': 'test3'}},
+        ]
+        assert _object_filter(data, ['k:test2']) == [data[1]]
