@@ -120,3 +120,11 @@ Documented below is a history of Meraki-CLI versions and a log of changes to eac
 - **Exception logging**
     - ISSUE: Some logging testing was malfunctioning but was not throwing errors until tested in 3.10.
     - FIXES: The logging has been fixed to meet the test criteria.
+
+## v1.3.7
+
+### Bug Fixes
+
+- **Object filtering using inconsistent object keys (#10)**
+    - ISSUE: Some Meraki API endpoints return inconsistent keys in their data. An example of this is the `switch getDeviceSwitchPortsStatuses` command/function which will return lldp keys and values for a port only when data exists to populate the value. Filtering on these inconsistent keys was impossible. The `_object_filter()` function would raise an exception and stop execution if this was encountered. Much more information can be found in Issue #10 where this problem is described in detail.
+    - FIXES: The `_object_filter()` function has been extended to better handle inconsistent keys. It is also now being tested to filter complex fields.

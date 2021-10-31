@@ -7,4 +7,4 @@ Authoritative source of current program version
 
 
 # Single-sourced release version is informed here
-version = '1.3.6'
+version = '1.3.7'
