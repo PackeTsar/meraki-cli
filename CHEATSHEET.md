@@ -26,6 +26,8 @@ Placeholders in the command examples will use the format `<placeholder>`
 - [Create a SVI on a Layer-3 Switch](#create-a-svi-on-a-layer-3-switch)
 - [Create a SVI and Add it to OSPF on a Layer-3 Switch](#create-a-svi-and-add-it-to-ospf-on-a-layer-3-switch)
 - [Set DHCP Settings on SVI (Using the SVI Name)](#set-dhcp-settings-on-svi--using-the-svi-name-)
+- [Filter ports on a switch using LLDP info](#filter-ports-on-a-switch-using-lldp-info)
+- [Set camera ports to specific VLAN](#set-camera-ports-to-specific-vlan)
 
 
 # Cheat Sheet
@@ -187,4 +189,34 @@ Set DHCP relay on a layer-3 switch SVI (which typically requires the SVI ID numb
 
 ```
 meraki -f name:<svi_name> switch getDeviceSwitchRoutingInterfaces --serial <serial> | meraki -j switch updateDeviceSwitchRoutingInterfaceDhcp --serial <serial> --dhcpMode dhcpRelay --dhcpRelayServerIps '["<ip_address>"]'
+```
+
+
+## Filter ports on a switch using LLDP info
+
+List only switch ports with Meraki cameras connected to them
+
+```
+meraki -f "lldp:Meraki MV" switch getDeviceSwitchPortsStatuses --serial <serial>
+```
+
+List only switch ports with Meraki access points connected to them
+
+```
+meraki -f "lldp:Meraki MR" switch getDeviceSwitchPortsStatuses --serial <serial>
+```
+
+List only switch ports with Meraki switches connected to them
+
+```
+meraki -f "lldp:Meraki MR" switch getDeviceSwitchPortsStatuses --serial <serial>
+```
+
+
+## Set camera ports to specific VLAN
+
+Set all ports on a switch with Meraki cameras connected to access a specific VLAN
+
+```
+meraki -f "lldp:Meraki MV" switch getDeviceSwitchPortsStatuses --serial <serial> | meraki switch updateDeviceSwitchPort --serial <serial> --vlan <vlan>
 ```
