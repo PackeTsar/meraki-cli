@@ -681,7 +681,7 @@ def _check_for_key(listofdicts: list, key: str) -> bool:
     for d in listofdicts:
         if key in d:
             return True
-    log.warning(f'Key {key} does not exist in data. Possible typo.')
+    log.warning(f'Key "{key}" does not exist in data. Possible typo.')
     return False
 
 
@@ -708,8 +708,12 @@ def _object_filter(listofdicts: list, filter_strs: list,
         return listofdicts  # Return it back since it can't be filtered
     filters = []  # Build list of dicts for filter definitions.
     for filter_str in filter_strs:  # Iterate user provided strings to parse
-        # Extract the key name up to the colon
-        key = re.search('^[a-zA-Z0-9].*?:', filter_str).group(0)
+        try:  # Catch exceptions to better
+            # Extract the key name up to the colon
+            key = re.search('^[a-zA-Z0-9].*?:', filter_str).group(0)
+        except AttributeError:
+            log.error(f'Malformed filter statement: "{filter_str}"')
+            sys.exit(1)
         # Grab the remaining string for the regex
         regex = filter_str[len(key):]
         key = key.replace(':', '')
