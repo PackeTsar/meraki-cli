@@ -102,3 +102,12 @@ class TestObjectFilter(unittest.TestCase):
             {'k': {'test3': 'test3'}},
         ]
         assert _object_filter(data, ['k:test2']) == [data[1]]
+
+    def testObjectFilterMalformedString(self):
+        # Test that a malformed filter causes a SystemExit
+        with self.assertRaises(SystemExit) as cm:
+            # And throws an ERROR log
+            with self.assertLogs(level='ERROR'):
+                _object_filter(LISTOFDICTS, ['badfilter'])
+        # And the exit code is 1 (error)
+        self.assertEqual(cm.exception.code, 1)
