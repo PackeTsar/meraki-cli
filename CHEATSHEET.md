@@ -96,6 +96,15 @@ meraki networks getNetworkDevices --networkId <networkId>
 ```
 
 
+## List All Switch Stacks in a Network
+
+Print a list of all switch stacks within a particular network.
+
+```
+meraki switch getNetworkSwitchStacks --networkId <networkId>
+```
+
+
 ## Claim a Device into a Network
 
 Claim an unassigned device into an existing Meraki Network
