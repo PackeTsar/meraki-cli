@@ -170,6 +170,12 @@ Print a list of SVIs on a layer-3 switch
 meraki switch getDeviceSwitchRoutingInterfaces --serial <serial>
 ```
 
+Print a list of SVIs on a layer-3 switch stack
+
+```
+meraki switch getNetworkSwitchStackRoutingInterfaces --networkId <networkId> --switchStackId <switchStackId>
+```
+
 
 ## Create a SVI on a Layer-3 Switch
 
