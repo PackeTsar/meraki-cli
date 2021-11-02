@@ -9,26 +9,8 @@ Placeholders in the command examples will use the format `<placeholder>`
 
 
 # Table of Contents
-- [List Organizations](#list-organizations)
-- [List Networks in an Organization](#list-networks-in-an-organization)
-- [List Device Inventory of an Organization](#list-device-inventory-of-an-organization)
-- [List Assigned Devices in an Organization](#list-assigned-devices-in-an-organization)
-- [List Unassigned Devices in an Organization](#list-unassigned-devices-in-an-organization)
-- [List All Switches in an Organization](#list-all-switches-in-an-organization)
-- [List Devices in a Network](#list-devices-in-a-network)
-- [List All Switch Stacks in a Network](#list-all-switch-stacks-in-a-network)
-- [Claim a Device into a Network](#claim-a-device-into-a-network)
-- [Change Device Name](#change-device-name)
-- [Change Device Name (Partial Serial)](#change-device-name--partial-serial-)
-- [List Port Settings on a Switch](#list-port-settings-on-a-switch)
-- [Set the Name of a Switch Port](#set-the-name-of-a-switch-port)
-- [Set a Switch Port to Access a VLAN](#set-a-switch-port-to-access-a-vlan)
-- [List SVIs on a Switch](#list-svis-on-a-switch)
-- [Create a SVI on a Layer-3 Switch](#create-a-svi-on-a-layer-3-switch)
-- [Create a SVI and Add it to OSPF on a Layer-3 Switch](#create-a-svi-and-add-it-to-ospf-on-a-layer-3-switch)
-- [Set DHCP Settings on SVI (Using the SVI Name)](#set-dhcp-settings-on-svi--using-the-svi-name-)
-- [Filter ports on a switch using LLDP info](#filter-ports-on-a-switch-using-lldp-info)
-- [Set camera ports to specific VLAN](#set-camera-ports-to-specific-vlan)
+
+[TOC]
 
 
 # Cheat Sheet
