@@ -16,6 +16,7 @@ Placeholders in the command examples will use the format `<placeholder>`
 - [List Unassigned Devices in an Organization](#list-unassigned-devices-in-an-organization)
 - [List All Switches in an Organization](#list-all-switches-in-an-organization)
 - [List Devices in a Network](#list-devices-in-a-network)
+- [List All Switch Stacks in a Network](#list-all-switch-stacks-in-a-network)
 - [Claim a Device into a Network](#claim-a-device-into-a-network)
 - [Change Device Name](#change-device-name)
 - [Change Device Name (Partial Serial)](#change-device-name--partial-serial-)
