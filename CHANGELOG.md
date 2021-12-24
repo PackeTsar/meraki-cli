@@ -16,6 +16,7 @@ Documented below is a history of Meraki-CLI versions and a log of changes to eac
 - [v1.3.1 -> v1.3.5](#v135)
 - [v1.3.5 -> v1.3.6](#v136)
 - [v1.3.6 -> v1.3.7](#v137)
+- [v1.3.7 -> v1.4.0](#v140)
 
 
 # Versions
@@ -129,3 +130,10 @@ Documented below is a history of Meraki-CLI versions and a log of changes to eac
 - **Object filtering using inconsistent object keys (#10)**
     - ISSUE: Some Meraki API endpoints return inconsistent keys in their data. An example of this is the `switch getDeviceSwitchPortsStatuses` command/function which will return lldp keys and values for a port only when data exists to populate the value. Filtering on these inconsistent keys was impossible. The `_object_filter()` function would raise an exception and stop execution if this was encountered. Much more information can be found in Issue #10 where this problem is described in detail.
     - FIXES: The `_object_filter()` function has been extended to better handle inconsistent keys. It is also now being tested to filter complex fields.
+
+## v1.4.0
+
+### New Features
+
+- **Tab Autocompletion on Linux and MacOS**
+    - Meraki-CLI now supports tab autocompletion of all commands, switches, and arguments when running Meraki-CLI on Linux or MacOS. Enablement of autocompletion requires a few steps after upgrade/installation of the Meraki-CLI package. Steps can be found in the README.
