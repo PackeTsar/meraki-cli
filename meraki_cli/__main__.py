@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# PYTHON_ARGCOMPLETE_OK
 
 
 """
@@ -1047,7 +1048,6 @@ def main(argstring=None) -> None:
                         const=parser, default=parser,
                         action='store_const',
                         help=argparse.SUPPRESS)
-    argcomplete.autocomplete(parser)
     # Structure top level arguments into groups to make them easier to read.
     #     Any arguments added here need to also be listed in the _clean_args
     #     function so they can be stripped from parameters passed into target
@@ -1119,6 +1119,7 @@ def main(argstring=None) -> None:
     # This will contain the command types like "networks" or "switch"
     subparser = parser.add_subparsers(dest='type', title='Command Types')
     _build_parser(subparser, api)  # Build the parser using the API
+    argcomplete.autocomplete(parser)  # Process the parser for auto-completion
     # If an argstring was passed in, we are probably being tested
     if argstring:
         # Split up the args and pass them in as a list to be parsed
