@@ -231,6 +231,48 @@ This will look like `--tags '["tag1", "tag2"]'` on a Unix shell or `--tags "[""t
 > Note: Advanced users can use the `--kwargs` option to input all optional parameters as raw JSON data. Check out the [Using --kwargs](#using---kwargs) section for information on how to do that.
 
 
+## Tab Autocompletion
+
+Meraki-CLI v1.4.0 introduces tab autocompletion support on MacOS (zsh) and Linux (bash) using the Python [argcomplete](https://github.com/kislyuk/argcomplete) framework. Once you have installed Meraki-CLI, there are a few additional steps you need to take to enable autocompletion
+
+### MacOS
+
+If you are using the terminal on a modern version of MacOS, you are probably using zsh ("z shell") instead of bash, which is the standard for Linux distros. Use one of the two below options to enable autocompletion for your terminal:
+
+**Option 1 (Easy)**
+
+- Run the command `curl -fs https://raw.githubusercontent.com/PackeTsar/meraki-cli/master/.zprofile >> ~/.zprofile` to populate your zsh profile with the proper commands
+- Exit your terminal application and re-open it
+- Type `meraki` at the prompt and then hit the TAB key
+- You now should see all the arguments/switches/commands available to you
+
+**Option 2 (Manual)**
+
+- Open your zsh profile file with `nano ~/.zprofile`
+- Add the below text to the bottom of the file
+
+```
+# Tab Autocompletion for Meraki-CLI tool
+autoload bashcompinit
+bashcompinit
+autoload compinit
+compinit -u
+eval "$(register-python-argcomplete meraki)"
+# End of Meraki-CLI commands
+```
+
+- Once the text is added, press **CTRL-X**, hit the '**y**' key, and hit **ENTER** to save the changes to the file
+- Exit your terminal application and re-open it
+- Type `meraki` at the prompt and then hit the TAB key
+- You now should see all the arguments/switches/commands available to you
+
+### Linux
+
+- At your CLI terminal, run the command `activate-global-python-argcomplete`
+- Exit the terminal session and restart it (log out and back in if on SSH)
+- Type `meraki` at the prompt and then hit the TAB key
+- You now should see all the arguments/switches/commands available to you
+
 ## Using a Config File
 
 If you find yourself regularly entering the same arguments into the Meraki-CLI tool like your API key, debug level, logfile, etc, it might make sense to save those settings to a static config file in a permanent location.
