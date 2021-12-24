@@ -234,7 +234,9 @@ This will look like `--tags '["tag1", "tag2"]'` on a Unix shell or `--tags "[""t
 
 ## Tab Autocompletion
 
-Meraki-CLI v1.4.0 introduces tab autocompletion support on MacOS (zsh) and Linux (bash) using the Python [argcomplete](https://github.com/kislyuk/argcomplete) framework. Once you have installed Meraki-CLI, there are a few additional steps you need to take to enable autocompletion
+Meraki-CLI v1.4.0 introduces tab autocompletion support on MacOS (zsh) and Linux (bash) using the Python [argcomplete](https://github.com/kislyuk/argcomplete) framework. Once you have installed Meraki-CLI, there are a few additional steps you need to take to enable autocompletion. See below for these steps.
+
+Once tab autocompletion is functional, you will be able to hit the TAB key at any point in the command to see your options and/or complete a partial command. You are also able to set the `-h` switch at any point in the command and hit ENTER to see the help page for that specific command.
 
 ### MacOS
 
@@ -270,6 +272,7 @@ eval "$(register-python-argcomplete meraki)"
 ### Linux
 
 - At your CLI terminal, run the command `activate-global-python-argcomplete`
+  - If you are using a Redhad distro like CentOS, also run the command `echo 'eval "$(register-python-argcomplete meraki)"' >> ~/.bash_profile`
 - Exit the terminal session and restart it (log out and back in if on SSH)
 - Type `meraki` at the prompt and then hit the TAB key
 - You now should see all the arguments/switches/commands available to you
