@@ -25,7 +25,7 @@ Version History: **[Change Log](CHANGELOG.md)**
 
 -----------------------------------------
 ## ABOUT
-Meraki-CLI is a wrapper around the official [Meraki Dashboard API Python SDK](https://github.com/meraki/dashboard-api-python). It takes all published functions in the library and makes them available to the user as a standard command-line tool with `-h` help options, commands, switches, and arguments. It also supports classic Linux-style pipelining, allowing the output of one instance of the program to be piped to the input of another.
+Meraki-CLI is a wrapper around the official [Meraki Dashboard API Python SDK](https://github.com/meraki/dashboard-api-python). It takes all published functions in the library and makes them available to the user as a standard command-line tool with `-h` help options, commands, switches, arguments, and tab autocompletion. It also supports classic Linux-style pipelining, allowing the output of one instance of the program to be piped to the input of another.
 
 ### Examples
 

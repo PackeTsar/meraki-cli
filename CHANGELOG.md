@@ -136,4 +136,4 @@ Documented below is a history of Meraki-CLI versions and a log of changes to eac
 ### New Features
 
 - **Tab Autocompletion on Linux and MacOS**
-    - Meraki-CLI now supports tab autocompletion of all commands, switches, and arguments when running Meraki-CLI on Linux or MacOS. Enablement of autocompletion requires a few steps after upgrade/installation of the Meraki-CLI package. Steps can be found in the README.
+    - Meraki-CLI now supports tab autocompletion of all commands, switches, and arguments on Linux, MacOS, and limited support on Windows 10. Enablement of autocompletion requires a few steps after upgrade/installation of the Meraki-CLI package. Steps can be found in the [Tab Autocompletion](https://github.com/PackeTsar/meraki-cli/#tab-autocompletion) section of the README.
