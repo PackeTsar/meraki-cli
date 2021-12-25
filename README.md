@@ -70,6 +70,8 @@ Since the Meraki-CLI tool builds its arguments directly off of Meraki's SDK, it'
 
 ## Prepare your OS
 
+**NOTE**: If you are installing on Windows 10 and want to use tab autocompletion of commands, you may want to review the [Windows 10](#windows-10) part of the "Tab Autocompletion" section first to see how to install Meraki-CLI on Windows 10 and be able to use autocompletion.
+
 In order to use Meraki-CLI, you need to have Python 3 installed on your OS. If you do not yet have Python 3 installed, visit this [Python 3 Installation Instructions Page](https://github.com/PackeTsar/Install-Python) and install for your operating system.
 
 
