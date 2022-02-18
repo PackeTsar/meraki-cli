@@ -16,7 +16,7 @@ class TestDocVersions(unittest.TestCase):
         pardir = os.path.dirname(filedir)
         # Get the path of the file to open
         readme_file_path = os.path.join(pardir, filename)
-        readmeFile = open(readme_file_path, 'r')
+        readmeFile = open(readme_file_path, 'r', encoding="utf8")
         readme = readmeFile.read()
         if find_string not in readme:  # If the string is not in the file
             raise Exception(  # Raise exception with info
