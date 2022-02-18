@@ -39,7 +39,7 @@ with open(os.path.join(
 
 
 CLASSIFIERS = [
-    'Development Status :: 4 - Beta',
+    'Development Status :: 5 - Production/Stable',
     'Environment :: Console',
     'Intended Audience :: Information Technology',
     'License :: OSI Approved :: MIT License',
