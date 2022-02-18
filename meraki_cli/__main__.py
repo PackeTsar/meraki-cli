@@ -90,6 +90,7 @@ from rich.table import Table
 
 # Local libraries
 from . import __version__
+from .__version__ import user_agent as USER_AGENT
 
 
 class Args:
@@ -1148,10 +1149,11 @@ def main(argstring=None) -> None:
         if args.apiKey:
             log.debug('Instantiating Meraki API with defined API key')
             # Instantiate the real API object
-            api = meraki.DashboardAPI(args.apiKey, suppress_logging=True)
+            api = meraki.DashboardAPI(args.apiKey, suppress_logging=True,
+                                      caller=USER_AGENT)
         else:
             log.debug('Instantiating Meraki API with environment API key')
-            api = meraki.DashboardAPI(suppress_logging=True)
+            api = meraki.DashboardAPI(suppress_logging=True, caller=USER_AGENT)
     except meraki.exceptions.APIKeyError:  # If no API key was provided
         log.critical('Meraki API key not provided. Use the "-k" argument or '
                      'set an environment variable like: export '
