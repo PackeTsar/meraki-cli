@@ -7,7 +7,7 @@ Authoritative source of current program version
 
 
 # Single-sourced release version is informed here
-version = '1.4.0'
+version = '1.4.1'
 
 # User-Agent header used for HTTP requests
 user_agent = f'Meraki-CLI/{version} PackeTsar'

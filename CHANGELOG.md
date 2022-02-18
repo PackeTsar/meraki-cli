@@ -7,6 +7,7 @@ Documented below is a history of Meraki-CLI versions and a log of changes to eac
 
 
 # Table of Contents
+- [v1.4.0 -> v1.4.1](#v141)
 - [v1.3.7 -> v1.4.0](#v140)
 - [v1.3.6 -> v1.3.7](#v137)
 - [v1.3.5 -> v1.3.6](#v136)
@@ -21,6 +22,20 @@ Documented below is a history of Meraki-CLI versions and a log of changes to eac
 
 
 # Versions
+
+## v1.4.1
+
+### Bug Fixes
+
+- **User-Agent Reporting**
+    - All HTTP interactions from Meraki-CLI with the Dashboard will now include a User-Agent value in compliance with [Meraki's Ecosystem partner requirements](https://github.com/meraki/dashboard-api-python#note-for-application-developers-and-ecosystem-partners). This is accomplished via a named argument to `meraki.DashboardAPI()` instead of the config file mentioned in the document, but the effect is the same. Unit testing has also been added to make sure the User-Agent string is functional in the REST calls.
+
+- **Version Documentation Testing**
+    - The Meraki-CLI version is documented in 3 places:
+        1. The `meraki_cli/__version__.py` file
+        2. The `README.md` file
+        3. This file (`CHANGELOG.md`)
+    - In the past these documentation files have been forgotten when updating the program. Testing has been implemented to make sure these files get updated when a new version is published.
 
 ## v1.4.0
 
