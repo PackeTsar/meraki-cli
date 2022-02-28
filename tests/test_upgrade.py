@@ -32,6 +32,10 @@ class TestUpgrade(unittest.TestCase):
         _upgrade(self.parsed_args)
 
     def testUpgradeSDKOnly(self):
+        self.parsed_args.upgrade_all_eager = True
+        _upgrade(self.parsed_args)
+
+    def testUpgradeEager(self):
         self.parsed_args.upgrade_meraki_sdk = True
         _upgrade(self.parsed_args)
 
