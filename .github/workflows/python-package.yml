@@ -1,9 +1,9 @@
 name: CI Testing
 on:
   push:
-    branches: [ master ]
+    branches: [ '**' ]
   pull_request:
-    branches: [ master ]
+    branches: [ '**' ]
   schedule:
     - cron: '22 12 * * *'
 jobs:
@@ -41,6 +41,9 @@ jobs:
     - name: Check version
       run: |
         meraki -v
+    - name: Perform a software upgrade
+      run: |
+        meraki upgrade --upgrade-all --no-confirm
     - name: Check command help menu
       run: |
         meraki organizations getOrganizations -h
