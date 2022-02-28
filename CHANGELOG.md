@@ -7,6 +7,7 @@ Documented below is a history of Meraki-CLI versions and a log of changes to eac
 
 
 # Table of Contents
+- [v1.4.1 -> v1.5.0](#v150)
 - [v1.4.0 -> v1.4.1](#v141)
 - [v1.3.7 -> v1.4.0](#v140)
 - [v1.3.6 -> v1.3.7](#v137)
@@ -22,6 +23,18 @@ Documented below is a history of Meraki-CLI versions and a log of changes to eac
 
 
 # Versions
+
+## v1.5.0
+
+### New Features
+
+- **Native Upgrading**
+    - Meraki-CLI now has a native upgrade capability with the `meraki upgrade` command path. The help page can be viewed by issuing `meraki upgrade` or `meraki upgrade -h`. There are 4 different options for performing upgrades:
+        - `--upgrade-all`: Upgrade Meraki-CLI and the Meraki Dashboard API Python SDK package, dependencies will be left alone unless required
+        - `--upgrade-meraki-cli`: Upgrade only the Meraki-CLI package, dependencies will be left alone unless required
+        - `--upgrade-meraki-sdk`: Upgrade only the Meraki Dashboard API Python SDK package, others will be left alone unless required
+        - `--upgrade-all-eager`: Upgrade Meraki-CLI and all its dependencies in an eager fashion
+    - The feature leverages the PIP utility to perform upgrades of the packages but makes the operation easier for the user by exposing it via the native application
 
 ## v1.4.1
 

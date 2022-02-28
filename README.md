@@ -11,6 +11,8 @@ A simple CLI tool to automate and control your Cisco Meraki Dashboard!
 
 Quick Install: `pip3 install meraki-cli`
 
+Update/Upgrade Meraki-CLI: `meraki upgrade --upgrade-all`
+
 Quick Command Cheat Sheet: **[Meraki-CLI Cheat Sheet](CHEATSHEET.md)**
 
 Full Command Guide: **[Meraki-CLI Command Guide](COMMAND_GUIDE.md)**
@@ -18,7 +20,7 @@ Full Command Guide: **[Meraki-CLI Command Guide](COMMAND_GUIDE.md)**
 
 -----------------------------------------
 ## VERSION
-The version of Meraki-CLI documented here is: **1.4.1**
+The version of Meraki-CLI documented here is: **1.5.0**
 
 Version History: **[Change Log](CHANGELOG.md)**
 
@@ -83,9 +85,13 @@ You can use PIP to install Meraki-CLI with the command `pip3 install meraki-cli`
 
 To see if Meraki-CLI was successfully installed, run the `meraki` command and see if it displays the help menu.
 
+
 #### Upgrading
 
-If you already have Meraki-CLi installed and want to upgrade to the latest release, use the command `pip3 install --upgrade --no-cache-dir meraki-cli` or `python3 -m pip install --upgrade --no-cache-dir meraki-cli`.
+If you already have Meraki-CLI installed and want to upgrade to the latest release, run the command `meraki upgrade --upgrade-all`
+
+- To see all the upgrade options, view the help page by running `meraki upgrade`
+- If you are updating from a Meraki-CLI version older than v1.5.0, then use `pip3 install --upgrade --no-cache-dir meraki-cli` or `python3 -m pip install --upgrade --no-cache-dir meraki-cli`
 
 
 ## Getting and Using your API Key
