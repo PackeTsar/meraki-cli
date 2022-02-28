@@ -1060,19 +1060,25 @@ def _add_upgrade_parser(subparser: argparse.ArgumentParser) -> None:
     excl_group.add_argument(
         '--upgrade-all',
         dest='upgrade_all',
-        help='Upgrade Meraki-CLI and all its dependencies',
+        help='Upgrade Meraki-CLI and the Meraki Dashboard API Python SDK '
+        'package, dependencies will be left alone unless required',
         action='store_true')
     excl_group.add_argument(
-        '--upgrade-cli-only',
-        dest='upgrade_cli_only',
-        help='Upgrade only the Meraki-CLI package, others will be left alone'
-        ' unless required',
+        '--upgrade-meraki-cli',
+        dest='upgrade_meraki_cli',
+        help='Upgrade only the Meraki-CLI package, dependencies will be left '
+        'alone unless required',
         action='store_true')
     excl_group.add_argument(
-        '--upgrade-sdk-only',
-        dest='upgrade_sdk_only',
+        '--upgrade-meraki-sdk',
+        dest='upgrade_meraki_sdk',
         help='Upgrade only the Meraki Dashboard API Python SDK package, '
         'others will be left alone unless required',
+        action='store_true')
+    excl_group.add_argument(
+        '--upgrade-all-eager',
+        dest='upgrade_all_eager',
+        help='Upgrade Meraki-CLI and all its dependencies in an eager fashion',
         action='store_true')
     # Other arguments which can be added
     msc_group = cmd.add_argument_group('Misc Arguments')
@@ -1099,20 +1105,24 @@ def _upgrade(parsed_args: argparse.Namespace) -> None:
         conf = input('Continue with upgrade process? (y/n)')
         if conf[0].lower() != 'y':
             log.critical('Upgrade cancelled by user')
-            sys.exit()
+            sys.exit(1)
     log.info('Upgrade continuation confirmed')
     # Set the CLI options for each upgrade scenario
     if parsed_args.upgrade_all:
-        package = 'meraki-cli'
+        packages = 'meraki-cli meraki'
+        strategy = 'only-if-needed'
+    elif parsed_args.upgrade_meraki_cli:
+        packages = 'meraki-cli'
+        strategy = 'only-if-needed'
+    elif parsed_args.upgrade_meraki_sdk:
+        packages = 'meraki'
+        strategy = 'only-if-needed'
+    elif parsed_args.upgrade_all_eager:
+        packages = 'meraki-cli'
         strategy = 'eager'
-    elif parsed_args.upgrade_cli_only:
-        package = 'meraki-cli'
-        strategy = 'only-if-needed'
-    elif parsed_args.upgrade_sdk_only:
-        package = 'meraki'
-        strategy = 'only-if-needed'
-    opts = f'-m pip install --upgrade --upgrade-strategy {strategy} {package}'
-    log.info(f'Executing Python with options: {opts}')
+    opts = ('-m pip install --no-cache-dir --upgrade '
+            f'--upgrade-strategy {strategy} {packages}')
+    log.info(f'Executing Python with options: "{opts}"')
     subprocess.check_call([sys.executable]+opts.split(' '))
 
 
