@@ -13,6 +13,8 @@ Quick Install: `pip3 install meraki-cli`
 
 Update/Upgrade Meraki-CLI: `meraki upgrade --upgrade-all`
 
+Full Installation Instructions: **[Install Meraki-CLI](#install-meraki-cli)**
+
 Quick Command Cheat Sheet: **[Meraki-CLI Cheat Sheet](CHEATSHEET.md)**
 
 Full Command Guide: **[Meraki-CLI Command Guide](COMMAND_GUIDE.md)**
@@ -46,8 +48,11 @@ Since the Meraki-CLI tool builds its arguments directly off of Meraki's SDK, it'
 -----------------------------------------
 ## TABLE OF CONTENTS
 1. [Getting Started](#getting-started)
-    - [Prepare your OS](#prepare-your-os)
     - [Install Meraki-CLI](#install-meraki-cli)
+        - [Install on Windows 10 WSL](#install-on-windows-10-wsl)
+        - [Install on MacOS](#install-on-macos)
+        - [Install on Windows (native)](#install-on-windows-native)
+        - [Install on Linux](#install-on-linux)
         - [Upgrading](#upgrading)
     - [Getting and Using your API Key](#getting-and-using-your-api-key)
     - [A Few Starting Commands](#a-few-starting-commands)
@@ -70,20 +75,81 @@ Since the Meraki-CLI tool builds its arguments directly off of Meraki's SDK, it'
 -----------------------------------------
 ## GETTING STARTED
 
-## Prepare your OS
-
-> **NOTE**: If you are installing on Windows 10 and want to use tab autocompletion of commands, you may want to review the [Windows 10](#windows-10) part of the "Tab Autocompletion" section first to see how to install Meraki-CLI on Windows 10 and be able to use autocompletion.
-
-In order to use Meraki-CLI, you need to have Python 3 installed on your OS. If you do not yet have Python 3 installed, visit this [Python 3 Installation Instructions Page](https://github.com/PackeTsar/Install-Python) and install for your operating system.
-
 
 ## Install Meraki-CLI
 
-The easiest (and recommended) way to install Meraki-CLI is to use PIP.
+If you already have Python3 and PIP (the Python package manager) installed on your machine, you can install Meraki-CLI with `pip3 install meraki-cli` or `python3 -m pip install meraki-cli` and then run the `meraki` command and see if it displays the help menu. Once installed, follow the instructions in the [Tab Autocompletion](#tab-autocompletion) section to enable autocompletion.
 
-You can use PIP to install Meraki-CLI with the command `pip3 install meraki-cli` or `python3 -m pip install meraki-cli`
+For detailed instructions on how to install Python and Meraki-CLI on your OS, see the sections below.
 
-To see if Meraki-CLI was successfully installed, run the `meraki` command and see if it displays the help menu.
+
+#### Install on Windows 10 WSL
+
+The recommended (but not only) way to run Meraki-CLI on Windows is to run it on [Windows Subsystem for Linux](https://docs.microsoft.com/en-us/windows/wsl/about) (WSL). This is because Meraki-CLI's tab-autocompletion feature is only supported on MacOS and Linux platforms. Running it inside Windows 10 WSL gives you this full tab-autocompletion functionality.
+
+**NOTE**: Running WSL version 2 (which is now the default) requires virtualization features to be enabled in your PC's BIOS settings. The settings may be called VT-x, AMD-V, or SVM.
+
+WSL is very quick and easy to install on your Windows 10 OS and should take about 10 minutes. Follow the below steps to install WSL, install Meraki-CLI, and set up tab-autocompletion.
+
+- Click on the **Start** button and search for "features", click on the "**Turn Windows features on and off**" application
+- Check the boxes for "**Virtual Machine Platform**" and "**Windows Subsystem for Linux**", click **OK** and reboot Windows once the installation completes
+- Once logged back in, click on the **Start** button and search for "store", open the "**Microsoft Store**" application
+- Search for "ubuntu" inside the store and click on the "**Ubuntu 20.04**" app (or the latest version available), then click the **Get** button to install it
+- Once installation finishes, click the **Open** button to open WSL. It will ask you for a user name and password. Go through these prompts to set up WSL
+- After setting it up, you will have a command prompt with something like `user@MYWIN10PC:~$`. Now we will perform a Linux Meraki-CLI installation
+- Run `sudo apt update` to pull the latest repository info
+  - Provide your WSL password when prompted
+- Run `sudo apt install python3-pip` to install the PIP Python package manager
+- Run `sudo pip3 install meraki-cli` to install the Meraki-CLI tool
+- Run `sudo activate-global-python-argcomplete` to activate the tab autocompletion feature
+  - You should just see the response "Installing bash completion script /etc/bash_completion.d/python-argcomplete"
+  - NOTE: We are running this as sudo on purpose. The autocomplete feature must be installed and activated at the global level
+- Exit the WSL window with `exit`
+- Reopen the WSL command window by finding the "Ubuntu" app in your start menu
+- Run the `meraki` command and make sure you see the help output
+- Type `meraki` at the prompt and then hit the TAB key a few times
+- You now should see all the arguments/switches/commands available to you
+
+
+#### Install on MacOS
+
+Meraki-CLI can be installed natively on MacOS and be used through the Terminal application. Follow the below steps to install Meraki-CLI on MacOS.
+
+- In order to use Meraki-CLI on MacOS, you need to have Python 3 installed. If you do not yet have Python 3 installed, visit this [Python 3 Installation Instructions Page](https://github.com/PackeTsar/Install-Python) and install for your operating system.
+- Once Python3 is installed, open your Terminal application by navigating in Finder to **Applications** > **Utilities** > **Terminal**
+- Run `pip3 install meraki-cli` to install the Meraki-CLI tool
+- Run the command `curl -fs https://raw.githubusercontent.com/PackeTsar/meraki-cli/master/.zprofile >> ~/.zprofile` to add commands to your terminal profile which will enable tab-autocompletion on startup
+- Close the Terminal application and re-open it
+- Run the `meraki` command and make sure you see the help output
+- Type `meraki` at the prompt and then hit the TAB key a few times
+- You now should see all the arguments/switches/commands available to you
+
+
+#### Install on Windows (native)
+
+The recommended way to run Meraki-CLI on Windows is to use the [Windows Subsystem for Linux](https://docs.microsoft.com/en-us/windows/wsl/about) (WSL) because it supports tab-autocompletion. But you can also install Meraki-CLI natively on Windows. Follow the below steps to install natively on Windows.
+
+- In order to use Meraki-CLI on native Windows, you need to have Python 3 installed. If you do not yet have Python 3 installed, visit this [Python 3 Installation Instructions Page](https://github.com/PackeTsar/Install-Python) and install for your operating system.
+- Once Python3 is installed, click on the **Start** button and search for "command", click on the "**Command Prompt**" application
+- Run `pip3 install meraki-cli` to install the Meraki-CLI tool
+- Run the `meraki` command and make sure you see the help output
+
+
+#### Install on Linux
+
+The instructions here describe installation of Meraki-CLI on an Ubuntu 20 OS. Other distros may require slightly different commands.
+
+- Run `sudo apt update` to pull the latest repository info
+  - Provide your password when prompted
+- Run `sudo apt install python3-pip` to install the PIP Python package manager
+- Run `sudo pip3 install meraki-cli` to install the Meraki-CLI tool
+- Run `sudo activate-global-python-argcomplete` to activate the tab autocompletion feature
+  - You should just see the response "Installing bash completion script /etc/bash_completion.d/python-argcomplete"
+  - NOTE: We are running this as sudo on purpose. The autocomplete feature must be installed and activated at the global level
+- Log out and back into the OS to restart BASH and enable tab-autocompletion
+- Run the `meraki` command and make sure you see the help output
+- Type `meraki` at the prompt and then hit the TAB key a few times
+- You now should see all the arguments/switches/commands available to you
 
 
 #### Upgrading
@@ -242,9 +308,24 @@ This will look like `--tags '["tag1", "tag2"]'` on a Unix shell or `--tags "[""t
 
 ## Tab Autocompletion
 
-Meraki-CLI v1.4.0 introduces tab autocompletion support on MacOS (zsh) and Linux (bash), and Windows 10 WSL using the Python [argcomplete](https://github.com/kislyuk/argcomplete) framework. Once you have installed Meraki-CLI, there are a few additional steps you need to take to enable autocompletion. See below for these steps.
+Meraki-CLI v1.4.0 introduced tab autocompletion support on MacOS (zsh), Linux (bash), and Windows 10 WSL using the Python [argcomplete](https://github.com/kislyuk/argcomplete) framework. Once you have installed Meraki-CLI, there are a few additional steps you need to take to enable autocompletion. See below for these steps.
 
 Once tab autocompletion is functional, you will be able to hit the TAB key at any point in the command to see your options and/or complete a partial command. You are also able to set the `-h` switch at any point in the command and hit ENTER to see the help page for that specific command.
+
+
+### Windows (10)
+
+A native installation of Meraki-CLI on Windows (where you use the Windows Command Prompt for the `meraki` commands) does not support tab autocompletion. In order to use the tab-autocompletion feature in Windows, you need to [Install on Windows 10 WSL](#install-on-windows-10-wsl). Once Meraki-CLI is installed, you can enable tab-autocompletion in WSL using the below steps.
+
+- Run `sudo activate-global-python-argcomplete` in WSL to activate the tab autocompletion feature
+  - You should just see the response "Installing bash completion script /etc/bash_completion.d/python-argcomplete"
+  - NOTE: We are running this as sudo on purpose. The autocomplete feature must be installed and activated at the global level
+- Exit the WSL window with `exit`
+- Reopen the WSL command window by finding the "Ubuntu" app in your start menu
+- Run the `meraki` command and make sure you see the help output
+- Type `meraki` at the prompt and then hit the TAB key a few times
+- You now should see all the arguments/switches/commands available to you
+
 
 ### MacOS
 
@@ -277,6 +358,7 @@ eval "$(register-python-argcomplete meraki)"
 - Type `meraki` at the prompt and then hit the TAB key
 - You now should see all the arguments/switches/commands available to you
 
+
 ### Linux
 
 - At your CLI terminal, run the command `activate-global-python-argcomplete`
@@ -285,39 +367,6 @@ eval "$(register-python-argcomplete meraki)"
 - Type `meraki` at the prompt and then hit the TAB key
 - You now should see all the arguments/switches/commands available to you
 
-### Windows (10)
-
-A native installation of Meraki-CLI on Windows (where you use the Windows Command Prompt for the `meraki` commands) does not support tab autocompletion. There is, however, a workaround to this. If you're using a modern version of **Windows 10**, you can install the [Windows Subsystem for Linux](https://docs.microsoft.com/en-us/windows/wsl/about) (WSL) on your Windows 10 OS and then install Meraki-CLI on the WSL which will support tab autocompletion. This WSL installation is a native Windows feature and the process below should take you about 10 minutes.
-
-**NOTE**: Running WSL version 2 (which is now the default) requires virtualization features to be enabled in your PC's BIOS settings. The settings may be called VT-x, AMD-V, or SVM.
-
-- Open a Powershell window on your Windows 10 OS **as administrator** (right-click and then click "Run as administrator")
-- Run the command `wsl --install`
-- After installation you will be prompted to restart your OS, restart it
-- Once logged back in, you will see a window pop up saying it is installing
-- Once installation finishes, it will ask you for a user name and password. Go through these prompts to set up WSL
-- After setting it up, you will have a command prompt with something like `user@MYWIN10PC:~$`. Now we will perform a Linux Meraki-CLI installation
-- Run `sudo apt update` to pull the latest repository info
-- Run `sudo apt install python3-pip` to install the PIP Python package manager
-- Run `sudo pip3 install meraki-cli` to install the Meraki-CLI tool
-  - NOTE: We are running this as sudo on purpose. The autocomplete feature must be installed and activated at the global level
-- Once installation finishes, run the `meraki` command and make sure you see the help output
-- Exit the command window with `exit`
-- Reopen the WSL command window by finding the "Ubuntu" app in your start menu
-- Run the command `sudo activate-global-python-argcomplete` to activate the tab autocompletion feature
-  - Provide your WSL password when prompted
-  - You should just see the response "Installing bash completion script /etc/bash_completion.d/python-argcomplete"
-- Exit the command window with `exit` once again
-- Type `meraki` at the prompt and then hit the TAB key
-- You now should see all the arguments/switches/commands available to you
-
-**WSL Meraki-CLI Config File**
-
-If you want to set up a config-file to store your Meraki dashboard API key, you will need to use the Linux file path by:
-
-- Creating the config file directory with `sudo mkdir /etc/meraki-cli`
-- Create the config file by opening the nano text editor with `sudo nano /etc/meraki-cli/meraki-cli.conf`
-- Drop in and modify the example config file text from the [Using a Config File](#using-a-config-file) section
 
 ## Using a Config File
 
