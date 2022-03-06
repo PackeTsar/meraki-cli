@@ -83,7 +83,7 @@ If you already have Python3 and PIP (the Python package manager) installed on yo
 For detailed instructions on how to install Python and Meraki-CLI on your OS, see the sections below.
 
 
-#### Install on Windows 10 WSL
+### Install on Windows 10 WSL
 
 The recommended (but not only) way to run Meraki-CLI on Windows is to run it on [Windows Subsystem for Linux](https://docs.microsoft.com/en-us/windows/wsl/about) (WSL). This is because Meraki-CLI's tab-autocompletion feature is only supported on MacOS and Linux platforms. Running it inside Windows 10 WSL gives you this full tab-autocompletion functionality.
 
@@ -111,7 +111,7 @@ WSL is very quick and easy to install on your Windows 10 OS and should take abou
 - You now should see all the arguments/switches/commands available to you
 
 
-#### Install on MacOS
+### Install on MacOS
 
 Meraki-CLI can be installed natively on MacOS and be used through the Terminal application. Follow the below steps to install Meraki-CLI on MacOS.
 
@@ -125,7 +125,7 @@ Meraki-CLI can be installed natively on MacOS and be used through the Terminal a
 - You now should see all the arguments/switches/commands available to you
 
 
-#### Install on Windows (native)
+### Install on Windows (native)
 
 The recommended way to run Meraki-CLI on Windows is to use the [Windows Subsystem for Linux](https://docs.microsoft.com/en-us/windows/wsl/about) (WSL) because it supports tab-autocompletion. But you can also install Meraki-CLI natively on Windows. Follow the below steps to install natively on Windows.
 
@@ -135,7 +135,7 @@ The recommended way to run Meraki-CLI on Windows is to use the [Windows Subsyste
 - Run the `meraki` command and make sure you see the help output
 
 
-#### Install on Linux
+### Install on Linux
 
 The instructions here describe installation of Meraki-CLI on an Ubuntu 20 OS. Other distros may require slightly different commands.
 
@@ -152,7 +152,7 @@ The instructions here describe installation of Meraki-CLI on an Ubuntu 20 OS. Ot
 - You now should see all the arguments/switches/commands available to you
 
 
-#### Upgrading
+### Upgrading
 
 If you already have Meraki-CLI installed and want to upgrade to the latest release, run the command `meraki upgrade --upgrade-all`
 
