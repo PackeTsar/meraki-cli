@@ -78,8 +78,8 @@ Since the Meraki-CLI tool builds its arguments directly off of Meraki's SDK, it'
 
 ## Install Meraki-CLI
 
-<a href="https://www.youtube.com/watch?v=uDfMvu_1rag">
- <img src="https://img.youtube.com/vi/uDfMvu_1rag/hqdefault.jpg" alt="Meraki-CLI Installation Video" align="right" width="200" height="150">
+<a href="https://www.youtube.com/watch?v=uDfMvu_1rag" target="_blank">
+ <img src="video_thumb.jpg" alt="Meraki-CLI Installation Video" align="right" width="200" height="150">
 </a>
 
 If you already have Python3 and PIP (the Python package manager) installed on your machine, you can install Meraki-CLI with `pip3 install meraki-cli` or `python3 -m pip install meraki-cli` and then run the `meraki` command and see if it displays the help menu. Once installed, follow the instructions in the [Tab Autocompletion](#tab-autocompletion) section to enable autocompletion.
