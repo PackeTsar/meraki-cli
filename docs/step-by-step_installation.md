@@ -78,3 +78,5 @@ title: Step-by-Step Installation
 ---
 
 Once fully installed, follow the instructions in [Getting Your API Key](../getting-your-api-key/) section to obtain and plug-in your Meraki Dashboard API key.
+
+[Next: Getting Your API Key :octicons-arrow-right-24:](../getting-your-api-key/){ .md-button .md-button--primary }

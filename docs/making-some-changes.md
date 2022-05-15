@@ -107,3 +107,5 @@ Simple value types like string, integer, and boolean are pretty straightforward.
 ---
 
 Once you're familiar with providing simple arguments to Meraki-CLI like the examples above, you may want to review how to provide [Complex Argument Values](../complex-argument-values/)
+
+[Next: Complex Argument Values :octicons-arrow-right-24:](../complex-argument-values/){ .md-button .md-button--primary }

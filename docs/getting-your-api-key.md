@@ -63,3 +63,5 @@ Plug your API key into Meraki-CLI using one of three methods:
 ---
 
 After you have set Meraki-CLI up to use your API key, you'll want to try running [A Few Starting Commands](../a-few-starting-commands/).
+
+[Next: A Few Starting Commands :octicons-arrow-right-24:](../a-few-starting-commands/){ .md-button .md-button--primary }

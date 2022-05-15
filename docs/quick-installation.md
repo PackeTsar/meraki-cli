@@ -24,3 +24,5 @@ If you already have Python 3 installed on your operating system, use the command
 ---
 
 Once installed, follow the instructions in the [Tab Auto-Completion](../tab_auto-completion/) section to enable autocompletion.
+
+[Next: Tab Auto-Completion :octicons-arrow-right-24:](../tab_auto-completion/){ .md-button .md-button--primary }

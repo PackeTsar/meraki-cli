@@ -85,3 +85,5 @@ You can also view all supported Meraki-CLI commands on the [Meraki-CLI Command G
 ---
 
 Now that you are familiar with running Meraki-CLI commands which show the current configuration or state of the network, we can try [Making Some Changes](../making-some-changes/)
+
+[Next: Making Some Changes :octicons-arrow-right-24:](../making-some-changes/){ .md-button .md-button--primary }
