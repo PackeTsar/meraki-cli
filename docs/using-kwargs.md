@@ -4,7 +4,7 @@ title: Using Kwargs
 
 # Using `--kwargs`
 
-Some Meraki-CLI commands require arguments to be provided which are not explicitly defined in the underlying function, but are documented in the command help page. An example of this is the `updateDeviceSwitchPort` command. You can see an example of this command's help page in the [Making Some Changes](/making-some-changes) section.
+Some Meraki-CLI commands require arguments to be provided which are not explicitly defined in the underlying function, but are documented in the command help page. An example of this is the `updateDeviceSwitchPort` command. You can see an example of this command's help page in the [Making Some Changes](making-some-changes/) section.
 
 In the command help page you will see many argument options under the "All Arguments" section, but only two of them are listed in the "Required Arguments" section: `serial` and `portId`. Some of the other arguments in the documentation are things like `name`, `tags`, `enabled`, etc.
 

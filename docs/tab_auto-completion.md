@@ -12,7 +12,7 @@ Once tab autocompletion is functional, you will be able to hit the TAB key at an
 
         A native installation of Meraki-CLI on Windows (where you use the Windows Command Prompt for the `meraki` commands) does not support tab autocompletion.
 
-        In order to use the tab-autocompletion feature in Windows, you need to [Install on Windows 10 WSL](/step-by-step_installation). Once Meraki-CLI is installed, you can enable tab-autocompletion in WSL using the below steps.
+        In order to use the tab-autocompletion feature in Windows, you need to [Install on Windows 10 WSL](step-by-step_installation/). Once Meraki-CLI is installed, you can enable tab-autocompletion in WSL using the below steps.
 
     - Run `sudo activate-global-python-argcomplete` in WSL to activate the tab autocompletion feature
     > NOTE: We are running this as `sudo` on purpose. The autocomplete feature must be installed and activated at the global level
@@ -68,4 +68,4 @@ Once tab autocompletion is functional, you will be able to hit the TAB key at an
 
 ---
 
-Once Tab Auto-Completion has been enabled, follow the instructions in [Getting Your API Key](/getting-your-api-key) section to obtain and plug-in your Meraki Dashboard API key.
+Once Tab Auto-Completion has been enabled, follow the instructions in [Getting Your API Key](getting-your-api-key/) section to obtain and plug-in your Meraki Dashboard API key.

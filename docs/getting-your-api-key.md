@@ -49,7 +49,7 @@ Plug your API key into Meraki-CLI using one of three methods:
 
     This method requires creating a config file for Meraki-CLI in a certin directory based on your specific operating system.
 
-    See the [Using a Config File](/using-a-config-file) section for more info on how to do this.
+    See the [Using a Config File](using-a-config-file/) section for more info on how to do this.
 
 
 === ":fontawesome-solid-terminal: CLI Argument"
@@ -62,4 +62,4 @@ Plug your API key into Meraki-CLI using one of three methods:
 
 ---
 
-After you have set Meraki-CLI up to use your API key, you'll want to try running [A Few Starting Commands](/a-few-starting-commands).
+After you have set Meraki-CLI up to use your API key, you'll want to try running [A Few Starting Commands](a-few-starting-commands/).

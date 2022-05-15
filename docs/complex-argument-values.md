@@ -28,4 +28,4 @@ This will look like:
 This formatting provides a JSON-parsable structure to the CLI tool which is turned into native data and sent over the API to the dashboard.
 
 !!! info "Advanced `--kwargs` Arguments"
-    If you want to dive deeper into how to provide JSON data at the CLI, check out the [Using --kwargs](/using-kwargs) and [Dealing with --kwargs in Windows](/using-kwargs/#dealing-with-kwargs-in-windows) sections.
+    If you want to dive deeper into how to provide JSON data at the CLI, check out the [Using --kwargs](using-kwargs/) and [Dealing with --kwargs in Windows](using-kwargs/#dealing-with-kwargs-in-windows) sections.
