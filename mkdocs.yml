@@ -1,0 +1,64 @@
+site_name: Meraki-CLI Documentation
+site_url: https://meraki-cli.readthedocs.io/
+site_author: John W Kerns
+site_description: >-
+  A simple CLI tool to automate and control your Cisco Meraki Dashboard!
+
+repo_name: Meraki-CLI
+repo_url: https://github.com/PackeTsar/meraki-cli
+
+theme:
+  features:
+    - toc.follow
+    - navigation.expand
+  name: material
+  logo: icon.png
+  favicon: icon.png
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+markdown_extensions:
+  - attr_list
+  - toc:
+      permalink: true
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+nav:
+  - Home: 'index.md'
+  - Getting Started:
+    - Quick Installation: 'quick-installation.md'
+    - Step-by-Step Installation: 'step-by-step_installation.md'
+    - Update/Upgrade: 'update-upgrade.md'
+    - Tab Auto-Completion: 'tab_auto-completion.md'
+    - Getting Your API Key: 'getting-your-api-key.md'
+    - A Few Starting Commands: 'a-few-starting-commands.md'
+    - Making Some Changes: 'making-some-changes.md'
+    - Complex Argument Values: 'complex-argument-values.md'
+  - Using a Config File: 'using-a-config-file.md'
+  - Debugging and Logging: 'debugging-and-logging.md'
+  - Filtering: 'filtering.md'
+  - Pipelining:
+      - Introduction: 'pipelining-introduction.md'
+      - Overriding Values: 'pipelining-overriding-values.md'
+      - Translations: 'pipelining-translations.md'
+      - Outputting Commands: 'pipelining-outputting-commands.md'
+  - Advanced:
+      - How Pipelining Works: 'how-pipelining-works.md'
+      - Using Kwargs: 'using-kwargs.md'
+  - Contributing: 'contributing.md'
