@@ -103,3 +103,7 @@ Simple value types like string, integer, and boolean are pretty straightforward.
 - `--name "Some Descriptive Name"` (string)
 - `--vlan 100` (integer)
 - `--enabled true` (boolean)
+
+---
+
+Once you're familiar with providing simple arguments to Meraki-CLI like the examples above, you may want to review how to provide [Complex Argument Values](../complex-argument-values/)

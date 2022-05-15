@@ -6,7 +6,7 @@ If you want to test out the power of pipelining, but don't necessarily want to h
 
 Using the `-o` switch in the receiving command will prevent actual execution, and instead will structure and display commands which will perform that execution; complete with arguments and values.
 
-The scary command from the [Translations](pipelining-translations/) section can be safely tested by adding the `-o` switch:
+The scary command from the [Translations](../pipelining-translations/) section can be safely tested by adding the `-o` switch:
 
 ```
 meraki appliance getNetworkApplianceVlans --networkId N_12345 | meraki -o -t "vlanId=id" appliance deleteNetworkApplianceVlan
