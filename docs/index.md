@@ -25,7 +25,7 @@ The current version of Meraki-CLI is: **1.5.0**
 Follow the instructions in the [Quick Installation](quick-installation/) or the [Step-by-Step Installation](step-by-step_installation/) sections to get started with installing Meraki-CLI.
 
 <p align="center">
-<iframe width="800" height="600" allowfullscreen
-  src="http://www.youtube.com/embed/uDfMvu_1rag">
-</iframe>
+  <iframe width="800" height="600" allowfullscreen
+    src="https://www.youtube.com/embed/uDfMvu_1rag">
+  </iframe>
 </p>

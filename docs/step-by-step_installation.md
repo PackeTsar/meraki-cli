@@ -4,10 +4,11 @@ title: Step-by-Step Installation
 
 ## Step-by-Step Installation
 
-<iframe width="420" height="315"
-  src="http://www.youtube.com/embed/uDfMvu_1rag">
-</iframe>
-
+<p align="center">
+  <iframe width="800" height="315 allowfullscreen"
+    src="https://www.youtube.com/embed/uDfMvu_1rag">
+  </iframe>
+</p>
 
 === ":material-microsoft-windows: Windows 10/11 WSL (Recommended for Windows)"
 
