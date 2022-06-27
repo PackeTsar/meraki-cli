@@ -1,6 +1,6 @@
 # Development Set Up
 
-From current directory
+From root directory
 
 
 ## Set up and activate virtual environment
@@ -37,6 +37,16 @@ From current directory
   - `coverage run -m pytest && coverage html && start htmlcov\index.html`
 - UNIX
   - `coverage run -m pytest && coverage html && open ./htmlcov/index.html`
+
+
+# MkDocs and RTD documentation development
+- Serve documentation from local machine: `mkdocs serve`
+
+
+# RTD Publish
+- Log into RTD
+- Go to "My Projects" > meraki-cli
+- Click "Build Version"
 
 
 # Publish
