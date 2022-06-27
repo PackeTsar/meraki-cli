@@ -26,16 +26,22 @@ Plug your API key into Meraki-CLI using one of three methods:
 
     Open your command-line terminal and run the below command to temporarily store your API key as an environment variable.
 
-    === ":material-microsoft-windows: Windows"
+    === ":material-microsoft-windows: Windows 10/11 WSL"
 
         ```
-        set MERAKI_DASHBOARD_API_KEY=6bec40cf957de430a6f1f2baa056b99a4fac9ea0
+        export MERAKI_DASHBOARD_API_KEY=6bec40cf957de430a6f1f2baa056b99a4fac9ea0
         ```
 
     === ":material-apple: MacOS"
 
         ```
         export MERAKI_DASHBOARD_API_KEY=6bec40cf957de430a6f1f2baa056b99a4fac9ea0
+        ```
+
+    === ":material-microsoft-windows-classic: Windows 10/11 Native"
+
+        ```
+        set MERAKI_DASHBOARD_API_KEY=6bec40cf957de430a6f1f2baa056b99a4fac9ea0
         ```
 
     === ":fontawesome-brands-linux: Linux"
