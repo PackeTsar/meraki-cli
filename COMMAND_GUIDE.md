@@ -10,11 +10,12 @@ This documentation is built automatically by parsing the [Meraki Dashboard API P
 
 ## Version
 
-This command guide is based on version **v1.18.2** of the [Meraki Dashboard API Python SDK](https://github.com/meraki/dashboard-api-python). If you want to see the version of the SDK you have installed, issue the command `meraki -v`.
+This command guide is based on version **v1.22.0** of the [Meraki Dashboard API Python SDK](https://github.com/meraki/dashboard-api-python). If you want to see the version of the SDK you have installed, issue the command `meraki -v`.
 
 
 # TABLE OF CONTENTS
 - [Appliance](#appliance)
+    - [Appliance Create Device Appliance Vmx Authentication Token](#appliance-create-device-appliance-vmx-authentication-token)
     - [Appliance Create Network Appliance Static Route](#appliance-create-network-appliance-static-route)
     - [Appliance Create Network Appliance Traffic Shaping Custom Performance Class](#appliance-create-network-appliance-traffic-shaping-custom-performance-class)
     - [Appliance Create Network Appliance Vlan](#appliance-create-network-appliance-vlan)
@@ -97,6 +98,7 @@ This command guide is based on version **v1.18.2** of the [Meraki Dashboard API 
     - [Appliance Update Organization Appliance Vpn Vpn Firewall Rules](#appliance-update-organization-appliance-vpn-vpn-firewall-rules)
 - [Batch](#batch)
     - [Batch Appliance](#batch-appliance)
+        - [Batch Appliance Create Device Appliance Vmx Authentication Token](#batch-appliance-create-device-appliance-vmx-authentication-token)
         - [Batch Appliance Create Network Appliance Traffic Shaping Custom Performance Class](#batch-appliance-create-network-appliance-traffic-shaping-custom-performance-class)
         - [Batch Appliance Create Network Appliance Vlan](#batch-appliance-create-network-appliance-vlan)
         - [Batch Appliance Delete Network Appliance Traffic Shaping Custom Performance Class](#batch-appliance-delete-network-appliance-traffic-shaping-custom-performance-class)
@@ -116,6 +118,7 @@ This command guide is based on version **v1.18.2** of the [Meraki Dashboard API 
         - [Batch Appliance Update Network Appliance Vpn Site To Site Vpn](#batch-appliance-update-network-appliance-vpn-site-to-site-vpn)
         - [Batch Appliance Update Network Appliance Warm Spare](#batch-appliance-update-network-appliance-warm-spare)
     - [Batch Camera](#batch-camera)
+        - [Batch Camera Update Device Camera Custom Analytics](#batch-camera-update-device-camera-custom-analytics)
         - [Batch Camera Update Device Camera Quality And Retention](#batch-camera-update-device-camera-quality-and-retention)
         - [Batch Camera Update Device Camera Sense](#batch-camera-update-device-camera-sense)
         - [Batch Camera Update Device Camera Video Settings](#batch-camera-update-device-camera-video-settings)
@@ -188,6 +191,7 @@ This command guide is based on version **v1.18.2** of the [Meraki Dashboard API 
         - [Batch Organizations Update Organization License](#batch-organizations-update-organization-license)
         - [Batch Organizations Update Organization Login Security](#batch-organizations-update-organization-login-security)
         - [Batch Organizations Update Organization Saml Idp](#batch-organizations-update-organization-saml-idp)
+    - [Batch Sensor](#batch-sensor)
     - [Batch Sm](#batch-sm)
         - [Batch Sm Delete Network Sm User Access Device](#batch-sm-delete-network-sm-user-access-device)
     - [Batch Switch](#batch-switch)
@@ -195,6 +199,7 @@ This command guide is based on version **v1.18.2** of the [Meraki Dashboard API 
         - [Batch Switch Create Device Switch Routing Interface](#batch-switch-create-device-switch-routing-interface)
         - [Batch Switch Create Device Switch Routing Static Route](#batch-switch-create-device-switch-routing-static-route)
         - [Batch Switch Create Network Switch Access Policy](#batch-switch-create-network-switch-access-policy)
+        - [Batch Switch Create Network Switch Dhcp Server Policy Arp Inspection Trusted Server](#batch-switch-create-network-switch-dhcp-server-policy-arp-inspection-trusted-server)
         - [Batch Switch Create Network Switch Link Aggregation](#batch-switch-create-network-switch-link-aggregation)
         - [Batch Switch Create Network Switch Qos Rule](#batch-switch-create-network-switch-qos-rule)
         - [Batch Switch Create Network Switch Routing Multicast Rendezvous Point](#batch-switch-create-network-switch-routing-multicast-rendezvous-point)
@@ -204,6 +209,7 @@ This command guide is based on version **v1.18.2** of the [Meraki Dashboard API 
         - [Batch Switch Delete Device Switch Routing Interface](#batch-switch-delete-device-switch-routing-interface)
         - [Batch Switch Delete Device Switch Routing Static Route](#batch-switch-delete-device-switch-routing-static-route)
         - [Batch Switch Delete Network Switch Access Policy](#batch-switch-delete-network-switch-access-policy)
+        - [Batch Switch Delete Network Switch Dhcp Server Policy Arp Inspection Trusted Server](#batch-switch-delete-network-switch-dhcp-server-policy-arp-inspection-trusted-server)
         - [Batch Switch Delete Network Switch Link Aggregation](#batch-switch-delete-network-switch-link-aggregation)
         - [Batch Switch Delete Network Switch Qos Rule](#batch-switch-delete-network-switch-qos-rule)
         - [Batch Switch Delete Network Switch Routing Multicast Rendezvous Point](#batch-switch-delete-network-switch-routing-multicast-rendezvous-point)
@@ -217,6 +223,7 @@ This command guide is based on version **v1.18.2** of the [Meraki Dashboard API 
         - [Batch Switch Update Network Switch Access Policy](#batch-switch-update-network-switch-access-policy)
         - [Batch Switch Update Network Switch Alternate Management Interface](#batch-switch-update-network-switch-alternate-management-interface)
         - [Batch Switch Update Network Switch Dhcp Server Policy](#batch-switch-update-network-switch-dhcp-server-policy)
+        - [Batch Switch Update Network Switch Dhcp Server Policy Arp Inspection Trusted Server](#batch-switch-update-network-switch-dhcp-server-policy-arp-inspection-trusted-server)
         - [Batch Switch Update Network Switch Dscp To Cos Mappings](#batch-switch-update-network-switch-dscp-to-cos-mappings)
         - [Batch Switch Update Network Switch Link Aggregation](#batch-switch-update-network-switch-link-aggregation)
         - [Batch Switch Update Network Switch Mtu](#batch-switch-update-network-switch-mtu)
@@ -258,14 +265,17 @@ This command guide is based on version **v1.18.2** of the [Meraki Dashboard API 
 - [Camera](#camera)
     - [Camera Create Network Camera Quality Retention Profile](#camera-create-network-camera-quality-retention-profile)
     - [Camera Create Network Camera Wireless Profile](#camera-create-network-camera-wireless-profile)
+    - [Camera Create Organization Camera Custom Analytics Artifact](#camera-create-organization-camera-custom-analytics-artifact)
     - [Camera Delete Network Camera Quality Retention Profile](#camera-delete-network-camera-quality-retention-profile)
     - [Camera Delete Network Camera Wireless Profile](#camera-delete-network-camera-wireless-profile)
+    - [Camera Delete Organization Camera Custom Analytics Artifact](#camera-delete-organization-camera-custom-analytics-artifact)
     - [Camera Generate Device Camera Snapshot](#camera-generate-device-camera-snapshot)
     - [Camera Get Device Camera Analytics Live](#camera-get-device-camera-analytics-live)
     - [Camera Get Device Camera Analytics Overview](#camera-get-device-camera-analytics-overview)
     - [Camera Get Device Camera Analytics Recent](#camera-get-device-camera-analytics-recent)
     - [Camera Get Device Camera Analytics Zone History](#camera-get-device-camera-analytics-zone-history)
     - [Camera Get Device Camera Analytics Zones](#camera-get-device-camera-analytics-zones)
+    - [Camera Get Device Camera Custom Analytics](#camera-get-device-camera-custom-analytics)
     - [Camera Get Device Camera Quality And Retention](#camera-get-device-camera-quality-and-retention)
     - [Camera Get Device Camera Sense](#camera-get-device-camera-sense)
     - [Camera Get Device Camera Sense Object Detection Models](#camera-get-device-camera-sense-object-detection-models)
@@ -277,7 +287,10 @@ This command guide is based on version **v1.18.2** of the [Meraki Dashboard API 
     - [Camera Get Network Camera Schedules](#camera-get-network-camera-schedules)
     - [Camera Get Network Camera Wireless Profile](#camera-get-network-camera-wireless-profile)
     - [Camera Get Network Camera Wireless Profiles](#camera-get-network-camera-wireless-profiles)
+    - [Camera Get Organization Camera Custom Analytics Artifact](#camera-get-organization-camera-custom-analytics-artifact)
+    - [Camera Get Organization Camera Custom Analytics Artifacts](#camera-get-organization-camera-custom-analytics-artifacts)
     - [Camera Get Organization Camera Onboarding Statuses](#camera-get-organization-camera-onboarding-statuses)
+    - [Camera Update Device Camera Custom Analytics](#camera-update-device-camera-custom-analytics)
     - [Camera Update Device Camera Quality And Retention](#camera-update-device-camera-quality-and-retention)
     - [Camera Update Device Camera Sense](#camera-update-device-camera-sense)
     - [Camera Update Device Camera Video Settings](#camera-update-device-camera-video-settings)
@@ -375,6 +388,7 @@ This command guide is based on version **v1.18.2** of the [Meraki Dashboard API 
     - [Networks Get Network Pii Requests](#networks-get-network-pii-requests)
     - [Networks Get Network Pii Sm Devices For Key](#networks-get-network-pii-sm-devices-for-key)
     - [Networks Get Network Pii Sm Owners For Key](#networks-get-network-pii-sm-owners-for-key)
+    - [Networks Get Network Policies By Client](#networks-get-network-policies-by-client)
     - [Networks Get Network Settings](#networks-get-network-settings)
     - [Networks Get Network Snmp](#networks-get-network-snmp)
     - [Networks Get Network Splash Login Attempts](#networks-get-network-splash-login-attempts)
@@ -413,6 +427,7 @@ This command guide is based on version **v1.18.2** of the [Meraki Dashboard API 
 - [Organizations](#organizations)
     - [Organizations Assign Organization Licenses Seats](#organizations-assign-organization-licenses-seats)
     - [Organizations Claim Into Organization](#organizations-claim-into-organization)
+    - [Organizations Claim Into Organization Inventory](#organizations-claim-into-organization-inventory)
     - [Organizations Clone Organization](#organizations-clone-organization)
     - [Organizations Combine Organization Networks](#organizations-combine-organization-networks)
     - [Organizations Create Organization](#organizations-create-organization)
@@ -493,6 +508,7 @@ This command guide is based on version **v1.18.2** of the [Meraki Dashboard API 
     - [Organizations Get Organizations](#organizations-get-organizations)
     - [Organizations Move Organization Licenses](#organizations-move-organization-licenses)
     - [Organizations Move Organization Licenses Seats](#organizations-move-organization-licenses-seats)
+    - [Organizations Release From Organization Inventory](#organizations-release-from-organization-inventory)
     - [Organizations Renew Organization Licenses Seats](#organizations-renew-organization-licenses-seats)
     - [Organizations Update Organization](#organizations-update-organization)
     - [Organizations Update Organization Action Batch](#organizations-update-organization-action-batch)
@@ -511,6 +527,9 @@ This command guide is based on version **v1.18.2** of the [Meraki Dashboard API 
     - [Organizations Update Organization Saml Idp](#organizations-update-organization-saml-idp)
     - [Organizations Update Organization Saml Role](#organizations-update-organization-saml-role)
     - [Organizations Update Organization Snmp](#organizations-update-organization-snmp)
+- [Sensor](#sensor)
+    - [Sensor Get Organization Sensor Readings History](#sensor-get-organization-sensor-readings-history)
+    - [Sensor Get Organization Sensor Readings Latest](#sensor-get-organization-sensor-readings-latest)
 - [Sm](#sm)
     - [Sm Checkin Network Sm Devices](#sm-checkin-network-sm-devices)
     - [Sm Create Network Sm Bypass Activation Lock Attempt](#sm-create-network-sm-bypass-activation-lock-attempt)
@@ -555,6 +574,7 @@ This command guide is based on version **v1.18.2** of the [Meraki Dashboard API 
     - [Switch Create Device Switch Routing Interface](#switch-create-device-switch-routing-interface)
     - [Switch Create Device Switch Routing Static Route](#switch-create-device-switch-routing-static-route)
     - [Switch Create Network Switch Access Policy](#switch-create-network-switch-access-policy)
+    - [Switch Create Network Switch Dhcp Server Policy Arp Inspection Trusted Server](#switch-create-network-switch-dhcp-server-policy-arp-inspection-trusted-server)
     - [Switch Create Network Switch Link Aggregation](#switch-create-network-switch-link-aggregation)
     - [Switch Create Network Switch Port Schedule](#switch-create-network-switch-port-schedule)
     - [Switch Create Network Switch Qos Rule](#switch-create-network-switch-qos-rule)
@@ -566,6 +586,7 @@ This command guide is based on version **v1.18.2** of the [Meraki Dashboard API 
     - [Switch Delete Device Switch Routing Interface](#switch-delete-device-switch-routing-interface)
     - [Switch Delete Device Switch Routing Static Route](#switch-delete-device-switch-routing-static-route)
     - [Switch Delete Network Switch Access Policy](#switch-delete-network-switch-access-policy)
+    - [Switch Delete Network Switch Dhcp Server Policy Arp Inspection Trusted Server](#switch-delete-network-switch-dhcp-server-policy-arp-inspection-trusted-server)
     - [Switch Delete Network Switch Link Aggregation](#switch-delete-network-switch-link-aggregation)
     - [Switch Delete Network Switch Port Schedule](#switch-delete-network-switch-port-schedule)
     - [Switch Delete Network Switch Qos Rule](#switch-delete-network-switch-qos-rule)
@@ -588,6 +609,9 @@ This command guide is based on version **v1.18.2** of the [Meraki Dashboard API 
     - [Switch Get Network Switch Access Policy](#switch-get-network-switch-access-policy)
     - [Switch Get Network Switch Alternate Management Interface](#switch-get-network-switch-alternate-management-interface)
     - [Switch Get Network Switch Dhcp Server Policy](#switch-get-network-switch-dhcp-server-policy)
+    - [Switch Get Network Switch Dhcp Server Policy Arp Inspection Trusted Servers](#switch-get-network-switch-dhcp-server-policy-arp-inspection-trusted-servers)
+    - [Switch Get Network Switch Dhcp Server Policy Arp Inspection Warnings By Device](#switch-get-network-switch-dhcp-server-policy-arp-inspection-warnings-by-device)
+    - [Switch Get Network Switch Dhcp V4 Servers Seen](#switch-get-network-switch-dhcp-v4-servers-seen)
     - [Switch Get Network Switch Dscp To Cos Mappings](#switch-get-network-switch-dscp-to-cos-mappings)
     - [Switch Get Network Switch Link Aggregations](#switch-get-network-switch-link-aggregations)
     - [Switch Get Network Switch Mtu](#switch-get-network-switch-mtu)
@@ -612,6 +636,7 @@ This command guide is based on version **v1.18.2** of the [Meraki Dashboard API 
     - [Switch Get Organization Config Template Switch Profile Port](#switch-get-organization-config-template-switch-profile-port)
     - [Switch Get Organization Config Template Switch Profile Ports](#switch-get-organization-config-template-switch-profile-ports)
     - [Switch Get Organization Config Template Switch Profiles](#switch-get-organization-config-template-switch-profiles)
+    - [Switch Get Organization Switch Ports By Switch](#switch-get-organization-switch-ports-by-switch)
     - [Switch Remove Network Switch Stack](#switch-remove-network-switch-stack)
     - [Switch Update Device Switch Port](#switch-update-device-switch-port)
     - [Switch Update Device Switch Routing Interface](#switch-update-device-switch-routing-interface)
@@ -622,6 +647,7 @@ This command guide is based on version **v1.18.2** of the [Meraki Dashboard API 
     - [Switch Update Network Switch Access Policy](#switch-update-network-switch-access-policy)
     - [Switch Update Network Switch Alternate Management Interface](#switch-update-network-switch-alternate-management-interface)
     - [Switch Update Network Switch Dhcp Server Policy](#switch-update-network-switch-dhcp-server-policy)
+    - [Switch Update Network Switch Dhcp Server Policy Arp Inspection Trusted Server](#switch-update-network-switch-dhcp-server-policy-arp-inspection-trusted-server)
     - [Switch Update Network Switch Dscp To Cos Mappings](#switch-update-network-switch-dscp-to-cos-mappings)
     - [Switch Update Network Switch Link Aggregation](#switch-update-network-switch-link-aggregation)
     - [Switch Update Network Switch Mtu](#switch-update-network-switch-mtu)
@@ -710,6 +736,31 @@ This command guide is based on version **v1.18.2** of the [Meraki Dashboard API 
 
 
 # Appliance
+
+
+----------------------------------------
+## Appliance Create Device Appliance Vmx Authentication Token
+
+
+**Generate a new vMX authentication token**
+
+https://developer.cisco.com/meraki/api-v1/#!create-device-appliance-vmx-authentication-token
+
+##### Arguments
+- `--serial` (string): (required)
+
+
+##### Example:
+```
+meraki appliance createDeviceApplianceVmxAuthenticationToken --serial 'STRING'
+````
+
+##### Method Code:
+```python
+def createDeviceApplianceVmxAuthenticationToken(serial: str):
+    # Code
+````
+
 
 
 ----------------------------------------
@@ -3046,6 +3097,31 @@ def updateOrganizationApplianceVpnVpnFirewallRules(organizationId: str, **kwargs
 
 
 ----------------------------------------
+## Batch Appliance Create Device Appliance Vmx Authentication Token
+
+
+**Generate a new vMX authentication token**
+
+https://developer.cisco.com/meraki/api-v1/#!create-device-appliance-vmx-authentication-token
+
+##### Arguments
+- `--serial` (string): (required)
+
+
+##### Example:
+```
+meraki batch appliance createDeviceApplianceVmxAuthenticationToken --serial 'STRING'
+````
+
+##### Method Code:
+```python
+def createDeviceApplianceVmxAuthenticationToken(serial: str):
+    # Code
+````
+
+
+
+----------------------------------------
 ## Batch Appliance Create Network Appliance Traffic Shaping Custom Performance Class
 
 
@@ -3636,6 +3712,39 @@ def updateNetworkApplianceWarmSpare(networkId: str, enabled: bool, **kwargs):
 ````
 
 # Batch Camera
+
+
+----------------------------------------
+## Batch Camera Update Device Camera Custom Analytics
+
+
+**Update custom analytics settings for a camera**
+
+https://developer.cisco.com/meraki/api-v1/#!update-device-camera-custom-analytics
+
+##### Arguments
+- `--serial` (string): (required)
+- `--enabled` (boolean): Enable custom analytics
+- `--artifactId` (string): The ID of the custom analytics artifact
+- `--parameters` (array): Parameters for the custom analytics workload
+
+
+##### Example:
+```
+meraki batch camera updateDeviceCameraCustomAnalytics --serial 'STRING' --optionalArg1 "optionalarg1value" --optionalArg2 "optionalarg2value"
+````
+
+##### Example using `--kwargs` (Advanced):
+```
+meraki batch camera updateDeviceCameraCustomAnalytics --serial 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
+````
+
+##### Method Code:
+```python
+def updateDeviceCameraCustomAnalytics(serial: str, **kwargs):
+    # Code
+````
+
 
 
 ----------------------------------------
@@ -5724,6 +5833,7 @@ https://developer.cisco.com/meraki/api-v1/#!update-organization-login-security
 - `--enforceTwoFactorAuth` (boolean): Boolean indicating whether users in this organization will be required to use an extra verification code when logging in to Dashboard. This code will be sent to their mobile phone via SMS, or can be generated by the Google Authenticator application.
 - `--enforceLoginIpRanges` (boolean): Boolean indicating whether organization will restrict access to Dashboard (including the API) from certain IP addresses.
 - `--loginIpRanges` (array): List of acceptable IP ranges. Entries can be single IP addresses, IP address ranges, and CIDR subnets.
+- `--apiAuthentication` (object): Details for indicating whether organization will restrict access to API (but not Dashboard) to certain IP addresses.
 
 
 ##### Example:
@@ -5775,6 +5885,7 @@ def updateOrganizationSamlIdp(organizationId: str, idpId: str, **kwargs):
     # Code
 ````
 
+# Batch Sensor
 # Batch Sm
 
 
@@ -5928,6 +6039,7 @@ https://developer.cisco.com/meraki/api-v1/#!create-network-switch-access-policy
 - `--accessPolicyType` (string): Access Type of the policy. Automatically 'Hybrid authentication' when hostMode is 'Multi-Domain'.
 - `--increaseAccessSpeed` (boolean): Enabling this option will make switches execute 802.1X and MAC-bypass authentication simultaneously so that clients authenticate faster. Only required when accessPolicyType is 'Hybrid Authentication.
 - `--guestVlanId` (integer): ID for the guest VLAN allow unauthorized devices access to limited network resources
+- `--dot1x` (object): 802.1x Settings
 - `--voiceVlanClients` (boolean): CDP/LLDP capable voice clients will be able to use this VLAN. Automatically true when hostMode is 'Multi-Domain'.
 - `--urlRedirectWalledGardenRanges` (array): IP address ranges, in CIDR notation, to restrict access for clients to a specific set of IP addresses or hostnames prior to authentication
 
@@ -5945,6 +6057,34 @@ meraki batch switch createNetworkSwitchAccessPolicy --networkId 'STRING' --name 
 ##### Method Code:
 ```python
 def createNetworkSwitchAccessPolicy(networkId: str, name: str, radiusServers: list, radiusTestingEnabled: bool, radiusCoaSupportEnabled: bool, radiusAccountingEnabled: bool, hostMode: str, urlRedirectWalledGardenEnabled: bool, **kwargs):
+    # Code
+````
+
+
+
+----------------------------------------
+## Batch Switch Create Network Switch Dhcp Server Policy Arp Inspection Trusted Server
+
+
+**Add a server to be trusted by Dynamic ARP Inspection on this network**
+
+https://developer.cisco.com/meraki/api-v1/#!create-network-switch-dhcp-server-policy-arp-inspection-trusted-server
+
+##### Arguments
+- `--networkId` (string): (required)
+- `--mac` (string): The mac address of the trusted server being added
+- `--vlan` (integer): The VLAN of the trusted server being added. It must be between 1 and 4094
+- `--ipv4` (object): The IPv4 attributes of the trusted server being added
+
+
+##### Example:
+```
+meraki batch switch createNetworkSwitchDhcpServerPolicyArpInspectionTrustedServer --networkId 'STRING' --mac 'STRING' --vlan INT --ipv4 JSON_STRING
+````
+
+##### Method Code:
+```python
+def createNetworkSwitchDhcpServerPolicyArpInspectionTrustedServer(networkId: str, mac: str, vlan: int, ipv4: dict):
     # Code
 ````
 
@@ -6226,6 +6366,32 @@ def deleteNetworkSwitchAccessPolicy(networkId: str, accessPolicyNumber: str):
 
 
 ----------------------------------------
+## Batch Switch Delete Network Switch Dhcp Server Policy Arp Inspection Trusted Server
+
+
+**Remove a server from being trusted by Dynamic ARP Inspection on this network**
+
+https://developer.cisco.com/meraki/api-v1/#!delete-network-switch-dhcp-server-policy-arp-inspection-trusted-server
+
+##### Arguments
+- `--networkId` (string): (required)
+- `--trustedServerId` (string): (required)
+
+
+##### Example:
+```
+meraki batch switch deleteNetworkSwitchDhcpServerPolicyArpInspectionTrustedServer --networkId 'STRING' --trustedServerId 'STRING'
+````
+
+##### Method Code:
+```python
+def deleteNetworkSwitchDhcpServerPolicyArpInspectionTrustedServer(networkId: str, trustedServerId: str):
+    # Code
+````
+
+
+
+----------------------------------------
 ## Batch Switch Delete Network Switch Link Aggregation
 
 
@@ -6388,6 +6554,10 @@ https://developer.cisco.com/meraki/api-v1/#!update-device-switch-port
 - `--stickyMacAllowList` (array): The initial list of MAC addresses for sticky Mac allow list. Only applicable when 'accessPolicyType' is 'Sticky MAC allow list'
 - `--stickyMacAllowListLimit` (integer): The maximum number of MAC addresses for sticky MAC allow list. Only applicable when 'accessPolicyType' is 'Sticky MAC allow list'
 - `--stormControlEnabled` (boolean): The storm control status of the switch port
+- `--adaptivePolicyGroupId` (string): The adaptive policy group ID that will be used to tag traffic through this switch port. This ID must pre-exist during the configuration, else needs to be created using adaptivePolicy/groups API. Cannot be applied to a port on a switch bound to profile.
+- `--peerSgtCapable` (boolean): If true, Peer SGT is enabled for traffic through this switch port. Applicable to trunk port only, not access port.
+Cannot be applied to a port on a switch bound to profile.
+
 - `--flexibleStackingEnabled` (boolean): For supported switches (e.g. MS420/MS425), whether or not the port has flexible stacking enabled.
 
 
@@ -6581,6 +6751,7 @@ https://developer.cisco.com/meraki/api-v1/#!update-network-switch-access-policy
 - `--accessPolicyType` (string): Access Type of the policy. Automatically 'Hybrid authentication' when hostMode is 'Multi-Domain'.
 - `--increaseAccessSpeed` (boolean): Enabling this option will make switches execute 802.1X and MAC-bypass authentication simultaneously so that clients authenticate faster. Only required when accessPolicyType is 'Hybrid Authentication.
 - `--guestVlanId` (integer): ID for the guest VLAN allow unauthorized devices access to limited network resources
+- `--dot1x` (object): 802.1x Settings
 - `--voiceVlanClients` (boolean): CDP/LLDP capable voice clients will be able to use this VLAN. Automatically true when hostMode is 'Multi-Domain'.
 - `--urlRedirectWalledGardenEnabled` (boolean): Enable to restrict access for clients to a specific set of IP addresses or hostnames prior to authentication
 - `--urlRedirectWalledGardenRanges` (array): IP address ranges, in CIDR notation, to restrict access for clients to a specific set of IP addresses or hostnames prior to authentication
@@ -6642,15 +6813,17 @@ def updateNetworkSwitchAlternateManagementInterface(networkId: str, **kwargs):
 ## Batch Switch Update Network Switch Dhcp Server Policy
 
 
-**Update the DHCP server policy**
+**Update the DHCP server settings**
 
 https://developer.cisco.com/meraki/api-v1/#!update-network-switch-dhcp-server-policy
 
 ##### Arguments
 - `--networkId` (string): (required)
+- `--alerts` (object): Alert settings for DHCP servers
 - `--defaultPolicy` (string): 'allow' or 'block' new DHCP servers. Default value is 'allow'.
-- `--allowedServers` (array): List the MAC addresses of DHCP servers to permit on the network. Applicable only if defaultPolicy is set to block. An empty array will clear the entries.
-- `--blockedServers` (array): List the MAC addresses of DHCP servers to block on the network. Applicable only if defaultPolicy is set to allow. An empty array will clear the entries.
+- `--allowedServers` (array): List the MAC addresses of DHCP servers to permit on the network when defaultPolicy is set to block. An empty array will clear the entries.
+- `--blockedServers` (array): List the MAC addresses of DHCP servers to block on the network when defaultPolicy is set to allow. An empty array will clear the entries.
+- `--arpInspection` (object): Dynamic ARP Inspection settings
 
 
 ##### Example:
@@ -6666,6 +6839,40 @@ meraki batch switch updateNetworkSwitchDhcpServerPolicy --networkId 'STRING' --k
 ##### Method Code:
 ```python
 def updateNetworkSwitchDhcpServerPolicy(networkId: str, **kwargs):
+    # Code
+````
+
+
+
+----------------------------------------
+## Batch Switch Update Network Switch Dhcp Server Policy Arp Inspection Trusted Server
+
+
+**Update a server that is trusted by Dynamic ARP Inspection on this network**
+
+https://developer.cisco.com/meraki/api-v1/#!update-network-switch-dhcp-server-policy-arp-inspection-trusted-server
+
+##### Arguments
+- `--networkId` (string): (required)
+- `--trustedServerId` (string): (required)
+- `--mac` (string): The updated mac address of the trusted server
+- `--vlan` (integer): The updated VLAN of the trusted server. It must be between 1 and 4094
+- `--ipv4` (object): The updated IPv4 attributes of the trusted server
+
+
+##### Example:
+```
+meraki batch switch updateNetworkSwitchDhcpServerPolicyArpInspectionTrustedServer --networkId 'STRING' --trustedServerId 'STRING' --optionalArg1 "optionalarg1value" --optionalArg2 "optionalarg2value"
+````
+
+##### Example using `--kwargs` (Advanced):
+```
+meraki batch switch updateNetworkSwitchDhcpServerPolicyArpInspectionTrustedServer --networkId 'STRING' --trustedServerId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
+````
+
+##### Method Code:
+```python
+def updateNetworkSwitchDhcpServerPolicyArpInspectionTrustedServer(networkId: str, trustedServerId: str, **kwargs):
     # Code
 ````
 
@@ -7216,6 +7423,7 @@ https://developer.cisco.com/meraki/api-v1/#!create-network-wireless-rf-profile
 - `--apBandSettings` (object): Settings that will be enabled if selectionType is set to 'ap'.
 - `--twoFourGhzSettings` (object): Settings related to 2.4Ghz band
 - `--fiveGhzSettings` (object): Settings related to 5Ghz band
+- `--transmission` (object): Settings related to radio transmission.
 - `--perSsidSettings` (object): Per-SSID radio settings by number.
 
 
@@ -7474,6 +7682,7 @@ https://developer.cisco.com/meraki/api-v1/#!update-network-wireless-rf-profile
 - `--apBandSettings` (object): Settings that will be enabled if selectionType is set to 'ap'.
 - `--twoFourGhzSettings` (object): Settings related to 2.4Ghz band
 - `--fiveGhzSettings` (object): Settings related to 5Ghz band
+- `--transmission` (object): Settings related to radio transmission.
 - `--perSsidSettings` (object): Per-SSID radio settings by number.
 
 
@@ -7574,6 +7783,8 @@ https://developer.cisco.com/meraki/api-v1/#!update-network-wireless-ssid
 - `--ipAssignmentMode` (string): The client IP assignment mode ('NAT mode', 'Bridge mode', 'Layer 3 roaming', 'Ethernet over GRE', 'Layer 3 roaming with a concentrator' or 'VPN')
 - `--useVlanTagging` (boolean): Whether or not traffic should be directed to use specific VLANs. This param is only valid if the ipAssignmentMode is 'Bridge mode' or 'Layer 3 roaming'
 - `--concentratorNetworkId` (string): The concentrator to use when the ipAssignmentMode is 'Layer 3 roaming with a concentrator' or 'VPN'.
+- `--secondaryConcentratorNetworkId` (string): The secondary concentrator to use when the ipAssignmentMode is 'VPN'. If configured, the APs will switch to using this concentrator if the primary concentrator is unreachable. This param is optional. ('disabled' represents no secondary concentrator.)
+- `--disassociateClientsOnVpnFailover` (boolean): Disassociate clients when 'VPN' concentrator failover occurs in order to trigger clients to re-associate and generate new DHCP requests. This param is only valid if ipAssignmentMode is 'VPN'.
 - `--vlanId` (integer): The VLAN ID used for VLAN tagging. This param is only valid when the ipAssignmentMode is 'Layer 3 roaming with a concentrator' or 'VPN'
 - `--defaultVlanId` (integer): The default VLAN ID used for 'all other APs'. This param is only valid when the ipAssignmentMode is 'Bridge mode' or 'Layer 3 roaming'
 - `--apTagsAndVlanIds` (array): The list of tags and VLAN IDs used for VLAN tagging. This param is only valid when the ipAssignmentMode is 'Bridge mode' or 'Layer 3 roaming'
@@ -7596,6 +7807,7 @@ https://developer.cisco.com/meraki/api-v1/#!update-network-wireless-ssid
 - `--mandatoryDhcpEnabled` (boolean): If true, Mandatory DHCP will enforce that clients connecting to this SSID must use the IP address assigned by the DHCP server. Clients who use a static IP address won't be able to associate.
 - `--adultContentFilteringEnabled` (boolean): Boolean indicating whether or not adult content will be blocked
 - `--dnsRewrite` (object): DNS servers rewrite settings
+- `--speedBurst` (object): The SpeedBurst setting for this SSID'
 
 
 ##### Example:
@@ -7984,6 +8196,7 @@ https://developer.cisco.com/meraki/api-v1/#!update-network-wireless-ssid-vpn
 ##### Arguments
 - `--networkId` (string): (required)
 - `--number` (string): (required)
+- `--concentrator` (object): The VPN concentrator settings for this SSID.
 - `--splitTunnel` (object): The VPN split tunnel settings for this SSID.
 - `--failover` (object): Secondary VPN concentrator settings. This is only used when two VPN concentrators are configured on the SSID.
 
@@ -8080,6 +8293,37 @@ def createNetworkCameraWirelessProfile(networkId: str, name: str, ssid: dict, **
 
 
 ----------------------------------------
+## Camera Create Organization Camera Custom Analytics Artifact
+
+
+**Create custom analytics artifact**
+
+https://developer.cisco.com/meraki/api-v1/#!create-organization-camera-custom-analytics-artifact
+
+##### Arguments
+- `--organizationId` (string): (required)
+- `--name` (string): Unique name of the artifact
+
+
+##### Example:
+```
+meraki camera createOrganizationCameraCustomAnalyticsArtifact --organizationId 'STRING' --optionalArg1 "optionalarg1value" --optionalArg2 "optionalarg2value"
+````
+
+##### Example using `--kwargs` (Advanced):
+```
+meraki camera createOrganizationCameraCustomAnalyticsArtifact --organizationId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
+````
+
+##### Method Code:
+```python
+def createOrganizationCameraCustomAnalyticsArtifact(organizationId: str, **kwargs):
+    # Code
+````
+
+
+
+----------------------------------------
 ## Camera Delete Network Camera Quality Retention Profile
 
 
@@ -8126,6 +8370,32 @@ meraki camera deleteNetworkCameraWirelessProfile --networkId 'STRING' --wireless
 ##### Method Code:
 ```python
 def deleteNetworkCameraWirelessProfile(networkId: str, wirelessProfileId: str):
+    # Code
+````
+
+
+
+----------------------------------------
+## Camera Delete Organization Camera Custom Analytics Artifact
+
+
+**Delete Custom Analytics Artifact**
+
+https://developer.cisco.com/meraki/api-v1/#!delete-organization-camera-custom-analytics-artifact
+
+##### Arguments
+- `--organizationId` (string): (required)
+- `--artifactId` (string): (required)
+
+
+##### Example:
+```
+meraki camera deleteOrganizationCameraCustomAnalyticsArtifact --organizationId 'STRING' --artifactId 'STRING'
+````
+
+##### Method Code:
+```python
+def deleteOrganizationCameraCustomAnalyticsArtifact(organizationId: str, artifactId: str):
     # Code
 ````
 
@@ -8309,6 +8579,31 @@ meraki camera getDeviceCameraAnalyticsZones --serial 'STRING'
 ##### Method Code:
 ```python
 def getDeviceCameraAnalyticsZones(serial: str):
+    # Code
+````
+
+
+
+----------------------------------------
+## Camera Get Device Camera Custom Analytics
+
+
+**Return custom analytics settings for a camera**
+
+https://developer.cisco.com/meraki/api-v1/#!get-device-camera-custom-analytics
+
+##### Arguments
+- `--serial` (string): (required)
+
+
+##### Example:
+```
+meraki camera getDeviceCameraCustomAnalytics --serial 'STRING'
+````
+
+##### Method Code:
+```python
+def getDeviceCameraCustomAnalytics(serial: str):
     # Code
 ````
 
@@ -8598,6 +8893,57 @@ def getNetworkCameraWirelessProfiles(networkId: str):
 
 
 ----------------------------------------
+## Camera Get Organization Camera Custom Analytics Artifact
+
+
+**Get Custom Analytics Artifact**
+
+https://developer.cisco.com/meraki/api-v1/#!get-organization-camera-custom-analytics-artifact
+
+##### Arguments
+- `--organizationId` (string): (required)
+- `--artifactId` (string): (required)
+
+
+##### Example:
+```
+meraki camera getOrganizationCameraCustomAnalyticsArtifact --organizationId 'STRING' --artifactId 'STRING'
+````
+
+##### Method Code:
+```python
+def getOrganizationCameraCustomAnalyticsArtifact(organizationId: str, artifactId: str):
+    # Code
+````
+
+
+
+----------------------------------------
+## Camera Get Organization Camera Custom Analytics Artifacts
+
+
+**List Custom Analytics Artifacts**
+
+https://developer.cisco.com/meraki/api-v1/#!get-organization-camera-custom-analytics-artifacts
+
+##### Arguments
+- `--organizationId` (string): (required)
+
+
+##### Example:
+```
+meraki camera getOrganizationCameraCustomAnalyticsArtifacts --organizationId 'STRING'
+````
+
+##### Method Code:
+```python
+def getOrganizationCameraCustomAnalyticsArtifacts(organizationId: str):
+    # Code
+````
+
+
+
+----------------------------------------
 ## Camera Get Organization Camera Onboarding Statuses
 
 
@@ -8624,6 +8970,39 @@ meraki camera getOrganizationCameraOnboardingStatuses --organizationId 'STRING' 
 ##### Method Code:
 ```python
 def getOrganizationCameraOnboardingStatuses(organizationId: str, **kwargs):
+    # Code
+````
+
+
+
+----------------------------------------
+## Camera Update Device Camera Custom Analytics
+
+
+**Update custom analytics settings for a camera**
+
+https://developer.cisco.com/meraki/api-v1/#!update-device-camera-custom-analytics
+
+##### Arguments
+- `--serial` (string): (required)
+- `--enabled` (boolean): Enable custom analytics
+- `--artifactId` (string): The ID of the custom analytics artifact
+- `--parameters` (array): Parameters for the custom analytics workload
+
+
+##### Example:
+```
+meraki camera updateDeviceCameraCustomAnalytics --serial 'STRING' --optionalArg1 "optionalarg1value" --optionalArg2 "optionalarg2value"
+````
+
+##### Example using `--kwargs` (Advanced):
+```
+meraki camera updateDeviceCameraCustomAnalytics --serial 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
+````
+
+##### Method Code:
+```python
+def updateDeviceCameraCustomAnalytics(serial: str, **kwargs):
     # Code
 ````
 
@@ -11459,6 +11838,43 @@ def getNetworkPiiSmOwnersForKey(networkId: str, **kwargs):
 
 
 ----------------------------------------
+## Networks Get Network Policies By Client
+
+
+**Get policies for all clients with policies**
+
+https://developer.cisco.com/meraki/api-v1/#!get-network-policies-by-client
+
+##### Arguments
+- `--networkId` (string): (required)
+- `--total_pages` (integer or string): use with perPage to get total results up to total_pages*perPage; -1 or "all" for all pages
+- `--direction` (string): direction to paginate, either "next" (default) or "prev" page
+- `--perPage` (integer): The number of entries per page returned. Acceptable range is 3 - 1000. Default is 50.
+- `--startingAfter` (string): A token used by the server to indicate the start of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it.
+- `--endingBefore` (string): A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it.
+- `--t0` (string): The beginning of the timespan for the data. The maximum lookback period is 31 days from today.
+- `--timespan` (number): The timespan for which the information will be fetched. If specifying timespan, do not specify parameter t0. The value must be in seconds and be less than or equal to 31 days. The default is 1 day.
+
+
+##### Example:
+```
+meraki networks getNetworkPoliciesByClient --networkId 'STRING' --optionalArg1 "optionalarg1value" --optionalArg2 "optionalarg2value"
+````
+
+##### Example using `--kwargs` (Advanced):
+```
+meraki networks getNetworkPoliciesByClient --networkId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
+````
+
+##### Method Code:
+```python
+def getNetworkPoliciesByClient(networkId: str, total_pages=1, direction='next', **kwargs):
+    # Code
+````
+
+
+
+----------------------------------------
 ## Networks Get Network Settings
 
 
@@ -12570,6 +12986,39 @@ def claimIntoOrganization(organizationId: str, **kwargs):
 
 
 ----------------------------------------
+## Organizations Claim Into Organization Inventory
+
+
+**Claim a list of devices, licenses, and/or orders into an organization**
+
+https://developer.cisco.com/meraki/api-v1/#!claim-into-organization-inventory
+
+##### Arguments
+- `--organizationId` (string): (required)
+- `--orders` (array): The numbers of the orders that should be claimed
+- `--serials` (array): The serials of the devices that should be claimed
+- `--licenses` (array): The licenses that should be claimed
+
+
+##### Example:
+```
+meraki organizations claimIntoOrganizationInventory --organizationId 'STRING' --optionalArg1 "optionalarg1value" --optionalArg2 "optionalarg2value"
+````
+
+##### Example using `--kwargs` (Advanced):
+```
+meraki organizations claimIntoOrganizationInventory --organizationId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
+````
+
+##### Method Code:
+```python
+def claimIntoOrganizationInventory(organizationId: str, **kwargs):
+    # Code
+````
+
+
+
+----------------------------------------
 ## Organizations Clone Organization
 
 
@@ -12881,6 +13330,7 @@ https://developer.cisco.com/meraki/api-v1/#!create-organization-branding-policy
 the section on Dashboard). Some properties in this object also accept custom HTML used to replace the section on
 Dashboard; see the documentation for each property to see the allowed values.
 Each property defaults to 'default or inherit' when not provided.
+- `--customLogo` (object): Properties describing the custom logo attached to the branding policy.
 
 
 ##### Example:
@@ -13679,6 +14129,9 @@ https://developer.cisco.com/meraki/api-v1/#!get-organization-api-requests
 - `--method` (string): Filter the results by the method of the API requests (must be 'GET', 'PUT', 'POST' or 'DELETE')
 - `--responseCode` (integer): Filter the results by the response code of the API requests
 - `--sourceIp` (string): Filter the results by the IP address of the originating API request
+- `--userAgent` (string): Filter the results by the user agent string of the API request
+- `--version` (integer): Filter the results by the API version of the API request
+- `--operationIds` (array): Filter the results by one or more operation IDs for the API request
 
 
 ##### Example:
@@ -14200,7 +14653,7 @@ https://developer.cisco.com/meraki/api-v1/#!get-organization-inventory-devices
 - `--perPage` (integer): The number of entries per page returned. Acceptable range is 3 - 1000. Default is 1000.
 - `--startingAfter` (string): A token used by the server to indicate the start of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it.
 - `--endingBefore` (string): A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it.
-- `--usedState` (string): Filter results by used or unused inventory. Accepted values are "used" or "unused".
+- `--usedState` (string): Filter results by used or unused inventory. Accepted values are 'used' or 'unused'.
 - `--search` (string): Search for devices in inventory based on serial number, mac address, or model.
 - `--macs` (array): Search for devices in inventory based on mac addresses.
 - `--networkIds` (array): Search for devices in inventory based on network ids.
@@ -14356,6 +14809,7 @@ https://developer.cisco.com/meraki/api-v1/#!get-organization-networks
 - `--total_pages` (integer or string): use with perPage to get total results up to total_pages*perPage; -1 or "all" for all pages
 - `--direction` (string): direction to paginate, either "next" (default) or "prev" page
 - `--configTemplateId` (string): An optional parameter that is the ID of a config template. Will return all networks bound to that template.
+- `--isBoundToConfigTemplate` (boolean): An optional parameter to filter config template bound networks. If configTemplateId is set, this cannot be false.
 - `--tags` (array): An optional parameter to filter networks by tags. The filtering is case-sensitive. If tags are included, 'tagsFilterType' should also be included (see below).
 - `--tagsFilterType` (string): An optional parameter of value 'withAnyTags' or 'withAllTags' to indicate whether to return networks which contain ANY or ALL of the included tags. If no type is included, 'withAnyTags' will be selected.
 - `--perPage` (integer): The number of entries per page returned. Acceptable range is 3 - 100000. Default is 1000.
@@ -14977,6 +15431,37 @@ def moveOrganizationLicensesSeats(organizationId: str, destOrganizationId: str, 
 
 
 ----------------------------------------
+## Organizations Release From Organization Inventory
+
+
+**Release a list of claimed devices from an organization.**
+
+https://developer.cisco.com/meraki/api-v1/#!release-from-organization-inventory
+
+##### Arguments
+- `--organizationId` (string): (required)
+- `--serials` (array): Serials of the devices that should be released
+
+
+##### Example:
+```
+meraki organizations releaseFromOrganizationInventory --organizationId 'STRING' --optionalArg1 "optionalarg1value" --optionalArg2 "optionalarg2value"
+````
+
+##### Example using `--kwargs` (Advanced):
+```
+meraki organizations releaseFromOrganizationInventory --organizationId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
+````
+
+##### Method Code:
+```python
+def releaseFromOrganizationInventory(organizationId: str, **kwargs):
+    # Code
+````
+
+
+
+----------------------------------------
 ## Organizations Renew Organization Licenses Seats
 
 
@@ -15325,6 +15810,7 @@ https://developer.cisco.com/meraki/api-v1/#!update-organization-branding-policy
 the section on Dashboard). Some properties in this object also accept custom HTML used to replace the section on
 Dashboard; see the documentation for each property to see the allowed values.
 
+- `--customLogo` (object): Properties describing the custom logo attached to the branding policy.
 
 
 ##### Example:
@@ -15432,6 +15918,7 @@ https://developer.cisco.com/meraki/api-v1/#!update-organization-login-security
 - `--enforceTwoFactorAuth` (boolean): Boolean indicating whether users in this organization will be required to use an extra verification code when logging in to Dashboard. This code will be sent to their mobile phone via SMS, or can be generated by the Google Authenticator application.
 - `--enforceLoginIpRanges` (boolean): Boolean indicating whether organization will restrict access to Dashboard (including the API) from certain IP addresses.
 - `--loginIpRanges` (array): List of acceptable IP ranges. Entries can be single IP addresses, IP address ranges, and CIDR subnets.
+- `--apiAuthentication` (object): Details for indicating whether organization will restrict access to API (but not Dashboard) to certain IP addresses.
 
 
 ##### Example:
@@ -15583,6 +16070,86 @@ meraki organizations updateOrganizationSnmp --organizationId 'STRING' --kwargs '
 ##### Method Code:
 ```python
 def updateOrganizationSnmp(organizationId: str, **kwargs):
+    # Code
+````
+
+# Sensor
+
+
+----------------------------------------
+## Sensor Get Organization Sensor Readings History
+
+
+**Return all reported readings from sensors in a given timespan, sorted by timestamp**
+
+https://developer.cisco.com/meraki/api-v1/#!get-organization-sensor-readings-history
+
+##### Arguments
+- `--organizationId` (string): (required)
+- `--total_pages` (integer or string): use with perPage to get total results up to total_pages*perPage; -1 or "all" for all pages
+- `--direction` (string): direction to paginate, either "next" (default) or "prev" page
+- `--perPage` (integer): The number of entries per page returned. Acceptable range is 3 - 1000. Default is 1000.
+- `--startingAfter` (string): A token used by the server to indicate the start of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it.
+- `--endingBefore` (string): A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it.
+- `--t0` (string): The beginning of the timespan for the data. The maximum lookback period is 365 days and 6 hours from today.
+- `--t1` (string): The end of the timespan for the data. t1 can be a maximum of 7 days after t0.
+- `--timespan` (number): The timespan for which the information will be fetched. If specifying timespan, do not specify parameters t0 and t1. The value must be in seconds and be less than or equal to 7 days. The default is 2 hours.
+- `--networkIds` (array): Optional parameter to filter readings by network.
+- `--serials` (array): Optional parameter to filter readings by sensor.
+- `--metrics` (array): Types of sensor readings to retrieve. If no metrics are supplied, all available types of readings will be retrieved. Allowed values are temperature, humidity, water, door, tvoc, pm25, noise, indoorAirQuality, button, and battery.
+
+
+##### Example:
+```
+meraki sensor getOrganizationSensorReadingsHistory --organizationId 'STRING' --optionalArg1 "optionalarg1value" --optionalArg2 "optionalarg2value"
+````
+
+##### Example using `--kwargs` (Advanced):
+```
+meraki sensor getOrganizationSensorReadingsHistory --organizationId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
+````
+
+##### Method Code:
+```python
+def getOrganizationSensorReadingsHistory(organizationId: str, total_pages=1, direction='next', **kwargs):
+    # Code
+````
+
+
+
+----------------------------------------
+## Sensor Get Organization Sensor Readings Latest
+
+
+**Return the latest available reading for each metric from each sensor, sorted by sensor serial**
+
+https://developer.cisco.com/meraki/api-v1/#!get-organization-sensor-readings-latest
+
+##### Arguments
+- `--organizationId` (string): (required)
+- `--total_pages` (integer or string): use with perPage to get total results up to total_pages*perPage; -1 or "all" for all pages
+- `--direction` (string): direction to paginate, either "next" (default) or "prev" page
+- `--perPage` (integer): The number of entries per page returned. Acceptable range is 3 - 100. Default is 100.
+- `--startingAfter` (string): A token used by the server to indicate the start of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it.
+- `--endingBefore` (string): A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it.
+- `--networkIds` (array): Optional parameter to filter readings by network.
+- `--serials` (array): Optional parameter to filter readings by sensor.
+- `--metrics` (array): Types of sensor readings to retrieve. If no metrics are supplied, all available types of readings will be retrieved. Allowed values are temperature, humidity, water, door, tvoc, pm25, noise, indoorAirQuality, button, and battery.
+
+
+##### Example:
+```
+meraki sensor getOrganizationSensorReadingsLatest --organizationId 'STRING' --optionalArg1 "optionalarg1value" --optionalArg2 "optionalarg2value"
+````
+
+##### Example using `--kwargs` (Advanced):
+```
+meraki sensor getOrganizationSensorReadingsLatest --organizationId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
+````
+
+##### Method Code:
+```python
+def getOrganizationSensorReadingsLatest(organizationId: str, total_pages=1, direction='next', **kwargs):
     # Code
 ````
 
@@ -16852,6 +17419,7 @@ https://developer.cisco.com/meraki/api-v1/#!create-network-switch-access-policy
 - `--accessPolicyType` (string): Access Type of the policy. Automatically 'Hybrid authentication' when hostMode is 'Multi-Domain'.
 - `--increaseAccessSpeed` (boolean): Enabling this option will make switches execute 802.1X and MAC-bypass authentication simultaneously so that clients authenticate faster. Only required when accessPolicyType is 'Hybrid Authentication.
 - `--guestVlanId` (integer): ID for the guest VLAN allow unauthorized devices access to limited network resources
+- `--dot1x` (object): 802.1x Settings
 - `--voiceVlanClients` (boolean): CDP/LLDP capable voice clients will be able to use this VLAN. Automatically true when hostMode is 'Multi-Domain'.
 - `--urlRedirectWalledGardenRanges` (array): IP address ranges, in CIDR notation, to restrict access for clients to a specific set of IP addresses or hostnames prior to authentication
 
@@ -16869,6 +17437,34 @@ meraki switch createNetworkSwitchAccessPolicy --networkId 'STRING' --name 'STRIN
 ##### Method Code:
 ```python
 def createNetworkSwitchAccessPolicy(networkId: str, name: str, radiusServers: list, radiusTestingEnabled: bool, radiusCoaSupportEnabled: bool, radiusAccountingEnabled: bool, hostMode: str, urlRedirectWalledGardenEnabled: bool, **kwargs):
+    # Code
+````
+
+
+
+----------------------------------------
+## Switch Create Network Switch Dhcp Server Policy Arp Inspection Trusted Server
+
+
+**Add a server to be trusted by Dynamic ARP Inspection on this network**
+
+https://developer.cisco.com/meraki/api-v1/#!create-network-switch-dhcp-server-policy-arp-inspection-trusted-server
+
+##### Arguments
+- `--networkId` (string): (required)
+- `--mac` (string): The mac address of the trusted server being added
+- `--vlan` (integer): The VLAN of the trusted server being added. It must be between 1 and 4094
+- `--ipv4` (object): The IPv4 attributes of the trusted server being added
+
+
+##### Example:
+```
+meraki switch createNetworkSwitchDhcpServerPolicyArpInspectionTrustedServer --networkId 'STRING' --mac 'STRING' --vlan INT --ipv4 JSON_STRING
+````
+
+##### Method Code:
+```python
+def createNetworkSwitchDhcpServerPolicyArpInspectionTrustedServer(networkId: str, mac: str, vlan: int, ipv4: dict):
     # Code
 ````
 
@@ -17206,6 +17802,32 @@ meraki switch deleteNetworkSwitchAccessPolicy --networkId 'STRING' --accessPolic
 ##### Method Code:
 ```python
 def deleteNetworkSwitchAccessPolicy(networkId: str, accessPolicyNumber: str):
+    # Code
+````
+
+
+
+----------------------------------------
+## Switch Delete Network Switch Dhcp Server Policy Arp Inspection Trusted Server
+
+
+**Remove a server from being trusted by Dynamic ARP Inspection on this network**
+
+https://developer.cisco.com/meraki/api-v1/#!delete-network-switch-dhcp-server-policy-arp-inspection-trusted-server
+
+##### Arguments
+- `--networkId` (string): (required)
+- `--trustedServerId` (string): (required)
+
+
+##### Example:
+```
+meraki switch deleteNetworkSwitchDhcpServerPolicyArpInspectionTrustedServer --networkId 'STRING' --trustedServerId 'STRING'
+````
+
+##### Method Code:
+```python
+def deleteNetworkSwitchDhcpServerPolicyArpInspectionTrustedServer(networkId: str, trustedServerId: str):
     # Code
 ````
 
@@ -17768,7 +18390,7 @@ def getNetworkSwitchAlternateManagementInterface(networkId: str):
 ## Switch Get Network Switch Dhcp Server Policy
 
 
-**Return the DHCP server policy**
+**Return the DHCP server settings**
 
 https://developer.cisco.com/meraki/api-v1/#!get-network-switch-dhcp-server-policy
 
@@ -17784,6 +18406,113 @@ meraki switch getNetworkSwitchDhcpServerPolicy --networkId 'STRING'
 ##### Method Code:
 ```python
 def getNetworkSwitchDhcpServerPolicy(networkId: str):
+    # Code
+````
+
+
+
+----------------------------------------
+## Switch Get Network Switch Dhcp Server Policy Arp Inspection Trusted Servers
+
+
+**Return the list of servers trusted by Dynamic ARP Inspection on this network**
+
+https://developer.cisco.com/meraki/api-v1/#!get-network-switch-dhcp-server-policy-arp-inspection-trusted-servers
+
+##### Arguments
+- `--networkId` (string): (required)
+- `--total_pages` (integer or string): use with perPage to get total results up to total_pages*perPage; -1 or "all" for all pages
+- `--direction` (string): direction to paginate, either "next" (default) or "prev" page
+- `--perPage` (integer): The number of entries per page returned. Acceptable range is 3 - 1000. Default is 1000.
+- `--startingAfter` (string): A token used by the server to indicate the start of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it.
+- `--endingBefore` (string): A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it.
+
+
+##### Example:
+```
+meraki switch getNetworkSwitchDhcpServerPolicyArpInspectionTrustedServers --networkId 'STRING' --optionalArg1 "optionalarg1value" --optionalArg2 "optionalarg2value"
+````
+
+##### Example using `--kwargs` (Advanced):
+```
+meraki switch getNetworkSwitchDhcpServerPolicyArpInspectionTrustedServers --networkId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
+````
+
+##### Method Code:
+```python
+def getNetworkSwitchDhcpServerPolicyArpInspectionTrustedServers(networkId: str, total_pages=1, direction='next', **kwargs):
+    # Code
+````
+
+
+
+----------------------------------------
+## Switch Get Network Switch Dhcp Server Policy Arp Inspection Warnings By Device
+
+
+**Return the devices that have a Dynamic ARP Inspection warning and their warnings**
+
+https://developer.cisco.com/meraki/api-v1/#!get-network-switch-dhcp-server-policy-arp-inspection-warnings-by-device
+
+##### Arguments
+- `--networkId` (string): (required)
+- `--total_pages` (integer or string): use with perPage to get total results up to total_pages*perPage; -1 or "all" for all pages
+- `--direction` (string): direction to paginate, either "next" (default) or "prev" page
+- `--perPage` (integer): The number of entries per page returned. Acceptable range is 3 - 1000. Default is 1000.
+- `--startingAfter` (string): A token used by the server to indicate the start of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it.
+- `--endingBefore` (string): A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it.
+
+
+##### Example:
+```
+meraki switch getNetworkSwitchDhcpServerPolicyArpInspectionWarningsByDevice --networkId 'STRING' --optionalArg1 "optionalarg1value" --optionalArg2 "optionalarg2value"
+````
+
+##### Example using `--kwargs` (Advanced):
+```
+meraki switch getNetworkSwitchDhcpServerPolicyArpInspectionWarningsByDevice --networkId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
+````
+
+##### Method Code:
+```python
+def getNetworkSwitchDhcpServerPolicyArpInspectionWarningsByDevice(networkId: str, total_pages=1, direction='next', **kwargs):
+    # Code
+````
+
+
+
+----------------------------------------
+## Switch Get Network Switch Dhcp V4 Servers Seen
+
+
+**Return the network's DHCPv4 servers seen within the selected timeframe (default 1 day)**
+
+https://developer.cisco.com/meraki/api-v1/#!get-network-switch-dhcp-v-4-servers-seen
+
+##### Arguments
+- `--networkId` (string): (required)
+- `--total_pages` (integer or string): use with perPage to get total results up to total_pages*perPage; -1 or "all" for all pages
+- `--direction` (string): direction to paginate, either "next" (default) or "prev" page
+- `--t0` (string): The beginning of the timespan for the data. The maximum lookback period is 31 days from today.
+- `--timespan` (number): The timespan for which the information will be fetched. If specifying timespan, do not specify parameter t0. The value must be in seconds and be less than or equal to 31 days. The default is 1 day.
+- `--perPage` (integer): The number of entries per page returned. Acceptable range is 3 - 1000. Default is 1000.
+- `--startingAfter` (string): A token used by the server to indicate the start of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it.
+- `--endingBefore` (string): A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it.
+
+
+##### Example:
+```
+meraki switch getNetworkSwitchDhcpV4ServersSeen --networkId 'STRING' --optionalArg1 "optionalarg1value" --optionalArg2 "optionalarg2value"
+````
+
+##### Example using `--kwargs` (Advanced):
+```
+meraki switch getNetworkSwitchDhcpV4ServersSeen --networkId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
+````
+
+##### Method Code:
+```python
+def getNetworkSwitchDhcpV4ServersSeen(networkId: str, total_pages=1, direction='next', **kwargs):
     # Code
 ````
 
@@ -18407,6 +19136,48 @@ def getOrganizationConfigTemplateSwitchProfiles(organizationId: str, configTempl
 
 
 ----------------------------------------
+## Switch Get Organization Switch Ports By Switch
+
+
+**List the switchports in an organization by switch**
+
+https://developer.cisco.com/meraki/api-v1/#!get-organization-switch-ports-by-switch
+
+##### Arguments
+- `--organizationId` (string): (required)
+- `--total_pages` (integer or string): use with perPage to get total results up to total_pages*perPage; -1 or "all" for all pages
+- `--direction` (string): direction to paginate, either "next" (default) or "prev" page
+- `--perPage` (integer): The number of entries per page returned. Acceptable range is 3 - 50. Default is 50.
+- `--startingAfter` (string): A token used by the server to indicate the start of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it.
+- `--endingBefore` (string): A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it.
+- `--configurationUpdatedAfter` (string): Optional parameter to filter results by switches where the configuration has been updated after the given timestamp
+- `--networkIds` (array): Optional parameter to filter switchports by network.
+- `--name` (string): Optional parameter to filter switchports belonging to switches by name. All returned switches will have a name that contains the search term or is an exact match.
+- `--mac` (string): Optional parameter to filter switchports belonging to switches by MAC address. All returned switches will have a MAC address that contains the search term or is an exact match.
+- `--serial` (string): Optional parameter to filter switchports belonging to switches by serial number.  All returned switches will have a serial number that contains the search term or is an exact match.
+- `--serials` (array): Optional parameter to filter switchports belonging to switches with one or more serial numbers. All switchports returned belong to serial numbers of switches that are an exact match.
+- `--macs` (array): Optional parameter to filter switchports by one or more  MAC addresses belonging to devices. All switchports returned belong to MAC addresses of switches that are an exact match.
+
+
+##### Example:
+```
+meraki switch getOrganizationSwitchPortsBySwitch --organizationId 'STRING' --optionalArg1 "optionalarg1value" --optionalArg2 "optionalarg2value"
+````
+
+##### Example using `--kwargs` (Advanced):
+```
+meraki switch getOrganizationSwitchPortsBySwitch --organizationId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
+````
+
+##### Method Code:
+```python
+def getOrganizationSwitchPortsBySwitch(organizationId: str, total_pages=1, direction='next', **kwargs):
+    # Code
+````
+
+
+
+----------------------------------------
 ## Switch Remove Network Switch Stack
 
 
@@ -18464,6 +19235,10 @@ https://developer.cisco.com/meraki/api-v1/#!update-device-switch-port
 - `--stickyMacAllowList` (array): The initial list of MAC addresses for sticky Mac allow list. Only applicable when 'accessPolicyType' is 'Sticky MAC allow list'
 - `--stickyMacAllowListLimit` (integer): The maximum number of MAC addresses for sticky MAC allow list. Only applicable when 'accessPolicyType' is 'Sticky MAC allow list'
 - `--stormControlEnabled` (boolean): The storm control status of the switch port
+- `--adaptivePolicyGroupId` (string): The adaptive policy group ID that will be used to tag traffic through this switch port. This ID must pre-exist during the configuration, else needs to be created using adaptivePolicy/groups API. Cannot be applied to a port on a switch bound to profile.
+- `--peerSgtCapable` (boolean): If true, Peer SGT is enabled for traffic through this switch port. Applicable to trunk port only, not access port.
+Cannot be applied to a port on a switch bound to profile.
+
 - `--flexibleStackingEnabled` (boolean): For supported switches (e.g. MS420/MS425), whether or not the port has flexible stacking enabled.
 
 
@@ -18683,6 +19458,7 @@ https://developer.cisco.com/meraki/api-v1/#!update-network-switch-access-policy
 - `--accessPolicyType` (string): Access Type of the policy. Automatically 'Hybrid authentication' when hostMode is 'Multi-Domain'.
 - `--increaseAccessSpeed` (boolean): Enabling this option will make switches execute 802.1X and MAC-bypass authentication simultaneously so that clients authenticate faster. Only required when accessPolicyType is 'Hybrid Authentication.
 - `--guestVlanId` (integer): ID for the guest VLAN allow unauthorized devices access to limited network resources
+- `--dot1x` (object): 802.1x Settings
 - `--voiceVlanClients` (boolean): CDP/LLDP capable voice clients will be able to use this VLAN. Automatically true when hostMode is 'Multi-Domain'.
 - `--urlRedirectWalledGardenEnabled` (boolean): Enable to restrict access for clients to a specific set of IP addresses or hostnames prior to authentication
 - `--urlRedirectWalledGardenRanges` (array): IP address ranges, in CIDR notation, to restrict access for clients to a specific set of IP addresses or hostnames prior to authentication
@@ -18744,15 +19520,17 @@ def updateNetworkSwitchAlternateManagementInterface(networkId: str, **kwargs):
 ## Switch Update Network Switch Dhcp Server Policy
 
 
-**Update the DHCP server policy**
+**Update the DHCP server settings**
 
 https://developer.cisco.com/meraki/api-v1/#!update-network-switch-dhcp-server-policy
 
 ##### Arguments
 - `--networkId` (string): (required)
+- `--alerts` (object): Alert settings for DHCP servers
 - `--defaultPolicy` (string): 'allow' or 'block' new DHCP servers. Default value is 'allow'.
-- `--allowedServers` (array): List the MAC addresses of DHCP servers to permit on the network. Applicable only if defaultPolicy is set to block. An empty array will clear the entries.
-- `--blockedServers` (array): List the MAC addresses of DHCP servers to block on the network. Applicable only if defaultPolicy is set to allow. An empty array will clear the entries.
+- `--allowedServers` (array): List the MAC addresses of DHCP servers to permit on the network when defaultPolicy is set to block. An empty array will clear the entries.
+- `--blockedServers` (array): List the MAC addresses of DHCP servers to block on the network when defaultPolicy is set to allow. An empty array will clear the entries.
+- `--arpInspection` (object): Dynamic ARP Inspection settings
 
 
 ##### Example:
@@ -18768,6 +19546,40 @@ meraki switch updateNetworkSwitchDhcpServerPolicy --networkId 'STRING' --kwargs 
 ##### Method Code:
 ```python
 def updateNetworkSwitchDhcpServerPolicy(networkId: str, **kwargs):
+    # Code
+````
+
+
+
+----------------------------------------
+## Switch Update Network Switch Dhcp Server Policy Arp Inspection Trusted Server
+
+
+**Update a server that is trusted by Dynamic ARP Inspection on this network**
+
+https://developer.cisco.com/meraki/api-v1/#!update-network-switch-dhcp-server-policy-arp-inspection-trusted-server
+
+##### Arguments
+- `--networkId` (string): (required)
+- `--trustedServerId` (string): (required)
+- `--mac` (string): The updated mac address of the trusted server
+- `--vlan` (integer): The updated VLAN of the trusted server. It must be between 1 and 4094
+- `--ipv4` (object): The updated IPv4 attributes of the trusted server
+
+
+##### Example:
+```
+meraki switch updateNetworkSwitchDhcpServerPolicyArpInspectionTrustedServer --networkId 'STRING' --trustedServerId 'STRING' --optionalArg1 "optionalarg1value" --optionalArg2 "optionalarg2value"
+````
+
+##### Example using `--kwargs` (Advanced):
+```
+meraki switch updateNetworkSwitchDhcpServerPolicyArpInspectionTrustedServer --networkId 'STRING' --trustedServerId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
+````
+
+##### Method Code:
+```python
+def updateNetworkSwitchDhcpServerPolicyArpInspectionTrustedServer(networkId: str, trustedServerId: str, **kwargs):
     # Code
 ````
 
@@ -19351,6 +20163,7 @@ https://developer.cisco.com/meraki/api-v1/#!create-network-wireless-rf-profile
 - `--apBandSettings` (object): Settings that will be enabled if selectionType is set to 'ap'.
 - `--twoFourGhzSettings` (object): Settings related to 2.4Ghz band
 - `--fiveGhzSettings` (object): Settings related to 5Ghz band
+- `--transmission` (object): Settings related to radio transmission.
 - `--perSsidSettings` (object): Per-SSID radio settings by number.
 
 
@@ -21043,6 +21856,7 @@ https://developer.cisco.com/meraki/api-v1/#!update-network-wireless-rf-profile
 - `--apBandSettings` (object): Settings that will be enabled if selectionType is set to 'ap'.
 - `--twoFourGhzSettings` (object): Settings related to 2.4Ghz band
 - `--fiveGhzSettings` (object): Settings related to 5Ghz band
+- `--transmission` (object): Settings related to radio transmission.
 - `--perSsidSettings` (object): Per-SSID radio settings by number.
 
 
@@ -21143,6 +21957,8 @@ https://developer.cisco.com/meraki/api-v1/#!update-network-wireless-ssid
 - `--ipAssignmentMode` (string): The client IP assignment mode ('NAT mode', 'Bridge mode', 'Layer 3 roaming', 'Ethernet over GRE', 'Layer 3 roaming with a concentrator' or 'VPN')
 - `--useVlanTagging` (boolean): Whether or not traffic should be directed to use specific VLANs. This param is only valid if the ipAssignmentMode is 'Bridge mode' or 'Layer 3 roaming'
 - `--concentratorNetworkId` (string): The concentrator to use when the ipAssignmentMode is 'Layer 3 roaming with a concentrator' or 'VPN'.
+- `--secondaryConcentratorNetworkId` (string): The secondary concentrator to use when the ipAssignmentMode is 'VPN'. If configured, the APs will switch to using this concentrator if the primary concentrator is unreachable. This param is optional. ('disabled' represents no secondary concentrator.)
+- `--disassociateClientsOnVpnFailover` (boolean): Disassociate clients when 'VPN' concentrator failover occurs in order to trigger clients to re-associate and generate new DHCP requests. This param is only valid if ipAssignmentMode is 'VPN'.
 - `--vlanId` (integer): The VLAN ID used for VLAN tagging. This param is only valid when the ipAssignmentMode is 'Layer 3 roaming with a concentrator' or 'VPN'
 - `--defaultVlanId` (integer): The default VLAN ID used for 'all other APs'. This param is only valid when the ipAssignmentMode is 'Bridge mode' or 'Layer 3 roaming'
 - `--apTagsAndVlanIds` (array): The list of tags and VLAN IDs used for VLAN tagging. This param is only valid when the ipAssignmentMode is 'Bridge mode' or 'Layer 3 roaming'
@@ -21165,6 +21981,7 @@ https://developer.cisco.com/meraki/api-v1/#!update-network-wireless-ssid
 - `--mandatoryDhcpEnabled` (boolean): If true, Mandatory DHCP will enforce that clients connecting to this SSID must use the IP address assigned by the DHCP server. Clients who use a static IP address won't be able to associate.
 - `--adultContentFilteringEnabled` (boolean): Boolean indicating whether or not adult content will be blocked
 - `--dnsRewrite` (object): DNS servers rewrite settings
+- `--speedBurst` (object): The SpeedBurst setting for this SSID'
 
 
 ##### Example:
@@ -21553,6 +22370,7 @@ https://developer.cisco.com/meraki/api-v1/#!update-network-wireless-ssid-vpn
 ##### Arguments
 - `--networkId` (string): (required)
 - `--number` (string): (required)
+- `--concentrator` (object): The VPN concentrator settings for this SSID.
 - `--splitTunnel` (object): The VPN split tunnel settings for this SSID.
 - `--failover` (object): Secondary VPN concentrator settings. This is only used when two VPN concentrators are configured on the SSID.
 
