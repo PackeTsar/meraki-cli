@@ -1,4 +1,5 @@
 import unittest
+import types
 import os
 from meraki_cli.__main__ import _cmd_title, _cmd_help, Args
 
@@ -30,8 +31,12 @@ class TestHelps(unittest.TestCase):
         pardir = os.path.dirname(filedir)
         # Build the path to the .command_guide_build.py file
         builderfile = os.path.join(pardir, '.command_guide_build.py')
-        # Create a module out of the command guide builder file
-        self.builder = SourceFileLoader('builder', builderfile).load_module()
+        # Create the module loader from the source file
+        loader = SourceFileLoader('builder', builderfile)
+        # Initialize the module
+        self.builder = types.ModuleType(loader.name)
+        # Execute the build of the module
+        loader.exec_module(self.builder)
         # Grab the class and method structure
         struct = self.builder._get_structure()
         # Start an empty list to contain all the arg objects
