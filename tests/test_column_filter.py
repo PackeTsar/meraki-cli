@@ -3,12 +3,11 @@ from meraki_cli.__main__ import _column_filter
 
 
 LISTOFDICTS = [{
-        'key1': 1,
-        'key2': 2,
-        'key3': 3,
-        'key4': 4,
-    }
-]
+    'key1': 1,
+    'key2': 2,
+    'key3': 3,
+    'key4': 4,
+}]
 
 
 class TestColumnFilter(unittest.TestCase):

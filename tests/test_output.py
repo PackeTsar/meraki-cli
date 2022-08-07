@@ -7,11 +7,10 @@ from meraki_cli.__main__ import _output
 
 
 LISTOFDICTS = [{
-        'key1': '1',
-        'key2': '1',
-        'badkey': [],
-    }
-]
+    'key1': '1',
+    'key2': '1',
+    'badkey': [],
+}]
 
 
 class TestOutput(unittest.TestCase):

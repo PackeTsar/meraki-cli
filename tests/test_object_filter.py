@@ -8,7 +8,7 @@ LISTOFDICTS = [
     {'id': '100', 'name': 'OTHERTHING'},
     {'id': '200', 'name': 'OTHER200THING'},
     {'id': '300', 'name': 'ELSE'}
-    ]
+]
 
 
 class TestObjectFilter(unittest.TestCase):

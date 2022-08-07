@@ -39,7 +39,7 @@ class TestExtraArgsToKwargs(unittest.TestCase):
             'vlan': '100',
             'name': 'somename',
             'origarg': 'origvalue',
-            }
+        }
 
     def testNestedData(self):
         result = _extra_args_to_kwargs(
@@ -58,7 +58,7 @@ class TestExtraArgsToKwargs(unittest.TestCase):
             },
             'name': 'somename',
             'origarg': 'origvalue',
-            }
+        }
 
     def testIncompleteArgs(self):
         with self.assertRaises(SystemExit):

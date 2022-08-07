@@ -111,11 +111,11 @@ def _cmd_args(arg_obj: Args) -> str:
         elif arg.annotation is str:  # If it is a regular string
             # Wrap the value example in quotes as is a good practice and look
             #     up the metavar we use to provide a value example
-            metavar = " '"+climain.ANNOTATION_MAP[
-                arg.annotation]['metavar']+"'"
+            metavar = " '" + climain.ANNOTATION_MAP[
+                arg.annotation]['metavar'] + "'"
         else:
             # Otherwise just add the regular metavar
-            metavar = ' '+climain.ANNOTATION_MAP[arg.annotation]['metavar']
+            metavar = ' ' + climain.ANNOTATION_MAP[arg.annotation]['metavar']
         # Build the argument example and add it to the result
         result += f' --{arg.name}{metavar}'
     return result
@@ -138,7 +138,7 @@ def main() -> None:
         _cmd_section=_cmd_section,
         _cmd_args=_cmd_args,
         _uri_name=_uri_name,
-        )
+    )
     # Write the template rendering to the final command guide markdown file
     guide = open('COMMAND_GUIDE.md', 'w')
     guide.write(guidestr)

@@ -8,17 +8,17 @@ LISTOFDICTS = [
     {
         'key1': '1',
         'key2': '1',
-     }
+    }
 ]
 
 INCOMPLETELISTOFDICTS = [
     {
         'key1': '1',
         'key2': '1',
-     },
+    },
     {
         'key3': '3',
-     }
+    }
 ]
 
 

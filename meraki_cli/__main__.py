@@ -77,6 +77,7 @@ import re
 import sys
 import json
 import types
+import typing
 import inspect
 import logging
 import operator
@@ -145,29 +146,17 @@ class Parser(argparse.ArgumentParser):
 # Map to enhance CLI argument parser by providing additional parsing
 #     context extracted from parameter annotation data types.
 ANNOTATION_MAP = {
-    inspect._empty: {
-        'metavar': 'STRING',
-        },
-    type(None): {
-        'metavar': 'STRING',
-        },
-    str: {
-        'metavar': 'STRING',
-        },
-    list: {
+    inspect._empty: {'metavar': 'STRING'},
+    type(None): {'metavar': 'STRING'},
+    str: {'metavar': 'STRING'},
+    list:
+    {
         'action': 'append',
         'metavar': 'ITEM',
-        },
-    dict: {
-        'metavar': 'JSON_STRING',
-        },
-    bool: {
-        'action': 'store_true',
-        },
-    int: {
-        'type': int,
-        'metavar': 'INT',
-        },
+    },
+    dict: {'metavar': 'JSON_STRING'},
+    bool: {'action': 'store_true'},
+    int: {'type': int, 'metavar': 'INT'},
 }
 
 
@@ -242,14 +231,14 @@ def _args_from_file(parsed_args: argparse.Namespace) -> None:
             os.path.expanduser("~"),
             '.meraki-cli',
             'meraki-cli.conf'
-            ),
+        ),
         os.path.join(  # Standard MacOS app config directory
             os.path.expanduser("~"),
             'Library',
             'Application Support',
             'meraki-cli',
             'meraki-cli.conf'
-            ),
+        ),
         '/etc/meraki-cli/meraki-cli.conf',  # Standard Linux config directory
     ]
     # Environment variable directories to check
@@ -286,7 +275,7 @@ def _args_from_file(parsed_args: argparse.Namespace) -> None:
                 return None  # And quit the function
 
 
-def _configure_logging(parsed_args: argparse.Namespace) -> ():
+def _configure_logging(parsed_args: argparse.Namespace) -> typing.Tuple:
     """
     Prepare and return two logging objects: one for the general program, and
         another for the Meraki library. Uses arguments from the CLI to set
@@ -299,7 +288,7 @@ def _configure_logging(parsed_args: argparse.Namespace) -> ():
     # Add in a timestamp and logging level to each message
     format = logging.Formatter(
         "%(asctime)s [%(levelname)-5.5s]  %(message)s"
-        )
+    )
     # STDERR default handler for terminal output
     handler = logging.StreamHandler()
     handler.setFormatter(format)
@@ -420,7 +409,7 @@ def _is_json(value: str) -> bool:
 
 
 def _get_method_params(parsed_args: argparse.Namespace,
-                       arg_dict: dict, arg_obj: Args) -> ():
+                       arg_dict: dict, arg_obj: Args) -> typing.Tuple:
     """
     Transform provided CLI arguments into positional and keyword parameters
         based on the needs of the target method.
@@ -473,7 +462,7 @@ def _get_method_params(parsed_args: argparse.Namespace,
     return (positionals, arg_dict)
 
 
-def _translate_input(arg_dicts: list, translation_strs: list) -> []:
+def _translate_input(arg_dicts: list, translation_strs: list) -> typing.List:
     """
     Flip the key values of objects provided by STDIN so they match the
         required paramter names of the target method.
@@ -509,7 +498,7 @@ def _translate_input(arg_dicts: list, translation_strs: list) -> []:
 
 
 def _json_to_args(json_string: str, parsed_args: argparse.Namespace,
-                  arg_obj: Args) -> []:
+                  arg_obj: Args) -> typing.List:
     """
     Parse a raw JSON string into method-ready arguments. Parse JSON into
         objects, run them through a translator if the user provided key
@@ -555,7 +544,8 @@ def _json_to_args(json_string: str, parsed_args: argparse.Namespace,
     return result
 
 
-def _get_stdin_args(parsed_args: argparse.Namespace, arg_obj: Args) -> []:
+def _get_stdin_args(parsed_args: argparse.Namespace,
+                    arg_obj: Args) -> typing.List:
     """
     Get input objects from a pipeline (STDIN), run them through a translator
         if the user provided key translations, reconcile them with CLI inputs
@@ -588,7 +578,8 @@ class ExtrasParser(argparse.ArgumentParser):
         sys.exit(2)  # Exit with an error code
 
 
-def _extra_args_to_kwargs(existing_kwarg_dict: dict, arglist: list) -> {}:
+def _extra_args_to_kwargs(existing_kwarg_dict: dict,
+                          arglist: list) -> typing.Dict:
     """
     Interpret a list of 'extra' uninterpreted arguments from the CLI into a
         dict of arguments which are then combined with the existing kwargs
@@ -689,7 +680,7 @@ def _check_for_key(listofdicts: list, key: str) -> bool:
 
 
 def _object_filter(listofdicts: list, filter_strs: list,
-                   and_logic=False) -> []:
+                   and_logic=False) -> typing.List:
     """
     Filter objects out of the result of a method call. Used by the "-f"
         filter to filter displayed or pipelined output.
@@ -748,7 +739,7 @@ def _object_filter(listofdicts: list, filter_strs: list,
             if re.search(fdict['regex'], str(item[fdict['key']])):
                 if and_logic:  # If we are using "AND" filter logic
                     # If this is the very last filter to be processed
-                    if index+1 == len(fdict):
+                    if index + 1 == len(fdict):
                         # The item passes in the "AND" logic. Add it to the
                         #      result and break the loop
                         result.append(item)
@@ -764,7 +755,7 @@ def _object_filter(listofdicts: list, filter_strs: list,
     return result
 
 
-def _table_ready_dicts(listofdicts: list) -> []:
+def _table_ready_dicts(listofdicts: list) -> typing.List:
     """
     Prepare a list of dict objects for printing to a table. Each dict is a
         set of object atributes where the key will be the table column name.
@@ -784,13 +775,11 @@ def _table_ready_dicts(listofdicts: list) -> []:
     if type(listofdicts) is dict:  # If we were given a dict instead of a list
         if (
                 len(listofdicts) == 1  # If the dict has one kv pair
-                and
                 # The value of that kv pair is a list
-                type(list(listofdicts.values())[0]) is list
-                and
+                and type(list(listofdicts.values())[0]) is list
                 # The entries in that list are dicts
-                type(list(listofdicts.values())[0][0]) is dict
-                ):
+                and type(list(listofdicts.values())[0][0]) is dict
+        ):
             # Use the lsit from the kv pair as the list of dicts
             listofdicts = list(listofdicts.values())[0]
         else:
@@ -810,7 +799,7 @@ def _table_ready_dicts(listofdicts: list) -> []:
     return result
 
 
-def _column_filter(listofdicts: list, columns_str: str) -> []:
+def _column_filter(listofdicts: list, columns_str: str) -> typing.List:
     """
     Filter out and reorder key,value pairs in a list of dicts destined to be
         printed to a table.
@@ -839,7 +828,7 @@ def _column_filter(listofdicts: list, columns_str: str) -> []:
     return result
 
 
-def _normalize_listofdicts(listofdicts: list) -> []:
+def _normalize_listofdicts(listofdicts: list) -> typing.List:
     """
     Prepare a list of dicts for tabulation by normalizing the dicts: make
         sure each dict in the list has the same keys present. This will turn:
@@ -1123,7 +1112,7 @@ def _upgrade(parsed_args: argparse.Namespace) -> None:
     opts = ('-m pip install --no-cache-dir --upgrade '
             f'--upgrade-strategy {strategy} {packages}')
     log.info(f'Executing Python with options: "{opts}"')
-    subprocess.check_call([sys.executable]+opts.split(' '))
+    subprocess.check_call([sys.executable] + opts.split(' '))
 
 
 def main(argstring=None) -> None:
@@ -1153,9 +1142,9 @@ def main(argstring=None) -> None:
                              version=f'Meraki-CLI v{__version__} | '
                              f'Meraki API Library v{meraki.__version__} | '
                              'Python {}.{}.{}'.format(
-                                sys.version_info[0],
-                                sys.version_info[1],
-                                sys.version_info[2],
+                                 sys.version_info[0],
+                                 sys.version_info[1],
+                                 sys.version_info[2],
                              ),
                              action="version")
     basic_group.add_argument('-k', '--apiKey',
