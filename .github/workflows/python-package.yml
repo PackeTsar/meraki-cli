@@ -31,10 +31,10 @@ jobs:
         flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
     - name: Alternative lint with Flake8
       run: |
-        pytest --flake8
+        flake8 .
     - name: Test with pytest
       run: |
-        pytest
+        pytest -v --cache-clear
     - name: Check help menu
       run: |
         meraki -h

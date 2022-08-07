@@ -1,0 +1,14 @@
+[flake8]
+extend-select = E,W
+ignore =
+    # Standard is changing: https://www.flake8rules.com/rules/W503.html
+    W503
+exclude =
+    # No need to traverse our git directory
+    .git,
+    # There's no value in checking cache directories
+    __pycache__,
+    # Don't check the venv folder
+    env,
+    # Don't check the venv folder
+    .tox,

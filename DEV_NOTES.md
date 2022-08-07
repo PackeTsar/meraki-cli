@@ -20,11 +20,11 @@ From root directory
 
 # Each development cycle
 
-## Run tests
-`pytest -v`
-
 ## Check linting
-`pytest --flake8 -v --cache-clear`
+`flake8`
+
+## Run tests
+`pytest -v --cache-clear`
 
 ## Run tests against all supported versions
 `tox`
