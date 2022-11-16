@@ -21,6 +21,21 @@ Full Command Guide: [Meraki-CLI Command Guide](COMMAND_GUIDE.md)
 
 ---
 
+# Deploy in Cisco Exchange Dev environment
+
+If you run this project using the Cisco Exchange Dev environment
+
+![meraki-cli-exchange-devenv](https://raw.githubusercontent.com/CiscoDevNet/code-exchange-repo-template/master/manual-sample-repo/img/meraki-cli-exchange-devenv.png)
+
+First, export `MERAKI_DASHBOARD_API_KEY` before running `meraki-cli`. 
+
+In the terminal, run the following command:
+```
+export MERAKI_DASHBOARD_API_KEY=Your-Meraki-API-Key
+```
+
+---
+
 ## Documentation
 
 Visit the **[Meraki-CLI Documentation](https://meraki-cli.readthedocs.io/en/latest/)** for installation and usage insructions.
