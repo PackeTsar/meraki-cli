@@ -13,26 +13,13 @@ Quick Install: `pip3 install meraki-cli`
 
 Update/Upgrade Meraki-CLI: `meraki upgrade --upgrade-all`
 
+Try Meraki-CLI: [Try It Out](https://meraki-cli.readthedocs.io/en/latest/try-it-out/)
+
 **Full Documentation**: **[Install Meraki-CLI](https://meraki-cli.readthedocs.io/en/latest/)**
 
 Quick Command Cheat Sheet: [Meraki-CLI Cheat Sheet](CHEATSHEET.md)
 
 Full Command Guide: [Meraki-CLI Command Guide](COMMAND_GUIDE.md)
-
----
-
-# Deploy in Cisco Exchange Dev environment
-
-If you run this project using the Cisco Exchange Dev environment
-
-![meraki-cli-exchange-devenv](https://raw.githubusercontent.com/CiscoDevNet/code-exchange-repo-template/master/manual-sample-repo/img/meraki-cli-exchange-devenv.png)
-
-First, export `MERAKI_DASHBOARD_API_KEY` before running `meraki-cli`. 
-
-In the terminal, run the following command:
-```
-export MERAKI_DASHBOARD_API_KEY=Your-Meraki-API-Key
-```
 
 ---
 
