@@ -50,3 +50,5 @@ jobs:
     - name: Check code coverage
       run: |
         coverage run -m pytest
+    - name: Upload coverage report
+      uses: codecov/codecov-action@v3
