@@ -74,8 +74,8 @@ setup(name='meraki_cli',
       license="GNU",
       packages=find_packages(),
       install_requires=install_requires,
-      extras_require={'dev': ['jinja2', 'pytest', 'coverage', 'codecov',
-                              'flake8', 'requests-mock', 'tox', 'mkdocs',
+      extras_require={'dev': ['jinja2', 'pytest', 'coverage', 'flake8',
+                              'requests-mock', 'tox', 'mkdocs',
                               'mkdocs-material']},
       entry_points={
           'console_scripts': [
