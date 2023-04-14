@@ -50,6 +50,3 @@ jobs:
     - name: Check code coverage
       run: |
         coverage run -m pytest
-    - name: Report to codecov
-      run: |
-        codecov
