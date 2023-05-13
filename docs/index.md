@@ -14,7 +14,9 @@ Meraki-CLI is a wrapper around the official [Meraki Dashboard API Python SDK](ht
 
 ![Meraki-CLI Screenshot](screenshot.png "Meraki-CLI screenshot"){style="height: 300px; margin-bottom: 1em"}
 
-[:material-clock-fast:  Quick Installation Guide :octicons-arrow-right-24:](quick-installation/){ .md-button .md-button--primary }
+[:test_tube:  Try It Out :octicons-arrow-right-24:](try-it-out/){ .md-button .md-button--primary }
+
+[:rocket:  Quick Installation Guide :octicons-arrow-right-24:](quick-installation/){ .md-button .md-button--primary }
 
 [:material-clipboard-list:  Step-by-Step Installation Guide :octicons-arrow-right-24:](step-by-step_installation/){ .md-button .md-button--primary }
 

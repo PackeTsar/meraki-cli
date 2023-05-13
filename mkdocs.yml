@@ -11,6 +11,7 @@ theme:
   features:
     - toc.follow
     - navigation.expand
+    - content.code.copy
   name: material
   logo: icon.png
   favicon: icon.png
