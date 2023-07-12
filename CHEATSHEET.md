@@ -19,14 +19,15 @@ Placeholders in the command examples will use the format `<placeholder>`
 - [List All Switch Stacks in a Network](#list-all-switch-stacks-in-a-network)
 - [Claim a Device into a Network](#claim-a-device-into-a-network)
 - [Change Device Name](#change-device-name)
-- [Change Device Name (Partial Serial)](#change-device-name--partial-serial-)
+- [Change Device Name (Partial Serial)](#change-device-name-partial-serial)
+- [Change Device Management VLAN/IP/DNS](#change-device-management-vlanipdns)
 - [List Port Settings on a Switch](#list-port-settings-on-a-switch)
 - [Set the Name of a Switch Port](#set-the-name-of-a-switch-port)
 - [Set a Switch Port to Access a VLAN](#set-a-switch-port-to-access-a-vlan)
 - [List SVIs on a Switch](#list-svis-on-a-switch)
 - [Create a SVI on a Layer-3 Switch](#create-a-svi-on-a-layer-3-switch)
 - [Create a SVI and Add it to OSPF on a Layer-3 Switch](#create-a-svi-and-add-it-to-ospf-on-a-layer-3-switch)
-- [Set DHCP Settings on SVI (Using the SVI Name)](#set-dhcp-settings-on-svi--using-the-svi-name-)
+- [Set DHCP Settings on SVI (Using the SVI Name)](#set-dhcp-settings-on-svi-using-the-svi-name)
 - [Filter ports on a switch using LLDP info](#filter-ports-on-a-switch-using-lldp-info)
 - [Set camera ports to specific VLAN](#set-camera-ports-to-specific-vlan)
 
@@ -132,6 +133,28 @@ Change the name of a device in your organization using a partial serial number.
 
 ```
 meraki -f serial:<partial_serial> organizations getOrganizationInventoryDevices --organizationId <organizationId> | meraki devices updateDevice --name <name>
+```
+
+
+## Change Device Management VLAN/IP/DNS
+
+Change the management VLAN/IP/DNS of a device (AP, switch, etc)
+
+```
+# Set management VLAN only
+meraki -j devices updateDeviceManagementInterface --serial XXXX-XXXX-XXXX --wan1 '{"vlan": 2}'
+#
+# Set management IP only (DHCP)
+meraki -j devices updateDeviceManagementInterface --serial XXXX-XXXX-XXXX --wan1 '{"usingStaticIp": false}'
+#
+# Set management IP only (static)
+meraki -j devices updateDeviceManagementInterface --serial XXXX-XXXX-XXXX --wan1 '{"usingStaticIp": true, "staticIp": "192.168.128.2", "staticSubnetMask": "255.255.255.0", "staticGatewayIp": "192.168.128.1"}'
+#
+# Set management IP and VLAN
+meraki -j devices updateDeviceManagementInterface --serial XXXX-XXXX-XXXX --wan1 '{"vlan": 2, "usingStaticIp": true, "staticIp": "192.168.128.2", "staticSubnetMask": "255.255.255.0", "staticGatewayIp": "192.168.128.1"}'
+#
+# Set management DNS servers
+meraki -j devices updateDeviceManagementInterface --serial XXXX-XXXX-XXXX --wan1 '{"staticDns": [ "1.1.1.1", "8.8.8.8" ]}' 
 ```
 
 
