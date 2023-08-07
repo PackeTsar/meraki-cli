@@ -8,6 +8,8 @@ From root directory
   - `python -m venv env && .\env\Scripts\activate`
 - UNIX
   - `python3 -m venv env && source env/bin/activate`
+- PYENV
+  - `pyenv virtualenv env && pyenv activate env`
 
 
 ## Install libraries and package
