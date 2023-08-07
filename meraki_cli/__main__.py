@@ -399,7 +399,7 @@ def _is_json(value: str) -> bool:
 
     - value: String which may be proper structured JSON, like '["1", "2"]'
     """
-    if type(value) != str:
+    if not isinstance(value, str):
         return False
     try:
         json.loads(value)
