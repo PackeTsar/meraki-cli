@@ -10,7 +10,7 @@ This documentation is built automatically by parsing the [Meraki Dashboard API P
 
 ## Version
 
-This command guide is based on version **v1.33.0** of the [Meraki Dashboard API Python SDK](https://github.com/meraki/dashboard-api-python). If you want to see the version of the SDK you have installed, issue the command `meraki -v`.
+This command guide is based on version **v1.36.0** of the [Meraki Dashboard API Python SDK](https://github.com/meraki/dashboard-api-python). If you want to see the version of the SDK you have installed, issue the command `meraki -v`.
 
 
 # TABLE OF CONTENTS
@@ -19,10 +19,12 @@ This command guide is based on version **v1.33.0** of the [Meraki Dashboard API 
 - [Appliance](#appliance)
     - [Appliance Create Device Appliance Vmx Authentication Token](#appliance-create-device-appliance-vmx-authentication-token)
     - [Appliance Create Network Appliance Prefixes Delegated Static](#appliance-create-network-appliance-prefixes-delegated-static)
+    - [Appliance Create Network Appliance Rf Profile](#appliance-create-network-appliance-rf-profile)
     - [Appliance Create Network Appliance Static Route](#appliance-create-network-appliance-static-route)
     - [Appliance Create Network Appliance Traffic Shaping Custom Performance Class](#appliance-create-network-appliance-traffic-shaping-custom-performance-class)
     - [Appliance Create Network Appliance Vlan](#appliance-create-network-appliance-vlan)
     - [Appliance Delete Network Appliance Prefixes Delegated Static](#appliance-delete-network-appliance-prefixes-delegated-static)
+    - [Appliance Delete Network Appliance Rf Profile](#appliance-delete-network-appliance-rf-profile)
     - [Appliance Delete Network Appliance Static Route](#appliance-delete-network-appliance-static-route)
     - [Appliance Delete Network Appliance Traffic Shaping Custom Performance Class](#appliance-delete-network-appliance-traffic-shaping-custom-performance-class)
     - [Appliance Delete Network Appliance Vlan](#appliance-delete-network-appliance-vlan)
@@ -30,6 +32,7 @@ This command guide is based on version **v1.33.0** of the [Meraki Dashboard API 
     - [Appliance Get Device Appliance Performance](#appliance-get-device-appliance-performance)
     - [Appliance Get Device Appliance Prefixes Delegated](#appliance-get-device-appliance-prefixes-delegated)
     - [Appliance Get Device Appliance Prefixes Delegated Vlan Assignments](#appliance-get-device-appliance-prefixes-delegated-vlan-assignments)
+    - [Appliance Get Device Appliance Radio Settings](#appliance-get-device-appliance-radio-settings)
     - [Appliance Get Device Appliance Uplinks Settings](#appliance-get-device-appliance-uplinks-settings)
     - [Appliance Get Network Appliance Client Security Events](#appliance-get-network-appliance-client-security-events)
     - [Appliance Get Network Appliance Connectivity Monitoring Destinations](#appliance-get-network-appliance-connectivity-monitoring-destinations)
@@ -51,6 +54,8 @@ This command guide is based on version **v1.33.0** of the [Meraki Dashboard API 
     - [Appliance Get Network Appliance Ports](#appliance-get-network-appliance-ports)
     - [Appliance Get Network Appliance Prefixes Delegated Static](#appliance-get-network-appliance-prefixes-delegated-static)
     - [Appliance Get Network Appliance Prefixes Delegated Statics](#appliance-get-network-appliance-prefixes-delegated-statics)
+    - [Appliance Get Network Appliance Rf Profile](#appliance-get-network-appliance-rf-profile)
+    - [Appliance Get Network Appliance Rf Profiles](#appliance-get-network-appliance-rf-profiles)
     - [Appliance Get Network Appliance Security Events](#appliance-get-network-appliance-security-events)
     - [Appliance Get Network Appliance Security Intrusion](#appliance-get-network-appliance-security-intrusion)
     - [Appliance Get Network Appliance Security Malware](#appliance-get-network-appliance-security-malware)
@@ -76,11 +81,13 @@ This command guide is based on version **v1.33.0** of the [Meraki Dashboard API 
     - [Appliance Get Organization Appliance Security Events](#appliance-get-organization-appliance-security-events)
     - [Appliance Get Organization Appliance Security Intrusion](#appliance-get-organization-appliance-security-intrusion)
     - [Appliance Get Organization Appliance Uplink Statuses](#appliance-get-organization-appliance-uplink-statuses)
+    - [Appliance Get Organization Appliance Uplinks Usage By Network](#appliance-get-organization-appliance-uplinks-usage-by-network)
     - [Appliance Get Organization Appliance Vpn Stats](#appliance-get-organization-appliance-vpn-stats)
     - [Appliance Get Organization Appliance Vpn Statuses](#appliance-get-organization-appliance-vpn-statuses)
     - [Appliance Get Organization Appliance Vpn Third Party V P N Peers](#appliance-get-organization-appliance-vpn-third-party-v-p-n-peers)
     - [Appliance Get Organization Appliance Vpn Vpn Firewall Rules](#appliance-get-organization-appliance-vpn-vpn-firewall-rules)
     - [Appliance Swap Network Appliance Warm Spare](#appliance-swap-network-appliance-warm-spare)
+    - [Appliance Update Device Appliance Radio Settings](#appliance-update-device-appliance-radio-settings)
     - [Appliance Update Device Appliance Uplinks Settings](#appliance-update-device-appliance-uplinks-settings)
     - [Appliance Update Network Appliance Connectivity Monitoring Destinations](#appliance-update-network-appliance-connectivity-monitoring-destinations)
     - [Appliance Update Network Appliance Content Filtering](#appliance-update-network-appliance-content-filtering)
@@ -96,6 +103,7 @@ This command guide is based on version **v1.33.0** of the [Meraki Dashboard API 
     - [Appliance Update Network Appliance Firewall Settings](#appliance-update-network-appliance-firewall-settings)
     - [Appliance Update Network Appliance Port](#appliance-update-network-appliance-port)
     - [Appliance Update Network Appliance Prefixes Delegated Static](#appliance-update-network-appliance-prefixes-delegated-static)
+    - [Appliance Update Network Appliance Rf Profile](#appliance-update-network-appliance-rf-profile)
     - [Appliance Update Network Appliance Security Intrusion](#appliance-update-network-appliance-security-intrusion)
     - [Appliance Update Network Appliance Security Malware](#appliance-update-network-appliance-security-malware)
     - [Appliance Update Network Appliance Settings](#appliance-update-network-appliance-settings)
@@ -119,17 +127,21 @@ This command guide is based on version **v1.33.0** of the [Meraki Dashboard API 
     - [Batch Appliance](#batch-appliance)
         - [Batch Appliance Create Device Appliance Vmx Authentication Token](#batch-appliance-create-device-appliance-vmx-authentication-token)
         - [Batch Appliance Create Network Appliance Prefixes Delegated Static](#batch-appliance-create-network-appliance-prefixes-delegated-static)
+        - [Batch Appliance Create Network Appliance Rf Profile](#batch-appliance-create-network-appliance-rf-profile)
         - [Batch Appliance Create Network Appliance Traffic Shaping Custom Performance Class](#batch-appliance-create-network-appliance-traffic-shaping-custom-performance-class)
         - [Batch Appliance Create Network Appliance Vlan](#batch-appliance-create-network-appliance-vlan)
         - [Batch Appliance Delete Network Appliance Prefixes Delegated Static](#batch-appliance-delete-network-appliance-prefixes-delegated-static)
+        - [Batch Appliance Delete Network Appliance Rf Profile](#batch-appliance-delete-network-appliance-rf-profile)
         - [Batch Appliance Delete Network Appliance Traffic Shaping Custom Performance Class](#batch-appliance-delete-network-appliance-traffic-shaping-custom-performance-class)
         - [Batch Appliance Delete Network Appliance Vlan](#batch-appliance-delete-network-appliance-vlan)
         - [Batch Appliance Swap Network Appliance Warm Spare](#batch-appliance-swap-network-appliance-warm-spare)
+        - [Batch Appliance Update Device Appliance Radio Settings](#batch-appliance-update-device-appliance-radio-settings)
         - [Batch Appliance Update Device Appliance Uplinks Settings](#batch-appliance-update-device-appliance-uplinks-settings)
         - [Batch Appliance Update Network Appliance Connectivity Monitoring Destinations](#batch-appliance-update-network-appliance-connectivity-monitoring-destinations)
         - [Batch Appliance Update Network Appliance Firewall L7 Firewall Rules](#batch-appliance-update-network-appliance-firewall-l7-firewall-rules)
         - [Batch Appliance Update Network Appliance Port](#batch-appliance-update-network-appliance-port)
         - [Batch Appliance Update Network Appliance Prefixes Delegated Static](#batch-appliance-update-network-appliance-prefixes-delegated-static)
+        - [Batch Appliance Update Network Appliance Rf Profile](#batch-appliance-update-network-appliance-rf-profile)
         - [Batch Appliance Update Network Appliance Settings](#batch-appliance-update-network-appliance-settings)
         - [Batch Appliance Update Network Appliance Single Lan](#batch-appliance-update-network-appliance-single-lan)
         - [Batch Appliance Update Network Appliance Ssid](#batch-appliance-update-network-appliance-ssid)
@@ -213,7 +225,6 @@ This command guide is based on version **v1.33.0** of the [Meraki Dashboard API 
         - [Batch Organizations Delete Organization Policy Object](#batch-organizations-delete-organization-policy-object)
         - [Batch Organizations Delete Organization Policy Objects Group](#batch-organizations-delete-organization-policy-objects-group)
         - [Batch Organizations Delete Organization Saml Idp](#batch-organizations-delete-organization-saml-idp)
-        - [Batch Organizations Delete Organization User](#batch-organizations-delete-organization-user)
         - [Batch Organizations Move Organization Licenses](#batch-organizations-move-organization-licenses)
         - [Batch Organizations Move Organization Licenses Seats](#batch-organizations-move-organization-licenses-seats)
         - [Batch Organizations Renew Organization Licenses Seats](#batch-organizations-renew-organization-licenses-seats)
@@ -526,7 +537,6 @@ This command guide is based on version **v1.33.0** of the [Meraki Dashboard API 
     - [Organizations Delete Organization Policy Objects Group](#organizations-delete-organization-policy-objects-group)
     - [Organizations Delete Organization Saml Idp](#organizations-delete-organization-saml-idp)
     - [Organizations Delete Organization Saml Role](#organizations-delete-organization-saml-role)
-    - [Organizations Delete Organization User](#organizations-delete-organization-user)
     - [Organizations Get Organization](#organizations-get-organization)
     - [Organizations Get Organization Action Batch](#organizations-get-organization-action-batch)
     - [Organizations Get Organization Action Batches](#organizations-get-organization-action-batches)
@@ -554,6 +564,7 @@ This command guide is based on version **v1.33.0** of the [Meraki Dashboard API 
     - [Organizations Get Organization Configuration Changes](#organizations-get-organization-configuration-changes)
     - [Organizations Get Organization Devices](#organizations-get-organization-devices)
     - [Organizations Get Organization Devices Availabilities](#organizations-get-organization-devices-availabilities)
+    - [Organizations Get Organization Devices Availabilities Change History](#organizations-get-organization-devices-availabilities-change-history)
     - [Organizations Get Organization Devices Power Modules Statuses By Device](#organizations-get-organization-devices-power-modules-statuses-by-device)
     - [Organizations Get Organization Devices Provisioning Statuses](#organizations-get-organization-devices-provisioning-statuses)
     - [Organizations Get Organization Devices Statuses](#organizations-get-organization-devices-statuses)
@@ -820,6 +831,10 @@ This command guide is based on version **v1.33.0** of the [Meraki Dashboard API 
     - [Wireless Get Network Wireless Ssid Vpn](#wireless-get-network-wireless-ssid-vpn)
     - [Wireless Get Network Wireless Ssids](#wireless-get-network-wireless-ssids)
     - [Wireless Get Network Wireless Usage History](#wireless-get-network-wireless-usage-history)
+    - [Wireless Get Organization Wireless Devices Channel Utilization By Device](#wireless-get-organization-wireless-devices-channel-utilization-by-device)
+    - [Wireless Get Organization Wireless Devices Channel Utilization By Network](#wireless-get-organization-wireless-devices-channel-utilization-by-network)
+    - [Wireless Get Organization Wireless Devices Channel Utilization History By Device By Interval](#wireless-get-organization-wireless-devices-channel-utilization-history-by-device-by-interval)
+    - [Wireless Get Organization Wireless Devices Channel Utilization History By Network By Interval](#wireless-get-organization-wireless-devices-channel-utilization-history-by-network-by-interval)
     - [Wireless Get Organization Wireless Devices Ethernet Statuses](#wireless-get-organization-wireless-devices-ethernet-statuses)
     - [Wireless Update Device Wireless Bluetooth Settings](#wireless-update-device-wireless-bluetooth-settings)
     - [Wireless Update Device Wireless Radio Settings](#wireless-update-device-wireless-radio-settings)
@@ -924,6 +939,40 @@ meraki appliance createNetworkAppliancePrefixesDelegatedStatic --networkId 'STRI
 ##### Method Code:
 ```python
 def createNetworkAppliancePrefixesDelegatedStatic(networkId: str, prefix: str, origin: dict, **kwargs):
+    # Code
+````
+
+
+
+----------------------------------------
+## Appliance Create Network Appliance Rf Profile
+
+
+**Creates new RF profile for this network**
+
+https://developer.cisco.com/meraki/api-v1/#!create-network-appliance-rf-profile
+
+##### Arguments
+- `--networkId` (string): Network ID
+- `--name` (string): The name of the new profile. Must be unique. This param is required on creation.
+- `--twoFourGhzSettings` (object): Settings related to 2.4Ghz band
+- `--fiveGhzSettings` (object): Settings related to 5Ghz band
+- `--perSsidSettings` (object): Per-SSID radio settings by number.
+
+
+##### Example:
+```
+meraki appliance createNetworkApplianceRfProfile --networkId 'STRING' --name 'STRING' --optionalArg1 "optionalarg1value" --optionalArg2 "optionalarg2value"
+````
+
+##### Example using `--kwargs` (Advanced):
+```
+meraki appliance createNetworkApplianceRfProfile --networkId 'STRING' --name 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
+````
+
+##### Method Code:
+```python
+def createNetworkApplianceRfProfile(networkId: str, name: str, **kwargs):
     # Code
 ````
 
@@ -1058,6 +1107,32 @@ meraki appliance deleteNetworkAppliancePrefixesDelegatedStatic --networkId 'STRI
 ##### Method Code:
 ```python
 def deleteNetworkAppliancePrefixesDelegatedStatic(networkId: str, staticDelegatedPrefixId: str):
+    # Code
+````
+
+
+
+----------------------------------------
+## Appliance Delete Network Appliance Rf Profile
+
+
+**Delete a RF Profile**
+
+https://developer.cisco.com/meraki/api-v1/#!delete-network-appliance-rf-profile
+
+##### Arguments
+- `--networkId` (string): Network ID
+- `--rfProfileId` (string): Rf profile ID
+
+
+##### Example:
+```
+meraki appliance deleteNetworkApplianceRfProfile --networkId 'STRING' --rfProfileId 'STRING'
+````
+
+##### Method Code:
+```python
+def deleteNetworkApplianceRfProfile(networkId: str, rfProfileId: str):
     # Code
 ````
 
@@ -1236,6 +1311,31 @@ meraki appliance getDeviceAppliancePrefixesDelegatedVlanAssignments --serial 'ST
 ##### Method Code:
 ```python
 def getDeviceAppliancePrefixesDelegatedVlanAssignments(serial: str):
+    # Code
+````
+
+
+
+----------------------------------------
+## Appliance Get Device Appliance Radio Settings
+
+
+**Return the radio settings of an appliance**
+
+https://developer.cisco.com/meraki/api-v1/#!get-device-appliance-radio-settings
+
+##### Arguments
+- `--serial` (string): Serial
+
+
+##### Example:
+```
+meraki appliance getDeviceApplianceRadioSettings --serial 'STRING'
+````
+
+##### Method Code:
+```python
+def getDeviceApplianceRadioSettings(serial: str):
     # Code
 ````
 
@@ -1779,6 +1879,57 @@ meraki appliance getNetworkAppliancePrefixesDelegatedStatics --networkId 'STRING
 ##### Method Code:
 ```python
 def getNetworkAppliancePrefixesDelegatedStatics(networkId: str):
+    # Code
+````
+
+
+
+----------------------------------------
+## Appliance Get Network Appliance Rf Profile
+
+
+**Return a RF profile**
+
+https://developer.cisco.com/meraki/api-v1/#!get-network-appliance-rf-profile
+
+##### Arguments
+- `--networkId` (string): Network ID
+- `--rfProfileId` (string): Rf profile ID
+
+
+##### Example:
+```
+meraki appliance getNetworkApplianceRfProfile --networkId 'STRING' --rfProfileId 'STRING'
+````
+
+##### Method Code:
+```python
+def getNetworkApplianceRfProfile(networkId: str, rfProfileId: str):
+    # Code
+````
+
+
+
+----------------------------------------
+## Appliance Get Network Appliance Rf Profiles
+
+
+**List the RF profiles for this network**
+
+https://developer.cisco.com/meraki/api-v1/#!get-network-appliance-rf-profiles
+
+##### Arguments
+- `--networkId` (string): Network ID
+
+
+##### Example:
+```
+meraki appliance getNetworkApplianceRfProfiles --networkId 'STRING'
+````
+
+##### Method Code:
+```python
+def getNetworkApplianceRfProfiles(networkId: str):
     # Code
 ````
 
@@ -2464,6 +2615,39 @@ def getOrganizationApplianceUplinkStatuses(organizationId: str, total_pages=1, d
 
 
 ----------------------------------------
+## Appliance Get Organization Appliance Uplinks Usage By Network
+
+
+**Get the sent and received bytes for each uplink of all MX and Z networks within an organization**
+
+https://developer.cisco.com/meraki/api-v1/#!get-organization-appliance-uplinks-usage-by-network
+
+##### Arguments
+- `--organizationId` (string): Organization ID
+- `--t0` (string): The beginning of the timespan for the data. The maximum lookback period is 365 days from today.
+- `--t1` (string): The end of the timespan for the data. t1 can be a maximum of 14 days after t0.
+- `--timespan` (number): The timespan for which the information will be fetched. If specifying timespan, do not specify parameters t0 and t1. The value must be in seconds and be less than or equal to 14 days. The default is 1 day.
+
+
+##### Example:
+```
+meraki appliance getOrganizationApplianceUplinksUsageByNetwork --organizationId 'STRING' --optionalArg1 "optionalarg1value" --optionalArg2 "optionalarg2value"
+````
+
+##### Example using `--kwargs` (Advanced):
+```
+meraki appliance getOrganizationApplianceUplinksUsageByNetwork --organizationId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
+````
+
+##### Method Code:
+```python
+def getOrganizationApplianceUplinksUsageByNetwork(organizationId: str, **kwargs):
+    # Code
+````
+
+
+
+----------------------------------------
 ## Appliance Get Organization Appliance Vpn Stats
 
 
@@ -2608,6 +2792,39 @@ meraki appliance swapNetworkApplianceWarmSpare --networkId 'STRING'
 ##### Method Code:
 ```python
 def swapNetworkApplianceWarmSpare(networkId: str):
+    # Code
+````
+
+
+
+----------------------------------------
+## Appliance Update Device Appliance Radio Settings
+
+
+**Update the radio settings of an appliance**
+
+https://developer.cisco.com/meraki/api-v1/#!update-device-appliance-radio-settings
+
+##### Arguments
+- `--serial` (string): Serial
+- `--rfProfileId` (string): The ID of an RF profile to assign to the device. If the value of this parameter is null, the appropriate basic RF profile (indoor or outdoor) will be assigned to the device. Assigning an RF profile will clear ALL manually configured overrides on the device (channel width, channel, power).
+- `--twoFourGhzSettings` (object): Manual radio settings for 2.4 GHz.
+- `--fiveGhzSettings` (object): Manual radio settings for 5 GHz.
+
+
+##### Example:
+```
+meraki appliance updateDeviceApplianceRadioSettings --serial 'STRING' --optionalArg1 "optionalarg1value" --optionalArg2 "optionalarg2value"
+````
+
+##### Example using `--kwargs` (Advanced):
+```
+meraki appliance updateDeviceApplianceRadioSettings --serial 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
+````
+
+##### Method Code:
+```python
+def updateDeviceApplianceRadioSettings(serial: str, **kwargs):
     # Code
 ````
 
@@ -3075,6 +3292,41 @@ def updateNetworkAppliancePrefixesDelegatedStatic(networkId: str, staticDelegate
 
 
 ----------------------------------------
+## Appliance Update Network Appliance Rf Profile
+
+
+**Updates specified RF profile for this network**
+
+https://developer.cisco.com/meraki/api-v1/#!update-network-appliance-rf-profile
+
+##### Arguments
+- `--networkId` (string): Network ID
+- `--rfProfileId` (string): Rf profile ID
+- `--name` (string): The name of the new profile. Must be unique.
+- `--twoFourGhzSettings` (object): Settings related to 2.4Ghz band
+- `--fiveGhzSettings` (object): Settings related to 5Ghz band
+- `--perSsidSettings` (object): Per-SSID radio settings by number.
+
+
+##### Example:
+```
+meraki appliance updateNetworkApplianceRfProfile --networkId 'STRING' --rfProfileId 'STRING' --optionalArg1 "optionalarg1value" --optionalArg2 "optionalarg2value"
+````
+
+##### Example using `--kwargs` (Advanced):
+```
+meraki appliance updateNetworkApplianceRfProfile --networkId 'STRING' --rfProfileId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
+````
+
+##### Method Code:
+```python
+def updateNetworkApplianceRfProfile(networkId: str, rfProfileId: str, **kwargs):
+    # Code
+````
+
+
+
+----------------------------------------
 ## Appliance Update Network Appliance Security Intrusion
 
 
@@ -3228,6 +3480,7 @@ https://developer.cisco.com/meraki/api-v1/#!update-network-appliance-ssid
 - `--wpaEncryptionMode` (string): The types of WPA encryption. ('WPA1 and WPA2', 'WPA2 only', 'WPA3 Transition Mode' or 'WPA3 only'). This param is only valid if (1) the authMode is 'psk' & the encryptionMode is 'wpa' OR (2) the authMode is '8021x-meraki' OR (3) the authMode is '8021x-radius'
 - `--visible` (boolean): Boolean indicating whether the MX should advertise or hide this SSID.
 - `--dhcpEnforcedDeauthentication` (object): DHCP Enforced Deauthentication enables the disassociation of wireless clients in addition to Mandatory DHCP. This param is only valid on firmware versions >= MX 17.0 where the associated LAN has Mandatory DHCP Enabled 
+- `--dot11w` (object): The current setting for Protected Management Frames (802.11w).
 
 
 ##### Example:
@@ -3783,6 +4036,40 @@ def createNetworkAppliancePrefixesDelegatedStatic(networkId: str, prefix: str, o
 
 
 ----------------------------------------
+## Batch Appliance Create Network Appliance Rf Profile
+
+
+**Creates new RF profile for this network**
+
+https://developer.cisco.com/meraki/api-v1/#!create-network-appliance-rf-profile
+
+##### Arguments
+- `--networkId` (string): Network ID
+- `--name` (string): The name of the new profile. Must be unique. This param is required on creation.
+- `--twoFourGhzSettings` (object): Settings related to 2.4Ghz band
+- `--fiveGhzSettings` (object): Settings related to 5Ghz band
+- `--perSsidSettings` (object): Per-SSID radio settings by number.
+
+
+##### Example:
+```
+meraki batch appliance createNetworkApplianceRfProfile --networkId 'STRING' --name 'STRING' --optionalArg1 "optionalarg1value" --optionalArg2 "optionalarg2value"
+````
+
+##### Example using `--kwargs` (Advanced):
+```
+meraki batch appliance createNetworkApplianceRfProfile --networkId 'STRING' --name 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
+````
+
+##### Method Code:
+```python
+def createNetworkApplianceRfProfile(networkId: str, name: str, **kwargs):
+    # Code
+````
+
+
+
+----------------------------------------
 ## Batch Appliance Create Network Appliance Traffic Shaping Custom Performance Class
 
 
@@ -3883,6 +4170,32 @@ def deleteNetworkAppliancePrefixesDelegatedStatic(networkId: str, staticDelegate
 
 
 ----------------------------------------
+## Batch Appliance Delete Network Appliance Rf Profile
+
+
+**Delete a RF Profile**
+
+https://developer.cisco.com/meraki/api-v1/#!delete-network-appliance-rf-profile
+
+##### Arguments
+- `--networkId` (string): Network ID
+- `--rfProfileId` (string): Rf profile ID
+
+
+##### Example:
+```
+meraki batch appliance deleteNetworkApplianceRfProfile --networkId 'STRING' --rfProfileId 'STRING'
+````
+
+##### Method Code:
+```python
+def deleteNetworkApplianceRfProfile(networkId: str, rfProfileId: str):
+    # Code
+````
+
+
+
+----------------------------------------
 ## Batch Appliance Delete Network Appliance Traffic Shaping Custom Performance Class
 
 
@@ -3954,6 +4267,39 @@ meraki batch appliance swapNetworkApplianceWarmSpare --networkId 'STRING'
 ##### Method Code:
 ```python
 def swapNetworkApplianceWarmSpare(networkId: str):
+    # Code
+````
+
+
+
+----------------------------------------
+## Batch Appliance Update Device Appliance Radio Settings
+
+
+**Update the radio settings of an appliance**
+
+https://developer.cisco.com/meraki/api-v1/#!update-device-appliance-radio-settings
+
+##### Arguments
+- `--serial` (string): Serial
+- `--rfProfileId` (string): The ID of an RF profile to assign to the device. If the value of this parameter is null, the appropriate basic RF profile (indoor or outdoor) will be assigned to the device. Assigning an RF profile will clear ALL manually configured overrides on the device (channel width, channel, power).
+- `--twoFourGhzSettings` (object): Manual radio settings for 2.4 GHz.
+- `--fiveGhzSettings` (object): Manual radio settings for 5 GHz.
+
+
+##### Example:
+```
+meraki batch appliance updateDeviceApplianceRadioSettings --serial 'STRING' --optionalArg1 "optionalarg1value" --optionalArg2 "optionalarg2value"
+````
+
+##### Example using `--kwargs` (Advanced):
+```
+meraki batch appliance updateDeviceApplianceRadioSettings --serial 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
+````
+
+##### Method Code:
+```python
+def updateDeviceApplianceRadioSettings(serial: str, **kwargs):
     # Code
 ````
 
@@ -4119,6 +4465,41 @@ def updateNetworkAppliancePrefixesDelegatedStatic(networkId: str, staticDelegate
 
 
 ----------------------------------------
+## Batch Appliance Update Network Appliance Rf Profile
+
+
+**Updates specified RF profile for this network**
+
+https://developer.cisco.com/meraki/api-v1/#!update-network-appliance-rf-profile
+
+##### Arguments
+- `--networkId` (string): Network ID
+- `--rfProfileId` (string): Rf profile ID
+- `--name` (string): The name of the new profile. Must be unique.
+- `--twoFourGhzSettings` (object): Settings related to 2.4Ghz band
+- `--fiveGhzSettings` (object): Settings related to 5Ghz band
+- `--perSsidSettings` (object): Per-SSID radio settings by number.
+
+
+##### Example:
+```
+meraki batch appliance updateNetworkApplianceRfProfile --networkId 'STRING' --rfProfileId 'STRING' --optionalArg1 "optionalarg1value" --optionalArg2 "optionalarg2value"
+````
+
+##### Example using `--kwargs` (Advanced):
+```
+meraki batch appliance updateNetworkApplianceRfProfile --networkId 'STRING' --rfProfileId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
+````
+
+##### Method Code:
+```python
+def updateNetworkApplianceRfProfile(networkId: str, rfProfileId: str, **kwargs):
+    # Code
+````
+
+
+
+----------------------------------------
 ## Batch Appliance Update Network Appliance Settings
 
 
@@ -4206,6 +4587,7 @@ https://developer.cisco.com/meraki/api-v1/#!update-network-appliance-ssid
 - `--wpaEncryptionMode` (string): The types of WPA encryption. ('WPA1 and WPA2', 'WPA2 only', 'WPA3 Transition Mode' or 'WPA3 only'). This param is only valid if (1) the authMode is 'psk' & the encryptionMode is 'wpa' OR (2) the authMode is '8021x-meraki' OR (3) the authMode is '8021x-radius'
 - `--visible` (boolean): Boolean indicating whether the MX should advertise or hide this SSID.
 - `--dhcpEnforcedDeauthentication` (object): DHCP Enforced Deauthentication enables the disassociation of wireless clients in addition to Mandatory DHCP. This param is only valid on firmware versions >= MX 17.0 where the associated LAN has Mandatory DHCP Enabled 
+- `--dot11w` (object): The current setting for Protected Management Frames (802.11w).
 
 
 ##### Example:
@@ -4622,7 +5004,7 @@ https://developer.cisco.com/meraki/api-v1/#!update-device-camera-quality-and-ret
 - `--audioRecordingEnabled` (boolean): Boolean indicating if audio recording is enabled(true) or disabled(false) on the camera
 - `--restrictedBandwidthModeEnabled` (boolean): Boolean indicating if restricted bandwidth is enabled(true) or disabled(false) on the camera. This setting does not apply to MV2 cameras.
 - `--quality` (string): Quality of the camera. Can be one of 'Standard', 'High' or 'Enhanced'. Not all qualities are supported by every camera model.
-- `--resolution` (string): Resolution of the camera. Can be one of '1280x720', '1920x1080', '1080x1080', '2058x2058', '2112x2112', '2880x2880', '2688x1512' or '3840x2160'.Not all resolutions are supported by every camera model.
+- `--resolution` (string): Resolution of the camera. Can be one of '1280x720', '1920x1080', '1080x1080', '2112x2112', '2880x2880', '2688x1512' or '3840x2160'.Not all resolutions are supported by every camera model.
 - `--motionDetectorVersion` (integer): The version of the motion detector that will be used by the camera. Only applies to Gen 2 cameras. Defaults to v2.
 
 
@@ -4944,7 +5326,7 @@ https://developer.cisco.com/meraki/api-v1/#!update-device
 - `--address` (string): The address of a device
 - `--notes` (string): The notes for the device. String. Limited to 255 characters.
 - `--moveMapMarker` (boolean): Whether or not to set the latitude and longitude of a device based on the new address. Only applies when lat and lng are not specified.
-- `--switchProfileId` (string): The ID of a switch profile to bind to the device (for available switch profiles, see the 'Switch Profiles' endpoint). Use null to unbind the switch device from the current profile. For a device to be bindable to a switch profile, it must (1) be a switch, and (2) belong to a network that is bound to a configuration template.
+- `--switchProfileId` (string): The ID of a switch template to bind to the device (for available switch templates, see the 'Switch Templates' endpoint). Use null to unbind the switch device from the current profile. For a device to be bindable to a switch template, it must (1) be a switch, and (2) belong to a network that is bound to a configuration template.
 - `--floorPlanId` (string): The floor plan to associate to this device. null disassociates the device from the floorplan.
 
 
@@ -5274,7 +5656,7 @@ https://developer.cisco.com/meraki/api-v1/#!create-network-meraki-auth-user
 - `--authorizations` (array): Authorization zones and expiration dates for the user.
 - `--name` (string): Name of the user. Only required If the user is not a Dashboard administrator.
 - `--password` (string): The password for this user account. Only required If the user is not a Dashboard administrator.
-- `--accountType` (string): Authorization type for user. Can be 'Guest' or '802.1X' for wireless networks, or 'Client VPN' for wired networks. Defaults to '802.1X'.
+- `--accountType` (string): Authorization type for user. Can be 'Guest' or '802.1X' for wireless networks, or 'Client VPN' for MX networks. Defaults to '802.1X'.
 - `--emailPasswordToUser` (boolean): Whether or not Meraki should email the password to user. Default is false.
 - `--isAdmin` (boolean): Whether or not the user is a Dashboard administrator.
 
@@ -5474,23 +5856,29 @@ def deleteNetworkGroupPolicy(networkId: str, groupPolicyId: str):
 ## Batch Networks Delete Network Meraki Auth User
 
 
-**Deauthorize a user**
+**Delete an 802.1X RADIUS user, or deauthorize and optionally delete a splash guest or client VPN user.**
 
 https://developer.cisco.com/meraki/api-v1/#!delete-network-meraki-auth-user
 
 ##### Arguments
 - `--networkId` (string): Network ID
 - `--merakiAuthUserId` (string): Meraki auth user ID
+- `--delete` (boolean): If the ID supplied is for a splash guest or client VPN user, and that user is not authorized for any other networks in the organization, then also delete the user. 802.1X RADIUS users are always deleted regardless of this optional attribute.
 
 
 ##### Example:
 ```
-meraki batch networks deleteNetworkMerakiAuthUser --networkId 'STRING' --merakiAuthUserId 'STRING'
+meraki batch networks deleteNetworkMerakiAuthUser --networkId 'STRING' --merakiAuthUserId 'STRING' --optionalArg1 "optionalarg1value" --optionalArg2 "optionalarg2value"
+````
+
+##### Example using `--kwargs` (Advanced):
+```
+meraki batch networks deleteNetworkMerakiAuthUser --networkId 'STRING' --merakiAuthUserId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
 ##### Method Code:
 ```python
-def deleteNetworkMerakiAuthUser(networkId: str, merakiAuthUserId: str):
+def deleteNetworkMerakiAuthUser(networkId: str, merakiAuthUserId: str, **kwargs):
     # Code
 ````
 
@@ -6426,7 +6814,7 @@ https://developer.cisco.com/meraki/api-v1/#!delete-organization-adaptive-policy-
 
 ##### Arguments
 - `--organizationId` (string): Organization ID
-- `--id` (string): Id
+- `--id` (string): ID
 
 
 ##### Example:
@@ -6452,7 +6840,7 @@ https://developer.cisco.com/meraki/api-v1/#!delete-organization-adaptive-policy-
 
 ##### Arguments
 - `--organizationId` (string): Organization ID
-- `--id` (string): Id
+- `--id` (string): ID
 
 
 ##### Example:
@@ -6599,32 +6987,6 @@ def deleteOrganizationSamlIdp(organizationId: str, idpId: str):
 
 
 ----------------------------------------
-## Batch Organizations Delete Organization User
-
-
-**Delete a user and all of its authentication methods.**
-
-https://developer.cisco.com/meraki/api-v1/#!delete-organization-user
-
-##### Arguments
-- `--organizationId` (string): Organization ID
-- `--userId` (string): User ID
-
-
-##### Example:
-```
-meraki batch organizations deleteOrganizationUser --organizationId 'STRING' --userId 'STRING'
-````
-
-##### Method Code:
-```python
-def deleteOrganizationUser(organizationId: str, userId: str):
-    # Code
-````
-
-
-
-----------------------------------------
 ## Batch Organizations Move Organization Licenses
 
 
@@ -6751,7 +7113,7 @@ https://developer.cisco.com/meraki/api-v1/#!update-organization-adaptive-policy-
 
 ##### Arguments
 - `--organizationId` (string): Organization ID
-- `--id` (string): Id
+- `--id` (string): ID
 - `--name` (string): Name of the group
 - `--sgt` (integer): SGT value of the group
 - `--description` (string): Description of the group
@@ -6786,7 +7148,7 @@ https://developer.cisco.com/meraki/api-v1/#!update-organization-adaptive-policy-
 
 ##### Arguments
 - `--organizationId` (string): Organization ID
-- `--id` (string): Id
+- `--id` (string): ID
 - `--sourceGroup` (object): The source adaptive policy group (requires one unique attribute)
 - `--destinationGroup` (object): The destination adaptive policy group (requires one unique attribute)
 - `--acls` (array): An ordered array of adaptive policy ACLs (each requires one unique attribute) that apply to this policy
@@ -7208,7 +7570,7 @@ https://developer.cisco.com/meraki/api-v1/#!create-network-sensor-alerts-profile
 - `--name` (string): Name of the sensor alert profile.
 - `--conditions` (array): List of conditions that will cause the profile to send an alert.
 - `--schedule` (object): The sensor schedule to use with the alert profile.
-- `--recipients` (object): List of recipients that will recieve the alert.
+- `--recipients` (object): List of recipients that will receive the alert.
 - `--serials` (array): List of device serials assigned to this sensor alert profile.
 
 
@@ -7240,7 +7602,7 @@ https://developer.cisco.com/meraki/api-v1/#!delete-network-sensor-alerts-profile
 
 ##### Arguments
 - `--networkId` (string): Network ID
-- `--id` (string): Id
+- `--id` (string): ID
 
 
 ##### Example:
@@ -7297,11 +7659,11 @@ https://developer.cisco.com/meraki/api-v1/#!update-network-sensor-alerts-profile
 
 ##### Arguments
 - `--networkId` (string): Network ID
-- `--id` (string): Id
+- `--id` (string): ID
 - `--name` (string): Name of the sensor alert profile.
 - `--schedule` (object): The sensor schedule to use with the alert profile.
 - `--conditions` (array): List of conditions that will cause the profile to send an alert.
-- `--recipients` (object): List of recipients that will recieve the alert.
+- `--recipients` (object): List of recipients that will receive the alert.
 - `--serials` (array): List of device serials assigned to this sensor alert profile.
 
 
@@ -8094,12 +8456,17 @@ https://developer.cisco.com/meraki/api-v1/#!update-device-switch-routing-interfa
 ##### Arguments
 - `--serial` (string): Serial
 - `--interfaceId` (string): Interface ID
-- `--dhcpMode` (string): The DHCP mode options for the switch interface ('dhcpDisabled', 'dhcpRelay' or 'dhcpServer')
+- `--dhcpMode` (string): The DHCP mode options for the switch interface
+('dhcpDisabled', 'dhcpRelay' or 'dhcpServer')
 - `--dhcpRelayServerIps` (array): The DHCP relay server IPs to which DHCP packets would get relayed for the switch interface
-- `--dhcpLeaseTime` (string): The DHCP lease time config for the dhcp server running on switch interface ('30 minutes', '1 hour', '4 hours', '12 hours', '1 day' or '1 week')
-- `--dnsNameserversOption` (string): The DHCP name server option for the dhcp server running on the switch interface ('googlePublicDns', 'openDns' or 'custom')
-- `--dnsCustomNameservers` (array): The DHCP name server IPs when DHCP name server option is 'custom'
-- `--bootOptionsEnabled` (boolean): Enable DHCP boot options to provide PXE boot options configs for the dhcp server running on the switch interface
+- `--dhcpLeaseTime` (string): The DHCP lease time config for the dhcp server running on switch interface
+('30 minutes', '1 hour', '4 hours', '12 hours', '1 day' or '1 week')
+- `--dnsNameserversOption` (string): The DHCP name server option for the dhcp server running on the switch interface
+('googlePublicDns', 'openDns' or 'custom')
+- `--dnsCustomNameservers` (array): The DHCP name server IPs when DHCP name server option is
+'custom'
+- `--bootOptionsEnabled` (boolean): Enable DHCP boot options to provide PXE boot options configs for the dhcp server running on the switch
+interface
 - `--bootNextServer` (string): The PXE boot server IP for the DHCP server running on the switch interface
 - `--bootFileName` (string): The PXE boot server filename for the DHCP server running on the switch interface
 - `--dhcpOptions` (array): Array of DHCP options consisting of code, type and value for the DHCP server running on the switch interface
@@ -8414,7 +8781,7 @@ https://developer.cisco.com/meraki/api-v1/#!update-network-switch-mtu
 ##### Arguments
 - `--networkId` (string): Network ID
 - `--defaultMtuSize` (integer): MTU size for the entire network. Default value is 9578.
-- `--overrides` (array): Override MTU size for individual switches or switch profiles. An empty array will clear overrides.
+- `--overrides` (array): Override MTU size for individual switches or switch templates. An empty array will clear overrides.
 
 
 ##### Example:
@@ -8645,6 +9012,7 @@ https://developer.cisco.com/meraki/api-v1/#!update-network-switch-settings
 - `--vlan` (integer): Management VLAN
 - `--useCombinedPower` (boolean): The use Combined Power as the default behavior of secondary power supplies on supported devices.
 - `--powerExceptions` (array): Exceptions on a per switch basis to "useCombinedPower"
+- `--uplinkClientSampling` (object): Uplink client sampling
 
 
 ##### Example:
@@ -8717,15 +9085,21 @@ https://developer.cisco.com/meraki/api-v1/#!update-network-switch-stack-routing-
 - `--networkId` (string): Network ID
 - `--switchStackId` (string): Switch stack ID
 - `--interfaceId` (string): Interface ID
-- `--dhcpMode` (string): The DHCP mode options for the switch stack interface ('dhcpDisabled', 'dhcpRelay' or 'dhcpServer')
+- `--dhcpMode` (string): The DHCP mode options for the switch stack interface
+('dhcpDisabled', 'dhcpRelay' or 'dhcpServer')
 - `--dhcpRelayServerIps` (array): The DHCP relay server IPs to which DHCP packets would get relayed for the switch stack interface
-- `--dhcpLeaseTime` (string): The DHCP lease time config for the dhcp server running on switch stack interface ('30 minutes', '1 hour', '4 hours', '12 hours', '1 day' or '1 week')
-- `--dnsNameserversOption` (string): The DHCP name server option for the dhcp server running on the switch stack interface ('googlePublicDns', 'openDns' or 'custom')
-- `--dnsCustomNameservers` (array): The DHCP name server IPs when DHCP name server option is 'custom'
-- `--bootOptionsEnabled` (boolean): Enable DHCP boot options to provide PXE boot options configs for the dhcp server running on the switch stack interface
+- `--dhcpLeaseTime` (string): The DHCP lease time config for the dhcp server running on switch stack interface
+('30 minutes', '1 hour', '4 hours', '12 hours', '1 day' or '1 week')
+- `--dnsNameserversOption` (string): The DHCP name server option for the dhcp server running on the switch stack interface
+('googlePublicDns', 'openDns' or 'custom')
+- `--dnsCustomNameservers` (array): The DHCP name server IPs when DHCP name server option is '
+custom'
+- `--bootOptionsEnabled` (boolean): Enable DHCP boot options to provide PXE boot options configs for the dhcp server running on the switch
+stack interface
 - `--bootNextServer` (string): The PXE boot server IP for the DHCP server running on the switch stack interface
 - `--bootFileName` (string): The PXE boot server file name for the DHCP server running on the switch stack interface
-- `--dhcpOptions` (array): Array of DHCP options consisting of code, type and value for the DHCP server running on the switch stack interface
+- `--dhcpOptions` (array): Array of DHCP options consisting of code, type and value for the DHCP server running on the
+switch stack interface
 - `--reservedIpRanges` (array): Array of DHCP reserved IP assignments for the DHCP server running on the switch stack interface
 - `--fixedIpAssignments` (array): Array of DHCP fixed IP assignments for the DHCP server running on the switch stack interface
 
@@ -8829,7 +9203,7 @@ https://developer.cisco.com/meraki/api-v1/#!update-network-switch-stp
 ##### Arguments
 - `--networkId` (string): Network ID
 - `--rstpEnabled` (boolean): The spanning tree protocol status in network
-- `--stpBridgePriority` (array): STP bridge priority for switches/stacks or switch profiles. An empty array will clear the STP bridge priority settings.
+- `--stpBridgePriority` (array): STP bridge priority for switches/stacks or switch templates. An empty array will clear the STP bridge priority settings.
 
 
 ##### Example:
@@ -8854,7 +9228,7 @@ def updateNetworkSwitchStp(networkId: str, **kwargs):
 ## Batch Switch Update Organization Config Template Switch Profile Port
 
 
-**Update a switch profile port**
+**Update a switch template port**
 
 https://developer.cisco.com/meraki/api-v1/#!update-organization-config-template-switch-profile-port
 
@@ -8863,26 +9237,26 @@ https://developer.cisco.com/meraki/api-v1/#!update-organization-config-template-
 - `--configTemplateId` (string): Config template ID
 - `--profileId` (string): Profile ID
 - `--portId` (string): Port ID
-- `--name` (string): The name of the switch profile port.
-- `--tags` (array): The list of tags of the switch profile port.
-- `--enabled` (boolean): The status of the switch profile port.
-- `--poeEnabled` (boolean): The PoE status of the switch profile port.
-- `--type` (string): The type of the switch profile port ('trunk' or 'access').
-- `--vlan` (integer): The VLAN of the switch profile port. A null value will clear the value set for trunk ports.
-- `--voiceVlan` (integer): The voice VLAN of the switch profile port. Only applicable to access ports.
-- `--allowedVlans` (string): The VLANs allowed on the switch profile port. Only applicable to trunk ports.
-- `--isolationEnabled` (boolean): The isolation status of the switch profile port.
+- `--name` (string): The name of the switch template port.
+- `--tags` (array): The list of tags of the switch template port.
+- `--enabled` (boolean): The status of the switch template port.
+- `--poeEnabled` (boolean): The PoE status of the switch template port.
+- `--type` (string): The type of the switch template port ('trunk' or 'access').
+- `--vlan` (integer): The VLAN of the switch template port. A null value will clear the value set for trunk ports.
+- `--voiceVlan` (integer): The voice VLAN of the switch template port. Only applicable to access ports.
+- `--allowedVlans` (string): The VLANs allowed on the switch template port. Only applicable to trunk ports.
+- `--isolationEnabled` (boolean): The isolation status of the switch template port.
 - `--rstpEnabled` (boolean): The rapid spanning tree protocol status.
 - `--stpGuard` (string): The state of the STP guard ('disabled', 'root guard', 'bpdu guard' or 'loop guard').
-- `--linkNegotiation` (string): The link speed for the switch profile port.
+- `--linkNegotiation` (string): The link speed for the switch template port.
 - `--portScheduleId` (string): The ID of the port schedule. A value of null will clear the port schedule.
 - `--udld` (string): The action to take when Unidirectional Link is detected (Alert only, Enforce). Default configuration is Alert only.
-- `--accessPolicyType` (string): The type of the access policy of the switch profile port. Only applicable to access ports. Can be one of 'Open', 'Custom access policy', 'MAC allow list' or 'Sticky MAC allow list'.
-- `--accessPolicyNumber` (integer): The number of a custom access policy to configure on the switch profile port. Only applicable when 'accessPolicyType' is 'Custom access policy'.
+- `--accessPolicyType` (string): The type of the access policy of the switch template port. Only applicable to access ports. Can be one of 'Open', 'Custom access policy', 'MAC allow list' or 'Sticky MAC allow list'.
+- `--accessPolicyNumber` (integer): The number of a custom access policy to configure on the switch template port. Only applicable when 'accessPolicyType' is 'Custom access policy'.
 - `--macAllowList` (array): Only devices with MAC addresses specified in this list will have access to this port. Up to 20 MAC addresses can be defined. Only applicable when 'accessPolicyType' is 'MAC allow list'.
 - `--stickyMacAllowList` (array): The initial list of MAC addresses for sticky Mac allow list. Only applicable when 'accessPolicyType' is 'Sticky MAC allow list'.
 - `--stickyMacAllowListLimit` (integer): The maximum number of MAC addresses for sticky MAC allow list. Only applicable when 'accessPolicyType' is 'Sticky MAC allow list'.
-- `--stormControlEnabled` (boolean): The storm control status of the switch profile port.
+- `--stormControlEnabled` (boolean): The storm control status of the switch template port.
 - `--flexibleStackingEnabled` (boolean): For supported switches (e.g. MS420/MS425), whether or not the port has flexible stacking enabled.
 - `--daiTrusted` (boolean): If true, ARP packets for this port will be considered trusted, and Dynamic ARP Inspection will allow the traffic.
 - `--profile` (object): Profile attributes
@@ -8924,8 +9298,10 @@ https://developer.cisco.com/meraki/api-v1/#!create-network-wireless-rf-profile
 - `--apBandSettings` (object): Settings that will be enabled if selectionType is set to 'ap'.
 - `--twoFourGhzSettings` (object): Settings related to 2.4Ghz band
 - `--fiveGhzSettings` (object): Settings related to 5Ghz band
+- `--sixGhzSettings` (object): Settings related to 6Ghz band. Only applicable to networks with 6Ghz capable APs
 - `--transmission` (object): Settings related to radio transmission.
 - `--perSsidSettings` (object): Per-SSID radio settings by number.
+- `--flexRadios` (object): Flex radio settings.
 
 
 ##### Example:
@@ -9184,8 +9560,10 @@ https://developer.cisco.com/meraki/api-v1/#!update-network-wireless-rf-profile
 - `--apBandSettings` (object): Settings that will be enabled if selectionType is set to 'ap'.
 - `--twoFourGhzSettings` (object): Settings related to 2.4Ghz band
 - `--fiveGhzSettings` (object): Settings related to 5Ghz band
+- `--sixGhzSettings` (object): Settings related to 6Ghz band. Only applicable to networks with 6Ghz capable APs
 - `--transmission` (object): Settings related to radio transmission.
 - `--perSsidSettings` (object): Per-SSID radio settings by number.
+- `--flexRadios` (object): Flex radio settings.
 
 
 ##### Example:
@@ -9254,7 +9632,7 @@ https://developer.cisco.com/meraki/api-v1/#!update-network-wireless-ssid
 - `--number` (string): Number
 - `--name` (string): The name of the SSID
 - `--enabled` (boolean): Whether or not the SSID is enabled
-- `--authMode` (string): The association control method for the SSID ('open', 'open-enhanced', 'psk', 'open-with-radius', 'open-with-nac', '8021x-meraki', '8021x-nac', '8021x-radius', '8021x-google', '8021x-localradius', 'ipsk-with-radius' or 'ipsk-without-radius')
+- `--authMode` (string): The association control method for the SSID ('open', 'open-enhanced', 'psk', 'open-with-radius', 'open-with-nac', '8021x-meraki', '8021x-nac', '8021x-radius', '8021x-google', '8021x-localradius', 'ipsk-with-radius', 'ipsk-without-radius' or 'ipsk-with-nac')
 - `--enterpriseAdminAccess` (string): Whether or not an SSID is accessible by 'enterprise' administrators ('access disabled' or 'access enabled')
 - `--encryptionMode` (string): The psk encryption mode for the SSID ('wep' or 'wpa'). This param is only valid if the authMode is 'psk'
 - `--psk` (string): The passkey for the SSID. This param is only valid if the authMode is 'psk'
@@ -9343,6 +9721,7 @@ https://developer.cisco.com/meraki/api-v1/#!update-network-wireless-ssid-bonjour
 - `--number` (string): Number
 - `--enabled` (boolean): If true, Bonjour forwarding is enabled on this SSID.
 - `--rules` (array): List of bonjour forwarding rules.
+- `--exception` (object): Bonjour forwarding exception
 
 
 ##### Example:
@@ -10526,7 +10905,7 @@ https://developer.cisco.com/meraki/api-v1/#!update-device-camera-quality-and-ret
 - `--audioRecordingEnabled` (boolean): Boolean indicating if audio recording is enabled(true) or disabled(false) on the camera
 - `--restrictedBandwidthModeEnabled` (boolean): Boolean indicating if restricted bandwidth is enabled(true) or disabled(false) on the camera. This setting does not apply to MV2 cameras.
 - `--quality` (string): Quality of the camera. Can be one of 'Standard', 'High' or 'Enhanced'. Not all qualities are supported by every camera model.
-- `--resolution` (string): Resolution of the camera. Can be one of '1280x720', '1920x1080', '1080x1080', '2058x2058', '2112x2112', '2880x2880', '2688x1512' or '3840x2160'.Not all resolutions are supported by every camera model.
+- `--resolution` (string): Resolution of the camera. Can be one of '1280x720', '1920x1080', '1080x1080', '2112x2112', '2880x2880', '2688x1512' or '3840x2160'.Not all resolutions are supported by every camera model.
 - `--motionDetectorVersion` (integer): The version of the motion detector that will be used by the camera. Only applies to Gen 2 cameras. Defaults to v2.
 
 
@@ -11313,7 +11692,7 @@ https://developer.cisco.com/meraki/api-v1/#!get-device-live-tools-ping
 
 ##### Arguments
 - `--serial` (string): Serial
-- `--id` (string): Id
+- `--id` (string): ID
 
 
 ##### Example:
@@ -11339,7 +11718,7 @@ https://developer.cisco.com/meraki/api-v1/#!get-device-live-tools-ping-device
 
 ##### Arguments
 - `--serial` (string): Serial
-- `--id` (string): Id
+- `--id` (string): ID
 
 
 ##### Example:
@@ -11384,7 +11763,7 @@ def getDeviceLldpCdp(serial: str):
 ## Devices Get Device Loss And Latency History
 
 
-**Get the uplink loss percentage and latency in milliseconds, and goodput in kilobits per second for a wired network device.**
+**Get the uplink loss percentage and latency in milliseconds, and goodput in kilobits per second for MX, MG and Z devices.**
 
 https://developer.cisco.com/meraki/api-v1/#!get-device-loss-and-latency-history
 
@@ -11395,7 +11774,7 @@ https://developer.cisco.com/meraki/api-v1/#!get-device-loss-and-latency-history
 - `--t1` (string): The end of the timespan for the data. t1 can be a maximum of 31 days after t0.
 - `--timespan` (number): The timespan for which the information will be fetched. If specifying timespan, do not specify parameters t0 and t1. The value must be in seconds and be less than or equal to 31 days. The default is 1 day.
 - `--resolution` (integer): The time resolution in seconds for returned data. The valid resolutions are: 60, 600, 3600, 86400. The default is 60.
-- `--uplink` (string): The WAN uplink used to obtain the requested stats. Valid uplinks are wan1, wan2, cellular. The default is wan1.
+- `--uplink` (string): The WAN uplink used to obtain the requested stats. Valid uplinks are wan1, wan2, wan3, cellular. The default is wan1.
 
 
 ##### Example:
@@ -11483,7 +11862,7 @@ https://developer.cisco.com/meraki/api-v1/#!update-device
 - `--address` (string): The address of a device
 - `--notes` (string): The notes for the device. String. Limited to 255 characters.
 - `--moveMapMarker` (boolean): Whether or not to set the latitude and longitude of a device based on the new address. Only applies when lat and lng are not specified.
-- `--switchProfileId` (string): The ID of a switch profile to bind to the device (for available switch profiles, see the 'Switch Profiles' endpoint). Use null to unbind the switch device from the current profile. For a device to be bindable to a switch profile, it must (1) be a switch, and (2) belong to a network that is bound to a configuration template.
+- `--switchProfileId` (string): The ID of a switch template to bind to the device (for available switch templates, see the 'Switch Templates' endpoint). Use null to unbind the switch device from the current profile. For a device to be bindable to a switch template, it must (1) be a switch, and (2) belong to a network that is bound to a configuration template.
 - `--floorPlanId` (string): The floor plan to associate to this device. null disassociates the device from the floorplan.
 
 
@@ -12090,7 +12469,7 @@ https://developer.cisco.com/meraki/api-v1/#!create-network-meraki-auth-user
 - `--authorizations` (array): Authorization zones and expiration dates for the user.
 - `--name` (string): Name of the user. Only required If the user is not a Dashboard administrator.
 - `--password` (string): The password for this user account. Only required If the user is not a Dashboard administrator.
-- `--accountType` (string): Authorization type for user. Can be 'Guest' or '802.1X' for wireless networks, or 'Client VPN' for wired networks. Defaults to '802.1X'.
+- `--accountType` (string): Authorization type for user. Can be 'Guest' or '802.1X' for wireless networks, or 'Client VPN' for MX networks. Defaults to '802.1X'.
 - `--emailPasswordToUser` (boolean): Whether or not Meraki should email the password to user. Default is false.
 - `--isAdmin` (boolean): Whether or not the user is a Dashboard administrator.
 
@@ -12421,23 +12800,29 @@ def deleteNetworkGroupPolicy(networkId: str, groupPolicyId: str):
 ## Networks Delete Network Meraki Auth User
 
 
-**Deauthorize a user**
+**Delete an 802.1X RADIUS user, or deauthorize and optionally delete a splash guest or client VPN user.**
 
 https://developer.cisco.com/meraki/api-v1/#!delete-network-meraki-auth-user
 
 ##### Arguments
 - `--networkId` (string): Network ID
 - `--merakiAuthUserId` (string): Meraki auth user ID
+- `--delete` (boolean): If the ID supplied is for a splash guest or client VPN user, and that user is not authorized for any other networks in the organization, then also delete the user. 802.1X RADIUS users are always deleted regardless of this optional attribute.
 
 
 ##### Example:
 ```
-meraki networks deleteNetworkMerakiAuthUser --networkId 'STRING' --merakiAuthUserId 'STRING'
+meraki networks deleteNetworkMerakiAuthUser --networkId 'STRING' --merakiAuthUserId 'STRING' --optionalArg1 "optionalarg1value" --optionalArg2 "optionalarg2value"
+````
+
+##### Example using `--kwargs` (Advanced):
+```
+meraki networks deleteNetworkMerakiAuthUser --networkId 'STRING' --merakiAuthUserId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
 ##### Method Code:
 ```python
-def deleteNetworkMerakiAuthUser(networkId: str, merakiAuthUserId: str):
+def deleteNetworkMerakiAuthUser(networkId: str, merakiAuthUserId: str, **kwargs):
     # Code
 ````
 
@@ -12866,6 +13251,7 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-clients
 - `--ip6Local` (string): Filters clients based on a partial or full match for the ip6Local address field.
 - `--mac` (string): Filters clients based on a partial or full match for the mac address field.
 - `--os` (string): Filters clients based on a partial or full match for the os (operating system) field.
+- `--pskGroup` (string): Filters clients based on partial or full match for the iPSK name field.
 - `--description` (string): Filters clients based on a partial or full match for the description field.
 - `--vlan` (string): Filters clients based on the full match for the VLAN field.
 - `--recentDeviceConnections` (array): Filters clients based on recent connection type. Can be one of 'Wired' or 'Wireless'.
@@ -13079,7 +13465,7 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-events
 - `--total_pages` (integer or string): use with perPage to get total results up to total_pages*perPage; -1 or "all" for all pages
 - `--direction` (string): direction to paginate, either "next" or "prev" (default) page
 - `--event_log_end_time` (string): ISO8601 Zulu/UTC time, to use in conjunction with startingAfter, to retrieve events within a time window
-- `--productType` (string): The product type to fetch events for. This parameter is required for networks with multiple device types. Valid types are wireless, appliance, switch, systemsManager, camera, and cellularGateway
+- `--productType` (string): The product type to fetch events for. This parameter is required for networks with multiple device types. Valid types are wireless, appliance, switch, systemsManager, camera, cellularGateway, and cloudGateway
 - `--includedEventTypes` (array): A list of event types. The returned events will be filtered to only include events with these types.
 - `--excludedEventTypes` (array): A list of event types. The returned events will be filtered to exclude events with these types.
 - `--deviceMac` (string): The MAC address of the Meraki device which the list of events will be filtered with
@@ -13421,7 +13807,7 @@ def getNetworkMerakiAuthUser(networkId: str, merakiAuthUserId: str):
 ## Networks Get Network Meraki Auth Users
 
 
-**List the users configured under Meraki Authentication for a network (splash guest or RADIUS users for a wireless network, or client VPN users for a wired network)**
+**List the users configured under Meraki Authentication for a network (splash guest or RADIUS users for a wireless network, or client VPN users for a MX network)**
 
 https://developer.cisco.com/meraki/api-v1/#!get-network-meraki-auth-users
 
@@ -13865,7 +14251,7 @@ def getNetworkSyslogServers(networkId: str):
 ## Networks Get Network Topology Link Layer
 
 
-**List the LLDP and CDP information for all discovered devices and connections in a network.**
+**List the LLDP and CDP information for all discovered devices and connections in a network**
 
 https://developer.cisco.com/meraki/api-v1/#!get-network-topology-link-layer
 
@@ -14318,6 +14704,7 @@ https://developer.cisco.com/meraki/api-v1/#!update-network-alerts-settings
 - `--networkId` (string): Network ID
 - `--defaultDestinations` (object): The network-wide destinations for all alerts on the network.
 - `--alerts` (array): Alert-specific configuration for each type. Only alerts that pertain to the network can be updated.
+- `--muting` (object): Mute alerts under certain conditions
 
 
 ##### Example:
@@ -15664,7 +16051,7 @@ https://developer.cisco.com/meraki/api-v1/#!create-organization-saml-role
 - `--organizationId` (string): Organization ID
 - `--role` (string): The role of the SAML administrator
 - `--orgAccess` (string): The privilege of the SAML administrator on the organization. Can be one of 'none', 'read-only', 'full' or 'enterprise'
-- `--tags` (array): The list of tags that the SAML administrator has privleges on
+- `--tags` (array): The list of tags that the SAML administrator has privileges on
 - `--networks` (array): The list of networks that the SAML administrator has privileges on
 
 
@@ -15773,7 +16160,7 @@ https://developer.cisco.com/meraki/api-v1/#!delete-organization-adaptive-policy-
 
 ##### Arguments
 - `--organizationId` (string): Organization ID
-- `--id` (string): Id
+- `--id` (string): ID
 
 
 ##### Example:
@@ -15799,7 +16186,7 @@ https://developer.cisco.com/meraki/api-v1/#!delete-organization-adaptive-policy-
 
 ##### Arguments
 - `--organizationId` (string): Organization ID
-- `--id` (string): Id
+- `--id` (string): ID
 
 
 ##### Example:
@@ -16050,32 +16437,6 @@ def deleteOrganizationSamlRole(organizationId: str, samlRoleId: str):
 
 
 ----------------------------------------
-## Organizations Delete Organization User
-
-
-**Delete a user and all of its authentication methods.**
-
-https://developer.cisco.com/meraki/api-v1/#!delete-organization-user
-
-##### Arguments
-- `--organizationId` (string): Organization ID
-- `--userId` (string): User ID
-
-
-##### Example:
-```
-meraki organizations deleteOrganizationUser --organizationId 'STRING' --userId 'STRING'
-````
-
-##### Method Code:
-```python
-def deleteOrganizationUser(organizationId: str, userId: str):
-    # Code
-````
-
-
-
-----------------------------------------
 ## Organizations Get Organization
 
 
@@ -16218,7 +16579,7 @@ https://developer.cisco.com/meraki/api-v1/#!get-organization-adaptive-policy-gro
 
 ##### Arguments
 - `--organizationId` (string): Organization ID
-- `--id` (string): Id
+- `--id` (string): ID
 
 
 ##### Example:
@@ -16319,7 +16680,7 @@ https://developer.cisco.com/meraki/api-v1/#!get-organization-adaptive-policy-pol
 
 ##### Arguments
 - `--organizationId` (string): Organization ID
-- `--id` (string): Id
+- `--id` (string): ID
 
 
 ##### Example:
@@ -16814,7 +17175,7 @@ https://developer.cisco.com/meraki/api-v1/#!get-organization-devices
 - `--endingBefore` (string): A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it.
 - `--configurationUpdatedAfter` (string): Filter results by whether or not the device's configuration has been updated after the given timestamp
 - `--networkIds` (array): Optional parameter to filter devices by network.
-- `--productTypes` (array): Optional parameter to filter devices by product type. Valid types are wireless, appliance, switch, systemsManager, camera, cellularGateway, and sensor.
+- `--productTypes` (array): Optional parameter to filter devices by product type. Valid types are wireless, appliance, switch, systemsManager, camera, cellularGateway, sensor, and cloudGateway.
 - `--tags` (array): Optional parameter to filter devices by tags.
 - `--tagsFilterType` (string): Optional parameter of value 'withAnyTags' or 'withAllTags' to indicate whether to return networks which contain ANY or ALL of the included tags. If no type is included, 'withAnyTags' will be selected.
 - `--name` (string): Optional parameter to filter devices by name. All returned devices will have a name that contains the search term or is an exact match.
@@ -16881,6 +17242,48 @@ meraki organizations getOrganizationDevicesAvailabilities --organizationId 'STRI
 ##### Method Code:
 ```python
 def getOrganizationDevicesAvailabilities(organizationId: str, total_pages=1, direction='next', **kwargs):
+    # Code
+````
+
+
+
+----------------------------------------
+## Organizations Get Organization Devices Availabilities Change History
+
+
+**List the availability history information for devices in an organization.**
+
+https://developer.cisco.com/meraki/api-v1/#!get-organization-devices-availabilities-change-history
+
+##### Arguments
+- `--organizationId` (string): Organization ID
+- `--total_pages` (integer or string): use with perPage to get total results up to total_pages*perPage; -1 or "all" for all pages
+- `--direction` (string): direction to paginate, either "next" (default) or "prev" page
+- `--perPage` (integer): The number of entries per page returned. Acceptable range is 3 - 1000. Default is 1000.
+- `--startingAfter` (string): A token used by the server to indicate the start of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it.
+- `--endingBefore` (string): A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it.
+- `--t0` (string): The beginning of the timespan for the data. The maximum lookback period is 14 days from today.
+- `--t1` (string): The end of the timespan for the data. t1 can be a maximum of 14 days after t0.
+- `--timespan` (number): The timespan for which the information will be fetched. If specifying timespan, do not specify parameters t0 and t1. The value must be in seconds and be less than or equal to 14 days. The default is 1 day.
+- `--serials` (array): Optional parameter to filter device availabilities history by device serial numbers
+- `--productTypes` (array): Optional parameter to filter device availabilities history by device product types
+- `--networkIds` (array): Optional parameter to filter device availabilities history by network IDs
+- `--statuses` (array): Optional parameter to filter device availabilities history by device statuses
+
+
+##### Example:
+```
+meraki organizations getOrganizationDevicesAvailabilitiesChangeHistory --organizationId 'STRING' --optionalArg1 "optionalarg1value" --optionalArg2 "optionalarg2value"
+````
+
+##### Example using `--kwargs` (Advanced):
+```
+meraki organizations getOrganizationDevicesAvailabilitiesChangeHistory --organizationId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
+````
+
+##### Method Code:
+```python
+def getOrganizationDevicesAvailabilitiesChangeHistory(organizationId: str, total_pages=1, direction='next', **kwargs):
     # Code
 ````
 
@@ -16985,7 +17388,7 @@ https://developer.cisco.com/meraki/api-v1/#!get-organization-devices-statuses
 - `--networkIds` (array): Optional parameter to filter devices by network ids.
 - `--serials` (array): Optional parameter to filter devices by serials.
 - `--statuses` (array): Optional parameter to filter devices by statuses. Valid statuses are ["online", "alerting", "offline", "dormant"].
-- `--productTypes` (array): An optional parameter to filter device statuses by product type. Valid types are wireless, appliance, switch, systemsManager, camera, cellularGateway, and sensor.
+- `--productTypes` (array): An optional parameter to filter device statuses by product type. Valid types are wireless, appliance, switch, systemsManager, camera, cellularGateway, sensor, and cloudGateway.
 - `--models` (array): Optional parameter to filter devices by models.
 - `--tags` (array): An optional parameter to filter devices by tags. The filtering is case-sensitive. If tags are included, 'tagsFilterType' should also be included (see below).
 - `--tagsFilterType` (string): An optional parameter of value 'withAnyTags' or 'withAllTags' to indicate whether to return devices which contain ANY or ALL of the included tags. If no type is included, 'withAnyTags' will be selected.
@@ -17019,7 +17422,7 @@ https://developer.cisco.com/meraki/api-v1/#!get-organization-devices-statuses-ov
 
 ##### Arguments
 - `--organizationId` (string): Organization ID
-- `--productTypes` (array): An optional parameter to filter device statuses by product type. Valid types are wireless, appliance, switch, systemsManager, camera, cellularGateway, and sensor.
+- `--productTypes` (array): An optional parameter to filter device statuses by product type. Valid types are wireless, appliance, switch, systemsManager, camera, cellularGateway, sensor, and cloudGateway.
 - `--networkIds` (array): An optional parameter to filter device statuses by network.
 
 
@@ -17094,7 +17497,7 @@ https://developer.cisco.com/meraki/api-v1/#!get-organization-devices-uplinks-los
 - `--t0` (string): The beginning of the timespan for the data. The maximum lookback period is 60 days from today.
 - `--t1` (string): The end of the timespan for the data. t1 can be a maximum of 5 minutes after t0. The latest possible time that t1 can be is 2 minutes into the past.
 - `--timespan` (number): The timespan for which the information will be fetched. If specifying timespan, do not specify parameters t0 and t1. The value must be in seconds and be less than or equal to 5 minutes. The default is 5 minutes.
-- `--uplink` (string): Optional filter for a specific WAN uplink. Valid uplinks are wan1, wan2, cellular. Default will return all uplinks.
+- `--uplink` (string): Optional filter for a specific WAN uplink. Valid uplinks are wan1, wan2, wan3, cellular. Default will return all uplinks.
 - `--ip` (string): Optional filter for a specific destination IP. Default will return all destination IPs.
 
 
@@ -17203,7 +17606,7 @@ https://developer.cisco.com/meraki/api-v1/#!get-organization-firmware-upgrades
 ##### Arguments
 - `--organizationId` (string): Organization ID
 - `--status` (array): The status of an upgrade 
-- `--productType` (array): The product type in a given upgrade ID
+- `--productTypes` (array): The product type in a given upgrade ID
 
 
 ##### Example:
@@ -17236,14 +17639,14 @@ https://developer.cisco.com/meraki/api-v1/#!get-organization-firmware-upgrades-b
 - `--organizationId` (string): Organization ID
 - `--total_pages` (integer or string): use with perPage to get total results up to total_pages*perPage; -1 or "all" for all pages
 - `--direction` (string): direction to paginate, either "next" (default) or "prev" page
-- `--perPage` (integer): The number of entries per page returned. Acceptable range is 3 - 50. Default is 50.
+- `--perPage` (integer): The number of entries per page returned. Acceptable range is 3 - 1000. Default is 50.
 - `--startingAfter` (string): A token used by the server to indicate the start of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it.
 - `--endingBefore` (string): A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it.
 - `--networkIds` (array): Optional parameter to filter by network
 - `--serials` (array): Optional parameter to filter by serial number.  All returned devices will have a serial number that is an exact match.
 - `--macs` (array): Optional parameter to filter by one or more MAC addresses belonging to devices. All devices returned belong to MAC addresses that are an exact match.
-- `--firmwareUpgradeIds` (array): Optional parameter to filter by firmware upgrade ids.
 - `--firmwareUpgradeBatchIds` (array): Optional parameter to filter by firmware upgrade batch ids.
+- `--upgradeStatuses` (array): Optional parameter to filter by firmware upgrade statuses.
 
 
 ##### Example:
@@ -17314,7 +17717,7 @@ https://developer.cisco.com/meraki/api-v1/#!get-organization-inventory-devices
 - `--orderNumbers` (array): Search for devices in inventory based on order numbers.
 - `--tags` (array): Filter devices by tags. The filtering is case-sensitive. If tags are included, 'tagsFilterType' should also be included (see below).
 - `--tagsFilterType` (string): To use with 'tags' parameter, to filter devices which contain ANY or ALL given tags. Accepted values are 'withAnyTags' or 'withAllTags', default is 'withAnyTags'.
-- `--productTypes` (array): Filter devices by product type. Accepted values are appliance, camera, cellularGateway, sensor, switch, systemsManager, and wireless.
+- `--productTypes` (array): Filter devices by product type. Accepted values are appliance, camera, cellularGateway, cloudGateway, sensor, switch, systemsManager, and wireless.
 
 
 ##### Example:
@@ -17554,22 +17957,28 @@ def getOrganizationNetworks(organizationId: str, total_pages=1, direction='next'
 ## Organizations Get Organization Openapi Spec
 
 
-**Return the OpenAPI 2.0 Specification of the organization's API documentation in JSON**
+**Return the OpenAPI Specification of the organization's API documentation in JSON**
 
 https://developer.cisco.com/meraki/api-v1/#!get-organization-openapi-spec
 
 ##### Arguments
 - `--organizationId` (string): Organization ID
+- `--version` (integer): OpenAPI Specification version to return. Default is 2
 
 
 ##### Example:
 ```
-meraki organizations getOrganizationOpenapiSpec --organizationId 'STRING'
+meraki organizations getOrganizationOpenapiSpec --organizationId 'STRING' --optionalArg1 "optionalarg1value" --optionalArg2 "optionalarg2value"
+````
+
+##### Example using `--kwargs` (Advanced):
+```
+meraki organizations getOrganizationOpenapiSpec --organizationId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
 ````
 
 ##### Method Code:
 ```python
-def getOrganizationOpenapiSpec(organizationId: str):
+def getOrganizationOpenapiSpec(organizationId: str, **kwargs):
     # Code
 ````
 
@@ -17861,7 +18270,7 @@ https://developer.cisco.com/meraki/api-v1/#!get-organization-summary-top-applian
 - `--organizationId` (string): Organization ID
 - `--t0` (string): The beginning of the timespan for the data.
 - `--t1` (string): The end of the timespan for the data. t1 can be a maximum of 31 days after t0.
-- `--timespan` (number): The timespan for which the information will be fetched. If specifying timespan, do not specify parameters t0 and t1. The value must be in seconds and be less than or equal to 31 days. The default is 1 day.
+- `--timespan` (number): The timespan for which the information will be fetched. If specifying timespan, do not specify parameters t0 and t1. The value must be in seconds and be greater than or equal to 25 minutes and be less than or equal to 31 days. The default is 1 day.
 
 
 ##### Example:
@@ -17894,7 +18303,7 @@ https://developer.cisco.com/meraki/api-v1/#!get-organization-summary-top-clients
 - `--organizationId` (string): Organization ID
 - `--t0` (string): The beginning of the timespan for the data.
 - `--t1` (string): The end of the timespan for the data. t1 can be a maximum of 31 days after t0.
-- `--timespan` (number): The timespan for which the information will be fetched. If specifying timespan, do not specify parameters t0 and t1. The value must be in seconds and be less than or equal to 31 days. The default is 1 day.
+- `--timespan` (number): The timespan for which the information will be fetched. If specifying timespan, do not specify parameters t0 and t1. The value must be in seconds and be greater than or equal to 8 hours and be less than or equal to 31 days. The default is 1 day.
 
 
 ##### Example:
@@ -17960,7 +18369,7 @@ https://developer.cisco.com/meraki/api-v1/#!get-organization-summary-top-devices
 - `--organizationId` (string): Organization ID
 - `--t0` (string): The beginning of the timespan for the data.
 - `--t1` (string): The end of the timespan for the data. t1 can be a maximum of 31 days after t0.
-- `--timespan` (number): The timespan for which the information will be fetched. If specifying timespan, do not specify parameters t0 and t1. The value must be in seconds and be less than or equal to 31 days. The default is 1 day.
+- `--timespan` (number): The timespan for which the information will be fetched. If specifying timespan, do not specify parameters t0 and t1. The value must be in seconds and be greater than or equal to 8 hours and be less than or equal to 31 days. The default is 1 day.
 
 
 ##### Example:
@@ -17993,7 +18402,7 @@ https://developer.cisco.com/meraki/api-v1/#!get-organization-summary-top-devices
 - `--organizationId` (string): Organization ID
 - `--t0` (string): The beginning of the timespan for the data.
 - `--t1` (string): The end of the timespan for the data. t1 can be a maximum of 31 days after t0.
-- `--timespan` (number): The timespan for which the information will be fetched. If specifying timespan, do not specify parameters t0 and t1. The value must be in seconds and be less than or equal to 31 days. The default is 1 day.
+- `--timespan` (number): The timespan for which the information will be fetched. If specifying timespan, do not specify parameters t0 and t1. The value must be in seconds and be greater than or equal to 8 hours and be less than or equal to 31 days. The default is 1 day.
 
 
 ##### Example:
@@ -18026,7 +18435,7 @@ https://developer.cisco.com/meraki/api-v1/#!get-organization-summary-top-ssids-b
 - `--organizationId` (string): Organization ID
 - `--t0` (string): The beginning of the timespan for the data.
 - `--t1` (string): The end of the timespan for the data. t1 can be a maximum of 31 days after t0.
-- `--timespan` (number): The timespan for which the information will be fetched. If specifying timespan, do not specify parameters t0 and t1. The value must be in seconds and be less than or equal to 31 days. The default is 1 day.
+- `--timespan` (number): The timespan for which the information will be fetched. If specifying timespan, do not specify parameters t0 and t1. The value must be in seconds and be greater than or equal to 8 hours and be less than or equal to 31 days. The default is 1 day.
 
 
 ##### Example:
@@ -18059,7 +18468,7 @@ https://developer.cisco.com/meraki/api-v1/#!get-organization-summary-top-switche
 - `--organizationId` (string): Organization ID
 - `--t0` (string): The beginning of the timespan for the data.
 - `--t1` (string): The end of the timespan for the data. t1 can be a maximum of 31 days after t0.
-- `--timespan` (number): The timespan for which the information will be fetched. If specifying timespan, do not specify parameters t0 and t1. The value must be in seconds and be less than or equal to 31 days. The default is 1 day.
+- `--timespan` (number): The timespan for which the information will be fetched. If specifying timespan, do not specify parameters t0 and t1. The value must be in seconds and be greater than or equal to 25 minutes and be less than or equal to 31 days. The default is 1 day.
 
 
 ##### Example:
@@ -18436,7 +18845,7 @@ https://developer.cisco.com/meraki/api-v1/#!update-organization-adaptive-policy-
 
 ##### Arguments
 - `--organizationId` (string): Organization ID
-- `--id` (string): Id
+- `--id` (string): ID
 - `--name` (string): Name of the group
 - `--sgt` (integer): SGT value of the group
 - `--description` (string): Description of the group
@@ -18471,7 +18880,7 @@ https://developer.cisco.com/meraki/api-v1/#!update-organization-adaptive-policy-
 
 ##### Arguments
 - `--organizationId` (string): Organization ID
-- `--id` (string): Id
+- `--id` (string): ID
 - `--sourceGroup` (object): The source adaptive policy group (requires one unique attribute)
 - `--destinationGroup` (object): The destination adaptive policy group (requires one unique attribute)
 - `--acls` (array): An ordered array of adaptive policy ACLs (each requires one unique attribute) that apply to this policy
@@ -18958,7 +19367,7 @@ https://developer.cisco.com/meraki/api-v1/#!update-organization-saml-role
 - `--samlRoleId` (string): Saml role ID
 - `--role` (string): The role of the SAML administrator
 - `--orgAccess` (string): The privilege of the SAML administrator on the organization. Can be one of 'none', 'read-only', 'full' or 'enterprise'
-- `--tags` (array): The list of tags that the SAML administrator has privleges on
+- `--tags` (array): The list of tags that the SAML administrator has privileges on
 - `--networks` (array): The list of networks that the SAML administrator has privileges on
 
 
@@ -19031,7 +19440,7 @@ https://developer.cisco.com/meraki/api-v1/#!create-network-sensor-alerts-profile
 - `--name` (string): Name of the sensor alert profile.
 - `--conditions` (array): List of conditions that will cause the profile to send an alert.
 - `--schedule` (object): The sensor schedule to use with the alert profile.
-- `--recipients` (object): List of recipients that will recieve the alert.
+- `--recipients` (object): List of recipients that will receive the alert.
 - `--serials` (array): List of device serials assigned to this sensor alert profile.
 
 
@@ -19063,7 +19472,7 @@ https://developer.cisco.com/meraki/api-v1/#!delete-network-sensor-alerts-profile
 
 ##### Arguments
 - `--networkId` (string): Network ID
-- `--id` (string): Id
+- `--id` (string): ID
 
 
 ##### Example:
@@ -19173,7 +19582,7 @@ https://developer.cisco.com/meraki/api-v1/#!get-network-sensor-alerts-profile
 
 ##### Arguments
 - `--networkId` (string): Network ID
-- `--id` (string): Id
+- `--id` (string): ID
 
 
 ##### Example:
@@ -19410,11 +19819,11 @@ https://developer.cisco.com/meraki/api-v1/#!update-network-sensor-alerts-profile
 
 ##### Arguments
 - `--networkId` (string): Network ID
-- `--id` (string): Id
+- `--id` (string): ID
 - `--name` (string): Name of the sensor alert profile.
 - `--schedule` (object): The sensor schedule to use with the alert profile.
 - `--conditions` (array): List of conditions that will cause the profile to send an alert.
-- `--recipients` (object): List of recipients that will recieve the alert.
+- `--recipients` (object): List of recipients that will receive the alert.
 - `--serials` (array): List of device serials assigned to this sensor alert profile.
 
 
@@ -20036,7 +20445,7 @@ def getNetworkSmDevices(networkId: str, total_pages=1, direction='next', **kwarg
 ## Sm Get Network Sm Profiles
 
 
-**List all profiles in a network**
+**List all the profiles in the network**
 
 https://developer.cisco.com/meraki/api-v1/#!get-network-sm-profiles
 
@@ -22403,7 +22812,7 @@ def getNetworkSwitchStp(networkId: str):
 ## Switch Get Organization Config Template Switch Profile Port
 
 
-**Return a switch profile port**
+**Return a switch template port**
 
 https://developer.cisco.com/meraki/api-v1/#!get-organization-config-template-switch-profile-port
 
@@ -22431,7 +22840,7 @@ def getOrganizationConfigTemplateSwitchProfilePort(organizationId: str, configTe
 ## Switch Get Organization Config Template Switch Profile Ports
 
 
-**Return all the ports of a switch profile**
+**Return all the ports of a switch template**
 
 https://developer.cisco.com/meraki/api-v1/#!get-organization-config-template-switch-profile-ports
 
@@ -22458,7 +22867,7 @@ def getOrganizationConfigTemplateSwitchProfilePorts(organizationId: str, configT
 ## Switch Get Organization Config Template Switch Profiles
 
 
-**List the switch profiles for your switch template configuration**
+**List the switch templates for your switch template configuration**
 
 https://developer.cisco.com/meraki/api-v1/#!get-organization-config-template-switch-profiles
 
@@ -22657,12 +23066,17 @@ https://developer.cisco.com/meraki/api-v1/#!update-device-switch-routing-interfa
 ##### Arguments
 - `--serial` (string): Serial
 - `--interfaceId` (string): Interface ID
-- `--dhcpMode` (string): The DHCP mode options for the switch interface ('dhcpDisabled', 'dhcpRelay' or 'dhcpServer')
+- `--dhcpMode` (string): The DHCP mode options for the switch interface
+('dhcpDisabled', 'dhcpRelay' or 'dhcpServer')
 - `--dhcpRelayServerIps` (array): The DHCP relay server IPs to which DHCP packets would get relayed for the switch interface
-- `--dhcpLeaseTime` (string): The DHCP lease time config for the dhcp server running on switch interface ('30 minutes', '1 hour', '4 hours', '12 hours', '1 day' or '1 week')
-- `--dnsNameserversOption` (string): The DHCP name server option for the dhcp server running on the switch interface ('googlePublicDns', 'openDns' or 'custom')
-- `--dnsCustomNameservers` (array): The DHCP name server IPs when DHCP name server option is 'custom'
-- `--bootOptionsEnabled` (boolean): Enable DHCP boot options to provide PXE boot options configs for the dhcp server running on the switch interface
+- `--dhcpLeaseTime` (string): The DHCP lease time config for the dhcp server running on switch interface
+('30 minutes', '1 hour', '4 hours', '12 hours', '1 day' or '1 week')
+- `--dnsNameserversOption` (string): The DHCP name server option for the dhcp server running on the switch interface
+('googlePublicDns', 'openDns' or 'custom')
+- `--dnsCustomNameservers` (array): The DHCP name server IPs when DHCP name server option is
+'custom'
+- `--bootOptionsEnabled` (boolean): Enable DHCP boot options to provide PXE boot options configs for the dhcp server running on the switch
+interface
 - `--bootNextServer` (string): The PXE boot server IP for the DHCP server running on the switch interface
 - `--bootFileName` (string): The PXE boot server filename for the DHCP server running on the switch interface
 - `--dhcpOptions` (array): Array of DHCP options consisting of code, type and value for the DHCP server running on the switch interface
@@ -23003,7 +23417,7 @@ https://developer.cisco.com/meraki/api-v1/#!update-network-switch-mtu
 ##### Arguments
 - `--networkId` (string): Network ID
 - `--defaultMtuSize` (integer): MTU size for the entire network. Default value is 9578.
-- `--overrides` (array): Override MTU size for individual switches or switch profiles. An empty array will clear overrides.
+- `--overrides` (array): Override MTU size for individual switches or switch templates. An empty array will clear overrides.
 
 
 ##### Example:
@@ -23234,6 +23648,7 @@ https://developer.cisco.com/meraki/api-v1/#!update-network-switch-settings
 - `--vlan` (integer): Management VLAN
 - `--useCombinedPower` (boolean): The use Combined Power as the default behavior of secondary power supplies on supported devices.
 - `--powerExceptions` (array): Exceptions on a per switch basis to "useCombinedPower"
+- `--uplinkClientSampling` (object): Uplink client sampling
 
 
 ##### Example:
@@ -23306,15 +23721,21 @@ https://developer.cisco.com/meraki/api-v1/#!update-network-switch-stack-routing-
 - `--networkId` (string): Network ID
 - `--switchStackId` (string): Switch stack ID
 - `--interfaceId` (string): Interface ID
-- `--dhcpMode` (string): The DHCP mode options for the switch stack interface ('dhcpDisabled', 'dhcpRelay' or 'dhcpServer')
+- `--dhcpMode` (string): The DHCP mode options for the switch stack interface
+('dhcpDisabled', 'dhcpRelay' or 'dhcpServer')
 - `--dhcpRelayServerIps` (array): The DHCP relay server IPs to which DHCP packets would get relayed for the switch stack interface
-- `--dhcpLeaseTime` (string): The DHCP lease time config for the dhcp server running on switch stack interface ('30 minutes', '1 hour', '4 hours', '12 hours', '1 day' or '1 week')
-- `--dnsNameserversOption` (string): The DHCP name server option for the dhcp server running on the switch stack interface ('googlePublicDns', 'openDns' or 'custom')
-- `--dnsCustomNameservers` (array): The DHCP name server IPs when DHCP name server option is 'custom'
-- `--bootOptionsEnabled` (boolean): Enable DHCP boot options to provide PXE boot options configs for the dhcp server running on the switch stack interface
+- `--dhcpLeaseTime` (string): The DHCP lease time config for the dhcp server running on switch stack interface
+('30 minutes', '1 hour', '4 hours', '12 hours', '1 day' or '1 week')
+- `--dnsNameserversOption` (string): The DHCP name server option for the dhcp server running on the switch stack interface
+('googlePublicDns', 'openDns' or 'custom')
+- `--dnsCustomNameservers` (array): The DHCP name server IPs when DHCP name server option is '
+custom'
+- `--bootOptionsEnabled` (boolean): Enable DHCP boot options to provide PXE boot options configs for the dhcp server running on the switch
+stack interface
 - `--bootNextServer` (string): The PXE boot server IP for the DHCP server running on the switch stack interface
 - `--bootFileName` (string): The PXE boot server file name for the DHCP server running on the switch stack interface
-- `--dhcpOptions` (array): Array of DHCP options consisting of code, type and value for the DHCP server running on the switch stack interface
+- `--dhcpOptions` (array): Array of DHCP options consisting of code, type and value for the DHCP server running on the
+switch stack interface
 - `--reservedIpRanges` (array): Array of DHCP reserved IP assignments for the DHCP server running on the switch stack interface
 - `--fixedIpAssignments` (array): Array of DHCP fixed IP assignments for the DHCP server running on the switch stack interface
 
@@ -23418,7 +23839,7 @@ https://developer.cisco.com/meraki/api-v1/#!update-network-switch-stp
 ##### Arguments
 - `--networkId` (string): Network ID
 - `--rstpEnabled` (boolean): The spanning tree protocol status in network
-- `--stpBridgePriority` (array): STP bridge priority for switches/stacks or switch profiles. An empty array will clear the STP bridge priority settings.
+- `--stpBridgePriority` (array): STP bridge priority for switches/stacks or switch templates. An empty array will clear the STP bridge priority settings.
 
 
 ##### Example:
@@ -23443,7 +23864,7 @@ def updateNetworkSwitchStp(networkId: str, **kwargs):
 ## Switch Update Organization Config Template Switch Profile Port
 
 
-**Update a switch profile port**
+**Update a switch template port**
 
 https://developer.cisco.com/meraki/api-v1/#!update-organization-config-template-switch-profile-port
 
@@ -23452,26 +23873,26 @@ https://developer.cisco.com/meraki/api-v1/#!update-organization-config-template-
 - `--configTemplateId` (string): Config template ID
 - `--profileId` (string): Profile ID
 - `--portId` (string): Port ID
-- `--name` (string): The name of the switch profile port.
-- `--tags` (array): The list of tags of the switch profile port.
-- `--enabled` (boolean): The status of the switch profile port.
-- `--poeEnabled` (boolean): The PoE status of the switch profile port.
-- `--type` (string): The type of the switch profile port ('trunk' or 'access').
-- `--vlan` (integer): The VLAN of the switch profile port. A null value will clear the value set for trunk ports.
-- `--voiceVlan` (integer): The voice VLAN of the switch profile port. Only applicable to access ports.
-- `--allowedVlans` (string): The VLANs allowed on the switch profile port. Only applicable to trunk ports.
-- `--isolationEnabled` (boolean): The isolation status of the switch profile port.
+- `--name` (string): The name of the switch template port.
+- `--tags` (array): The list of tags of the switch template port.
+- `--enabled` (boolean): The status of the switch template port.
+- `--poeEnabled` (boolean): The PoE status of the switch template port.
+- `--type` (string): The type of the switch template port ('trunk' or 'access').
+- `--vlan` (integer): The VLAN of the switch template port. A null value will clear the value set for trunk ports.
+- `--voiceVlan` (integer): The voice VLAN of the switch template port. Only applicable to access ports.
+- `--allowedVlans` (string): The VLANs allowed on the switch template port. Only applicable to trunk ports.
+- `--isolationEnabled` (boolean): The isolation status of the switch template port.
 - `--rstpEnabled` (boolean): The rapid spanning tree protocol status.
 - `--stpGuard` (string): The state of the STP guard ('disabled', 'root guard', 'bpdu guard' or 'loop guard').
-- `--linkNegotiation` (string): The link speed for the switch profile port.
+- `--linkNegotiation` (string): The link speed for the switch template port.
 - `--portScheduleId` (string): The ID of the port schedule. A value of null will clear the port schedule.
 - `--udld` (string): The action to take when Unidirectional Link is detected (Alert only, Enforce). Default configuration is Alert only.
-- `--accessPolicyType` (string): The type of the access policy of the switch profile port. Only applicable to access ports. Can be one of 'Open', 'Custom access policy', 'MAC allow list' or 'Sticky MAC allow list'.
-- `--accessPolicyNumber` (integer): The number of a custom access policy to configure on the switch profile port. Only applicable when 'accessPolicyType' is 'Custom access policy'.
+- `--accessPolicyType` (string): The type of the access policy of the switch template port. Only applicable to access ports. Can be one of 'Open', 'Custom access policy', 'MAC allow list' or 'Sticky MAC allow list'.
+- `--accessPolicyNumber` (integer): The number of a custom access policy to configure on the switch template port. Only applicable when 'accessPolicyType' is 'Custom access policy'.
 - `--macAllowList` (array): Only devices with MAC addresses specified in this list will have access to this port. Up to 20 MAC addresses can be defined. Only applicable when 'accessPolicyType' is 'MAC allow list'.
 - `--stickyMacAllowList` (array): The initial list of MAC addresses for sticky Mac allow list. Only applicable when 'accessPolicyType' is 'Sticky MAC allow list'.
 - `--stickyMacAllowListLimit` (integer): The maximum number of MAC addresses for sticky MAC allow list. Only applicable when 'accessPolicyType' is 'Sticky MAC allow list'.
-- `--stormControlEnabled` (boolean): The storm control status of the switch profile port.
+- `--stormControlEnabled` (boolean): The storm control status of the switch template port.
 - `--flexibleStackingEnabled` (boolean): For supported switches (e.g. MS420/MS425), whether or not the port has flexible stacking enabled.
 - `--daiTrusted` (boolean): If true, ARP packets for this port will be considered trusted, and Dynamic ARP Inspection will allow the traffic.
 - `--profile` (object): Profile attributes
@@ -23513,8 +23934,10 @@ https://developer.cisco.com/meraki/api-v1/#!create-network-wireless-rf-profile
 - `--apBandSettings` (object): Settings that will be enabled if selectionType is set to 'ap'.
 - `--twoFourGhzSettings` (object): Settings related to 2.4Ghz band
 - `--fiveGhzSettings` (object): Settings related to 5Ghz band
+- `--sixGhzSettings` (object): Settings related to 6Ghz band. Only applicable to networks with 6Ghz capable APs
 - `--transmission` (object): Settings related to radio transmission.
 - `--perSsidSettings` (object): Per-SSID radio settings by number.
+- `--flexRadios` (object): Flex radio settings.
 
 
 ##### Example:
@@ -24525,7 +24948,7 @@ def getNetworkWirelessRfProfile(networkId: str, rfProfileId: str):
 ## Wireless Get Network Wireless Rf Profiles
 
 
-**List the non-basic RF profiles for this network**
+**List RF profiles for this network**
 
 https://developer.cisco.com/meraki/api-v1/#!get-network-wireless-rf-profiles
 
@@ -25022,10 +25445,174 @@ def getNetworkWirelessUsageHistory(networkId: str, **kwargs):
 
 
 ----------------------------------------
+## Wireless Get Organization Wireless Devices Channel Utilization By Device
+
+
+**Get average channel utilization for all bands in a network, split by AP**
+
+https://developer.cisco.com/meraki/api-v1/#!get-organization-wireless-devices-channel-utilization-by-device
+
+##### Arguments
+- `--organizationId` (string): Organization ID
+- `--total_pages` (integer or string): use with perPage to get total results up to total_pages*perPage; -1 or "all" for all pages
+- `--direction` (string): direction to paginate, either "next" (default) or "prev" page
+- `--networkIds` (array): Filter results by network.
+- `--serials` (array): Filter results by device.
+- `--perPage` (integer): The number of entries per page returned. Acceptable range is 3 - 1000. Default is 1000.
+- `--startingAfter` (string): A token used by the server to indicate the start of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it.
+- `--endingBefore` (string): A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it.
+- `--t0` (string): The beginning of the timespan for the data. The maximum lookback period is 90 days from today.
+- `--t1` (string): The end of the timespan for the data. t1 can be a maximum of 90 days after t0.
+- `--timespan` (number): The timespan for which the information will be fetched. If specifying timespan, do not specify parameters t0 and t1. The value must be in seconds and be less than or equal to 90 days. The default is 7 days.
+- `--interval` (integer): The time interval in seconds for returned data. The valid intervals are: 300, 600, 3600, 7200, 14400, 21600. The default is 3600.
+
+
+##### Example:
+```
+meraki wireless getOrganizationWirelessDevicesChannelUtilizationByDevice --organizationId 'STRING' --optionalArg1 "optionalarg1value" --optionalArg2 "optionalarg2value"
+````
+
+##### Example using `--kwargs` (Advanced):
+```
+meraki wireless getOrganizationWirelessDevicesChannelUtilizationByDevice --organizationId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
+````
+
+##### Method Code:
+```python
+def getOrganizationWirelessDevicesChannelUtilizationByDevice(organizationId: str, total_pages=1, direction='next', **kwargs):
+    # Code
+````
+
+
+
+----------------------------------------
+## Wireless Get Organization Wireless Devices Channel Utilization By Network
+
+
+**Get average channel utilization across all bands for all networks in the organization**
+
+https://developer.cisco.com/meraki/api-v1/#!get-organization-wireless-devices-channel-utilization-by-network
+
+##### Arguments
+- `--organizationId` (string): Organization ID
+- `--total_pages` (integer or string): use with perPage to get total results up to total_pages*perPage; -1 or "all" for all pages
+- `--direction` (string): direction to paginate, either "next" (default) or "prev" page
+- `--networkIds` (array): Filter results by network.
+- `--serials` (array): Filter results by device.
+- `--perPage` (integer): The number of entries per page returned. Acceptable range is 3 - 1000. Default is 1000.
+- `--startingAfter` (string): A token used by the server to indicate the start of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it.
+- `--endingBefore` (string): A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it.
+- `--t0` (string): The beginning of the timespan for the data. The maximum lookback period is 90 days from today.
+- `--t1` (string): The end of the timespan for the data. t1 can be a maximum of 90 days after t0.
+- `--timespan` (number): The timespan for which the information will be fetched. If specifying timespan, do not specify parameters t0 and t1. The value must be in seconds and be less than or equal to 90 days. The default is 7 days.
+- `--interval` (integer): The time interval in seconds for returned data. The valid intervals are: 300, 600, 3600, 7200, 14400, 21600. The default is 3600.
+
+
+##### Example:
+```
+meraki wireless getOrganizationWirelessDevicesChannelUtilizationByNetwork --organizationId 'STRING' --optionalArg1 "optionalarg1value" --optionalArg2 "optionalarg2value"
+````
+
+##### Example using `--kwargs` (Advanced):
+```
+meraki wireless getOrganizationWirelessDevicesChannelUtilizationByNetwork --organizationId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
+````
+
+##### Method Code:
+```python
+def getOrganizationWirelessDevicesChannelUtilizationByNetwork(organizationId: str, total_pages=1, direction='next', **kwargs):
+    # Code
+````
+
+
+
+----------------------------------------
+## Wireless Get Organization Wireless Devices Channel Utilization History By Device By Interval
+
+
+**Get a time-series of average channel utilization for all bands, segmented by device.**
+
+https://developer.cisco.com/meraki/api-v1/#!get-organization-wireless-devices-channel-utilization-history-by-device-by-interval
+
+##### Arguments
+- `--organizationId` (string): Organization ID
+- `--total_pages` (integer or string): use with perPage to get total results up to total_pages*perPage; -1 or "all" for all pages
+- `--direction` (string): direction to paginate, either "next" (default) or "prev" page
+- `--networkIds` (array): Filter results by network.
+- `--serials` (array): Filter results by device.
+- `--perPage` (integer): The number of entries per page returned. Acceptable range is 3 - 1000. Default is 1000.
+- `--startingAfter` (string): A token used by the server to indicate the start of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it.
+- `--endingBefore` (string): A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it.
+- `--t0` (string): The beginning of the timespan for the data. The maximum lookback period is 31 days from today.
+- `--t1` (string): The end of the timespan for the data. t1 can be a maximum of 31 days after t0.
+- `--timespan` (number): The timespan for which the information will be fetched. If specifying timespan, do not specify parameters t0 and t1. The value must be in seconds and be less than or equal to 31 days. The default is 7 days.
+- `--interval` (integer): The time interval in seconds for returned data. The valid intervals are: 300, 600, 3600, 7200, 14400, 21600. The default is 3600.
+
+
+##### Example:
+```
+meraki wireless getOrganizationWirelessDevicesChannelUtilizationHistoryByDeviceByInterval --organizationId 'STRING' --optionalArg1 "optionalarg1value" --optionalArg2 "optionalarg2value"
+````
+
+##### Example using `--kwargs` (Advanced):
+```
+meraki wireless getOrganizationWirelessDevicesChannelUtilizationHistoryByDeviceByInterval --organizationId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
+````
+
+##### Method Code:
+```python
+def getOrganizationWirelessDevicesChannelUtilizationHistoryByDeviceByInterval(organizationId: str, total_pages=1, direction='next', **kwargs):
+    # Code
+````
+
+
+
+----------------------------------------
+## Wireless Get Organization Wireless Devices Channel Utilization History By Network By Interval
+
+
+**Get a time-series of average channel utilization for all bands**
+
+https://developer.cisco.com/meraki/api-v1/#!get-organization-wireless-devices-channel-utilization-history-by-network-by-interval
+
+##### Arguments
+- `--organizationId` (string): Organization ID
+- `--total_pages` (integer or string): use with perPage to get total results up to total_pages*perPage; -1 or "all" for all pages
+- `--direction` (string): direction to paginate, either "next" (default) or "prev" page
+- `--networkIds` (array): Filter results by network.
+- `--serials` (array): Filter results by device.
+- `--perPage` (integer): The number of entries per page returned. Acceptable range is 3 - 1000. Default is 1000.
+- `--startingAfter` (string): A token used by the server to indicate the start of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it.
+- `--endingBefore` (string): A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it.
+- `--t0` (string): The beginning of the timespan for the data. The maximum lookback period is 31 days from today.
+- `--t1` (string): The end of the timespan for the data. t1 can be a maximum of 31 days after t0.
+- `--timespan` (number): The timespan for which the information will be fetched. If specifying timespan, do not specify parameters t0 and t1. The value must be in seconds and be less than or equal to 31 days. The default is 7 days.
+- `--interval` (integer): The time interval in seconds for returned data. The valid intervals are: 300, 600, 3600, 7200, 14400, 21600. The default is 3600.
+
+
+##### Example:
+```
+meraki wireless getOrganizationWirelessDevicesChannelUtilizationHistoryByNetworkByInterval --organizationId 'STRING' --optionalArg1 "optionalarg1value" --optionalArg2 "optionalarg2value"
+````
+
+##### Example using `--kwargs` (Advanced):
+```
+meraki wireless getOrganizationWirelessDevicesChannelUtilizationHistoryByNetworkByInterval --organizationId 'STRING' --kwargs '{"key1": "value1", "key2": "value2"}'
+````
+
+##### Method Code:
+```python
+def getOrganizationWirelessDevicesChannelUtilizationHistoryByNetworkByInterval(organizationId: str, total_pages=1, direction='next', **kwargs):
+    # Code
+````
+
+
+
+----------------------------------------
 ## Wireless Get Organization Wireless Devices Ethernet Statuses
 
 
-**Endpoint to see power status for wireless devices**
+**List the most recent Ethernet link speed, duplex, aggregation and power mode and status information for wireless devices.**
 
 https://developer.cisco.com/meraki/api-v1/#!get-organization-wireless-devices-ethernet-statuses
 
@@ -25243,8 +25830,10 @@ https://developer.cisco.com/meraki/api-v1/#!update-network-wireless-rf-profile
 - `--apBandSettings` (object): Settings that will be enabled if selectionType is set to 'ap'.
 - `--twoFourGhzSettings` (object): Settings related to 2.4Ghz band
 - `--fiveGhzSettings` (object): Settings related to 5Ghz band
+- `--sixGhzSettings` (object): Settings related to 6Ghz band. Only applicable to networks with 6Ghz capable APs
 - `--transmission` (object): Settings related to radio transmission.
 - `--perSsidSettings` (object): Per-SSID radio settings by number.
+- `--flexRadios` (object): Flex radio settings.
 
 
 ##### Example:
@@ -25313,7 +25902,7 @@ https://developer.cisco.com/meraki/api-v1/#!update-network-wireless-ssid
 - `--number` (string): Number
 - `--name` (string): The name of the SSID
 - `--enabled` (boolean): Whether or not the SSID is enabled
-- `--authMode` (string): The association control method for the SSID ('open', 'open-enhanced', 'psk', 'open-with-radius', 'open-with-nac', '8021x-meraki', '8021x-nac', '8021x-radius', '8021x-google', '8021x-localradius', 'ipsk-with-radius' or 'ipsk-without-radius')
+- `--authMode` (string): The association control method for the SSID ('open', 'open-enhanced', 'psk', 'open-with-radius', 'open-with-nac', '8021x-meraki', '8021x-nac', '8021x-radius', '8021x-google', '8021x-localradius', 'ipsk-with-radius', 'ipsk-without-radius' or 'ipsk-with-nac')
 - `--enterpriseAdminAccess` (string): Whether or not an SSID is accessible by 'enterprise' administrators ('access disabled' or 'access enabled')
 - `--encryptionMode` (string): The psk encryption mode for the SSID ('wep' or 'wpa'). This param is only valid if the authMode is 'psk'
 - `--psk` (string): The passkey for the SSID. This param is only valid if the authMode is 'psk'
@@ -25402,6 +25991,7 @@ https://developer.cisco.com/meraki/api-v1/#!update-network-wireless-ssid-bonjour
 - `--number` (string): Number
 - `--enabled` (boolean): If true, Bonjour forwarding is enabled on this SSID.
 - `--rules` (array): List of bonjour forwarding rules.
+- `--exception` (object): Bonjour forwarding exception
 
 
 ##### Example:
