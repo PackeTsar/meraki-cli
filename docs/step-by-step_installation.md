@@ -27,15 +27,14 @@ title: Step-by-Step Installation
     7. Run `sudo apt update` to pull the latest repository info
         - Provide your WSL password when prompted
     8. Run `sudo apt install python3-pip` to install the PIP Python package manager
-    9. Run `sudo pip3 install meraki-cli` to install the Meraki-CLI tool
-    10. Run `sudo activate-global-python-argcomplete` to activate the tab autocompletion feature
-    >  NOTE: We are running this as `sudo` on purpose. The autocomplete feature must be installed and activated at the global level
-        - You should just see the response "Installing bash completion script /etc/bash_completion.d/python-argcomplete"
-    11. Exit the WSL window with `exit`
-    12. Reopen the WSL command window by finding the "Ubuntu" app in your start menu
-    13. Run the `meraki` command and make sure you see the help output
-    14. Type `meraki` at the prompt and then hit the TAB key a few times
-    15. You now should see all the arguments/switches/commands available to you
+    9. Run `sudo apt install pipx` to install the PIPX virtual environment package installer
+    10. Run `pipx ensurepath` to add the PIPX app directory to your PATH
+    11. Run `pipx install meraki-cli` to install the Meraki-CLI tool
+    12. Exit the WSL window with `exit`
+    13. Reopen the WSL command window by finding the "Ubuntu" app in your start menu
+    14. Run the `meraki` command and make sure you see the help output
+    15. Type `meraki` at the prompt and then hit the TAB key a few times
+    16. You now should see all the arguments/switches/commands available to you
 
 === ":material-apple: MacOS"
 
@@ -66,10 +65,10 @@ title: Step-by-Step Installation
     - Run `sudo apt update` to pull the latest repository info
       - Provide your password when prompted
     - Run `sudo apt install python3-pip` to install the PIP Python package manager
-    - Run `sudo pip3 install meraki-cli` to install the Meraki-CLI tool
+    - Run `sudo apt install pipx` to install the PIPX virtual environment package installer
+    - Run `pipx ensurepath` to add the PIPX app directory to your PATH
+    - Run `pipx install meraki-cli` to install the Meraki-CLI tool
     - Run `sudo activate-global-python-argcomplete` to activate the tab autocompletion feature
-    > NOTE: We are running this as sudo on purpose. The autocomplete feature must be installed and activated at the global level
-        - You should just see the response "Installing bash completion script /etc/bash_completion.d/python-argcomplete"
     - Log out and back into the OS to restart BASH and enable tab-autocompletion
     - Run the `meraki` command and make sure you see the help output
     - Type `meraki` at the prompt and then hit the TAB key a few times
