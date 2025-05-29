@@ -10,4 +10,4 @@ Authoritative source of current program version
 version = '1.5.0'
 
 # User-Agent header used for HTTP requests
-user_agent = f'Meraki-CLI/{version} PackeTsar'
+user_agent = f'MerakiCLI/{version} PackeTsar'
