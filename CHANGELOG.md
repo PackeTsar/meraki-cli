@@ -7,6 +7,7 @@ Documented below is a history of Meraki-CLI versions and a log of changes to eac
 
 
 # Table of Contents
+- [v1.5.0 -> v1.5.1](#v151)
 - [v1.4.1 -> v1.5.0](#v150)
 - [v1.4.0 -> v1.4.1](#v141)
 - [v1.3.7 -> v1.4.0](#v140)
@@ -23,6 +24,13 @@ Documented below is a history of Meraki-CLI versions and a log of changes to eac
 
 
 # Versions
+
+## v1.5.1
+
+### Bug Fixes
+
+- **User-Agent Format**
+    - Adjusted the User-Agent to conform to the Meraki API guidelines outlined here: https://developer.cisco.com/meraki/api-v1/user-agents-overview/#formatting
 
 ## v1.5.0
 

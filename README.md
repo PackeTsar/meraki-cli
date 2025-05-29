@@ -32,7 +32,7 @@ Visit the **[Meraki-CLI Documentation](https://meraki-cli.readthedocs.io/en/late
 ---
 
 ## Version
-The version of Meraki-CLI documented here is: **1.5.0**
+The version of Meraki-CLI documented here is: **1.5.1**
 
 Version History: [Change Log](CHANGELOG.md)
 
