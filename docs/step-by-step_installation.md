@@ -40,14 +40,33 @@ title: Step-by-Step Installation
 
     Meraki-CLI can be installed natively on MacOS and be used through the Terminal application. Follow the below steps to install Meraki-CLI on MacOS.
 
-    - In order to use Meraki-CLI on MacOS, you need to have Python 3 installed. If you do not yet have Python 3 installed, visit this [Python 3 Installation Instructions Page](https://github.com/PackeTsar/Install-Python){:target="_blank"} and install for your operating system.
-    - Once Python3 is installed, open your Terminal application by navigating in Finder to **Applications** > **Utilities** > **Terminal**
-    - Run `pip3 install meraki-cli` to install the Meraki-CLI tool
-    - Run the command `curl -fs https://raw.githubusercontent.com/PackeTsar/meraki-cli/master/.zprofile >> ~/.zprofile` to add commands to your terminal profile which will enable tab-autocompletion on startup
-    - Close the Terminal application and re-open it
-    - Run the `meraki` command and make sure you see the help output
-    - Type `meraki` at the prompt and then hit the TAB key a few times
-    - You now should see all the arguments/switches/commands available to you
+    1. Open your Terminal application by navigating in Finder to **Applications** > **Utilities** > **Terminal**
+    2. Meraki-CLI uses Python3 and (on modern MacOS versions) requires a virtual Python environment to install dependencies. In order to install a Python virtual environment, we first need to install the Homebrew MacOS package manager. You can see details about homebrew at [brew.sh](https://brew.sh)
+        - Install Homebrew with the below command. It may take a while to install.
+        ```
+        /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+        ```
+        - Once Homebew is installed, you should be able to run the command `brew` from your terminal and see a list of command options
+    3. Now that Homebrew is installed, we will use it to install PIPX
+      ```
+      brew install pipx
+      ```
+        - You should be able to run the command `pipx` and see a list of options
+    4. Have pipx make sure it has added its binary locations to your PATH
+      ```
+      pipx ensurepath
+      ```
+    5. Install the argcomplete package which assists with Meraki-CLI command completion
+      ```
+      pipx install argcomplete
+      ```
+    6. Install the Meraki-CLI package
+      ```
+      pipx install meraki-cli
+      ```
+    7. Run the `meraki` command and make sure you see the help output
+    8. Type `meraki` at the prompt and then hit the TAB key a few times
+    9. You now should see all the arguments/switches/commands available to you
 
 === ":material-microsoft-windows-classic: Windows 10/11 Native"
 

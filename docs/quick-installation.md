@@ -10,17 +10,35 @@ If you already have Python 3 installed on your operating system, use the command
     If you're using :material-microsoft-windows: Windows, it is recommended (but not required) to run Meraki-CLI on Windows Subsystem for Linux (WSL) to be able to use the [Tab Auto-Completion](../tab_auto-completion/) feature. See the [Step-by-Step Installation](../step-by-step_installation/) section for more info.
 
 !!! note ":fontawesome-brands-linux: Modern Linux Support"
-    Modern distributions of Linux (like Ubuntu24) lock down the native system Python packages to prevent users from breaking OS features when updating or changing those packages. The recommended way to install new Python packages is to use a virtual environment (venv).
+    Modern distributions of Linux (like Ubuntu24) and MacOS lock down the native system Python packages to prevent users from breaking OS features when updating or changing those packages. The recommended way to install new Python packages is to use a virtual environment (venv).
 
     To install Meraki-CLI into a venv use the `pipx` commands as shown in the recommended steps below.
 
-=== ":octicons-container-16: PIPX (Recommended for Linux or WSL)"
+=== ":octicons-container-16: PIPX (Linux or WSL)"
 
     ```
     sudo apt install pipx
     pipx ensurepath
+    pipx install argcomplete
     pipx install meraki-cli
     ```
+
+=== ":material-apple: MacOS - PIPX"
+
+    1. Install [Homebrew](https://brew.sh/)
+
+        ```
+        /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+        ```
+
+    2. Install pipx, autocomplete, and Meraki-CLI
+
+        ```
+        brew install pipx
+        pipx ensurepath
+        pipx install argcomplete
+        pipx install meraki-cli
+        ```
 
 === ":material-lightbulb: Standard PIP"
 
