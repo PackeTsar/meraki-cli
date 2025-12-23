@@ -49,6 +49,6 @@ jobs:
         meraki organizations getOrganizations -h
     - name: Check code coverage
       run: |
-        coverage run -m pytest
+        pytest --cov=.
     - name: Upload coverage report
       uses: codecov/codecov-action@v3
